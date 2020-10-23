@@ -8,8 +8,7 @@ import ar from "./locales/ar.json";
 import en from "./locales/en.json";
 import tr from "./locales/tr.json";
 
-// CHECK react-i18n DOCUMENTATION TO UNDERSTAND THIS FILE.
-
+// check react-i18next documentation to understand this file.
 const resources = {
   en: {
     translation: en,

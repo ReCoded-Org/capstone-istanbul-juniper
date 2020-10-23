@@ -1,10 +1,10 @@
 {
   "navbar": {
-    "Home": "",
-    "About": "",
-    "Games": "",
-    "Resources": "",
-    "Contact": "",
-    "Login": ""
+    "home": "",
+    "about": "",
+    "games": "",
+    "resources": "",
+    "contact": "",
+    "login": ""
   }
 }
