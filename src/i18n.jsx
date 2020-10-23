@@ -8,8 +8,8 @@ import ar from "./locales/ar.json";
 import en from "./locales/en.json";
 import tr from "./locales/tr.json";
 
-// the translations
-// (tip move them in a JSON file and import them)
+// CHECK react-i18n DOCUMENTATION TO UNDERSTAND THIS FILE.
+
 const resources = {
   en: {
     translation: en,
@@ -23,22 +23,15 @@ const resources = {
 };
 
 i18n
-  // load translation using http -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
-  // learn more: https://github.com/i18next/i18next-http-backend
   .use(Backend)
-  // detect user language
-  // learn more: https://github.com/i18next/i18next-browser-languageDetector
   .use(LanguageDetector)
-  // pass the i18n instance to react-i18next.
   .use(initReactI18next)
-  // init i18next
-  // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     fallbackLng: "en",
     debug: true,
 
     interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
+      escapeValue: false,
     },
     resources,
   });
