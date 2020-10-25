@@ -1,10 +1,36 @@
 {
-  "navbar": {
-    "home": "",
-    "about": "",
-    "games": "",
-    "resources": "",
-    "contact": "",
-    "login": ""
-  }
+    "navbar": {
+        "home": "",
+        "about": "",
+        "games": "",
+        "resources": "",
+        "contact": "",
+        "login": ""
+    },
+    "shareYourExperienceContainer": {
+        "spreadTheWord": "Spread The Word!",
+        "stayUpToDate": "Stay Up-to-Date!",
+        "twitterPages": [
+            {
+                "alt": "EAD Twitter Account",
+                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FeadEn.svg?alt=media&token=f199f088-f011-4318-9087-c02125ef1fd7",
+                "href": "https://twitter.com/eadtweets?lang=en"
+            },
+            {
+                "alt": "Green Peace Account",
+                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FgreenPeaceEn.svg?alt=media&token=2799dec4-5deb-41dc-a1cf-536a0b839a21",
+                "href": "https://twitter.com/Greenpeace?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            },
+            {
+                "alt": "UN Environmental Programme Twitter",
+                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FunEn.svg?alt=media&token=31a68576-2a0b-4e87-9c21-e81003a06957",
+                "href": "https://twitter.com/UNEP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            },
+            {
+                "alt": "WWF Twitter Account",
+                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FwwfEn.svg?alt=media&token=15328826-ec2e-4296-9ed6-30656b59dca7",
+                "href": "https://twitter.com/WWF?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            }
+        ]
+    }
 }
