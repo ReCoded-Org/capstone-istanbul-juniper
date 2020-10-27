@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+Array [
+  <div
+    className="curveContainer"
+  >
+    <div
+      className="curveContainer__bottomCurve"
+    >
+      <div
+        className="curveContainer__bottomCurve__topHalf"
+      />
+      <div
+        className="curveContainer__bottomCurve__bottomHalf"
+      />
+    </div>
+  </div>,
+  <div
+    className="ant-row ant-row-center spreadTheWord"
+    style={Object {}}
+  >
+    <div
+      className="ant-col ant-col-xs-16 ant-col-sm-14 ant-col-md-12 ant-col-lg-12 ant-col-xl-10 ant-col-xxl-10"
+      style={Object {}}
+    >
+      <button
+        className="spreadTheWord__button"
+        type="button"
+      >
+        <a
+          href="https://www.twitter.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          spreadTheWord
+        </a>
+      </button>
+    </div>
+  </div>,
+  <div
+    className="stayUpToDate"
+  >
+    <h1
+      className="ant-typography"
+      style={
+        Object {
+          "WebkitLineClamp": null,
+        }
+      }
+    >
+      <span
+        className="stayUpToDate__title"
+      >
+        stayUpToDate
+      </span>
+    </h1>
+    <div
+      className="ant-row ant-row-center stayUpToDate__twitterContent"
+      style={Object {}}
+    >
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+      <div
+        className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+        style={Object {}}
+      >
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className="twitterContent__col__image"
+          />
+        </a>
+      </div>
+    </div>
+  </div>,
+]
+`;
