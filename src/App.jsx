@@ -1,7 +1,12 @@
 import React from "react";
+import Home from "./containers/Home";
 
 function App() {
-  return <div>Basic structure</div>;
+  return (
+    <>
+  <Home />
+  </>
+  );
 }
 
 export default App;

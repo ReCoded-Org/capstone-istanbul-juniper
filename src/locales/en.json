@@ -6,5 +6,41 @@
     "resources": "",
     "contact": "",
     "login": ""
-  }
+  },
+    "gamesCarousel": {
+      "title": "Games",
+      "subtitle": "Popular Games",
+      "gameCards": [
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        }
+      ]
+}
 }
