@@ -2,13 +2,17 @@
 
 exports[`CurveComplementaryToNavbar renders correctly 1`] = `
 <div
-  className="bottomCurve"
+  className="curveContainer"
 >
   <div
-    className="bottomCurveTopHalf"
-  />
-  <div
-    className="bottomCurveBottomHalf"
-  />
+    className="curveContainer__bottomCurve"
+  >
+    <div
+      className="curveContainer__bottomCurve__topHalf"
+    />
+    <div
+      className="curveContainer__bottomCurve__bottomHalf"
+    />
+  </div>
 </div>
 `;

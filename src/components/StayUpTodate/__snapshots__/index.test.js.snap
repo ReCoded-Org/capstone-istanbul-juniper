@@ -1,23 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StayUpToDate renders correctly 1`] = `
-Array [
+<div
+  className="stayUpToDate"
+>
   <h1
-    className="ant-typography stayUpToDateTitle"
+    className="ant-typography"
     style={
       Object {
         "WebkitLineClamp": null,
       }
     }
   >
-    stayUpToDate
-  </h1>,
+    <span
+      className="stayUpToDate__title"
+    >
+      stayUpToDate
+    </span>
+  </h1>
   <div
-    className="ant-row ant-row-center twitterContent"
+    className="ant-row ant-row-center stayUpToDate__twitterContent"
     style={Object {}}
   >
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -25,12 +31,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -38,12 +44,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -51,12 +57,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -64,12 +70,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -77,12 +83,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -90,12 +96,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -103,12 +109,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -116,12 +122,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -129,12 +135,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -142,12 +148,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -155,12 +161,12 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
     <div
-      className="ant-col twitterCol ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-24 ant-col-xl-12 ant-col-xxl-12"
       style={Object {}}
     >
       <a
@@ -168,10 +174,10 @@ Array [
         target="_blank"
       >
         <img
-          className="twitterImage"
+          className="twitterContent__col__image"
         />
       </a>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

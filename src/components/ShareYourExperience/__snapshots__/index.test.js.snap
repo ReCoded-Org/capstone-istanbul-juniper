@@ -2,7 +2,7 @@
 
 exports[`ShareYourExperience button renders correctly 1`] = `
 <div
-  className="ant-row ant-row-center shareExperienceButtonRow"
+  className="ant-row ant-row-center spreadTheWord"
   style={Object {}}
 >
   <div
@@ -10,10 +10,12 @@ exports[`ShareYourExperience button renders correctly 1`] = `
     style={Object {}}
   >
     <button
-      className="shareExperienceButton"
+      className="spreadTheWord__button"
+      type="button"
     >
       <a
         href="https://www.twitter.com"
+        rel="noopener noreferrer"
         target="_blank"
       >
         spreadTheWord

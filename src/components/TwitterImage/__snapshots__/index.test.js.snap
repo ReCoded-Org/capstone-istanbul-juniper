@@ -6,7 +6,7 @@ exports[`TwitterImage renders correctly 1`] = `
   target="_blank"
 >
   <img
-    className="twitterImage"
+    className="twitterContent__col__image"
   />
 </a>
 `;
