@@ -7,30 +7,28 @@
         "contact": "",
         "login": ""
     },
-    "shareYourExperienceContainer": {
-        "spreadTheWord": "Öğrendiklerini Paylaş!",
-        "stayUpToDate": "Güncel Kal!",
-        "twitterPages": [
-            {
-                "alt": "Doğa Derneği Twitter Hesabı",
-                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FdogaDernegi.svg?alt=media&token=09a04061-f394-4127-a7a4-0f186632acce",
-                "href": "https://twitter.com/dogadernegi?lang=en"
-            },
-            {
-                "alt": "Green Peace Türkiye",
-                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FgreenPeaceTr.svg?alt=media&token=4adc5242-d0c3-4206-bb77-fb81cfacac06",
-                "href": "https://twitter.com/greenpeace_med?lang=en"
-            },
-            {
-                "alt": "TEMA Vakfı Twitter Hesabı",
-                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2Ftema.svg?alt=media&token=26e00559-6624-4f69-b728-e4138d5f3778",
-                "href": "https://twitter.com/temavakfi?lang=en"
-            },
-            {
-                "alt": "WWF Türkiye Twitter Hesabı",
-                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FwwfTr.svg?alt=media&token=ebd632c6-366c-44d7-8e96-86e22da31eb1",
-                "href": "https://twitter.com/wwf_turkiye?lang=en"
-            }
-        ]
-    }
+    "spreadTheWord": "Öğrendiklerini Paylaş!",
+    "stayUpToDate": "Güncel Kal!",
+    "twitterPages": [
+        {
+            "alt": "Doğa Derneği Twitter Hesabı",
+            "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FdogaDernegi.svg?alt=media&token=09a04061-f394-4127-a7a4-0f186632acce",
+            "href": "https://twitter.com/dogadernegi?lang=en"
+        },
+        {
+            "alt": "Green Peace Türkiye",
+            "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FgreenPeaceTr.svg?alt=media&token=4adc5242-d0c3-4206-bb77-fb81cfacac06",
+            "href": "https://twitter.com/greenpeace_med?lang=en"
+        },
+        {
+            "alt": "TEMA Vakfı Twitter Hesabı",
+            "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2Ftema.svg?alt=media&token=26e00559-6624-4f69-b728-e4138d5f3778",
+            "href": "https://twitter.com/temavakfi?lang=en"
+        },
+        {
+            "alt": "WWF Türkiye Twitter Hesabı",
+            "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FwwfTr.svg?alt=media&token=ebd632c6-366c-44d7-8e96-86e22da31eb1",
+            "href": "https://twitter.com/wwf_turkiye?lang=en"
+        }
+    ]
 }

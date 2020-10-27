@@ -1,0 +1,18 @@
+.curveContainer__bottomCurve {
+    background: #6cb193;
+    border-radius: 50%;
+    height: 15vh;
+}
+
+.curveContainer__bottomCurve__topHalf {
+    height: 50%;
+    background: #6cb193;
+}
+
+.curveContainer__bottomCurve__bottomHalf {
+    height: 50%;
+}
+
+.curveContainer {
+    background: #2a8c79;
+}

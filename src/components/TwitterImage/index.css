@@ -1,4 +1,4 @@
-.twitterCol .twitterImage {
+.twitterContent__col__image {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -9,55 +9,35 @@
     max-height: 530px;
 }
 
-.twitterCol .twitterImage:hover {
+.twitterContent__col__image:hover {
     transform: scale(1.1);
     transition: all 0.5s;
 }
 
-@media only screen and (max-width: 1200px) {
-    .twitterCol .twitterImage {
-        width: 96%;
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 6vh;
-        margin-bottom: 6vh;
+@media (max-width: 991.98px) {
+    .twitterContent__col__image {
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
 
-@media only screen and (max-width: 1030px) {
-    .twitterCol .twitterImage {
+@media (max-width: 767.98px) {
+    .twitterContent__col__image {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        width: 88%;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .twitterContent__col__image {
         width: 94%;
         margin-left: 3%;
         margin-right: 3%;
-        margin-top: 4vh;
-        margin-bottom: 4vh;
-        max-height: 700px;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .twitterCol .twitterImage {
-        margin-top: 3vh;
-        margin-bottom: 3vh;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .twitterCol .twitterImage {
-        max-height: 400px;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .twitterCol .twitterImage {
-        max-height: 320px;
-    }
-}
-
-@media only screen and (max-width: 300px) {
-    .twitterCol .twitterImage {
-        max-height: 240px;
     }
 }

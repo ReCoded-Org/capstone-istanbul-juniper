@@ -1,74 +1,57 @@
-.container {
-    background: #2a8c79;
-    justify-content: center;
-    text-align: center;
-}
-
-.curve {
-    background: #6cb193;
-    border-radius: 50%;
-    height: 250px;
-}
-
-.curveTopHalf {
-    height: 125px;
-    background: #6cb193;
-}
-
-.curveBottomHalf {
-    height: 125px;
-}
-
-.content {
-    min-height: 50vh;
+.spreadTheWord {
+    padding-top: 10vh;
+    margin: 0;
     background: #2a8c79;
 }
 
-.container .shareExperienceButton {
+.spreadTheWord__button {
     border-radius: 20px;
     border: none;
-    color: white;
     height: 10vh;
     background: #f8ac4c;
     margin: auto;
     width: 100%;
     font-family: 'Salsa', cursive;
-    font-size: 3vw;
     font-weight: 550;
     transition: all 0.5s;
+    padding: 5px;
+    font-size: 3vw;
 }
 
-.shareButtonRow {
-    padding-top: 10vh;
-    margin: 0;
-}
-
-.container .shareExperienceButton:hover {
-    background: #f8ac4c;
-    color: white;
+.spreadTheWord__button:hover {
     transform: scale(1.2);
     transition: all 0.5s;
 }
 
-@media only screen and (max-width: 1300px) {
-    .container .shareExperienceButton {
+.spreadTheWord__button a {
+    color: white;
+    background: #f8ac4c;
+}
+
+.spreadTheWord__button a:hover {
+    color: white;
+}
+
+@media (max-width: 1199.98px) {
+    .spreadTheWord__button {
         font-size: 4vw;
     }
 }
-@media only screen and (max-width: 1030px) {
-    .container .shareExperienceButton {
+
+@media (max-width: 991.98px) {
+    .spreadTheWord__button {
         font-size: 4.5vw;
     }
 }
 
-@media only screen and (max-width: 573px) {
-    .container .shareExperienceButton {
-        font-size: 6vw;
+@media (max-width: 767.98px) {
+    .spreadTheWord__button {
+        font-size: 5vw;
     }
 }
 
-@media only screen and (max-width: 470px) {
-    .container .shareExperienceButton {
-        font-size: 7vw;
+@media (max-width: 575.98px) {
+    .spreadTheWord__button {
+        font-size: 6vw;
     }
 }

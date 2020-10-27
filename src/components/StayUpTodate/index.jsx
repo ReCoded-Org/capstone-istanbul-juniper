@@ -7,16 +7,20 @@ import './index.css';
 const StayUpToDate = () => {
     const { Title } = Typography;
     const [t] = useTranslation();
-    const twitterPagesArr = t('shareYourExperienceContainer.twitterPages', {
-        returnObjects: true,
-    });
+
+    const twitterPages = [
+        ...t('twitterPages', {
+            returnObjects: true,
+        }),
+    ];
+
     return (
-        <div className='container'>
-            <Title className='title'>
-                {t('shareYourExperienceContainer.stayUpToDate')}
+        <div className='stayUpToDate'>
+            <Title>
+                <span className='stayUpToDate__title'>{t('stayUpToDate')}</span>
             </Title>
-            <Row align='center' className='content'>
-                {twitterPagesArr.map(page => (
+            <Row align='center' className='stayUpToDate__twitterContent'>
+                {twitterPages.map((page, index) => (
                     <Col
                         xs={24}
                         sm={24}
@@ -24,7 +28,8 @@ const StayUpToDate = () => {
                         lg={24}
                         xl={12}
                         xxl={12}
-                        className='twitterCol'
+                        className='stayUpToDate__twitterContent__col'
+                        key={index}
                     >
                         <TwitterImage
                             alt={page.alt}
