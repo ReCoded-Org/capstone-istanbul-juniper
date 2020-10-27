@@ -1,15 +1,14 @@
 import React from "react";
-import Navbar from "../../components/Navbar/index"
-import "./index.css"
-import {} from "antd"
-
+import Navbar from "../../components/Navbar/index";
+import "./index.css";
+import {} from "antd";
 
 const Home = () => {
-    return(
-        <>
-            <Navbar /> 
-        </>
-    )
-}
+  return (
+    <>
+      <Navbar />
+    </>
+  );
+};
 
-export default Home
+export default Home;
