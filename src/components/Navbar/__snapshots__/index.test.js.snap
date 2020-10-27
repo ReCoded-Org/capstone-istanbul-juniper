@@ -10,7 +10,7 @@ exports[`Navbar Component matches the tree 1`] = `
   }
 >
   <div
-    className="navbar_topHalf"
+    className="navbarTopHalf"
     style={
       Object {
         "height": "50%",
@@ -18,7 +18,7 @@ exports[`Navbar Component matches the tree 1`] = `
     }
   >
     <button
-      className="ant-dropdown-trigger navbar_dropdown-btn navbar_dropdown"
+      className="ant-dropdown-trigger navbarDropdownBtn navbarDropdown"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
     >
@@ -44,7 +44,7 @@ exports[`Navbar Component matches the tree 1`] = `
       </span>
     </button>
     <ul
-      className="navbar_left-side"
+      className="navbarLeftSide"
     >
       <li>
          
@@ -82,13 +82,13 @@ exports[`Navbar Component matches the tree 1`] = `
       onClick={[Function]}
     >
       <h1
-        className="navbar_title"
+        className="navbarTitle"
       >
         Juniper
       </h1>
     </a>
     <ul
-      className="navbar_right-side"
+      className="navbarRightSide"
     >
       <li>
          
@@ -121,29 +121,29 @@ exports[`Navbar Component matches the tree 1`] = `
          
       </li>
     </ul>
-  </div>
-  <a
-    className="navbar_logo-link"
-    href="/"
-    onClick={[Function]}
-  >
-    <img
-      alt="juniper-logo"
-      className="navbar_logo"
-      src={
-        Object {
-          "ReactComponent": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          },
-          "__esModule": true,
-          "default": "logo.svg",
+    <a
+      className="navbarLogoLink"
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="juniper-logo"
+        className="navbarLogo"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "logo.svg",
+          }
         }
-      }
-    />
-  </a>
+      />
+    </a>
+  </div>
   <div
-    className="navbar_bottomHalf"
+    className="navbarBottomHalf"
     style={
       Object {
         "background": "#b4d0c4",
@@ -155,7 +155,7 @@ exports[`Navbar Component matches the tree 1`] = `
     <div
       style={
         Object {
-          "height": "50px",
+          "height": "50%",
         }
       }
     />
@@ -164,7 +164,7 @@ exports[`Navbar Component matches the tree 1`] = `
         Object {
           "background": "#b4d0c4",
           "bottom": "0px",
-          "height": "50px",
+          "height": "50%",
         }
       }
     >
