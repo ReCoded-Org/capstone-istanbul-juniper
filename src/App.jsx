@@ -1,7 +1,7 @@
 import React from "react";
 
 function App() {
-  return <div>Basic structure</div>;
+  return  <Home />;
 }
 
 export default App;
