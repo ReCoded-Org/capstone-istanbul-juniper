@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+body {
+    background-color:#b4d0c4;
+    margin:0;
+    padding:0;
+}
+
+.navbarTopHalf {
+    margin:0;
+    padding:0;
+    background-color: #3b8c79;
+    font-family: "Salsa", cursive;
+    position: relative;
+    top:0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.navbarTitle{
+    color: white;
+}
+
+.navbarTopHalf ul li a{
+    color: white;
+}
+
+.navbarTopHalf ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-between;
+    align-items: stretch;
+    font-size: 1.3em;
+}
+
+.navbarTopHalf ul li:hover,
+.navbarTitle:hover{
+    cursor: pointer;
+}
+
+.navbarBottomHalf{
+    position: relative;
+}
+
+.navbarLogo{
+    z-index: 2;
+    position: absolute;
+    display:inline-block;
+    padding: 0px;
+    left: 43%;
+    top: 5vh;
+    height: 43px;
+    width: auto;
+}
+
+.navbarLogo:hover{
+    cursor: pointer;
+}
+
+.navbarDropdown{
+    position: absolute !important;
+    left: 5vw;
+    margin: 0;
+    background-color: transparent;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.ant-dropdown{
+    font-family: "Salsa";
+}
+
+.anticon-menu:focus{
+    box-shadow: #b4d0c4 !important;
+}
+
+.navbarDropdownBtn{
+    border: 0px;
+    width: 1.2vh;
+    height: 1.2vh;
+    background: transparent;
+}
+
+.navbarLeftSide{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarRightSide{
+    display: flex;
+    justify-content: stretch;
+}
+
+@media (max-width: 1024px) {
+    .navbarRightSide{
+        display: none !important;
+    }
+    .navbarLeftSide{
+        display: none !important;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .navbarDropdown{
+        display: none !important;
+    }
+}

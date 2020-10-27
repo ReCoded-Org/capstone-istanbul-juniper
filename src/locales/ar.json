@@ -1,10 +1,10 @@
 {
   "navbar": {
-    "home": "",
-    "about": "",
-    "games": "",
-    "resources": "",
-    "contact": "",
-    "login": ""
+    "home": "الصفحة الرئيسية",
+    "about": "حول",
+    "games": "الألعاب",
+    "resources": "المصادر",
+    "contact": "اتصل بنا",
+    "login": "تسجيل الدخول"
   }
 }
