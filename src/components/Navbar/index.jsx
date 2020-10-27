@@ -41,7 +41,7 @@ const Navbar = () => {
         <Router>
           <div style={{background:"#3b8c79", height:"15vh"}}>
             <div className="navbarTopHalf" style={{height:"50%"}}>
-
+              
               {/*Dropdown replaces the navbar in small screens */}
               <Dropdown className="navbarDropdown" overlay={menu} placement="bottomLeft">
                 <button className="navbarDropdownBtn"><MenuOutlined/></button>
@@ -69,15 +69,16 @@ const Navbar = () => {
               <div style={{height:"50%"}}>
               </div>
               <div style={{height:"50%", background:"#b4d0c4", bottom:"0px"}}>
+              <button onClick={(e) => languageChanger("en")}>En</button>
+            <button onClick={(e) => languageChanger("tr")}>Tr</button>
+            <button onClick={(e) => languageChanger("ar")}>Ar</button>
               </div>
+              
             </div>
+            
           </div>
         </Router>
     )
 }
 
 export default Navbar
-
-// <button onClick={(e) => languageChanger("en")}>En</button>
-//                 <button onClick={(e) => languageChanger("tr")}>Tr</button>
-//                 <button onClick={(e) => languageChanger("ar")}>Ar</button>
