@@ -21,7 +21,7 @@ export default function HomePageHeaderSection() {
           <Col span={4}></Col>
           <Col span={4}>
             <Row>
-              <h2 style={{ fontFamily: "salsa" }}>
+              <h2 className="homePageHeaderTitle" style={{ fontFamily: "salsa" }}>
                 {t("home.homePageHeaderSection.homePageHeaderSectionFirstText")}{" "}
               </h2>
               <br></br>

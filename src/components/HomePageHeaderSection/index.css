@@ -1,9 +1,10 @@
-h1 {
+.homePageHeaderTitle {
   text-align: center;
   display: inline-block;
   font-size: larger;
-  font-family: salsa;
+  
 }
+
 .homePage__header__container {
   padding-top: 150px;
   font-size: 2vw;
