@@ -12,22 +12,22 @@
     "twitterPages": [
       {
         "alt": "Doğa Derneği Twitter Hesabı",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FdogaDernegi.svg?alt=media&token=09a04061-f394-4127-a7a4-0f186632acce",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FdogaDernegi.svg?alt=media&token=b3e8eef4-4149-4986-8b25-8fe83f9f1b78",
         "href": "https://twitter.com/dogadernegi?lang=en"
       },
       {
         "alt": "Green Peace Türkiye",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FgreenPeaceTr.svg?alt=media&token=4adc5242-d0c3-4206-bb77-fb81cfacac06",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FgreenPeaceTr.svg?alt=media&token=b050a95a-8c37-4112-b3a2-0016b6603584",
         "href": "https://twitter.com/greenpeace_med?lang=en"
       },
       {
         "alt": "TEMA Vakfı Twitter Hesabı",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2Ftema.svg?alt=media&token=26e00559-6624-4f69-b728-e4138d5f3778",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2Ftema.svg?alt=media&token=73c902be-a1b1-427a-9a2e-3e60aa5405ea",
         "href": "https://twitter.com/temavakfi?lang=en"
       },
       {
         "alt": "WWF Türkiye Twitter Hesabı",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FwwfTr.svg?alt=media&token=ebd632c6-366c-44d7-8e96-86e22da31eb1",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FwwfTr.svg?alt=media&token=ae50b5a5-bd3f-442f-bde8-46de44b43a36",
         "href": "https://twitter.com/wwf_turkiye?lang=en"
       }
     ]

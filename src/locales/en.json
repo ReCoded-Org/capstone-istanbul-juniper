@@ -12,22 +12,22 @@
     "twitterPages": [
       {
         "alt": "EAD Twitter Account",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FeadEn.svg?alt=media&token=f199f088-f011-4318-9087-c02125ef1fd7",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FeadEn.svg?alt=media&token=a1604a8e-7eb5-4033-9cf0-eb7a36a3dab8",
         "href": "https://twitter.com/eadtweets?lang=en"
       },
       {
         "alt": "Green Peace Account",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FgreenPeaceEn.svg?alt=media&token=2799dec4-5deb-41dc-a1cf-536a0b839a21",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FgreenPeaceEn.svg?alt=media&token=0d1dc09c-7256-45b4-b86e-78ebbc2ce335",
         "href": "https://twitter.com/Greenpeace?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
       },
       {
         "alt": "UN Environmental Programme Twitter",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FunEn.svg?alt=media&token=31a68576-2a0b-4e87-9c21-e81003a06957",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FunEn.svg?alt=media&token=8e17795d-656e-4629-919f-7d4567be2f00",
         "href": "https://twitter.com/UNEP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
       },
       {
         "alt": "WWF Twitter Account",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FwwfEn.svg?alt=media&token=15328826-ec2e-4296-9ed6-30656b59dca7",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FwwfEn.svg?alt=media&token=f86b6e9c-55be-4b21-baaf-463b1cc492ab",
         "href": "https://twitter.com/WWF?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
       }
     ]
