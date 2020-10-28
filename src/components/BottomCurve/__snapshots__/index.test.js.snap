@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CurveComplementaryToNavbar renders correctly 1`] = `
+exports[`BottomCurve renders correctly 1`] = `
 <div
   className="bottomCurveContainer"
 >
