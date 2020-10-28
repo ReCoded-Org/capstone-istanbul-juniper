@@ -2,7 +2,6 @@
   text-align: center;
   display: inline-block;
   font-size: larger;
-  
 }
 
 .homePage__header__container {
@@ -29,7 +28,7 @@
 }
 
 @media (max-width: 1199.98px) {
-  .homePage__header__button{
+  .homePage__header__button {
     font-size: 4vw;
   }
 }
@@ -47,7 +46,7 @@
 }
 
 @media (max-width: 575.98px) {
-  .homePage__header__button{
+  .homePage__header__button {
     font-size: 6vw;
   }
 }

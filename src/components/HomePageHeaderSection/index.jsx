@@ -14,14 +14,15 @@ export default function HomePageHeaderSection() {
         <Row justify="space-around" align="middle"></Row>
         <Row justify="space-around" align="middle">
           <Col span={4}>
-            
-              <img src={homePageHeaderImgLeft}></img>
-            
+            <img src={homePageHeaderImgLeft}></img>
           </Col>
           <Col span={4}></Col>
           <Col span={4}>
             <Row>
-              <h2 className="homePageHeaderTitle" style={{ fontFamily: "salsa" }}>
+              <h2
+                className="homePageHeaderTitle"
+                style={{ fontFamily: "salsa" }}
+              >
                 {t("home.headerSection.mainText")}{" "}
               </h2>
               <br></br>
@@ -30,16 +31,20 @@ export default function HomePageHeaderSection() {
               </p>
             </Row>
             <Row>
-              <Button align="top" type="button" className="homePage__header__button" shape='round' size='large'>
+              <Button
+                align="top"
+                type="button"
+                className="homePage__header__button"
+                shape="round"
+                size="large"
+              >
                 {t("home.headerSection.headerButton")}
               </Button>
             </Row>
           </Col>
 
           <Col span={4}>
-            
-              <img src={homePageHeaderImgRight}></img>
-            
+            <img src={homePageHeaderImgRight}></img>
           </Col>
         </Row>
       </div>
