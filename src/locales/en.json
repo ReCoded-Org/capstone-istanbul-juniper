@@ -1,10 +1,22 @@
 {
   "navbar": {
-    "home": "",
-    "about": "",
-    "games": "",
-    "resources": "",
-    "contact": "",
-    "login": ""
+    "home": "Home",
+    "about": "About",
+    "games": "Games",
+    "resources": "Resources",
+    "contact": "Contact",
+    "login": "Login"
+  },
+  "footer": {
+    "Trademark": " Trademark",
+    "Contact": "Contact ",
+    "Policies": "Policies",
+    "Games": "Games",
+    "About": "About"
+  },
+  "resourseSection": {
+    "Pollution": "Pollution",
+    "Climate Change": "Climate Change",
+    "Reduce, Reuse, Recycle": "Reduce, Reuse, Recycle"
   }
 }

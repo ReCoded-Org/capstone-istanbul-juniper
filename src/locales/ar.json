@@ -6,5 +6,17 @@
     "resources": "",
     "contact": "",
     "login": ""
+  },
+  "footer": {
+    "Trademark": "العلامة المسجلة",
+    "Contact": "توصل معنا",
+    "Policies": "السياسات",
+    "Games": "الألعاب",
+    "About": "حولنا"
+  },
+  "resourseSection": {
+    "Pollution": "الثلوث",
+    "Climate Change": "التغير المناخي",
+    "Reduce, Reuse, Recycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
   }
 }

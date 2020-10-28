@@ -6,5 +6,18 @@
     "resources": "",
     "contact": "",
     "login": ""
+  },
+
+  "footer": {
+    "Trademark": " Marka",
+    "Contact": "İletişim ",
+    "Policies": "Politikalar",
+    "Games": "Oyunlar",
+    "About": "أakkında"
+  },
+  "resourseSection": {
+    "Pollution": "Pollution",
+    "Climate Change": "Climate Change",
+    "Reduce, Reuse, Recycle": "Reduce, Reuse, Recycle"
   }
 }
