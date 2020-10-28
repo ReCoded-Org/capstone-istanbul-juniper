@@ -1,5 +1,4 @@
 import React from "react";
-
 import "antd/dist/antd.css";
 import { Row, Col } from "antd";
 import homePageHeaderimgLeft from "../../images/child.png";
@@ -7,11 +6,6 @@ import homePageHeaderimgRight from "../../images/family.png";
 import "./index.css";
 
 import { useTranslation } from "react-i18next";
-
-const DemoBox = (props) => (
-  <p className={`height-${props.value}`}>{props.children}</p>
-);
-
 export default function HomePageHeaderSection() {
   const { t } = useTranslation();
   return (
@@ -20,9 +14,9 @@ export default function HomePageHeaderSection() {
         <Row justify="space-around" align="middle"></Row>
         <Row justify="space-around" align="middle">
           <Col span={4}>
-            <DemoBox value={100}>
+            
               <img src={homePageHeaderimgLeft}></img>
-            </DemoBox>
+            
           </Col>
           <Col span={4}></Col>
           <Col span={4}>
@@ -43,9 +37,9 @@ export default function HomePageHeaderSection() {
           </Col>
 
           <Col span={4}>
-            <DemoBox value={80}>
+            
               <img src={homePageHeaderimgRight}></img>
-            </DemoBox>
+            
           </Col>
         </Row>
       </div>
