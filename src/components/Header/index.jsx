@@ -16,7 +16,7 @@ export default function Header() {
   const { t } = useTranslation();
   return (
     <>
-      <div className="header-container">
+      <div className="homePage__header__container">
         <Row justify="space-around" align="middle"></Row>
         <Row justify="space-around" align="middle">
           <Col span={4}>
