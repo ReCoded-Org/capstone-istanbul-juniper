@@ -15,7 +15,7 @@ const StayUpToDate = () => {
   ];
 
   // there is a duplication issue in snapshot test.
-  // This is why pre defined unique ids dont wont and there is need for incremented ids
+  // This is why pre defined unique ids dont work and there is need for incremented ids
   let id = -1;
   const twitterImages = twitterPagesData.map((page) => {
     id += 1;
