@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 
+.navbar {
+  background: #3b8c79;
+  height: 15vh;
+}
+
 .navbarTopHalf {
   margin: 0;
   padding: 0;
@@ -13,10 +18,12 @@
   justify-content: space-around;
   align-items: center;
   color: white;
+  height: 50%;
 }
 
 .navbarTitle {
   color: white;
+  font-size:2em;
 }
 
 .navbarTopHalf ul li a {
@@ -30,7 +37,7 @@
   width: 25%;
   justify-content: space-between;
   align-items: stretch;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .navbarTopHalf ul li:hover,
@@ -38,21 +45,25 @@
   cursor: pointer;
 }
 
+.navbarHelperDiv{
+  height: 50%;
+}
+
 .navbarBottomHalf{
   position: relative;
-  background: "#b4d0c4";
-  border-radius: "50% 50% 0 0";
-  height: "50%";
+  background: #b4d0c4;
+  border-radius: 50% 50% 0 0;
+  height: 50%;
 }
 
 .navbarLogo {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   display: inline-block;
   padding: 0px;
   left: 43%;
   top: 5vh;
-  height: 43px;
+  height: 7vh;
   width: auto;
 }
 
@@ -61,7 +72,7 @@
 }
 
 .navbarDropdown {
-  position: absolute !important;
+  position: absolute;
   left: 5vw;
   margin: 0;
   background-color: transparent;
@@ -69,12 +80,19 @@
   height: 1.2em;
 }
 
+/*antdesign class*/
 .ant-dropdown {
   font-family: "Salsa";
 }
 
-.anticon-menu:focus {
-  box-shadow: #b4d0c4 !important;
+/*antdesign class*/
+.anticon-menu .svg:hover {
+  cursor: pointer;
+}
+
+/*antdesign class*/
+.anticon-menu .svg:focus {
+  box-shadow: #b4d0c4;
 }
 
 .navbarDropdownBtn {
@@ -100,6 +118,7 @@
   border-color: #b4d0c4;
   color: white;
   width:18%;
+  height: auto;
 }
 
 .languageBtn:hover{
@@ -115,20 +134,27 @@
 .languageBtnsSubContainer{
   display: flex;
   justify-content:space-around;
-  width:10%;
+  width:15%;
 }
 
 @media (max-width: 1024px) {
-  .navbarRightSide {
-    display: none !important;
+  .navbarRightSide li a{
+    display: none;
   }
-  .navbarLeftSide {
-    display: none !important;
+  .navbarLeftSide li a{
+    display: none;
+  }
+
+  .languageBtnsSubContainer{
+    width: 150px;
   }
 }
 
 @media (min-width: 1025px) {
   .navbarDropdown {
-    display: none !important;
+    display: none ;
   }
+
+  
+  
 }

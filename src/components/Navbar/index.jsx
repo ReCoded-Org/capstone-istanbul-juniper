@@ -33,14 +33,13 @@ const Navbar = () => {
   );
 
   const languageChanger = (lang) => {
-    window.location.reload();
     i18n.changeLanguage(lang);
   };
 
   return (
     <Router>
-      <div style={{ background: "#3b8c79", height: "15vh" }}>
-        <div className="navbarTopHalf" style={{ height: "50%" }}>
+      <div className="navbar" >
+        <div className="navbarTopHalf">
           {/*Dropdown replaces the navbar in small screens */}
           <Dropdown
             className="navbarDropdown"
@@ -92,15 +91,8 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div
-          className="navbarBottomHalf"
-          style={{
-            background: "#b4d0c4",
-            borderRadius: "50% 50% 0 0",
-            height: "50%"
-          }}
-        >
-          <div style={{ height: "50%" }}></div>
+        <div className="navbarBottomHalf">
+          <div className="navbarHelperDiv"></div>
           <div className="languageBtnsContainer" style={{ height: "50%", background: "#b4d0c4", bottom: "0px" }}>
             <div className="languageBtnsSubContainer">
               <button className="languageBtn" onClick={(e) => languageChanger("en")}>En</button>
