@@ -26,8 +26,6 @@
 
 @media (max-width: 767.98px) {
   .twitterContent__col__image {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
     width: 88%;
     margin-left: 6%;
     margin-right: 6%;
@@ -36,8 +34,8 @@
 
 @media (max-width: 575.98px) {
   .twitterContent__col__image {
-    width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
   }
 }
