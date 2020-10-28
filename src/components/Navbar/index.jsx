@@ -32,7 +32,7 @@ const Navbar = () => {
     </Menu>
   );
 
-  const languageChanger = (lang) => {
+  const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
   };
 
@@ -95,19 +95,19 @@ const Navbar = () => {
             <div className="navbar__languageSubContainer">
               <button
                 className="navbar__languageContainer-btn"
-                onClick={(e) => languageChanger("en")}
+                onClick={(e) => handleLanguageChange("en")}
               >
                 En
               </button>
               <button
                 className="navbar__languageContainer-btn"
-                onClick={(e) => languageChanger("tr")}
+                onClick={(e) => handleLanguageChange("tr")}
               >
                 Tr
               </button>
               <button
                 className="navbar__languageContainer-btn"
-                onClick={(e) => languageChanger("ar")}
+                onClick={(e) => handleLanguageChange("ar")}
               >
                 Ar
               </button>
