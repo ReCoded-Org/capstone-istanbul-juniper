@@ -22,16 +22,16 @@ export default function HomePageHeaderSection() {
           <Col span={4}>
             <Row>
               <h2 className="homePageHeaderTitle" style={{ fontFamily: "salsa" }}>
-                {t("home.homePageHeaderSection.homePageHeaderSectionFirstText")}{" "}
+                {t("home.headerSection.mainText")}{" "}
               </h2>
               <br></br>
               <p style={{ fontSize: "15px", fontFamily: "Raleway" }}>
-                {t("home.homePageHeaderSection.homePageHeaderSectionSecondText")}
+                {t("home.headerSection.secondText")}
               </p>
             </Row>
             <Row>
               <Button align="top" type="button" className="homePage__header__button" shape='round' size='large'>
-                {t("home.homePageHeaderSection.homePageHeaderSectionButton")}
+                {t("home.headerSection.headerButton")}
               </Button>
             </Row>
           </Col>

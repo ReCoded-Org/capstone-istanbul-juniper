@@ -1,10 +1,10 @@
 {
   "navbar": {
     "home": {
-      "homePageHeaderSection": {
-        "homePageHeaderSectionFirstText": "اكتشف ، استكشف ، تعلم",
-        "homePageHeaderSectionSecondText": "مصدر تعليم  للأطفال للعثور على مواد تعليمية وممتعة تتعلق بقضايا البيئة التي نواجهها اليوم.",
-        "homePageHeaderSectionButton": "انقذ الأرض"
+      "headerSection": {
+        "mainText": "اكتشف ، استكشف ، تعلم",
+        "secondText": "مصدر تعليم  للأطفال للعثور على مواد تعليمية وممتعة تتعلق بقضايا البيئة التي نواجهها اليوم.",
+        "headerButton": "انقذ الأرض"
       }
     },
     "about": "",
