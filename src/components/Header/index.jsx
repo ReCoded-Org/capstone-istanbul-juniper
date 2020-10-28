@@ -36,7 +36,7 @@ export default function Header() {
               </p>
             </Row>
             <Row>
-              <button align="top" type="button" className="saveTheWorld_button">
+              <button align="top" type="button" className="homePage__header__button">
                 {t("home.header.button")}
               </button>
             </Row>

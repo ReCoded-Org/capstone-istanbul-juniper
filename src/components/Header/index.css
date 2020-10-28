@@ -9,7 +9,7 @@ h1 {
   font-size: 2vw;
 }
 
-.saveTheWorld_button {
+.homePage__header__button {
   border-radius: 20px;
   border: none;
   height: 10vh;
@@ -23,7 +23,7 @@ h1 {
   font-size: 3vw;
 }
 
-.saveTheWorld_button:hover {
+.homePage__header__button:hover {
   transform: scale(1.2);
   transition: all 0.5s;
 }
