@@ -1,10 +1,10 @@
 import React from "react";
-import Footer from "./components/Footer";
+import ResourcesSection from "./components/ResourcesSection"
 
 function App() {
   return (
     <div>
-      <Footer />
+      <ResourcesSection />
     </div>
   );
 }
