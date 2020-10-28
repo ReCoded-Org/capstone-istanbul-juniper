@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 
 //React-Slider customised settings
+
 const settings = {
   infinite: true,
   slidesToShow: 5,
@@ -52,15 +53,14 @@ const settings = {
 
 const GamesCarousel = () => {
   const [t] = useTranslation();
-  console.log(t("navbar"));
   return (
     <div>
-      <h2 className="gamesCarousel_title">{t("gamesCarousel.title")}</h2>
-      <p className="gamesCarousel_context">{t("gamesCarousel.subtitle")}</p>
+      <h2 className="gamesCarousel__title">{t('home.gamesCarousel.title')}</h2>
+      <p className="gamesCarousel__context">{t('home.gamesCarousel.subtitle')}</p>
       <div className="sliderContainer">
-        <Slider {...settings} className="game-carousels">
-          {t("gamesCarousel.gameCards", { returnObjects: true }).map((game) => (
-            <div className="game-carousel">{game.name}</div>
+        <Slider {...settings} className="gameCarousels">
+          {t('home.gamesCarousel.gameCards', { returnObjects: true }).map((game) => (
+            <div className="gameCarousel">{game.name}</div>
           ))}
         </Slider>
       </div>

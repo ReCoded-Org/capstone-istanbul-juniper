@@ -7,40 +7,42 @@
     "contact": "",
     "login": ""
   },
-  "gamesCarousel": {
-    "title": "ألعاب",
-    "subtitle": "الألعاب الأكثر شهرة",
-    "gameCards": [
-      {
-        "name": "",
-        "img": "",
-        "description": ""
-      },
-      {
-        "name": "",
-        "img": "",
-        "description": ""
-      },
-      {
-        "name": "",
-        "img": "",
-        "description": ""
-      },
-      {
-        "name": "",
-        "img": "",
-        "description": ""
-      },
-      {
-        "name": "",
-        "img": "",
-        "description": ""
-      },
-      {
-        "name": "",
-        "img": "",
-        "description": ""
-      }
-    ]
+  "home": {
+    "gamesCarousel": {
+      "title": "ألعاب",
+      "subtitle": "الألعاب الأكثر شهرة",
+      "gameCards": [
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        }
+      ]
+    }
   }
 }
