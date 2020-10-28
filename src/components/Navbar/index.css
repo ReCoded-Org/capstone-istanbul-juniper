@@ -5,7 +5,7 @@
   height: 15vh;
 }
 
-.navbarTopHalf {
+.navbar_topHalf {
   margin: 0;
   padding: 0;
   background-color: #3b8c79;
@@ -21,42 +21,42 @@
   height: 50%;
 }
 
-.navbarTitle {
+.navbar_title {
   color: white;
   font-size:2em;
 }
 
-.navbarTopHalf ul li a {
+.navbar_topHalf ul li a {
   color: white;
 }
 
-.navbarTopHalf ul {
+.navbar_topHalf ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   width: 25%;
   justify-content: space-between;
   align-items: stretch;
-  font-size: 1em;
+  font-size: 1.3em;
 }
 
-.navbarTopHalf ul li:hover,
-.navbarTitle:hover {
+.navbar_topHalf ul li:hover,
+.navbar_title:hover {
   cursor: pointer;
 }
 
-.navbarHelperDiv{
+.navbar_helperDiv{
   height: 50%;
 }
 
-.navbarBottomHalf{
+.navbar_bottomHalf{
   position: relative;
   background: #b4d0c4;
   border-radius: 50% 50% 0 0;
   height: 50%;
 }
 
-.navbarLogo {
+.navbar_logo {
   z-index: 1;
   position: absolute;
   display: inline-block;
@@ -67,11 +67,11 @@
   width: auto;
 }
 
-.navbarLogo:hover {
+.navbar_logo:hover {
   cursor: pointer;
 }
 
-.navbarDropdown {
+.navbar_dropdown {
   position: absolute;
   left: 5vw;
   margin: 0;
@@ -95,24 +95,24 @@
   box-shadow: #b4d0c4;
 }
 
-.navbarDropdownBtn {
+.navbar_dropdown-btn {
   border: 0px;
   width: 1.2vh;
   height: 1.2vh;
   background: transparent;
 }
 
-.navbarLeftSide {
+.navbar_leftSide {
   display: flex;
   justify-content: space-between;
 }
 
-.navbarRightSide {
+.navbar_rightSide {
   display: flex;
   justify-content: stretch;
 }
 
-.languageBtn {
+.navbar_languageContainer-btn {
   background-color: #3b8c79;
   border-width: 1px;
   border-color: #b4d0c4;
@@ -121,40 +121,37 @@
   height: auto;
 }
 
-.languageBtn:hover{
+.navbar_languageContainer-btn:hover{
   cursor: pointer;
   background-color:#b4d0c4;
 }
 
-.languageBtnsContainer{
+.navbar_languageContainer{
   display: flex;
   justify-content:flex-start;
 }
 
-.languageBtnsSubContainer{
+.navbar_languageSubContainer{
   display: flex;
   justify-content:space-around;
   width:15%;
 }
 
 @media (max-width: 1024px) {
-  .navbarRightSide li a{
+  .navbar_rightSide li a{
     display: none;
   }
-  .navbarLeftSide li a{
+  .navbar_leftSide li a{
     display: none;
   }
 
-  .languageBtnsSubContainer{
+  .navbar_languageSubContainer{
     width: 150px;
   }
 }
 
 @media (min-width: 1025px) {
-  .navbarDropdown {
+  .navbar_dropdown {
     display: none ;
   }
-
-  
-  
 }

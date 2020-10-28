@@ -39,19 +39,19 @@ const Navbar = () => {
   return (
     <Router>
       <div className="navbar" >
-        <div className="navbarTopHalf">
+        <div className="navbar_topHalf">
           {/*Dropdown replaces the navbar in small screens */}
           <Dropdown
-            className="navbarDropdown"
+            className="navbar_dropdown"
             overlay={menu}
-            placement="bottomLeft"
+            placement="bottomleft"
           >
-            <button className="navbarDropdownBtn">
+            <button className="navbar_dropdown-btn">
               <MenuOutlined />
             </button>
           </Dropdown>
 
-          <ul className="navbarLeftSide">
+          <ul className="navbar_leftSide">
             <li>
               {" "}
               <Link to="/">{t("navbar.home")}</Link>{" "}
@@ -66,9 +66,9 @@ const Navbar = () => {
             </li>
           </ul>
           <Link to="/">
-            <h1 className="navbarTitle">Juniper</h1>
+            <h1 className="navbar_title">Juniper</h1>
           </Link>
-          <ul className="navbarRightSide">
+          <ul className="navbar_rightSide">
             <li>
               {" "}
               <Link to="/resources">{t("navbar.resources")}</Link>{" "}
@@ -82,22 +82,22 @@ const Navbar = () => {
               <Link to="/login">{t("navbar.login")}</Link>{" "}
             </li>
           </ul>
-          <Link className="navbarLogoLink" to={"/"}>
+          <Link className="navbar_logo-link" to={"/"}>
             <img
-              className="navbarLogo"
+              className="navbar_logo"
               src={require("./../../images/logo.svg")}
               alt="juniper-logo"
             />
           </Link>
         </div>
 
-        <div className="navbarBottomHalf">
-          <div className="navbarHelperDiv"></div>
-          <div className="languageBtnsContainer" style={{ height: "50%", background: "#b4d0c4", bottom: "0px" }}>
-            <div className="languageBtnsSubContainer">
-              <button className="languageBtn" onClick={(e) => languageChanger("en")}>En</button>
-              <button className="languageBtn" onClick={(e) => languageChanger("tr")}>Tr</button>
-              <button className="languageBtn" onClick={(e) => languageChanger("ar")}>Ar</button>
+        <div className="navbar_bottomHalf">
+          <div className="navbar_helperDiv"></div>
+          <div className="navbar_languageContainer" style={{ height: "50%", background: "#b4d0c4", bottom: "0px" }}>
+            <div className="navbar_languageSubContainer">
+              <button className="navbar_languageContainer-btn" onClick={(e) => languageChanger("en")}>En</button>
+              <button className="navbar_languageContainer-btn" onClick={(e) => languageChanger("tr")}>Tr</button>
+              <button className="navbar_languageContainer-btn" onClick={(e) => languageChanger("ar")}>Ar</button>
             </div>
           </div>
         </div>
