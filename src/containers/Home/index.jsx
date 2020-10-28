@@ -1,9 +1,14 @@
 import React from "react";
 import StayUpToDate from "../../components/StayUpTodate";
-import "./index.css";
+import BottomCurve from "../../components/BottomCurve/index";
 
 const Home = () => {
-  return <StayUpToDate />;
+  return (
+    <>
+      <BottomCurve />
+      <StayUpToDate />
+    </>
+  );
 };
 
 export default Home;
