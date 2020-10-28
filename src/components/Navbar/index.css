@@ -5,7 +5,7 @@
   height: 15vh;
 }
 
-.navbar_topHalf {
+.navbar__topHalf {
   margin: 0;
   padding: 0;
   background-color: #3b8c79;
@@ -21,16 +21,16 @@
   height: 50%;
 }
 
-.navbar_title {
+.navbar__title {
   color: white;
   font-size: 2em;
 }
 
-.navbar_topHalf ul li a {
+.navbar__topHalf ul li a {
   color: white;
 }
 
-.navbar_topHalf ul {
+.navbar__topHalf ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -40,23 +40,23 @@
   font-size: 1.3em;
 }
 
-.navbar_topHalf ul li:hover,
-.navbar_title:hover {
+.navbar__topHalf ul li:hover,
+.navbar__title:hover {
   cursor: pointer;
 }
 
-.navbar_helperDiv {
+.navbar__helperDiv {
   height: 50%;
 }
 
-.navbar_bottomHalf {
+.navbar__bottomHalf {
   position: relative;
   background: #b4d0c4;
   border-radius: 50% 50% 0 0;
   height: 50%;
 }
 
-.navbar_logo {
+.navbar__logo {
   z-index: 1;
   position: absolute;
   display: inline-block;
@@ -67,11 +67,11 @@
   width: auto;
 }
 
-.navbar_logo:hover {
+.navbar__logo:hover {
   cursor: pointer;
 }
 
-.navbar_dropdown {
+.navbar__dropdown {
   position: absolute;
   left: 5vw;
   margin: 0;
@@ -80,39 +80,39 @@
   height: 1.2em;
 }
 
-/*antdesign class*/
+/* antdesign class */
 .ant-dropdown {
   font-family: "Salsa";
 }
 
-/*antdesign class*/
+/* antdesign class */
 .anticon-menu .svg:hover {
   cursor: pointer;
 }
 
-/*antdesign class*/
+/* antdesign class */
 .anticon-menu .svg:focus {
   box-shadow: #b4d0c4;
 }
 
-.navbar_dropdown-btn {
+.navbar__dropdown-btn {
   border: 0px;
   width: 1.2vh;
   height: 1.2vh;
   background: transparent;
 }
 
-.navbar_leftSide {
+.navbar__leftSide {
   display: flex;
   justify-content: space-between;
 }
 
-.navbar_rightSide {
+.navbar__rightSide {
   display: flex;
   justify-content: stretch;
 }
 
-.navbar_languageContainer-btn {
+.navbar__languageContainer-btn {
   background-color: #3b8c79;
   border-width: 1px;
   border-color: #b4d0c4;
@@ -121,37 +121,37 @@
   height: auto;
 }
 
-.navbar_languageContainer-btn:hover {
+.navbar__languageContainer-btn:hover {
   cursor: pointer;
   background-color: #b4d0c4;
 }
 
-.navbar_languageContainer {
+.navbar__languageContainer {
   display: flex;
   justify-content: flex-start;
 }
 
-.navbar_languageSubContainer {
+.navbar__languageSubContainer {
   display: flex;
   justify-content: space-around;
   width: 15%;
 }
 
 @media (max-width: 1024px) {
-  .navbar_rightSide li a {
+  .navbar__rightSide li a {
     display: none;
   }
-  .navbar_leftSide li a {
+  .navbar__leftSide li a {
     display: none;
   }
 
-  .navbar_languageSubContainer {
+  .navbar__languageSubContainer {
     width: 150px;
   }
 }
 
 @media (min-width: 1025px) {
-  .navbar_dropdown {
+  .navbar__dropdown {
     display: none;
   }
 }
