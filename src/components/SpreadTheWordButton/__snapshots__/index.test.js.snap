@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ShareYourExperience button renders correctly 1`] = `
+exports[`SpreadTheWordButton renders correctly 1`] = `
 <div
   className="ant-row ant-row-center spreadTheWord"
   style={Object {}}

@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import ShareYourExperience from ".";
+import SpreadTheWordButton from ".";
 
-it("ShareYourExperience button renders correctly", () => {
-  const tree = renderer.create(<ShareYourExperience />).toJSON();
+it("SpreadTheWordButton renders correctly", () => {
+  const tree = renderer.create(<SpreadTheWordButton />).toJSON();
   expect(tree).toMatchSnapshot();
 });
