@@ -1,11 +1,11 @@
 import React from "react";
-import CurveComplementaryToNavbar from "../../components/CurveComplementaryToNavbar/index";
+import BottomCurve from "../../components/BottomCurve/index";
 import "./index.css";
 
 const Home = () => {
   return (
     <>
-      <CurveComplementaryToNavbar />
+      <BottomCurve />
     </>
   );
 };

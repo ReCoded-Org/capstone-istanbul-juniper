@@ -6,7 +6,7 @@
 import React from "react";
 import "./index.css";
 
-const CurveComplementaryToNavbar = () => {
+const BottomCurve = () => {
   return (
     <div className="curveContainer">
       <div className="curveContainer__bottomCurve">
@@ -16,4 +16,4 @@ const CurveComplementaryToNavbar = () => {
     </div>
   );
 };
-export default CurveComplementaryToNavbar;
+export default BottomCurve;
