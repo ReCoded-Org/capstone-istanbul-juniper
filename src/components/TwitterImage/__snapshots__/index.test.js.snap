@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TwitterImage renders correctly 1`] = `
+<a
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <img
+    className="twitterContent__col__image"
+  />
+</a>
+`;
