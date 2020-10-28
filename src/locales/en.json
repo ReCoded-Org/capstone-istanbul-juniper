@@ -1,10 +1,10 @@
 {
   "navbar": {
     "home": {
-      "header": {
-        "header0": "Discover, Explore, Learn",
-        "header1": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
-        "button": "Save the Earth"
+      "homePageHeaderSection": {
+        "homePageHeaderSectionFirstText": "Discover, Explore, Learn",
+        "homePageHeaderSectionSecondText": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
+        "homePageHeaderSectionButton": "Save the Earth"
       }
     },
     "about": "",
