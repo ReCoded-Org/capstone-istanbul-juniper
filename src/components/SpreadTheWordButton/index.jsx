@@ -1,5 +1,11 @@
+/*
+ * Functionality of this button is not %100 agreed upon.
+ * So, the link it directs to is not correct.
+ */
+
 import React from "react";
 import { Row, Col } from "antd";
+import { TwitterCircleFilled } from "@ant-design/icons";
 import "./index.css";
 import { useTranslation } from "react-i18next";
 
@@ -15,6 +21,7 @@ const SpreadTheWordButton = () => {
             rel="noopener noreferrer"
             href="https://www.twitter.com"
           >
+            <TwitterCircleFilled />
             {t("home.spreadTheWord")}
           </a>
         </button>
