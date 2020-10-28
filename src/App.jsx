@@ -1,7 +1,10 @@
 import React from "react";
+import Home from "./containers/Home";
+import "antd/dist/antd.css";
+import "./i18n";
 
 function App() {
-  return <div>Basic structure</div>;
+  return <Home />;
 }
 
 export default App;
