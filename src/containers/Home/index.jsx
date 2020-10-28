@@ -1,14 +1,12 @@
 import React from "react";
 import GamesCarousel from "../../components/GamesCarousel";
 
-function Home() {
+const Home = () => {
   return (
     <>
-  <div>Basic structure</div>
-  <GamesCarousel />
-  </>
-    )
-  ;
-}
+      <GamesCarousel />
+    </>
+  );
+};
 
 export default Home;

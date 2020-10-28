@@ -5,40 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 
-const gameCards = [
-  {
-    name: "",
-    img: "",
-    description: "",
-  },
-  {
-    name: "",
-    img: "",
-    description: "",
-  },
-  {
-    name: "",
-    img: "",
-    description: "",
-  },
-  {
-    name: "",
-    img: "",
-    description: "",
-  },
-  {
-    name: "",
-    img: "",
-    description: "",
-  },
-  {
-    name: "",
-    img: "",
-    description: "",
-  },
-];
-
-//React-Slider Settings
+//React-Slider customised settings
 const settings = {
   infinite: true,
   slidesToShow: 5,
@@ -92,7 +59,7 @@ const GamesCarousel = () => {
       <p className="gamesCarousel_context">{t("gamesCarousel.subtitle")}</p>
       <div className="sliderContainer">
         <Slider {...settings} className="game-carousels">
-          {gameCards.map((game) => (
+          {t("gamesCarousel.gameCards", { returnObjects: true }).map((game) => (
             <div className="game-carousel">{game.name}</div>
           ))}
         </Slider>

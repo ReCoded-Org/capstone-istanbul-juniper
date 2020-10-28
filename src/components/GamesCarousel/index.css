@@ -15,11 +15,10 @@ body {
 }
 
 .slick-slide {
-  border-radius: 25px;
+  border-radius: 3.5vw;
   background: rgb(124, 123, 123);
   padding: 1.5vw;
-  /*width: 23vw;*/
-  height: 25vw;
+  height: 20vw;
   border: 2.5px none rgb(134, 134, 134);
   box-sizing: border-box;
   margin: 1.5vw;
@@ -33,11 +32,10 @@ body {
 
 .slick-prev:before,
 .slick-next:before {
+  border-radius: 50%;
   color: #61e3d8;
   font-size: 3vw;
-  background-color: black;
-}
-button .slick-prev:before {
+  cursor: pointer;
 }
 
 @media (max-width: 1199.98px) {
@@ -63,25 +61,22 @@ button .slick-prev:before {
 
 @media (max-width: 1199.98px) {
   .slick-slide {
-    /* width: 27vw; */
     height: 27vw;
   }
 }
 @media (max-width: 991.98px) {
   .slick-slide {
-    /* width: 29vw; */
     height: 29vw;
   }
 }
 @media (max-width: 767.98px) {
   .slick-slide {
-    /* width: 33vw; */
     height: 33vw;
   }
 }
 @media (max-width: 575.98px) {
   .slick-slide {
-    /* width: 50%; */
-    height: 60vw;
+    border-radius: 7vw;
+    height: 65vw;
   }
 }
