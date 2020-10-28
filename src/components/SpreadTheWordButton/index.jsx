@@ -15,7 +15,7 @@ const SpreadTheWordButton = () => {
             rel="noopener noreferrer"
             href="https://www.twitter.com"
           >
-            {t("spreadTheWord")}
+            {t("home.spreadTheWord")}
           </a>
         </button>
       </Col>

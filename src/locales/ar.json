@@ -1,11 +1,13 @@
 {
-  "navbar": {
-    "home": "",
-    "about": "",
-    "games": "",
-    "resources": "",
-    "contact": "",
-    "login": ""
-  },
-  "spreadTheWord": "انشر الكلمة"
+  "home": {
+    "navbar": {
+      "home": "",
+      "about": "",
+      "games": "",
+      "resources": "",
+      "contact": "",
+      "login": ""
+    },
+    "spreadTheWord": "انشر الكلمة"
+  }
 }

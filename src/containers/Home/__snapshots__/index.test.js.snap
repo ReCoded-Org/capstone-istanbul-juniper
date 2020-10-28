@@ -18,7 +18,7 @@ exports[`Home renders correctly 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        spreadTheWord
+        home.spreadTheWord
       </a>
     </button>
   </div>
