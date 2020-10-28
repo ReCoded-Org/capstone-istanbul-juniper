@@ -53,7 +53,6 @@ const Navbar = () => {
 
           <ul className="navbar__leftSide">
             <li>
-              
               <Link to="/">{t("navbar.home")}</Link>
             </li>
             <li>
