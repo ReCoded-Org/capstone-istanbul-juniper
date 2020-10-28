@@ -30,9 +30,9 @@ export default function HomePageHeaderSection() {
               </p>
             </Row>
             <Row>
-              <button align="top" type="button" className="homePage__header__button">
+              <Button align="top" type="button" className="homePage__header__button" shape='round' size='large'>
                 {t("home.homePageHeaderSection.homePageHeaderSectionButton")}
-              </button>
+              </Button>
             </Row>
           </Col>
 
