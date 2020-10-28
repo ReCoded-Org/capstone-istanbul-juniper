@@ -1,3 +1,8 @@
+/**
+ * Navbar has a section that displays top half of a wide elliptical shape.
+ * This component is the bottom half of elliptical shape
+ */
+
 import React from "react";
 import "./index.css";
 
