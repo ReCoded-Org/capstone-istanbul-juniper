@@ -1,13 +1,13 @@
 {
-  "home": {
     "navbar": {
-      "home": "",
-      "about": "",
-      "games": "",
-      "resources": "",
-      "contact": "",
-      "login": ""
+        "home": "",
+        "about": "",
+        "games": "",
+        "resources": "",
+        "contact": "",
+        "login": ""
     },
-    "spreadTheWord": "Öğrendiklerini Paylaş!"
-  }
+    "home": {
+        "spreadTheWord": "Öğrendiklerini paylaş!"
+    }
 }
