@@ -6,29 +6,5 @@
     "resources": "",
     "contact": "",
     "login": ""
-  },
-  "spreadTheWord": "انشر الكلمة",
-  "stayUpToDate": " برنامج الامم المتحدة لحماية البيئة . الصفحة العربية",
-  "twitterPages": [
-    {
-      "alt": " المجتمع البيئي العماني",
-      "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/arabicTweets%2FenvironmentsocietyOman.svg?alt=media&token=0f6912fe-4a3c-42c3-933f-dd96a4cb4695",
-      "href": "https://twitter.com/eso_oman_?lang=en"
-    },
-    {
-      "alt": "السلام الاخضر، الحساب العربي",
-      "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/arabicTweets%2FgreenpeaceAr.svg?alt=media&token=596195fe-c774-4dc3-b827-7935f20f97cf",
-      "href": "https://twitter.com/GreenpeaceAR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-    },
-    {
-      "alt": "وزارة التغير المناخي والبيئةوزارة التغير المناخي والبيئةحساب التويتر",
-      "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/arabicTweets%2Fministry.svg?alt=media&token=b8c9c6a6-c0a5-4bd3-8534-2b9e0bc12771",
-      "href": "https://twitter.com/MoCCaEUAE?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-    },
-    {
-      "alt": "برنامج الامم المتحدة لحماية البيئة . الصفحة العربية",
-      "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/arabicTweets%2FsomethingSomethingArabicPage.svg?alt=media&token=f2959ba3-c431-4d31-8515-4cb6e4fecb0a",
-      "href": "https://twitter.com/UNEP_Arabic/media"
-    }
-  ]
+  }
 }
