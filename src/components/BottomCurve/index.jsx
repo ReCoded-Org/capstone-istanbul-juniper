@@ -8,10 +8,10 @@ import "./index.css";
 
 const BottomCurve = () => {
   return (
-    <div className="curveContainer">
-      <div className="curveContainer__bottomCurve">
-        <div className="curveContainer__bottomCurve__topHalf" />
-        <div className="curveContainer__bottomCurve__bottomHalf" />
+    <div className="bottomCurveContainer">
+      <div className="bottomCurveContainer__bottomCurve">
+        <div className="bottomCurveContainer__bottomCurve__topHalf" />
+        <div className="bottomCurveContainer__bottomCurve__bottomHalf" />
       </div>
     </div>
   );
