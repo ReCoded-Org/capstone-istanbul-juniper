@@ -29,25 +29,25 @@ h1 {
 }
 
 @media (max-width: 1199.98px) {
-  .saveTheWorld_button {
+  .homePage__header__button{
     font-size: 4vw;
   }
 }
 
 @media (max-width: 991.98px) {
-  .saveTheWorld_button {
+  .homePage__header__button {
     font-size: 4.5vw;
   }
 }
 
 @media (max-width: 767.98px) {
-  .saveTheWorld_button {
+  .homePage__header__button {
     font-size: 5vw;
   }
 }
 
 @media (max-width: 575.98px) {
-  .saveTheWorld_button {
+  .homePage__header__button{
     font-size: 6vw;
   }
 }

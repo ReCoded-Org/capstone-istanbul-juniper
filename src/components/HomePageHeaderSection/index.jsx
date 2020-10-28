@@ -12,7 +12,7 @@ const DemoBox = (props) => (
   <p className={`height-${props.value}`}>{props.children}</p>
 );
 
-export default function Header() {
+export default function HomePageHeaderSection() {
   const { t } = useTranslation();
   return (
     <>

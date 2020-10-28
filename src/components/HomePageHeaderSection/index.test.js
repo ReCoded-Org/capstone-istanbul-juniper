@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./index.jsx";
+import HomePageHeaderSection from "./index.jsx";
 import renderer from "react-test-renderer";
 
 it("first snapshot test", () => {
