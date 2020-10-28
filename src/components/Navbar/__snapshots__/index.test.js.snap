@@ -5,10 +5,10 @@ exports[`Navbar Component matches the tree 1`] = `
   className="navbar"
 >
   <div
-    className="navbar_topHalf"
+    className="navbar__topHalf"
   >
     <button
-      className="ant-dropdown-trigger navbar_dropdown-btn navbar_dropdown"
+      className="ant-dropdown-trigger navbar__dropdown-btn navbar__dropdown"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
     >
@@ -34,37 +34,31 @@ exports[`Navbar Component matches the tree 1`] = `
       </span>
     </button>
     <ul
-      className="navbar_leftSide"
+      className="navbar__leftSide"
     >
       <li>
-         
         <a
           href="/"
           onClick={[Function]}
         >
           navbar.home
         </a>
-         
       </li>
       <li>
-         
         <a
           href="/about"
           onClick={[Function]}
         >
           navbar.about
         </a>
-         
       </li>
       <li>
-         
         <a
           href="/games"
           onClick={[Function]}
         >
           navbar.games
         </a>
-         
       </li>
     </ul>
     <a
@@ -72,53 +66,47 @@ exports[`Navbar Component matches the tree 1`] = `
       onClick={[Function]}
     >
       <h1
-        className="navbar_title"
+        className="navbar__title"
       >
         Juniper
       </h1>
     </a>
     <ul
-      className="navbar_rightSide"
+      className="navbar__rightSide"
     >
       <li>
-         
         <a
           href="/resources"
           onClick={[Function]}
         >
           navbar.resources
         </a>
-         
       </li>
       <li>
-         
         <a
           href="/contact"
           onClick={[Function]}
         >
           navbar.contact
         </a>
-         
       </li>
       <li>
-         
         <a
           href="/login"
           onClick={[Function]}
         >
           navbar.login
         </a>
-         
       </li>
     </ul>
     <a
-      className="navbar_logo-link"
+      className="navbar__logo-link"
       href="/"
       onClick={[Function]}
     >
       <img
         alt="juniper-logo"
-        className="navbar_logo"
+        className="navbar__logo"
         src={
           Object {
             "ReactComponent": Object {
@@ -133,13 +121,13 @@ exports[`Navbar Component matches the tree 1`] = `
     </a>
   </div>
   <div
-    className="navbar_bottomHalf"
+    className="navbar__bottomHalf"
   >
     <div
-      className="navbar_helperDiv"
+      className="navbar__helperDiv"
     />
     <div
-      className="navbar_languageContainer"
+      className="navbar__languageContainer"
       style={
         Object {
           "background": "#b4d0c4",
@@ -149,22 +137,22 @@ exports[`Navbar Component matches the tree 1`] = `
       }
     >
       <div
-        className="navbar_languageSubContainer"
+        className="navbar__languageSubContainer"
       >
         <button
-          className="navbar_languageContainer-btn"
+          className="navbar__languageContainer-btn"
           onClick={[Function]}
         >
           En
         </button>
         <button
-          className="navbar_languageContainer-btn"
+          className="navbar__languageContainer-btn"
           onClick={[Function]}
         >
           Tr
         </button>
         <button
-          className="navbar_languageContainer-btn"
+          className="navbar__languageContainer-btn"
           onClick={[Function]}
         >
           Ar
