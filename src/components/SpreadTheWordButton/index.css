@@ -17,6 +17,7 @@
   transition: all 0.5s;
   padding: 5px;
   font-size: 3vw;
+  cursor: pointer;
 }
 
 .spreadTheWord__button:hover {
@@ -24,13 +25,17 @@
   transition: all 0.5s;
 }
 
-.spreadTheWord__button a {
+.spreadTheWord a {
   color: white;
   background: #f8ac4c;
 }
 
-.spreadTheWord__button a:hover {
+.spreadTheWord a:hover {
   color: white;
+}
+
+.twitterIcon {
+  padding-right: 1.5vw;
 }
 
 @media (max-width: 1199.98px) {

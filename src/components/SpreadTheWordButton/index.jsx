@@ -15,16 +15,16 @@ const SpreadTheWordButton = () => {
   return (
     <Row justify="center" className="spreadTheWord">
       <Col xxl={10} xl={10} lg={12} md={12} sm={14} xs={16}>
-        <button type="button" className="spreadTheWord__button">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.twitter.com"
-          >
-            <TwitterCircleFilled />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.twitter.com"
+        >
+          <button type="button" className="spreadTheWord__button">
+            <TwitterCircleFilled className="twitterIcon" />
             {t("home.spreadTheWord")}
-          </a>
-        </button>
+          </button>
+        </a>
       </Col>
     </Row>
   );
