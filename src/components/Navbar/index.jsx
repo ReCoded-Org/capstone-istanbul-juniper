@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import "./index.css"
 import { Link, BrowserRouter as Router } from "react-router-dom";
-import { Dropdown, Button, Menu } from "antd";
+import { Dropdown, Menu } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
@@ -96,14 +97,16 @@ const Navbar = () => {
           style={{
             background: "#b4d0c4",
             borderRadius: "50% 50% 0 0",
-            height: "50%",
+            height: "50%"
           }}
         >
           <div style={{ height: "50%" }}></div>
-          <div style={{ height: "50%", background: "#b4d0c4", bottom: "0px" }}>
-            <button onClick={(e) => languageChanger("en")}>En</button>
-            <button onClick={(e) => languageChanger("tr")}>Tr</button>
-            <button onClick={(e) => languageChanger("ar")}>Ar</button>
+          <div className="languageBtnsContainer" style={{ height: "50%", background: "#b4d0c4", bottom: "0px" }}>
+            <div className="languageBtnsSubContainer">
+              <button className="languageBtn" onClick={(e) => languageChanger("en")}>En</button>
+              <button className="languageBtn" onClick={(e) => languageChanger("tr")}>Tr</button>
+              <button className="languageBtn" onClick={(e) => languageChanger("ar")}>Ar</button>
+            </div>
           </div>
         </div>
       </div>
