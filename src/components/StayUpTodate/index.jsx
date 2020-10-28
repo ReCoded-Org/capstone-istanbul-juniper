@@ -9,7 +9,7 @@ const StayUpToDate = () => {
   const [t] = useTranslation();
 
   const twitterPagesData = [
-    ...t("twitterPages", {
+    ...t("home.twitterPages", {
       returnObjects: true,
     }),
   ];
@@ -38,7 +38,7 @@ const StayUpToDate = () => {
   return (
     <div className="stayUpToDate">
       <Title>
-        <span className="stayUpToDate__title">{t("stayUpToDate")}</span>
+        <span className="stayUpToDate__title">{t("home.stayUpToDate")}</span>
       </Title>
       <Row align="center" className="stayUpToDate__twitterContent">
         {twitterImages}
