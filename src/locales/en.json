@@ -1,14 +1,14 @@
 {
+  "navbar": {
+    "home": "",
+    "about": "",
+    "games": "",
+    "resources": "",
+    "contact": "",
+    "login": ""
+  },
   "home": {
-    "navbar": {
-      "home": "",
-      "about": "",
-      "games": "",
-      "resources": "",
-      "contact": "",
-      "login": ""
-    },
-    "stayUpToDate": "Stay Up-to-Date!",
+    "stayUpToDate": "Stay up-to-date!",
     "twitterPages": [
       {
         "alt": "EAD Twitter Account",

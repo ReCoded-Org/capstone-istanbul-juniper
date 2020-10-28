@@ -1,14 +1,14 @@
 {
+  "navbar": {
+    "home": "",
+    "about": "",
+    "games": "",
+    "resources": "",
+    "contact": "",
+    "login": ""
+  },
   "home": {
-    "navbar": {
-      "home": "",
-      "about": "",
-      "games": "",
-      "resources": "",
-      "contact": "",
-      "login": ""
-    },
-    "stayUpToDate": "Güncel Kal!",
+    "stayUpToDate": "Güncel kal!",
     "twitterPages": [
       {
         "alt": "Doğa Derneği Twitter Hesabı",

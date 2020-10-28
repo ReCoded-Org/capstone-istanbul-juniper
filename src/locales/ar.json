@@ -1,13 +1,13 @@
 {
+  "navbar": {
+    "home": "",
+    "about": "",
+    "games": "",
+    "resources": "",
+    "contact": "",
+    "login": ""
+  },
   "home": {
-    "navbar": {
-      "home": "",
-      "about": "",
-      "games": "",
-      "resources": "",
-      "contact": "",
-      "login": ""
-    },
     "stayUpToDate": " برنامج الامم المتحدة لحماية البيئة . الصفحة العربية",
     "twitterPages": [
       {
