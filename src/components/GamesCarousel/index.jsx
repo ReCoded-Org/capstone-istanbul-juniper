@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -85,8 +85,8 @@ const settings = {
 };
 
 const GamesCarousel = () => {
-  const {t} = useTranslation()
-  console.log(useTranslation().t('navbar'));
+  const { t } = useTranslation();
+  console.log(useTranslation().t("navbar"));
   return (
     <div>
       <h2 className="gamesCarousel_title">{t("gamesCarousel.title")}</h2>
