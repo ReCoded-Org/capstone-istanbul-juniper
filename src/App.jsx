@@ -1,12 +1,10 @@
 import React from "react";
-import ResourcesSection from "./components/ResourcesSection"
+import Home from "./containers/Home";
+import "antd/dist/antd.css";
+import "./i18n";
 
 function App() {
-  return (
-    <div>
-      <ResourcesSection />
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;

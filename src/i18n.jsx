@@ -1,7 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-
 import ar from "./locales/ar.json";
 import en from "./locales/en.json";
 import tr from "./locales/tr.json";
@@ -19,18 +18,17 @@ const resources = {
   },
 };
 
-i18n
-
+i18n;
+global
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    resources,
     fallbackLng: "en",
     debug: true,
-
     interpolation: {
       escapeValue: false,
     },
-    resources,
   });
 
 export default i18n;
