@@ -1,4 +1,4 @@
-.homePageHeaderTitle {
+.homePageHeaderContainer__title {
   text-align: center;
   display: inline-block;
   font-size: larger;
@@ -9,7 +9,7 @@
   font-size: 2vw;
 }
 
-.homePageHeaderButton {
+.homePageHeaderContanier__button {
   border-radius: 20px;
   border: none;
   height: 10vh;
@@ -22,31 +22,31 @@
   font-size: 3vw;
 }
 
-.homePageHeaderButton:hover {
+.homePageHeaderContanier__button:hover {
   transform: scale(1.2);
   transition: all 0.5s;
 }
 
 @media (max-width: 1199.98px) {
-  .homePageHeaderButton{
+  .homePageHeaderContanier__button{
     font-size: 4vw;
   }
 }
 
 @media (max-width: 991.98px) {
-  .homePageHeaderButton{
+  .homePageHeaderContanier__button{
     font-size: 4.5vw;
   }
 }
 
 @media (max-width: 767.98px) {
-  .homePageHeaderButton {
+  .homePageHeaderContanier__button {
     font-size: 5vw;
   }
 }
 
 @media (max-width: 575.98px) {
-  .homePageHeaderButton {
+  .homePageHeaderContanier__button {
     font-size: 6vw;
   }
 }

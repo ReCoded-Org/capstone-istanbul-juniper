@@ -20,7 +20,7 @@ export default function HomePageHeaderSection() {
           <Col span={4}>
             <Row>
               <h2
-                className="homePageHeaderTitle"
+                className="homePageHeaderContainer__title"
                 style={{ fontFamily: "salsa" }}
               >
                 {t("home.headerSection.mainText")}{" "}
@@ -34,7 +34,7 @@ export default function HomePageHeaderSection() {
               <Button
                 align="top"
                 type="button"
-                className="homePageHeaderButton"
+                className="homePageHeaderContainer__button"
                 shape="round"
                 size="large"
               >
