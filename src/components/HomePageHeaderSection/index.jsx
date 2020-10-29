@@ -10,7 +10,7 @@ export default function HomePageHeaderSection() {
   const { t } = useTranslation();
   return (
     <>
-      <div className="homePage__header__container">
+      <div className="homePageHeaderContainer">
         <Row justify="space-around" align="middle"></Row>
         <Row justify="space-around" align="middle">
           <Col span={4}>
@@ -34,7 +34,7 @@ export default function HomePageHeaderSection() {
               <Button
                 align="top"
                 type="button"
-                className="homePage__header__button"
+                className="homePageHeaderButton"
                 shape="round"
                 size="large"
               >

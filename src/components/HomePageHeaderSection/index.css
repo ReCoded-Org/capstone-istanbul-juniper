@@ -4,12 +4,12 @@
   font-size: larger;
 }
 
-.homePage__header__container {
+.homePageHeaderContainer {
   padding-top: 150px;
   font-size: 2vw;
 }
 
-.homePage__header__button {
+.homePageHeaderButton {
   border-radius: 20px;
   border: none;
   height: 10vh;
@@ -22,31 +22,31 @@
   font-size: 3vw;
 }
 
-.homePage__header__button:hover {
+.homePageHeaderButton:hover {
   transform: scale(1.2);
   transition: all 0.5s;
 }
 
 @media (max-width: 1199.98px) {
-  .homePage__header__button {
+  .homePageHeaderButton{
     font-size: 4vw;
   }
 }
 
 @media (max-width: 991.98px) {
-  .homePage__header__button {
+  .homePageHeaderButton{
     font-size: 4.5vw;
   }
 }
 
 @media (max-width: 767.98px) {
-  .homePage__header__button {
+  .homePageHeaderButton {
     font-size: 5vw;
   }
 }
 
 @media (max-width: 575.98px) {
-  .homePage__header__button {
+  .homePageHeaderButton {
     font-size: 6vw;
   }
 }
