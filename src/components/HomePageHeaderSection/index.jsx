@@ -21,12 +21,12 @@ export default function HomePageHeaderSection() {
             <Row>
               <h2
                 className="homePageHeaderContainer__title"
-                style={{ fontFamily: "salsa" }}
+               
               >
                 {t("home.headerSection.mainText")}{" "}
               </h2>
               <br></br>
-              <p style={{ fontSize: "15px", fontFamily: "Raleway" }}>
+              <p className="homePageHeaderContainer__paragraph">
                 {t("home.headerSection.secondText")}
               </p>
             </Row>
