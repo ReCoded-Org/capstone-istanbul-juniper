@@ -17,8 +17,7 @@
   margin: 5%;
 }
 
-/*React-slick class for sliders */
-
+/* React-slick class for sliders */
 .slick-slide {
   border-radius: 3.5vw;
   background: rgb(124, 123, 123);
@@ -29,8 +28,7 @@
   margin: 1.5vw;
 }
 
-/*React-slick class for slider- arrows */
-
+/* React-slick class for slider- arrows */
 .slick-prev:before,
 .slick-next:before {
   border-radius: 50%;
