@@ -89,7 +89,7 @@ exports[`Footer renders correctly 1`] = `
           href="/games"
           onClick={[Function]}
         >
-            
+           
           footer.Games
         </a>
       </div>
