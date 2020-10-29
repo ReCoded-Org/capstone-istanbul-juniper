@@ -1,6 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Row, Col } from "antd";
+import { Row, Col ,Button} from "antd";
 import homePageHeaderImgLeft from "../../images/child.png";
 import homePageHeaderImgRight from "../../images/family.png";
 import "./index.css";
@@ -14,7 +14,7 @@ export default function HomePageHeaderSection() {
         <Row justify="space-around" align="middle"></Row>
         <Row justify="space-around" align="middle">
           <Col span={4}>
-            <img src={homePageHeaderImgLeft}></img>
+            <img src={homePageHeaderImgRight}></img>
           </Col>
           <Col span={4}></Col>
           <Col span={4}>
@@ -44,7 +44,7 @@ export default function HomePageHeaderSection() {
           </Col>
 
           <Col span={4}>
-            <img src={homePageHeaderImgRight}></img>
+            <img src={homePageHeaderImgLeft}></img>
           </Col>
         </Row>
       </div>
