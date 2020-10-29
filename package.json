@@ -14,7 +14,6 @@
         "firebaseui": "^4.7.0",
         "i18next": "^19.8.2",
         "i18next-browser-languagedetector": "^6.0.1",
-        "i18next-http-backend": "^1.0.21",
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
         "react-i18next": "^11.7.3",
