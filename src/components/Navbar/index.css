@@ -63,7 +63,7 @@
   width: auto;
 }
 
-.navbar__logo-link{
+.navbar__logo-link {
   position: absolute;
   left: 47.9%;
   top: 5vh;
@@ -124,7 +124,6 @@
   height: auto;
 }
 
-
 .navbar__languageContainer-btn:hover {
   cursor: pointer;
   background-color: #b4d0c4;
@@ -147,7 +146,6 @@
   .navbar__leftSide li a {
     display: none;
   }
-
 }
 
 @media (min-width: 1024.1px) {
@@ -157,7 +155,7 @@
 }
 
 @media (max-width: 425px) {
-  .navbar__languageContainer{
+  .navbar__languageContainer {
     width: 23%;
     top: 3vh;
   }

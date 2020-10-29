@@ -79,38 +79,33 @@ const Navbar = () => {
             </li>
           </ul>
           <Link className="navbar__logo-link" to={"/"}>
-            <img
-              className="navbar__logo"
-              src={logoImg}
-              alt="juniper-logo"
-            />
+            <img className="navbar__logo" src={logoImg} alt="juniper-logo" />
           </Link>
           <div className="navbar__languageContainer">
-              <button
-                className="navbar__languageContainer-btn"
-                onClick={(e) => handleLanguageChange("en")}
-              >
-               <p>En</p>
-              </button>
-              <button
-                className="navbar__languageContainer-btn"
-                onClick={(e) => handleLanguageChange("tr")}
-              >
-               <p>Tr</p>
-              </button>
-              <button
-                className="navbar__languageContainer-btn"
-                onClick={(e) => handleLanguageChange("ar")}
-              >
-                <p>Ar</p>
-              </button>
-            </div>
+            <button
+              className="navbar__languageContainer-btn"
+              onClick={(e) => handleLanguageChange("en")}
+            >
+              <p>En</p>
+            </button>
+            <button
+              className="navbar__languageContainer-btn"
+              onClick={(e) => handleLanguageChange("tr")}
+            >
+              <p>Tr</p>
+            </button>
+            <button
+              className="navbar__languageContainer-btn"
+              onClick={(e) => handleLanguageChange("ar")}
+            >
+              <p>Ar</p>
+            </button>
+          </div>
         </div>
 
         <div className="navbar__bottomHalf">
           <div className="navbar__helperDiv"></div>
-          <div>
-          </div>
+          <div></div>
         </div>
       </div>
     </Router>
