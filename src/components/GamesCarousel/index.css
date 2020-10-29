@@ -1,0 +1,84 @@
+
+.gamesCarousel__title {
+  font-size: 5vw;
+  font-family: "Salsa", cursive;
+  text-align: center;
+}
+
+.gamesCarousel__context {
+  font: "Raleway";
+  font-size: 3vw;
+  text-align: center;
+}
+
+.sliderContainer {
+  width: 90%;
+  height: auto;
+  margin: 5%;
+}
+
+/*React-slick class for sliders */
+
+.slick-slide {
+  border-radius: 3.5vw;
+  background: rgb(124, 123, 123);
+  padding: 1.5vw;
+  height: 20vw;
+  border: 2.5px none rgb(134, 134, 134);
+  box-sizing: border-box;
+  margin: 1.5vw;
+}
+
+/*React-slick class for slider- arrows */
+
+.slick-prev:before,
+.slick-next:before {
+  border-radius: 50%;
+  color: #61e3d8;
+  font-size: 3vw;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1199.98px) {
+  .gamesCarousel__title {
+    font-size: 6vw;
+  }
+}
+@media (max-width: 991.98px) {
+  .gamesCarousel__title {
+    font-size: 7vw;
+  }
+}
+@media (max-width: 767.98px) {
+  .gamesCarousel__title {
+    font-size: 8vw;
+  }
+}
+@media (max-width: 575.98px) {
+  .gamesCarousel__title {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .slick-slide {
+    height: 27vw;
+  }
+}
+@media (max-width: 991.98px) {
+  .slick-slide {
+    height: 29vw;
+  }
+}
+@media (max-width: 767.98px) {
+  .slick-slide {
+    height: 33vw;
+  }
+}
+@media (max-width: 575.98px) {
+  .slick-slide {
+    border-radius: 7vw;
+    height: 65vw;
+  }
+}

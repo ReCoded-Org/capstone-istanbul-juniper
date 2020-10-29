@@ -6,5 +6,43 @@
     "resources": "",
     "contact": "",
     "login": ""
+  },
+  "home": {
+    "gamesCarousel": {
+      "title": "ألعاب",
+      "subtitle": "الألعاب الأكثر شهرة",
+      "gameCards": [
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        }
+      ]
+    }
   }
 }
