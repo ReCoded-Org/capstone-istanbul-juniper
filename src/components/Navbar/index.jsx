@@ -6,6 +6,8 @@ import { MenuOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 
+const logoImg = require("./../../images/logo.svg");
+
 const Navbar = () => {
   const { t } = useTranslation();
 
@@ -79,38 +81,35 @@ const Navbar = () => {
           <Link className="navbar__logo-link" to={"/"}>
             <img
               className="navbar__logo"
-              src={require("./../../images/logo.svg")}
+              src={logoImg}
               alt="juniper-logo"
             />
           </Link>
-        </div>
-
-        <div className="navbar__bottomHalf">
-          <div className="navbar__helperDiv"></div>
-          <div
-            className="navbar__languageContainer"
-            style={{ height: "50%", background: "#b4d0c4", bottom: "0px" }}
-          >
-            <div className="navbar__languageSubContainer">
+          <div className="navbar__languageContainer">
               <button
                 className="navbar__languageContainer-btn"
                 onClick={(e) => handleLanguageChange("en")}
               >
-                En
+               <p>En</p>
               </button>
               <button
                 className="navbar__languageContainer-btn"
                 onClick={(e) => handleLanguageChange("tr")}
               >
-                Tr
+               <p>Tr</p>
               </button>
               <button
                 className="navbar__languageContainer-btn"
                 onClick={(e) => handleLanguageChange("ar")}
               >
-                Ar
+                <p>Ar</p>
               </button>
             </div>
+        </div>
+
+        <div className="navbar__bottomHalf">
+          <div className="navbar__helperDiv"></div>
+          <div>
           </div>
         </div>
       </div>

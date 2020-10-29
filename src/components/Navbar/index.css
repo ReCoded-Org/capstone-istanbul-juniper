@@ -59,10 +59,16 @@
   position: absolute;
   display: inline-block;
   padding: 0px;
-  left: 43%;
-  top: 5vh;
-  height: 7vh;
+  height: 6vh;
   width: auto;
+}
+
+.navbar__logo-link{
+  position: absolute;
+  left: 47.9%;
+  top: 5vh;
+  width: 3%;
+  height: auto;
 }
 
 .navbar__logo:hover {
@@ -94,7 +100,6 @@
 }
 
 .navbar__dropdown-btn {
-  border: 0px;
   width: 1.2vh;
   height: 1.2vh;
   background: transparent;
@@ -115,9 +120,10 @@
   border-width: 1px;
   border-color: #b4d0c4;
   color: white;
-  width: 18%;
+  width: 30%;
   height: auto;
 }
+
 
 .navbar__languageContainer-btn:hover {
   cursor: pointer;
@@ -126,13 +132,12 @@
 
 .navbar__languageContainer {
   display: flex;
-  justify-content: flex-start;
-}
-
-.navbar__languageSubContainer {
-  display: flex;
   justify-content: space-around;
-  width: 15%;
+  position: absolute;
+  right: 1vw;
+  width: 10%;
+  height: 27px;
+  top: 70%;
 }
 
 @media (max-width: 1024px) {
@@ -143,13 +148,17 @@
     display: none;
   }
 
-  .navbar__languageSubContainer {
-    width: 150px;
+}
+
+@media (min-width: 1024.1px) {
+  .navbar__dropdown {
+    display: none;
   }
 }
 
-@media (min-width: 1025px) {
-  .navbar__dropdown {
-    display: none;
+@media (max-width: 425px) {
+  .navbar__languageContainer{
+    width: 23%;
+    top: 3vh;
   }
 }

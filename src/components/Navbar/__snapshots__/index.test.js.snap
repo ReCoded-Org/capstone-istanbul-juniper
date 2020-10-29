@@ -119,6 +119,34 @@ exports[`Navbar Component matches the tree 1`] = `
         }
       />
     </a>
+    <div
+      className="navbar__languageContainer"
+    >
+      <button
+        className="navbar__languageContainer-btn"
+        onClick={[Function]}
+      >
+        <p>
+          En
+        </p>
+      </button>
+      <button
+        className="navbar__languageContainer-btn"
+        onClick={[Function]}
+      >
+        <p>
+          Tr
+        </p>
+      </button>
+      <button
+        className="navbar__languageContainer-btn"
+        onClick={[Function]}
+      >
+        <p>
+          Ar
+        </p>
+      </button>
+    </div>
   </div>
   <div
     className="navbar__bottomHalf"
@@ -126,39 +154,7 @@ exports[`Navbar Component matches the tree 1`] = `
     <div
       className="navbar__helperDiv"
     />
-    <div
-      className="navbar__languageContainer"
-      style={
-        Object {
-          "background": "#b4d0c4",
-          "bottom": "0px",
-          "height": "50%",
-        }
-      }
-    >
-      <div
-        className="navbar__languageSubContainer"
-      >
-        <button
-          className="navbar__languageContainer-btn"
-          onClick={[Function]}
-        >
-          En
-        </button>
-        <button
-          className="navbar__languageContainer-btn"
-          onClick={[Function]}
-        >
-          Tr
-        </button>
-        <button
-          className="navbar__languageContainer-btn"
-          onClick={[Function]}
-        >
-          Ar
-        </button>
-      </div>
-    </div>
+    <div />
   </div>
 </div>
 `;
