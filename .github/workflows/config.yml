@@ -21,12 +21,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-            - run: yarn install
-            - run: yarn run fix
-            - run: "[[ -z $(git --no-pager diff -- . ':(exclude)yarn.lock' ':(exclude)yarn.lock') ]]"
-            - run: yarn run test --passWithNoTests
-            - run: export CI=1
-workflows:
-  build-and-test:
-    jobs:
-      - build-and-test
+    - run: yarn install
+    - run: yarn run fix
+    - run: "[[ -z $(git --no-pager diff -- . ':(exclude)yarn.lock' ':(exclude)yarn.lock') ]]"
+    - run: yarn run test --passWithNoTests
+    - run: export CI=1
+
