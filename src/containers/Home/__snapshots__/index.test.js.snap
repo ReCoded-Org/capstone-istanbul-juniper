@@ -1,18 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home renders correctly 1`] = `
-<div
-  className="bottomCurveContainer"
->
+Array [
   <div
-    className="bottomCurveContainer__bottomCurve"
+    className="homePageHeaderContainer"
   >
     <div
-      className="bottomCurveContainer__bottomCurve__topHalf"
+      className="ant-row ant-row-space-around ant-row-middle"
+      style={Object {}}
     />
     <div
-      className="bottomCurveContainer__bottomCurve__bottomHalf"
-    />
-  </div>
-</div>
+      className="ant-row ant-row-space-around ant-row-middle"
+      style={Object {}}
+    >
+      <div
+        className="ant-col ant-col-4"
+        style={Object {}}
+      >
+        <img
+          src="family.png"
+        />
+      </div>
+      <div
+        className="ant-col ant-col-4"
+        style={Object {}}
+      />
+      <div
+        className="ant-col ant-col-4"
+        style={Object {}}
+      >
+        <div
+          className="ant-row"
+          style={Object {}}
+        >
+          <h2
+            className="homePageHeaderContainer__title"
+          >
+            home.headerSection.mainText
+             
+          </h2>
+          <br />
+          <p
+            className="homePageHeaderContainer__paragraph"
+          >
+            home.headerSection.secondText
+          </p>
+        </div>
+        <div
+          className="ant-row"
+          style={Object {}}
+        >
+          <button
+            align="top"
+            className="homePageHeaderContainer__button"
+            shape="round"
+            size="large"
+            type="button"
+          >
+            home.headerSection.headerButton
+          </button>
+        </div>
+      </div>
+      <div
+        className="ant-col ant-col-4"
+        style={Object {}}
+      >
+        <img
+          src="child.png"
+        />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="bottomCurveContainer"
+  >
+    <div
+      className="bottomCurveContainer__bottomCurve"
+    >
+      <div
+        className="bottomCurveContainer__bottomCurve__topHalf"
+      />
+      <div
+        className="bottomCurveContainer__bottomCurve__bottomHalf"
+      />
+    </div>
+  </div>,
+]
 `;
