@@ -5,7 +5,7 @@
   font-family: salsa;
 }
 
-.homePageHeaderContainer__paragraph{
+.homePageHeaderContainer__paragraph {
   font-size: 15px;
   font-family: Raleway;
 }
@@ -34,13 +34,13 @@
 }
 
 @media (max-width: 1199.98px) {
-  .homePageHeaderContanier__button{
+  .homePageHeaderContanier__button {
     font-size: 4vw;
   }
 }
 
 @media (max-width: 991.98px) {
-  .homePageHeaderContanier__button{
+  .homePageHeaderContanier__button {
     font-size: 4.5vw;
   }
 }

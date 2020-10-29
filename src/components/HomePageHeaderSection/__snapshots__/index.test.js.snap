@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`first snapshot test 1`] = `
+exports[`HomePageHeaderSection snapshot test 1`] = `
 <div
-  className="container"
+  className="homePageHeaderContainer"
 >
   <div
     className="ant-row ant-row-space-around ant-row-middle"
@@ -16,13 +16,9 @@ exports[`first snapshot test 1`] = `
       className="ant-col ant-col-4"
       style={Object {}}
     >
-      <p
-        className="height-100"
-      >
-        <img
-          src="family.png"
-        />
-      </p>
+      <img
+        src="family.png"
+      />
     </div>
     <div
       className="ant-col ant-col-4"
@@ -37,25 +33,16 @@ exports[`first snapshot test 1`] = `
         style={Object {}}
       >
         <h2
-          style={
-            Object {
-              "fontFamily": "salsa",
-            }
-          }
+          className="homePageHeaderContainer__title"
         >
-          home.header.header0
+          home.headerSection.mainText
            
         </h2>
         <br />
         <p
-          style={
-            Object {
-              "fontFamily": "Raleway",
-              "fontSize": "15px",
-            }
-          }
+          className="homePageHeaderContainer__paragraph"
         >
-          home.header.header1
+          home.headerSection.secondText
         </p>
       </div>
       <div
@@ -64,16 +51,12 @@ exports[`first snapshot test 1`] = `
       >
         <button
           align="top"
+          className="homePageHeaderContainer__button"
           shape="round"
           size="large"
-          style={
-            Object {
-              "backgroundColor": "#F8AC4C",
-              "fontFamily": "salsa",
-            }
-          }
+          type="button"
         >
-          home.header.button
+          home.headerSection.headerButton
         </button>
       </div>
     </div>
@@ -81,13 +64,9 @@ exports[`first snapshot test 1`] = `
       className="ant-col ant-col-4"
       style={Object {}}
     >
-      <p
-        className="height-80"
-      >
-        <img
-          src="child.png"
-        />
-      </p>
+      <img
+        src="child.png"
+      />
     </div>
   </div>
 </div>
