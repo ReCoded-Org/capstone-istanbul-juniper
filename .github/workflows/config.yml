@@ -25,9 +25,4 @@ jobs:
     - run: yarn run fix
     - run: "[[ -z $(git --no-pager diff -- . ':(exclude)yarn.lock' ':(exclude)yarn.lock') ]]"
     - run: yarn run test --passWithNoTests
-<<<<<<< HEAD
     - run: export CI=1
-=======
-    - run: export CI=1
-
->>>>>>> 120348435d0b1c45c89d7f541d1829d44e39411c
