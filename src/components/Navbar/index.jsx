@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import { Link, BrowserRouter as Router } from "react-router-dom";
-import { Dropdown, Menu, Col, Row,Divider } from "antd";
+import { Dropdown, Menu, Col, Row, Button } from "antd";
 import { MenuOutlined, GlobalOutlined  } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
@@ -65,16 +65,20 @@ const Navbar = () => {
       <div className="navbar">
         <Row className="navbar__topHalf" justify="space-around" gutter={12}>
 
-          {/*Dropdown replaces the navbar in small screens */}
-           <Dropdown
-            className="navbar__dropdown"
-            overlay={navbarMenu}
-            placement="bottomleft"
-          >
-            <MenuOutlined />
-          </Dropdown> 
-          
-          <Col className="navbar__leftSide" flex={3}>
+          <Col className="navbar__leftSide" flex={2}>
+
+            {/*Dropdown replaces the navbar in small screens */}
+            <Col>
+              <Dropdown
+              className="navbar__dropdown"
+              overlay={navbarMenu}
+              >
+                <button className="navbar__dropdown-btn">
+                  <MenuOutlined />
+                </button>
+              </Dropdown>
+            </Col>
+
             <Col >
               <li>
                 <Link to="/">{t("navbar.home")}</Link>
@@ -98,7 +102,7 @@ const Navbar = () => {
           </Link>
           </Col>
 
-          <Col className="navbar__rightSide" flex={3}>
+          <Col className="navbar__rightSide"  flex={2}>
           <Col >
               <li>
                 <Link to="/resources">{t("navbar.resources")}</Link>
@@ -127,7 +131,7 @@ const Navbar = () => {
           <div></div>
         </Row>
 
-        <Link className="navbar__logo-link" to={"/"}>
+        <Link className={document.body.dir === "ltr"? "navbar__logo-ltrLink": "navbar__logo-rtlLink"} to={"/"}>
             <img className="navbar__logo" src={logoImg} alt="juniper-logo" />
         </Link>
 
