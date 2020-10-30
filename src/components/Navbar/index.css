@@ -30,7 +30,7 @@
   background-image: url("./../../images/blue-spot.svg");
   background-repeat: no-repeat;
   padding: 46px;
-  padding-top:32px;
+  padding-top: 32px;
   margin: -46px;
 }
 
@@ -45,7 +45,7 @@
   justify-content: center;
 }
 
-.navbar__topHalf  li a {
+.navbar__topHalf li a {
   color: white;
 }
 
@@ -82,9 +82,9 @@
 }
 
 .navbar__logo-ltrLink {
-  z-index:1;
+  z-index: 1;
   position: absolute;
-  left: 46.70%;
+  left: 46.7%;
   top: 60px;
   width: 3%;
   height: auto;
@@ -93,7 +93,7 @@
 }
 
 .navbar__logo-rtlLink {
-  z-index:1;
+  z-index: 1;
   position: absolute;
   left: 50%;
   top: 60px;
@@ -150,7 +150,7 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
   display: flex;
   justify-content: space-around;
   list-style: none;
-  font-size:1.2em;
+  font-size: 1.2em;
 }
 
 .navbar__rightSide {
@@ -181,7 +181,7 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
   width: 10%;
   height: 27px;
   top: 20%;
-  right:0%;
+  right: 0%;
 }
 
 @media (max-width: 768px) {
