@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 import { settings } from "./settings.jsx";
 
-
 const GamesCarousel = () => {
   const [t] = useTranslation();
   const gameCardsData = [
@@ -15,7 +14,7 @@ const GamesCarousel = () => {
     }),
   ];
   return (
-    <div className="gamesCarousel__section">
+    <div className="gamesCarousel">
       <h2 className="gamesCarousel__title">{t("home.gamesCarousel.title")}</h2>
       <p className="gamesCarousel__context">
         {t("home.gamesCarousel.subtitle")}
@@ -23,7 +22,7 @@ const GamesCarousel = () => {
 
       <Slider {...settings}>
         {gameCardsData.map((game) => (
-          <div className="gameCarousel">{game.name}</div>
+          <div className="gameCarousel__card">{game.name}</div>
         ))}
       </Slider>
     </div>
