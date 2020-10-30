@@ -42,32 +42,6 @@
   transition: all 0.5s;
 }
 
-@media (max-width: 1199.98px) {
-  .homePageHeaderContanier__button {
-    font-size: 4vw;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .homePageHeaderContanier__button {
-    font-size: 4.5vw;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .homePageHeaderContanier__button {
-    font-size: 5vw;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .homePageHeaderContanier__button {
-    font-size: 6vw;
-  }
-}
-
-
-
 /* Media query rules to override previous rules, as necessary */
 @media screen and (min-width: 800px) {
   .homePageHeaderContainer__img {
