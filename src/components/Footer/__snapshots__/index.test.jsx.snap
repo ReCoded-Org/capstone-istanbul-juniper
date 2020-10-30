@@ -12,9 +12,6 @@ exports[`Footer renders correctly 1`] = `
     style={Object {}}
   >
     <div
-      className="footerCurveContainer"
-    />
-    <div
       className="ant-row ant-row-center footerLinksContainer"
       style={
         Object {
@@ -24,7 +21,7 @@ exports[`Footer renders correctly 1`] = `
       }
     >
       <div
-        className="ant-col footerNav"
+        className="ant-col footerLinksContainer__nav"
         style={
           Object {
             "paddingLeft": 12.5,
@@ -37,12 +34,11 @@ exports[`Footer renders correctly 1`] = `
           onClick={[Function]}
         >
            
-          footer.Trademark
-           
+          footer.trademark
         </a>
       </div>
       <div
-        className="ant-col footerNav"
+        className="ant-col footerLinksContainer__nav"
         style={
           Object {
             "paddingLeft": 12.5,
@@ -55,12 +51,11 @@ exports[`Footer renders correctly 1`] = `
           onClick={[Function]}
         >
            
-          footer.Contact
-           
+          footer.contact
         </a>
       </div>
       <div
-        className="ant-col footerNav"
+        className="ant-col footerLinksContainer__nav"
         style={
           Object {
             "paddingLeft": 12.5,
@@ -73,11 +68,11 @@ exports[`Footer renders correctly 1`] = `
           onClick={[Function]}
         >
            
-          footer.Policies
+          footer.policies
         </a>
       </div>
       <div
-        className="ant-col footerNav"
+        className="ant-col footerLinksContainer__nav"
         style={
           Object {
             "paddingLeft": 12.5,
@@ -90,11 +85,11 @@ exports[`Footer renders correctly 1`] = `
           onClick={[Function]}
         >
            
-          footer.Games
+          footer.games
         </a>
       </div>
       <div
-        className="ant-col footerNav"
+        className="ant-col footerLinksContainer__nav"
         style={
           Object {
             "paddingLeft": 12.5,
@@ -107,7 +102,7 @@ exports[`Footer renders correctly 1`] = `
           onClick={[Function]}
         >
            
-          footer.About
+          footer.about
         </a>
       </div>
     </div>
@@ -141,7 +136,6 @@ exports[`Footer renders correctly 1`] = `
             />
           </svg>
         </a>
-         
       </div>
       <div
         className="ant-col"
@@ -169,7 +163,6 @@ exports[`Footer renders correctly 1`] = `
             />
           </svg>
         </a>
-         
       </div>
       <div
         className="ant-col"
@@ -197,7 +190,6 @@ exports[`Footer renders correctly 1`] = `
             />
           </svg>
         </a>
-         
       </div>
     </div>
   </div>

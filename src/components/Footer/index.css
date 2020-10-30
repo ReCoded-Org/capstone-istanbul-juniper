@@ -1,7 +1,3 @@
-/* .social-container {
-   background: #eee;
-    padding: 25px 50px;
-  } */
 @import url("https://fonts.googleapis.com/css2?family=Moul&family=Roboto&display=swap");
 
 footer {
@@ -16,6 +12,7 @@ footer {
   position: relative;
   font-family: Roboto;
 }
+
 footer a {
   color: white;
 }
@@ -23,9 +20,11 @@ footer a {
 .footerNav {
   text-align: center;
 }
+
 .footerLinksContainer {
   margin-bottom: 20px;
 }
+
 a.social {
   margin: 0 1rem;
   transition: transform 250ms;
@@ -43,6 +42,7 @@ a.youtube {
 a.facebook {
   color: white;
 }
+
 img.footerGlobe {
   position: absolute;
   top: 46px;

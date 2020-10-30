@@ -22,41 +22,39 @@ const Footer = () => {
           className="footerGlobe"
         />
         <Col>
-          <div className="footerCurveContainer"></div>
-
           <Row gutter={[25]} justify="center" className="footerLinksContainer">
-            <Col className="footerNav">
-              <Link to="/trademark"> {t("footer.Trademark")} </Link>
+            <Col className="footerLinksContainer__nav">
+              <Link to="/trademark"> {t("footer.trademark")}</Link>
             </Col>
-            <Col className="footerNav">
-              <Link to="/contact"> {t("footer.Contact")} </Link>
+            <Col className="footerLinksContainer__nav">
+              <Link to="/contact"> {t("footer.contact")}</Link>
             </Col>
-            <Col className="footerNav">
-              <Link to="/policies"> {t("footer.Policies")}</Link>
+            <Col className="footerLinksContainer__nav">
+              <Link to="/policies"> {t("footer.policies")}</Link>
             </Col>
-            <Col className="footerNav">
-              <Link to="/games"> {t("footer.Games")}</Link>
+            <Col className="footerLinksContainer__nav">
+              <Link to="/games"> {t("footer.games")}</Link>
             </Col>
-            <Col className="footerNav">
-              <Link to="/about"> {t("footer.About")}</Link>
+            <Col className="footerLinksContainer__nav">
+              <Link to="/about"> {t("footer.about")}</Link>
             </Col>
           </Row>
-
           <Row justify="center" className="footerSocialContainer">
             <Col>
+              {/* note: facebook,instagram,youtube are built in fortawesome classes */}
               <a href="https://www.facebook.com" className="facebook social">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
-              </a>{" "}
+              </a>
             </Col>
             <Col>
               <a href="https://www.instagram.com" className="instagram social">
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
-              </a>{" "}
+              </a>
             </Col>
             <Col>
               <a href="https://www.youtube.com" className="youtube social">
                 <FontAwesomeIcon icon={faYoutube} size="2x" />
-              </a>{" "}
+              </a>
             </Col>
           </Row>
         </Col>

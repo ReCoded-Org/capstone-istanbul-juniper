@@ -9,15 +9,15 @@
   },
 
   "footer": {
-    "Trademark": " Marka",
-    "Contact": "İletişim ",
-    "Policies": "Politikalar",
-    "Games": "Oyunlar",
-    "About": "أakkında"
+    "trademark": "Marka",
+    "contact": "İletişim ",
+    "policies": "Kullanıcı Sözleşmesi",
+    "games": "Oyunlar",
+    "about": "Hakkında"
   },
-  "resourseSection": {
-    "Pollution": "Pollution",
-    "Climate Change": "Climate Change",
-    "Reduce, Reuse, Recycle": "Reduce, Reuse, Recycle"
+  "resourceSection": {
+    "pollution": "Çevre kirliliği",
+    "climate Change": "Mevsim değişimi",
+    "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
   }
 }
