@@ -14,11 +14,7 @@ const StayUpToDate = () => {
     }),
   ];
 
-  // there is a duplication issue in snapshot test.
-  // This is why pre defined unique ids dont work and there is need for incremented ids
-  let id = -1;
-  const twitterImages = twitterPagesData.map((page) => {
-    id += 1;
+  const twitterImages = twitterPagesData.map((page, index) => {
     return (
       <Col
         xs={24}
@@ -28,7 +24,7 @@ const StayUpToDate = () => {
         xl={12}
         xxl={12}
         className="stayUpToDate__twitterContent__col"
-        key={id}
+        key={index}
       >
         <TwitterImage alt={page.alt} href={page.href} src={page.src} />
       </Col>
