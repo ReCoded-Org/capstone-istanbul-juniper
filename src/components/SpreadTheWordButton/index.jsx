@@ -14,7 +14,7 @@ const SpreadTheWordButton = () => {
 
   return (
     <Row justify="center" className="spreadTheWord">
-      <Col xxl={10} xl={10} lg={12} md={12} sm={14} xs={16}>
+      <Col lg={12} sm={14} xs={16}>
         <a
           target="_blank"
           rel="noopener noreferrer"
