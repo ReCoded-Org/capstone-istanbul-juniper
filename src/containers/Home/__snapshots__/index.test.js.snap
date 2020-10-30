@@ -23,11 +23,7 @@ Array [
         />
       </div>
       <div
-        className="ant-col ant-col-4"
-        style={Object {}}
-      />
-      <div
-        className="ant-col ant-col-4"
+        className="ant-col ant-col-4 ant-col-offset-6"
         style={Object {}}
       >
         <div
@@ -67,6 +63,7 @@ Array [
       >
         <img
           alt=""
+          className="homePageHeaderContainer__img"
           src="child.png"
         />
       </div>
