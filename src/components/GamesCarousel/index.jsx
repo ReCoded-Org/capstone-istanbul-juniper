@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 import { settings } from "./settings.jsx";
-//import { ArrowRightOutlined, ArrowLeftOutlined} from "@ant-design/icons";
+
 
 const GamesCarousel = () => {
   const [t] = useTranslation();
