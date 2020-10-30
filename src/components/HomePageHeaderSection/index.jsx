@@ -20,7 +20,7 @@ export default function HomePageHeaderSection() {
           <Col span={4}>
             <Row>
               <h2 className="homePageHeaderContainer__title">
-                {t("home.headerSection.mainText")}{" "}
+                {t("home.headerSection.mainText")}
               </h2>
               <br></br>
               <p className="homePageHeaderContainer__paragraph">
