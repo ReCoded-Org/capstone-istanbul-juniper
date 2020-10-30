@@ -9,6 +9,7 @@ import logoImg from "./../../images/logo.svg"
 
 const Navbar = () => {
   const { t } = useTranslation();
+  const currentPath= window.location.pathname;
 
   const navbarMenu = (
     <Menu>
@@ -35,25 +36,25 @@ const Navbar = () => {
 
   const languagesMenu = (
     <Menu>
-            <Menu.Item
-              className="navbar__languageContainer-btn"
-              onClick={(e) => handleLanguageChange("en")}
-            >
-              <p>English</p>
-            </Menu.Item>
-            <Menu.Item
-              className="navbar__languageContainer-btn"
-              onClick={(e) => handleLanguageChange("tr")}
-            >
-              <p>Türkçe</p>
-            </Menu.Item>
-            <Menu.Item
-              className="navbar__languageContainer-btn"
-              onClick={(e) => handleLanguageChange("ar")}
-            >
-            <p>العربية</p>
-          </Menu.Item>
-          </Menu>
+      <Menu.Item
+        className="navbar__languageContainer-btn"
+        onClick={(e) => handleLanguageChange("en")}
+      >
+        <p>English</p>
+      </Menu.Item>
+      <Menu.Item
+        className="navbar__languageContainer-btn"
+        onClick={(e) => handleLanguageChange("tr")}
+      >
+        <p>Türkçe</p>
+      </Menu.Item>
+      <Menu.Item
+        className="navbar__languageContainer-btn"
+        onClick={(e) => handleLanguageChange("ar")}
+      >
+      <p>العربية</p>
+      </Menu.Item>
+    </Menu>
   );
 
   const handleLanguageChange = (lang) => {
@@ -81,17 +82,27 @@ const Navbar = () => {
 
             <Col >
               <li>
-                <Link to="/">{t("navbar.home")}</Link>
+                <Link to="/"
+                className={currentPath === "/"? "navbar__element navbar__element-current":"navbar__element"}
+                >
+                {t("navbar.home")}
+                </Link>
               </li>
             </Col>
             <Col >
               <li>
-                <Link to="/about">{t("navbar.about")}</Link>
+                <Link to="/about"
+                className={currentPath === "/about"? "navbar__element navbar__element-current":"navbar__element"}>
+                {t("navbar.about")}
+                </Link>
               </li>
             </Col>
             <Col >
               <li>
-                <Link to="/games">{t("navbar.games")}</Link>
+                <Link to="/games"
+                className={currentPath === "/games"? "navbar__element navbar__element-current":"navbar__element"}>
+                {t("navbar.games")}
+                </Link>
               </li>
             </Col>
           </Col>
@@ -105,17 +116,26 @@ const Navbar = () => {
           <Col className="navbar__rightSide"  flex={2}>
           <Col >
               <li>
-                <Link to="/resources">{t("navbar.resources")}</Link>
+                <Link to="/resources"
+                className={currentPath === "/resources"? "navbar__element navbar__element-current":"navbar__element"}>
+                {t("navbar.resources")}
+                </Link>
               </li>
           </Col>
           <Col >
             <li>
-              <Link to="/contact">{t("navbar.contact")}</Link>
+              <Link to="/contact"
+              className={currentPath === "/contact"? "navbar__element navbar__element-current":"navbar__element"}>
+              {t("navbar.contact")}
+              </Link>
             </li>
           </Col>
           <Col >
             <li>
-              <Link to="/login">{t("navbar.login")}</Link>
+              <Link to="/login"
+              className={currentPath === "/login"? "navbar__element navbar__element-current":"navbar__element"}>
+              {t("navbar.login")}
+              </Link>
             </li>
           </Col>
             <Col>

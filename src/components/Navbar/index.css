@@ -19,6 +19,21 @@
   height: 50%;
 }
 
+.navbar__element:hover {
+  background-image: url("./../../images/yellow-spot.svg");
+  background-repeat: no-repeat;
+  padding: 47px;
+  margin: -47px;
+}
+
+.navbar__element-current{
+  background-image: url("./../../images/blue-spot.svg");
+  background-repeat: no-repeat;
+  padding: 46px;
+  padding-top:32px;
+  margin: -46px;
+}
+
 .navbar__title {
   color: white;
   font-size: 2em;
@@ -69,7 +84,7 @@
 .navbar__logo-ltrLink {
   z-index:1;
   position: absolute;
-  left: 47%;
+  left: 46.70%;
   top: 60px;
   width: 3%;
   height: auto;
@@ -118,8 +133,12 @@ ul.ant-dropdown-menu {
   background-color: #b4d0c4;
 }
 
-ul.ant-dropdown-menu-item p:hover{
-  background-color: #b4d0c4;
+.ant-dropdown-menu-item:hover{
+  background-color: transparent;
+}
+
+li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageContainer-btn.ant-dropdown-menu-item-active{
+  background-color: transparent;
 }
 
 .navbar__dropdown-btn {
