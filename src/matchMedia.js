@@ -1,6 +1,7 @@
-/**
+/*
  * This solves matchMedia error.
  * Should be deleted when source of error found and fixed.
+ * https://jestjs.io/docs/en/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom
  */
 
 window.matchMedia = jest.fn().mockImplementation((query) => ({
