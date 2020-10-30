@@ -16,7 +16,7 @@ exports[`ResourcesSection renders correctly 1`] = `
     }
   >
     <div
-      className="ant-col ant-col-sm-24 ant-col-md-6 ant-col-lg-6 ant-col-xl-6 ant-col-xxl-6"
+      className="ant-col ant-col-sm-24 ant-col-xxl-6"
       style={
         Object {
           "paddingBottom": 8,
@@ -31,19 +31,19 @@ exports[`ResourcesSection renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="ant-col ant-col-22 cardName"
+          className="ant-col ant-col-22 site-card-wrapper__cardName"
           style={Object {}}
         >
           <a
             href="/pollution"
             onClick={[Function]}
           >
-            resourseSection.Pollution
+            resourcesSection.pollution
              
           </a>
         </div>
         <div
-          className="ant-col ant-col-22 cardImage"
+          className="ant-col ant-col-22 site-card-wrapper__cardImage"
           style={Object {}}
         >
           <a
@@ -59,7 +59,7 @@ exports[`ResourcesSection renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="ant-col ant-col-sm-24 ant-col-md-6 ant-col-lg-6 ant-col-xl-6 ant-col-xxl-6"
+      className="ant-col ant-col-sm-24 ant-col-xxl-6"
       style={
         Object {
           "paddingBottom": 8,
@@ -74,24 +74,22 @@ exports[`ResourcesSection renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="ant-col ant-col-22 cardName"
+          className="ant-col ant-col-22 site-card-wrapper__cardName"
           style={Object {}}
         >
           <a
-            href="/ClimateChange"
+            href="/climateChange"
             onClick={[Function]}
           >
-             
-            resourseSection.Climate Change
-             
+            resourcesSection.climateChange
           </a>
         </div>
         <div
-          className="ant-col ant-col-22 cardImage"
+          className="ant-col ant-col-22 site-card-wrapper__cardImage"
           style={Object {}}
         >
           <a
-            href="/ClimateChange"
+            href="/climateChange"
             onClick={[Function]}
           >
             <img
@@ -103,7 +101,7 @@ exports[`ResourcesSection renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="ant-col ant-col-sm-24 ant-col-md-6 ant-col-lg-6 ant-col-xl-6 ant-col-xxl-6"
+      className="ant-col ant-col-sm-24 ant-col-xxl-6"
       style={
         Object {
           "paddingBottom": 8,
@@ -118,27 +116,24 @@ exports[`ResourcesSection renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="ant-col ant-col-22 cardName"
+          className="ant-col ant-col-22 site-card-wrapper__cardName"
           style={Object {}}
         >
           <a
-            href="/ReduceReuseRecycle"
+            href="/recycle"
             onClick={[Function]}
           >
-             
-            resourseSection.Reduce, Reuse, Recycle
+            resourcesSection.reduceReuseRecycle
           </a>
-           
         </div>
         <div
-          className="ant-col ant-col-22 cardImage"
+          className="ant-col ant-col-22 site-card-wrapper__cardImage"
           style={Object {}}
         >
           <a
-            href="/ReduceReuseRecycle"
+            href="/recycle"
             onClick={[Function]}
           >
-             
             <img
               alt="Recycle"
               src="/assets/images/rec.svg"

@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+
 .site-card-wrapper {
   background-color: #b4d0c4;
   padding: 20px 0;
 }
-.cardImage img {
+
+.site-card-wrapper__cardImage img {
   width: 100%;
 }
-.cardName a {
+
+.site-card-wrapper__cardName a {
   color: black;
 }
-.cardName {
+
+.site-card-wrapper__cardName {
   margin-bottom: 10px;
   font-family: Salsa;
   font-weight: bold;

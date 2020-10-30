@@ -8,15 +8,15 @@
     "login": ""
   },
   "footer": {
-    "Trademark": "العلامة المسجلة",
-    "Contact": "توصل معنا",
-    "Policies": "السياسات",
-    "Games": "الألعاب",
-    "About": "حولنا"
+    "trademark": "العلامة المسجلة",
+    "contact": "توصل معنا",
+    "policies": "السياسات",
+    "games": "الألعاب",
+    "about": "حولنا"
   },
-  "resourseSection": {
-    "Pollution": "الثلوث",
-    "Climate Change": "التغير المناخي",
-    "Reduce, Reuse, Recycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
+  "resourcesSection": {
+    "pollution": "الثلوث",
+    "climateChange": "التغير المناخي",
+    "reduceReuseRecycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
   }
 }

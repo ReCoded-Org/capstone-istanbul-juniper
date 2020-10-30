@@ -9,65 +9,45 @@ const ResourcesSection = () => {
   const [t] = useTranslation();
 
   return (
+    // "site-card-wrapper" is a built in ant Designe className
     <div className="site-card-wrapper">
       <Router>
         <Row justify="center" gutter={[16, 16]}>
-          <Col
-            xxl={{ span: 6 }}
-            xl={{ span: 6 }}
-            lg={{ span: 6 }}
-            md={{ span: 6 }}
-            sm={{ span: 24 }}
-          >
+          <Col xxl={6} sm={24}>
             <Row justify="center">
-              <Col span={22} className="cardName">
-                <Link to="/pollution">{t("resourseSection.Pollution")} </Link>
+              <Col span={22} className="site-card-wrapper__cardName">
+                <Link to="/pollution">{t("resourcesSection.pollution")} </Link>
               </Col>
-              <Col span={22} className="cardImage">
+              <Col span={22} className="site-card-wrapper__cardImage">
                 <Link to="/pollution">
                   <img alt="Poulution" src="/assets/images/Pou.svg" />
                 </Link>
               </Col>
             </Row>
           </Col>
-          <Col
-            xxl={{ span: 6 }}
-            xl={{ span: 6 }}
-            lg={{ span: 6 }}
-            md={{ span: 6 }}
-            sm={{ span: 24 }}
-          >
+          <Col xxl={6} sm={24}>
             <Row justify="center">
-              <Col span={22} className="cardName">
-                <Link to="/ClimateChange">
-                  {" "}
-                  {t("resourseSection.Climate Change")}{" "}
+              <Col span={22} className="site-card-wrapper__cardName">
+                <Link to="/climateChange">
+                  {t("resourcesSection.climateChange")}
                 </Link>
               </Col>
-              <Col span={22} className="cardImage">
-                <Link to="/ClimateChange">
+              <Col span={22} className="site-card-wrapper__cardImage">
+                <Link to="/climateChange">
                   <img alt="Climate Change" src="/assets/images/earth.svg" />
                 </Link>
               </Col>
             </Row>
           </Col>
-          <Col
-            xxl={{ span: 6 }}
-            xl={{ span: 6 }}
-            lg={{ span: 6 }}
-            md={{ span: 6 }}
-            sm={{ span: 24 }}
-          >
+          <Col xxl={6} sm={24}>
             <Row justify="center">
-              <Col span={22} className="cardName">
-                <Link to="/ReduceReuseRecycle">
-                  {" "}
-                  {t("resourseSection.Reduce, Reuse, Recycle")}
-                </Link>{" "}
+              <Col span={22} className="site-card-wrapper__cardName">
+                <Link to="/recycle">
+                  {t("resourcesSection.reduceReuseRecycle")}
+                </Link>
               </Col>
-              <Col span={22} className="cardImage">
-                <Link to="/ReduceReuseRecycle">
-                  {" "}
+              <Col span={22} className="site-card-wrapper__cardImage">
+                <Link to="/recycle">
                   <img alt="Recycle" src="/assets/images/rec.svg" />
                 </Link>
               </Col>

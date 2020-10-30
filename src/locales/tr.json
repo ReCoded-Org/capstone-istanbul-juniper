@@ -7,17 +7,16 @@
     "contact": "",
     "login": ""
   },
-
   "footer": {
-    "Trademark": " Marka",
-    "Contact": "İletişim ",
-    "Policies": "Politikalar",
-    "Games": "Oyunlar",
-    "About": "أakkında"
+    "trademark": "Marka",
+    "contact": "İletişim ",
+    "policies": "Politikalar",
+    "games": "Oyunlar",
+    "about": "Hakkında"
   },
-  "resourseSection": {
-    "Pollution": "Pollution",
-    "Climate Change": "Climate Change",
-    "Reduce, Reuse, Recycle": "Reduce, Reuse, Recycle"
+  "resourcesSection": {
+    "pollution": "Çevre kirliliği",
+    "climateChange": "Mevsim değişimi",
+    "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
   }
 }
