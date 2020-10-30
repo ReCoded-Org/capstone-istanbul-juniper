@@ -26,7 +26,7 @@
   margin: -47px;
 }
 
-.navbar__element-current{
+.navbar__element-current {
   background-image: url("./../../images/blue-spot.svg");
   background-repeat: no-repeat;
   padding: 46px;
@@ -133,11 +133,7 @@ ul.ant-dropdown-menu {
   background-color: #b4d0c4;
 }
 
-.ant-dropdown-menu-item:hover{
-  background-color: transparent;
-}
-
-li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageContainer-btn.ant-dropdown-menu-item-active{
+li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageContainer-btn.ant-dropdown-menu-item-active {
   background-color: transparent;
 }
 
@@ -188,7 +184,7 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
   right:0%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .navbar__rightSide li a {
     display: none;
   }
@@ -197,11 +193,10 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768.1px) {
   .navbar__dropdown {
     display: none;
   }
-
 }
 
 @media (max-width: 425px) {
