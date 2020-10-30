@@ -1,9 +1,9 @@
 import React from "react";
 import "../../matchMedia";
 import renderer from "react-test-renderer";
-import Home from ".";
+import StayUpToDate from ".";
 
-it("Home renders correctly", () => {
-  const tree = renderer.create(<Home />).toJSON();
+it("StayUpToDate renders correctly", () => {
+  const tree = renderer.create(<StayUpToDate />).toJSON();
   expect(tree).toMatchSnapshot();
 });

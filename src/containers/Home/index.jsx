@@ -1,14 +1,18 @@
 import React from "react";
 import Navbar from "../../components/Navbar/index";
+import StayUpToDate from "../../components/StayUpTodate";
+import BottomCurve from "../../components/BottomCurve/index";
+import SpreadTheWordButton from "../../components/SpreadTheWordButton";
 import "./index.css";
 import {} from "antd";
-import BottomCurve from "../../components/BottomCurve/index";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      {/* <BottomCurve /> */}
+      <BottomCurve />
+      <SpreadTheWordButton />
+      <StayUpToDate />
     </>
   );
 };
