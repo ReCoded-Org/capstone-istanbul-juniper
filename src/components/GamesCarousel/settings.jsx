@@ -1,4 +1,5 @@
 import React from "react";
+
 // React-Slider customised settings
 export const settings = {
   infinite: true,
@@ -43,25 +44,3 @@ export const settings = {
     },
   ],
 };
-
-export function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "inline-block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
-
-export function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "inline-block", background: "green" }}
-      onClick={onClick}
-    />
-  );
-}
