@@ -3,6 +3,7 @@
   display: inline-block;
   font-size: larger;
   font-family: salsa;
+  font-size: clamp(0.5rem, 20px, 4vw);
 }
 
 .homePageHeaderContainer__paragraph {
@@ -15,20 +16,22 @@
   font-size: 2vw;
 }
 
-.homePageHeaderContanier__button {
+.homePageHeaderContainer__button {
   border-radius: 20px;
   border: none;
-  height: 10vh;
   background: #f8ac4c;
   margin: auto;
   width: 100%;
+  font-family: "Salsa", cursive;
   font-weight: 550;
   transition: all 0.5s;
   padding: 5px;
-  font-size: 3vw;
+  font-size: clamp(0.5rem, 15px, 4vw);
+  cursor: pointer;
+  min-height: 130%;
 }
 
-.homePageHeaderContanier__button:hover {
+.homePageHeaderContainer__button:hover {
   transform: scale(1.2);
   transition: all 0.5s;
 }

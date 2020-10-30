@@ -1,11 +1,11 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { Row, Col } from "antd";
-import homePageHeaderImgLeft from "../../images/child.png";
-import homePageHeaderImgRight from "../../images/family.png";
+import homePageHeaderImgLeft from "../../images/child.png"
+import homePageHeaderImgRight from "../../images/family.png"
 import "./index.css";
+import { useTranslation } from "react-i18next"
 
-import { useTranslation } from "react-i18next";
 export default function HomePageHeaderSection() {
   const { t } = useTranslation();
   return (
