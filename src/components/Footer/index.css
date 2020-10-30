@@ -48,23 +48,17 @@ img.footerGlobe {
   top: 46px;
   left: 51px;
   transition: all 1s;
-  width: 260px;
+  max-width: 260px;
+  min-width: 150px;
 }
 
 a.instagram {
   color: white;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
   img.footerGlobe {
-    width: 200px;
     top: 94px;
-  }
-}
-
-@media (max-width: 350px) {
-  img.footerGlobe {
-    width: 150px;
-    top: 94px;
+    transform: scale(0.7);
   }
 }
