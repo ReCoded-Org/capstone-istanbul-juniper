@@ -1,4 +1,5 @@
 import React from "react";
+import "../../matchMedia";
 import renderer from "react-test-renderer";
 import Home from ".";
 
