@@ -18,11 +18,7 @@ const StayUpToDate = () => {
     return (
       <Col
         xs={24}
-        sm={24}
-        md={24}
-        lg={24}
         xl={12}
-        xxl={12}
         className="stayUpToDate__twitterContent__col"
         key={index}
       >
