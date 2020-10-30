@@ -1,6 +1,6 @@
 .spreadTheWord {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin: 0;
   background: #2a8c79;
 }
@@ -8,7 +8,6 @@
 .spreadTheWord__button {
   border-radius: 20px;
   border: none;
-  height: 10vh;
   background: #f8ac4c;
   margin: auto;
   width: 100%;
@@ -16,7 +15,7 @@
   font-weight: 550;
   transition: all 0.5s;
   padding: 5px;
-  font-size: clamp(1.5rem, 40px, 4vw);
+  font-size: clamp(1.5rem, 50px, 4vw);
   cursor: pointer;
 }
 
@@ -35,5 +34,5 @@
 }
 
 .twitterIcon {
-  padding-right: 1.5vw;
+  padding-right: 3%;
 }
