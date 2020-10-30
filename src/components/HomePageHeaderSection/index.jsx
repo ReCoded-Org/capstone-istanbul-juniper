@@ -41,7 +41,7 @@ export default function HomePageHeaderSection() {
           </Col>
 
           <Col span={4}>
-            <img alt="" src={homePageHeaderImgLeft}></img>
+            <img className='homePageHeaderContainer__img' alt="" src={homePageHeaderImgLeft}></img>
           </Col>
         </Row>
       </div>
