@@ -1,48 +1,47 @@
-
 .gamesCarousel__title {
-  font-size: 5vw;
+  font-size: 8vh;
   font-family: "Salsa", cursive;
   text-align: center;
 }
 
 .gamesCarousel__context {
   font: "Raleway";
-  font-size: 3vw;
+  font-size: 4vh;
   text-align: center;
 }
 
-.sliderContainer {
+/* React-slick class for sliders */
+.slick-slider {
   width: 90%;
-  height: auto;
   margin: 5%;
+  display: flex;
+  align-items: center;
 }
 
-/* React-slick class for sliders */
+/* React-slick class for single slide */
 .slick-slide {
   border-radius: 3.5vw;
   background: rgb(124, 123, 123);
-  padding: 1.5vw;
-  height: 20vw;
+  padding: 1vw;
+  height: 25vh;
   border: 2.5px none rgb(134, 134, 134);
   box-sizing: border-box;
+  position: relative;
   margin: 1.5vw;
 }
 
 /* React-slick class for slider- arrows */
 .slick-prev:before,
 .slick-next:before {
+  box-sizing: border-box;
+  border-width: 2vw;
   border-radius: 50%;
   color: #61e3d8;
-  font-size: 3vw;
+  font-size: 4vw;
   cursor: pointer;
+  background-color: black;
 }
 
-
-@media (max-width: 1199.98px) {
-  .gamesCarousel__title {
-    font-size: 6vw;
-  }
-}
 @media (max-width: 991.98px) {
   .gamesCarousel__title {
     font-size: 7vw;
@@ -59,24 +58,20 @@
   }
 }
 
-@media (max-width: 1199.98px) {
-  .slick-slide {
-    height: 27vw;
-  }
-}
+/* React-slick sliders' media settings*/
 @media (max-width: 991.98px) {
   .slick-slide {
-    height: 29vw;
+    height: 20vh;
   }
 }
 @media (max-width: 767.98px) {
   .slick-slide {
-    height: 33vw;
+    height: 30vh;
   }
 }
 @media (max-width: 575.98px) {
   .slick-slide {
     border-radius: 7vw;
-    height: 65vw;
+    height: 35vh;
   }
 }
