@@ -1,41 +1,15 @@
 .stayUpToDate {
   background: #2a8c79;
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 5%;
 }
 
 .stayUpToDate__twitterContent {
-  min-height: 50vh;
   background: #2a8c79;
 }
 
 .stayUpToDate__title {
   color: white;
-  padding-top: 14vh;
-  font-size: 5vw;
+  font-size: max(1.7rem, 7vw);
   font-family: "Salsa", cursive;
-}
-
-@media (max-width: 1199.98px) {
-  .stayUpToDate__title {
-    font-size: 6vw;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .stayUpToDate__title {
-    font-size: 7vw;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .stayUpToDate__title {
-    font-size: 8vw;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .stayUpToDate__title {
-    font-size: 9vw;
-  }
 }
