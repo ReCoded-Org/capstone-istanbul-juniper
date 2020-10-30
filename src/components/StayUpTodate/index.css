@@ -1,0 +1,15 @@
+.stayUpToDate {
+  background: #2a8c79;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.stayUpToDate__twitterContent {
+  background: #2a8c79;
+}
+
+.stayUpToDate__title {
+  color: white;
+  font-size: max(1.7rem, 7vw);
+  font-family: "Salsa", cursive;
+}
