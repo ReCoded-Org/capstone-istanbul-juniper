@@ -1,3 +1,7 @@
+.gamesCarousel {
+  background: #add4c5;
+}
+
 .gamesCarousel__title {
   font-size: 8vh;
   font-family: "Salsa", cursive;
@@ -13,7 +17,7 @@
 /* React-slick class for sliders */
 .slick-slider {
   width: 90%;
-  margin: 5%;
+  padding: 5%;
   display: flex;
   align-items: center;
 }
