@@ -36,7 +36,6 @@ exports[`HomePageHeaderSection snapshot test 1`] = `
           className="homePageHeaderContainer__title"
         >
           home.headerSection.mainText
-           
         </h2>
         <br />
         <p

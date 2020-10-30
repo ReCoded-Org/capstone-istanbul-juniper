@@ -3,7 +3,6 @@
 exports[`Home renders correctly 1`] = `
 Array [
   <div
-<<<<<<< HEAD
     className="homePageHeaderContainer"
   >
     <div
@@ -38,7 +37,6 @@ Array [
             className="homePageHeaderContainer__title"
           >
             home.headerSection.mainText
-             
           </h2>
           <br />
           <p
@@ -73,18 +71,6 @@ Array [
     </div>
   </div>,
   <div
-    className="bottomCurveContainer"
-  >
-    <div
-      className="bottomCurveContainer__bottomCurve"
-    >
-      <div
-        className="bottomCurveContainer__bottomCurve__topHalf"
-      />
-      <div
-        className="bottomCurveContainer__bottomCurve__bottomHalf"
-      />
-=======
     className="bottomCurveContainer"
   >
     <div
@@ -382,7 +368,6 @@ Array [
           />
         </a>
       </div>
->>>>>>> cd64107257b510b168834886188c6f7bcb463bd6
     </div>
   </div>,
 ]
