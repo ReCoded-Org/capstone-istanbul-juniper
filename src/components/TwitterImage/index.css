@@ -1,9 +1,8 @@
 .twitterContent__col__image {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 6vh;
-  margin-bottom: 6vh;
+  min-width: 80%;
+  max-width: 92%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   transition: all 0.5s;
   cursor: pointer;
   max-height: 530px;
@@ -12,30 +11,4 @@
 .twitterContent__col__image:hover {
   transform: scale(1.1);
   transition: all 0.5s;
-}
-
-@media (max-width: 991.98px) {
-  .twitterContent__col__image {
-    margin-top: 4vh;
-    margin-bottom: 4vh;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .twitterContent__col__image {
-    width: 88%;
-    margin-left: 6%;
-    margin-right: 6%;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .twitterContent__col__image {
-    width: 92%;
-    margin-left: 4%;
-    margin-right: 4%;
-  }
 }
