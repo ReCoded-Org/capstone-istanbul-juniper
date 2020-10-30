@@ -1,6 +1,6 @@
 .navbar {
   background: #3b8c79;
-  height: 15vh;
+  height: 150px;
 }
 
 .navbar__topHalf {
@@ -22,9 +22,15 @@
 .navbar__title {
   color: white;
   font-size: 2em;
+  padding: 6px;
 }
 
-.navbar__topHalf ul li a {
+.navbar .navbar__topHalf .ant-col-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__topHalf  li a {
   color: white;
 }
 
@@ -56,19 +62,19 @@
 
 .navbar__logo {
   z-index: 1;
-  position: absolute;
-  display: inline-block;
-  padding: 0px;
-  height: 6vh;
+  height: 35px;
   width: auto;
 }
 
 .navbar__logo-link {
+  z-index:1;
   position: absolute;
-  left: 47.9%;
-  top: 5vh;
+  left: 47%;
+  top: 60px;
   width: 3%;
   height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar__logo:hover {
@@ -78,10 +84,8 @@
 .navbar__dropdown {
   position: absolute;
   left: 5vw;
-  margin: 0;
   background-color: transparent;
   width: 1.2em;
-  height: 1.2em;
 }
 
 /* antdesign class */
@@ -99,24 +103,34 @@
   box-shadow: #b4d0c4;
 }
 
+/* antdesign class */
+ul.ant-dropdown-menu {
+  background-color: #b4d0c4;
+}
+
 .navbar__dropdown-btn {
-  width: 1.2vh;
-  height: 1.2vh;
+  width: 3%;
+  height: 35%;
   background: transparent;
+  border: none;
 }
 
 .navbar__leftSide {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  list-style: none;
+  font-size:1.2em;
 }
 
 .navbar__rightSide {
   display: flex;
-  justify-content: stretch;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1.2em;
 }
 
 .navbar__languageContainer-btn {
-  background-color: #3b8c79;
+  background-color: #b4d0c4;
   border-width: 1px;
   border-color: #b4d0c4;
   color: white;
@@ -133,10 +147,10 @@
   display: flex;
   justify-content: space-around;
   position: absolute;
-  right: 1vw;
   width: 10%;
   height: 27px;
-  top: 70%;
+  top: 20%;
+  right:0%;
 }
 
 @media (max-width: 1024px) {
@@ -152,11 +166,16 @@
   .navbar__dropdown {
     display: none;
   }
+
 }
 
 @media (max-width: 425px) {
   .navbar__languageContainer {
     width: 23%;
     top: 3vh;
+  }
+
+  .navbar__logo-link {
+    left: 48.5%;
   }
 }

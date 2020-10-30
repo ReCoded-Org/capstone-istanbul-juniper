@@ -1,17 +1,16 @@
 import React from "react";
 import "./index.css";
 import { Link, BrowserRouter as Router } from "react-router-dom";
-import { Dropdown, Menu } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
+import { Dropdown, Menu, Col, Row,Divider } from "antd";
+import { MenuOutlined, GlobalOutlined  } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
-
-const logoImg = require("./../../images/logo.svg");
+import logoImg from "./../../images/logo.svg"
 
 const Navbar = () => {
   const { t } = useTranslation();
 
-  const menu = (
+  const navbarMenu = (
     <Menu>
       <Menu.Item>
         <Link to="/">{t("navbar.home")}</Link>
@@ -34,6 +33,29 @@ const Navbar = () => {
     </Menu>
   );
 
+  const languagesMenu = (
+    <Menu>
+            <Menu.Item
+              className="navbar__languageContainer-btn"
+              onClick={(e) => handleLanguageChange("en")}
+            >
+              <p>English</p>
+            </Menu.Item>
+            <Menu.Item
+              className="navbar__languageContainer-btn"
+              onClick={(e) => handleLanguageChange("tr")}
+            >
+              <p>Türkçe</p>
+            </Menu.Item>
+            <Menu.Item
+              className="navbar__languageContainer-btn"
+              onClick={(e) => handleLanguageChange("ar")}
+            >
+            <p>العربية</p>
+          </Menu.Item>
+          </Menu>
+  );
+
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
   };
@@ -41,72 +63,74 @@ const Navbar = () => {
   return (
     <Router>
       <div className="navbar">
-        <div className="navbar__topHalf">
+        <Row className="navbar__topHalf" justify="space-around" gutter={12}>
+
           {/*Dropdown replaces the navbar in small screens */}
-          <Dropdown
+           <Dropdown
             className="navbar__dropdown"
-            overlay={menu}
+            overlay={navbarMenu}
             placement="bottomleft"
           >
-            <button className="navbar__dropdown-btn">
-              <MenuOutlined />
-            </button>
-          </Dropdown>
+            <MenuOutlined />
+          </Dropdown> 
+          
+          <Col className="navbar__leftSide" flex={3}>
+            <Col >
+              <li>
+                <Link to="/">{t("navbar.home")}</Link>
+              </li>
+            </Col>
+            <Col >
+              <li>
+                <Link to="/about">{t("navbar.about")}</Link>
+              </li>
+            </Col>
+            <Col >
+              <li>
+                <Link to="/games">{t("navbar.games")}</Link>
+              </li>
+            </Col>
+          </Col>
 
-          <ul className="navbar__leftSide">
-            <li>
-              <Link to="/">{t("navbar.home")}</Link>
-            </li>
-            <li>
-              <Link to="/about">{t("navbar.about")}</Link>
-            </li>
-            <li>
-              <Link to="/games">{t("navbar.games")}</Link>
-            </li>
-          </ul>
-          <Link to="/">
-            <h1 className="navbar__title">Juniper</h1>
+          <Col span={4} flex={2}>
+          <Link className="navbar__title" to="/">
+            Juniper
           </Link>
-          <ul className="navbar__rightSide">
-            <li>
-              <Link to="/resources">{t("navbar.resources")}</Link>
-            </li>
+          </Col>
+
+          <Col className="navbar__rightSide" flex={3}>
+          <Col >
+              <li>
+                <Link to="/resources">{t("navbar.resources")}</Link>
+              </li>
+          </Col>
+          <Col >
             <li>
               <Link to="/contact">{t("navbar.contact")}</Link>
             </li>
+          </Col>
+          <Col >
             <li>
               <Link to="/login">{t("navbar.login")}</Link>
             </li>
-          </ul>
-          <Link className="navbar__logo-link" to={"/"}>
-            <img className="navbar__logo" src={logoImg} alt="juniper-logo" />
-          </Link>
-          <div className="navbar__languageContainer">
-            <button
-              className="navbar__languageContainer-btn"
-              onClick={(e) => handleLanguageChange("en")}
-            >
-              <p>En</p>
-            </button>
-            <button
-              className="navbar__languageContainer-btn"
-              onClick={(e) => handleLanguageChange("tr")}
-            >
-              <p>Tr</p>
-            </button>
-            <button
-              className="navbar__languageContainer-btn"
-              onClick={(e) => handleLanguageChange("ar")}
-            >
-              <p>Ar</p>
-            </button>
-          </div>
-        </div>
+          </Col>
+            <Col>
+              <Dropdown overlay={languagesMenu} className="navbar__languageContainer" >
+                <GlobalOutlined />
+              </Dropdown> 
+            </Col>
+          </Col>
+        </Row>
 
-        <div className="navbar__bottomHalf">
+        <Row className="navbar__bottomHalf">
           <div className="navbar__helperDiv"></div>
           <div></div>
-        </div>
+        </Row>
+
+        <Link className="navbar__logo-link" to={"/"}>
+            <img className="navbar__logo" src={logoImg} alt="juniper-logo" />
+        </Link>
+
       </div>
     </Router>
   );

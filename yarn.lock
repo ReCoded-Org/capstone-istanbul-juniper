@@ -2892,7 +2892,7 @@ babel-preset-react-app@^9.1.2:
     babel-plugin-macros "2.8.0"
     babel-plugin-transform-react-remove-prop-types "0.4.24"
 
-babel-runtime@^6.26.0:
+babel-runtime@^6.26.0, babel-runtime@^6.5.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -10272,6 +10272,16 @@ react-slick@^0.27.12:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
+<<<<<<< HEAD
+=======
+react-stubber@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-stubber/-/react-stubber-1.0.0.tgz#41ee2cac72d4d4fd70a63896da98e13739b84628"
+  integrity sha1-Qe4srHLU1P1wpjiW2pjhNzm4Rig=
+  dependencies:
+    babel-runtime "^6.5.0"
+
+>>>>>>> 75a48905e192f324110afea26565ef40add666a4
 react-test-renderer@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-17.0.1.tgz#3187e636c3063e6ae498aedf21ecf972721574c7"
