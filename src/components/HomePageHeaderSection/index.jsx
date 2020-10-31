@@ -24,7 +24,7 @@ export default function HomePageHeaderSection() {
               </h2>
               <br></br>
               <p className="homePageHeaderContainer__paragraph">
-                {t("home.headerSection.secondText")}
+                {t("home.headerSection.secondaryText")}
               </p>
             </Row>
             <Row>
