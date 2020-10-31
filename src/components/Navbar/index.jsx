@@ -87,7 +87,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className={isCurrentPath("/")}
+                  className = {isCurrentPath("/")}
                 >
                   {t("navbar.home")}
                 </Link>
@@ -97,11 +97,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/about"
-                  className={
-                    currentPath === "/about"
-                      ? "navbar__element navbar__element-current"
-                      : "navbar__element"
-                  }
+                  className = {isCurrentPath("/about")}
                 >
                   {t("navbar.about")}
                 </Link>
@@ -111,11 +107,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/games"
-                  className={
-                    currentPath === "/games"
-                      ? "navbar__element navbar__element-current"
-                      : "navbar__element"
-                  }
+                  className = {isCurrentPath("/games")}
                 >
                   {t("navbar.games")}
                 </Link>
@@ -134,11 +126,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/resources"
-                  className={
-                    currentPath === "/resources"
-                      ? "navbar__element navbar__element-current"
-                      : "navbar__element"
-                  }
+                  className = {isCurrentPath("/resources")}
                 >
                   {t("navbar.resources")}
                 </Link>
@@ -148,11 +136,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/contact"
-                  className={
-                    currentPath === "/contact"
-                      ? "navbar__element navbar__element-current"
-                      : "navbar__element"
-                  }
+                  className = {isCurrentPath("/contact")}
                 >
                   {t("navbar.contact")}
                 </Link>
@@ -162,11 +146,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/login"
-                  className={
-                    currentPath === "/login"
-                      ? "navbar__element navbar__element-current"
-                      : "navbar__element"
-                  }
+                  className = {isCurrentPath("/login")}
                 >
                   {t("navbar.login")}
                 </Link>
