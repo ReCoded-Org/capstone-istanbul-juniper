@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Moul&family=Roboto&display=swap");
 
-footer {
+.footerContainer {
   height: 495px;
   padding-top: 390px;
   background-color: #2a8c79;
@@ -13,7 +13,7 @@ footer {
   font-family: Roboto;
 }
 
-footer a {
+.footerContainer a {
   color: white;
 }
 

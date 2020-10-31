@@ -1,13 +1,8 @@
 import React from "react";
-import BottomCurve from "../../components/BottomCurve/index";
 import "./index.css";
 
 const Home = () => {
-  return (
-    <>
-      <BottomCurve />
-    </>
-  );
+  return <></>;
 };
 
 export default Home;

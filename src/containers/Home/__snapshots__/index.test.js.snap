@@ -1,18 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home renders correctly 1`] = `
-<div
-  className="bottomCurveContainer"
->
-  <div
-    className="bottomCurveContainer__bottomCurve"
-  >
-    <div
-      className="bottomCurveContainer__bottomCurve__topHalf"
-    />
-    <div
-      className="bottomCurveContainer__bottomCurve__bottomHalf"
-    />
-  </div>
-</div>
-`;
+exports[`Home renders correctly 1`] = `null`;
