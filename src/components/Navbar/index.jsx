@@ -170,7 +170,7 @@ const Navbar = () => {
 
         <Link
           className={
-            document.body.dir === "ltr"
+            document.dir === "ltr"
               ? "navbar__logo-ltrLink navbar__logo-link"
               : "navbar__logo-rtlLink navbar__logo-link"
           }
