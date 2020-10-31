@@ -15,7 +15,7 @@ Array [
       }
     >
       <div
-        className="ant-col navbar__leftSide"
+        className="ant-col navbar__elements"
         style={
           Object {
             "flex": "2 2 auto",
@@ -137,7 +137,7 @@ Array [
         </a>
       </div>
       <div
-        className="ant-col navbar__rightSide"
+        className="ant-col navbar__elements"
         style={
           Object {
             "flex": "2 2 auto",
@@ -247,7 +247,7 @@ Array [
       <div />
     </div>
     <a
-      className="navbar__logo-rtlLink"
+      className="navbar__logo-rtlLink navbar__logo-link"
       href="/"
       onClick={[Function]}
     >
