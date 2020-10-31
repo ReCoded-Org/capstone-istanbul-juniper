@@ -14,7 +14,7 @@ export default function HomePageHeaderSection() {
         <Row justify="space-around" align="middle"></Row>
         <Row justify="space-around" align="middle">
           <Col span={4}>
-            <img alt="headersection" src={homePageHeaderImgRight}></img>
+            <img alt="children playing in the garden" src={homePageHeaderImgRight}></img>
           </Col>
 
           <Col span={4} offset={6}>
@@ -43,7 +43,7 @@ export default function HomePageHeaderSection() {
           <Col span={4}>
             <img
               className="homePageHeaderContainer__img"
-              alt="headersection"
+              alt="children playing in the garden"
               src={homePageHeaderImgLeft}
             ></img>
           </Col>
