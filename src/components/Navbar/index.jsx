@@ -63,11 +63,11 @@ const Navbar = () => {
 
   const isCurrentPath = (path) => {
     if (currentPath === path) {
-      return "navbar__element navbar__element-current"
-    } else{
-      return "navbar__element"
+      return "navbar__element navbar__element-current";
+    } else {
+      return "navbar__element";
     }
-  }
+  };
 
   return (
     <Router>
@@ -85,30 +85,21 @@ const Navbar = () => {
 
             <Col>
               <li>
-                <Link
-                  to="/"
-                  className = {isCurrentPath("/")}
-                >
+                <Link to="/" className={isCurrentPath("/")}>
                   {t("navbar.home")}
                 </Link>
               </li>
             </Col>
             <Col>
               <li>
-                <Link
-                  to="/about"
-                  className = {isCurrentPath("/about")}
-                >
+                <Link to="/about" className={isCurrentPath("/about")}>
                   {t("navbar.about")}
                 </Link>
               </li>
             </Col>
             <Col>
               <li>
-                <Link
-                  to="/games"
-                  className = {isCurrentPath("/games")}
-                >
+                <Link to="/games" className={isCurrentPath("/games")}>
                   {t("navbar.games")}
                 </Link>
               </li>
@@ -124,30 +115,21 @@ const Navbar = () => {
           <Col className="navbar__elements" flex={2}>
             <Col>
               <li>
-                <Link
-                  to="/resources"
-                  className = {isCurrentPath("/resources")}
-                >
+                <Link to="/resources" className={isCurrentPath("/resources")}>
                   {t("navbar.resources")}
                 </Link>
               </li>
             </Col>
             <Col>
               <li>
-                <Link
-                  to="/contact"
-                  className = {isCurrentPath("/contact")}
-                >
+                <Link to="/contact" className={isCurrentPath("/contact")}>
                   {t("navbar.contact")}
                 </Link>
               </li>
             </Col>
             <Col>
               <li>
-                <Link
-                  to="/login"
-                  className = {isCurrentPath("/login")}
-                >
+                <Link to="/login" className={isCurrentPath("/login")}>
                   {t("navbar.login")}
                 </Link>
               </li>
