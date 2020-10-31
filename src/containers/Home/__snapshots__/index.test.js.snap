@@ -39,7 +39,7 @@ Array [
           <p
             className="homePageHeaderContainer__paragraph"
           >
-            home.headerSection.secondText
+            home.headerSection.secondaryText
           </p>
         </div>
         <div
