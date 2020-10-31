@@ -19,12 +19,13 @@ const GamesCarousel = () => {
       <p className="gamesCarousel__context">
         {t("home.gamesCarousel.subtitle")}
       </p>
-
-      <Slider {...settings}>
-        {gameCardsData.map((game) => (
-          <div className="gameCarousel__card">{game.name}</div>
-        ))}
-      </Slider>
+      <div className="gamesCarousel__wrapper">
+        <Slider {...settings}>
+          {gameCardsData.map((game) => (
+            <div className="gamesCarousel__card">{game.name}</div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
