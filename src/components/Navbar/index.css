@@ -76,15 +76,13 @@
 }
 
 .navbar__logo {
-  z-index: 1;
   height: 35px;
   width: auto;
 }
 
-.navbar__logo-ltrLink {
+.navbar__logo-link{
   z-index: 1;
   position: absolute;
-  left: 46.7%;
   top: 60px;
   width: 3%;
   height: auto;
@@ -92,15 +90,12 @@
   justify-content: center;
 }
 
+.navbar__logo-ltrLink {
+  left: 46.7%;
+}
+
 .navbar__logo-rtlLink {
-  z-index: 1;
-  position: absolute;
   left: 50%;
-  top: 60px;
-  width: 3%;
-  height: auto;
-  display: flex;
-  justify-content: center;
 }
 
 .navbar__logo:hover {
@@ -138,22 +133,13 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
 }
 
 .navbar__dropdown-btn {
-  display: flex;
-  justify-content: center;
   width: 3%;
   height: 35%;
   background: transparent;
   border: none;
 }
 
-.navbar__leftSide {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  font-size: 1.2em;
-}
-
-.navbar__rightSide {
+.navbar__elements {
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -185,10 +171,7 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
 }
 
 @media (max-width: 768px) {
-  .navbar__rightSide li a {
-    display: none;
-  }
-  .navbar__leftSide li a {
+  .navbar__Elements li a {
     display: none;
   }
 }

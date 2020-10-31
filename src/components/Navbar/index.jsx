@@ -61,11 +61,19 @@ const Navbar = () => {
     i18n.changeLanguage(lang);
   };
 
+  const isCurrentPath = (path) => {
+    if (currentPath === path) {
+      return "navbar__element navbar__element-current"
+    } else{
+      return "navbar__element"
+    }
+  }
+
   return (
     <Router>
       <div className="navbar">
         <Row className="navbar__topHalf" justify="space-around" gutter={12}>
-          <Col className="navbar__leftSide" flex={2}>
+          <Col className="navbar__elements" flex={2}>
             {/*Dropdown replaces the navbar in small screens */}
             <Col>
               <Dropdown className="navbar__dropdown" overlay={navbarMenu}>
@@ -79,11 +87,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className={
-                    currentPath === "/"
-                      ? "navbar__element navbar__element-current"
-                      : "navbar__element"
-                  }
+                  className={isCurrentPath("/")}
                 >
                   {t("navbar.home")}
                 </Link>
@@ -125,7 +129,7 @@ const Navbar = () => {
             </Link>
           </Col>
 
-          <Col className="navbar__rightSide" flex={2}>
+          <Col className="navbar__elements" flex={2}>
             <Col>
               <li>
                 <Link
@@ -187,8 +191,8 @@ const Navbar = () => {
         <Link
           className={
             document.body.dir === "ltr"
-              ? "navbar__logo-ltrLink"
-              : "navbar__logo-rtlLink"
+              ? "navbar__logo-ltrLink navbar__logo-link"
+              : "navbar__logo-rtlLink navbar__logo-link"
           }
           to={"/"}
         >
