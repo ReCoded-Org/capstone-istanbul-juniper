@@ -9,7 +9,6 @@ import logoImg from "./../../images/logo.svg";
 
 const Navbar = () => {
   const { t } = useTranslation();
-  const currentPath = window.location.pathname;
 
   const navbarMenu = (
     <Menu>
@@ -62,6 +61,7 @@ const Navbar = () => {
   };
 
   const isCurrentPath = (path) => {
+    const currentPath = window.location.pathname;
     if (currentPath === path) {
       return "navbar__element navbar__element-current";
     } else {
