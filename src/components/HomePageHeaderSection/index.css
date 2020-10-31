@@ -43,7 +43,8 @@
 }
 
 /* Media query rules to override previous rules, as necessary */
-@media screen and (min-width: 800px) {
+/* when the breakpoint happend we will see the one image only without the title and paragraph*/
+@media screen and (min-width: 1000px) {
   .homePageHeaderContainer__img {
     display: block;
   }
