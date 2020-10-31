@@ -17,7 +17,7 @@ exports[`HomePageHeaderSection snapshot test 1`] = `
       style={Object {}}
     >
       <img
-        alt="headersection"
+        alt="children playing in the garden"
         src="family.png"
       />
     </div>
@@ -61,7 +61,7 @@ exports[`HomePageHeaderSection snapshot test 1`] = `
       style={Object {}}
     >
       <img
-        alt="headersection"
+        alt="children playing in the garden"
         className="homePageHeaderContainer__img"
         src="child.png"
       />

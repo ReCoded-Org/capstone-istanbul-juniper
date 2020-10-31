@@ -18,7 +18,7 @@ Array [
         style={Object {}}
       >
         <img
-          alt="headersection"
+          alt="children playing in the garden"
           src="family.png"
         />
       </div>
@@ -62,7 +62,7 @@ Array [
         style={Object {}}
       >
         <img
-          alt="headersection"
+          alt="children playing in the garden"
           className="homePageHeaderContainer__img"
           src="child.png"
         />
