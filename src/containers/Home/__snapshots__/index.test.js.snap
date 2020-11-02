@@ -3,7 +3,6 @@
 exports[`Home renders correctly 1`] = `
 Array [
   <div
-<<<<<<< HEAD
     className="navbar"
   >
     <div
@@ -258,7 +257,8 @@ Array [
         src="logo.svg"
       />
     </a>
-=======
+  </div>,
+  <div
     className="homePageHeaderContainer"
   >
     <div
@@ -324,7 +324,6 @@ Array [
         />
       </div>
     </div>
->>>>>>> f223beb1c90f7c34554cb3f26a4112457c1c9928
   </div>,
   <div
     className="bottomCurveContainer"
