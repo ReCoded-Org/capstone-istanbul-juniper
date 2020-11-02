@@ -3,6 +3,7 @@
 exports[`Home renders correctly 1`] = `
 Array [
   <div
+<<<<<<< HEAD
     className="navbar"
   >
     <div
@@ -257,6 +258,73 @@ Array [
         src="logo.svg"
       />
     </a>
+=======
+    className="homePageHeaderContainer"
+  >
+    <div
+      className="ant-row ant-row-space-around ant-row-middle"
+      style={Object {}}
+    />
+    <div
+      className="ant-row ant-row-space-around ant-row-middle"
+      style={Object {}}
+    >
+      <div
+        className="ant-col ant-col-4"
+        style={Object {}}
+      >
+        <img
+          alt="children playing in the garden"
+          src="family.png"
+        />
+      </div>
+      <div
+        className="ant-col ant-col-4 ant-col-offset-6"
+        style={Object {}}
+      >
+        <div
+          className="ant-row"
+          style={Object {}}
+        >
+          <h2
+            className="homePageHeaderContainer__title"
+          >
+            home.headerSection.mainText
+          </h2>
+          <br />
+          <p
+            className="homePageHeaderContainer__paragraph"
+          >
+            home.headerSection.secondaryText
+          </p>
+        </div>
+        <div
+          className="ant-row"
+          style={Object {}}
+        >
+          <button
+            align="top"
+            className="homePageHeaderContainer__button"
+            shape="round"
+            size="large"
+            type="button"
+          >
+            home.headerSection.headerButton
+          </button>
+        </div>
+      </div>
+      <div
+        className="ant-col ant-col-4"
+        style={Object {}}
+      >
+        <img
+          alt="children playing in the garden"
+          className="homePageHeaderContainer__img"
+          src="child.png"
+        />
+      </div>
+    </div>
+>>>>>>> f223beb1c90f7c34554cb3f26a4112457c1c9928
   </div>,
   <div
     className="bottomCurveContainer"
