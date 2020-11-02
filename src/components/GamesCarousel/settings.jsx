@@ -1,5 +1,3 @@
-import React from "react";
-
 // React-Slider customised settings
 export const settings = {
   infinite: true,
