@@ -1,13 +1,18 @@
 {
   "navbar": {
-    "home": "",
-    "about": "",
-    "games": "",
-    "resources": "",
-    "contact": "",
-    "login": ""
+    "home": "الصفحة الرئيسية",
+    "about": "حول",
+    "games": "الألعاب",
+    "resources": "المصادر",
+    "contact": "اتصل بنا",
+    "login": "تسجيل الدخول"
   },
   "home": {
+    "headerSection": {
+      "mainText": "اكتشف ، استكشف ، تعلم",
+      "secondText": "مصدر تعليم  للأطفال للعثور على مواد تعليمية وممتعة تتعلق بقضايا البيئة التي نواجهها اليوم.",
+      "headerButton": "انقذ الأرض"
+    },
     "stayUpToDate": " برنامج الامم المتحدة لحماية البيئة . الصفحة العربية",
     "spreadTheWord": "انشر الكلمة",
     "twitterPages": [
