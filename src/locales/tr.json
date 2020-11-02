@@ -1,11 +1,11 @@
 {
   "navbar": {
-    "home": "",
-    "about": "",
-    "games": "",
-    "resources": "",
-    "contact": "",
-    "login": ""
+    "home": "Anasayfa",
+    "about": "Hakkında",
+    "games": "Oyunlar",
+    "resources": "Kaynaklar",
+    "contact": "İletişim",
+    "login": "Giriş yap"
   },
   "home": {
     "stayUpToDate": "Güncel kal!",
