@@ -4,16 +4,18 @@ import HomePageHeaderSection from "../../components/HomePageHeaderSection";
 import StayUpToDate from "../../components/StayUpTodate";
 import BottomCurve from "../../components/BottomCurve/index";
 import SpreadTheWordButton from "../../components/SpreadTheWordButton";
+import MemoryGame from "../../components/MemoryGame";
 import "./index.css";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <MemoryGame />
+      {/* <Navbar />
       <HomePageHeaderSection />
       <BottomCurve />
       <SpreadTheWordButton />
-      <StayUpToDate />
+      <StayUpToDate /> */}
     </>
   );
 };
