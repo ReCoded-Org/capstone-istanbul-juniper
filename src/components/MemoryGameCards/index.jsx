@@ -17,11 +17,12 @@ const MemoryGameCards = () => {
 
   // imagesArr[0]'s descriptions is stored in imageDescriptionsArr[0].
   // same thing is repeated for all elements off arrays.
-  const CardBackSidesArr = imagesArr.map((image) => {
+  const CardBackSidesArr = imagesArr.map((image, index) => {
     const imageIndex = imagesArr.indexOf(image);
     const imageDescription = imageDescriptionsArr[imageIndex];
     return (
-      <div key={imageDescription}>
+      // id is be used to match same images
+      <div key={imageDescription} id={index}>
         <Image
           src={image}
           alt={imageDescription}
@@ -32,19 +33,27 @@ const MemoryGameCards = () => {
       </div>
     );
   });
-  const initialStates = CardBackSidesArr.map(() => false);
-  const [isFlippedArr, setIsFlippedArr] = useState(initialStates);
 
-  const handleClick = (index) => {
+  const [isFlippedArr, setIsFlippedArr] = useState([]);
+
+  const handleClick = (index, cardId) => {
     const copyOfIsFlippedArr = [...isFlippedArr];
     copyOfIsFlippedArr[index] = !copyOfIsFlippedArr[index];
     setIsFlippedArr(copyOfIsFlippedArr);
   };
-  const memoryCards = CardBackSidesArr.map((cardBackImage, index) => {
+
+  // there should be a clone for each card
+  const coupledBackSidesArr = [...CardBackSidesArr, ...CardBackSidesArr];
+  const memoryCards = coupledBackSidesArr.map((cardBackImage, index) => {
+    const cardId = cardBackImage.props.id;
     return (
-      <div key={index}>
+      <Col key={index}>
+        {/* index is being used to make cards flip individually */}
         <ReactCardFlip isFlipped={isFlippedArr[index]} flipDirection="vertical">
-          <Card onClick={() => handleClick(index)} className="memoryCard">
+          <Card
+            onClick={() => handleClick(index, cardId)}
+            className="memoryCard"
+          >
             <Row>
               <Col>
                 <Image
@@ -62,11 +71,11 @@ const MemoryGameCards = () => {
             </Row>
           </Card>
         </ReactCardFlip>
-      </div>
+      </Col>
     );
   });
 
-  return <>{memoryCards}</>;
+  return <Row>{memoryCards}</Row>;
 };
 
 export default MemoryGameCards;
