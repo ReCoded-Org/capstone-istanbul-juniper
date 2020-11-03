@@ -1,41 +1,49 @@
 {
-  "navbar": {
-    "home": "Home",
-    "about": "About",
-    "games": "Games",
-    "resources": "Resources",
-    "contact": "Contact",
-    "login": "Login"
-  },
-  "home": {
-    "stayUpToDate": "Stay up-to-date!",
-    "spreadTheWord": "Spread the word!",
-    "twitterPages": [
-      {
-        "alt": "EAD Twitter Account",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FeadEn.svg?alt=media&token=a1604a8e-7eb5-4033-9cf0-eb7a36a3dab8",
-        "href": "https://twitter.com/eadtweets?lang=en"
-      },
-      {
-        "alt": "Green Peace Account",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FgreenPeaceEn.svg?alt=media&token=0d1dc09c-7256-45b4-b86e-78ebbc2ce335",
-        "href": "https://twitter.com/Greenpeace?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-      },
-      {
-        "alt": "UN Environmental Programme Twitter",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FunEn.svg?alt=media&token=8e17795d-656e-4629-919f-7d4567be2f00",
-        "href": "https://twitter.com/UNEP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-      },
-      {
-        "alt": "WWF Twitter Account",
-        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FwwfEn.svg?alt=media&token=f86b6e9c-55be-4b21-baaf-463b1cc492ab",
-        "href": "https://twitter.com/WWF?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-      }
-    ],
-    "headerSection": {
-      "mainText": "Discover, Explore, Learn",
-      "secondaryText": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
-      "headerButton": "Save the Earth"
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "games": "Games",
+        "resources": "Resources",
+        "contact": "Contact",
+        "login": "Login"
+    },
+    "home": {
+        "stayUpToDate": "Stay up-to-date!",
+        "spreadTheWord": "Spread the word!",
+        "twitterPages": [
+            {
+                "alt": "EAD Twitter Account",
+                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FeadEn.svg?alt=media&token=a1604a8e-7eb5-4033-9cf0-eb7a36a3dab8",
+                "href": "https://twitter.com/eadtweets?lang=en"
+            },
+            {
+                "alt": "Green Peace Account",
+                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FgreenPeaceEn.svg?alt=media&token=0d1dc09c-7256-45b4-b86e-78ebbc2ce335",
+                "href": "https://twitter.com/Greenpeace?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            },
+            {
+                "alt": "UN Environmental Programme Twitter",
+                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FunEn.svg?alt=media&token=8e17795d-656e-4629-919f-7d4567be2f00",
+                "href": "https://twitter.com/UNEP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            },
+            {
+                "alt": "WWF Twitter Account",
+                "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FwwfEn.svg?alt=media&token=f86b6e9c-55be-4b21-baaf-463b1cc492ab",
+                "href": "https://twitter.com/WWF?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            }
+        ],
+        "headerSection": {
+            "mainText": "Discover, Explore, Learn",
+            "secondaryText": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
+            "headerButton": "Save the Earth"
+        }
+    },
+    "memoryGame": {
+        "images": [
+            {
+                "src": "",
+                "alt": ""
+            }
+        ]
     }
-  }
 }
