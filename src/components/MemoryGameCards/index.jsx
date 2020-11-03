@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactCardFlip from "react-card-flip";
 import { Image, Card, Row, Col } from "antd";
 import { useTranslation } from "react-i18next";
@@ -33,14 +33,34 @@ const MemoryGameCards = () => {
       </div>
     );
   });
-
   const [isFlippedArr, setIsFlippedArr] = useState([]);
+  const [selectedCards, setSelectedCards] = useState([]);
+  const [curCard, setCurCard] = useState();
 
   const handleClick = (index, cardId) => {
     const copyOfIsFlippedArr = [...isFlippedArr];
     copyOfIsFlippedArr[index] = !copyOfIsFlippedArr[index];
     setIsFlippedArr(copyOfIsFlippedArr);
+    setCurCard({ id: cardId, index });
   };
+
+  // selected cards
+  useEffect(() => {
+    const individualFlipStatus = curCard ? isFlippedArr[curCard.id] : "";
+    if (individualFlipStatus === true) {
+      setSelectedCards([...selectedCards, curCard]);
+    }
+  }, [isFlippedArr]);
+
+  // automatic closing
+  useEffect(() => {
+    const curIndex = curCard ? curCard.index : "";
+    setTimeout(() => {
+      const copyOfIsFlippedArr = [...isFlippedArr];
+      copyOfIsFlippedArr[curIndex] = !copyOfIsFlippedArr[curIndex];
+      setIsFlippedArr(copyOfIsFlippedArr);
+    }, 1500);
+  }, [selectedCards]);
 
   // there should be a clone for each card
   const coupledBackSidesArr = [...CardBackSidesArr, ...CardBackSidesArr];
