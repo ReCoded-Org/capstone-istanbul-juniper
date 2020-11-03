@@ -40,18 +40,18 @@
   },
   "memoryGame": {
     "descriptions": [
-      { "description": "Acid Rain" },
-      { "description": "Air Pollution" },
-      { "description": "Alternative Energy" },
-      { "description": "Chemical Waste" },
-      { "description": "Deforestation" },
-      { "description": "Global Warming" },
-      { "description": "Greenhouse Effect" },
-      { "description": "Littering" },
-      { "description": "Melting Ice Caps" },
-      { "description": "Ozone Hole" },
-      { "description": "Recycle" },
-      { "description": "Water Pollution" }
+      "Acid Rain",
+      "Air Pollution",
+      "Alternative Energy",
+      "Chemical Waste",
+      "Deforestation",
+      "Global Warming",
+      "Greenhouse Effect",
+      "Littering",
+      "Melting Ice Caps",
+      "Ozone Hole",
+      "Recycle",
+      "Water Pollution"
     ]
   }
 }
