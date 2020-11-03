@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import { Image, Card, Row, Col } from "antd";
-import questionMark from "../../images/questionMark.png";
+import questionMark from "../../images/memoryCardFront.png";
 import "./index.css";
 
 const MemoryGame = () => {
