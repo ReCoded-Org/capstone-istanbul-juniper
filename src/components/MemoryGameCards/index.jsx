@@ -54,28 +54,22 @@ const MemoryGameCards = () => {
             onClick={() => handleClick(index, cardId)}
             className="memoryCard"
           >
-            <Row>
-              <Col>
-                <Image
-                  src={cardFrontImage}
-                  preview={false}
-                  alt="green question mark"
-                  className="cardImage"
-                />
-              </Col>
-            </Row>
+            <Image
+              src={cardFrontImage}
+              preview={false}
+              alt="green question mark"
+              className="cardImage"
+            />
           </Card>
           <Card onClick={() => handleClick(index)} className="memoryCard">
-            <Row>
-              <Col>{cardBackImage}</Col>
-            </Row>
+            {cardBackImage}
           </Card>
         </ReactCardFlip>
       </Col>
     );
   });
 
-  return <Row>{memoryCards}</Row>;
+  return <Row className="cardContainer">{memoryCards}</Row>;
 };
 
 export default MemoryGameCards;
