@@ -1,8 +1,8 @@
 import React from "react";
-import MemoryGameCards from "../../components/MemoryGameCards";
+import MemoryGameComponent from "../../components/MemoryGame";
 
 const MemoryGame = () => {
-  return <MemoryGameCards />;
+  return <MemoryGameComponent />;
 };
 
 export default MemoryGame;

@@ -1,0 +1,10 @@
+.memoryCard {
+  cursor: pointer;
+  width: 200px;
+  height: 300px;
+}
+
+.cardContainer {
+  width: 90%;
+  margin: auto;
+}
