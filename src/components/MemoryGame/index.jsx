@@ -10,8 +10,8 @@ import "./index.css";
 const Cards = ({ cardStates }) => {
   const [t] = useTranslation();
 
-  const imageDescriptionsArr = [
-    ...t("memoryGame.descriptions", {
+  const cardsData = [
+    ...t("memoryGame.cards", {
       returnObjects: true,
     }),
   ];
@@ -20,17 +20,19 @@ const Cards = ({ cardStates }) => {
   // same thing is repeated for all elements off arrays.
   const CardBackSidesArr = imagesArr.map((image, index) => {
     const imageIndex = imagesArr.indexOf(image);
-    const imageDescription = imageDescriptionsArr[imageIndex];
+    const cardData = cardsData[imageIndex];
     return (
       // id is be used to match same images
-      <div key={imageDescription} id={index}>
+      <div key={cardData.description} id={index}>
         <Image
           src={image}
-          alt={imageDescription}
+          alt={cardData.description}
           preview={false}
           className="cardImage"
         />
-        <figcaption className="cardFigcaption">{imageDescription}</figcaption>
+        <figcaption className="cardFigcaption">
+          {cardData.description}
+        </figcaption>
       </div>
     );
   });
