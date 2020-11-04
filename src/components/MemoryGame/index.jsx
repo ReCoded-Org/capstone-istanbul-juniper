@@ -125,4 +125,4 @@ const Cards = ({ cardStates }) => {
 
 export default Cards;
 
-//add shuffle, points, facts, animation, style, responsive,locale
+//add points, facts, animation, style, responsive
