@@ -36,9 +36,27 @@ const Cards = ({ cardStates }) => {
   });
 
   const refArr = [];
-  const coupledCardsArr = [...CardBackSidesArr, ...CardBackSidesArr];
   const [selectedCards, setSelectedCards] = useState([]);
   const [matchedCardIndexes, setMatchedCardIndexes] = useState([]);
+  const [coupledCardsArr, setCoupledCardsArr] = useState([
+    ...CardBackSidesArr,
+    ...CardBackSidesArr,
+  ]);
+
+  // Shuffles cards
+  // Check Fisher–Yates shuffle algorithm https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+  useEffect(() => {
+    const copyOfCoupledCardsArr = [...coupledCardsArr];
+    for (let i = copyOfCoupledCardsArr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+      [copyOfCoupledCardsArr[i], copyOfCoupledCardsArr[j]] = [
+        copyOfCoupledCardsArr[j],
+        copyOfCoupledCardsArr[i],
+      ];
+    }
+    setCoupledCardsArr(copyOfCoupledCardsArr);
+  }, []);
+
   const handleClick = (index, id, setCardState) => {
     setCardState(true);
     setSelectedCards((prevState) => [...prevState, { index, id }]);
@@ -93,7 +111,6 @@ const Cards = ({ cardStates }) => {
       </Col>
     );
   });
-
   useEffect(() => {
     matchedCardIndexes.forEach((matchedIndex) => {
       const card = refArr[matchedIndex].current.children[1];
