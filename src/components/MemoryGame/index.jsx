@@ -1,7 +1,9 @@
 import React, { useState, createRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ReactCardFlip from "react-card-flip";
-import { Image, Card, Col, Row } from "antd";
+import { Image, Card, Col, Row, Modal } from "antd";
+import Confetti from "react-dom-confetti";
+import { Redirect } from "react-router-dom";
 import imagesArr from "../memoryCardBackImages";
 import cardFrontImage from "../../images/memoryCardFront.png";
 import successSymbol from "../../images/successSymbol.svg";
@@ -68,13 +70,32 @@ const Cards = ({ cardStates }) => {
     const curIndex = index;
     const curId = id;
 
-    if (prevCard && prevCard.id === curId && prevCard.index !== curIndex) {
+    if (
+      prevCard &&
+      prevCard.id === curId &&
+      prevCard.index !== curIndex &&
+      cardStates[prevCard.index][0]
+    ) {
       setMatchedCardIndexes([prevCard.index, index]);
     } else {
       setTimeout(() => {
         setCardState(false);
       }, [1250]);
     }
+  };
+
+  const config = {
+    angle: "180",
+    spread: "360",
+    startVelocity: 40,
+    elementCount: "200",
+    dragFriction: 0.12,
+    duration: "4100",
+    stagger: "2",
+    width: "10px",
+    height: "10px",
+    perspective: "500px",
+    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
   };
 
   const gameCards = coupledCardsArr.map((cardBackImage, index) => {
@@ -85,7 +106,12 @@ const Cards = ({ cardStates }) => {
     return (
       <Col key={index} ref={refArr[index]} span={3}>
         <div className="memoryCard" style={{ display: "none" }}>
-          <Image src={successSymbol} alt="success" className="cardImage" />
+          <Image
+            src={successSymbol}
+            alt="success"
+            className="cardImage"
+            preview={false}
+          />
         </div>
 
         <ReactCardFlip
@@ -116,6 +142,7 @@ const Cards = ({ cardStates }) => {
   });
 
   const [facts, setFacts] = useState([]);
+  const [completed, setCompleted] = useState(false);
 
   useEffect(() => {
     matchedCardIndexes.forEach((matchedIndex) => {
@@ -133,12 +160,30 @@ const Cards = ({ cardStates }) => {
     }
   }, [matchedCardIndexes]);
 
-  return (
+  const [redirect, setRedirect] = useState();
+
+  useEffect(() => {
+    if (facts.length === CardBackSidesArr.length) {
+      setCompleted(true);
+      Modal.success({
+        content: "You have completed the game!",
+        onOk: () => setRedirect(true),
+      });
+    }
+  }, [facts, CardBackSidesArr]);
+
+  return redirect ? (
+    <>
+      <Redirect to="/" />
+    </>
+  ) : (
     <Row className="cardContainer">
+      <Confetti active={completed} config={config} />
       <Col span={16} offset={2}>
         <Row>{gameCards}</Row>
       </Col>
       <Col span={2} offset={2}>
+        <Confetti active={completed} config={config} />
         <MemoryGameFactList facts={facts} />
       </Col>
     </Row>
@@ -147,4 +192,5 @@ const Cards = ({ cardStates }) => {
 
 export default Cards;
 
-// add points, facts, animation, style, responsive ,routing
+// add style, responsive, what if user wants to stay and read, use sub components,
+// http://reactcommunity.org/react-transition-group/transition

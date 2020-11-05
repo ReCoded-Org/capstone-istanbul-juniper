@@ -17,6 +17,7 @@
         "react": "^16.14.0",
         "react-card-flip": "^1.0.11",
         "react-dom": "^16.14.0",
+        "react-dom-confetti": "^0.2.0",
         "react-i18next": "^11.7.3",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.3",
