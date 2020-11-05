@@ -73,7 +73,7 @@ const Cards = ({ cardStates }) => {
     } else {
       setTimeout(() => {
         setCardState(false);
-      }, [1000]);
+      }, [1250]);
     }
   };
 
@@ -125,10 +125,10 @@ const Cards = ({ cardStates }) => {
 
   return (
     <Row className="cardContainer">
-      <Col span={16}>
+      <Col span={16} offset={2}>
         <Row>{gameCards}</Row>
       </Col>
-      <Col span={4} offset={2}>
+      <Col span={2} offset={2}>
         <MemoryGameFactList facts={cardsData} />
       </Col>
     </Row>
@@ -137,4 +137,4 @@ const Cards = ({ cardStates }) => {
 
 export default Cards;
 
-//add points, facts, animation, style, responsive
+// add points, facts, animation, style, responsive ,routing
