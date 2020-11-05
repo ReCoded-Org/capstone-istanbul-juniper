@@ -14,9 +14,11 @@
     "games": "Oyunlar",
     "about": "Hakkında"
   },
+  "home": {
   "resourcesSection": {
     "pollution": "Çevre kirliliği",
     "climateChange": "Mevsim değişimi",
     "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
   }
+}
 }

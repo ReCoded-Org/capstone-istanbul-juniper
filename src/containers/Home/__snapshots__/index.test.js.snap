@@ -38,7 +38,7 @@ exports[`Home renders correctly 1`] = `
             href="/pollution"
             onClick={[Function]}
           >
-            resourcesSection.pollution
+            home.resourcesSection.pollution
              
           </a>
         </div>
@@ -52,7 +52,7 @@ exports[`Home renders correctly 1`] = `
           >
             <img
               alt="Poulution"
-              src="/assets/images/Pou.svg"
+              src="pollution.svg"
             />
           </a>
         </div>
@@ -81,7 +81,7 @@ exports[`Home renders correctly 1`] = `
             href="/climateChange"
             onClick={[Function]}
           >
-            resourcesSection.climateChange
+            home.resourcesSection.climateChange
           </a>
         </div>
         <div
@@ -94,7 +94,7 @@ exports[`Home renders correctly 1`] = `
           >
             <img
               alt="Climate Change"
-              src="/assets/images/earth.svg"
+              src="earth.svg"
             />
           </a>
         </div>
@@ -123,7 +123,7 @@ exports[`Home renders correctly 1`] = `
             href="/recycle"
             onClick={[Function]}
           >
-            resourcesSection.reduceReuseRecycle
+            home.resourcesSection.reduceReuseRecycle
           </a>
         </div>
         <div
@@ -136,7 +136,7 @@ exports[`Home renders correctly 1`] = `
           >
             <img
               alt="Recycle"
-              src="/assets/images/rec.svg"
+              src="recycle.svg"
             />
           </a>
         </div>
