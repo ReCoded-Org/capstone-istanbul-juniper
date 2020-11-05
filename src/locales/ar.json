@@ -36,6 +36,42 @@
         "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/arabicTweets%2FsomethingSomethingArabicPage.svg?alt=media&token=d03cd310-7487-410e-bc74-2f7fc406d20d",
         "href": "https://twitter.com/UNEP_Arabic/media"
       }
-    ]
+    ],
+    "gamesCarousel": {
+      "title": "ألعاب",
+      "subtitle": "الألعاب الأكثر شهرة",
+      "gameCards": [
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        }
+      ]
+    }
   }
 }

@@ -1,0 +1,19 @@
+.puzzlePage__puzzleBox__CurrentImage{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+  cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39,
+    auto;
+
+}
+
+.selectedTile {
+  background-color: green;
+}

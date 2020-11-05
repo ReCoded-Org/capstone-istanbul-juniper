@@ -31,6 +31,42 @@
         "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FwwfTr.svg?alt=media&token=ae50b5a5-bd3f-442f-bde8-46de44b43a36",
         "href": "https://twitter.com/wwf_turkiye?lang=en"
       }
-    ]
+    ],
+    "gamesCarousel": {
+      "title": "Oyunlar",
+      "subtitle": "En Popüler Oyunlar",
+      "gameCards": [
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        }
+      ]
+    }
   }
 }

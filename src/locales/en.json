@@ -8,6 +8,11 @@
     "login": "Login"
   },
   "home": {
+    "headerSection": {
+      "mainText": "Discover, Explore, Learn",
+      "secondaryText": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
+      "headerButton": "Save the Earth"
+    },
     "stayUpToDate": "Stay up-to-date!",
     "spreadTheWord": "Spread the word!",
     "twitterPages": [
@@ -32,10 +37,41 @@
         "href": "https://twitter.com/WWF?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
       }
     ],
-    "headerSection": {
-      "mainText": "Discover, Explore, Learn",
-      "secondaryText": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
-      "headerButton": "Save the Earth"
+    "gamesCarousel": {
+      "title": "Games",
+      "subtitle": "Popular Games",
+      "gameCards": [
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        }
+      ]
     }
   }
 }
