@@ -1,6 +1,7 @@
 import React from "react";
 import { Image } from "antd";
 import cardBacksideImages from "./memoryCardBackSideImages";
+import "./MemoryGame/index.css";
 
 const cardBackSides = (cardsData) => {
   // imagesArr[0]'s descriptions is stored in imageDescriptionsArr[0].
@@ -8,13 +9,13 @@ const cardBackSides = (cardsData) => {
   return cardBacksideImages.map((image, index) => {
     const cardData = cardsData[index];
     return (
-      // id is be used to match same images
+      // matching cards should have same id
       <div key={cardData.description} id={index}>
-        <Image
+        <img
           src={image}
           alt={cardData.description}
           preview={false}
-          className="memoryCard__image"
+          className="memoryGameCardImages"
         />
         <figcaption>{cardData.description}</figcaption>
       </div>

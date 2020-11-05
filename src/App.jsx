@@ -1,10 +1,10 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Home from "./containers/Home/index";
 import MemoryGame from "./containers/MemoryGame";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import "antd/dist/antd.css";
 import "./App.css";
-import { useTranslation } from "react-i18next";
 
 function App() {
   const { i18n } = useTranslation();

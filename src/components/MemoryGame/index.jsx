@@ -6,7 +6,7 @@ import { Redirect } from "react-router-dom";
 import MemoryGameFactList from "../MemoryGameFactList/index";
 import "./index.css";
 import confettiConfig from "../confettiConfig";
-import cardBackSides from "../cardBacksides";
+import memoryCardBackSides from "../memoryCardBackSides";
 import shuffle from "../shuffle";
 import MemoryGameCards from "../MemoryGameCards";
 
@@ -20,7 +20,7 @@ const Cards = ({ cardStates }) => {
   const factsTitle = t("memoryGame.facts");
   const gameTitle = t("memoryGame.title");
 
-  const CardBackSidesArr = cardBackSides(cardsData);
+  const CardBackSidesArr = memoryCardBackSides(cardsData);
   const [coupledCardsArr, setCoupledCardsArr] = useState([
     ...CardBackSidesArr,
     ...CardBackSidesArr,

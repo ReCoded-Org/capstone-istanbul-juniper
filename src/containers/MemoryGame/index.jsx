@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import "./index.css";
 
 const MemoryGame = () => {
+  // individual card states
   const [isAcidRainFlipped, setIsAcidRainFlipped] = useState(false);
   const [isAirPollutionFlipped, setIsAirPollutionFlipped] = useState(false);
   const [isAlternateEnergyFlipped, setIsAlternateEnergyFlipped] = useState(

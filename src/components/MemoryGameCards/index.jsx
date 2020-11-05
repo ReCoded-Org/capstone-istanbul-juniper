@@ -1,6 +1,6 @@
 import React, { useState, createRef } from "react";
 import ReactCardFlip from "react-card-flip";
-import { Col, Image, Card } from "antd";
+import { Col, Image, Card, Row } from "antd";
 import cardFrontImage from "../../images/memoryCardFront.png";
 import successSymbol from "../../images/successSymbol.svg";
 import "./index.css";
@@ -47,26 +47,29 @@ const GameCards = ({
     const setCardState = cardStates[index][1];
     refArr.push(createRef());
     return (
-      <Col key={index} ref={refArr[index]} xs={8} sm={6} md={4} lg={3}>
-        <Image
-          src={successSymbol}
-          alt="success"
-          preview={false}
-          className="successSymbol"
-        />
+      <Col key={index} ref={refArr[index]} xs={10} sm={6} md={4} lg={3}>
+        <Card className="successCard">
+          <img
+            src={successSymbol}
+            alt="success"
+            preview={false}
+            className="successSymbol"
+          />
+        </Card>
 
         <ReactCardFlip isFlipped={cardState} flipDirection="vertical">
           <Card
             onClick={() => handleClick(index, cardId, setCardState)}
             className="memoryCard"
           >
-            <Image
+            <img
               src={cardFrontImage}
               preview={false}
               alt="green question mark"
-              className="memoryCard__image"
+              className="questionMark"
             />
           </Card>
+
           <Card
             onClick={() => handleClick(index, cardId, setCardState)}
             className="memoryCard"
