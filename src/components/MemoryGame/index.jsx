@@ -5,6 +5,7 @@ import { Image, Card, Col, Row } from "antd";
 import imagesArr from "../memoryCardBackImages";
 import cardFrontImage from "../../images/memoryCardFront.png";
 import successSymbol from "../../images/successSymbol.svg";
+import MemoryGameFactList from "../MemoryGameFactList/index";
 import "./index.css";
 
 const Cards = ({ cardStates }) => {
@@ -82,7 +83,7 @@ const Cards = ({ cardStates }) => {
     const setCardState = cardStates[index][1];
     refArr.push(createRef());
     return (
-      <Col key={index} ref={refArr[index]}>
+      <Col key={index} ref={refArr[index]} span={3}>
         <div className="memoryCard" style={{ display: "none" }}>
           <Image src={successSymbol} alt="success" className="cardImage" />
         </div>
@@ -122,7 +123,16 @@ const Cards = ({ cardStates }) => {
     });
   }, [matchedCardIndexes]);
 
-  return <Row className="cardContainer">{gameCards}</Row>;
+  return (
+    <Row className="cardContainer">
+      <Col span={16}>
+        <Row>{gameCards}</Row>
+      </Col>
+      <Col span={4} offset={2}>
+        <MemoryGameFactList facts={cardsData} />
+      </Col>
+    </Row>
+  );
 };
 
 export default Cards;
