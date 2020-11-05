@@ -5,6 +5,7 @@ import "./index.css"
 const CurrentImage = () => {
     const [generatedTiles, setGeneratedTiles] = useState([])
     const [tileSelected, setTileSelected] = useState({id: null, selected: false})
+    const [isSolved, setIsSolved] = useState(false)
     const generateTiles = () => {
         let newTilesArray = [];
         for (let i=0; i<6; i++){
@@ -25,7 +26,8 @@ const CurrentImage = () => {
     }, [])
 
     useEffect(() => {
-    }, [tileSelected])
+        console.log("solved correctly?",isSolved)
+    }, [isSolved])
 
     const handleSelect = (currId) => {
         if (tileSelected.selected) {
@@ -50,6 +52,22 @@ const CurrentImage = () => {
         newTiles.map(tile => tile.selected = false)
         setGeneratedTiles(newTiles)
         setTileSelected({id: null, selected: false })
+        checkSolution()
+    }
+
+    const checkSolution = () => {
+        console.log(generatedTiles)
+        const isCorrect = generatedTiles.reduce((curr,tile, i) => {
+                if(tile.id !== i){
+                    curr = false
+                    return curr
+                }
+                else {
+                    curr = true
+                    return curr
+                }
+        }, false)
+        setIsSolved(isCorrect)
     }
 
     return (
