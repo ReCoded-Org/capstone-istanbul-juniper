@@ -1,5 +1,5 @@
-.memoryCard {
-  cursor: pointer;
-  width: 177px;
-  height: 250px;
+.memoryGameTitle {
+  text-align: center;
+  font-family: "Salsa", cursive;
+  color: white;
 }

@@ -1,3 +1,10 @@
 .successSymbol {
   display: none;
 }
+
+.memoryCard {
+  cursor: pointer;
+}
+
+.memoryCard__image {
+}

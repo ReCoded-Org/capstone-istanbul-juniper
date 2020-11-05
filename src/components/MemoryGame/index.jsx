@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Col, Row, Modal } from "antd";
+import { Col, Row, Modal, Typography } from "antd";
 import Confetti from "react-dom-confetti";
 import { Redirect } from "react-router-dom";
 import MemoryGameFactList from "../MemoryGameFactList/index";
@@ -74,10 +74,11 @@ const Cards = ({ cardStates }) => {
       <Redirect to="/" />
     </>
   ) : (
-    <Row className="cardContainer">
+    <Row>
       <Confetti active={completed} config={confettiConfig} />
       <Col span={16} offset={2}>
-        <Row>
+        <h1 className="memoryGameTitle">Match Images</h1>
+        <Row justify="center">
           <MemoryGameCards
             setMatchedCardIndexes={setMatchedCardIndexes}
             cardStates={cardStates}

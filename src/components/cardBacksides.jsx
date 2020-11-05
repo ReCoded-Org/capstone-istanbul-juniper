@@ -14,11 +14,9 @@ const cardBackSides = (cardsData) => {
           src={image}
           alt={cardData.description}
           preview={false}
-          className="cardImage"
+          className="memoryCard__image"
         />
-        <figcaption className="cardFigcaption">
-          {cardData.description}
-        </figcaption>
+        <figcaption>{cardData.description}</figcaption>
       </div>
     );
   });

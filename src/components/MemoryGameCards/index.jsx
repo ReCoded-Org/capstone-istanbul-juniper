@@ -52,7 +52,7 @@ const GameCards = ({
           src={successSymbol}
           alt="success"
           preview={false}
-          className="memoryCard successSymbol"
+          className="successSymbol"
         />
 
         <ReactCardFlip isFlipped={cardState} flipDirection="vertical">
@@ -64,6 +64,7 @@ const GameCards = ({
               src={cardFrontImage}
               preview={false}
               alt="green question mark"
+              className="memoryCard__image"
             />
           </Card>
           <Card
