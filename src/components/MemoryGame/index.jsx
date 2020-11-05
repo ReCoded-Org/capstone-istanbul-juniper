@@ -114,6 +114,9 @@ const Cards = ({ cardStates }) => {
       </Col>
     );
   });
+
+  const [facts, setFacts] = useState([]);
+
   useEffect(() => {
     matchedCardIndexes.forEach((matchedIndex) => {
       const card = refArr[matchedIndex].current.children[1];
@@ -121,6 +124,13 @@ const Cards = ({ cardStates }) => {
       completeIcon.style.display = "inline-block";
       card.style.display = "none";
     });
+    const factIndex = matchedCardIndexes[1];
+    if (factIndex) {
+      const matchedCard = cardsData.find(
+        (data) => data.description === coupledCardsArr[factIndex].key
+      );
+      setFacts([...facts, matchedCard]);
+    }
   }, [matchedCardIndexes]);
 
   return (
@@ -129,7 +139,7 @@ const Cards = ({ cardStates }) => {
         <Row>{gameCards}</Row>
       </Col>
       <Col span={2} offset={2}>
-        <MemoryGameFactList facts={cardsData} />
+        <MemoryGameFactList facts={facts} />
       </Col>
     </Row>
   );
