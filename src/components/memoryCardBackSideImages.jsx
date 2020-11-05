@@ -11,7 +11,7 @@ import ozoneHole from "../images/memoryCardBack/ozoneHole.svg";
 import recycle from "../images/memoryCardBack/recycle.svg";
 import waterPollution from "../images/memoryCardBack/waterPollution.svg";
 
-const images = [
+const cardBacksideImages = [
   acidRain,
   airPollution,
   alternateEnergy,
@@ -26,4 +26,4 @@ const images = [
   waterPollution,
 ];
 
-export default images;
+export default cardBacksideImages;
