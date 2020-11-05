@@ -38,6 +38,42 @@
       }
     ]
   },
+  "gamesCarousel": {
+    "title": "ألعاب",
+    "subtitle": "الألعاب الأكثر شهرة",
+    "gameCards": [
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      }
+    ]
+  },
   "memoryGame": {
     "cards": [
       {

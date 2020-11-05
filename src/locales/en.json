@@ -8,6 +8,11 @@
     "login": "Login"
   },
   "home": {
+    "headerSection": {
+      "mainText": "Discover, Explore, Learn",
+      "secondaryText": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
+      "headerButton": "Save the Earth"
+    },
     "stayUpToDate": "Stay up-to-date!",
     "spreadTheWord": "Spread the word!",
     "twitterPages": [
@@ -31,12 +36,43 @@
         "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FwwfEn.svg?alt=media&token=f86b6e9c-55be-4b21-baaf-463b1cc492ab",
         "href": "https://twitter.com/WWF?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
       }
-    ],
-    "headerSection": {
-      "mainText": "Discover, Explore, Learn",
-      "secondaryText": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
-      "headerButton": "Save the Earth"
-    }
+    ]
+  },
+  "gamesCarousel": {
+    "title": "Games",
+    "subtitle": "Popular Games",
+    "gameCards": [
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      }
+    ]
   },
   "memoryGame": {
     "cards": [

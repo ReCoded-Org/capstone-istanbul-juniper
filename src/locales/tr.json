@@ -33,6 +33,42 @@
       }
     ]
   },
+  "gamesCarousel": {
+    "title": "Oyunlar",
+    "subtitle": "En Popüler Oyunlar",
+    "gameCards": [
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "img": "",
+        "description": ""
+      }
+    ]
+  },
   "memoryGame": {
     "cards": [
       {
