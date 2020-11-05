@@ -75,6 +75,8 @@
     ]
   },
   "memoryGame": {
+    "title": "Memory Game",
+    "facts": "Facts",
     "cards": [
       {
         "description": "Acid Rain",

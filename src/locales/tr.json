@@ -70,6 +70,8 @@
     ]
   },
   "memoryGame": {
+    "title": "Hafıza Oyunu",
+    "facts": "Bilgiler",
     "cards": [
       {
         "description": "Asit Yağmuru",

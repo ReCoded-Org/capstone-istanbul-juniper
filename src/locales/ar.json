@@ -75,6 +75,8 @@
     ]
   },
   "memoryGame": {
+    "title": "لعبة الذاكرة",
+    "facts": "حقائق",
     "cards": [
       {
         "description": "أمطار حمضية",

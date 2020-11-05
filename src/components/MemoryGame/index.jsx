@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Col, Row, Modal, Typography } from "antd";
+import { Col, Row, Modal } from "antd";
 import Confetti from "react-dom-confetti";
 import { Redirect } from "react-router-dom";
 import MemoryGameFactList from "../MemoryGameFactList/index";
@@ -17,6 +17,9 @@ const Cards = ({ cardStates }) => {
       returnObjects: true,
     }),
   ];
+  const factsTitle = t("memoryGame.facts");
+  const gameTitle = t("memoryGame.title");
+
   const CardBackSidesArr = cardBackSides(cardsData);
   const [coupledCardsArr, setCoupledCardsArr] = useState([
     ...CardBackSidesArr,
@@ -74,10 +77,10 @@ const Cards = ({ cardStates }) => {
       <Redirect to="/" />
     </>
   ) : (
-    <Row>
+    <Row className="memoryGame" justify="space-around">
       <Confetti active={completed} config={confettiConfig} />
-      <Col span={16} offset={2}>
-        <h1 className="memoryGameTitle">Match Images</h1>
+      <Col xs={22} md={20} xl={17}>
+        <h1 className="memoryGame__title">{gameTitle}</h1>
         <Row justify="center">
           <MemoryGameCards
             setMatchedCardIndexes={setMatchedCardIndexes}
@@ -87,9 +90,9 @@ const Cards = ({ cardStates }) => {
           />
         </Row>
       </Col>
-      <Col span={2} offset={2}>
+      <Col xs={20}>
         <Confetti active={completed} config={confettiConfig} />
-        <MemoryGameFactList facts={matchedCards} />
+        <MemoryGameFactList facts={matchedCards} title={factsTitle} />
       </Col>
     </Row>
   );

@@ -47,7 +47,7 @@ const GameCards = ({
     const setCardState = cardStates[index][1];
     refArr.push(createRef());
     return (
-      <Col key={index} ref={refArr[index]} span={3}>
+      <Col key={index} ref={refArr[index]} xs={8} sm={6} md={4} lg={3}>
         <Image
           src={successSymbol}
           alt="success"
