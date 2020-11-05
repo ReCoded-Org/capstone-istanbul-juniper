@@ -3,3 +3,7 @@
   width: 177px;
   height: 250px;
 }
+
+.successSymbol {
+  display: none;
+}
