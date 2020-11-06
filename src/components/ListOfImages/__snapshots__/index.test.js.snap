@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListOfImages Component matches the tree 1`] = `
+<div
+  className="ant-row"
+  style={Object {}}
+>
+  <div
+    className="ant-col"
+    style={Object {}}
+  >
+    something
+  </div>
+  <div
+    className="ant-col"
+    style={Object {}}
+  >
+    something
+  </div>
+  <div
+    className="ant-col"
+    style={Object {}}
+  >
+    something
+  </div>
+  <div
+    className="ant-col"
+    style={Object {}}
+  >
+    something
+  </div>
+</div>
+`;

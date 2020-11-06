@@ -76,7 +76,7 @@ const CurrentImage = () => {
                     <Row key={"tileNumber"+tile.id} className={tile.selected? "selectedTile": ""} 
                     onClick={() => handleSelect(tile.id)}>{tile.id}</Row>
                 )
-            }): ""}
+            }): "You solved it!"}
         </Col>
     )
 }
