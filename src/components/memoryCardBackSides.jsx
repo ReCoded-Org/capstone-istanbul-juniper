@@ -1,8 +1,8 @@
 import React from "react";
 import cardBacksideImages from "./memoryCardBackSideImages";
-// This function will be used in "MemoryGame" component
 // import "./MemoryGame/index.css";
 
+// This function will be used in "MemoryGame" component
 const cardBackSidesArr = (cardsData) => {
   // cardData and cardBacksideImages ordered in same way.
   // For example: cardData[0] holds data for cardBacksideImages[0]

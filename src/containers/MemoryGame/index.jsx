@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-// import below should be fixed when MemoryGameComponent added to project
 // import MemoryGameComponent from "../../components/MemoryGame";
 import Navbar from "../../components/Navbar";
 import "./index.css";
 
 const MemoryGame = () => {
   // Individual card states are being used
-  // Because putting all card states inside 1 states causes unwanted side effects
+  // Because stacking all card states inside 1 states causes unwanted side effects
   const [isAcidRainFlipped, setIsAcidRainFlipped] = useState(false);
   const [isAirPollutionFlipped, setIsAirPollutionFlipped] = useState(false);
   const [isAlternateEnergyFlipped, setIsAlternateEnergyFlipped] = useState(
