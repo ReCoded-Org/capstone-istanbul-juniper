@@ -1,16 +1,16 @@
 .puzzlePage__gameSpace {
-    background-color: #b4d0c4;
-    height: 100vh; /* use of vh is temporary until the game content is ready */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #b4d0c4;
+  height: 100vh; /* use of vh is temporary until the game content is ready */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .puzzlePage__puzzleBox {
-    background-color: #3b8c79;
-    width: 40%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
+  background-color: #3b8c79;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }

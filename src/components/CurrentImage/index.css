@@ -1,11 +1,11 @@
-.puzzlePage__puzzleBox__CurrentImage{
+.puzzlePage__puzzleBox__CurrentImage {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
   user-select: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
   background: #f0f0f0;
