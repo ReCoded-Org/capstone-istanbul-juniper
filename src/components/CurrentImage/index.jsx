@@ -5,11 +5,11 @@ import "./index.css"
 const CurrentImage = () => {
     const [generatedTiles, setGeneratedTiles] = useState([])
     const [tileSelected, setTileSelected] = useState({id: null, selected: false})
-    const [isSolved, setIsSolved] = useState(false)
+    const [isSolved, setIsSolved] = useState(false) // if unsolved it displays the tiles and when solved it displays the full image
     const generateTiles = () => {
         let newTilesArray = [];
         for (let i=0; i<6; i++){
-            let newTile = {id:i, selected: false}
+            let newTile = {id:i, selected: false} // These tiles are puzzle pieces
             newTilesArray.push(newTile)
         }
         let length = newTilesArray.length
@@ -26,13 +26,13 @@ const CurrentImage = () => {
     }, [])
 
     useEffect(() => {
-        console.log("solved correctly?",isSolved)
-    }, [isSolved])
+        checkSolution()
+    }, [generatedTiles])
 
     const handleSelect = (currId) => {
         if (tileSelected.selected) {
             const prevId = tileSelected.id
-            swapTile(prevId, currId)
+            swapTiles(prevId, currId)
             
         } else {
             setTileSelected({id: currId, selected: true })
@@ -41,7 +41,7 @@ const CurrentImage = () => {
         }
     }
 
-    const swapTile = (id1, id2) => {
+    const swapTiles = (id1, id2) => {
         let newTiles = [...generatedTiles]
         let index1 = generatedTiles.findIndex(tile => tile.id === id1)
         let index2 = generatedTiles.findIndex(tile => tile.id === id2)
@@ -52,11 +52,9 @@ const CurrentImage = () => {
         newTiles.map(tile => tile.selected = false)
         setGeneratedTiles(newTiles)
         setTileSelected({id: null, selected: false })
-        checkSolution()
     }
 
     const checkSolution = () => {
-        console.log(generatedTiles)
         const isCorrect = generatedTiles.reduce((curr,tile, i) => {
                 if(tile.id !== i){
                     curr = false
@@ -72,12 +70,13 @@ const CurrentImage = () => {
 
     return (
         <Col className="puzzlePage__puzzleBox__CurrentImage" >
-            {generatedTiles.map(tile => {
+            
+            {!isSolved? generatedTiles.map(tile => {
                 return (
-                    <Row className={tile.selected? "selectedTile": ""} 
+                    <Row key={"tileNumber"+tile.id} className={tile.selected? "selectedTile": ""} 
                     onClick={() => handleSelect(tile.id)}>{tile.id}</Row>
                 )
-            })}
+            }): ""}
         </Col>
     )
 }

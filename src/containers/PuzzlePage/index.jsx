@@ -1,5 +1,5 @@
 import React from "react";
-import GameSpace from "../../components/GameSpace";
+import PuzzleSpace from "../../components/PuzzleSpace";
 import Navbar from "../../components/Navbar/index"
 
 const PuzzlePage = () => {
@@ -7,7 +7,7 @@ const PuzzlePage = () => {
     return (
         <>
             <Navbar />
-            <GameSpace />
+            <PuzzleSpace />
         </>
     )
 }
