@@ -13,6 +13,7 @@
         "i18next": "^19.8.2",
         "i18next-browser-languagedetector": "^6.0.1",
         "i18next-http-backend": "^1.0.21",
+        "invariant": "^2.2.4",
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
         "react-i18next": "^11.7.3",
@@ -57,5 +58,5 @@
         "prettier": "^2.0.5",
         "pretty-quick": "^2.0.1",
         "react-test-renderer": "^17.0.1"
-    }          
+    }
 }
