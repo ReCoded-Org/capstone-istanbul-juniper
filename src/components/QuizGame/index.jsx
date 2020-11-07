@@ -62,13 +62,13 @@ const QuizGame = () => {
   return (
     <>
       <div className="gameWrapper">
-        <h1 className="gamerHeader">Quiz Game</h1>
+        <h1 className="game__header">Quiz Game</h1>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-          <button className="startGame" onClick={startQuiz}>
+          <button className="start__game" onClick={startQuiz}>
             Start
           </button>
         ) : null}
-        {!gameOver ? <p className="gameScore">Score: {score}</p> : null}
+        {!gameOver ? <p className="game__score">Score: {score}</p> : null}
         {loading ? <p>Loading Questions...</p> : null}
         {!loading && !gameOver && (
           <QuestionCard
@@ -84,7 +84,7 @@ const QuizGame = () => {
         !loading &&
         userAnswers.length === number + 1 &&
         number !== TOTAL_QUESTIONS - 1 ? (
-          <button className="next" onClick={nextQuestion}>
+          <button className="next__button" onClick={nextQuestion}>
             Next Question
           </button>
         ) : null}
