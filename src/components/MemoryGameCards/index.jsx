@@ -26,6 +26,7 @@ const GameCards = ({ setMatchedCardIndexes, refArr, cardsArr }) => {
     const prevCardState = cardStates[prevKey];
     if (
       prevKey &&
+      // makes sure that only flipped cards match
       prevCardState &&
       (curKey === `Clone of ${prevKey}` || prevKey === `Clone of ${curKey}`)
     ) {
@@ -45,11 +46,10 @@ const GameCards = ({ setMatchedCardIndexes, refArr, cardsArr }) => {
   };
 
   // Defines how cards will be displayed on screen
-  // This is not stored in state.
-  // Because it was making individual card state changes(flipping) not appear on screen
   return cardsArr.map((cardBackImage, index) => {
     const imageKey = cardBackImage.key;
     const flipState = cardStates[imageKey];
+    // refArr is created to manipulate style.display of success card and flip card
     refArr.push(createRef());
     return (
       <Col key={imageKey} ref={refArr[index]} xs={10} sm={6} md={4} lg={3}>
