@@ -8,7 +8,6 @@ import './index.css';
 import confettiConfig from '../confettiConfig';
 import memoryCardBackSidesArr from '../memoryCardBackSidesArr';
 import MemoryGameCards from '../MemoryGameCards';
-import CARD_BACKSIDE_IMAGES_ARR from '../memoryCardBackSideImages';
 
 const Cards = () => {
     const [t] = useTranslation();
@@ -20,34 +19,31 @@ const Cards = () => {
     const factsTitle = t('memoryGame.facts');
     const gameTitle = t('memoryGame.title');
     const BackSidesArr = memoryCardBackSidesArr(cardsDataArr);
-    const [cardsArr, setCardsArr] = useState(BackSidesArr);
-
-    // useEffect(() => {
-    //     const shuffledCards = shuffle(coupledCardsArr);
-    //     setCoupledCardsArr(shuffledCards);
-    // }, []);
-
-    const [matchedCardIndexes, setMatchedCardIndexes] = useState([]);
-    const refArr = [];
+    const [cardsArr] = useState(BackSidesArr);
+    const [matchedCardIndexes, setMatchedCardIndexes] = useState();
     const [matchedCards, setMatchedCards] = useState([]);
     const [completed, setCompleted] = useState(false);
+    const refArr = [];
 
     // makes complete icon visible for both matches
     useEffect(() => {
-        matchedCardIndexes.forEach(matchedIndex => {
-            const card = refArr[matchedIndex].current.children[1];
-            const completeIcon = refArr[matchedIndex].current.children[0];
-            completeIcon.style.display = 'inline-block';
-            card.style.display = 'none';
-        });
+        if (matchedCardIndexes) {
+            const matchedIndexesArr = [
+                matchedCardIndexes.prevCardsArrIndex,
+                matchedCardIndexes.curCardsArrIndex,
+            ];
+            matchedIndexesArr.forEach(matchedIndex => {
+                const card = refArr[matchedIndex].current.children[1];
+                const completeIcon = refArr[matchedIndex].current.children[0];
+                completeIcon.style.display = 'inline-block';
+                card.style.display = 'none';
+            });
+        }
     }, [matchedCardIndexes]);
 
     useEffect(() => {
-        // matchedCardIndexes stores indexes of both matches.
-        // Use of both indexes eventually leads to same objects.
-        // So, it doesn't matter if index 1 or 0 used
-        const matchedCardIndex = matchedCardIndexes[1];
-        if (matchedCardIndex) {
+        if (matchedCardIndexes) {
+            const matchedCardIndex = matchedCardIndexes.curCardsArrIndex;
             const newMatch = cardsDataArr.find(
                 data => data.description === cardsArr[matchedCardIndex].key
             );
@@ -58,7 +54,7 @@ const Cards = () => {
     const [redirect, setRedirect] = useState();
 
     useEffect(() => {
-        const maxNumFacts = cardsArr.length;
+        const maxNumFacts = cardsDataArr.length;
         if (matchedCards.length === maxNumFacts) {
             setCompleted(true);
             Modal.success({

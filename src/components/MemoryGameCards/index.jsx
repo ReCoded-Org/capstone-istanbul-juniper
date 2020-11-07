@@ -1,6 +1,6 @@
-import React, { useState, createRef, useEffect } from 'react';
+import React, { useState, createRef } from 'react';
 import ReactCardFlip from 'react-card-flip';
-import { Col, Image, Card, Row } from 'antd';
+import { Col, Card } from 'antd';
 import cardFrontImage from '../../images/memoryCardFront.png';
 import successSymbol from '../../images/successSymbol.svg';
 import './index.css';
@@ -8,12 +8,13 @@ import './index.css';
 const GameCards = ({ setMatchedCardIndexes, refArr, cardsArr }) => {
     const [selectedCards, setSelectedCards] = useState([]);
     const initialStates = {};
-    cardsArr.forEach(card => (initialStates[card.key] = false));
+    cardsArr.forEach(card => {
+        initialStates[card.key] = false;
+    });
     const [cardStates, setCardStates] = useState(initialStates);
 
     const handleClick = (curKey, index) => {
         const flippedState = { [curKey]: true };
-        console.log(flippedState);
         setCardStates(prevState => ({ ...prevState, ...flippedState }));
         setSelectedCards(prevState => [...prevState, { key: curKey, index }]);
         // Last item inside selectedCards will be previous card's index
@@ -52,7 +53,14 @@ const GameCards = ({ setMatchedCardIndexes, refArr, cardsArr }) => {
         const flipState = cardStates[imageKey];
         refArr.push(createRef());
         return (
-            <Col key={index} ref={refArr[index]} xs={10} sm={6} md={4} lg={3}>
+            <Col
+                key={imageKey}
+                ref={refArr[index]}
+                xs={10}
+                sm={6}
+                md={4}
+                lg={3}
+            >
                 <Card className='successCard'>
                     <img
                         src={successSymbol}
