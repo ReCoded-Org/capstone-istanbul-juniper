@@ -5,12 +5,12 @@ exports[`QuizGame snapshot test 1`] = `
   className="gameWrapper"
 >
   <h1
-    className="gamerHeader"
+    className="game__header"
   >
     Quiz Game
   </h1>
   <button
-    className="startGame"
+    className="start__game"
     onClick={[Function]}
   >
     Start
