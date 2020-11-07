@@ -1,0 +1,18 @@
+.successSymbol {
+  width: 100%;
+}
+
+.successCard {
+  display: none;
+  height: 200px;
+}
+
+.memoryCard {
+  cursor: pointer;
+  height: inherit;
+  height: 200px;
+}
+
+.questionMark {
+  width: 100%;
+}
