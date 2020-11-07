@@ -6,7 +6,7 @@ import BottomCurve from "../../components/BottomCurve/index";
 import SpreadTheWordButton from "../../components/SpreadTheWordButton";
 import "./index.css";
 import GamesCarousel from "../../components/GamesCarousel";
-import QuizGame from "../../components/QuizGame";
+
 const Home = () => {
   return (
     <>
@@ -16,7 +16,6 @@ const Home = () => {
       <BottomCurve />
       <SpreadTheWordButton />
       <StayUpToDate />
-      <QuizGame />
     </>
   );
 };
