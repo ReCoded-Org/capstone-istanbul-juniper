@@ -52,7 +52,7 @@ exports[`Home renders correctly 1`] = `
           >
             <img
               alt="Poulution"
-              src="pollution.svg"
+              src="pollutionResourceSetion.svg"
             />
           </a>
         </div>
@@ -94,7 +94,7 @@ exports[`Home renders correctly 1`] = `
           >
             <img
               alt="Climate Change"
-              src="earth.svg"
+              src="earthResourceSetion.svg"
             />
           </a>
         </div>
@@ -136,7 +136,7 @@ exports[`Home renders correctly 1`] = `
           >
             <img
               alt="Recycle"
-              src="recycle.svg"
+              src="recycleResourceSetion.svg"
             />
           </a>
         </div>
