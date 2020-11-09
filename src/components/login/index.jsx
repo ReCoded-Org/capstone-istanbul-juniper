@@ -1,5 +1,6 @@
-import { Input } from "antd";
+import { Alert, Input } from "antd";
 import React, { useState } from "react";
+import { validateEmail } from "../../functions";
 import "./index.css";
 
 const Login = (props) => {
@@ -10,10 +11,31 @@ const Login = (props) => {
     newValues[key] = value;
     setValues(newValues);
   };
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    let { email, password } = values;
+    let errors = {};
+    if (!validateEmail(email)) {
+      errors["email"] = "Email format error";
+    }
+    if (email.trim() === "") {
+      errors["email"] = "Please fill this field";
+    }
+
+    if (password.trim().length < 6) {
+      errors["password"] = "Password must be at least 6 characters long";
+    }
+    if (password.trim() === "") {
+      errors["password"] = "Please fill this field";
+    }
+
+    setErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
     if (typeof props.onSubmit == "function") {
       props.onSubmit(values);
     }
@@ -24,31 +46,59 @@ const Login = (props) => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">Log in</div>
+        {props.error !== "" ? (
+          <Alert
+            style={{ marginBottom: 10 }}
+            type="error"
+            showIcon
+            message={props.error}
+          ></Alert>
+        ) : null}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">Email</div>
           <div className="loginContainer__loginDialog__input">
             <Input
+              className={
+                errors["email"]
+                  ? "loginContainer__loginDialog__input__hasError"
+                  : ""
+              }
               type="email"
               value={values.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
+            {errors["email"] ? (
+              <div className="loginContainer__loginDialog__errorContainer">
+                {errors["email"]}
+              </div>
+            ) : null}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             Password
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
+              className={
+                errors["password"]
+                  ? "loginContainer__loginDialog__input__hasError"
+                  : ""
+              }
               type="password"
               value={values.password}
               onChange={(e) => {
                 handleChange("password", e.target.value);
               }}
             />
+            {errors["password"] ? (
+              <div className="loginContainer__loginDialog__errorContainer">
+                {errors["password"]}
+              </div>
+            ) : null}
           </div>
 
           <button

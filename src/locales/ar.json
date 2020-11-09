@@ -15,10 +15,10 @@
     "about": "حولنا"
   },
   "home": {
-  "resourcesSection": {
-    "pollution": "الثلوث",
-    "climateChange": "التغير المناخي",
-    "reduceReuseRecycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
+    "resourcesSection": {
+      "pollution": "الثلوث",
+      "climateChange": "التغير المناخي",
+      "reduceReuseRecycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
+    }
   }
-}
 }

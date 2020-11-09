@@ -8,13 +8,6 @@ import recycleImg from "./../../images/recycle.svg";
 import earthImg from "./../../images/earth.svg";
 import pollutionImg from "./../../images/pollution.svg";
 
-
-
-
-
-
-
-
 const ResourcesSection = () => {
   const [t] = useTranslation();
 
@@ -26,7 +19,9 @@ const ResourcesSection = () => {
           <Col xxl={6} sm={24}>
             <Row justify="center">
               <Col span={22} className="site-card-wrapper__cardName">
-                <Link to="/pollution">{t("home.resourcesSection.pollution")} </Link>
+                <Link to="/pollution">
+                  {t("home.resourcesSection.pollution")}{" "}
+                </Link>
               </Col>
               <Col span={22} className="site-card-wrapper__cardImage">
                 <Link to="/pollution">
@@ -44,7 +39,7 @@ const ResourcesSection = () => {
               </Col>
               <Col span={22} className="site-card-wrapper__cardImage">
                 <Link to="/climateChange">
-                  <img alt="Climate Change" src={earthImg}/>
+                  <img alt="Climate Change" src={earthImg} />
                 </Link>
               </Col>
             </Row>
@@ -58,7 +53,7 @@ const ResourcesSection = () => {
               </Col>
               <Col span={22} className="site-card-wrapper__cardImage">
                 <Link to="/recycle">
-                  <img alt="Recycle" src={recycleImg}/>
+                  <img alt="Recycle" src={recycleImg} />
                 </Link>
               </Col>
             </Row>

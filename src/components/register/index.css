@@ -53,3 +53,11 @@ button.loginContainer__loginDialog__registerButton {
   background-color: #2a8c79;
   color: white;
 }
+
+.loginContainer__loginDialog__errorContainer {
+  color: #c00;
+}
+
+.loginContainer__loginDialog__input__hasError {
+  border-color: #c00;
+}

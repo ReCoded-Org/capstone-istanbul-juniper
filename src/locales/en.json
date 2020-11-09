@@ -15,10 +15,10 @@
     "about": "About"
   },
   "home": {
-  "resourcesSection": {
-    "pollution": "Pollution",
-    "climateChange": "Climate Change",
-    "reduceReuseRecycle": "Reduce, Reuse, Recycle"
+    "resourcesSection": {
+      "pollution": "Pollution",
+      "climateChange": "Climate Change",
+      "reduceReuseRecycle": "Reduce, Reuse, Recycle"
+    }
   }
-}
 }
