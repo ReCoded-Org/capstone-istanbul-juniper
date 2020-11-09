@@ -12,7 +12,6 @@ const MatchingGameImageCards = () => {
     }),
   ];
   const shuffledMatchingGameCardsData = shuffle(matchingGameCardsData);
-
   return (
     <>
       {shuffledMatchingGameCardsData.map((card) => (

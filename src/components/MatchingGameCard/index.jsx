@@ -6,16 +6,13 @@ const MatchingGameCard = (props) => {
   const dragStart = (e) => {
     const target = e.target;
     e.dataTransfer.setData("cardId", target.id);
-
     setTimeout(() => {
       target.style.display = "none";
     }, 0);
   };
-
   const dragOver = (e) => {
     e.stopPropagation();
   };
-
   return (
     <div
       id={props.id}
@@ -28,4 +25,5 @@ const MatchingGameCard = (props) => {
     </div>
   );
 };
+
 export default MatchingGameCard;
