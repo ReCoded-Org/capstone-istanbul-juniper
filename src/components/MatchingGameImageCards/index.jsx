@@ -1,7 +1,6 @@
 import React from "react";
 import MatchingGameCard from "../MatchingGameCard";
 import { useTranslation } from "react-i18next";
-import "./index.css";
 import shuffle from "../shuffle.jsx";
 
 const MatchingGameImageCards = () => {

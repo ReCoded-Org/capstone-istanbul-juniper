@@ -23,6 +23,6 @@ const MatchingGameBoard = (props) => {
       {props.children}
     </div>
   );
-}
+};
 
 export default MatchingGameBoard;
