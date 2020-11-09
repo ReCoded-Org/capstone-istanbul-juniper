@@ -8,7 +8,7 @@ exports[`Footer renders correctly 1`] = `
     <img
       alt="globe"
       className="footerGlobe"
-      src="/assets/images/earthNav.svg"
+      src="earthNav.svg"
     />
     <div
       className="ant-col"
