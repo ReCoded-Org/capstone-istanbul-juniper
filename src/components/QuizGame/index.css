@@ -1,16 +1,16 @@
-.gameWrapper {
+.quizWrapper__title {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.game__score {
+.quizWrapper__score {
   color: #fff;
   font-size: 2rem;
   margin: 0;
 }
 
-.game__header {
+.quizWrapper__header {
   font-family: Fascinate Inline;
 
   background-image: linear-gradient(180deg, #fff, #87f1ff);
@@ -27,8 +27,8 @@
   margin: 20px;
 }
 
-.start__game,
-.next__button {
+.quizWrapper__startGame,
+.quizWrapper__nextButton {
   cursor: pointer;
   background: linear-gradient(180deg, #ffffff, #ffcc91);
   border: 2px solid #d38558;
@@ -39,6 +39,6 @@
   padding: 0 40px;
 }
 
-.start__game {
+.quizWrapper__startGame {
   max-width: 200px;
 }

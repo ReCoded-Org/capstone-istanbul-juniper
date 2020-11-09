@@ -9,20 +9,17 @@ const difficulty = {
   MEDIUM: "medium",
   HARD: "hard",
 };
-
 const TOTAL_QUESTIONS = 10;
-
 const QuizGame = () => {
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
-  const [number, setNumber] = useState(0);
+  const [questionNumber, setQuestionNumber] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [gameOver, setGameOver] = useState(true);
-
+  const [isGameOver, setIsGameOver] = useState(true);
   const startQuiz = async () => {
-    setLoading(true);
-    setGameOver(false);
+    setIsLoading(true);
+    setIsGameOver(false);
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
       difficulty.EASY
@@ -30,61 +27,59 @@ const QuizGame = () => {
     setQuestions(newQuestions);
     setScore(0);
     setUserAnswers([]);
-    setNumber(0);
-    setLoading(false);
+    setQuestionNumber(0);
+    setIsLoading(false);
   };
-
   const checkAnswer = (e) => {
-    if (!gameOver) {
+    if (!IsGameOver) {
       const answer = e.currentTarget.value;
-      const correct = questions[number].correct_answer === answer;
-      if (correct) setScore((prev) => prev + 1);
+      const correct = questions[questionNumber].correct_answer === answer;
+      if (correct) {setScore((prev) => prev + 1);
       const answerObject = {
-        question: questions[number].question,
+        question: questions[questionNumber].question,
         answer,
         correct,
-        correctAnswer: questions[number].correct_answer,
+        correctAnswer: questions[questionNumber].correct_answer,
       };
       setUserAnswers((prev) => [...prev, answerObject]);
     }
-  };
-
-  const nextQuestion = () => {
-    const nextQ = number + 1;
-
-    if (nextQ === TOTAL_QUESTIONS) {
-      setGameOver(true);
-    } else {
-      setNumber(nextQ);
     }
   };
-
+  const nextQuestion = () => {
+    const nextQ = questionNumber + 1;
+    if (nextQ >= TOTAL_QUESTIONS) {
+      setIsGameOver(true);
+    } else {
+      setQuestionNumber(nextQ);
+    }
+  };
+  const checkGameOver= isGameOver || userAnswers.length === TOTAL_QUESTIONS;
   return (
     <>
-      <div className="gameWrapper">
-        <h1 className="game__header">Quiz Game</h1>
-        {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-          <button className="start__game" onClick={startQuiz}>
+      <div className="quizWrapper__title">
+        <h1 className="quizWrapper__header">Quiz Game</h1>
+        {checkGameOver? (
+          <button className="quizWrapper__startGame" onClick={startQuiz}>
             Start
           </button>
         ) : null}
-        {!gameOver ? <p className="game__score">Score: {score}</p> : null}
-        {loading ? <p>Loading Questions...</p> : null}
-        {!loading && !gameOver && (
+        {!isGameOver && <p className="quizWrapper__score">Score: {score}</p> }
+        {isLoading && <p>Loading Questions...</p> }
+        {!isLoading && !isGameOver && (
           <QuestionCard
-            questionNr={number + 1}
+            questionNum={questionNumber + 1}
             totalQuestions={TOTAL_QUESTIONS}
-            question={questions[number].question}
-            answers={questions[number].answers}
-            userAnswer={userAnswers ? userAnswers[number] : undefined}
+            question={questions[questionNumber].question}
+            answers={questions[questionNumber].answers}
+            userAnswer={userAnswers ? userAnswers[questionNumber] : undefined}
             callback={checkAnswer}
           />
         )}
-        {!gameOver &&
-        !loading &&
-        userAnswers.length === number + 1 &&
-        number !== TOTAL_QUESTIONS - 1 ? (
-          <button className="next__button" onClick={nextQuestion}>
+        {!isGameOver &&
+        !isLoading &&
+        userAnswers.length === questionNumber + 1 &&
+        questionNumber !== TOTAL_QUESTIONS - 1 ? (
+          <button className="quizWrapper__nextButton" onClick={nextQuestion}>
             Next Question
           </button>
         ) : null}
