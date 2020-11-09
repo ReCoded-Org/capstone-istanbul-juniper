@@ -1,0 +1,15 @@
+span {
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  padding: 8px 8px;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  width: 10vw;
+  margin-top: 5px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 3px;
+  line-height: 0.8;
+  list-style: none;
+  text-align: center;
+}

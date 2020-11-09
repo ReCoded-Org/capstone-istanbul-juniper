@@ -1,0 +1,53 @@
+.matchingGame {
+  background: #add4c5;
+  margin: 0 auto;
+}
+
+#matchingGame__wordsBoard.matchingGame__board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #3b8c79;
+  margin-bottom: 5em;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 13vh;
+}
+
+#matchingGame__imagesBoard.matchingGame__board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #3b8c79;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  padding: 3em 1em;
+}
+
+.matchingGame_imagesBoard__card img {
+  height: 20vh;
+  width: 25vw;
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  margin: 20px;
+  margin-bottom: 0;
+}
+
+.matchingGame_imagesBoard__card div {
+  box-sizing: border-box;
+  border: 1px solid #f3f3f3;
+  border-top: 2px dotted grey;
+  background-color: #f3f3f3;
+  width: 25vw;
+  height: 4vh;
+  border-radius: 5px;
+  margin: 0 20px;
+}

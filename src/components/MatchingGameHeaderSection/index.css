@@ -1,0 +1,14 @@
+.matchingGame__title {
+  font-size: clamp(2.5rem, 3.5vw, 5rem);
+  font-family: "Salsa", cursive;
+  text-align: center;
+  color: #f3f3f3;
+  margin: 0 auto;
+}
+
+.matchingGame__context {
+  font-family: "Raleway";
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  text-align: center;
+  color: #f3f3f3;
+}
