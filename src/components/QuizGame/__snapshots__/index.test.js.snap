@@ -2,15 +2,15 @@
 
 exports[`QuizGame snapshot test 1`] = `
 <div
-  className="gameWrapper"
+  className="quizWrapper__title"
 >
   <h1
-    className="game__header"
+    className="quizWrapper__header"
   >
     Quiz Game
   </h1>
   <button
-    className="start__game"
+    className="quizWrapper__startGame"
     onClick={[Function]}
   >
     Start

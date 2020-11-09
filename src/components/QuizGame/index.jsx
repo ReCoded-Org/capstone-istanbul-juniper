@@ -34,15 +34,16 @@ const QuizGame = () => {
     if (!IsGameOver) {
       const answer = e.currentTarget.value;
       const correct = questions[questionNumber].correct_answer === answer;
-      if (correct) {setScore((prev) => prev + 1);
-      const answerObject = {
-        question: questions[questionNumber].question,
-        answer,
-        correct,
-        correctAnswer: questions[questionNumber].correct_answer,
-      };
-      setUserAnswers((prev) => [...prev, answerObject]);
-    }
+      if (correct) {
+        setScore((prev) => prev + 1);
+        const answerObject = {
+          question: questions[questionNumber].question,
+          answer,
+          correct,
+          correctAnswer: questions[questionNumber].correct_answer,
+        };
+        setUserAnswers((prev) => [...prev, answerObject]);
+      }
     }
   };
   const nextQuestion = () => {
@@ -53,18 +54,18 @@ const QuizGame = () => {
       setQuestionNumber(nextQ);
     }
   };
-  const checkGameOver= isGameOver || userAnswers.length === TOTAL_QUESTIONS;
+  const checkGameOver = isGameOver || userAnswers.length === TOTAL_QUESTIONS;
   return (
     <>
       <div className="quizWrapper__title">
         <h1 className="quizWrapper__header">Quiz Game</h1>
-        {checkGameOver? (
+        {checkGameOver ? (
           <button className="quizWrapper__startGame" onClick={startQuiz}>
             Start
           </button>
         ) : null}
-        {!isGameOver && <p className="quizWrapper__score">Score: {score}</p> }
-        {isLoading && <p>Loading Questions...</p> }
+        {!isGameOver && <p className="quizWrapper__score">Score: {score}</p>}
+        {isLoading && <p>Loading Questions...</p>}
         {!isLoading && !isGameOver && (
           <QuestionCard
             questionNum={questionNumber + 1}
