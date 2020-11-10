@@ -22,7 +22,7 @@ const CurrentImage = () => {
     // for loop that generates a random and extracts the element with the index
     // equal to the random number, then pushes that element to the end of newTilesArray.
     for (let i = 0; i < newTilesArray.length; i++) {
-      let random = Math.floor(Math.random() * (length - 1));
+      let random = Math.floor(Math.random() * (newTilesArray.length - 1));
       let randomItemArray = newTilesArray.splice(random, 1);
       newTilesArray.push(randomItemArray[0]);
     }
