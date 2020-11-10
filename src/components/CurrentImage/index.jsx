@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Col, Row } from "antd";
 import "./index.css";
 
+// CurrentImage is the component that generates and includes the tiles of the puzzle
+// it generates 6 tiles ordered vertically on top of each other 
+// each tile's background is 1/6 of the image. After the tiles are generated they are put
+// in an array and ordered randomly
+// a user can click on one tile to select and then click on another tile to swap their places
+// the user will swap the places of each tile to put it in its correct position
+// when all tiles are placed in their correct position the full image is displayed
 const CurrentImage = () => {
   const [generatedTiles, setGeneratedTiles] = useState([]);
-  // tileSelected state shows if there is a tile selected and which one is selected if any
-  const [tileSelected, setTileSelected] = useState({
-    id: null,
-    selected: false,
-  });
+  // selectedTile state shows if there is a tile selected and which one is selected if any
+  const [selectedTile, setSelectedTile] = useState(null);
   // if unsolved it displays the tiles and when solved it displays the full image
   const [isSolved, setIsSolved] = useState(false);
   const tilesGenerator = () => {
@@ -39,14 +43,16 @@ const CurrentImage = () => {
   }, [generatedTiles]);
 
   const handleSelect = (currId) => {
-    // if there is a tile selected then clicked tile with the selected one
-    // else set tileSelected.select to true and show the id of the tile
-    if (tileSelected.selected) {
-      const prevId = tileSelected.id;
+    // if selectedTile's value is not equal to null (meaning there a tile seleted already)
+    // then when another tile is clicked swap both tiles' places
+    // else set the selectedTile to the id of the clicked tile
+    if (selectedTile !== null) {
+      const prevId = selectedTile;
       swapTiles(prevId, currId);
     } else {
-      setTileSelected({ id: currId, selected: true });
+      setSelectedTile(currId);
       const tileIndex = generatedTiles.findIndex((tile) => tile.id === currId);
+      // set the select value of the tile to true
       generatedTiles[tileIndex] = {
         ...generatedTiles[tileIndex],
         selected: true,
@@ -64,7 +70,7 @@ const CurrentImage = () => {
     newTiles[index1] = tile0;
     newTiles.map((tile) => (tile.selected = false));
     setGeneratedTiles(newTiles);
-    setTileSelected({ id: null, selected: false });
+    setSelectedTile(null);
   };
 
   const checkSolution = () => {
