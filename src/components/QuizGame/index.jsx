@@ -54,15 +54,16 @@ const QuizGame = () => {
     }
   };
   const checkGameOver = isGameOver || userAnswers.length === TOTAL_QUESTIONS;
+  const  checkTonextQuestion = !isGameOver &&!isLoading && userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1 
   return (
     <>
       <div className="quizWrapper__title">
         <h1 className="quizWrapper__header">Quiz Game</h1>
-        {checkGameOver ? (
+        {checkGameOver &&(
           <button className="quizWrapper__startGame" onClick={startQuiz}>
             Start
           </button>
-        ) : null}
+        ) }
         {!isGameOver && <p className="quizWrapper__score">Score: {score}</p>}
         {isLoading && <p>Loading Questions...</p>}
         {!isLoading && !isGameOver && (
@@ -75,10 +76,7 @@ const QuizGame = () => {
             callback={checkAnswer}
           />
         )}
-        {!isGameOver &&
-        !isLoading &&
-        userAnswers.length === currentQuestionNumber+ 1 &&
-        currentQuestionNumber !== TOTAL_QUESTIONS - 1 && (
+        { checkTonextQuestion &&(
           <button className="quizWrapper__nextButton" onClick={nextQuestion}>
             Next Question
           </button>
