@@ -78,11 +78,11 @@ const QuizGame = () => {
         {!isGameOver &&
         !isLoading &&
         userAnswers.length === currentQuestionNumber+ 1 &&
-        currentQuestionNumber !== TOTAL_QUESTIONS - 1 ? (
+        currentQuestionNumber !== TOTAL_QUESTIONS - 1 && (
           <button className="quizWrapper__nextButton" onClick={nextQuestion}>
             Next Question
           </button>
-        ) : null}
+        ) }
       </div>
     </>
   );
