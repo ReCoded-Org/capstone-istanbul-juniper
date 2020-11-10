@@ -49,29 +49,32 @@ const CurrentImage = () => {
     }
   };
 
-  const swapTiles = (id1, id2) => {
+  const swapTiles = (id0, id1) => {
     let newTiles = [...generatedTiles];
+    let index0 = generatedTiles.findIndex((tile) => tile.id === id0);
     let index1 = generatedTiles.findIndex((tile) => tile.id === id1);
-    let index2 = generatedTiles.findIndex((tile) => tile.id === id2);
+    let tile0 = { ...generatedTiles[index0] };
     let tile1 = { ...generatedTiles[index1] };
-    let tile2 = { ...generatedTiles[index2] };
-    newTiles[index1] = tile2;
-    newTiles[index2] = tile1;
+    newTiles[index0] = tile1;
+    newTiles[index1] = tile0;
     newTiles.map((tile) => (tile.selected = false));
     setGeneratedTiles(newTiles);
     setTileSelected({ id: null, selected: false });
   };
 
   const checkSolution = () => {
-    const isCorrect = generatedTiles.reduce((curr, tile, i) => {
-      if (tile.id !== i) {
-        curr = false;
-        return curr;
-      } else {
-        curr = true;
-        return curr;
+    // tiles are saved in an array indexed from 0 to n (6) and displayed in that order
+    // first condition checks if tile's id is equal to its index in the array and returns false/true
+    // since initial acc value is true, second condition checks if prev value is true and keeps its value
+    const isCorrect = generatedTiles.reduce((acc, curr, i) => {
+      if (curr.id !== i) {
+        acc = false;
+        return acc;
+      } 
+      else if (acc === true) {
+        return acc;
       }
-    }, false);
+    }, true );
     setIsSolved(isCorrect);
   };
 
