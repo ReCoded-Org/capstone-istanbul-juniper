@@ -68,8 +68,7 @@ const CurrentImage = () => {
     // since initial acc value is true, second condition checks if prev value is true and keeps its value
     const isCorrect = generatedTiles.reduce((acc, curr, i) => {
       if (curr.id !== i) {
-        acc = false;
-        return acc;
+        return false;
       } 
       else if (acc === true) {
         return acc;
