@@ -269,35 +269,6 @@ Array [
         style={Object {}}
       >
         <div
-          className="ant-row"
-          style={Object {}}
-        >
-          <div
-            className="ant-col"
-            style={Object {}}
-          >
-            something
-          </div>
-          <div
-            className="ant-col"
-            style={Object {}}
-          >
-            something
-          </div>
-          <div
-            className="ant-col"
-            style={Object {}}
-          >
-            something
-          </div>
-          <div
-            className="ant-col"
-            style={Object {}}
-          >
-            something
-          </div>
-        </div>
-        <div
           className="ant-col puzzlePage__puzzleBox__currentImage"
           style={Object {}}
         />
