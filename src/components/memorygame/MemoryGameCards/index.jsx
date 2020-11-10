@@ -22,10 +22,11 @@ const MemoryGameCards = ({
       returnObjects: true,
     }),
   ];
-  // cardStates are objects with multiple properties
+  // cardStates is an array of objects with multiple properties
   const [cardStates, setCardStates] = useState(
     cardInitialStateGenerator(cardsDataArr, NUM_REQUIRED_MATCHES)
   );
+  // selectedCards is an array of clicked card states(object).
   const [selectedCards, setSelectedCards] = useState([]);
 
   const handleClick = (currentCardState) => {
@@ -90,7 +91,6 @@ const MemoryGameCards = ({
     }
   }, [matchedCards]);
   return cardStates.map((cardState) => {
-    // key is not descriptive but im not using it.
     return (
       <Col lg={4} key={cardState.cardKey}>
         {cardState.isMatched ? (
