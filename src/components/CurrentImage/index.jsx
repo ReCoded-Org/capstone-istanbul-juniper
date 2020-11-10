@@ -8,11 +8,14 @@ const CurrentImage = () => {
     id: null,
     selected: false,
   });
-  const [isSolved, setIsSolved] = useState(false); // if unsolved it displays the tiles and when solved it displays the full image
+  // if unsolved it displays the tiles and when solved it displays the full image
+  const [isSolved, setIsSolved] = useState(false); 
   const generateTiles = () => {
     let newTilesArray = [];
+    // for loop to generate tiles where tiles are puzzle pieces
+    // the number 6 is chosen randomly
     for (let i = 0; i < 6; i++) {
-      let newTile = { id: i, selected: false }; // These tiles are puzzle pieces
+      let newTile = { id: i, selected: false }; 
       newTilesArray.push(newTile);
     }
     let length = newTilesArray.length;
@@ -73,7 +76,7 @@ const CurrentImage = () => {
   };
 
   return (
-    <Col className="puzzlePage__puzzleBox__CurrentImage">
+    <Col className="puzzlePage__puzzleBox__currentImage">
       {!isSolved
         ? generatedTiles.map((tile) => {
             return (
