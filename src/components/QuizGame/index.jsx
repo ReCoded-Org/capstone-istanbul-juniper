@@ -12,7 +12,7 @@ const TOTAL_QUESTIONS = 10;
 const QuizGame = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
-  const [questionNumber, setQuestionNumber] = useState(0);
+  const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const [isGameOver, setIsGameOver] = useState(true);
@@ -26,31 +26,31 @@ const QuizGame = () => {
     setQuestions(newQuestions);
     setScore(0);
     setUserAnswers([]);
-    setQuestionNumber(0);
+    setCurrentQuestionNumber(0);
     setIsLoading(false);
   };
   const checkAnswer = (e) => {
     if (!isGameOver) {
       const answer = e.currentTarget.value;
-      const correct = questions[questionNumber].correct_answer === answer;
+      const correct = questions[currentQuestionNumber].correct_answer === answer;
       if (correct) {
         setScore((prev) => prev + 1);
         const answerObject = {
-          question: questions[questionNumber].question,
+          question: questions[currentQuestionNumber].question,
           answer,
           correct,
-          correctAnswer: questions[questionNumber].correct_answer,
+          correctAnswer: questions[currentQuestionNumber].correct_answer,
         };
         setUserAnswers((prev) => [...prev, answerObject]);
       }
     }
   };
   const nextQuestion = () => {
-    const nextQ = questionNumber + 1;
+    const nextQ = currentQuestionNumber + 1;
     if (nextQ >= TOTAL_QUESTIONS) {
       setIsGameOver(true);
     } else {
-      setQuestionNumber(nextQ);
+      setCurrentQuestionNumber(nextQ);
     }
   };
   const checkGameOver = isGameOver || userAnswers.length === TOTAL_QUESTIONS;
@@ -77,8 +77,8 @@ const QuizGame = () => {
         )}
         {!isGameOver &&
         !isLoading &&
-        userAnswers.length === questionNumber + 1 &&
-        questionNumber !== TOTAL_QUESTIONS - 1 ? (
+        userAnswers.length === currentQuestionNumber+ 1 &&
+        currentQuestionNumber !== TOTAL_QUESTIONS - 1 ? (
           <button className="quizWrapper__nextButton" onClick={nextQuestion}>
             Next Question
           </button>
