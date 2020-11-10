@@ -41,7 +41,7 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
         </div>
       </div>
       <div
-        className="ant-col puzzlePage__puzzleBox__CurrentImage"
+        className="ant-col puzzlePage__puzzleBox__currentImage"
         style={Object {}}
       />
     </div>
