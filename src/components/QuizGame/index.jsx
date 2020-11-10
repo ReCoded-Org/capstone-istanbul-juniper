@@ -3,8 +3,7 @@ import { fetchQuizQuestions } from "../../components/QuizGameApi";
 import "antd/dist/antd.css";
 import QuestionCard from "../../components/QuizGameQuestions";
 import "./index.css";
-
-const difficulty = {
+const Difficulty = {
   EASY: "easy",
   MEDIUM: "medium",
   HARD: "hard",
@@ -22,7 +21,7 @@ const QuizGame = () => {
     setIsGameOver(false);
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
-      difficulty.EASY
+      Difficulty.EASY
     );
     setQuestions(newQuestions);
     setScore(0);
