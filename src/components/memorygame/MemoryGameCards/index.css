@@ -1,18 +1,21 @@
-.successSymbol {
-  width: 100%;
+.successCard___symbol {
+    width: 100%;
 }
 
 .successCard {
-  display: none;
-  height: 200px;
+    height: 200px;
 }
 
-.memoryCard {
-  cursor: pointer;
-  height: inherit;
-  height: 200px;
+.memoryGameCard {
+    cursor: pointer;
+    height: inherit;
+    height: 200px;
 }
 
-.questionMark {
-  width: 100%;
+.memoryGameCard___image {
+    width: 100%;
+}
+
+.memoryGameCard___questionMark {
+    width: 100%;
 }

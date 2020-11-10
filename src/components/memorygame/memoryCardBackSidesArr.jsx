@@ -1,14 +1,14 @@
 import React from "react";
-import * as invariant from "invariant";
+// import * as invariant from 'invariant';
 import CARD_BACKSIDE_IMAGES from "./memoryCardBackSideImages";
-import shuffle from "./shuffle";
+// import shuffle from './shuffle';
 
 // This function will be used in "MemoryGame" component
 const cardBackSidesArr = (cardDataArr) => {
-  invariant(
-    cardDataArr.length === CARD_BACKSIDE_IMAGES.length,
-    "'CARD_BACKSIDE_IMAGES' and 'cardData' are not matching"
-  );
+  // invariant(
+  //     cardDataArr.length === CARD_BACKSIDE_IMAGES.length,
+  //     "'CARD_BACKSIDE_IMAGES' and 'cardData' are not matching length"
+  // );
   const cardDataAndBacksides = cardDataArr.map((cardData, index) => {
     const cardBacksideImage = CARD_BACKSIDE_IMAGES[index];
     return [cardData, cardBacksideImage];
@@ -17,12 +17,12 @@ const cardBackSidesArr = (cardDataArr) => {
     ...cardDataAndBacksides,
     ...cardDataAndBacksides,
   ];
-  const shuffledCardDataAndBacksidesWithClones = shuffle(
-    cardDataAndBacksidesWithClones
-  );
+  // const shuffledCardDataAndBacksidesWithClones = shuffle(
+  //     cardDataAndBacksidesWithClones
+  // );
 
   const cardBackSides = [];
-  return shuffledCardDataAndBacksidesWithClones.map((dataAndImage) => {
+  return cardDataAndBacksidesWithClones.map((dataAndImage) => {
     const { description } = dataAndImage[0];
     const image = dataAndImage[1];
     const isClone = cardBackSides.find(
