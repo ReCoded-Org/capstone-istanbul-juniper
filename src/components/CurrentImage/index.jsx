@@ -4,6 +4,7 @@ import "./index.css";
 
 const CurrentImage = () => {
   const [generatedTiles, setGeneratedTiles] = useState([]);
+  // tileSelected state shows if there is a tile selected and which one is selected if any
   const [tileSelected, setTileSelected] = useState({
     id: null,
     selected: false,
@@ -18,12 +19,14 @@ const CurrentImage = () => {
       let newTile = { id: i, selected: false }; 
       newTilesArray.push(newTile);
     }
-    let length = newTilesArray.length;
-    for (let i = 0; i < length; i++) {
+    // for loop that generates a random and extracts the element with the index
+    // equal to the random number, then pushes that element to the end of newTilesArray.
+    for (let i = 0; i < newTilesArray.length; i++) {
       let random = Math.floor(Math.random() * (length - 1));
       let randomItemArray = newTilesArray.splice(random, 1);
       newTilesArray.push(randomItemArray[0]);
     }
+    // Set the randomized array as generated tiles
     setGeneratedTiles(newTilesArray);
   };
 
@@ -36,6 +39,8 @@ const CurrentImage = () => {
   }, [generatedTiles]);
 
   const handleSelect = (currId) => {
+    // if there is a tile selected then clicked tile with the selected one
+    // else set tileSelected.select to true and show the id of the tile
     if (tileSelected.selected) {
       const prevId = tileSelected.id;
       swapTiles(prevId, currId);
