@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../auth/authContext";
 import ResourcesSection from "../../components/ResourcesSection";
+import { auth } from "../../firebaseConfig";
 import "./index.css";
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            setUser({});
+            auth.signOut();
           }}
         >
           Logout{" "}

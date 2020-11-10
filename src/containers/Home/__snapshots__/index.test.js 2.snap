@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+Array [
+  <div
+    className="bottomCurveContainer"
+  >
+    <div
+      className="bottomCurveContainer__bottomCurve"
+    >
+      <div
+        className="bottomCurveContainer__bottomCurve__topHalf"
+      />
+      <div
+        className="bottomCurveContainer__bottomCurve__bottomHalf"
+      />
+    </div>
+  </div>,
+  <div
+    className="site-card-wrapper"
+  >
+    <div
+      className="ant-row ant-row-center"
+      style={
+        Object {
+          "marginBottom": 8,
+          "marginLeft": -8,
+          "marginRight": -8,
+          "marginTop": -8,
+        }
+      }
+    >
+      <div
+        className="ant-col ant-col-sm-24 ant-col-xxl-6"
+        style={
+          Object {
+            "paddingBottom": 8,
+            "paddingLeft": 8,
+            "paddingRight": 8,
+            "paddingTop": 8,
+          }
+        }
+      >
+        <div
+          className="ant-row ant-row-center"
+          style={Object {}}
+        >
+          <div
+            className="ant-col ant-col-22 site-card-wrapper__cardName"
+            style={Object {}}
+          >
+            <a
+              href="/pollution"
+              onClick={[Function]}
+            >
+              resourcesSection.pollution
+               
+            </a>
+          </div>
+          <div
+            className="ant-col ant-col-22 site-card-wrapper__cardImage"
+            style={Object {}}
+          >
+            <a
+              href="/pollution"
+              onClick={[Function]}
+            >
+              <img
+                alt="Poulution"
+                src="/assets/images/Pou.svg"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ant-col ant-col-sm-24 ant-col-xxl-6"
+        style={
+          Object {
+            "paddingBottom": 8,
+            "paddingLeft": 8,
+            "paddingRight": 8,
+            "paddingTop": 8,
+          }
+        }
+      >
+        <div
+          className="ant-row ant-row-center"
+          style={Object {}}
+        >
+          <div
+            className="ant-col ant-col-22 site-card-wrapper__cardName"
+            style={Object {}}
+          >
+            <a
+              href="/climateChange"
+              onClick={[Function]}
+            >
+              resourcesSection.climateChange
+            </a>
+          </div>
+          <div
+            className="ant-col ant-col-22 site-card-wrapper__cardImage"
+            style={Object {}}
+          >
+            <a
+              href="/climateChange"
+              onClick={[Function]}
+            >
+              <img
+                alt="Climate Change"
+                src="/assets/images/earth.svg"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ant-col ant-col-sm-24 ant-col-xxl-6"
+        style={
+          Object {
+            "paddingBottom": 8,
+            "paddingLeft": 8,
+            "paddingRight": 8,
+            "paddingTop": 8,
+          }
+        }
+      >
+        <div
+          className="ant-row ant-row-center"
+          style={Object {}}
+        >
+          <div
+            className="ant-col ant-col-22 site-card-wrapper__cardName"
+            style={Object {}}
+          >
+            <a
+              href="/recycle"
+              onClick={[Function]}
+            >
+              resourcesSection.reduceReuseRecycle
+            </a>
+          </div>
+          <div
+            className="ant-col ant-col-22 site-card-wrapper__cardImage"
+            style={Object {}}
+          >
+            <a
+              href="/recycle"
+              onClick={[Function]}
+            >
+              <img
+                alt="Recycle"
+                src="/assets/images/rec.svg"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

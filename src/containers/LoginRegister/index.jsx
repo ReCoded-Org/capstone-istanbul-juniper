@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import Login from "../../components/login";
-import Register from "../../components/register";
-
+import Login from "../../components/Login";
+import Register from "../../components/Register";
+import PasswordReset from "../../components/PasswordReset";
 import firestore, { auth } from "../../firebaseConfig";
-
-import { AuthContext } from "../../auth/authContext";
+import firebase from 'firebase';
+import { AuthContext, processAuth } from "../../auth/authContext";
 import { withRouter } from "react-router-dom";
 
 const LoginRegisterPage = (props) => {
@@ -12,29 +12,48 @@ const LoginRegisterPage = (props) => {
     console.log(email, password);
     setError("");
     try {
-      let result = await auth.signInWithEmailAndPassword(email, password);
-      console.log(result.user);
-
-      let firestoreResult = await firestore
-        .doc("users/" + result.user.uid)
-        .get();
-
-      console.log(firestoreResult.data());
-
-      let user = {
-        isLoggedin: true,
-        uid: result.user.uid,
-        email: result.user.email,
-        fullname: firestoreResult.data().fullname,
-        age: firestoreResult.data().age,
-      };
-      setUser(user);
-
+      await auth.signInWithEmailAndPassword(email, password);
       props.history.push("/");
     } catch (e) {
       setError(e.message);
     }
   };
+  const passwordReset = async (email) => {
+      setError("");
+      try {
+        await auth.sendPasswordResetEmail(email);
+  
+        setActive("login");
+      } catch (e) {
+        setError(e.message);
+      }
+  }
+     // Loogin with FACEBOOK 
+  const loginWithFacebook = async () => {
+    try {
+      let provider = new firebase.auth.FacebookAuthProvider();
+      provider.setCustomParameters({
+        'display': 'popup',
+      });
+      let u = await auth.signInWithPopup(provider);
+      console.log('facebook user: ', u.user);
+      props.history.push("/");
+    } catch (e) {
+      setError(e.message);
+    }
+  }
+    // Loogin with GOOGLE 
+  const loginWithGoogle = async () => {
+ try {
+      let provider = new firebase.auth.GoogleAuthProvider();   
+      provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+      let u = await auth.signInWithPopup(provider);
+      console.log('google user: ', u.user);
+      props.history.push("/");
+    } catch (e) {
+      setError(e.message);
+    }
+  }
 
   const register = async (fullname, email, age, password) => {
     console.log(email, password);
@@ -49,17 +68,8 @@ const LoginRegisterPage = (props) => {
         fullname: fullname,
         age: age,
       });
-
-      let user = {
-        isLoggedin: true,
-        uid: registeredUser.user.uid,
-        email: email,
-        fullname: fullname,
-        age: age,
-      };
-      setUser(user);
+      await auth.signInWithEmailAndPassword(email, password);
       props.history.push("/");
-      console.log("RESULT", registeredUser.user);
     } catch (e) {
       setError(e.message);
       console.log(e.message);
@@ -70,33 +80,69 @@ const LoginRegisterPage = (props) => {
 
   const { user, setUser } = useContext(AuthContext);
   console.log("User ", user);
-  return (
-    <>
-      {active === "login" ? (
-        <Login
-          error={error}
-          onSubmit={({ email, password }) => {
-            login(email, password);
-          }}
-          onGoToRegister={() => {
-            setError("");
-            setActive("register");
-          }}
-        />
-      ) : (
-        <Register
-          error={error}
-          onSubmit={({ fullname, email, age, password }) => {
-            register(fullname, email, age, password);
-          }}
-          onGoToLogin={() => {
-            setError("");
-            setActive("login");
-          }}
-        />
-      )}
-    </>
-  );
+
+  switch (active){
+    case 'login':
+    return ( <Login
+      error={error}
+      onSubmit={({ email, password }) => {
+        login(email, password);
+      }}
+      onGoToRegister={() => {
+        setError("");
+        setActive("register");
+      }}
+      onGoToPasswordReset={() => {
+        setError("");
+        setActive("reset");
+      }}
+      onFacebookAuth={() => {
+        setError("");
+        loginWithFacebook();
+      }}
+      onGoogleAuth = {()=>{
+        setError("");
+        loginWithGoogle();
+      }}
+    />);
+    break; 
+    case 'register':
+      return (<Register
+        error={error}
+        onSubmit={({ fullname, email, age, password }) => {
+          register(fullname, email, age, password);
+        }}
+        onGoToLogin={() => {
+          setError("");
+          setActive("login");
+        }}
+        onFacebookAuth={() => {
+          setError("");
+          loginWithFacebook();
+        }}
+      />);
+    break;
+    case 'reset':
+      return (<PasswordReset
+        error={error}
+        onSubmit={({email}) => {
+          setError("");
+          passwordReset(email);
+        }}
+        onGoToLogin={() => {
+          setError("");
+          setActive("login");
+        }}
+        onFacebookAuth={() => {
+          setError("");
+          loginWithFacebook();
+        }}
+      />);
+    break;
+    default:
+return (<></>);
+    break; 
+  }
 };
 
 export default withRouter(LoginRegisterPage);

@@ -61,3 +61,17 @@ button.loginContainer__loginDialog__registerButton {
 .loginContainer__loginDialog__input__hasError {
   border-color: #c00;
 }
+
+
+.loginContainer__loginDialog__loginOptionsTitle {
+  margin: 20px 0;
+}
+
+button.loginContainer__loginDialog__facebookLoginBtn {
+  color: white;
+  background-color: #4267B2;
+  padding: 5px;
+  border: 0;
+  width: 80%;
+}
+

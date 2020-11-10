@@ -40,11 +40,27 @@ const Login = (props) => {
       props.onSubmit(values);
     }
   };
+
+  const handleFacebookAuth = () =>{ 
+    if (typeof(props.onFacebookAuth) === "function"){
+      props.onFacebookAuth();
+    }
+  }
+  const handleGoogleAuth = () =>{ 
+    if (typeof(props.onGoogleAuth) === "function"){
+      props.onGoogleAuth();
+    }
+  }
   const handleGoToRegister = () => {
     if (typeof props.onGoToRegister == "function") {
       props.onGoToRegister();
     }
   };
+  const handleGoToPasswordReset = ()=>{
+    if (typeof props.onGoToPasswordReset == "function") {
+      props.onGoToPasswordReset();
+    }
+  }
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
@@ -100,7 +116,13 @@ const Login = (props) => {
               </div>
             ) : null}
           </div>
+          <div className="loginContainer__loginDialog__forgotPasswordContainer">
+              <a href="#" onClick={(e)=>{
+                e.preventDefault();
+                handleGoToPasswordReset();
+              }}>Forgot Password?</a>
 
+          </div>
           <button
             type="submit"
             className="loginContainer__loginDialog__submitButton"
@@ -118,6 +140,28 @@ const Login = (props) => {
             className="loginContainer__loginDialog__registerButton"
           >
             Create an account
+          </button>
+
+          <div className="loginContainer__loginDialog__loginOptionsTitle">
+            Or you can
+          </div>
+          <button
+            onClick={() => {
+              handleFacebookAuth();
+            }}
+            type="button"
+            className="loginContainer__loginDialog__facebookLoginBtn"
+          >
+            Login With Facebook
+          </button>
+          <button
+            onClick={() => {
+              handleGoogleAuth();
+            }}
+            type="button"
+            className="loginContainer__loginDialog__googleLoginBtn"
+          >
+            Login With Google
           </button>
         </div>
       </div>

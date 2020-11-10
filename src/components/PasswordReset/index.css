@@ -52,6 +52,7 @@ button.loginContainer__loginDialog__registerButton {
   padding: 5px;
   background-color: #2a8c79;
   color: white;
+  margin-top:20px;
 }
 
 .loginContainer__loginDialog__errorContainer {

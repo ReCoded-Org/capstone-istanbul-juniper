@@ -13,7 +13,6 @@ const Register = (props) => {
     agree: false,
   });
   const [errors, setErrors] = useState({});
-
   const handleChange = (key, value) => {
     let newValues = Object.assign({}, values);
     newValues[key] = value;
@@ -60,7 +59,11 @@ const Register = (props) => {
       props.onGoToLogin();
     }
   };
-
+  const handleFacebookAuth = () =>{ 
+    if (typeof(props.onFacebookAuth) === "function"){
+      props.onFacebookAuth();
+    }
+  }
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
@@ -97,9 +100,7 @@ const Register = (props) => {
               </div>
             ) : null}
           </div>
-
           <div className="loginContainer__loginDialog__inputLabel">Age</div>
-
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -119,9 +120,7 @@ const Register = (props) => {
               </div>
             ) : null}
           </div>
-
           <div className="loginContainer__loginDialog__inputLabel">Email</div>
-
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -163,7 +162,6 @@ const Register = (props) => {
               </div>
             ) : null}
           </div>
-
           <div className="loginContainer__loginDialog__input">
             <Checkbox
               checked={values.agree}
@@ -203,10 +201,21 @@ const Register = (props) => {
           >
             Log in{" "}
           </button>
+
+          <div className="loginContainer__loginDialog__loginOptionsTitle">
+            Or you can
+          </div>
+          <button
+            onClick={() => {
+              handleFacebookAuth();
+            }}
+            type="button"
+            className="loginContainer__loginDialog__facebookLoginBtn"
+          > Login With Facebook
+          </button>
         </div>
       </div>
     </form>
   );
 };
-
 export default Register;
