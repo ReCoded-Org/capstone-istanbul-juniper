@@ -1,4 +1,3 @@
-// Shuffles cards
 // Check Fisher–Yates shuffle algorithm https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 const shuffle = (arr) => {
   const copyOfArr = [...arr];
