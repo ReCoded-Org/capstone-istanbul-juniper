@@ -10,7 +10,7 @@ const CurrentImage = () => {
   });
   // if unsolved it displays the tiles and when solved it displays the full image
   const [isSolved, setIsSolved] = useState(false); 
-  const generateTiles = () => {
+  const tilesGenerator = () => {
     let newTilesArray = [];
     // for loop to generate tiles where tiles are puzzle pieces
     // the number 6 is chosen randomly
@@ -28,7 +28,7 @@ const CurrentImage = () => {
   };
 
   useEffect(() => {
-    generateTiles();
+    tilesGenerator();
   }, []);
 
   useEffect(() => {
