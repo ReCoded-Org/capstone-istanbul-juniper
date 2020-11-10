@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrentImage Component matchess the tree 1`] = `
+<div
+  className="ant-col puzzlePage__puzzleBox__CurrentImage"
+  style={Object {}}
+/>
+`;
