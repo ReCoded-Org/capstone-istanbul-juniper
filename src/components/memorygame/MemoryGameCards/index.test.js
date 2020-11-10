@@ -1,7 +1,7 @@
 import React from "react";
-import "../../matchMedia";
+import "../../../matchMedia";
 import renderer from "react-test-renderer";
-import MemoryGameCards from ".";
+import MemoryGameCards from "./index";
 
 it("MemoryGameCards renders correctly", () => {
   const tree = renderer.create(<MemoryGameCards />).toJSON();
