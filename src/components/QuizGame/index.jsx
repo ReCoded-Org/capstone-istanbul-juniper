@@ -30,7 +30,7 @@ const QuizGame = () => {
     setIsLoading(false);
   };
   const checkAnswer = (e) => {
-    if (!IsGameOver) {
+    if (!isGameOver) {
       const answer = e.currentTarget.value;
       const correct = questions[questionNumber].correct_answer === answer;
       if (correct) {
