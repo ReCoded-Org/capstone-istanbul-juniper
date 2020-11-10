@@ -8,7 +8,8 @@ import shuffle from "./shuffle";
  *
  * CARD_BACKSIDE_IMAGES example:[image1,image2,...]
  *
- * Game is played by matching cards with same images. NUM_REQUIRED_MATCHES dictates how many images required per successful match
+ * Game is played by matching cards with same images.
+ * NUM_REQUIRED_MATCHES dictates how many images required per successful match
  */
 const cardInitialStateGenerator = (cardDataArr, NUM_REQUIRED_MATCHES) => {
   invariant(
