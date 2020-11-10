@@ -11,7 +11,7 @@ import shuffle from "./shuffle";
 const cardInitialStateGenerator = (cardDataArr, NUM_REQUIRED_MATCHES) => {
   invariant(
     cardDataArr.length === CARD_BACKSIDE_IMAGES.length,
-    "'CARD_BACKSIDE_IMAGES' and 'cardData' have different length"
+    "'CARD_BACKSIDE_IMAGES' and 'cardDataArr' have different length"
   );
   let clonedCardData = [];
   let clonedImgArr = [];
@@ -22,11 +22,19 @@ const cardInitialStateGenerator = (cardDataArr, NUM_REQUIRED_MATCHES) => {
   }
 
   return shuffle(
-    clonedCardData.map((card, id) => {
+    clonedCardData.map((card, index) => {
+      const imgNameParts = clonedImgArr[index].split("/");
+      const lastNamePart = imgNameParts[imgNameParts.length - 1];
+      const coreImgName = lastNamePart.split(".")[0];
+      let cardKey = card.description;
+      if (index > cardDataArr.length - 1) {
+        cardKey = `Clone ${card.description}`;
+      }
       return {
         ...card,
-        id,
-        img: clonedImgArr[id],
+        cardKey,
+        id: index,
+        img: { src: clonedImgArr[index], imgKey: coreImgName },
         isFlipped: false,
         isMatched: false,
       };

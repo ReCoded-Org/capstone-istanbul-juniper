@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Row, Modal } from "antd";
+import { Col, Row } from "antd";
 import Confetti from "react-dom-confetti";
 import { Redirect } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -35,10 +35,14 @@ const MemoryGame = () => {
           />
         </Row>
       </Col>
-      <Col xs={20}>
-        <Confetti active={completed} config={confettiConfig} />
-        <MemoryGameFactList facts={matchedCards} title={factsTitle} />
-      </Col>
+      {matchedCards ? (
+        <Col xs={20}>
+          <Confetti active={completed} config={confettiConfig} />
+          <MemoryGameFactList facts={matchedCards} title={factsTitle} />
+        </Col>
+      ) : (
+        ""
+      )}
     </Row>
   );
 };

@@ -5,7 +5,7 @@ import { Col, Card, Modal } from "antd";
 import { useTranslation } from "react-i18next";
 import questionMark from "../../../images/memoryGameFrontImage.png";
 import memoryGameSuccessSymbol from "../../../images/memoryGameSuccessSymbol.svg";
-import cardStateGenerator from "../cardStateGenerator";
+import cardInitialStateGenerator from "../cardInitialStateGenerator";
 
 const MemoryGameCards = ({
   setMatchedCards,
@@ -21,7 +21,7 @@ const MemoryGameCards = ({
     }),
   ];
   const [cardStates, setCardStates] = useState(
-    cardStateGenerator(cardsDataArr, NUM_REQUIRED_MATCHES)
+    cardInitialStateGenerator(cardsDataArr, NUM_REQUIRED_MATCHES)
   );
   const [selectedCards, setSelectedCards] = useState([]);
 
@@ -42,8 +42,8 @@ const MemoryGameCards = ({
       );
       const matchingClones = otherCards.filter(
         (prevCard) =>
-          prevCard.id !== curCard.id &&
-          prevCard.description === curCard.description &&
+          prevCard.cardKey !== curCard.cardKey &&
+          prevCard.img.imgKey === curCard.img.imgKey &&
           prevCard.isFlipped &&
           curCard.isFlipped
       );
@@ -57,7 +57,7 @@ const MemoryGameCards = ({
             isMatched: true,
           };
         });
-        setMatchedCards((prevState) => [...prevState, ...lastNCards]);
+        setMatchedCards((prevState) => [...prevState, lastNCards[0]]);
         setCardStates(() => [...copyOfCardStates]);
         setSelectedCards([]);
       } else if (NUM_REQUIRED_MATCHES === selectedCards.length) {
@@ -74,7 +74,7 @@ const MemoryGameCards = ({
         }, 750);
       }
     }
-  }, [cardStates]);
+  }, [cardStates, selectedCards]);
 
   useEffect(() => {
     if (matchedCards.length === cardStates.length) {
@@ -88,7 +88,7 @@ const MemoryGameCards = ({
   return cardStates.map((cardState) => {
     // key is not descriptive but im not using it.
     return (
-      <Col lg={4} key={cardState.id}>
+      <Col lg={4} key={cardState.cardKey}>
         {cardState.isMatched ? (
           <Card className="successCard">
             <img
@@ -114,7 +114,7 @@ const MemoryGameCards = ({
             </Card>
             <Card className="memoryGameCard">
               <img
-                src={cardState.img}
+                src={cardState.img.src}
                 alt={cardState.description}
                 className="memoryGameCard___image"
               />
