@@ -10,13 +10,13 @@ const CurrentImage = () => {
     selected: false,
   });
   // if unsolved it displays the tiles and when solved it displays the full image
-  const [isSolved, setIsSolved] = useState(false); 
+  const [isSolved, setIsSolved] = useState(false);
   const tilesGenerator = () => {
     let newTilesArray = [];
     // for loop to generate tiles where tiles are puzzle pieces
     // the number 6 is chosen randomly
     for (let i = 0; i < 6; i++) {
-      let newTile = { id: i, selected: false }; 
+      let newTile = { id: i, selected: false };
       newTilesArray.push(newTile);
     }
     // for loop that generates a random and extracts the element with the index
@@ -74,11 +74,10 @@ const CurrentImage = () => {
     const isCorrect = generatedTiles.reduce((acc, curr, i) => {
       if (curr.id !== i) {
         return false;
-      } 
-      else if (acc === true) {
+      } else if (acc === true) {
         return acc;
       }
-    }, true );
+    }, true);
     setIsSolved(isCorrect);
   };
 
