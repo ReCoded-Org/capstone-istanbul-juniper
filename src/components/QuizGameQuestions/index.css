@@ -8,11 +8,11 @@
     text-align: center;
   }
   
- .numberOf__quizQuestion {
+ .quizQuestionWrapper__numOfQuizQuestion{
     font-size: 1rem;
   }
   
-.quiz__userAnswer {
+.quizQuestionWrapper__userAnswer {
     border: 3px solid #ffffff;
     box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;

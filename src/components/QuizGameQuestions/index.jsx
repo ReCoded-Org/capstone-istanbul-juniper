@@ -10,7 +10,7 @@ const QuestionCard = ({
   totalQuestions,
 }) => (
   <div className="quizQuestionWrapper">
-    <p className="numberOf__quizQuestion">
+    <p className="quizQuestionWrapper__numOfQuizQuestion">
       Question: {questionNum} / {totalQuestions}
     </p>
     <p dangerouslySetInnerHTML={{ __html: question }} />
@@ -21,7 +21,7 @@ const QuestionCard = ({
           correct={userAnswer?.correctAnswer === answer}
           userClicked={userAnswer?.answer === answer}>
           <button
-            className="quiz__userAnswer"
+            className="quizQuestionWrapper__userAnswer"
             disabled={userAnswer ? true : false}
             value={answer}
             onClick={callback} >
