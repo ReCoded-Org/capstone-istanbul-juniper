@@ -67,10 +67,10 @@ const QuizGame = () => {
         {isLoading && <p>Loading Questions...</p>}
         {!isLoading && !isGameOver && (
           <QuestionCard
-            questionNum={questionNumber + 1}
+            questionNum={currentQuestionNumber + 1}
             totalQuestions={TOTAL_QUESTIONS}
-            question={questions[questionNumber].question}
-            answers={questions[questionNumber].answers}
+            question={questions[currentQuestionNumber].question}
+            answers={questions[currentQuestionNumber].answers}
             userAnswer={userAnswers ? userAnswers[questionNumber] : undefined}
             callback={checkAnswer}
           />
