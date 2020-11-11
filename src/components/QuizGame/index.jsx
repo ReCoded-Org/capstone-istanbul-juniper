@@ -56,7 +56,7 @@ const QuizGame = () => {
   const  checkToNextQuestion = !isGameOver &&!isLoading && userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1 
   return (
     <>
-      <div className="quizWrapper__title">
+      <div className="quizWrapper">
         <h1 className="quizWrapper__header">Quiz Game</h1>
         {isGameOver &&(
           <button className="quizWrapper__startGame" onClick={startQuiz}>
