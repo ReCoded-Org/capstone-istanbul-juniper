@@ -61,7 +61,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
   // Triggered when user clicks on a card(selectedCards change)
   // checks selected cards to see if they are a match
   useEffect(() => {
-    // only triggered if "NUM_REQUIRED_MATCHES" amount of cards are stored in selectedCards
+    // only triggered if "NUM_REQUIRED_MATCHES" amount of cards are clicked
     if (selectedCards.length === NUM_REQUIRED_MATCHES) {
       // match condition of cards inside selectedCards will be based on card that is added to
       // selectedCards last
@@ -72,14 +72,15 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
       // matchesOfLastCard doesnt include last card
       const matchedCardsArr = [...matchesOfLastCardState, lastCardState];
       const copyOfCardStates = [...cardStates];
-
+      // matchedCards is an array states that holds successfully matched card states
       if (matchedCardsArr.length === NUM_REQUIRED_MATCHES) {
-        // sets isMatched property of each state to true
-        // if isMatched is true card image gets replaced by success symbol
         matchedCardsArr.forEach((matchedCard) => {
+          // current index is needed to keep the order of cards displayed
+          // because goal is to make user remember the spots of previous cards
           const targetIndex = copyOfCardStates.findIndex(
             (card) => card.cardKey === matchedCard.cardKey
           );
+          // if isMatched is true card image gets replaced by success symbol
           copyOfCardStates[targetIndex] = {
             ...copyOfCardStates[targetIndex],
             isMatched: true,
@@ -90,10 +91,12 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
         setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
         setCardStates(() => [...copyOfCardStates]);
       }
-      // if there is no match or not enough matches flipped cards get
-      // closed by setting isFlipped:false
+      // if there is no match or not enough matches, flipped cards get
+      // closed by setting isFlipped to false
       else if (NUM_REQUIRED_MATCHES === selectedCards.length) {
         selectedCards.forEach((card) => {
+          // current index is needed to keep the order of cards displayed
+          // because goal is to make user remember the spots of previous cards
           const targetIndex = copyOfCardStates.findIndex(
             (cardState) => cardState.cardKey === card.cardKey
           );
