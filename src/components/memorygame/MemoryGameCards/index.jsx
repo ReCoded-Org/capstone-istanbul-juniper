@@ -45,6 +45,16 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
     setSelectedCards((prevState) => [...prevState, clickedCardState]);
   };
 
+  // matched cards should have different id, same image key, isFlipped:true
+  const doesMatchLastCard = (prevCard, lastCardState) => {
+    return (
+      prevCard.cardKey !== lastCardState.cardKey &&
+      prevCard.img.imgKey === lastCardState.img.imgKey &&
+      prevCard.isFlipped &&
+      lastCardState.isFlipped
+    );
+  };
+
   // Triggered when user clicks on a card(selectedCards change)
   // checks selected cards to see if they are a match
   useEffect(() => {
@@ -53,17 +63,8 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
       // match condition of cards inside selectedCards will be based on card that is added to
       // selectedCards last
       const lastCardState = selectedCards[selectedCards.length - 1];
-      // matched cards should have different id, same image key, isFlipped:true
-      const isSiblingOfCurrentCard = (prevCard) => {
-        return (
-          prevCard.id !== lastCardState.id &&
-          prevCard.img.imgKey === lastCardState.img.imgKey &&
-          prevCard.isFlipped &&
-          lastCardState.isFlipped
-        );
-      };
       const matchesOfLastCardState = selectedCards.filter((prevCard) =>
-        isSiblingOfCurrentCard(prevCard)
+        doesMatchLastCard(prevCard, lastCardState)
       );
       // matchesOfLastCard doesnt include last card
       const matchedCardsArr = [...matchesOfLastCardState, lastCardState];
