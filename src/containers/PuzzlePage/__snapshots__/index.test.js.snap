@@ -267,12 +267,7 @@ Array [
       <div
         className="ant-card-body"
         style={Object {}}
-      >
-        <div
-          className="ant-col currentImage"
-          style={Object {}}
-        />
-      </div>
+      />
     </div>
   </main>,
 ]
