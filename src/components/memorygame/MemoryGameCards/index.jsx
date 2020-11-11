@@ -25,11 +25,12 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
   ];
   // cardStates is an array of states with multiple properties
   // state example :
-  // {id:"",img:{src:"",imgKey:""},isFlipped:"",isMatched:"",description:"",link:"",phrase:""}
+  // {cardKey:"",img:{src:"",imgKey:""},
+  // isFlipped:"",isMatched:"",description:"",link:"",phrase:""}
   const [cardStates, setCardStates] = useState(
     cardInitialStateGenerator(cardsDataArr, NUM_REQUIRED_MATCHES)
   );
-  // selectedCards is an array of clicked card states(object).
+  // selectedCards is an array of clicked card states(objects).
   // selectedCards array hold only "NUM_REQUIRED_MATCHES" amount of card states
   const [selectedCards, setSelectedCards] = useState([]);
 
@@ -39,19 +40,20 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
     // current index is needed to keep the order of cards displayed
     // because goal is to make user remember the spots of previous cards
     const currentIndex = cardStates.findIndex(
-      (state) => state.id === clickedCardState.id
+      (state) => state.cardKey === clickedCardState.cardKey
     );
     copyOfCardStates[currentIndex].isFlipped = true;
     setCardStates(() => [...copyOfCardStates]);
     setSelectedCards((prevState) => [...prevState, clickedCardState]);
   };
 
-  // matched cards should have different id, same image key, isFlipped:true
-  const doesMatchLastCard = (prevCard, lastCardState) => {
+  // matched cards should have different cardKey, same image key, isFlipped:true
+  // function below tests it
+  const doesMatchLastCard = (prevCardState, lastCardState) => {
     return (
-      prevCard.cardKey !== lastCardState.cardKey &&
-      prevCard.img.imgKey === lastCardState.img.imgKey &&
-      prevCard.isFlipped &&
+      prevCardState.cardKey !== lastCardState.cardKey &&
+      prevCardState.img.imgKey === lastCardState.img.imgKey &&
+      prevCardState.isFlipped &&
       lastCardState.isFlipped
     );
   };
@@ -76,7 +78,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
         // if isMatched is true card image gets replaced by success symbol
         matchedCardsArr.forEach((matchedCard) => {
           const targetIndex = copyOfCardStates.findIndex(
-            (card) => card.id === matchedCard.id
+            (card) => card.cardKey === matchedCard.cardKey
           );
           copyOfCardStates[targetIndex] = {
             ...copyOfCardStates[targetIndex],
@@ -93,7 +95,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
       else if (NUM_REQUIRED_MATCHES === selectedCards.length) {
         selectedCards.forEach((card) => {
           const targetIndex = copyOfCardStates.findIndex(
-            (cardState) => cardState.id === card.id
+            (cardState) => cardState.cardKey === card.cardKey
           );
           copyOfCardStates[targetIndex] = {
             ...copyOfCardStates[targetIndex],
@@ -120,17 +122,21 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
     }
   }, [matchedCards]);
 
+  const successCard = (
+    <Card className="successCard">
+      <img
+        src={memoryGameSuccessSymbol}
+        alt="Success symbol"
+        className="successCard___symbol"
+      />
+    </Card>
+  );
+
   return cardStates.map((cardState) => {
     return (
-      <Col lg={4} key={cardState.id}>
+      <Col lg={4} key={cardState.cardKey}>
         {cardState.isMatched ? (
-          <Card className="successCard">
-            <img
-              src={memoryGameSuccessSymbol}
-              alt="Success symbol"
-              className="successCard___symbol"
-            />
-          </Card>
+          successCard
         ) : (
           <ReactCardFlip
             isFlipped={cardState.isFlipped}
