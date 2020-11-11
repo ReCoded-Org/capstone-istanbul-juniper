@@ -39,7 +39,6 @@ exports[`ResourcesSection renders correctly 1`] = `
             onClick={[Function]}
           >
             home.resourcesSection.pollution
-             
           </a>
         </div>
         <div
