@@ -69,8 +69,10 @@
       ]
     }
   },
-  "contactUs":{
-    "title":"İletişime geç",
-    "subtitle":"Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
+  "contactUs": {
+    "headerSection": {
+      "title": "İletişime geç",
+      "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
+    }
   }
 }

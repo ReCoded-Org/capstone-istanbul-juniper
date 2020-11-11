@@ -74,8 +74,10 @@
       ]
     }
   },
-  "contactUs":{
-    "title":"",
-    "subtitle":""
+  "contactUs": {
+    "headerSection": {
+      "title": "",
+      "subtitle": ""
+    }
   }
 }
