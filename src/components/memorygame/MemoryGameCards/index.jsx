@@ -7,92 +7,112 @@ import questionMark from "../../../images/memoryGameFrontImage.png";
 import memoryGameSuccessSymbol from "../../../images/memoryGameSuccessSymbol.svg";
 import cardInitialStateGenerator from "../cardInitialStateGenerator";
 
-// matchedCards is an array and used to display related facts on screen.
-// setCompleted and setRedirect are boolean
-const MemoryGameCards = ({
-  setMatchedCards,
-  matchedCards,
-  setCompleted,
-  setRedirect,
-}) => {
+const NUM_REQUIRED_MATCHES = 2;
+// game example: https://www.brightfocus.org/alzheimers/memory-games/match-pictures
+// instead of squares this game uses cards.
+// onClick card flips to show what is behind the card.
+// When there is "NUM_REQUIRED_MATCHES" amount of match selected cards turn into success symbol.
+// matchedCards is an array states that holds successfully matched card states
+// setCompleted is boolean
+// setCompleted is true when all possible matches made
+const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
   const [t] = useTranslation();
-  const NUM_REQUIRED_MATCHES = 2;
+  // cardsDataArr example [{description:"...",link:"...",phrase:".."},...]
   const cardsDataArr = [
     ...t("memoryGame.cards", {
       returnObjects: true,
     }),
   ];
-  // cardStates is an array of objects with multiple properties
+  // cardStates is an array of states with multiple properties
+  // state example : {id:"",img:{src:"",imgKey:""},isFlipped:"",isMatched:"",description:"",link:"",phrase:""}
   const [cardStates, setCardStates] = useState(
     cardInitialStateGenerator(cardsDataArr, NUM_REQUIRED_MATCHES)
   );
   // selectedCards is an array of clicked card states(object).
+  // selectedCards array hold only "NUM_REQUIRED_MATCHES" amount of card states
   const [selectedCards, setSelectedCards] = useState([]);
 
-  const handleClick = (currentCardState) => {
+  // handle click flips card and adds that card's state to selectedCards
+  const handleClick = (clickedCardState) => {
     const copyOfCardStates = [...cardStates];
-    const currentIndex = cardStates.indexOf(currentCardState);
+    // current index is needed to keep the order of cards displayed
+    // because goal is to make user remember the spots of previous cards
+    const currentIndex = cardStates.findIndex(
+      (state) => state.id === clickedCardState.id
+    );
     copyOfCardStates[currentIndex].isFlipped = true;
     setCardStates(() => [...copyOfCardStates]);
-    setSelectedCards((prevState) => [...prevState, currentCardState]);
+    setSelectedCards((prevState) => [...prevState, clickedCardState]);
   };
 
+  // Triggered when user clicks on a card(selectedCards change)
+  // checks selected cards to see if they are a match
   useEffect(() => {
+    // only triggered if "NUM_REQUIRED_MATCHES" amount of cards are stored in selectedCards
     if (selectedCards.length === NUM_REQUIRED_MATCHES) {
-      const lastNCards = selectedCards.slice(-NUM_REQUIRED_MATCHES);
-      const curCard = lastNCards[lastNCards.length - 1];
-      const matchedCardArr = [
-        ...lastNCards.filter(
-          (prevCard) =>
-            prevCard.id !== curCard.id &&
-            prevCard.img.imgKey === curCard.img.imgKey &&
-            prevCard.isFlipped &&
-            curCard.isFlipped
-        ),
-        curCard,
-      ];
-
+      const lastCard = selectedCards[selectedCards.length - 1];
+      // matched cards should have different id, same image key, isFlipped:true
+      const matchesOfLastCard = selectedCards.filter(
+        (otherCard) =>
+          otherCard.id !== lastCard.id &&
+          otherCard.img.imgKey === lastCard.img.imgKey &&
+          otherCard.isFlipped &&
+          lastCard.isFlipped
+      );
+      // matchesOfLastCard doesnt include last card
+      const matchedCardsArr = [...matchesOfLastCard, lastCard];
       const copyOfCardStates = [...cardStates];
-      if (matchedCardArr.length === NUM_REQUIRED_MATCHES) {
-        matchedCardArr.forEach((match) => {
-          const targetStateIndex = copyOfCardStates.indexOf(match);
-          copyOfCardStates[targetStateIndex] = {
-            ...copyOfCardStates[targetStateIndex],
+
+      if (matchedCardsArr.length === NUM_REQUIRED_MATCHES) {
+        // sets isMatched property of each state to true
+        // if isMatched is true card image gets replaced by success symbol
+        matchedCardsArr.forEach((matchedCard) => {
+          const targetIndex = copyOfCardStates.findIndex(
+            (card) => card.id === matchedCard.id
+          );
+          copyOfCardStates[targetIndex] = {
+            ...copyOfCardStates[targetIndex],
             isMatched: true,
           };
         });
-        // to display 1 fact per match, only one of the matches(lastNCards[0]) should be passed as state
-        setMatchedCards((prevState) => [...prevState, lastNCards[0]]);
+        // to display 1 fact per match, only one of the matched cards(selectedCards[0]) should be passed as state
+        setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
         setCardStates(() => [...copyOfCardStates]);
-        setSelectedCards([]);
-      } else if (NUM_REQUIRED_MATCHES === selectedCards.length) {
+      }
+      // if there is no match or not enough matches flipped cards gets closed by setting isFlipped:false
+      else if (NUM_REQUIRED_MATCHES === selectedCards.length) {
         selectedCards.forEach((card) => {
-          const targetStateIndex = copyOfCardStates.indexOf(card);
-          copyOfCardStates[targetStateIndex] = {
-            ...copyOfCardStates[targetStateIndex],
+          const targetIndex = copyOfCardStates.findIndex(
+            (cardState) => cardState.id === card.id
+          );
+          copyOfCardStates[targetIndex] = {
+            ...copyOfCardStates[targetIndex],
             isFlipped: false,
           };
         });
-        setSelectedCards([]);
+        // this gives user 750ms to see failed match by delaying setting isFlipped to false.
+        // Otherwise game gets too punishing
         setTimeout(() => {
           setCardStates(() => [...copyOfCardStates]);
         }, 750);
       }
+      setSelectedCards([]);
     }
-  }, [cardStates, selectedCards]);
+  }, [selectedCards]);
 
+  // displays a modal when all possible matches made
   useEffect(() => {
     if (matchedCards.length === cardStates.length) {
       setCompleted(true);
       Modal.success({
         content: "You have completed the game!",
-        onOk: () => setRedirect(true),
       });
     }
   }, [matchedCards]);
+
   return cardStates.map((cardState) => {
     return (
-      <Col lg={4} key={cardState.cardKey}>
+      <Col lg={4} key={cardState.id}>
         {cardState.isMatched ? (
           <Card className="successCard">
             <img
