@@ -20,7 +20,7 @@ const ResourcesSection = () => {
             <Row justify="center">
               <Col span={22} className="site-card-wrapper__cardName">
                 <Link to="/pollution">
-                  {t("home.resourcesSection.pollution")}{" "}
+                  {t("home.resourcesSection.pollution")}
                 </Link>
               </Col>
               <Col span={22} className="site-card-wrapper__cardImage">
