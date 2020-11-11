@@ -269,7 +269,7 @@ Array [
         style={Object {}}
       >
         <div
-          className="ant-col puzzlePage__puzzleBox__currentImage"
+          className="ant-col currentImage"
           style={Object {}}
         />
       </div>
