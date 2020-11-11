@@ -22,6 +22,8 @@ const CurrentImage = () => {
     const numOfTiles = 6;
     for (let tileId = 0; tileId < numOfTiles; tileId++) {
       let tileTopStyling = tileId * 100;
+      // value of selected is used for styling purposes where the selected tile should be highlighted
+      // value of top is used for fitting the image inside the tile
       let newTile = { id: tileId, selected: false, top: tileTopStyling };
       newTilesArray.push(newTile);
     }
