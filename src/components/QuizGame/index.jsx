@@ -75,7 +75,7 @@ const QuizGame = () => {
             callback={checkAnswer}
           />
         )}
-        { checkTonextQuestion &&(
+        { checkToNextQuestion &&(
           <button className="quizWrapper__nextButton" onClick={nextQuestion}>
             Next Question
           </button>
