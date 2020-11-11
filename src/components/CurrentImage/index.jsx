@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row } from "antd";
+import firstImage from "./../../images/yellow-spot.svg"
 import "./index.css";
 
 // CurrentImage is the component that generates and includes the tiles of the puzzle
@@ -16,11 +17,11 @@ const CurrentImage = () => {
   // if unsolved it displays the tiles and when solved it displays the full image
   const [isSolved, setIsSolved] = useState(false);
   const tilesGenerator = () => {
-    let newTilesArray = [];
+    const newTilesArray = [];
     // for loop to generate tiles where tiles are puzzle pieces
-    // the number 6 is chosen randomly
-    for (let i = 0; i < 6; i++) {
-      let newTile = { id: i, selected: false };
+    const numOfTiles = 6;
+    for (let tileId = 0; tileId < numOfTiles; tileId++) {
+      let newTile = { id: tileId, selected: false };
       newTilesArray.push(newTile);
     }
     // for loop that generates a random and extracts the element with the index
@@ -68,7 +69,7 @@ const CurrentImage = () => {
     let tile1 = { ...generatedTiles[index1] };
     newTiles[index0] = tile1;
     newTiles[index1] = tile0;
-    newTiles.map((tile) => (tile.selected = false));
+    newTiles.forEach((tile) => (tile.selected = false));
     setGeneratedTiles(newTiles);
     setSelectedTile(null);
   };
@@ -77,8 +78,8 @@ const CurrentImage = () => {
     // tiles are saved in an array indexed from 0 to n (6) and displayed in that order
     // first condition checks if tile's id is equal to its index in the array and returns false/true
     // since initial acc value is true, second condition checks if prev value is true and keeps its value
-    const isCorrect = generatedTiles.reduce((acc, curr, i) => {
-      if (curr.id !== i) {
+    const isCorrect = generatedTiles.reduce((acc, curr, index) => {
+      if (curr.id !== index) {
         return false;
       } else if (acc === true) {
         return acc;
@@ -94,7 +95,7 @@ const CurrentImage = () => {
             return (
               <Row
                 key={"tileNumber" + tile.id}
-                className={tile.selected ? "selectedTile" : ""}
+                className={tile.selected ? "selectedTile currentImage__tile" : "currentImage__tile"}
                 onClick={() => handleSelect(tile.id)}
               >
                 {tile.id}
