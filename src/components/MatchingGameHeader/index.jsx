@@ -13,5 +13,4 @@ const MatchingGameHeaderSection = () => {
     </>
   );
 };
-
 export default MatchingGameHeaderSection;
