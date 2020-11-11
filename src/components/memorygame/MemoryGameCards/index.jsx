@@ -50,17 +50,23 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
   useEffect(() => {
     // only triggered if "NUM_REQUIRED_MATCHES" amount of cards are stored in selectedCards
     if (selectedCards.length === NUM_REQUIRED_MATCHES) {
-      const clickedCardState = selectedCards[selectedCards.length - 1];
+      // match condition of cards inside selectedCards will be based on card that is added to
+      // selectedCards last
+      const lastCardState = selectedCards[selectedCards.length - 1];
       // matched cards should have different id, same image key, isFlipped:true
-      const matchesOfLastCardState = selectedCards.filter(
-        (otherCard) =>
-          otherCard.id !== clickedCardState.id &&
-          otherCard.img.imgKey === clickedCardState.img.imgKey &&
-          otherCard.isFlipped &&
-          clickedCardState.isFlipped
+      const isSiblingOfCurrentCard = (prevCard) => {
+        return (
+          prevCard.id !== lastCardState.id &&
+          prevCard.img.imgKey === lastCardState.img.imgKey &&
+          prevCard.isFlipped &&
+          lastCardState.isFlipped
+        );
+      };
+      const matchesOfLastCardState = selectedCards.filter((prevCard) =>
+        isSiblingOfCurrentCard(prevCard)
       );
       // matchesOfLastCard doesnt include last card
-      const matchedCardsArr = [...matchesOfLastCardState, clickedCardState];
+      const matchedCardsArr = [...matchesOfLastCardState, lastCardState];
       const copyOfCardStates = [...cardStates];
 
       if (matchedCardsArr.length === NUM_REQUIRED_MATCHES) {
