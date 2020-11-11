@@ -1,13 +1,14 @@
-.puzzlePage__puzzleBox__currentImage {
+.currentImage {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 200px;
   width: 100%;
   overflow: hidden;
   user-select: none;
   font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .selectedTile {
@@ -15,18 +16,24 @@
 }
 
 .currentImage__tile{
-  margin: 4px;
+  margin: 1.3px;
   background-color: white;
+  height: 100%;
   width: 100%;
-  height: 5%;
+  max-width: 70%;
   overflow: hidden;
   position: relative;
+  display: inline-flex;
 }
 
-.firstImage{
-  height: 200px;
+.currentImage__puzzledImage{
+  /*the image needs to be much larger than the tile's div so we can split it into pieces*/
+  height: 600%;
+  width: 100%;
+  position: absolute;
+}
+
+.currentImage__imageDisplayed{
+  height: 100%;
   width: auto;
-  object-fit: cover;
-  top: -100px;
-  clip: (0,100%, 50px, 0)
 }

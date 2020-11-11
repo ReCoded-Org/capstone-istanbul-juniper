@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row } from "antd";
-import firstImage from "./../../images/yellow-spot.svg"
+import puzzledImage from "./../../images/habitat.jpg"
 import "./index.css";
 
 // CurrentImage is the component that generates and includes the tiles of the puzzle
@@ -21,7 +21,8 @@ const CurrentImage = () => {
     // for loop to generate tiles where tiles are puzzle pieces
     const numOfTiles = 6;
     for (let tileId = 0; tileId < numOfTiles; tileId++) {
-      let newTile = { id: tileId, selected: false };
+      let tileTopStyling = tileId *100;
+      let newTile = { id: tileId, selected: false, top: tileTopStyling };
       newTilesArray.push(newTile);
     }
     // for loop that generates a random and extracts the element with the index
@@ -89,20 +90,24 @@ const CurrentImage = () => {
   };
 
   return (
-    <Col className="puzzlePage__puzzleBox__currentImage">
+    <Col className="currentImage">
       {!isSolved
         ? generatedTiles.map((tile) => {
             return (
               <Row
-                key={"tileNumber" + tile.id}
+                key={"tileNumber-" + tile.id}
                 className={tile.selected ? "selectedTile currentImage__tile" : "currentImage__tile"}
                 onClick={() => handleSelect(tile.id)}
               >
-                {tile.id}
+                <img 
+                  className="currentImage__puzzledImage" 
+                  src={puzzledImage} 
+                  alt="tile from the image"
+                  style={{top:`-${tile.top}%`}}/>
               </Row>
             );
           })
-        : "You solved it!"}
+        : <img className="currentImage__imageDisplayed" src={puzzledImage} alt="tile" />}
     </Col>
   );
 };
