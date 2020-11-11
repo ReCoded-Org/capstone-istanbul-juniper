@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PuzzleSpace Component matches the tree 1`] = `
+<main
+  className="ant-layout-content puzzlePage__gameSpace"
+>
+  <div
+    className="ant-card ant-card-bordered ant-card-small puzzlePage__puzzleBox"
+  >
+    <div
+      className="ant-card-body"
+      style={Object {}}
+    >
+      <div
+        className="ant-col currentImage"
+        style={Object {}}
+      />
+    </div>
+  </div>
+</main>
+`;
