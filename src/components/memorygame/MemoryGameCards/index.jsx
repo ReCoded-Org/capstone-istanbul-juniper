@@ -11,7 +11,6 @@ const NUM_REQUIRED_MATCHES = 2;
 // game example: https://www.brightfocus.org/alzheimers/memory-games/match-pictures
 // instead of squares this game uses cards.
 // onClick card flips to show what is behind the card.
-// When there is "NUM_REQUIRED_MATCHES" amount of match selected cards turn into success symbol.
 // matchedCards is an array states that holds successfully matched card states
 // setCompleted is boolean
 // setCompleted is true when all possible matches made
@@ -65,20 +64,18 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
     if (selectedCards.length !== NUM_REQUIRED_MATCHES) {
       return;
     }
-    // match condition of cards inside selectedCards will be based on card that is added to
-    // selectedCards last
+    // match condition of selectedCards will be based on card that is added last to selectedCards
     const lastCardState = selectedCards[selectedCards.length - 1];
     const matchesOfLastCardState = selectedCards.filter((prevCard) =>
       doesMatchLastCard(prevCard, lastCardState)
     );
-    // matchesOfLastCard doesnt include last card
+    // matchesOfLastCardState doesnt include last card
     const matchedCardsArr = [...matchesOfLastCardState, lastCardState];
     const copyOfCardStates = [...cardStates];
     // matchedCards is an array states that holds successfully matched card states
     if (matchedCardsArr.length === NUM_REQUIRED_MATCHES) {
       matchedCardsArr.forEach((matchedCard) => {
         // current index is needed to keep the order of cards displayed
-        // because goal is to make user remember the spots of previous cards
         const targetIndex = copyOfCardStates.findIndex(
           (card) => card.cardKey === matchedCard.cardKey
         );
