@@ -6,9 +6,7 @@ const GameSpace = () => {
   const { Content } = Layout;
   return (
     <Content className="puzzlePage__gameSpace">
-      <Card size="small" className="puzzlePage__puzzleBox">
-
-      </Card>
+      <Card size="small" className="puzzlePage__puzzleBox"></Card>
     </Content>
   );
 };
