@@ -46,11 +46,11 @@ const QuizGame = () => {
     }
   };
   const nextQuestion = () => {
-    const nextQ = currentQuestionNumber + 1;
-    if (nextQ >= TOTAL_QUESTIONS) {
+    const nextQNum = currentQuestionNumber + 1;
+    if (nextQNum>= TOTAL_QUESTIONS) {
       setIsGameOver(true);
     } else {
-      setCurrentQuestionNumber(nextQ);
+      setCurrentQuestionNumber(nextQNum);
     }
   };
   const checkGameOver = isGameOver || userAnswers.length === TOTAL_QUESTIONS;
