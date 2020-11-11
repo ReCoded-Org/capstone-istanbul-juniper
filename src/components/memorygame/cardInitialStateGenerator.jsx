@@ -11,8 +11,8 @@ import shuffle from "./shuffle";
  * Game example: https://www.brightfocus.org/alzheimers/memory-games/match-pictures
  * Instead of squares this game uses cards.
  *
+ * This function prepares the statesArr that sets the structure of game board
  */
-
 const cardInitialStateGenerator = (cardDataArr, NUM_REQUIRED_MATCHES) => {
   invariant(
     cardDataArr.length === CARD_BACKSIDE_IMAGES.length,
@@ -21,7 +21,7 @@ const cardInitialStateGenerator = (cardDataArr, NUM_REQUIRED_MATCHES) => {
   let clonedCardData = [];
   let clonedImgArr = [];
 
-  // cardDataArr should be cloned to provide "NUM_REQUIRED_MATCHES" amount of patch per image
+  // cardDataArr should be cloned to provide "NUM_REQUIRED_MATCHES" amount of match per image
   // clonedImgArr should be cloned to easier image-state matching
   for (let i = 0; i < NUM_REQUIRED_MATCHES; i++) {
     clonedCardData = [...clonedCardData, ...cardDataArr];
@@ -39,13 +39,12 @@ const cardInitialStateGenerator = (cardDataArr, NUM_REQUIRED_MATCHES) => {
     const lastNamePart = imgNameParts[imgNameParts.length - 1];
     // lastNamePart is something like acidRain.234234
     const imgName = lastNamePart.split(".")[0];
-    // unique card key is needed for card match condition
+    // unique cardKey and same imgKey are needed for card match condition
     // card keys of matching images should be like "acidRain0", "acidRain1"...
     let cardKey = "";
     const numOfSameCardKeys = cardStates.filter(
       (prevCardState) => prevCardState.description === card.description
     ).length;
-
     cardKey = `${imgName}${numOfSameCardKeys}`;
     cardStates = [
       ...cardStates,

@@ -1,15 +1,15 @@
-import acidRain from "../../images/memoryCardBack/acidRain.svg";
-import airPollution from "../../images/memoryCardBack/airPollution.svg";
-import alternateEnergy from "../../images/memoryCardBack/alternateEnergy.svg";
-import chemicalWaste from "../../images/memoryCardBack/chemicalWaste.svg";
-import deforestation from "../../images/memoryCardBack/deforestation.svg";
-import globalWarming from "../../images/memoryCardBack/globalWarming.svg";
-import greenhouseEffect from "../../images/memoryCardBack/greenhouseEffect.svg";
-import littering from "../../images/memoryCardBack/littering.svg";
-import meltingIceCaps from "../../images/memoryCardBack/meltingIceCaps.svg";
-import ozoneHole from "../../images/memoryCardBack/ozoneHole.svg";
-import recycle from "../../images/memoryCardBack/recycle.svg";
-import waterPollution from "../../images/memoryCardBack/waterPollution.svg";
+import acidRain from "../../images/memoryGame/acidRain.svg";
+import airPollution from "../../images/memoryGame/airPollution.svg";
+import alternateEnergy from "../../images/memoryGame/alternateEnergy.svg";
+import chemicalWaste from "../../images/memoryGame/chemicalWaste.svg";
+import deforestation from "../../images/memoryGame/deforestation.svg";
+import globalWarming from "../../images/memoryGame/globalWarming.svg";
+import greenhouseEffect from "../../images/memoryGame/greenhouseEffect.svg";
+import littering from "../../images/memoryGame/littering.svg";
+import meltingIceCaps from "../../images/memoryGame/meltingIceCaps.svg";
+import ozoneHole from "../../images/memoryGame/ozoneHole.svg";
+import recycle from "../../images/memoryGame/recycle.svg";
+import waterPollution from "../../images/memoryGame/waterPollution.svg";
 
 const CARD_BACKSIDE_IMAGES = [
   acidRain,
