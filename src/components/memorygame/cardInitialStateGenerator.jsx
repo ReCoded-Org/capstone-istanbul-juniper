@@ -8,9 +8,11 @@ import shuffle from "./shuffle";
  *
  * CARD_BACKSIDE_IMAGES example:[image1,image2,...]
  *
- * Game is played by matching cards with same images.
- * NUM_REQUIRED_MATCHES dictates how many images required per successful match
+ * Game example: https://www.brightfocus.org/alzheimers/memory-games/match-pictures
+ * Instead of squares this game uses cards.
+ *
  */
+
 const cardInitialStateGenerator = (cardDataArr, NUM_REQUIRED_MATCHES) => {
   invariant(
     cardDataArr.length === CARD_BACKSIDE_IMAGES.length,
@@ -19,31 +21,46 @@ const cardInitialStateGenerator = (cardDataArr, NUM_REQUIRED_MATCHES) => {
   let clonedCardData = [];
   let clonedImgArr = [];
 
+  // cardDataArr should be cloned to provide "NUM_REQUIRED_MATCHES" amount of patch per image
+  // clonedImgArr should be cloned to easier image-state matching
   for (let i = 0; i < NUM_REQUIRED_MATCHES; i++) {
     clonedCardData = [...clonedCardData, ...cardDataArr];
     clonedImgArr = [...clonedImgArr, ...CARD_BACKSIDE_IMAGES];
   }
 
-  // shuffle is non-destructive
-  return shuffle(
-    clonedCardData.map((card, index) => {
-      const imgNameParts = clonedImgArr[index].split("/");
-      const lastNamePart = imgNameParts[imgNameParts.length - 1];
-      const coreImgName = lastNamePart.split(".")[0];
-      let cardKey = card.description;
-      if (index > cardDataArr.length - 1) {
-        cardKey = `Clone ${card.description}`;
-      }
-      return {
+  let cardStates = [];
+
+  clonedCardData.forEach((card, index) => {
+    // clonedCardData and clonedImgArr ordered in same way
+    // clonedImgArr[0] holds image for clonedCardData[0]
+    // clonedImgArr[index] is a directory
+    const imgSrc = clonedImgArr[index];
+    const imgNameParts = clonedImgArr[index].split("/");
+    const lastNamePart = imgNameParts[imgNameParts.length - 1];
+    // lastNamePart is something like acidRain.234234
+    const imgName = lastNamePart.split(".")[0];
+    // unique card key is needed for card match condition
+    // card keys of matching images should be like "acidRain0", "acidRain1"...
+    let cardKey = "";
+    const numOfSameCardKeys = cardStates.filter(
+      (prevCardState) => prevCardState.description === card.description
+    ).length;
+
+    cardKey = `${imgName}${numOfSameCardKeys}`;
+    cardStates = [
+      ...cardStates,
+      {
         ...card,
         cardKey,
-        id: index,
-        img: { src: clonedImgArr[index], imgKey: coreImgName },
         isFlipped: false,
         isMatched: false,
-      };
-    })
-  );
+        img: { src: imgSrc, imgKey: imgName },
+      },
+    ];
+  });
+
+  // non destructive shuffle
+  return shuffle(cardStates);
 };
 
 export default cardInitialStateGenerator;
