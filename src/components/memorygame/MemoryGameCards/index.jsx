@@ -24,7 +24,8 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
     }),
   ];
   // cardStates is an array of states with multiple properties
-  // state example : {id:"",img:{src:"",imgKey:""},isFlipped:"",isMatched:"",description:"",link:"",phrase:""}
+  // state example :
+  // {id:"",img:{src:"",imgKey:""},isFlipped:"",isMatched:"",description:"",link:"",phrase:""}
   const [cardStates, setCardStates] = useState(
     cardInitialStateGenerator(cardsDataArr, NUM_REQUIRED_MATCHES)
   );
@@ -82,11 +83,13 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
             isMatched: true,
           };
         });
-        // to display 1 fact per match, only one of the matched cards(selectedCards[0]) should be passed as state
+        // to display 1 fact per match,
+        // only one of the matched cards(selectedCards[0]) should be passed as state
         setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
         setCardStates(() => [...copyOfCardStates]);
       }
-      // if there is no match or not enough matches flipped cards gets closed by setting isFlipped:false
+      // if there is no match or not enough matches flipped cards get
+      // closed by setting isFlipped:false
       else if (NUM_REQUIRED_MATCHES === selectedCards.length) {
         selectedCards.forEach((card) => {
           const targetIndex = copyOfCardStates.findIndex(
@@ -107,7 +110,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
     }
   }, [selectedCards]);
 
-  // displays a modal when all possible matches made
+  // displays a modal when victory condition achieved
   useEffect(() => {
     if (matchedCards.length === cardStates.length) {
       setCompleted(true);
