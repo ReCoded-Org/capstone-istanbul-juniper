@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row } from "antd";
-import puzzledImage from "./../../images/habitat.jpg"
+import puzzledImage from "./../../images/habitat.jpg";
 import "./index.css";
 
 // CurrentImage is the component that generates and includes the tiles of the puzzle
-// it generates 6 tiles ordered vertically on top of each other 
+// it generates 6 tiles ordered vertically on top of each other
 // each tile's background is 1/6 of the image. After the tiles are generated they are put
 // in an array and ordered randomly
 // a user can click on one tile to select and then click on another tile to swap their places
@@ -21,7 +21,7 @@ const CurrentImage = () => {
     // for loop to generate tiles where tiles are puzzle pieces
     const numOfTiles = 6;
     for (let tileId = 0; tileId < numOfTiles; tileId++) {
-      let tileTopStyling = tileId *100;
+      let tileTopStyling = tileId * 100;
       let newTile = { id: tileId, selected: false, top: tileTopStyling };
       newTilesArray.push(newTile);
     }
@@ -91,23 +91,34 @@ const CurrentImage = () => {
 
   return (
     <Col className="currentImage">
-      {!isSolved
-        ? generatedTiles.map((tile) => {
-            return (
-              <Row
-                key={"tileNumber-" + tile.id}
-                className={tile.selected ? "selectedTile currentImage__tile" : "currentImage__tile"}
-                onClick={() => handleSelect(tile.id)}
-              >
-                <img 
-                  className="currentImage__puzzledImage" 
-                  src={puzzledImage} 
-                  alt="tile from the image"
-                  style={{top:`-${tile.top}%`}}/>
-              </Row>
-            );
-          })
-        : <img className="currentImage__imageDisplayed" src={puzzledImage} alt="tile" />}
+      {!isSolved ? (
+        generatedTiles.map((tile) => {
+          return (
+            <Row
+              key={"tileNumber-" + tile.id}
+              className={
+                tile.selected
+                  ? "selectedTile currentImage__tile"
+                  : "currentImage__tile"
+              }
+              onClick={() => handleSelect(tile.id)}
+            >
+              <img
+                className="currentImage__puzzledImage"
+                src={puzzledImage}
+                alt="tile from the image"
+                style={{ top: `-${tile.top}%` }}
+              />
+            </Row>
+          );
+        })
+      ) : (
+        <img
+          className="currentImage__imageDisplayed"
+          src={puzzledImage}
+          alt="tile"
+        />
+      )}
     </Col>
   );
 };
