@@ -1,0 +1,194 @@
+.navbar {
+  background: #3b8c79;
+  height: 150px;
+}
+
+.navbar__topHalf {
+  margin: 0;
+  padding: 0;
+  background-color: #3b8c79;
+  font-family: "Salsa", cursive;
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 50%;
+}
+
+.navbar__element:hover {
+  background-image: url("./../../images/yellow-spot.svg");
+  background-repeat: no-repeat;
+  padding: 47px;
+  margin: -47px;
+}
+
+.navbar__element-current {
+  background-image: url("./../../images/blue-spot.svg");
+  background-repeat: no-repeat;
+  padding: 46px;
+  padding-top: 32px;
+  margin: -46px;
+}
+
+.navbar__title {
+  color: white;
+  font-size: 2em;
+  padding: 6px;
+}
+
+.navbar .navbar__topHalf .ant-col-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__topHalf li a {
+  color: white;
+}
+
+.navbar__topHalf ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 1.3em;
+}
+
+.navbar__topHalf ul li:hover,
+.navbar__title:hover {
+  cursor: pointer;
+}
+
+.navbar__helperDiv {
+  height: 50%;
+}
+
+.navbar__bottomHalf {
+  position: relative;
+  background: #b4d0c4;
+  border-radius: 50% 50% 0 0;
+  height: 50%;
+}
+
+.navbar__logo {
+  height: 35px;
+  width: auto;
+}
+
+.navbar__logo-link {
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  width: 3%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__logo-ltrLink {
+  left: 46.7%;
+}
+
+.navbar__logo-rtlLink {
+  left: 50%;
+}
+
+.navbar__logo:hover {
+  cursor: pointer;
+}
+
+.navbar__dropdown {
+  position: absolute;
+  background-color: transparent;
+  width: 1.2em;
+}
+
+/* antdesign class */
+.ant-dropdown {
+  font-family: "Salsa";
+}
+
+/* antdesign class */
+.anticon-menu .svg:hover {
+  cursor: pointer;
+}
+
+/* antdesign class */
+.anticon-menu .svg:focus {
+  box-shadow: #b4d0c4;
+}
+
+/* antdesign class */
+ul.ant-dropdown-menu {
+  background-color: #b4d0c4;
+}
+
+li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageContainer-btn.ant-dropdown-menu-item-active {
+  background-color: transparent;
+}
+
+.navbar__dropdown-btn {
+  width: 3%;
+  height: 35%;
+  background: transparent;
+  border: none;
+}
+
+.navbar__elements {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1.2em;
+}
+
+.navbar__languageContainer-btn {
+  background-color: #b4d0c4;
+  border-width: 1px;
+  border-color: #b4d0c4;
+  color: white;
+  width: 30%;
+  height: auto;
+}
+
+.navbar__languageContainer-btn:hover {
+  cursor: pointer;
+  background-color: #b4d0c4;
+}
+
+.navbar__languageContainer {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 10%;
+  height: 27px;
+  top: 20%;
+  right: 0%;
+}
+
+@media (max-width: 768px) {
+  .navbar__Elements li a {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768.1px) {
+  .navbar__dropdown {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar__languageContainer {
+    width: 23%;
+    top: 40%;
+  }
+
+  .navbar__logo-ltrLink {
+    left: 48.5%;
+  }
+}
