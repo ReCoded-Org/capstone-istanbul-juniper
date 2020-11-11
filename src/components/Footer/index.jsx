@@ -9,16 +9,18 @@ import {
 import "./index.css";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import globe from "./../../images/earthNav.svg"
 
 const Footer = () => {
   const [t] = useTranslation();
 
   return (
+    <div className ="footerContainer">
     <footer>
       <Router>
         <img
           alt="globe"
-          src="/assets/images/earthNav.svg"
+          src={globe}
           className="footerGlobe"
         />
         <Col>
@@ -60,6 +62,7 @@ const Footer = () => {
         </Col>
       </Router>
     </footer>
+    </div>
   );
 };
 
