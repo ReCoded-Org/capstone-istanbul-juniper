@@ -5,7 +5,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import NetlifyForm from "../NetlifyForm";
-import { Col, Row } from "antd";
+import {Col, Row } from "antd";
 import { RiSendPlaneFill } from "react-icons/ri";
 import "./index.css";
 
@@ -102,15 +102,15 @@ const ContactUsForm = () => {
           </Col>
         </Col>
         <Row>
-          <button
-            disabled={processing}
-            className="contactUsForm__content__button"
-            type="submit"
-          >
-            {t("contact.contactUsForm.send")}
-            {" "}
-            <RiSendPlaneFill />
-          </button>
+          <div className="contactUsForm__content__submit">
+            <button
+              disabled={processing}
+              className="contactUsForm__content__submit__button"
+              type="submit"
+            >
+              {t("contact.contactUsForm.send")} <RiSendPlaneFill />
+            </button>
+          </div>
         </Row>
       </NetlifyForm>
     </div>

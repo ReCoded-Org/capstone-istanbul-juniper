@@ -1,47 +1,58 @@
-.contactUsForm{
-    background: #add4c5;
+.contactUsForm {
+  background: #add4c5;
+  display: flex;
+  justify-content: center;
 }
 
-.contactUsForm__content label{
+.contactUsForm__content__label {
   font-family: "Raleway";
   font-size: clamp(1rem, 1.5vw, 2rem);
-  color:white;
+  color: white;
+  margin-top: 0.5rem;
   text-align: left;
 }
 
-.contactUsForm__content input {
-    font-family: "Raleway";
-    font-size: clamp(1.5rem, 2vw, 3rem);
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    margin: clamp(1rem,1.5rem,2rem);
+.contactUsForm__content__input,
+.contactUsForm__content__textarea {
+  font-family: "Raleway";
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  width: clamp(20vw, 30vw, 40vw);
+  height: clamp(3vh, 5vh, 6vh);
+}
+.contactUsForm__content__textarea {
+  height: clamp(8vh, 10vh, 16vh);
 }
 
-.contactUsForm textarea{
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    margin: clamp(1rem,1.5rem,2rem);
-    font-size: clamp(1.5rem, 2vw, 3rem);
+.contactUsForm__content__submit{
+margin-top:0.75rem;
 }
 
-.contactUsForm__content__button {
-  border-radius: 5px;
+/* TODO: rotate button to right*/
+.contactUsForm__content__submit__button {
+ border-radius:10px;
   border: none;
   background: #f8ac4c;
   margin: auto;
-  width: 5%;
   font-family: "Salsa", cursive;
   transition: all 0.5s;
   padding: 5px;
   font-size: clamp(1.5vw, 18px, 3vw);
   cursor: pointer;
-  color:white;
+  color: white;
+  width: clamp(10vw, 30px, 20vw);
+  align-self: end;
 }
 
-.contactUsForm__result{
-    color:white;
+.contactUsForm__content__button {
+  transition: all 0.5s;
+}
+
+.contactUsForm__result {
+  color: white;
+  font-family: "Salsa", cursive;
+  font-size: clamp(2vw, 24px, 4vw);
 }
