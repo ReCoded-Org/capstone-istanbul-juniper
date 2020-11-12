@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-// this function will display the fetched data to the dom.
+// this function will display the fetched data to the dom.those parameters will pass in quizgame component.
 const QuestionCard = ({
   question,
   answers,
