@@ -12,8 +12,8 @@ const NUM_REQUIRED_MATCHES = 2;
 // instead of squares this game uses cards.
 // Card flips on click to show what is behind.
 // matchedCards is an array states that holds successfully matched card states
-// setCompleted is true when all possible matches made
-const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
+// setIsCompleted is a function that is being used to set isCompleted as boolean state when all possible matches made.
+const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
   const [t] = useTranslation();
   // cardsDataArr example [{description:"...",link:"...",phrase:".."},...]
   const cardsDataArr = [
@@ -76,6 +76,8 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
     } else if (property === "isFlipped") {
       targetCardState.isFlipped = !targetCardState.isFlipped;
       setCardStates(() => [...copyOfCardStates]);
+    } else {
+      throw new Error("invalid property");
     }
     setSelectedCards([]);
   };
@@ -105,7 +107,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
   useEffect(() => {
     const MAX_MATCHES = cardStates.length / NUM_REQUIRED_MATCHES;
     if (matchedCards && matchedCards.length === MAX_MATCHES) {
-      setCompleted(true);
+      setIsCompleted(true);
       Modal.success({
         content: "You have completed the game!",
       });
