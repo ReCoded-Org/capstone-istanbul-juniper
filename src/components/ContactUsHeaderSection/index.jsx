@@ -6,9 +6,9 @@ const ContactUsHeaderSection = () => {
   const { t } = useTranslation();
   return (
     <>
-      <h2 className="contactUs__title">{t("contactUs.headerSection.title")}</h2>
+      <h2 className="contactUs__title">{t("contact.contactUsHeaderSection.title")}</h2>
       <p className="contactUs__context">
-        {t("contactUs.headerSection.subtitle")}
+        {t("contactUs.contactUsHeaderSection.subtitle")}
       </p>
     </>
   );
