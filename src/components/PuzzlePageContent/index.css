@@ -1,4 +1,4 @@
-.puzzlePage__gameSpace {
+.puzzlePage__content {
   background-color: #b4d0c4;
   height: 100vh; /* use of vh is temporary until the game content is ready */
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.puzzlePage__puzzleBox {
+.puzzlePage__content-puzzleBox {
   background-color: #3b8c79;
   width: 40%;
   height: 50%;
