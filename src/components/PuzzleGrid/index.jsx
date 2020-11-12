@@ -29,15 +29,8 @@ const PuzzleGrid = () => {
       let newTile = { id: tileId, selected: false, top: tileTopStyling };
       newTilesArray.push(newTile);
     }
-    // for loop that generates a random and extracts the element with the index
-    // equal to the random number, then pushes that element to the end of newTilesArray.
-
+    
     const randomizedTilesArray = shuffle(newTilesArray);
-    // for (let i = 0; i < newTilesArray.length; i++) {
-    //   let random = Math.floor(Math.random() * (newTilesArray.length - 1));
-    //   let randomItemArray = newTilesArray.splice(random, 1);
-    //   newTilesArray.push(randomItemArray[0]);
-    // }
     // Set the randomized array as generated tiles
     setCurrentPuzzleState(randomizedTilesArray);
   };
