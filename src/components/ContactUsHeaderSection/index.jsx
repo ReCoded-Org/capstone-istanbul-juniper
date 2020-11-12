@@ -5,12 +5,14 @@ import { useTranslation } from "react-i18next";
 const ContactUsHeaderSection = () => {
   const { t } = useTranslation();
   return (
-    <>
-      <h2 className="contactUs__title">{t("contact.contactUsHeaderSection.title")}</h2>
-      <p className="contactUs__context">
-        {t("contactUs.contactUsHeaderSection.subtitle")}
+    <div className="contactUs__headerSection">
+      <h2 className="contactUs__headerSection__title">
+        {t("contact.contactUsHeaderSection.title")}
+      </h2>
+      <p className="contactUs__headerSection__context">
+        {t("contact.contactUsHeaderSection.subtitle")}
       </p>
-    </>
+    </div>
   );
 };
 
