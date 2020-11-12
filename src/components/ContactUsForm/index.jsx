@@ -1,82 +1,114 @@
+/*
+ * ContactUsForm consists of validation and elements of contact form, imports Netlifyform for post data.
+ * The base code that is used in both netlifyForm and index are implemented from https://github.com/jon-fm/react-ssg-netlify-forms-demo
+ */
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import NetlifyForm from "../NetlifyForm";
+import { Col, Row } from "antd";
 import "./index.css";
 
 const ContactUsForm = () => {
-  const [t] = useTranslation();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("");
-
-const encode = (data) => {
-  const formData = new FormData();
-  Object.keys(data).forEach((key) => {
-    formData.append(key, data[key]);
-  });
-  return formData;
-};
-
-  const handleSubmit = (e) => {
-    const data = { "form-name": "contact", name, email, message };
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode(data),
-    })
-      .then(() => setStatus("Form Submission Successful!!"))
-      .catch((error) => setStatus("Form Submission Failed!"));
-
-    e.preventDefault();
+  // const [t] = useTranslation();
+  const [submissionMessage, setSubmissionMessage] = useState("");
+  // beforeSubmit is for validations and disabling submit button
+  const [processing, setProcessing] = useState(false);
+  const beforeSubmit = async () => {
+    if (
+      contactFormValues.name.length > 0 &&
+      contactFormValues.email.length > 0
+    ) {
+      setProcessing(true);
+      // Wait 2 seconds to simulate async delay
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      return true;
+    } else {
+      return false;
+    }
   };
-
-  handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
-
+  // afterSubmit is for submission message and enable submit button
+  const afterSubmit = () => {
+    setSubmissionMessage("Thanks for messaging us!");
+    setProcessing(false);
+  };
+  // handles value changes of contact form
+  const handleChange = (e) =>
+    setContactFormValues({
+      ...contactFormValues,
+      [e.target.name]: e.target.value,
+    });
+  const [contactFormValues, setContactFormValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   return (
     <div className="contactUsForm">
-      <form name="contact" onSubmit={handleSubmit} action="/thank-you/">
-        <input type="hidden" name="form-name" value="contact" />
-        <div className="contactUsForm__content">
-          <p>
-            <label for="name">
+      <NetlifyForm
+        formName="contact"
+        contactFormValues={contactFormValues}
+        beforeSubmit={beforeSubmit}
+        afterSubmit={afterSubmit}
+        automaticHoneypot={true}
+      >
+        <span className="contactUsForm__result">{submissionMessage}</span>
+        <Col>
+          <Col>
+            <label for="name" className="contactUsForm__content__label">
               Name:
-              <input
-                type="text"
-                name="name"
-                value={name}
-                onChange={handleChange}
-              />
             </label>
-          </p>
-          <p>
-            <label for="email">
+          </Col>
+          <Col>
+            <input
+              type="text"
+              name="name"
+              value={contactFormValues.name}
+              onChange={handleChange}
+              className="contactUsForm__content__input"
+            />
+          </Col>
+        </Col>
+        <Col>
+          <Col>
+            <label for="email" className="contactUsForm__content__label">
               E-mail:
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={handleChange}
-              />
             </label>
-          </p>
-          <p>
-            <label for="message">
+          </Col>
+          <Col>
+            <input
+              type="email"
+              name="email"
+              value={contactFormValues.email}
+              onChange={handleChange}
+              className="contactUsForm__content__input"
+            />
+          </Col>
+        </Col>
+        <Col>
+          <Col>
+            <label for="message" className="contactUsForm__content__label">
               Message:
-              <br />
-              <textarea
-                name="message"
-                value={message}
-                onChange={handleChange}
-              />
             </label>
-          </p>
-          <button className="contactUsForm__content__button" type="submit">
+          </Col>
+          <Col>
+            <textarea
+              name="message"
+              value={contactFormValues.message}
+              onChange={handleChange}
+              className="contactUsForm__content__textarea"
+            />
+          </Col>
+        </Col>
+        <Row>
+          <button
+            disabled={processing}
+            className="contactUsForm__content__button"
+            type="submit"
+          >
             Send
           </button>
-        </div>
-      </form>
-      <h3 className="contactUsForm__result">{status}</h3>
-    
+        </Row>
+      </NetlifyForm>
     </div>
   );
 };
