@@ -14,10 +14,12 @@ const QuizGame = () => {
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [isGameOver, setIsGameOver] = useState(true);
+  const [isGameOver, setIsGameOver] = useState(false);
+  const [isGameStart,setIsGameStart]=useState(false)
   const startQuiz = async () => {
     setIsLoading(true);
     setIsGameOver(false);
+    setIsGameStart(true)
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
       Difficulty.EASY
@@ -29,7 +31,7 @@ const QuizGame = () => {
     setIsLoading(false);
   };
   const checkAnswer = (e) => {
-    if (!isGameOver) {
+    if (!isGameOver && isGameStart) {
       const answer = e.currentTarget.value;
       const isCorrect = questions[currentQuestionNumber].correct_answer === answer;
       if (isCorrect) {
@@ -48,23 +50,24 @@ const QuizGame = () => {
     const nextQNum = currentQuestionNumber + 1;
     if (nextQNum>= TOTAL_QUESTIONS) {
       setIsGameOver(true);
+      setIsGameStart(true)
     } else {
       setCurrentQuestionNumber(nextQNum);
     }
   };
-  const  checkToNextQuestion = !isGameOver &&!isLoading && userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1 
+  const  checkToNextQuestion = !isGameOver && isGameStart &&!isLoading && userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1 
   return (
     <>
       <div className="quizWrapper">
         <h1 className="quizWrapper__header">Quiz Game</h1>
-        {isGameOver &&(
+        {!isGameOver &&(
           <button className="quizWrapper__startGame" onClick={startQuiz}>
             Start
           </button>
         ) }
-        {!isGameOver && <p className="quizWrapper__score">Score: {score}</p>}
+        {!isGameOver && isGameStart && <p className="quizWrapper__score">Score: {score}</p>}
         {isLoading && <p>Loading Questions...</p>}
-        {!isLoading && !isGameOver && (
+        {!isLoading && !isGameOver && isGameStart && (
           <QuestionCard
             questionNum={currentQuestionNumber + 1}
             totalQuestions={TOTAL_QUESTIONS}
