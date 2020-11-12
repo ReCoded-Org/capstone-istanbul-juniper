@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { fetchQuizQuestions } from "../../components/QuizGameApi";
-import "antd/dist/antd.css";
 import QuestionCard from "../../components/QuizGameQuestions";
 import "./index.css";
 const Difficulty = {
