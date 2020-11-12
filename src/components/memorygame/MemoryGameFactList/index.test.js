@@ -1,5 +1,5 @@
 import React from "react";
-import "../../matchMedia";
+import "../../../matchMedia";
 import renderer from "react-test-renderer";
 import MemoryGameFactList from ".";
 
