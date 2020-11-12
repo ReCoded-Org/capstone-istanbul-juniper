@@ -2,20 +2,15 @@
 
 exports[`PuzzleSpace Component matches the tree 1`] = `
 <main
-  className="ant-layout-content puzzlePage__gameSpace"
+  className="ant-layout-content puzzlePage__content"
 >
   <div
-    className="ant-card ant-card-bordered ant-card-small puzzlePage__puzzleBox"
+    className="ant-card ant-card-bordered ant-card-small puzzlePage__content-puzzleBox"
   >
     <div
       className="ant-card-body"
       style={Object {}}
-    >
-      <div
-        className="ant-col currentImage"
-        style={Object {}}
-      />
-    </div>
+    />
   </div>
 </main>
 `;
