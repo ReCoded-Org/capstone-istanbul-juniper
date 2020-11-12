@@ -5,6 +5,7 @@ import shuffle from "./../memorygame/shuffle";
 import "./index.css";
 
 const NUM_OF_TILES = 6;
+
 // PuzzleGrid is the component that generates and includes the tiles of the puzzle
 // it generates 6 tiles ordered vertically on top of each other
 // each tile's background is 1/6 of the image. After the tiles are generated they are put
