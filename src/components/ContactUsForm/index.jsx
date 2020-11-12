@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import NetlifyForm from "../NetlifyForm";
 import { Col, Row } from "antd";
+import { RiSendPlaneFill } from "react-icons/ri";
 import "./index.css";
 
 const ContactUsForm = () => {
@@ -106,7 +107,9 @@ const ContactUsForm = () => {
             className="contactUsForm__content__button"
             type="submit"
           >
-            Send
+            {t("contact.contactUsForm.send")}
+            {" "}
+            <RiSendPlaneFill />
           </button>
         </Row>
       </NetlifyForm>
