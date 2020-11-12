@@ -29,7 +29,7 @@ const PuzzleGrid = () => {
       let newTile = { id: tileId, selected: false, top: tileTopStyling };
       newTilesArray.push(newTile);
     }
-    
+
     const randomizedTilesArray = shuffle(newTilesArray);
     // Set the randomized array as generated tiles
     setCurrentPuzzleState(randomizedTilesArray);
@@ -83,10 +83,10 @@ const PuzzleGrid = () => {
     const isCorrect = currentPuzzleState.reduce((acc, curr, index) => {
       if (curr.id !== index || acc === false) {
         return false;
-      } 
-      else {
+      } else {
         return acc;
-    }}, true);
+      }
+    }, true);
     setIsSolved(isCorrect);
   };
 
