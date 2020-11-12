@@ -68,5 +68,14 @@
         }
       ]
     }
+  },
+  "contact": {
+    "contactUsForm": {
+      "name": "İsim:",
+      "email": "E-posta:",
+      "message": "Mesaj:",
+      "send": "Gönder:",
+      "submissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
+    }
   }
 }

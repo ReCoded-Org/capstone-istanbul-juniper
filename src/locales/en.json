@@ -73,5 +73,14 @@
         }
       ]
     }
+  },
+  "contact": {
+    "contactUsForm": {
+      "name": "Name:",
+      "email": "E-mail:",
+      "message": "Message:",
+      "send": "Send:",
+      "submissionMessage": "Thanks for messaging us!"
+    }
   }
 }

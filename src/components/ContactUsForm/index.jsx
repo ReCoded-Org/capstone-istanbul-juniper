@@ -3,13 +3,13 @@
  * The base code that is used in both netlifyForm and index are implemented from https://github.com/jon-fm/react-ssg-netlify-forms-demo
  */
 import React, { useState } from "react";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import NetlifyForm from "../NetlifyForm";
 import { Col, Row } from "antd";
 import "./index.css";
 
 const ContactUsForm = () => {
-  // const [t] = useTranslation();
+  const [t] = useTranslation();
   const [submissionMessage, setSubmissionMessage] = useState("");
   // beforeSubmit is for validations and disabling submit button
   const [processing, setProcessing] = useState(false);
@@ -26,6 +26,7 @@ const ContactUsForm = () => {
       return false;
     }
   };
+  // TODO: get submission message to translate files.
   // afterSubmit is for submission message and enable submit button
   const afterSubmit = () => {
     setSubmissionMessage("Thanks for messaging us!");
@@ -55,7 +56,7 @@ const ContactUsForm = () => {
         <Col>
           <Col>
             <label for="name" className="contactUsForm__content__label">
-              Name:
+              {t("contact.contactUsForm.name")}
             </label>
           </Col>
           <Col>
@@ -71,7 +72,7 @@ const ContactUsForm = () => {
         <Col>
           <Col>
             <label for="email" className="contactUsForm__content__label">
-              E-mail:
+              {t("contact.contactUsForm.email")}
             </label>
           </Col>
           <Col>
@@ -87,7 +88,7 @@ const ContactUsForm = () => {
         <Col>
           <Col>
             <label for="message" className="contactUsForm__content__label">
-              Message:
+              {t("contact.contactUsForm.message")}
             </label>
           </Col>
           <Col>

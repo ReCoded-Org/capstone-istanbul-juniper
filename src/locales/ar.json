@@ -73,5 +73,14 @@
         }
       ]
     }
+  },
+  "contact": {
+    "contactUsForm": {
+      "name": "",
+      "email": "",
+      "message": "",
+      "send": "",
+      "submissionMessage": ""
+    }
   }
 }
