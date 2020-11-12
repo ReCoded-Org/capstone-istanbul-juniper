@@ -1,0 +1,10 @@
+.gameContainer {
+    display: flex;
+    flex-direction: column
+}
+
+.gameContainer__listOfImages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
