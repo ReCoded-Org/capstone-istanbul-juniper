@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row } from "antd";
 import puzzledImage from "./../../images/habitat.jpg";
-import shuffle from "./../memorygame/shuffle"
+import shuffle from "./../memorygame/shuffle";
 import "./index.css";
 
 const NUM_OF_TILES = 6;
@@ -32,8 +32,7 @@ const PuzzleGrid = () => {
     // for loop that generates a random and extracts the element with the index
     // equal to the random number, then pushes that element to the end of newTilesArray.
 
-    
-    const randomizedTilesArray = shuffle(newTilesArray)
+    const randomizedTilesArray = shuffle(newTilesArray);
     // for (let i = 0; i < newTilesArray.length; i++) {
     //   let random = Math.floor(Math.random() * (newTilesArray.length - 1));
     //   let randomItemArray = newTilesArray.splice(random, 1);
@@ -60,7 +59,9 @@ const PuzzleGrid = () => {
       swapTiles(prevId, clickedTileId);
     } else {
       setSelectedTile(clickedTileId);
-      const clickedTileIndex = currentPuzzleState.findIndex((tile) => tile.id === clickedTileId);
+      const clickedTileIndex = currentPuzzleState.findIndex(
+        (tile) => tile.id === clickedTileId
+      );
       // set the select value of the tile to true
       currentPuzzleState[clickedTileIndex] = {
         ...currentPuzzleState[clickedTileIndex],
@@ -98,38 +99,36 @@ const PuzzleGrid = () => {
 
   return (
     <Col className="puzzleGrid">
-      {isSolved? (
-    <img
-      className="puzzleGrid__imageDisplayed"
-      src={puzzledImage}
-      alt="tile"
-    />
-  )
-  : (currentPuzzleState.map((tile) => {
-    return (
-      <Row
-        key={"tileNumber-" + tile.id}
-        className={
-          tile.selected
-            ? "selectedTile puzzleGrid__tile"
-            : "puzzleGrid__tile"
-        }
-        onClick={() => handleSelect(tile.id)}
-      >
+      {isSolved ? (
         <img
-          className="puzzleGrid__puzzledImage"
+          className="puzzleGrid__imageDisplayed"
           src={puzzledImage}
-          alt="tile from the image"
-          style={{ top: `-${tile.top}%` }}
+          alt="tile"
         />
-      </Row>
-    );
-  })
-)}
+      ) : (
+        currentPuzzleState.map((tile) => {
+          return (
+            <Row
+              key={"tileNumber-" + tile.id}
+              className={
+                tile.selected
+                  ? "selectedTile puzzleGrid__tile"
+                  : "puzzleGrid__tile"
+              }
+              onClick={() => handleSelect(tile.id)}
+            >
+              <img
+                className="puzzleGrid__puzzledImage"
+                src={puzzledImage}
+                alt="tile from the image"
+                style={{ top: `-${tile.top}%` }}
+              />
+            </Row>
+          );
+        })
+      )}
     </Col>
   );
 };
 
 export default PuzzleGrid;
-
-
