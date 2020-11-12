@@ -12,9 +12,8 @@ const MemoryGame = () => {
   const [t] = useTranslation();
   const factsTitle = t("memoryGame.facts");
   const gameTitle = t("memoryGame.title");
-
   const [completed, setCompleted] = useState(false);
-  const [redirect, setRedirect] = useState();
+  const [redirect] = useState();
   const [matchedCards, setMatchedCards] = useState([]);
 
   return redirect ? (
@@ -31,7 +30,6 @@ const MemoryGame = () => {
             setMatchedCards={setMatchedCards}
             matchedCards={matchedCards}
             setCompleted={setCompleted}
-            setRedirect={setRedirect}
           />
         </Row>
       </Col>
