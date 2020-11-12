@@ -6,13 +6,13 @@ import { auth } from "../../firebaseConfig";
 import "./index.css";
 
 const Home = () => {
-  const { user, setUser } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   return (
     <>
       Welcome, {user.isLoggedin ? user.fullname : "GUEST"}, |
       {user.isLoggedin ? (
         <a
-          href="#"
+          href="/#"
           onClick={(e) => {
             e.preventDefault();
             auth.signOut();

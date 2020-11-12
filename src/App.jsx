@@ -5,7 +5,7 @@ import "./i18n";
 import AuthProvider from "./auth/authContext";
 import { Route, Switch } from "react-router-dom";
 import Home from "./containers/Home";
-
+import './app.css';
 function App() {
   return (
     <AuthProvider>

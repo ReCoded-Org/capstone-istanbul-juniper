@@ -1,0 +1,14 @@
+.twitterContent__col__image {
+  min-width: 80%;
+  max-width: 92%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  transition: all 0.5s;
+  cursor: pointer;
+  max-height: 530px;
+}
+
+.twitterContent__col__image:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}

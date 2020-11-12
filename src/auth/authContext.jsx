@@ -11,11 +11,9 @@ const AuthProvider = (props) => {
 
   useEffect(() => {
     auth.onAuthStateChanged((auth) => {
-      console.log('AUTHSTATECHANGE ', auth);
       processAuth(auth,setUser);
     });
     return () => {
-      // cleanup
     }
   }, []);
 
@@ -27,13 +25,11 @@ const AuthProvider = (props) => {
 };
 
 export const processAuth = async (auth,setUser) => {
-
   if (!auth){
     return setUser({});
   }
-
   let firestoreResult = await firestore
-    .doc("users/" + auth.uid)
+    .doc("users/" + auth.uid) // A unique user ID, assigned to the requesting user, we're calling/maticing this ID from the our server.
     .get();
   if (typeof(firestoreResult.data()) === "undefined"){
     await firestore.collection("users").doc(auth.uid).set({
@@ -45,8 +41,6 @@ export const processAuth = async (auth,setUser) => {
     .doc("users/" + auth.uid)
     .get();
   }
-  console.log(firestoreResult.data());
-
   let user = {
     isLoggedin: true,
     uid: auth.uid,
@@ -57,6 +51,5 @@ export const processAuth = async (auth,setUser) => {
   await setUser(user);
   return;
 }
-
 
 export default AuthProvider;

@@ -1,11 +1,11 @@
-import { Alert, Checkbox, Input } from "antd";
+import { Alert, Button, Checkbox, Input } from "antd";
+import Modal from "antd/lib/modal/Modal";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { validateEmail } from "../../functions";
 import "./index.css";
 
 const Register = (props) => {
-  const [values, setValues] = useState({
+  const [registerInformation, setRegisterInformation] = useState({
     fullname: "",
     age: "",
     email: "",
@@ -13,15 +13,16 @@ const Register = (props) => {
     agree: false,
   });
   const [errors, setErrors] = useState({});
+  const [termsOpen, setTermsOpen] = useState(false);
   const handleChange = (key, value) => {
-    let newValues = Object.assign({}, values);
+    let newValues = Object.assign({}, registerInformation);
     newValues[key] = value;
-    setValues(newValues);
+    setRegisterInformation(newValues);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let { fullname, email, age, password, agree } = values;
+    let { fullname, email, age, password, agree } = registerInformation;
 
     let errors = {};
     if (fullname.trim() === "") {
@@ -50,7 +51,7 @@ const Register = (props) => {
       return;
     }
     if (typeof props.onSubmit == "function") {
-      props.onSubmit(values);
+      props.onSubmit(registerInformation);
     }
   };
 
@@ -64,8 +65,37 @@ const Register = (props) => {
       props.onFacebookAuth();
     }
   }
+  const handleGoogleAuth = () =>{ 
+    if (typeof(props.onGoogleAuth) === "function"){
+      props.onGoogleAuth();
+    }
+  }
+  const handleOkTerms = ()=>{
+    handleChange("agree",true); setTermsOpen(false)
+  }
+  const handleCancelTerms = ()=>{
+    setTermsOpen(false);
+  }
   return (
     <form noValidate onSubmit={handleSubmit}>
+      <Modal title="Terms Of Service" 
+      visible={termsOpen} 
+      onOk={handleOkTerms} 
+      onCancel={handleCancelTerms}
+      footer={[
+        <Button key="back" onClick={handleCancelTerms}>Close</Button>,
+        <Button key="submit" type="primary" onClick={handleOkTerms}>I Agree</Button>,
+      ]}
+      >
+        <ul>
+          <li>term1 </li>
+          <li>term2 </li>
+          <li>term3 </li>
+          <li>term4 </li>
+          <li>term5 </li>
+          <li>term6 </li>
+        </ul>
+      </Modal>
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">Create new account</div>
         {props.error !== "" ? (
@@ -89,7 +119,7 @@ const Register = (props) => {
                   ? "loginContainer__loginDialog__input__hasError"
                   : ""
               }
-              value={values.fullname}
+              value={registerInformation.fullname}
               onChange={(e) => {
                 handleChange("fullname", e.target.value);
               }}
@@ -109,7 +139,7 @@ const Register = (props) => {
                   : ""
               }
               type="number"
-              value={values.age}
+              value={registerInformation.age}
               onChange={(e) => {
                 handleChange("age", e.target.value);
               }}
@@ -128,7 +158,7 @@ const Register = (props) => {
                   ? "loginContainer__loginDialog__input__hasError"
                   : ""
               }
-              value={values.email}
+              value={registerInformation.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
@@ -151,7 +181,7 @@ const Register = (props) => {
                   : ""
               }
               type="password"
-              value={values.password}
+              value={registerInformation.password}
               onChange={(e) => {
                 handleChange("password", e.target.value);
               }}
@@ -164,13 +194,13 @@ const Register = (props) => {
           </div>
           <div className="loginContainer__loginDialog__input">
             <Checkbox
-              checked={values.agree}
+              checked={registerInformation.agree}
               onChange={(e) => {
                 handleChange("agree", e.target.checked);
               }}
             >
               {" "}
-              I agree to <Link to="/terms">terms and conditions</Link>
+              I agree to <a href="/#" onClick={(e)=>{ e.preventDefault(); setTermsOpen(true);}}>terms and conditions</a>
             </Checkbox>
             {errors["agree"] ? (
               <div className="loginContainer__loginDialog__errorContainer">
@@ -212,6 +242,15 @@ const Register = (props) => {
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           > Login With Facebook
+          </button>
+          <button
+            onClick={() => {
+              handleGoogleAuth();
+            }}
+            type="button"
+            className="loginContainer__loginDialog__googleLoginBtn"
+          >
+            Login With Google
           </button>
         </div>
       </div>

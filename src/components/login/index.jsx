@@ -1,47 +1,41 @@
 import { Alert, Input } from "antd";
 import React, { useState } from "react";
 import { validateEmail } from "../../functions";
-import "./index.css";
 
 const Login = (props) => {
-  const [values, setValues] = useState({ email: "", password: "" });
-
-  const handleChange = (key, value) => {
-    let newValues = Object.assign({}, values);
-    newValues[key] = value;
-    setValues(newValues);
+const [loginCredentials, setLoginCredentials] = useState({ email: "", password: "" });
+const handleChange = (key, value) => {
+  let newValues = Object.assign({}, loginCredentials);
+      newValues[key] = value;
+      setLoginCredentials(newValues);
   };
-  const [errors, setErrors] = useState({});
-
-  const handleSubmit = (e) => {
+const [errors, setErrors] = useState({});
+const handleSubmit = (e) => {
     e.preventDefault();
 
-    let { email, password } = values;
-    let errors = {};
+  let { email, password } = loginCredentials;
+  let errors = {};
     if (!validateEmail(email)) {
       errors["email"] = "Email format error";
     }
     if (email.trim() === "") {
       errors["email"] = "Please fill this field";
     }
-
     if (password.trim().length < 6) {
       errors["password"] = "Password must be at least 6 characters long";
     }
     if (password.trim() === "") {
       errors["password"] = "Please fill this field";
     }
-
     setErrors(errors);
     if (Object.keys(errors).length > 0) {
       return;
     }
     if (typeof props.onSubmit == "function") {
-      props.onSubmit(values);
+      props.onSubmit(loginCredentials);
     }
   };
-
-  const handleFacebookAuth = () =>{ 
+const handleFacebookAuth = () =>{ 
     if (typeof(props.onFacebookAuth) === "function"){
       props.onFacebookAuth();
     }
@@ -61,6 +55,7 @@ const Login = (props) => {
       props.onGoToPasswordReset();
     }
   }
+
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
@@ -73,6 +68,7 @@ const Login = (props) => {
             message={props.error}
           ></Alert>
         ) : null}
+        {props.message}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">Email</div>
           <div className="loginContainer__loginDialog__input">
@@ -83,7 +79,7 @@ const Login = (props) => {
                   : ""
               }
               type="email"
-              value={values.email}
+              value={loginCredentials.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
@@ -105,7 +101,7 @@ const Login = (props) => {
                   : ""
               }
               type="password"
-              value={values.password}
+              value={loginCredentials.password}
               onChange={(e) => {
                 handleChange("password", e.target.value);
               }}
@@ -117,51 +113,38 @@ const Login = (props) => {
             ) : null}
           </div>
           <div className="loginContainer__loginDialog__forgotPasswordContainer">
-              <a href="#" onClick={(e)=>{
+              <a href="/#" onClick={(e)=>{
                 e.preventDefault();
                 handleGoToPasswordReset();
               }}>Forgot Password?</a>
-
           </div>
           <button
             type="submit"
-            className="loginContainer__loginDialog__submitButton"
-          >
-            Log in
+            className="loginContainer__loginDialog__submitButton">Log in
           </button>
-          <div className="loginContainer__loginDialog__registerLabel">
-            New at junpier? Register now
+          <div className="loginContainer__loginDialog__registerLabel"> New at junpier? Register now
           </div>
           <button
             onClick={() => {
               handleGoToRegister();
             }}
             type="button"
-            className="loginContainer__loginDialog__registerButton"
-          >
-            Create an account
+            className="loginContainer__loginDialog__registerButton">Create an account
           </button>
-
-          <div className="loginContainer__loginDialog__loginOptionsTitle">
-            Or you can
-          </div>
+          <div className="loginContainer__loginDialog__loginOptionsTitle">Or you can</div>
           <button
             onClick={() => {
               handleFacebookAuth();
             }}
             type="button"
-            className="loginContainer__loginDialog__facebookLoginBtn"
-          >
-            Login With Facebook
+            className="loginContainer__loginDialog__facebookLoginBtn">Login With Facebook
           </button>
           <button
             onClick={() => {
               handleGoogleAuth();
             }}
             type="button"
-            className="loginContainer__loginDialog__googleLoginBtn"
-          >
-            Login With Google
+            className="loginContainer__loginDialog__googleLoginBtn">Login With Google
           </button>
         </div>
       </div>

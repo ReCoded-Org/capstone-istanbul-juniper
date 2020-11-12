@@ -1,0 +1,39 @@
+.spreadTheWord {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin: 0;
+  background: #2a8c79;
+}
+
+.spreadTheWord__button {
+  border-radius: 20px;
+  border: none;
+  background: #f8ac4c;
+  margin: auto;
+  width: 100%;
+  font-family: "Salsa", cursive;
+  font-weight: 550;
+  transition: all 0.5s;
+  padding: 5px;
+  font-size: clamp(1.5rem, 50px, 4vw);
+  cursor: pointer;
+  min-height: 130%;
+}
+
+.spreadTheWord__button:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.spreadTheWord a {
+  color: white;
+  background: #f8ac4c;
+}
+
+.spreadTheWord a:hover {
+  color: white;
+}
+
+.twitterIcon {
+  padding-right: 3%;
+}

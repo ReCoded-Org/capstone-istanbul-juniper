@@ -1,22 +1,20 @@
 import { Alert, Input } from "antd";
 import React, { useState } from "react";
 import { validateEmail } from "../../functions";
-import "./index.css";
 
-const Login = (props) => {
-  const [values, setValues] = useState({ email: "" });
+const PasswordReset = (props) => {
+const [passwordResetInfo, setPasswordRestInfo] = useState({ email: "" });
 
-  const handleChange = (key, value) => {
-    let newValues = Object.assign({}, values);
-    newValues[key] = value;
-    setValues(newValues);
+const handleChange = (key, value) => {
+  let newValues = Object.assign({}, passwordResetInfo);
+  newValues[key] = value;
+  setPasswordRestInfo(newValues);
   };
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    let { email, password } = values;
+    let { email } = passwordResetInfo;
     let errors = {};
     if (!validateEmail(email)) {
       errors["email"] = "Email format error";
@@ -24,33 +22,20 @@ const Login = (props) => {
     if (email.trim() === "") {
       errors["email"] = "Please fill this field";
     }
-
     setErrors(errors);
     if (Object.keys(errors).length > 0) {
       return;
     }
     if (typeof props.onSubmit == "function") {
-      props.onSubmit(values);
+      props.onSubmit(passwordResetInfo);
     }
   };
-
-  const handleGoToRegister = () => {
-    if (typeof props.onGoToRegister == "function") {
-      props.onGoToRegister();
-    }
-  };
-
   const handleGoToLogin = () => {
     if (typeof props.onGoToLogin == "function") {
       props.onGoToLogin();
     }
   };
 
-  const handleGoToPasswordReset = ()=>{
-    if (typeof props.goToPasswordReset == "function") {
-      props.goToPasswordReset();
-    }
-  }
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
@@ -63,6 +48,7 @@ const Login = (props) => {
             message={props.error}
           ></Alert>
         ) : null}
+        {props.message}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">Email</div>
           <div className="loginContainer__loginDialog__input">
@@ -73,7 +59,7 @@ const Login = (props) => {
                   : ""
               }
               type="email"
-              value={values.email}
+              value={passwordResetInfo.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
@@ -84,31 +70,23 @@ const Login = (props) => {
               </div>
             ) : null}
           </div>
-          
           <button
             type="submit"
             className="loginContainer__loginDialog__submitButton"
-          >
-            Password Reset
+          >Password Reset
           </button>
-         
-       
-
           <button
             onClick={() => {
               handleGoToLogin();
             }}
             type="button"
-            className="loginContainer__loginDialog__registerButton"
-          >
-            Back To Log in
+            className="loginContainer__loginDialog__backToLoginButton"
+          >Back To Log in
           </button>
-          
-          
         </div>
       </div>
     </form>
   );
 };
 
-export default Login;
+export default PasswordReset;
