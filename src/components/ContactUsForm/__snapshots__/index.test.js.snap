@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactUsForm snapshot test 1`] = `
+<div
+  className="contactUsForm"
+>
+  <form
+    data-netlify="true"
+    name="contact"
+    netlify-honeypot="info"
+    onSubmit={[Function]}
+  >
+    <span
+      className="contactUsForm__result"
+    >
+      
+    </span>
+    <div
+      className="ant-col"
+      style={Object {}}
+    >
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <label
+          className="contactUsForm__content__label"
+          for="name"
+        >
+          Name:
+        </label>
+      </div>
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <input
+          className="contactUsForm__content__input"
+          name="name"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="ant-col"
+      style={Object {}}
+    >
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <label
+          className="contactUsForm__content__label"
+          for="email"
+        >
+          E-mail:
+        </label>
+      </div>
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <input
+          className="contactUsForm__content__input"
+          name="email"
+          onChange={[Function]}
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="ant-col"
+      style={Object {}}
+    >
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <label
+          className="contactUsForm__content__label"
+          for="message"
+        >
+          Message:
+        </label>
+      </div>
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <textarea
+          className="contactUsForm__content__textarea"
+          name="message"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="ant-row"
+      style={Object {}}
+    >
+      <button
+        className="contactUsForm__content__button"
+        disabled={false}
+        type="submit"
+      >
+        Send
+      </button>
+    </div>
+  </form>
+</div>
+`;
