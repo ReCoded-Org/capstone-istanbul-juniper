@@ -69,7 +69,7 @@ const QuizGame = () => {
             questionNum={currentQuestionNumber + 1}
             totalQuestions={TOTAL_QUESTIONS}
             question={questions[currentQuestionNumber].question}
-            answers={questions[currentQuestionNumber].answers}
+            storedQuestionsAnswers={questions[currentQuestionNumber].answers}
             userAnswer={userAnswers ? userAnswers[questionNumber] : undefined}
             callback={checkAnswer}
           />
