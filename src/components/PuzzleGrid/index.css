@@ -1,4 +1,4 @@
-.currentImage {
+.puzzleGrid {
   margin: 0;
   padding: 0;
   height: 200px;
@@ -15,7 +15,7 @@
   border: 2px solid blue;
 }
 
-.currentImage__tile {
+.puzzleGrid__tile {
   margin: 1.3px;
   background-color: white;
   height: 100%;
@@ -26,14 +26,14 @@
   display: inline-flex;
 }
 
-.currentImage__puzzledImage {
+.puzzleGrid__puzzledImage {
   /*the image needs to be much larger than the tile's div so we can split it into pieces*/
   height: 600%;
   width: 100%;
   position: absolute;
 }
 
-.currentImage__imageDisplayed {
+.puzzleGrid__imageDisplayed {
   height: 100%;
   width: auto;
 }
