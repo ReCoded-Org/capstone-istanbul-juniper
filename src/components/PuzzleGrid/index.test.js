@@ -1,10 +1,10 @@
 import React from "react";
-import CurrentImage from "./index.jsx";
+import PuzzleGrid from "./index.jsx";
 import renderer from "react-test-renderer";
 
-describe("CurrentImage Component", () => {
+describe("PuzzleGrid Component", () => {
   it("matchess the tree", () => {
-    const tree = renderer.create(<CurrentImage />).toJSON();
+    const tree = renderer.create(<PuzzleGrid />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
