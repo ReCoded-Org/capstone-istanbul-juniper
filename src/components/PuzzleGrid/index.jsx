@@ -88,12 +88,12 @@ const PuzzleGrid = () => {
     // first condition checks if tile's id is equal to its index in the array and returns false/true
     // since initial acc value is true, second condition checks if prev value is true and keeps its value
     const isCorrect = currentPuzzleState.reduce((acc, curr, index) => {
-      if (curr.id !== index) {
+      if (curr.id !== index || acc === false) {
         return false;
-      } else if (acc === true) {
+      } 
+      else {
         return acc;
-      }
-    }, true);
+    }}, true);
     setIsSolved(isCorrect);
   };
 
