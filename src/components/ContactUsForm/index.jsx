@@ -5,7 +5,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import NetlifyForm from "../NetlifyForm";
-import {Col, Row } from "antd";
+import { Col, Row } from "antd";
 import { RiSendPlaneFill } from "react-icons/ri";
 import "./index.css";
 

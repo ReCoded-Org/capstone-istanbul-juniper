@@ -27,13 +27,13 @@
   height: clamp(8vh, 10vh, 16vh);
 }
 
-.contactUsForm__content__submit{
-margin-top:0.75rem;
+.contactUsForm__content__submit {
+  margin-top: 0.75rem;
 }
 
 /* TODO: rotate button to right*/
 .contactUsForm__content__submit__button {
- border-radius:10px;
+  border-radius: 10px;
   border: none;
   background: #f8ac4c;
   margin: auto;
