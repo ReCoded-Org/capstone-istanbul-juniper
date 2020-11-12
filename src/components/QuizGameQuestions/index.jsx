@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 
+// this function will display the fetched data to the dom.
 const QuestionCard = ({
   question,
   answers,
