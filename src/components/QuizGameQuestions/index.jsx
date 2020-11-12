@@ -5,7 +5,7 @@ import "./index.css";
 // the callback is used to check if the answer is true or not.
 const QuestionCard = ({
   question,
-  answers,
+  storedQuestionsAnswers,
   callback,
   userAnswer,
   questionNum,
@@ -17,7 +17,7 @@ const QuestionCard = ({
     </p>
     <p dangerouslySetInnerHTML={{ __html: question }} />
     <div>
-      {answers.map((answer) => (
+      {storedQuestionsAnswers.map((answer) => (
         <div
           key={answer}
           correct={userAnswer?.correctAnswer === answer}
