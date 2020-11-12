@@ -79,7 +79,7 @@
       "name": "Name:",
       "email": "E-mail:",
       "message": "Message:",
-      "send": "Send:",
+      "send": "Send",
       "submissionMessage": "Thanks for messaging us!"
     }
   }
