@@ -104,7 +104,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setCompleted }) => {
   // displays a modal when victory condition achieved
   useEffect(() => {
     const MAX_MATCHES = cardStates.length / NUM_REQUIRED_MATCHES;
-    if (matchedCards.length === MAX_MATCHES) {
+    if (matchedCards && matchedCards.length === MAX_MATCHES) {
       setCompleted(true);
       Modal.success({
         content: "You have completed the game!",
