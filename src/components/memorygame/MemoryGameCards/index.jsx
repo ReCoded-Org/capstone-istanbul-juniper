@@ -15,6 +15,7 @@ const NUM_REQUIRED_MATCHES = 2;
 // setIsCompleted is a function that is being used to set isCompleted as boolean state when all possible matches made.
 const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
   const [t] = useTranslation();
+
   // cardsDataArr example [{description:"...",link:"...",phrase:".."},...]
   const cardsDataArr = [
     ...t("memoryGame.cards", {
