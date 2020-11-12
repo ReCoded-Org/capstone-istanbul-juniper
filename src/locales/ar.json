@@ -74,16 +74,10 @@
       ]
     }
   },
-  "contactUs": {
+  "contact": {
     "headerSection": {
       "title": "",
       "subtitle": ""
-    },
-    "contactUsForm":{
-      "name":"",
-      "email":"",
-      "message":"",
-      "sendButton":""
     }
   }
 }

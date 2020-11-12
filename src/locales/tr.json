@@ -69,16 +69,10 @@
       ]
     }
   },
-  "contactUs": {
+  "contact": {
     "headerSection": {
       "title": "İletişime geç",
       "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
-    },
-    "contactUsForm":{
-      "name":"İsim",
-      "email":"E-posta",
-      "message":"Mesajınız",
-      "sendButton":"Gönder"
     }
   }
 }
