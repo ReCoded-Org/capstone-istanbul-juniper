@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 
 // this function will display the fetched data to the dom.those parameters will pass in quizgame component.
+// the callback is used to check if the answer is true or not.
 const QuestionCard = ({
   question,
   answers,
