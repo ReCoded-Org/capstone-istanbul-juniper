@@ -1,25 +1,19 @@
-.memoryGameCardContainer___successCard___symbol {
-  width: 100%;
-}
-
-.memoryGameCardContainer___successCard {
-  height: 200px;
-}
-
+.memoryGameCardContainer___successCard,
 .memoryGameCardsContainer___card {
-  cursor: pointer;
-  height: inherit;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    height: 35vh;
+    width: 100%;
 }
 
-.memoryGameCardsContainer___card___image {
-  width: 100%;
-}
-
+.memoryGameCardContainer___successCard___symbol,
+.memoryGameCardsContainer___card___image,
 .memoryGameCardsContainer___card___questionMark {
-  max-height: 100%;
-  max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
-.memoryGameCardContainer {
-  width: 85%;
+.ant-card-body {
 }
