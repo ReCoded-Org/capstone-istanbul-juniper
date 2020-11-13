@@ -20,8 +20,7 @@ const QuestionCard = ({
       {storedQuestionsAnswers.map((answer) => (
         <div
           key={answer}
-          correct={userAnswer?.correctAnswer === answer}
-          userClicked={userAnswer?.answer === answer}>
+          >
           <button
             className="quizQuestionWrapper__userAnswer"
             disabled={userAnswer ? true : false}
