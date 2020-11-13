@@ -57,11 +57,12 @@ const PuzzleGrid = () => {
         (tile) => tile.id === clickedTileId
       );
       // set the select value of the tile to true
-      const copyOfPuzzleState = [...currentPuzzleState]
+      const copyOfPuzzleState = [...currentPuzzleState];
       copyOfPuzzleState[clickedTileIndex] = {
         ...copyOfPuzzleState[clickedTileIndex],
-        selected: true };
-      setCurrentPuzzleState(copyOfPuzzleState)
+        selected: true,
+      };
+      setCurrentPuzzleState(copyOfPuzzleState);
     }
   };
 
@@ -94,40 +95,35 @@ const PuzzleGrid = () => {
 
   let gridBody;
   if (isSolved) {
-    gridBody = <img
-          className="puzzleGrid__imageDisplayed"
-          src={puzzledImage}
-          alt="tile"
-        />
-    }
-  else {
-    gridBody = 
-      currentPuzzleState.map((tile) => {
-        return (
-          <Row
-            key={"tileNumber-" + tile.id}
-            className={
-              tile.selected
-                ? "selectedTile puzzleGrid__tile"
-                : "puzzleGrid__tile"
-            }
-            onClick={() => handleClick(tile.id)}
-          >
-            <img
-              className="puzzleGrid__puzzledImage"
-              src={puzzledImage}
-              alt="tile from the image"
-              style={{ top: `-${tile.top}%` }}
-            />
-          </Row>
-        );
-      })}
+    gridBody = (
+      <img
+        className="puzzleGrid__imageDisplayed"
+        src={puzzledImage}
+        alt="tile"
+      />
+    );
+  } else {
+    gridBody = currentPuzzleState.map((tile) => {
+      return (
+        <Row
+          key={"tileNumber-" + tile.id}
+          className={
+            tile.selected ? "selectedTile puzzleGrid__tile" : "puzzleGrid__tile"
+          }
+          onClick={() => handleClick(tile.id)}
+        >
+          <img
+            className="puzzleGrid__puzzledImage"
+            src={puzzledImage}
+            alt="tile from the image"
+            style={{ top: `-${tile.top}%` }}
+          />
+        </Row>
+      );
+    });
+  }
 
-  return (
-    <Col className="puzzleGrid">
-      {gridBody}
-    </Col>
-  );
+  return <Col className="puzzleGrid">{gridBody}</Col>;
 };
 
 export default PuzzleGrid;
