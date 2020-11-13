@@ -1,12 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CurrentImage Component matchess the tree 1`] = `
-<div
-  className="ant-col currentImage"
-  style={Object {}}
-/>
-`;
-
 exports[`PuzzleGrid Component matches the tree 1`] = `
 <div
   className="ant-col puzzleGrid"
