@@ -1,13 +1,13 @@
 import React from "react";
 import "./index.css";
-import MemoryGameCards from "../../components/memorygame/MemoryGameCards/index";
+import MemoryGame from "../../components/memorygame/MemoryGame/index";
 
-const MemoryGame = () => {
+const MemoryGameContainer = () => {
   return (
     <div className="memoryGameContainer">
-      <MemoryGameCards />
+      <MemoryGame />
     </div>
   );
 };
 
-export default MemoryGame;
+export default MemoryGameContainer;

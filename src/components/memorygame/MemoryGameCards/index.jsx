@@ -80,8 +80,10 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
         setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
         // isFlipped is false as default. When it is true backside of card become visible
       } else if (property === "isFlipped") {
-        targetCardState.isFlipped = !targetCardState.isFlipped;
-        setCardStates(() => [...copyOfCardStates]);
+        setTimeout(() => {
+          targetCardState.isFlipped = !targetCardState.isFlipped;
+          setCardStates(() => [...copyOfCardStates]);
+        }, 600);
       } else {
         throw new Error(
           "Invalid property was passed to changeCardStatePropertyToOpposite"
@@ -106,7 +108,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
         changeCardStatePropertyToOpposite("isFlipped", unmatchedCard);
       });
     }
-  }, [selectedCards, cardStates, setMatchedCards]);
+  }, [selectedCards]);
 
   // displays a modal when victory condition achieved
   useEffect(() => {
