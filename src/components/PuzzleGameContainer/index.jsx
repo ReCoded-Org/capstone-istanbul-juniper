@@ -31,8 +31,7 @@ const PuzzleGameContainer = () => {
           );
         })}
       </Row>
-      <Row className="gameContainer__puzzleGrid">
-      </Row>
+      <Row className="gameContainer__puzzleGrid"></Row>
     </Card>
   );
 };
