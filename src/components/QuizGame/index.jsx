@@ -57,6 +57,8 @@ const QuizGame = () => {
   const gameStarted = isGameStart &&!isLoading
   const checkIfNotLastQuestion = userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1
   const  checkToNextQuestion =  gameStarted && checkIfNotLastQuestion 
+  const currentQuestion = questions[currentQuestionNumber].question
+  const storedAnswers = questions[currentQuestionNumber].answers
   return (
     <>
       <div className="quizWrapper">
@@ -72,8 +74,8 @@ const QuizGame = () => {
           <QuestionCard
             questionNum={currentQuestionNumber + 1}
             totalQuestions={TOTAL_QUESTIONS}
-            question={questions[currentQuestionNumber].question}
-            storedQuestionsAnswers={questions[currentQuestionNumber].answers}
+            question= {currentQuestion}
+            storedQuestionsAnswers={storedAnswers}
             userAnswer={userAnswers ? userAnswers[questionNumber] : undefined}
             callback={checkAnswer}
           />
