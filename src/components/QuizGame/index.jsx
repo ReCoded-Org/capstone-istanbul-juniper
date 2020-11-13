@@ -15,7 +15,6 @@ const QuizGame = () => {
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [isGameOver, setIsGameOver] = useState(false);
   const [isGameStart,setIsGameStart]=useState(false)
   const startQuiz = async () => {
     setIsLoading(true);
@@ -31,7 +30,7 @@ const QuizGame = () => {
     setIsLoading(false);
   };
   const checkAnswer = (e) => {
-    if (!isGameOver && isGameStart) {
+    if (isGameStart) {
       const answer = e.currentTarget.value;
       const answerAgainstCorrect = questions[currentQuestionNumber].correct_answer
       const isCorrect = answerAgainstCorrect  === answer;
@@ -50,13 +49,12 @@ const QuizGame = () => {
   const nextQuestion = () => {
     const nextQNum = currentQuestionNumber + 1;
     if (nextQNum>= TOTAL_QUESTIONS) {
-      setIsGameOver(true);
       setIsGameStart(true)
     } else {
       setCurrentQuestionNumber(nextQNum);
     }
   };
-  const  checkToNextQuestion = !isGameOver && isGameStart &&!isLoading && userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1 
+  const  checkToNextQuestion = isGameStart &&!isLoading && userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1 
   return (
     <>
       <div className="quizWrapper">
@@ -66,9 +64,9 @@ const QuizGame = () => {
             Start
           </button>
         ) }
-        {!isGameOver && isGameStart && <p className="quizWrapper__score">Score: {score}</p>}
+        { isGameStart && <p className="quizWrapper__score">Score: {score}</p>}
         {isLoading && <p>Loading Questions...</p>}
-        {!isLoading && !isGameOver && isGameStart && (
+        {!isLoading &&  isGameStart && (
           <QuestionCard
             questionNum={currentQuestionNumber + 1}
             totalQuestions={TOTAL_QUESTIONS}
