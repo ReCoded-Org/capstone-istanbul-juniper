@@ -7,10 +7,10 @@ const ContactUsHeaderSection = () => {
   return (
     <div className="contactUs__headerSection">
       <h2 className="contactUs__headerSection__title">
-        {t("contact.contactUsHeaderSection.title")}
+        {t("contact.headerSection.title")}
       </h2>
       <p className="contactUs__headerSection__context">
-        {t("contact.contactUsHeaderSection.subtitle")}
+        {t("contact.headerSection.subtitle")}
       </p>
     </div>
   );

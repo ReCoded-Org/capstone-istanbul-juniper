@@ -75,7 +75,7 @@
     }
   },
   "contact": {
-    "contactUsHeaderSection": {
+    "headerSection": {
       "title": "",
       "subtitle": ""
     }

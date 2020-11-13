@@ -75,8 +75,8 @@
     }
   },
   "contact": {
-    "contactUsHeaderSection": {
-      "title": "Contact us",
+    "headerSection": {
+      "title": "Contact Us",
       "subtitle": "You can share from here your new game requests, questions, comments, suggestions with us."
     }
   }

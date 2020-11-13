@@ -70,8 +70,8 @@
     }
   },
   "contact": {
-    "contactUsHeaderSection": {
-      "title": "İletişime geç",
+    "headerSection": {
+      "title": "Bizimle İletişime Geç",
       "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
     }
   }
