@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PuzzleGameContainer Component matches the tree 1`] = `
+<div
+  className="ant-card ant-card-bordered ant-card-small puzzlePage__content-puzzleBox gameContainer"
+>
+  <div
+    className="ant-card-body"
+    style={Object {}}
+  >
+    <div
+      className="ant-row gameContainer__listOfImages"
+      style={Object {}}
+    >
+      <div
+        className="ant-col gameContainer__listOfImages--imgContainer"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          alt="click on the image to play image puzzle"
+          src="habitat.jpg"
+        />
+      </div>
+      <div
+        className="ant-col gameContainer__listOfImages--imgContainer"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          alt="click on the image to play image puzzle"
+          src="yellow-spot.svg"
+        />
+      </div>
+    </div>
+    <div
+      className="ant-row gameContainer__puzzleGrid"
+      style={Object {}}
+    />
+  </div>
+</div>
+`;
