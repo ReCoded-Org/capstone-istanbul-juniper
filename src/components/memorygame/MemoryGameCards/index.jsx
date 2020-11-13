@@ -78,9 +78,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
       targetCardState.isFlipped = !targetCardState.isFlipped;
       setCardStates(() => [...copyOfCardStates]);
     } else {
-      throw new Error(
-        "Invalid property was passed to changeCardStatePropertyToOpposite"
-      );
+      throw new Error("invalid property");
     }
     setSelectedCards([]);
   };
