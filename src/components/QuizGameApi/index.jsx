@@ -5,7 +5,8 @@
 import shuffle from '../../components/memorygame/shuffle.jsx'
 
 export const fetchQuizQuestions = async (amount, difficulty) => {
-  const endpoint = `https://opentdb.com/api.php?amount=${amount}&category=17&difficulty=${difficulty}&type=multiple`;
+  const natureCategory = 17
+  const endpoint = `https://opentdb.com/api.php?amount=${amount}&category=${natureCategory}&difficulty=${difficulty}&type=multiple`;
   const data = await (await fetch(endpoint)).json();
   return data.results.map((question) => ({
     ...question,
