@@ -16,8 +16,8 @@ const NUM_OF_TILES = 6;
 const PuzzleGrid = () => {
   // currentPuzzleState holds the current order of the tiles and updates them when the user swaps tiles
   const [currentPuzzleState, setCurrentPuzzleState] = useState([]);
-  // selectedTile state shows if there is a tile selected and which one is selected if any
-  const [selectedTile, setSelectedTile] = useState(null);
+  // selectedTileId state shows if there is a tile selected and which one is selected if any
+  const [selectedTileId, setSelectedTileId] = useState(null);
   // if unsolved it displays the tiles and when solved it displays the full image
   const [isSolved, setIsSolved] = useState(false);
 
@@ -27,7 +27,12 @@ const PuzzleGrid = () => {
     for (let tileId = 0; tileId < NUM_OF_TILES; tileId++) {
       let tileTopStyling = tileId * 100;
       // value of selected is used for styling purposes where the selected tile should be highlighted
-      // value of top is used for fitting the image inside the tile
+      // value of top is used for fitting the image inside the tile and give a cropping effect
+      // This effect is achieved by creating a div for each tile that contains an image 
+      // that's 6 times larger than the div then move the image to the top by setting the 
+      // the overflow value of the containing div to hidden and moving the image to the top
+      // using a percentage of the height of the wrapping div (percetange is set according to Id)
+      // the image is moved to the top by giving it a minus top value 
       let newTile = { id: tileId, selected: false, top: tileTopStyling };
       newTilesArray.push(newTile);
     }
@@ -45,14 +50,14 @@ const PuzzleGrid = () => {
   }, [currentPuzzleState]);
 
   const handleClick = (clickedTileId) => {
-    // if selectedTile's value is not equal to null (meaning there is a tile seleted already)
+    // if selectedTileId's value is not equal to null (meaning there is a tile seleted already)
     // then when another tile is clicked swap both tiles' places
-    // else set the selectedTile to the id of the clicked tile
-    if (selectedTile !== null) {
-      const prevId = selectedTile;
+    // else set the selectedTileId to the id of the clicked tile
+    if (selectedTileId !== null) {
+      const prevId = selectedTileId;
       swapTiles(prevId, clickedTileId);
     } else {
-      setSelectedTile(clickedTileId);
+      setSelectedTileId(clickedTileId);
       const clickedTileIndex = currentPuzzleState.findIndex(
         (tile) => tile.id === clickedTileId
       );
@@ -66,25 +71,26 @@ const PuzzleGrid = () => {
     }
   };
 
-  const swapTiles = (id0, id1) => {
+  // This function takes the Id of two tiles and swaps their places
+  const swapTiles = (tileId0, tileId1) => {
     let newTiles = [...currentPuzzleState];
-    let index0 = currentPuzzleState.findIndex((tile) => tile.id === id0);
-    let index1 = currentPuzzleState.findIndex((tile) => tile.id === id1);
-    let tile0 = { ...currentPuzzleState[index0] };
-    let tile1 = { ...currentPuzzleState[index1] };
-    newTiles[index0] = tile1;
-    newTiles[index1] = tile0;
+    let tileIndex0 = currentPuzzleState.findIndex((tile) => tile.id === tileId0);
+    let tileIndex1 = currentPuzzleState.findIndex((tile) => tile.id === tileId1);
+    let tile0 = { ...currentPuzzleState[tileIndex0] };
+    let tile1 = { ...currentPuzzleState[tileIndex1] };
+    newTiles[tileIndex0] = tile1;
+    newTiles[tileIndex1] = tile0;
     newTiles.forEach((tile) => (tile.selected = false));
     setCurrentPuzzleState(newTiles);
-    setSelectedTile(null);
+    setSelectedTileId(null);
   };
 
   const checkSolution = () => {
     // tiles are saved in an array indexed from 0 to n (6) and displayed in that order
     // first condition checks if tile's id is equal to its index in the array and returns false/true
     // since initial acc value is true, second condition checks if prev value is true and keeps its value
-    const isCorrect = currentPuzzleState.reduce((acc, curr, index) => {
-      if (curr.id !== index || acc === false) {
+    const isCorrect = currentPuzzleState.reduce((acc, currTile, tileCurrIndex) => {
+      if (currTile.id !== tileCurrIndex || acc === false) {
         return false;
       } else {
         return acc;
@@ -108,7 +114,7 @@ const PuzzleGrid = () => {
         <Row
           key={"tileNumber-" + tile.id}
           className={
-            tile.selected ? "selectedTile puzzleGrid__tile" : "puzzleGrid__tile"
+            tile.selected ? "selectedTileId puzzleGrid__tile" : "puzzleGrid__tile"
           }
           onClick={() => handleClick(tile.id)}
         >
