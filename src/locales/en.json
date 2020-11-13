@@ -76,9 +76,9 @@
   },
   "contact": {
     "contactUsForm": {
-      "name": "Name:",
-      "email": "E-mail:",
-      "message": "Message:",
+      "name": "Your name:",
+      "email": "Your email address:",
+      "message": "What is your question or comment?",
       "send": "Send",
       "submissionMessage": "Thanks for messaging us!"
     }

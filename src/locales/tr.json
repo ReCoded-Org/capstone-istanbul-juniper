@@ -71,9 +71,9 @@
   },
   "contact": {
     "contactUsForm": {
-      "name": "İsim:",
-      "email": "E-posta:",
-      "message": "Mesaj:",
+      "name": "İsmin:",
+      "email": "Eposta adresin:",
+      "message": "Bize neyi sormak veya yorumda bulunmayı istersin?",
       "send": "Gönder",
       "submissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
     }
