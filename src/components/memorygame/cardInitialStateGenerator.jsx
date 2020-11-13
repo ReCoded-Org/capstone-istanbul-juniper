@@ -1,4 +1,4 @@
-import * as invariant from "invariant";
+import invariant from "invariant";
 import CARD_BACKSIDE_IMAGES from "./memoryCardBackSideImages";
 import shuffle from "./shuffle";
 
@@ -59,7 +59,6 @@ const cardInitialStateGenerator = (cardDataArr, numRequiredMatches) => {
       },
     ];
   });
-
   return shuffle(cardStates);
 };
 
