@@ -1,5 +1,15 @@
 .memoryGame__card {
   margin: auto;
-  width: 60%;
+  width: 100%;
   text-align: center;
+  font-family: sans-serif;
+  border-radius: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: clamp(1.1rem, 1vw, 300%);
+}
+
+.memoryGame__card:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
 }

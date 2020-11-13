@@ -12,7 +12,7 @@ const MemoryGame = () => {
   const [t] = useTranslation();
   const factsTitle = t("memoryGame.facts");
   const gameTitle = t("memoryGame.title");
-  const [completed, setCompleted] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
   const [redirect] = useState();
   const [matchedCards, setMatchedCards] = useState([]);
 
@@ -22,20 +22,20 @@ const MemoryGame = () => {
     </>
   ) : (
     <Row className="memoryGame" justify="center">
-      <Confetti active={completed} config={confettiConfig} />
+      <Confetti active={isCompleted} config={confettiConfig} />
       <Col xs={22} md={20} xl={17}>
         <h1 className="memoryGame__title">{gameTitle}</h1>
         <Row justify="center">
           <MemoryGameCards
             setMatchedCards={setMatchedCards}
             matchedCards={matchedCards}
-            setCompleted={setCompleted}
+            setIsCompleted={setIsCompleted}
           />
         </Row>
       </Col>
       {matchedCards ? (
         <Col xs={20}>
-          <Confetti active={completed} config={confettiConfig} />
+          <Confetti active={isCompleted} config={confettiConfig} />
           <MemoryGameFactList facts={matchedCards} title={factsTitle} />
         </Col>
       ) : (

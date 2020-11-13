@@ -6,6 +6,11 @@
   cursor: pointer;
   height: 35vh;
   width: 100%;
+  border-radius: 20px;
+}
+
+.memoryGameCardContainer___successCard {
+  cursor: not-allowed;
 }
 
 .memoryGameCardContainer___successCard___symbol,
