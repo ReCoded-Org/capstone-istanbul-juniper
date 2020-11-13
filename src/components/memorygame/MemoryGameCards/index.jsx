@@ -76,14 +76,16 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
         targetCardState.isMatched = !targetCardState.isMatched;
         setCardStates(() => [...copyOfCardStates]);
         // matchedCards hold successfuly matched card states and uses them to display facts
-        // to prevent fact duplication only 1 of the matched cards should be passed into matchedCards
+        // to prevent fact duplication only 1 matched card should be passed into matchedCards
         setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
         // isFlipped is false as default. When it is true backside of card become visible
       } else if (property === "isFlipped") {
         targetCardState.isFlipped = !targetCardState.isFlipped;
         setCardStates(() => [...copyOfCardStates]);
       } else {
-        throw new Error("invalid property");
+        throw new Error(
+          "Invalid property was passed to changeCardStatePropertyToOpposite"
+        );
       }
       setSelectedCards([]);
     };
