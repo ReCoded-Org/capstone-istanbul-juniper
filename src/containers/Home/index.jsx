@@ -10,7 +10,6 @@ import GamesCarousel from "../../components/GamesCarousel";
 const Home = () => {
   return (
     <>
-      <Navbar />
       <HomePageHeaderSection />
       <GamesCarousel />
       <BottomCurve />
