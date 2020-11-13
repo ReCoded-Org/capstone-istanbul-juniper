@@ -12,7 +12,8 @@ const NUM_REQUIRED_MATCHES = 2;
 // instead of squares this game uses cards.
 // Card flips on click to show what is behind.
 // matchedCards is an array states that holds successfully matched card states
-// setIsCompleted is a function that is being used to set isCompleted as boolean state when all possible matches made.
+// setIsCompleted is a function that is being used to set isCompleted as,
+// boolean state when all possible matches made.
 const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
   const [t] = useTranslation();
 
@@ -22,6 +23,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
       returnObjects: true,
     }),
   ];
+
   // cardStates is an array of states with multiple properties
   // state example :
   // {cardKey:"",img:{src:"",imgKey:""},
