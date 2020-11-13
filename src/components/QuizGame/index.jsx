@@ -18,7 +18,6 @@ const QuizGame = () => {
   const [isGameStart,setIsGameStart]=useState(false)
   const startQuiz = async () => {
     setIsLoading(true);
-    setIsGameOver(false);
     setIsGameStart(true)
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
