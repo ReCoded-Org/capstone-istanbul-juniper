@@ -1,0 +1,22 @@
+.ResourcesPage {
+    margin: 30px;
+}
+
+.ResourcesPage__HeaderContainer {
+    color: white;
+}
+
+.ResourcesPage__HeaderContainer__Title {
+    font-size: 30px;
+}
+
+.ResourcesPage__HeaderContainer__SubTitle {
+    max-width: 400px;
+    width: 100%;
+}
+
+.ResourcesPage__ResourcesContainer {
+    margin-top: 50px;
+    display: grid;
+    gap: 30px;
+}
