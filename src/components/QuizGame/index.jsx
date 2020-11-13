@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { fetchQuizQuestions } from "../../components/QuizGameApi";
 import QuestionCard from "../../components/QuizGameQuestions";
 import "./index.css";
-const Difficulty = {
+
+const DIFFICULTY = {
   EASY: "easy",
   MEDIUM: "medium",
   HARD: "hard",
@@ -21,7 +22,7 @@ const QuizGame = () => {
     setIsGameStart(true)
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
-      Difficulty.EASY
+      DIFFICULTY.EASY
     );
     setQuestions(newQuestions);
     setScore(0);
