@@ -7,12 +7,12 @@ exports[`ContactUsHeaderSection snapshot test 1`] = `
   <h2
     className="contactUs__headerSection__title"
   >
-    contact.contactUsHeaderSection.title
+    contact.headerSection.title
   </h2>
   <p
     className="contactUs__headerSection__context"
   >
-    contact.contactUsHeaderSection.subtitle
+    contact.headerSection.subtitle
   </p>
 </div>
 `;
