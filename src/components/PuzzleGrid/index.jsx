@@ -28,11 +28,11 @@ const PuzzleGrid = () => {
       let tileTopStyling = tileId * 100;
       // value of selected is used for styling purposes where the selected tile should be highlighted
       // value of top is used for fitting the image inside the tile and give a cropping effect
-      // This effect is achieved by creating a div for each tile that contains an image 
-      // that's 6 times larger than the div then move the image to the top by setting the 
+      // This effect is achieved by creating a div for each tile that contains an image
+      // that's 6 times larger than the div then move the image to the top by setting the
       // the overflow value of the containing div to hidden and moving the image to the top
       // using a percentage of the height of the wrapping div (percetange is set according to Id)
-      // the image is moved to the top by giving it a minus top value 
+      // the image is moved to the top by giving it a minus top value
       let newTile = { id: tileId, selected: false, top: tileTopStyling };
       newTilesArray.push(newTile);
     }
@@ -74,8 +74,12 @@ const PuzzleGrid = () => {
   // This function takes the Id of two tiles and swaps their places
   const swapTiles = (tileId0, tileId1) => {
     let newTiles = [...currentPuzzleState];
-    let tileIndex0 = currentPuzzleState.findIndex((tile) => tile.id === tileId0);
-    let tileIndex1 = currentPuzzleState.findIndex((tile) => tile.id === tileId1);
+    let tileIndex0 = currentPuzzleState.findIndex(
+      (tile) => tile.id === tileId0
+    );
+    let tileIndex1 = currentPuzzleState.findIndex(
+      (tile) => tile.id === tileId1
+    );
     let tile0 = { ...currentPuzzleState[tileIndex0] };
     let tile1 = { ...currentPuzzleState[tileIndex1] };
     newTiles[tileIndex0] = tile1;
@@ -89,13 +93,16 @@ const PuzzleGrid = () => {
     // tiles are saved in an array indexed from 0 to n (6) and displayed in that order
     // first condition checks if tile's id is equal to its index in the array and returns false/true
     // since initial acc value is true, second condition checks if prev value is true and keeps its value
-    const isCorrect = currentPuzzleState.reduce((acc, currTile, tileCurrIndex) => {
-      if (currTile.id !== tileCurrIndex || acc === false) {
-        return false;
-      } else {
-        return acc;
-      }
-    }, true);
+    const isCorrect = currentPuzzleState.reduce(
+      (acc, currTile, tileCurrIndex) => {
+        if (currTile.id !== tileCurrIndex || acc === false) {
+          return false;
+        } else {
+          return acc;
+        }
+      },
+      true
+    );
     setIsSolved(isCorrect);
   };
 
@@ -114,7 +121,9 @@ const PuzzleGrid = () => {
         <Row
           key={"tileNumber-" + tile.id}
           className={
-            tile.selected ? "selectedTileId puzzleGrid__tile" : "puzzleGrid__tile"
+            tile.selected
+              ? "selectedTileId puzzleGrid__tile"
+              : "puzzleGrid__tile"
           }
           onClick={() => handleClick(tile.id)}
         >
