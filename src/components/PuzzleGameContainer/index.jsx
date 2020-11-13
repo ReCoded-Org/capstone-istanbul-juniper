@@ -10,7 +10,7 @@ import "./index.css";
 // PuzzleGrid then renders the puzzle tiles of that image
 const PuzzleGameContainer = () => {
   // currentImage state will be passed to the PuzzleGrid Component
-  const [currentImage, setCurrentImage] = useState(habitat);
+  const [currentImage, setCurrentImage] = useState(habitatImg);
   const images = [habitatImg, yellowSpotImg];
 
   const handleImageClick = (e) => {

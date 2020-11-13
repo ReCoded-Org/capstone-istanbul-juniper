@@ -13,22 +13,22 @@ exports[`PuzzleGameContainer Component matches the tree 1`] = `
       style={Object {}}
     >
       <div
-        className="ant-col gameContainer__listOfImages-imgContainer"
+        className="ant-col gameContainer__listOfImages--imgContainer"
         onClick={[Function]}
         style={Object {}}
       >
         <img
-          alt="img "
+          alt="click on the image to play image puzzle"
           src="habitat.jpg"
         />
       </div>
       <div
-        className="ant-col gameContainer__listOfImages-imgContainer"
+        className="ant-col gameContainer__listOfImages--imgContainer"
         onClick={[Function]}
         style={Object {}}
       >
         <img
-          alt="img "
+          alt="click on the image to play image puzzle"
           src="yellow-spot.svg"
         />
       </div>
