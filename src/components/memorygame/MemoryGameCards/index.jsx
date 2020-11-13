@@ -75,21 +75,17 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
       if (property === "isMatched") {
         targetCardState.isMatched = !targetCardState.isMatched;
         setCardStates(() => [...copyOfCardStates]);
-        // matchedCards hold successfuly matched card states and uses them to display facts
-        // to prevent fact duplication only 1 matched card should be passed into matchedCards
-        setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
         // isFlipped is false as default. When it is true backside of card become visible
       } else if (property === "isFlipped") {
         setTimeout(() => {
           targetCardState.isFlipped = !targetCardState.isFlipped;
           setCardStates(() => [...copyOfCardStates]);
-        }, 600);
+        }, 1500);
       } else {
         throw new Error(
           "Invalid property was passed to changeCardStatePropertyToOpposite"
         );
       }
-      setSelectedCards([]);
     };
 
     // prevents any action to be taken if there isn't enough clicked card
@@ -97,17 +93,21 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
       return;
     }
     const isMatched = selectedCards.every((card) => {
-      return areCardsMatching(card, selectedCards[0]);
+      return areCardsMatching(card, ...selectedCards);
     });
     if (isMatched) {
       selectedCards.forEach((matchedCard) => {
         changeCardStatePropertyToOpposite("isMatched", matchedCard);
       });
+      // matchedCards hold successfuly matched card states and uses them to display facts
+      // to prevent fact duplication only 1 matched card should be passed into matchedCards
+      setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
     } else {
       selectedCards.forEach((unmatchedCard) => {
         changeCardStatePropertyToOpposite("isFlipped", unmatchedCard);
       });
     }
+    setSelectedCards([]);
   }, [selectedCards]);
 
   // displays a modal when victory condition achieved
@@ -143,7 +143,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
             onClick={() => handleClick(cardState)}
           >
             <img
-              src={questionMark}
+              src={cardState.img.src}
               alt="Green question mark"
               className="memoryGameCardsContainer___card___questionMark"
             />
