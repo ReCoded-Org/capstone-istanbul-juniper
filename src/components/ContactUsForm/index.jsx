@@ -58,7 +58,7 @@ const ContactUsForm = () => {
         <span className="contactUsForm__result">{submissionMessage}</span>
         <Col>
           <Col>
-            <label for="name" className="contactUsForm__content__label">
+            <label for="name" className="contactUsForm__contentLabel">
               {t("contact.contactUsForm.name")}
             </label>
           </Col>
@@ -68,13 +68,13 @@ const ContactUsForm = () => {
               name="name"
               value={contactFormValues.name}
               onChange={handleChange}
-              className="contactUsForm__content__input"
+              className="contactUsForm__contentInput"
             />
           </Col>
         </Col>
         <Col>
           <Col>
-            <label for="email" className="contactUsForm__content__label">
+            <label for="email" className="contactUsForm__contentLabel">
               {t("contact.contactUsForm.email")}
             </label>
           </Col>
@@ -84,13 +84,13 @@ const ContactUsForm = () => {
               name="email"
               value={contactFormValues.email}
               onChange={handleChange}
-              className="contactUsForm__content__input"
+              className="contactUsForm__contentInput"
             />
           </Col>
         </Col>
         <Col>
           <Col>
-            <label for="message" className="contactUsForm__content__label">
+            <label for="message" className="contactUsForm__contentLabel">
               {t("contact.contactUsForm.message")}
             </label>
           </Col>
@@ -99,15 +99,15 @@ const ContactUsForm = () => {
               name="message"
               value={contactFormValues.message}
               onChange={handleChange}
-              className="contactUsForm__content__textarea"
+              className="contactUsForm__contentTextarea"
             />
           </Col>
         </Col>
         <Row>
-          <div className="contactUsForm__content__submit">
+          <div className="contactUsForm__contentSubmit">
             <button
               disabled={processing}
-              className="contactUsForm__content__submit__button"
+              className="contactUsForm__contentSubmit__button"
               type="submit"
             >
               {t("contact.contactUsForm.send")} <RiSendPlaneFill />

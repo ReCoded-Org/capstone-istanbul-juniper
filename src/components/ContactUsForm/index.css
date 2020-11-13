@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-.contactUsForm__content__label {
+.contactUsForm__contentLabel {
   font-family: "Raleway";
   font-size: clamp(1rem, 1.5vw, 2rem);
   color: white;
@@ -12,8 +12,8 @@
   text-align: left;
 }
 
-.contactUsForm__content__input,
-.contactUsForm__content__textarea {
+.contactUsForm__contentInput,
+.contactUsForm__contentTextarea {
   font-family: "Raleway";
   font-size: clamp(1.5rem, 2vw, 3rem);
   box-sizing: border-box;
@@ -23,16 +23,16 @@
   width: clamp(20vw, 30vw, 40vw);
   height: clamp(3vh, 5vh, 6vh);
 }
-.contactUsForm__content__textarea {
+.contactUsForm__contentTextarea {
   height: clamp(8vh, 10vh, 16vh);
 }
 
-.contactUsForm__content__submit {
+.contactUsForm__contentSubmit {
   margin-top: 0.75rem;
 }
 
 /* TODO: rotate button to right*/
-.contactUsForm__content__submit__button {
+.contactUsForm__contentSubmit__button {
   border-radius: 10px;
   border: none;
   background: #f8ac4c;
@@ -47,7 +47,7 @@
   align-self: end;
 }
 
-.contactUsForm__content__button {
+.contactUsForm__contentSubmit__button {
   transition: all 0.5s;
 }
 
