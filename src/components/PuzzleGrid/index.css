@@ -24,6 +24,12 @@
   overflow: hidden;
   position: relative;
   display: inline-flex;
+  cursor: move;
+  transform: transition 1.1s;
+}
+
+.puzzleGrid__tile:hover{
+  transform: scale(1.1)
 }
 
 .puzzleGrid__puzzledImage {
