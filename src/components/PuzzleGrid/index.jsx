@@ -14,6 +14,7 @@ const NUM_OF_TILES = 6;
 // the user will swap the places of each tile to put it in its correct position
 // when all tiles are placed in their correct position the full image is displayed
 const PuzzleGrid = () => {
+  // currentPuzzleState holds the current order of the tiles and updates them when the user swaps tiles
   const [currentPuzzleState, setCurrentPuzzleState] = useState([]);
   // selectedTile state shows if there is a tile selected and which one is selected if any
   const [selectedTile, setSelectedTile] = useState(null);
@@ -32,7 +33,6 @@ const PuzzleGrid = () => {
     }
 
     const randomizedTilesArray = shuffle(newTilesArray);
-    // Set the randomized array as generated tiles
     setCurrentPuzzleState(randomizedTilesArray);
   };
 
@@ -44,8 +44,8 @@ const PuzzleGrid = () => {
     checkSolution();
   }, [currentPuzzleState]);
 
-  const handleSelect = (clickedTileId) => {
-    // if selectedTile's value is not equal to null (meaning there a tile seleted already)
+  const handleClick = (clickedTileId) => {
+    // if selectedTile's value is not equal to null (meaning there is a tile seleted already)
     // then when another tile is clicked swap both tiles' places
     // else set the selectedTile to the id of the clicked tile
     if (selectedTile !== null) {
@@ -57,10 +57,11 @@ const PuzzleGrid = () => {
         (tile) => tile.id === clickedTileId
       );
       // set the select value of the tile to true
-      currentPuzzleState[clickedTileIndex] = {
-        ...currentPuzzleState[clickedTileIndex],
-        selected: true,
-      };
+      const copyOfPuzzleState = [...currentPuzzleState]
+      copyOfPuzzleState[clickedTileIndex] = {
+        ...copyOfPuzzleState[clickedTileIndex],
+        selected: true };
+      setCurrentPuzzleState(copyOfPuzzleState)
     }
   };
 
@@ -110,7 +111,7 @@ const PuzzleGrid = () => {
                 ? "selectedTile puzzleGrid__tile"
                 : "puzzleGrid__tile"
             }
-            onClick={() => handleSelect(tile.id)}
+            onClick={() => handleClick(tile.id)}
           >
             <img
               className="puzzleGrid__puzzledImage"
