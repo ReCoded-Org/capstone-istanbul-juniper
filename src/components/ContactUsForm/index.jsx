@@ -12,8 +12,9 @@ import "./index.css";
 const ContactUsForm = () => {
   const [t] = useTranslation();
   const [submissionMessage, setSubmissionMessage] = useState("");
-  // beforeSubmit is for validations and disabling submit button
+  // processing state used in disabling button when inputs are empty, changing when they are not.
   const [processing, setProcessing] = useState(false);
+  // beforeSubmit is for validations and disabling submit button
   const beforeSubmit = async () => {
     if (
       contactFormValues.name.length > 0 &&
@@ -28,6 +29,7 @@ const ContactUsForm = () => {
     }
   };
   // TODO: get submission message to translate files.
+  // submisson message pops out when form is submitted
   // afterSubmit is for submission message and enable submit button
   const afterSubmit = () => {
     setSubmissionMessage("Thanks for messaging us!");
