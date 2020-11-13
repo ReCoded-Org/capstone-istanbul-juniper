@@ -54,7 +54,9 @@ const QuizGame = () => {
       setCurrentQuestionNumber(nextQNum);
     }
   };
-  const  checkToNextQuestion = isGameStart &&!isLoading && userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1 
+  const gameStarted = isGameStart &&!isLoading
+  const checkIfNotLastQuestion = userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1
+  const  checkToNextQuestion =  gameStarted && checkIfNotLastQuestion 
   return (
     <>
       <div className="quizWrapper">
