@@ -18,7 +18,7 @@ const Footer = () => {
     <div className="footerContainer">
       <footer>
         <Router>
-          <img alt="globe" src={globe} className="footerGlobe" />
+          <img alt="globe" src={globe} className="footerContainer__globe" />
           <Col>
             <Row
               gutter={[25]}

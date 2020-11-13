@@ -57,7 +57,7 @@ a.instagram {
 }
 
 @media (max-width: 500px) {
-  img.footerGlobe {
+  img.footerContainer__globe {
     top: 94px;
     transform: scale(0.7);
   }
