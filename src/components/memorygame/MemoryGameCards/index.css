@@ -1,19 +1,22 @@
 .memoryGameCardContainer___successCard,
 .memoryGameCardsContainer___card {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    height: 35vh;
-    width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  height: 35vh;
+  width: 100%;
 }
 
 .memoryGameCardContainer___successCard___symbol,
 .memoryGameCardsContainer___card___image,
 .memoryGameCardsContainer___card___questionMark {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-.ant-card-body {
+.memoryGameCardsContainer___card___image___figcaption {
+  text-align: center;
+  font-family: "Salsa", cursive;
+  font-size: clamp(0.9rem, 1vw, 300%);
 }
