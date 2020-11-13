@@ -10,12 +10,11 @@ const handleChange = (key, value) => {
   newValues[key] = value;
   setPasswordRestInfo(newValues);
   };
-  const [errors, setErrors] = useState({});
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let { email } = passwordResetInfo;
-    let errors = {};
+const [errors, setErrors] = useState({});
+const handleSubmit = (e) => {
+  e.preventDefault();
+  let { email } = passwordResetInfo;
+  let errors = {};
     if (!validateEmail(email)) {
       errors["email"] = "Email format error";
     }
