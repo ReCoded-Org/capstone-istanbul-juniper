@@ -61,33 +61,33 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
     return card.img.imgKey === firstCard.img.imgKey;
   };
 
-  // manipulates isFlipped and isMatched property of card state
-  const changeCardStatePropertyToOpposite = (property, targetCard) => {
-    const copyOfCardStates = [...cardStates];
-    const targetIndex = copyOfCardStates.findIndex(
-      (cardState) => cardState.cardKey === targetCard.cardKey
-    );
-    const targetCardState = copyOfCardStates[targetIndex];
-    // isMatched is false as default. When it is true success symbol appears in card
-    if (property === "isMatched") {
-      targetCardState.isMatched = !targetCardState.isMatched;
-      setCardStates(() => [...copyOfCardStates]);
-      // matchedCards hold successfuly matched card states and uses them to display facts
-      // to prevent fact duplication only 1 of the matched cards should be passed into matchedCards
-      setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
-      // isFlipped is false as default. When it is true backside of card become visible
-    } else if (property === "isFlipped") {
-      targetCardState.isFlipped = !targetCardState.isFlipped;
-      setCardStates(() => [...copyOfCardStates]);
-    } else {
-      throw new Error("invalid property");
-    }
-    setSelectedCards([]);
-  };
-
   // Triggered when user clicks on a card(selectedCards change)
   // checks selected cards to see if they are a match
   useEffect(() => {
+    // manipulates isFlipped and isMatched property of card state
+    const changeCardStatePropertyToOpposite = (property, targetCard) => {
+      const copyOfCardStates = [...cardStates];
+      const targetIndex = copyOfCardStates.findIndex(
+        (cardState) => cardState.cardKey === targetCard.cardKey
+      );
+      const targetCardState = copyOfCardStates[targetIndex];
+      // isMatched is false as default. When it is true success symbol appears in card
+      if (property === "isMatched") {
+        targetCardState.isMatched = !targetCardState.isMatched;
+        setCardStates(() => [...copyOfCardStates]);
+        // matchedCards hold successfuly matched card states and uses them to display facts
+        // to prevent fact duplication only 1 of the matched cards should be passed into matchedCards
+        setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
+        // isFlipped is false as default. When it is true backside of card become visible
+      } else if (property === "isFlipped") {
+        targetCardState.isFlipped = !targetCardState.isFlipped;
+        setCardStates(() => [...copyOfCardStates]);
+      } else {
+        throw new Error("invalid property");
+      }
+      setSelectedCards([]);
+    };
+
     // prevents any action to be taken if there isn't enough clicked card
     if (selectedCards.length !== NUM_REQUIRED_MATCHES) {
       return;
@@ -104,7 +104,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
         changeCardStatePropertyToOpposite("isFlipped", unmatchedCard);
       });
     }
-  }, [selectedCards]);
+  }, [selectedCards, cardStates, setMatchedCards]);
 
   // displays a modal when victory condition achieved
   useEffect(() => {
@@ -115,7 +115,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
         content: "You have completed the game!",
       });
     }
-  }, [matchedCards]);
+  }, [matchedCards, cardStates.length, setIsCompleted]);
 
   const successCardBody = (
     <Card className="memoryGameCardContainer___successCard">
