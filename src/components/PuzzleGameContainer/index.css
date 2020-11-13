@@ -18,7 +18,7 @@
   height: 100%;
 }
 
-.gameContainer__listOfImages-imgContainer {
+.gameContainer__listOfImages--imgContainer {
   height: 10%;
   transition: transform 0.4s;
   width: 20%;
