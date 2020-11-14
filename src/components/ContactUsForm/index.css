@@ -1,58 +1,60 @@
 .contactUsForm {
-  background: #add4c5;
-  display: flex;
-  justify-content: center;
+background: #add4c5;
+display: flex;
+justify-content: center;
+padding-top:1rem;
+padding-bottom:3rem;
 }
 
-.contactUsForm__contentLabel {
-  font-family: "Raleway";
-  font-size: clamp(1rem, 1.5vw, 2rem);
-  color: white;
-  margin-top: 0.5rem;
-  text-align: left;
+.contactUsForm__content__label {
+font-family: "Raleway";
+font-size: clamp(0.80rem, 1rem, 2rem);
+color: white;
+margin-top: 0.5rem;
+text-align: left;
 }
 
-.contactUsForm__contentInput,
-.contactUsForm__contentTextarea {
-  font-family: "Raleway";
-  font-size: clamp(1.5rem, 2vw, 3rem);
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 0.5rem;
-  font-size: 16px;
-  width: clamp(20vw, 30vw, 40vw);
-  height: clamp(3vh, 5vh, 6vh);
-}
-.contactUsForm__contentTextarea {
-  height: clamp(8vh, 10vh, 16vh);
+.contactUsForm__content__input,
+.contactUsForm__content__textarea {
+font-family: "Raleway";
+font-size: clamp(1.5rem, 2rem, 3rem);
+box-sizing: border-box;
+border: 2px solid #ccc;
+border-radius: 0.5rem;
+font-size: 16px;
+width: clamp(15rem, 17rem, 20rem);
+height: clamp(1.5rem,2rem ,2.5rem);
 }
 
-.contactUsForm__contentSubmit {
-  margin-top: 0.75rem;
+.contactUsForm__content__textarea {
+height: clamp(5rem, 7rem, 12rem);
+}
+
+.contactUsForm__content__submit {
+margin-top: 0.75rem;
 }
 
 /* TODO: rotate button to right*/
-.contactUsForm__contentSubmit__button {
-  border-radius: 10px;
-  border: none;
-  background: #f8ac4c;
-  margin: auto;
-  font-family: "Salsa", cursive;
-  transition: all 0.5s;
-  padding: 5px;
-  font-size: clamp(1.5vw, 18px, 3vw);
-  cursor: pointer;
-  color: white;
-  width: clamp(10vw, 30px, 20vw);
-  align-self: end;
+.contactUsForm__content__submit__button {
+border-radius: 10px;
+border: none;
+background: #f8ac4c;
+margin: auto;
+font-family: "Salsa", cursive;
+transition: all 0.5s;
+padding: 5px;
+font-size: clamp(0.75rem,1.25rem ,1.5rem);
+cursor: pointer;
+color: white;
+width: clamp(6rem, 7rem, 8rem);
 }
 
-.contactUsForm__contentSubmit__button {
-  transition: all 0.5s;
+.contactUsForm__content__button {
+transition: all 0.5s;
 }
 
 .contactUsForm__result {
-  color: white;
-  font-family: "Salsa", cursive;
-  font-size: clamp(2vw, 24px, 4vw);
+color: white;
+font-family: "Salsa", cursive;
+font-size: clamp(2vw, 24px, 4vw);
 }
