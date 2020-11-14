@@ -134,5 +134,14 @@
         "phrase": "2025 yılında yaklaşık 3.5 milyar insanın, büyük ölçüde su kirliliğinden kaynaklı su kıtlığı yaşayacağını biliyor muydun?"
       }
     ]
+  },
+  "contact":{
+    "contactUsForm": {
+      "name": "Adın:",
+      "email": "Eposta adresin:",
+      "message": "Bize neler sormak ve önermek istersin?",
+      "send": "İlet",
+      "submissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
+  }
   }
 }
