@@ -6,10 +6,10 @@ import React, { useState, useEffect } from "react";
 
 const NetlifyForm = ({
   formName,
-  beforeSubmit,
-  afterSubmit,
-  contactFormValues,
-  children,
+  beforeSubmit, // function which is used in form validation
+  afterSubmit,  // function which is used in showing submission message
+  contactFormValues, // a state that holds name, email and message values. 
+  children, // stands for form elements name,email,message,button.
 }) => {
   // Keep things well-hidden during runtime (and from bots. They are exposed for netlify build bots.
   const [inNetlifyBuild, setInNetlifyBuild] = useState(true);
