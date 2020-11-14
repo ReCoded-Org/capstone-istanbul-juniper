@@ -80,7 +80,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
         setTimeout(() => {
           targetCardState.isFlipped = !targetCardState.isFlipped;
           setCardStates(() => [...copyOfCardStates]);
-        }, 1500);
+        }, 750);
       } else {
         throw new Error(
           "Invalid property was passed to changeCardStatePropertyToOpposite"

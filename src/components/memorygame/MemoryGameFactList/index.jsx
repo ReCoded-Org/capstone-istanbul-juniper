@@ -10,14 +10,20 @@ import { List, Card } from "antd";
  * If the language is English "title" will be "Facts"
  */
 const MemoryGameFactList = ({ facts, title }) => {
-  return (
-    <>
-      <h1 className="memoryGame__title">{title}</h1>
+  const factListTitle = (
+    <h1 className="memoryGame__title memoryGameFactListContainer__title">
+      {title}
+    </h1>
+  );
+  let factListContent;
+  if (facts.length) {
+    factListContent = (
       <List
+        className="memoryGameFactListContainer__list"
         dataSource={facts}
         renderItem={(fact) => (
-          <List.Item>
-            <Card className="memoryGame__card">
+          <List.Item className="memoryGameFactListContainer__list__item">
+            <Card className="memoryGameFactListContainer__list__item__card">
               <a target="__blank" href={fact.link}>
                 {fact.phrase}
               </a>
@@ -25,7 +31,20 @@ const MemoryGameFactList = ({ facts, title }) => {
           </List.Item>
         )}
       />
-    </>
+    );
+  } else {
+    factListContent = (
+      <h5 className="memoryGameFactListContainer__noFacts">
+        Match cards to reveal facts!
+      </h5>
+    );
+  }
+
+  return (
+    <div className="memoryGameFactListContainer">
+      {factListTitle}
+      {factListContent}
+    </div>
   );
 };
 
