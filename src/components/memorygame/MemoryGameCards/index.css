@@ -1,0 +1,25 @@
+.memoryGameCardContainer___successCard___symbol {
+  width: 100%;
+}
+
+.memoryGameCardContainer___successCard {
+  height: 200px;
+}
+
+.memoryGameCardsContainer___card {
+  cursor: pointer;
+  height: inherit;
+}
+
+.memoryGameCardsContainer___card___image {
+  width: 100%;
+}
+
+.memoryGameCardsContainer___card___questionMark {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.memoryGameCardContainer {
+  width: 85%;
+}
