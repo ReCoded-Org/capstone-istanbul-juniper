@@ -162,7 +162,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
       );
     }
     return (
-      <Col xs={8} sm={6} lg={4} key={cardState.cardKey}>
+      <Col xs={12} sm={6} lg={4} key={cardState.cardKey}>
         {cardBody}
       </Col>
     );

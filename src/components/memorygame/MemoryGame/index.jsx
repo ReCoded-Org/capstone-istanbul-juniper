@@ -11,6 +11,7 @@ import MemoryGameCards from "../MemoryGameCards";
 const MemoryGame = () => {
   const [t] = useTranslation();
   const factsTitle = t("memoryGame.facts");
+  const emptyFactListMessage = t("memoryGame.emptyFactListMessage");
   const gameTitle = t("memoryGame.title");
   const [isCompleted, setIsCompleted] = useState(false);
   const [redirect] = useState();
@@ -36,7 +37,11 @@ const MemoryGame = () => {
       {matchedCards ? (
         <Col xs={20}>
           <Confetti active={isCompleted} config={confettiConfig} />
-          <MemoryGameFactList facts={matchedCards} title={factsTitle} />
+          <MemoryGameFactList
+            facts={matchedCards}
+            title={factsTitle}
+            emptyFactListMessage={emptyFactListMessage}
+          />
         </Col>
       ) : (
         ""

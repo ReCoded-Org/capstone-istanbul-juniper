@@ -9,7 +9,7 @@ import { List, Card } from "antd";
  * "title" is a string that is translated by i18n. It is used to describe what the list holds.
  * If the language is English "title" will be "Facts"
  */
-const MemoryGameFactList = ({ facts, title }) => {
+const MemoryGameFactList = ({ facts, title, emptyFactListMessage }) => {
   const factListTitle = (
     <h1 className="memoryGame__title memoryGameFactListContainer__title">
       {title}
@@ -23,11 +23,11 @@ const MemoryGameFactList = ({ facts, title }) => {
         dataSource={facts}
         renderItem={(fact) => (
           <List.Item className="memoryGameFactListContainer__list__item">
-            <Card className="memoryGameFactListContainer__list__item__card">
-              <a target="__blank" href={fact.link}>
+            <a target="__blank" href={fact.link}>
+              <Card className="memoryGameFactListContainer__list__item__card">
                 {fact.phrase}
-              </a>
-            </Card>
+              </Card>
+            </a>
           </List.Item>
         )}
       />
@@ -35,7 +35,7 @@ const MemoryGameFactList = ({ facts, title }) => {
   } else {
     factListContent = (
       <h5 className="memoryGameFactListContainer__noFacts">
-        Match cards to reveal facts!
+        {emptyFactListMessage}
       </h5>
     );
   }
