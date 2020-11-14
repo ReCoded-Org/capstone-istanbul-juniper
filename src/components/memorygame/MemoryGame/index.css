@@ -4,3 +4,10 @@
   color: white;
   font-size: max(1.7rem, 5vw);
 }
+
+.memoryGame__description {
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  font-size: clamp(17px, 1.7rem, 6vw);
+}

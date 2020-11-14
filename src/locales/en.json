@@ -77,6 +77,10 @@
   "memoryGame": {
     "title": "Memory Game",
     "facts": "Facts",
+    "unlockedFacts": "Unlocked Facts",
+    "header": "Test your memory to reveal facts!",
+    "howToPlayTitle": "How to play?",
+    "howToPlayDescription": "Click on a card to reveal image behind and match it by clicking on a card with same image.",
     "emptyFactListMessage": "Match cards to reveal facts!",
     "cards": [
       {

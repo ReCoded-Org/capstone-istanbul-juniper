@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import ReactCardFlip from "react-card-flip";
-import { Col, Card, Modal, Row } from "antd";
+import { Col, Card, Modal, Row, Popover, Anchor, Button } from "antd";
 import { useTranslation } from "react-i18next";
+import { QuestionCircleTwoTone } from "@ant-design/icons";
+import { HashLink } from "react-router-hash-link";
 import questionMark from "../../../images/memoryGameFrontImage.png";
 import memoryGameSuccessSymbol from "../../../images/memoryGameSuccessSymbol.svg";
 import cardInitialStateGenerator from "../cardInitialStateGenerator";
@@ -23,6 +25,10 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
       returnObjects: true,
     }),
   ];
+  // line 29, 30 and 31 are string translations for screen elements
+  const unlockedFacts = t("memoryGame.unlockedFacts");
+  const howToPlayTitle = t("memoryGame.howToPlayTitle");
+  const howToPlayDescription = t("memoryGame.howToPlayDescription");
 
   // cardStates is an array of states with multiple properties
   // state example :
@@ -143,7 +149,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
             onClick={() => handleClick(cardState)}
           >
             <img
-              src={cardState.img.src}
+              src={questionMark}
               alt="Green question mark"
               className="memoryGameCardsContainer___card___questionMark"
             />
@@ -162,13 +168,35 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
       );
     }
     return (
-      <Col xs={12} sm={6} lg={4} key={cardState.cardKey}>
+      <Col xs={8} lg={6} xl={3} key={cardState.cardKey}>
         {cardBody}
       </Col>
     );
   });
 
-  return <Row className="memoryGameCardContainer">{gameCards}</Row>;
+  return (
+    <div>
+      <Row align="middle" className="scrollToFactsContainer">
+        <Col span={5}>
+          <HashLink to="#memoryGameFactList" smooth={true}>
+            <Button className="scrollToFactsContainer__button" type="primary">
+              <p>{unlockedFacts}</p>
+            </Button>
+          </HashLink>
+        </Col>
+        <Col span={2} push={17} className="howToPlayMemoryGameContainer">
+          <Popover
+            content={howToPlayDescription}
+            title={howToPlayTitle}
+            placement="topRight"
+          >
+            <QuestionCircleTwoTone className="howToPlayMemoryGameContainer__icon" />
+          </Popover>
+        </Col>
+      </Row>
+      <Row className="memoryGameCardContainer">{gameCards}</Row>
+    </div>
+  );
 };
 
 export default MemoryGameCards;

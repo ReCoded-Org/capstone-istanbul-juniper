@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Col, Row } from "antd";
+import { Col, Row, Button } from "antd";
 import Confetti from "react-dom-confetti";
 import { Redirect } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 import MemoryGameFactList from "../MemoryGameFactList/index";
 import "./index.css";
 import confettiConfig from "../confettiConfig";
@@ -13,6 +14,7 @@ const MemoryGame = () => {
   const factsTitle = t("memoryGame.facts");
   const emptyFactListMessage = t("memoryGame.emptyFactListMessage");
   const gameTitle = t("memoryGame.title");
+  const gameHeader = t("memoryGame.header");
   const [isCompleted, setIsCompleted] = useState(false);
   const [redirect] = useState();
   const [matchedCards, setMatchedCards] = useState([]);
@@ -26,6 +28,7 @@ const MemoryGame = () => {
       <Confetti active={isCompleted} config={confettiConfig} />
       <Col xs={22} md={20} xl={17}>
         <h1 className="memoryGame__title">{gameTitle}</h1>
+        <h3 className="memoryGame__description">{gameHeader}</h3>
         <Row justify="center">
           <MemoryGameCards
             setMatchedCards={setMatchedCards}

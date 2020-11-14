@@ -41,7 +41,7 @@ const MemoryGameFactList = ({ facts, title, emptyFactListMessage }) => {
   }
 
   return (
-    <div className="memoryGameFactListContainer">
+    <div className="memoryGameFactListContainer" id="memoryGameFactList">
       {factListTitle}
       {factListContent}
     </div>
