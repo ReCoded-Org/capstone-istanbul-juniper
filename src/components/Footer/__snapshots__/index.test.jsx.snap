@@ -7,7 +7,7 @@ exports[`Footer renders correctly 1`] = `
   <footer>
     <img
       alt="globe"
-      className="footerGlobe"
+      className="footerContainer__globe"
       src="earthNav.svg"
     />
     <div
@@ -15,7 +15,7 @@ exports[`Footer renders correctly 1`] = `
       style={Object {}}
     >
       <div
-        className="ant-row ant-row-center footerLinksContainer"
+        className="ant-row ant-row-center footerContainer__links"
         style={
           Object {
             "marginLeft": -12.5,
@@ -24,7 +24,7 @@ exports[`Footer renders correctly 1`] = `
         }
       >
         <div
-          className="ant-col footerLinksContainer__nav"
+          className="ant-col footerContainer__links__nav"
           style={
             Object {
               "paddingLeft": 12.5,
@@ -41,7 +41,7 @@ exports[`Footer renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="ant-col footerLinksContainer__nav"
+          className="ant-col footerContainer__links__nav"
           style={
             Object {
               "paddingLeft": 12.5,
@@ -58,7 +58,7 @@ exports[`Footer renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="ant-col footerLinksContainer__nav"
+          className="ant-col footerContainer__links__nav"
           style={
             Object {
               "paddingLeft": 12.5,
@@ -75,7 +75,7 @@ exports[`Footer renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="ant-col footerLinksContainer__nav"
+          className="ant-col footerContainer__links__nav"
           style={
             Object {
               "paddingLeft": 12.5,
@@ -92,7 +92,7 @@ exports[`Footer renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="ant-col footerLinksContainer__nav"
+          className="ant-col footerContainer__links__nav"
           style={
             Object {
               "paddingLeft": 12.5,
@@ -110,7 +110,7 @@ exports[`Footer renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="ant-row ant-row-center footerSocialContainer"
+        className="ant-row ant-row-center footerContainer__social"
         style={Object {}}
       >
         <div
