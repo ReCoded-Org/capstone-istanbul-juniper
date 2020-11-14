@@ -15,7 +15,6 @@ const QuestionCard = ({
   question,
   answerChoices,
   handleClick,
-  userAnswer,
   questionNum,
   totalQuestions,
 }) => (
