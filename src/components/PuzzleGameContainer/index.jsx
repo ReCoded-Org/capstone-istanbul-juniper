@@ -12,8 +12,8 @@ import "./index.css";
 // When the user clicks on an image it will be passed to the PuzzleGrid component as a prop
 // PuzzleGrid then renders the puzzle tiles of that image
 const PuzzleGameContainer = () => {
-  // currentImage state will be passed to the PuzzleGrid Component
   const images = [habitatImg, conservationImg, holdingPlantImg, plantingImg ];
+  // currentImage state will be passed to the PuzzleGrid Component
   const [currentImage, setCurrentImage] = useState(images[0]);
 
   const handleImageClick = (e) => {

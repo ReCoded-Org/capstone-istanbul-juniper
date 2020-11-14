@@ -122,7 +122,7 @@ const PuzzleGrid = ({puzzledImage}) => {
           key={"tileNumber-" + tile.id}
           className={
             tile.selected
-              ? "selectedTileId puzzleGrid__tile"
+              ? "selectedTile puzzleGrid__tile"
               : "puzzleGrid__tile"
           }
           onClick={() => handleClick(tile.id)}

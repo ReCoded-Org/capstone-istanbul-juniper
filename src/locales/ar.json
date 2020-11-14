@@ -188,6 +188,10 @@
           "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FsustainableTransportation.svg?alt=media&token=0df53583-9a96-4e49-8e60-42ad79416b7e"
         }
       ]
+    },
+    "puzzleGame": {
+      "title": "لغز الصور",
+      "subtitle": "رتب القطع بالترتيب الصحيح لرؤية الصورة كاملة!"
     }
   }
 }
