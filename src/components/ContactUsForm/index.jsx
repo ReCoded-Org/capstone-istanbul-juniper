@@ -16,9 +16,10 @@ const ContactUsForm = () => {
   const [processing, setProcessing] = useState(false);
   // beforeSubmit is for validations and disabling submit button
   const beforeSubmit = async () => {
+    const MIN_USER_INPUT_LENGTH=1;
     if (
-      contactFormValues.name.length > 0 &&
-      contactFormValues.email.length > 0
+      contactFormValues.name.length > MIN_USER_INPUT_LENGTH &&
+      contactFormValues.email.length > MIN_USER_INPUT_LENGTH
     ) {
       setProcessing(true);
       // Wait 2 seconds to simulate async delay
