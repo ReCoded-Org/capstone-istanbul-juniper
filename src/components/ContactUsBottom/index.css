@@ -1,0 +1,27 @@
+.contacUsBottom__bottomCurveImg{
+  z-index:1;
+}
+.contacUsBottom {
+  background: #2a8c79;
+}
+
+.contacUsBottom__bottomCurve {
+  background: #add4c5;
+  border-radius: 50%;
+  height: 15vh;
+}
+
+.contacUsBottom__bottomCurve__topHalf {
+  height: 50%;
+  background: #add4c5;
+  position:relative;
+}
+
+.contactUsBottom__bottomCurve__topHalfImg{
+  position:absolute;
+  top:300px;
+}
+
+.contacUsBottom__bottomCurve__bottomHalf {
+  height: 50%;
+}
