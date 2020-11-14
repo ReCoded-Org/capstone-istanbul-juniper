@@ -13,7 +13,7 @@ const NUM_OF_TILES = 6;
 // a user can click on one tile to select and then click on another tile to swap their places
 // the user will swap the places of each tile to put it in its correct position
 // when all tiles are placed in their correct position the full image is displayed
-const PuzzleGrid = ({puzzledImage}) => {
+const PuzzleGrid = ({ puzzledImage }) => {
   // currentPuzzleState holds the current order of the tiles and updates them when the user swaps tiles
   const [currentPuzzleState, setCurrentPuzzleState] = useState([]);
   // selectedTileId state shows if there is a tile selected and which one is selected if any
@@ -121,9 +121,7 @@ const PuzzleGrid = ({puzzledImage}) => {
         <Row
           key={"tileNumber-" + tile.id}
           className={
-            tile.selected
-              ? "selectedTile puzzleGrid__tile"
-              : "puzzleGrid__tile"
+            tile.selected ? "selectedTile puzzleGrid__tile" : "puzzleGrid__tile"
           }
           onClick={() => handleClick(tile.id)}
         >
