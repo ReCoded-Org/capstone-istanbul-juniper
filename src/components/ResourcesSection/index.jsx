@@ -10,7 +10,7 @@ import pollutionImg from "./../../images/pollutionResourceSetion.svg";
 
 const ResourcesSection = () => {
   const [t] = useTranslation();
-//random 
+  //random
   return (
     // "site-card-wrapper" is a built in ant Designe className
     <div className="site-card-wrapper">
