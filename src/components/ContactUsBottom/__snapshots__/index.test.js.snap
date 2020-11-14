@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactUsBottom snapshot test 1`] = `
+<div
+  className="contacUsBottom"
+>
+  <div
+    className="contacUsBottom__bottomCurve"
+  >
+    <div
+      className="contacUsBottom__bottomCurve__topHalf"
+    >
+      <div
+        className="contacUsBottom__bottomCurve__topHalfImg"
+      >
+        <img
+          alt="children playing in the garden"
+          className="contactUsBottom__imgMain"
+          src="family.png"
+        />
+        <img
+          alt="child playing in the garden"
+          className="contactUsBottom__imgSubOne"
+          src="child.png"
+        />
+        <img
+          alt="child playing in the garden"
+          className="contactUsBottom__imgSubTwo"
+          src="child_2.png"
+        />
+      </div>
+    </div>
+    <div
+      className="contacUsBottom__bottomCurve__bottomHalf"
+    />
+  </div>
+</div>
+`;
