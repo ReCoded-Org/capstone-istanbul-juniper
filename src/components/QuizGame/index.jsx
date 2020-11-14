@@ -80,12 +80,12 @@ const QuizGame = () => {
             questionNum={currentQuestionNumber + 1}
             totalQuestions={TOTAL_QUESTIONS}
             question={currentQuestion}
-            storedQuestionsAnswers={storedAnswers}
-            callback={checkAnswer}
+            answerChoices={storedAnswers}
+            handleClick={checkAnswer}
           />
         )}
         {checkToNextQuestion && (
-          <button className="quizWrapper__nextButton" onClick={nextQuestion}>
+          <button className="quizWrapper__nextButton" handleClick={nextQuestion}>
             Next Question
           </button>
         )}
