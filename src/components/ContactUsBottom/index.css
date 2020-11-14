@@ -1,32 +1,32 @@
 .contacUsBottom__bottomCurveImg {
   z-index: 1;
 }
-.contacUsBottom {
+.contacUsBottomContainer {
   background: #2a8c79;
 }
 
-.contacUsBottom__bottomCurve {
+.ccontacUsBottomContainer__bottomCurve {
   background: #add4c5;
   border-radius: 50%;
   height: 15vh;
 }
 
-.contacUsBottom__bottomCurve__topHalf {
+.contacUsBottomContainer__bottomCurve__topHalf {
   height: 50%;
   background: #add4c5;
   position: relative;
 }
 
-.contactUsBottom__bottomCurve__topHalfImg {
+.contacUsBottomContainer__bottomCurve__topHalfImg {
   position: absolute;
   top: 300px;
 }
 
-.contacUsBottom__bottomCurve__bottomHalf {
+.contacUsBottomContainer__bottomCurve__bottomHalf {
   height: 50%;
 }
 
-.contactUsBottom__imgMain {
+.contacUsBottomContainer__bottomCurve__topHalfImg_imgMain {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -35,7 +35,7 @@
   margin-left: -45%;
 }
 
-.contactUsBottom__imgSubOne {
+.contacUsBottomContainer__bottomCurve__topHalfImg__imgSubOne {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -44,7 +44,7 @@
   margin-left: 15%;
 }
 
-.contactUsBottom__imgSubTwo {
+.contacUsBottomContainer__bottomCurve__topHalfImg__imgSubTwo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -56,29 +56,29 @@
 /* Media query rules to override previous rules, as necessary */
 /* At the breakpoint happened we will see the two images only */
 @media screen and (max-width: 1000px) {
-  .contactUsBottom__imgMain {
+  .contacUsBottomContainer__bottomCurve__topHalfImg_imgMain {
     width: 30em;
     margin-left: -40%;
   }
 
-  .contactUsBottom__imgSubOne {
+  .contacUsBottomContainer__bottomCurve__topHalfImg__imgSubOne {
     width: 12em;
     margin-left: 15%;
   }
 
-  .contactUsBottom__imgSubTwo {
+  .contacUsBottomContainer__bottomCurve__topHalfImg__imgSubTwo {
     display: none;
   }
 }
 
 /* At the breakpoint happened we will see the one image only */
 @media screen and (max-width: 480px) {
-  .contactUsBottom__imgMain {
+  .contacUsBottomContainer__bottomCurve__topHalfImg_imgMain {
     width: 15em;
     margin-left: -25%;
     margin-top: 0;
   }
-  .contactUsBottom__imgSubOne {
+  .contacUsBottomContainer__bottomCurve__topHalfImg__imgSubOne {
     display: none;
   }
 }

@@ -7,28 +7,28 @@ import "antd/dist/antd.css";
 
 const ContactUsBottom = () => {
   return (
-    <div className="contacUsBottom">
-      <div className="contacUsBottom__bottomCurve">
-        <div className="contacUsBottom__bottomCurve__topHalf">
-          <div className="contacUsBottom__bottomCurve__topHalfImg">
+    <div className="contacUsBottomContainer">
+      <div className="contacUsBottomContainer__bottomCurve">
+        <div className="contacUsBottomContainer__bottomCurve__topHalf">
+          <div className="contacUsBottomContainer__bottomCurve__topHalfImg">
             <img
-              className="contactUsBottom__imgMain"
-              alt="children playing in the garden"
+              className="contacUsBottomContainer__bottomCurve__topHalfImg_imgMain"
+              alt="two children playing in the garden"
               src={contactUsBottomImgLeft}
             />
             <img
-              className="contactUsBottom__imgSubOne"
-              alt="child playing in the garden"
+              className="contacUsBottomContainer__bottomCurve__topHalfImg__imgSubOne"
+              alt="girl playing in the garden"
               src={contactUsBottomImgRight_1}
             />
             <img
-              className="contactUsBottom__imgSubTwo"
-              alt="child playing in the garden"
+              className="contacUsBottomContainer__bottomCurve__topHalfImg__imgSubTwo"
+              alt="boy playing in the garden"
               src={contactUsBottomImgRight_2}
             />
           </div>
         </div>
-        <div className="contacUsBottom__bottomCurve__bottomHalf"></div>
+        <div className="contacUsBottomContainer__bottomCurve__bottomHalf" />
       </div>
     </div>
   );
