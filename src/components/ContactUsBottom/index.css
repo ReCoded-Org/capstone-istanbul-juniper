@@ -25,3 +25,33 @@
 .contacUsBottom__bottomCurve__bottomHalf {
   height: 50%;
 }
+
+.contactUsBottom__imgMain{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 560px;
+   height: 400px;
+   margin-top: -250px;
+   margin-left: -600px;
+}
+
+.contactUsBottom__imgSubOne{
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 275px;
+   height: 300px;
+   margin-top: -160px; 
+   margin-left: 150px; 
+}
+
+.contactUsBottom__imgSubTwo{
+  position: absolute;
+  top: 50%;
+   left: 50%;
+   width: 120px;
+   height: 170px;
+   margin-top: -70px;
+   margin-left: 500px;
+}
