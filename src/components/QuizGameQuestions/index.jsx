@@ -11,7 +11,6 @@ import "./index.css";
 //  questionNum: number
 //  totalQuestions: number
 //}
-
 const QuestionCard = ({
   question,
   answerChoices,
