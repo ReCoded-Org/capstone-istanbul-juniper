@@ -127,7 +127,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
     }
   }, [matchedCards, cardStates.length, setIsCompleted]);
 
-  const successCardBody = (
+  const successCard = (
     <Card className="memoryGameCardContainer___successCard">
       <img
         src={memoryGameSuccessSymbol}
@@ -138,12 +138,25 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
   );
 
   const gameCards = cardStates.map((cardState) => {
-    let cardBody;
+    // cardState example Object
+    // {
+    //   cardKey: "alternateEnergy0",
+    //   description: "Alternatif Enerji",
+    //   img: {src: "/static/media/alternateEnergy.88cef00e.svg", imgKey: "alternateEnergy"},
+    //   isFlipped: false,
+    //   isMatched: false,
+    //   link: "https://evrimagaci.org/yesil-enerji-devrimi-elektrik-harcamaniz-icin-size-para-odenirse-3188",
+    //   phrase: "2017'den 2018'e geçişteki tatil sezonunda Almanya, rüzgar ve güneş enerjisi kaynaklarını kullanarak çok fazla enerji ürettiği için, çeşitli ofisler ve üretim fabrikalarının fazladan elektrik tüketmesi amacıyla kendilerine megawatt-saat (MWh) başına 60 Amerikan Doları devlet desteği ödediğini biliyor muydun?",
+    // }
+    let card;
+    // if the card is matched, it gets replaced by a card with success symbol on it
     if (cardState.isMatched) {
-      cardBody = successCardBody;
+      card = successCard;
+      // if there is no match ReactCardFlip gets rendered with 2 children, front side and back side in this order
     } else {
-      cardBody = (
+      card = (
         <ReactCardFlip isFlipped={cardState.isFlipped} flipDirection="vertical">
+          {/* Front side */}
           <Card
             className="memoryGameCardsContainer___card"
             onClick={() => handleClick(cardState)}
@@ -154,6 +167,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
               className="memoryGameCardsContainer___card___questionMark"
             />
           </Card>
+          {/* Back side */}
           <Card className="memoryGameCardsContainer___card">
             <img
               src={cardState.img.src}
@@ -169,7 +183,7 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
     }
     return (
       <Col xs={8} lg={6} xl={3} key={cardState.cardKey}>
-        {cardBody}
+        {card}
       </Col>
     );
   });
