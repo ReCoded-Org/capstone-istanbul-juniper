@@ -8,9 +8,11 @@ import { AuthContext } from "../../auth/authContext";
 import { withRouter } from "react-router-dom";
 import { Alert, Spin } from "antd";
 import './index.css';
+import { useTranslation } from "react-i18next";
 import kids from "../../images/LoginKids.svg"
 
 const LoginRegisterPage = (props) => {
+  const [t] = useTranslation();
   const login = async (email, password) => {
     setError("");
     setMessage(<></>);
@@ -31,7 +33,7 @@ const LoginRegisterPage = (props) => {
           setLoading(true);
           await auth.sendPasswordResetEmail(email);
           setLoading(false);
-          setMessage(<Alert  style={{ marginBottom: 10 }} showIcon message={<div>An email message has been sent to <b>{email}</b> containing password reset instructions, please check your inbox and follow the steps indicated in that message.  </div>} type="success"></Alert>);
+          setMessage(<Alert  style={{ marginBottom: 10 }} showIcon message={<div>{t("loginRegister.anEmailsent")}<b>{email}</b>{t("loginRegister.anEmailsentcontain")}</div>} type="success"></Alert>);
           setActive("login");
         } catch (e) {
           setLoading(false);

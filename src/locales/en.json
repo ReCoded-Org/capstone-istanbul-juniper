@@ -20,5 +20,59 @@
       "climateChange": "Climate Change",
       "reduceReuseRecycle": "Reduce, Reuse, Recycle"
     }
+  },
+  "login": {
+    "login.login": "Log in",
+    "login.email": "Email",
+    "login.password": "Password",
+    "login.forgotPassword": "Forget Password?",
+    "login.new": "New at junpier? Register now",
+    "login.creat": "Creat New Account",
+    "login.oryoucan": "Or you can",
+    "login.withFacebook": "Log in with Facebook",
+    "login.withGoogle": "Log in with Google"
+  },
+  "passReset": {
+    "passReset.emailFormat": "Email format Error",
+    "passReset.fillField": "Please fill this field",
+    "passwordReset": "Password Reset",
+    "passReset.email": "Email",
+    "passReset.backToLogin": "Back To Log in"
+  },
+  "register": {
+  "register.fullName": "Please enter your full name",
+  "register.validEmail": "Please enter a valid email",
+  "register.enterAge": "Please enter your age",
+  "register.passwordCharacter": "Password must be at least 6 characters long",
+  "register.enterPassword": "Please enter your password",
+  "register.emailFormat": "Email format error, please enter a valid email",
+  "register.terms": "Please agree to the terms and conditions",
+  "register.termsTitle": "Terms of Reference",
+  "register.close": "Close",
+  "register.iAgree": "I Agree",
+  "register.terms1": "1",
+  "register.terms2": "2",
+  "register.terms3": "3",
+  "register.terms4": "4",
+  "register.terms5": "5",
+  "register.terms6": "6",
+  "register.creat": "Creat new Account",
+  "register.name": "Full Name",
+  "register.age": "Age",
+  "register.password": "Password",
+  "register.email": "Email",
+  "register.iAgreeTo": "I Agree to",
+  "register.termsandCon":"terms and conditions",
+  "register.creatAccount":"Create new account",
+  "register.alreadyAMember": "Already a member? Log in now",
+  "register.login": "login",
+  "register.orYouCan": "Or you can",
+  "register.withFacebook": "Log in with Facebook",
+  "register.withGoogle": "Log in with Google"
+  },
+  "loginRegister": {
+    "loginRegister.anEmailsent":"An email message has been sent to ",
+    "loginRegister.anEmailsentcontain": "contain password reset instructions, please check your inbox and follow the steps indicated in that message."
   }
 }
+

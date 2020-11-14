@@ -20,5 +20,58 @@
       "climateChange": "Mevsim değişimi",
       "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
     }
+  },
+  "login": {
+    "login.login": "Oturum aç",
+    "login.email": "Email",
+    "login.password": "Parola",
+    "login.forgotPassword": "Şifremi Unuttum?",
+    "login.new": "juniper yeni misiniz? Şimdi üye Ol",
+    "login.creat": "Üye Ol",
+    "login.oryoucan": "Ya da",
+    "login.withFacebook": "Facebook İle Bağlan",
+    "login.withGoogle": "Google İle Bağlan"
+  },
+  "passReset": {
+    "passReset.emailFormat": "Email biçimi Hatası",
+    "passReset.fillField": "Lütfen bu alanı doldurun",
+    "passwordReset": "Şifreyi yenile",
+    "passReset.email": "Email",
+    "passReset.backToLogin": "Geri Giriş Yap"
+  },
+  "register": {
+  "register.fullName": "lütfen tam adınızı giriniz",
+  "register.validEmail": "lütfen geçerli eposta adresini giriniz",
+  "register.enterAge": "Lütfen yaşını gir",
+  "register.passwordCharacter": "Şifre en az 6 karakter uzunluğunda olmalı",
+  "register.enterPassword": "Şifrenizi giriniz Lütfen",
+  "register.emailFormat": "E-posta biçimi hatası, lütfen geçerli bir e-posta girin",
+  "register.terms": "Lütfen şartlar ve koşulları kabul edin",
+  "register.termsTitle": "şartlar ve koşulları",
+  "register.close": "Kapat",
+  "register.iAgree": "Kabul ediyorum",
+  "register.terms1": "1",
+  "register.terms2": "2",
+  "register.terms3": "3",
+  "register.terms4": "4",
+  "register.terms5": "5",
+  "register.terms6": "6",
+  "register.creat": "Yeni hesap oluştur",
+  "register.name": "Ad Soyad",
+  "register.age": "Yaş",
+  "register.password": "Parola",
+  "register.email": "Email",
+  "register.iAgreeTo": "Şartları ve koşulları",
+  "register.termsandCon":"kabul ediyorum",
+  "register.creatAccount":"Yeni hesap oluştur",
+  "register.alreadyAMember": "Bir üye misiniz? Şimdi giriş yap",
+  "register.login": "Giriş ya",
+  "register.orYouCan": "Ya da",
+  "register.withFacebook": "Facebook İle Bağlan",
+  "register.withGoogle": "Google İle Bağlan"
+  },
+  "loginRegister": {
+    "loginRegister.anEmailsent":" By Adresine bir e-posta mesajı gönderildi",
+    "loginRegister.anEmailsentcontain": "şifre sıfırlama talimatları içerir, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin.."
   }
 }

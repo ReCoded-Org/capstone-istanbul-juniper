@@ -20,5 +20,58 @@
       "climateChange": "التغير المناخي",
       "reduceReuseRecycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
     }
+  },
+  "login": {
+    "login.login": "تسجيل الدخول ",
+    "login.email": "البريد الإلكتروني",
+    "login.password": "كلمة المرور",
+    "login.forgotPassword": "هل نسيت كلمة المرور؟",
+    "login.new": "هذه أول مرة لك في جونبير؟ إنشاء حساب جديد",
+    "login.creat": "انشاء حساب جديد",
+    "login.oryoucan": "أو بإمكانك",
+    "login.withFacebook": "تسجيل الدخول بإستحدام الفيسبوك",
+    "login.withGoogle": "تسجيل الدخول بإستخدام غوغل"
+  },
+  "passReset": {
+    "passReset.emailFormat": "صياغة الإيميل خاطئة",
+    "passReset.fillField": "الرجاء إملاء هذا الحقل",
+    "passwordReset": "اعادة تعيين كلمة المرور",
+    "passReset.email": "البريد الالكتروني",
+    "passReset.backToLogin": "عودة الى تسجيل الدخول"
+  },
+  "register": {
+  "register.fullName": "الرجاء ادخل اسمك الكامل",
+  "register.validEmail": "الرجاء ادخال بريدك الالكتروني الصالح",
+  "register.enterAge": "ماهو عمرك؟",
+  "register.passwordCharacter": "يجب ان تكون كلمة السر مكونة من ٦ احرف",
+  "register.enterPassword": "الرجاء ادخال كلمة السر",
+  "register.emailFormat": "الايميل غير صالح ، الرجاء داخل ايميل صالح",
+  "register.terms": "الرجاء الموافقة على الشروط و الاحكام",
+  "register.termsTitle": "الشروط و الاحكام",
+  "register.close": "إغلاق",
+  "register.iAgree": "موافق",
+  "register.terms1": "1",
+  "register.terms2": "2",
+  "register.terms3": "3",
+  "register.terms4": "4",
+  "register.terms5": "5",
+  "register.terms6": "6",
+  "register.creat": "انشاء حساب جديد",
+  "register.name": "الأسم الكامل",
+  "register.age": "العمر",
+  "register.password": "كلمة المرور",
+  "register.email": "البريد الالكتروني",
+  "register.iAgreeTo": "اوافق على",
+  "register.termsandCon":"الشروط و الأحكام",
+  "register.creatAccount":"انشاء حساب جديد",
+  "register.alreadyAMember": "لديك حساب ؟  تسجيل الدخول",
+  "register.login": "تسجيل الدخول",
+  "register.orYouCan": "أو بإمكانكم",
+  "register.withFacebook": "تسجيل الدخول عن طريق الفيسبوك",
+  "register.withGoogle": "تسجيل الدخول عن طريق غوغل"
+  },
+  "loginRegister": {
+    "loginRegister.anEmailsent":"تم أرسال ايميل الى ",
+    "loginRegister.anEmailsentcontain": "يحتوي على رابط اعادة تعيين كلمة المرور ، الرجاء اتباع التعليمات المرسلة."
   }
 }

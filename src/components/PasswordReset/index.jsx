@@ -1,8 +1,11 @@
 import { Alert, Input } from "antd";
 import React, { useState } from "react";
 import { validateEmail } from "../../functions";
+import { useTranslation } from "react-i18next";
+
 
 const PasswordReset = (props) => {
+const [t] = useTranslation();
 const [passwordResetInfo, setPasswordRestInfo] = useState({ email: "" });
 
 const handleChange = (key, value) => {
@@ -16,10 +19,10 @@ const handleSubmit = (e) => {
   let { email } = passwordResetInfo;
   let errors = {};
     if (!validateEmail(email)) {
-      errors["email"] = "Email format error";
+      errors["email"] = t("passReset.emailFormat");
     }
     if (email.trim() === "") {
-      errors["email"] = "Please fill this field";
+      errors["email"] = t("passReset.fillField");
     }
     setErrors(errors);
     if (Object.keys(errors).length > 0) {
@@ -38,7 +41,7 @@ const handleSubmit = (e) => {
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
-        <div className="loginContainer__loginTitle">Password Reset</div>
+        <div className="loginContainer__loginTitle">{t("passReset.passwordReset")}</div>
         {props.error !== "" ? (
           <Alert
             style={{ marginBottom: 10 }}
@@ -49,7 +52,7 @@ const handleSubmit = (e) => {
         ) : null}
         {props.message}
         <div className="loginContainer__loginDialog">
-          <div className="loginContainer__loginDialog__inputLabel">Email</div>
+          <div className="loginContainer__loginDialog__inputLabel">{t("passReset.email")}</div>
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -72,15 +75,15 @@ const handleSubmit = (e) => {
           <button
             type="submit"
             className="loginContainer__loginDialog__submitButton"
-          >Password Reset
+          >{t("passReset.passwordReset")}
           </button>
           <button
             onClick={() => {
               handleGoToLogin();
             }}
-            type="button"
+            type="button"X
             className="loginContainer__loginDialog__backToLoginButton"
-          >Back To Log in
+          >{t("passReset.backToLogin")}
           </button>
         </div>
       </div>

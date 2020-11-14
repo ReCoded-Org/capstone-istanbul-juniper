@@ -2,9 +2,10 @@ import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
 import React, { useState } from "react";
 import { validateEmail } from "../../functions";
-import "./index.css";
+import { useTranslation } from "react-i18next";
 
 const Register = (props) => {
+  const [t] = useTranslation();
   const [registerInformation, setRegisterInformation] = useState({
     fullname: "",
     age: "",
@@ -26,25 +27,25 @@ const Register = (props) => {
 
     let errors = {};
     if (fullname.trim() === "") {
-      errors["fullname"] = "Please enter youur full name";
+      errors["fullname"] = t("register.fullName");
     }
     if (email.trim() === "") {
-      errors["email"] = "Please enter a valid email";
+      errors["email"] = t("register.validEmail");
     }
     if (age.trim() === "") {
-      errors["age"] = "Please enter your age";
+      errors["age"] = t("register.age");
     }
     if (password.trim().length < 6) {
-      errors["password"] = "Password must be at least 6 characters long";
+      errors["password"] = t("register.passwordCharacter"); ;
     }
     if (password.trim() === "") {
-      errors["password"] = "Please enter your password";
+      errors["password"] = t("register.enterPassword");
     }
     if (!validateEmail(email)) {
-      errors["email"] = "Email format error, please enter a valid email";
+      errors["email"] = t("register.emailFormat");
     }
     if (!agree) {
-      errors["agree"] = "Please agree to the terms and conditions";
+      errors["agree"] = t("register.terms");
     }
     setErrors(errors);
     if (Object.keys(errors).length > 0) {
@@ -78,26 +79,26 @@ const Register = (props) => {
   }
   return (
     <form noValidate onSubmit={handleSubmit}>
-      <Modal title="Terms Of Service" 
+      <Modal title= {t("register.termsTitle")}
       visible={termsOpen} 
       onOk={handleOkTerms} 
       onCancel={handleCancelTerms}
       footer={[
-        <Button key="back" onClick={handleCancelTerms}>Close</Button>,
-        <Button key="submit" type="primary" onClick={handleOkTerms}>I Agree</Button>,
+        <Button key="back" onClick={handleCancelTerms}>{t("register.close")}</Button>,
+        <Button key="submit" type="primary" onClick={handleOkTerms}>{t("register.iAgree")}</Button>,
       ]}
       >
         <ul>
-          <li>term1 </li>
-          <li>term2 </li>
-          <li>term3 </li>
-          <li>term4 </li>
-          <li>term5 </li>
-          <li>term6 </li>
+          <li>{t("register.terms1")}</li>
+          <li>{t("register.terms2")} </li>
+          <li>{t("register.terms3")} </li>
+          <li>{t("register.terms4")} </li>
+          <li>{t("register.terms5")} </li>
+          <li>{t("register.terms6")} </li>
         </ul>
       </Modal>
       <div className="loginContainer">
-        <div className="loginContainer__loginTitle">Create new account</div>
+        <div className="loginContainer__loginTitle">{t("register.creat")}</div>
         {props.error !== "" ? (
           <Alert
             style={{ marginBottom: 10 }}
@@ -109,7 +110,7 @@ const Register = (props) => {
 
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
-            Fullname
+          {t("register.name")}
           </div>
 
           <div className="loginContainer__loginDialog__input">
@@ -130,7 +131,7 @@ const Register = (props) => {
               </div>
             ) : null}
           </div>
-          <div className="loginContainer__loginDialog__inputLabel">Age</div>
+          <div className="loginContainer__loginDialog__inputLabel">{t("register.enterAge")}</div>
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -150,7 +151,7 @@ const Register = (props) => {
               </div>
             ) : null}
           </div>
-          <div className="loginContainer__loginDialog__inputLabel">Email</div>
+          <div className="loginContainer__loginDialog__inputLabel">{t("register.email")}</div>
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -170,7 +171,7 @@ const Register = (props) => {
             ) : null}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
-            Password
+          {t("register.password")}
           </div>
 
           <div className="loginContainer__loginDialog__input">
@@ -200,7 +201,7 @@ const Register = (props) => {
               }}
             >
               {" "}
-              I agree to <a href="/#" onClick={(e)=>{ e.preventDefault(); setTermsOpen(true);}}>terms and conditions</a>
+              {t("register.iAgreeTo")}<a href="/#" onClick={(e)=>{ e.preventDefault(); setTermsOpen(true);}}>{t("register.termsandCon")}</a>
             </Checkbox>
             {errors["agree"] ? (
               <div className="loginContainer__loginDialog__errorContainer">
@@ -214,12 +215,12 @@ const Register = (props) => {
             className="loginContainer__loginDialog__submitButton"
           >
             {" "}
-            Create new account{" "}
+            {t("register.creatAccount")}{" "}
           </button>
 
           <div className="loginContainer__loginDialog__registerLabel">
             {" "}
-            Already a member? Log in now{" "}
+            {t("register.alreadyAMember")}{" "}
           </div>
 
           <button
@@ -229,11 +230,11 @@ const Register = (props) => {
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
-            Log in{" "}
+           {t("register.login")}{" "}
           </button>
 
           <div className="loginContainer__loginDialog__loginOptionsTitle">
-            Or you can
+          {t("register.orYouCan")}
           </div>
           <button
             onClick={() => {
@@ -241,7 +242,7 @@ const Register = (props) => {
             }}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
-          > Login With Facebook
+          > {t("register.withFacebook")}
           </button>
           <button
             onClick={() => {
@@ -249,8 +250,7 @@ const Register = (props) => {
             }}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
-          >
-            Login With Google
+          >{t("register.withGoogle")}
           </button>
         </div>
       </div>

@@ -1,8 +1,11 @@
 import { Alert, Input } from "antd";
 import React, { useState } from "react";
 import { validateEmail } from "../../functions";
+import { useTranslation } from "react-i18next";
+
 
 const Login = (props) => {
+const [t] = useTranslation();
 const [loginCredentials, setLoginCredentials] = useState({ email: "", password: "" });
 const handleChange = (key, value) => {
   let newValues = Object.assign({}, loginCredentials);
@@ -59,7 +62,7 @@ const handleFacebookAuth = () =>{
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
-        <div className="loginContainer__loginTitle">Log in</div>
+        <div className="loginContainer__loginTitle">{t("login.login")}</div>
         {props.error !== "" ? (
           <Alert
             style={{ marginBottom: 10 }}
@@ -70,7 +73,7 @@ const handleFacebookAuth = () =>{
         ) : null}
         {props.message}
         <div className="loginContainer__loginDialog">
-          <div className="loginContainer__loginDialog__inputLabel">Email</div>
+          <div className="loginContainer__loginDialog__inputLabel">{t("login.email")}</div>
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -91,7 +94,7 @@ const handleFacebookAuth = () =>{
             ) : null}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
-            Password
+          {t("login.password")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
@@ -116,35 +119,35 @@ const handleFacebookAuth = () =>{
               <a href="/#" onClick={(e)=>{
                 e.preventDefault();
                 handleGoToPasswordReset();
-              }}>Forgot Password?</a>
+              }}>{t("login.forgotPassword")}</a>
           </div>
           <button
             type="submit"
-            className="loginContainer__loginDialog__submitButton">Log in
+            className="loginContainer__loginDialog__submitButton">{t("login.login")}
           </button>
-          <div className="loginContainer__loginDialog__registerLabel"> New at junpier? Register now
+          <div className="loginContainer__loginDialog__registerLabel">{t("login.new")}
           </div>
           <button
             onClick={() => {
               handleGoToRegister();
             }}
             type="button"
-            className="loginContainer__loginDialog__registerButton">Create an account
+            className="loginContainer__loginDialog__registerButton">{t("login.creat")}
           </button>
-          <div className="loginContainer__loginDialog__loginOptionsTitle">Or you can</div>
+          <div className="loginContainer__loginDialog__loginOptionsTitle">{t("login.oryoucan")}</div>
           <button
             onClick={() => {
               handleFacebookAuth();
             }}
             type="button"
-            className="loginContainer__loginDialog__facebookLoginBtn">Login With Facebook
+            className="loginContainer__loginDialog__facebookLoginBtn">{t("login.withFacebook")}
           </button>
           <button
             onClick={() => {
               handleGoogleAuth();
             }}
             type="button"
-            className="loginContainer__loginDialog__googleLoginBtn">Login With Google
+            className="loginContainer__loginDialog__googleLoginBtn">{t("login.withGoogle")}
           </button>
         </div>
       </div>
