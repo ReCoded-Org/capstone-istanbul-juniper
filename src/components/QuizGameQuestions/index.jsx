@@ -7,7 +7,7 @@ import "./index.css";
 //  question: string
 //  answerChoices: string
 //  handleClick: function
-//  userAnswer: string 
+//  userAnswer: string
 //  questionNum: number
 //  totalQuestions: number
 //}
@@ -27,13 +27,12 @@ const QuestionCard = ({
     <p dangerouslySetInnerHTML={{ __html: question }} />
     <div>
       {answerChoices.map((answer) => (
-        <div
-          key={answer}
-          >
+        <div key={answer}>
           <button
-            className="quizQuestionWrapper__userAnswer"           
+            className="quizQuestionWrapper__userAnswer"
             value={answer}
-            onClick={handleClick} >
+            onClick={handleClick}
+          >
             <span dangerouslySetInnerHTML={{ __html: answer }} />
           </button>
         </div>
