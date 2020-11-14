@@ -17,11 +17,11 @@
   color: white;
 }
 
-.footerNav {
+.footerContainer__links__nav {
   text-align: center;
 }
 
-.footerLinksContainer {
+.footerContainer__links {
   margin-bottom: 20px;
 }
 

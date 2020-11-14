@@ -23,25 +23,25 @@ const Footer = () => {
             <Row
               gutter={[25]}
               justify="center"
-              className="footerLinksContainer"
+              className="footerContainer__links"
             >
-              <Col className="footerLinksContainer__nav">
+              <Col className="footerContainer__links__nav">
                 <Link to="/trademark"> {t("footer.trademark")}</Link>
               </Col>
-              <Col className="footerLinksContainer__nav">
+              <Col className="footerContainer__links__nav">
                 <Link to="/contact"> {t("footer.contact")}</Link>
               </Col>
-              <Col className="footerLinksContainer__nav">
+              <Col className="footerContainer__links__nav">
                 <Link to="/policies"> {t("footer.policies")}</Link>
               </Col>
-              <Col className="footerLinksContainer__nav">
+              <Col className="footerContainer__links__nav">
                 <Link to="/games"> {t("footer.games")}</Link>
               </Col>
-              <Col className="footerLinksContainer__nav">
+              <Col className="footerContainer__links__nav">
                 <Link to="/about"> {t("footer.about")}</Link>
               </Col>
             </Row>
-            <Row justify="center" className="footerSocialContainer">
+            <Row justify="center" className="footerContainer__social">
               <Col>
                 {/* note: facebook,instagram,youtube are built in fortawesome classes */}
                 <a href="https://www.facebook.com" className="facebook social">
