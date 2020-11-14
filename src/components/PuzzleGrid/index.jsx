@@ -130,7 +130,7 @@ const PuzzleGrid = ({puzzledImage}) => {
           <img
             className="puzzleGrid__puzzledImage"
             src={puzzledImage}
-            alt="tile from the image"
+            alt="a moveable tile"
             style={{ top: `-${tile.top}%` }}
           />
         </Row>

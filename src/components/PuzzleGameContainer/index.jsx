@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Col, Row, Card } from "antd";
 import habitatImg from "./../../images/puzzleGame/habitat.jpg";
 import conservationImg from "./../../images/puzzleGame/conservation.jpg"
@@ -30,7 +30,7 @@ const PuzzleGameContainer = () => {
               className="gameContainer__listOfImages--imgContainer"
             >
               <img className="gameContainer__listOfImages--img" 
-              src={img} alt="click on the image to play image puzzle" />
+              src={img} alt="click to choose your puzzle" />
             </Col>
           );
         })}
