@@ -17,6 +17,7 @@ const QuizGame = () => {
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const [isGameStart, setIsGameStart] = useState(false);
+  
   const startQuiz = async () => {
     setIsLoading(true);
     setIsGameStart(true);
