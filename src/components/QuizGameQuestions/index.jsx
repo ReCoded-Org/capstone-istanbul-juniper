@@ -5,7 +5,7 @@ import "./index.css";
 // the callback is used to check if the answer is true or not.
 // types of props = {
 //  question: string
-//  storedQuestionsAnswers: string
+//  answerChoices: string
 //  handleClick: function
 //  userAnswer: string 
 //  questionNum: number
@@ -14,7 +14,7 @@ import "./index.css";
 
 const QuestionCard = ({
   question,
-  storedQuestionsAnswers,
+  answerChoices,
   handleClick,
   userAnswer,
   questionNum,
@@ -26,7 +26,7 @@ const QuestionCard = ({
     </p>
     <p dangerouslySetInnerHTML={{ __html: question }} />
     <div>
-      {storedQuestionsAnswers.map((answer) => (
+      {answerChoices.map((answer) => (
         <div
           key={answer}
           >
