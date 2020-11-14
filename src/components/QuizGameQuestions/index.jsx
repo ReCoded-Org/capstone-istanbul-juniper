@@ -6,7 +6,7 @@ import "./index.css";
 // types of props = {
 //  question: string
 //  storedQuestionsAnswers: string
-//  callback: function
+//  handleClick: function
 //  userAnswer: string 
 //  questionNum: number
 //  totalQuestions: number
@@ -15,7 +15,7 @@ import "./index.css";
 const QuestionCard = ({
   question,
   storedQuestionsAnswers,
-  callback,
+  handleClick,
   userAnswer,
   questionNum,
   totalQuestions,
@@ -33,7 +33,7 @@ const QuestionCard = ({
           <button
             className="quizQuestionWrapper__userAnswer"           
             value={answer}
-            onClick={callback} >
+            onClick={handleClick} >
             <span dangerouslySetInnerHTML={{ __html: answer }} />
           </button>
         </div>
