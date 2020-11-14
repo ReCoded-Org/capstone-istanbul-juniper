@@ -11,7 +11,7 @@ const NetlifyForm = ({
   contactFormValues, // a state that holds name, email and message values. 
   children, // stands for form elements name,email,message,button.
 }) => {
-  // Keep things well-hidden during runtime (and from bots. They are exposed for netlify build bots.
+  // This keep "Honeypot" form field hidden during runtime. It is exposed for netlify build bots.
   const [inNetlifyBuild, setInNetlifyBuild] = useState(true);
   useEffect(() => {
     setInNetlifyBuild(false);
