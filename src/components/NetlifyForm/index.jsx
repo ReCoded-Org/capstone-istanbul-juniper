@@ -18,6 +18,8 @@ const NetlifyForm = ({
   }, []);
 
   // Honeypot Input state for "Honeypot" field, which used Honeypot form field.
+  // The field is a hidden form field, that lures bot users into completing a field that human users can't see.
+  // Detailed explanation about Honeypot field: https://docs.netlify.com/forms/spam-filters/#extra-spam-prevention
   const [honey, setHoney] = useState("");
   // For application/x-www-form-urlencoded, spaces are to be replaced by +, encodeURIComponent() replacement with an additional replacement of %20 with +. */
   const formEncodeString = (str) =>
