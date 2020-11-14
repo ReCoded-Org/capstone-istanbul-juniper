@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Col, Row, Button } from "antd";
+import { Col, Row } from "antd";
 import Confetti from "react-dom-confetti";
 import { Redirect } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ArrowLeftOutlined } from "@ant-design/icons";
 import MemoryGameFactList from "../MemoryGameFactList/index";
 import "./index.css";
 import confettiConfig from "../confettiConfig";

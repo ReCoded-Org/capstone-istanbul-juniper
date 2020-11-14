@@ -8,14 +8,27 @@ import { List, Card } from "antd";
  * "facts" is an array of objects
  * "title" is a string that is translated by i18n. It is used to describe what the list holds.
  * If the language is English "title" will be "Facts"
+ * "emptyFactListMessage" is a string that is translated by i18n. It is displayed when fact list is empty
+ * If the language is English "emptyFactListMessage" will be ""Match cards to reveal facts!"
  */
 const MemoryGameFactList = ({ facts, title, emptyFactListMessage }) => {
+  // facts example:
+  // {
+  //   cardKey: "alternateEnergy0",
+  //   description: "Alternatif Enerji",
+  //   img: {src: "/static/media/alternateEnergy.88cef00e.svg", imgKey: "alternateEnergy"},
+  //   isFlipped: false,
+  //   isMatched: false,
+  //   link: "https://loremIpsum.com",
+  //   phrase: "Lorem ipsum",
+  // }
   const factListTitle = (
     <h1 className="memoryGame__title memoryGameFactListContainer__title">
       {title}
     </h1>
   );
   let factListContent;
+  // facts is an empty array by default, it gets filled when user makes successful match
   if (facts.length) {
     factListContent = (
       <List

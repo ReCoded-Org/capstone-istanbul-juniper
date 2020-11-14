@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import ReactCardFlip from "react-card-flip";
-import { Col, Card, Modal, Row, Popover, Anchor, Button } from "antd";
+import { Col, Card, Modal, Row, Popover, Button } from "antd";
 import { useTranslation } from "react-i18next";
 import { QuestionCircleTwoTone } from "@ant-design/icons";
 import { HashLink } from "react-router-hash-link";
