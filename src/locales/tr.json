@@ -140,5 +140,49 @@
       "title": "Bizimle İletişime Geç",
       "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
     }
+  },
+  "games": {
+    "matchingGame": {
+      "title": "Eşleştirme Oyunu",
+      "subtitle": "Çevre kelime dağarcığımızı güçlendirelim! Kelimeleri doğru resimlere sürükleyerek eşleştirelim!",
+      "matchingGameCards": [
+        {
+          "name": "Hava kirliliği",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FairPollution.svg?alt=media&token=25927626-de6d-4496-b5fe-730854f19bbc"
+        },
+        {
+          "name": "Deniz ve Okyanuslardaki atıkları temizlemek",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FcleanUpSeasOceans.svg?alt=media&token=d74f439b-439d-42bc-8088-7e5b91265dfd"
+        },
+        {
+          "name": "Çöpleri toplamak",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FcollectGarbage.svg?alt=media&token=510a05c9-96c6-4168-9fe9-a60c79f81f89"
+        },
+        {
+          "name": "Tarım & Rüzgar Enerjisi",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FfarmingWindEnergy.svg?alt=media&token=7359a2b5-7585-45d3-9a9f-0bb4bf8cd9b7"
+        },
+        {
+          "name": "Orman Yangını",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FforestFire.svg?alt=media&token=f4d90f85-53d5-4917-8f78-3d8c50581dfa"
+        },
+        {
+          "name": "Küresel Isınma",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FglobalWarming.svg?alt=media&token=dbb15045-d255-435e-8596-e4994dbb8179"
+        },
+        {
+          "name": "Ağaç Dikmek",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FplantTrees.svg?alt=media&token=fedb0504-aed6-49a5-9afc-06c59ec29478"
+        },
+        {
+          "name": "Atıkları Geri Dönüştürmek",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FrecycleWaste.svg?alt=media&token=188f707a-0117-4700-848e-f73c40852f24"
+        },
+        {
+          "name": "Sürdürülebilir Ulaşım",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FsustainableTransportation.svg?alt=media&token=0df53583-9a96-4e49-8e60-42ad79416b7e"
+        }
+      ]
+    }
   }
 }
