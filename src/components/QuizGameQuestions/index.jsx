@@ -3,13 +3,13 @@ import "./index.css";
 
 // this function will display the fetched data to the dom.those parameters will pass in quizgame component.
 // the callback is used to check if the answer is true or not.
-// types of props ={
+// types of props = {
 //  question: string
-//  storedQuestionsAnswers string
-//  callback function
-//  userAnswer string 
-//  questionNum number
-//  totalQuestions number
+//  storedQuestionsAnswers: string
+//  callback: function
+//  userAnswer: string 
+//  questionNum: number
+//  totalQuestions: number
 //}
 
 const QuestionCard = ({
