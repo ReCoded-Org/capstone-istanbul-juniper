@@ -139,5 +139,11 @@
         "phrase": "Did you know that the Earth has garbage islands the size of continents floating in our oceans?"
       }
     ]
+  },
+  "contact": {
+    "headerSection": {
+      "title": "Contact Us",
+      "subtitle": "You can share from here your new game requests, questions, comments, suggestions with us."
+    }
   }
 }
