@@ -6,9 +6,9 @@ import React, { useState, useEffect } from "react";
 
 const NetlifyForm = ({
   formName,
-  beforeSubmit, // function which is used in form validation
-  afterSubmit,  // function which is used in showing submission message
-  contactFormValues, // a state that holds name, email and message values. 
+  beforeSubmit, // function which is used in form validation, disabling submit button
+  afterSubmit, // function which is used in showing submission message, enabling submit button
+  contactFormValues, // a state that holds name, email and message values.
   children, // stands for form elements name,email,message,button.
 }) => {
   // This keep "Honeypot" form field hidden during runtime. It is exposed for netlify build bots.
