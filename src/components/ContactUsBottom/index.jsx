@@ -12,17 +12,17 @@ const ContactUsBottom = () => {
         <div className="contacUsBottom__bottomCurve__topHalf">
           <div className="contacUsBottom__bottomCurve__topHalfImg">
             <img
-              className="contactUsBottom__img"
+              className="contactUsBottom__imgMain"
               alt="children playing in the garden"
               src={contactUsBottomImgLeft}
             />
             <img
-              className="contactUsBottom__img"
+              className="contactUsBottom__imgSubOne"
               alt="child playing in the garden"
               src={contactUsBottomImgRight_1}
             />
             <img
-              className="contactUsBottom__img"
+              className="contactUsBottom__imgSubTwo"
               alt="child playing in the garden"
               src={contactUsBottomImgRight_2}
             />
