@@ -53,6 +53,8 @@
   margin-left: 38%;
 }
 
+/* Media query rules to override previous rules, as necessary */
+/* At the breakpoint happened we will see the two images only */
 @media screen and (max-width: 1000px) {
   .contactUsBottom__imgMain {
     width: 30em;
@@ -69,6 +71,7 @@
   }
 }
 
+/* At the breakpoint happened we will see the one image only */
 @media screen and (max-width: 480px) {
   .contactUsBottom__imgMain {
     width: 15em;
