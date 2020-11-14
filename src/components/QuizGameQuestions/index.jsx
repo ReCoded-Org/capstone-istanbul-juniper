@@ -31,8 +31,7 @@ const QuestionCard = ({
           key={answer}
           >
           <button
-            className="quizQuestionWrapper__userAnswer"
-            disabled={userAnswer ? true : false}
+            className="quizQuestionWrapper__userAnswer"           
             value={answer}
             onClick={callback} >
             <span dangerouslySetInnerHTML={{ __html: answer }} />
