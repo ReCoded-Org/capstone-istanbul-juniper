@@ -9,16 +9,17 @@ const DIFFICULTY = {
   HARD: "hard",
 };
 const TOTAL_QUESTIONS = 10;
+
 const QuizGame = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [isGameStart,setIsGameStart]=useState(false)
+  const [isGameStart, setIsGameStart] = useState(false);
   const startQuiz = async () => {
     setIsLoading(true);
-    setIsGameStart(true)
+    setIsGameStart(true);
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
       DIFFICULTY.EASY
@@ -32,8 +33,9 @@ const QuizGame = () => {
   const checkAnswer = (e) => {
     if (isGameStart) {
       const answer = e.currentTarget.value;
-      const answerAgainstCorrect = questions[currentQuestionNumber].correct_answer
-      const isCorrect = answerAgainstCorrect  === answer;
+      const answerAgainstCorrect =
+        questions[currentQuestionNumber].correct_answer;
+      const isCorrect = answerAgainstCorrect === answer;
       if (isCorrect) {
         setScore((prev) => prev + 1);
         const answerObject = {
@@ -48,43 +50,45 @@ const QuizGame = () => {
   };
   const nextQuestion = () => {
     const nextQNum = currentQuestionNumber + 1;
-    if (nextQNum>= TOTAL_QUESTIONS) {
-      setIsGameStart(true)
+    if (nextQNum >= TOTAL_QUESTIONS) {
+      setIsGameStart(true);
     } else {
       setCurrentQuestionNumber(nextQNum);
     }
   };
-  const gameStarted = isGameStart &&!isLoading
-  const checkIfNotLastQuestion = userAnswers.length === currentQuestionNumber+ 1 && currentQuestionNumber !== TOTAL_QUESTIONS - 1
-  const  checkToNextQuestion =  gameStarted && checkIfNotLastQuestion 
-  const currentQuestion = questions[currentQuestionNumber].question
-  const storedAnswers = questions[currentQuestionNumber].answers
+  const gameStarted = isGameStart && !isLoading;
+  const checkIfNotLastQuestion =
+    userAnswers.length === currentQuestionNumber + 1 &&
+    currentQuestionNumber !== TOTAL_QUESTIONS - 1;
+  const checkToNextQuestion = gameStarted && checkIfNotLastQuestion;
+  const currentQuestion = questions[currentQuestionNumber].question;
+  const storedAnswers = questions[currentQuestionNumber].answers;
   return (
     <>
       <div className="quizWrapper">
         <h1 className="quizWrapper__header">Quiz Game</h1>
-        {!isGameOver &&(
+        {!isGameOver && (
           <button className="quizWrapper__startGame" onClick={startQuiz}>
             Start
           </button>
-        ) }
-        { isGameStart && <p className="quizWrapper__score">Score: {score}</p>}
+        )}
+        {isGameStart && <p className="quizWrapper__score">Score: {score}</p>}
         {isLoading && <p>Loading Questions...</p>}
-        {!isLoading &&  isGameStart && (
+        {!isLoading && isGameStart && (
           <QuestionCard
             questionNum={currentQuestionNumber + 1}
             totalQuestions={TOTAL_QUESTIONS}
-            question= {currentQuestion}
+            question={currentQuestion}
             storedQuestionsAnswers={storedAnswers}
             userAnswer={userAnswers ? userAnswers[questionNumber] : undefined}
             callback={checkAnswer}
           />
         )}
-        { checkToNextQuestion &&(
+        {checkToNextQuestion && (
           <button className="quizWrapper__nextButton" onClick={nextQuestion}>
             Next Question
           </button>
-        ) }
+        )}
       </div>
     </>
   );
