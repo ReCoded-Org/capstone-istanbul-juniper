@@ -64,8 +64,7 @@ const QuizGame = () => {
     userAnswers.length === currentQuestionNumber + 1 &&
     currentQuestionNumber !== TOTAL_QUESTIONS - 1;
   const isThereAnotherQuestion = isGameReady && isUserOnLastQuestion;
-  const currentQuestion = questions[currentQuestionNumber].question;
-  const storedAnswers = questions[currentQuestionNumber].answers;
+
   return (
     <>
       <div className="quizWrapper">
@@ -75,22 +74,19 @@ const QuizGame = () => {
             Start
           </button>
         )}
-        {isGameStart && (<p className="quizWrapper__score">Score: {score}</p>)}
-        {isLoading &&( <p>Loading Questions...</p>)}
+        {isGameStart && <p className="quizWrapper__score">Score: {score}</p>}
+        {isLoading && <p>Loading Questions...</p>}
         {isGameReady && (
           <QuestionCard
             questionNum={currentQuestionNumber + 1}
             totalQuestions={TOTAL_QUESTIONS}
-            question={currentQuestion}
-            answerChoices={storedAnswers}
+            question={questions[currentQuestionNumber].question}
+            answerChoices={questions[currentQuestionNumber].answers}
             handleClick={checkAnswer}
           />
         )}
         {isThereAnotherQuestion && (
-          <button
-            className="quizWrapper__nextButton"
-            onClick={nextQuestion}
-          >
+          <button className="quizWrapper__nextButton" onClick={nextQuestion}>
             Next question
           </button>
         )}
