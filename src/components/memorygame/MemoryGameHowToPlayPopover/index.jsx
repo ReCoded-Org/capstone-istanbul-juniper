@@ -6,12 +6,10 @@ import "./index.css";
 
 const HowToPlayPopover = () => {
   const [t] = useTranslation();
-  const howToPlayTitle = t("memoryGame.howToPlayTitle");
-  const howToPlayDescription = t("memoryGame.howToPlayDescription");
   return (
     <Popover
-      content={howToPlayDescription}
-      title={howToPlayTitle}
+      content={t("memoryGame.howToPlayDescription")}
+      title={t("memoryGame.howToPlayTitle")}
       placement="topRight"
     >
       <QuestionCircleTwoTone className="howToPlayicon" />
