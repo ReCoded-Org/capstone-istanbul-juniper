@@ -4,19 +4,19 @@ import { useTranslation } from "react-i18next";
 import "./index.css";
 import { Link } from "react-router-dom";
 // line 7-8-9 are mock datas
-import zelda from "../../../images/mockZeldaPoster.jpg";
-import gta from "../../../images/mockGTAPoster.jpg";
-import destiny from "../../../images/mockDestinyPoster.jpg";
+import zeldaImg from "../../../images/mockZeldaPoster.jpg";
+import gtaImg from "../../../images/mockGTAPoster.jpg";
+import destinyImg from "../../../images/mockDestinyPoster.jpg";
 
-const mockDataArr = [
-  { name: "Grand theft auto", img: { src: gta, alt: "Grand theft auto" } },
-  { name: "Zelda", img: { src: zelda, alt: "Zelda" } },
-  { name: "Destiny", img: { src: destiny, alt: "Destiny" } },
+const MOCK_GAME_POSTER_DATA_ARR = [
+  { name: "Grand theft auto", img: { src: gtaImg, alt: "Grand theft auto" } },
+  { name: "Zelda", img: { src: zeldaImg, alt: "Zelda" } },
+  { name: "Destiny", img: { src: destinyImg, alt: "Destiny" } },
 ];
 
 const GamesPageImageGrid = () => {
   const [t] = useTranslation();
-  const gamePosters = mockDataArr.map((gameObj) => {
+  const gamePosters = MOCK_GAME_POSTER_DATA_ARR.map((gameObj) => {
     return (
       <Col
         xs={20}
