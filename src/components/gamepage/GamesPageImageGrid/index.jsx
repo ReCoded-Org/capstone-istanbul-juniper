@@ -16,7 +16,6 @@ const mockDataArr = [
 
 const GamesPageImageGrid = () => {
   const [t] = useTranslation();
-  const gameGridTitle = t("gamesPage.title");
   const gamePosters = mockDataArr.map((gameObj) => {
     return (
       <Col
@@ -36,7 +35,7 @@ const GamesPageImageGrid = () => {
   });
   return (
     <div className="gamePageImageGrid">
-      <h1 className="gamePageImageGrid__title">{gameGridTitle}</h1>
+      <h1 className="gamePageImageGrid__title">{t("gamesPage.title")}</h1>
       <Row justify="center">{gamePosters}</Row>
     </div>
   );
