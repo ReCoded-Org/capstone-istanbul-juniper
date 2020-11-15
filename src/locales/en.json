@@ -74,6 +74,9 @@
       ]
     }
   },
+  "gamesPage": {
+    "title": "Games"
+  },
   "memoryGame": {
     "title": "Memory Game",
     "facts": "Facts",

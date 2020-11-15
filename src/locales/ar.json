@@ -74,6 +74,9 @@
       ]
     }
   },
+  "gamesPage": {
+    "title": "ألعاب"
+  },
   "memoryGame": {
     "title": "لعبة الذاكرة",
     "facts": "حقائق",
