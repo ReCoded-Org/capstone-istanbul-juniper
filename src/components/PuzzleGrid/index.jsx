@@ -44,8 +44,22 @@ const PuzzleGrid = ({ puzzleImage }) => {
     tilesGenerator();
   }, [puzzleImage]);
 
+  // This effect runs to check whether the currect solution is correct or not
+  // tiles are saved in an array indexed from 0 to n (6) and displayed in that order
+  // first condition checks if tile's id is equal to its index in the array and returns false/true
+  // second condition checks if acc prev value is false, if so then it keeps it this way
   useEffect(() => {
-    checkSolution();
+    const isCorrect = currentPuzzleState.reduce(
+      (acc, currTile, tileCurrIndex) => {
+        if (currTile.id !== tileCurrIndex || acc === false) {
+          return false;
+        } else {
+          return acc;
+        }
+      },
+      true
+    );
+    setIsSolved(isCorrect);
   }, [currentPuzzleState]);
 
   const handleClick = (clickedTileId) => {
@@ -86,23 +100,6 @@ const PuzzleGrid = ({ puzzleImage }) => {
     newTiles.forEach((tile) => (tile.selected = false));
     setCurrentPuzzleState(newTiles);
     setSelectedTileId(null);
-  };
-
-  const checkSolution = () => {
-    // tiles are saved in an array indexed from 0 to n (6) and displayed in that order
-    // first condition checks if tile's id is equal to its index in the array and returns false/true
-    // since initial acc value is true, second condition checks if prev value is true and keeps its value
-    const isCorrect = currentPuzzleState.reduce(
-      (acc, currTile, tileCurrIndex) => {
-        if (currTile.id !== tileCurrIndex || acc === false) {
-          return false;
-        } else {
-          return acc;
-        }
-      },
-      true
-    );
-    setIsSolved(isCorrect);
   };
 
   let gridBody;
