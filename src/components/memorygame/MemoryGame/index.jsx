@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Row } from "antd";
+// Check https://github.com/daniel-lundin/react-dom-confetti for 'react-dom-confetti'
 import Confetti from "react-dom-confetti";
-import { Redirect } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import MemoryGameFactList from "../MemoryGameFactList/index";
 import "./index.css";
@@ -10,21 +10,21 @@ import MemoryGameCards from "../MemoryGameCards";
 
 const MemoryGame = () => {
   const [t] = useTranslation();
+  // from line 13 to 17 all const are string translations
   const factsTitle = t("memoryGame.facts");
   const emptyFactListMessage = t("memoryGame.emptyFactListMessage");
   const gameTitle = t("memoryGame.title");
   const gameHeader = t("memoryGame.header");
-  const [isCompleted, setIsCompleted] = useState(false);
-  const [redirect] = useState();
+  const [isGameCompleted, setIsGameCompleted] = useState(false);
+  // matchedCards is being used to display environmental facts. It is an array and holds states(objects) of successfully matched cards.
+  // When a match is made only state of first card gets pushed inside matchedCards. Because matched cards have same state.
+  // Otherwise same fact would be displayed twice.
   const [matchedCards, setMatchedCards] = useState([]);
 
-  return redirect ? (
-    <>
-      <Redirect to="/" />
-    </>
-  ) : (
+  return (
     <Row className="memoryGame" justify="center">
-      <Confetti active={isCompleted} config={confettiConfig} />
+      {/* Confetti displays confetti effect to congratulate user when game is completed */}
+      <Confetti active={isGameCompleted} config={confettiConfig} />
       <Col xs={22} md={20} xl={17}>
         <h1 className="memoryGame__title">{gameTitle}</h1>
         <h3 className="memoryGame__description">{gameHeader}</h3>
@@ -32,22 +32,18 @@ const MemoryGame = () => {
           <MemoryGameCards
             setMatchedCards={setMatchedCards}
             matchedCards={matchedCards}
-            setIsCompleted={setIsCompleted}
+            setIsGameCompleted={setIsGameCompleted}
           />
         </Row>
       </Col>
-      {matchedCards ? (
-        <Col xs={20}>
-          <Confetti active={isCompleted} config={confettiConfig} />
-          <MemoryGameFactList
-            facts={matchedCards}
-            title={factsTitle}
-            emptyFactListMessage={emptyFactListMessage}
-          />
-        </Col>
-      ) : (
-        ""
-      )}
+      <Col xs={20}>
+        <Confetti active={isGameCompleted} config={confettiConfig} />
+        <MemoryGameFactList
+          facts={matchedCards}
+          title={factsTitle}
+          emptyFactListMessage={emptyFactListMessage}
+        />
+      </Col>
     </Row>
   );
 };

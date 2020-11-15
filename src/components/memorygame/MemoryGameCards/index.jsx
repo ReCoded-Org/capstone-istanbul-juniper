@@ -16,7 +16,11 @@ const NUM_REQUIRED_MATCHES = 2;
 // matchedCards is an array states that holds successfully matched card states
 // setIsCompleted is a function that is being used to set isCompleted as,
 // boolean state when all possible matches made.
-const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
+const MemoryGameCards = ({
+  setMatchedCards,
+  matchedCards,
+  setIsGameCompleted,
+}) => {
   const [t] = useTranslation();
 
   // cardsDataArr example [{description:"...",link:"...",phrase:".."},...]
@@ -120,12 +124,12 @@ const MemoryGameCards = ({ setMatchedCards, matchedCards, setIsCompleted }) => {
   useEffect(() => {
     const MAX_MATCHES = cardStates.length / NUM_REQUIRED_MATCHES;
     if (matchedCards && matchedCards.length === MAX_MATCHES) {
-      setIsCompleted(true);
+      setIsGameCompleted(true);
       Modal.success({
         content: "You have completed the game!",
       });
     }
-  }, [matchedCards, cardStates.length, setIsCompleted]);
+  }, [matchedCards, cardStates.length, setIsGameCompleted]);
 
   const successCard = (
     <Card className="memoryGameCardContainer___successCard">
