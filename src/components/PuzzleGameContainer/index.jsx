@@ -7,14 +7,19 @@ import plantingImg from "./../../images/puzzleGame/planting.jpg";
 import PuzzleGrid from "./../PuzzleGrid";
 import "./index.css";
 
-const PUZZLE_IMAGE_POOL = [habitatImg, conservationImg, holdingPlantImg, plantingImg];
+const PUZZLE_IMAGE_POOL = [
+  habitatImg,
+  conservationImg,
+  holdingPlantImg,
+  plantingImg,
+];
 
 // This component contains the list of images the user can choose to solve
 // it also renders the PuzzleGrid component
 // When the user clicks on an image it will be passed to the PuzzleGrid component as a prop
 // PuzzleGrid then renders the puzzle tiles of that image
 const PuzzleGameContainer = () => {
-  // currentImage is the image displayed for the puzzle. 
+  // currentImage is the image displayed for the puzzle.
   // It will be divided into pieces using CSS.
   const [currentImage, setCurrentImage] = useState(PUZZLE_IMAGE_POOL[0]);
 
