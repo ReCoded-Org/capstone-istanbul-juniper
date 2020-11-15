@@ -57,6 +57,7 @@ const QuizGame = () => {
       setCurrentQuestionNumber(nextQNum);
     }
   };
+  const startTheGameAgain = !isGameStart ||  userAnswers.length === TOTAL_QUESTIONS
   const isGameReady = isGameStart && !isLoading;
   const isUserOnLastQuestion =
     userAnswers.length === currentQuestionNumber + 1 &&
@@ -68,13 +69,13 @@ const QuizGame = () => {
     <>
       <div className="quizWrapper">
         <h1 className="quizWrapper__header">Quiz Game</h1>
-        {!isGameOver && (
+        {startTheGameAgain&& (
           <button className="quizWrapper__startGame" onClick={startQuiz}>
             Start
           </button>
         )}
-        {isGameStart && <p className="quizWrapper__score">Score: {score}</p>}
-        {isLoading && <p>Loading Questions...</p>}
+        {isGameStart && (<p className="quizWrapper__score">Score: {score}</p>)}
+        {isLoading && (<p>Loading Questions...</p>)}
         {isGameReady && (
           <QuestionCard
             questionNum={currentQuestionNumber + 1}
