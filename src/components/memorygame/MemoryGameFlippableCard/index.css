@@ -1,0 +1,18 @@
+.memoryGameCardsContainer___card {
+  cursor: pointer;
+  height: clamp(20vh, 280px, 35vh);
+  width: 100%;
+  border-radius: 20px;
+  transition: all, 0.5s;
+}
+
+.memoryGameCardsContainer___card___image {
+  width: 100%;
+  height: 100%;
+}
+
+.memoryGameCardsContainer___card___figcaption {
+  text-align: center;
+  font-family: "Salsa", cursive;
+  font-size: clamp(1.4rem, 1vw, 300%);
+}
