@@ -3,7 +3,6 @@ import { Row, Col } from "antd";
 import { useTranslation } from "react-i18next";
 import "./index.css";
 import { Link } from "react-router-dom";
-// line 7-8-9 are mock datas
 import zeldaImg from "../../../images/mockZeldaPoster.jpg";
 import gtaImg from "../../../images/mockGTAPoster.jpg";
 import destinyImg from "../../../images/mockDestinyPoster.jpg";
