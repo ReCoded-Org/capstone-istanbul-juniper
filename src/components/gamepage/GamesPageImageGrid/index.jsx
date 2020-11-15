@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 import { useTranslation } from "react-i18next";
 import "./index.css";
 import { Link } from "react-router-dom";
+// line 7-8-9 are mock datas
 import zelda from "../../../images/mockZeldaPoster.jpg";
 import gta from "../../../images/mockGTAPoster.jpg";
 import destiny from "../../../images/mockDestinyPoster.jpg";
@@ -11,7 +12,6 @@ const mockDataArr = [
   { name: "Grand theft auto", img: { src: gta, alt: "Grand theft auto" } },
   { name: "Zelda", img: { src: zelda, alt: "Zelda" } },
   { name: "Destiny", img: { src: destiny, alt: "Destiny" } },
-  { name: "Grand theft auto", img: { src: gta, alt: "Grand theft auto" } },
 ];
 
 const GamesPageImageGrid = () => {
@@ -24,9 +24,12 @@ const GamesPageImageGrid = () => {
         md={9}
         style={{ backgroundImage: `url(${gameObj.img.src})` }}
         className="gamePageImageGrid__col"
+        key={gameObj.name}
       >
-        <Link to="/" className="gamePageImageGrid__col__link">
-          <p className="gamePageImageGrid__col__link__text">{gameObj.name}</p>
+        <Link to="/" className="gamePageImageGrid__col__redirect">
+          <p className="gamePageImageGrid__col__redirect__text">
+            {gameObj.name}
+          </p>
         </Link>
       </Col>
     );

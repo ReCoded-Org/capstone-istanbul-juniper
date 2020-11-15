@@ -13,7 +13,7 @@
   transition: all, 0.5s;
 }
 
-.gamePageImageGrid__col__link {
+.gamePageImageGrid__col__redirect {
   display: inline-flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -21,7 +21,7 @@
   height: 100%;
 }
 
-.gamePageImageGrid__col__link__text {
+.gamePageImageGrid__col__redirect__text {
   color: white;
   font-size: 3rem;
   text-align: center;
