@@ -89,7 +89,7 @@ const QuizGame = () => {
         {isThereAnotherQuestion && (
           <button
             className="quizWrapper__nextButton"
-            handleClick={nextQuestion}
+            onClick={nextQuestion}
           >
             Next question
           </button>
