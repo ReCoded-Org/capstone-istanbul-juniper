@@ -7,6 +7,18 @@
     "contact": "İletişim",
     "login": "Giriş yap"
   },
+  "footer": {
+    "trademark": "Marka",
+    "contact": "İletişim ",
+    "policies": "Kullanıcı Sözleşmesi",
+    "games": "Oyunlar",
+    "about": "Hakkında"
+  },
+  "resourceSection": {
+    "pollution": "Çevre kirliliği",
+    "climate Change": "Mevsim değişimi",
+    "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
+  },
   "home": {
     "stayUpToDate": "Güncel kal!",
     "spreadTheWord": "Öğrendiklerini paylaş!",
