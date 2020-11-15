@@ -61,7 +61,7 @@ const QuizGame = () => {
   const isUserOnLastQuestion =
     userAnswers.length === currentQuestionNumber + 1 &&
     currentQuestionNumber !== TOTAL_QUESTIONS - 1;
-  const checkToNextQuestion = isGameReady && isUserOnLastQuestion;
+  const isThereAnotherQuestion = isGameReady && isUserOnLastQuestion;
   const currentQuestion = questions[currentQuestionNumber].question;
   const storedAnswers = questions[currentQuestionNumber].answers;
   return (
@@ -84,7 +84,7 @@ const QuizGame = () => {
             handleClick={checkAnswer}
           />
         )}
-        {checkToNextQuestion && (
+        {isThereAnotherQuestion && (
           <button className="quizWrapper__nextButton" handleClick={nextQuestion}>
             Next Question
           </button>
