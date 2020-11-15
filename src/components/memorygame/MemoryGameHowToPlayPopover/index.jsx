@@ -11,7 +11,7 @@ const HowToPlayPopover = ({ howToPlayDescription, howToPlayTitle }) => {
       title={howToPlayTitle}
       placement="topRight"
     >
-      <QuestionCircleTwoTone className="howToPlayMemoryGameContainer__icon" />
+      <QuestionCircleTwoTone className="howToPlayicon" />
     </Popover>
   );
 };

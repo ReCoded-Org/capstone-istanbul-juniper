@@ -9,7 +9,7 @@ const ScrollToFacts = ({ scrollToFactsButtonText }) => {
   return (
     // HashLink is being used to redirect user to fact list, when button is clicked
     <HashLink to="#memoryGameFactList" smooth>
-      <Button className="scrollToFactsContainer__button" type="primary">
+      <Button className="scrollToFactsButton" type="primary">
         {scrollToFactsButtonText}
       </Button>
     </HashLink>

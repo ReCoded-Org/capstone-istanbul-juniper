@@ -38,7 +38,7 @@ const GameCards = ({
         } else {
           card = (
             <FlippableCard
-              cardState={cardState}
+              targetState={cardState}
               cardStates={cardStates}
               setCardStates={setCardStates}
               selectedCards={selectedCards}

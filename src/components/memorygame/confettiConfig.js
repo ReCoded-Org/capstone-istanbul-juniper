@@ -1,3 +1,5 @@
+// configuration file for "Confetti" component
+// Check https://github.com/daniel-lundin/react-dom-confetti for 'react-dom-confetti' to learn more
 const confettiConfig = {
   angle: "180",
   spread: "360",
