@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
-import ReactCardFlip from "react-card-flip";
-import { Col, Card, Modal, Row, Popover, Button } from "antd";
+import { Col, Modal, Row, Popover, Button } from "antd";
 import { useTranslation } from "react-i18next";
 import { QuestionCircleTwoTone } from "@ant-design/icons";
+// Check https://github.com/rafgraph/react-router-hash-link for 'react-router-hash-link'
 import { HashLink } from "react-router-hash-link";
-import questionMark from "../../../images/memoryGameFrontImage.png";
-import memoryGameSuccessSymbol from "../../../images/memoryGameSuccessSymbol.svg";
 import cardInitialStateGenerator from "../cardInitialStateGenerator";
+import FlippableCard from "../MemoryGameFlippableCard";
+import SuccessCard from "../MemoryGameSuccessCard";
 
 const NUM_REQUIRED_MATCHES = 2;
 // game example: https://www.brightfocus.org/alzheimers/memory-games/match-pictures
@@ -44,27 +44,6 @@ const MemoryGameCards = ({
   // selectedCards is an array of clicked card states(objects).
   // selectedCards array hold only "NUM_REQUIRED_MATCHES" amount of card states
   const [selectedCards, setSelectedCards] = useState([]);
-
-  // handle click flips card
-  // if the card is not in selectedCards, adds it to selectedCards
-  const handleClick = (clickedCardState) => {
-    const copyOfCardStates = [...cardStates];
-    // current index is needed to keep the order of cards displayed
-    // because goal is to make user remember the spots of previous cards
-    const currentIndex = cardStates.findIndex(
-      (state) => state.cardKey === clickedCardState.cardKey
-    );
-    const targetCardState = copyOfCardStates[currentIndex];
-    targetCardState.isFlipped = true;
-    setCardStates(() => [...copyOfCardStates]);
-    // prevents user to use same card multiple times
-    const isCardNotInSelectedCards = selectedCards.every(
-      (selectedCard) => selectedCard.cardKey !== clickedCardState.cardKey
-    );
-    if (isCardNotInSelectedCards) {
-      setSelectedCards((prevState) => [...prevState, clickedCardState]);
-    }
-  };
 
   // Checks if two cards have a matching image.
   const areCardsMatching = (card, firstCard) => {
@@ -131,58 +110,21 @@ const MemoryGameCards = ({
     }
   }, [matchedCards, cardStates.length, setIsGameCompleted]);
 
-  const successCard = (
-    <Card className="memoryGameCardContainer___successCard">
-      <img
-        src={memoryGameSuccessSymbol}
-        alt="Success symbol"
-        className="memoryGameCardContainer___successCard___symbol"
-      />
-    </Card>
-  );
-
   const gameCards = cardStates.map((cardState) => {
-    // cardState example Object
-    // {
-    //   cardKey: "alternateEnergy0",
-    //   description: "Alternatif Enerji",
-    //   img: {src: "/static/media/alternateEnergy.88cef00e.svg", imgKey: "alternateEnergy"},
-    //   isFlipped: false,
-    //   isMatched: false,
-    //   link: "https://evrimagaci.org/yesil-enerji-devrimi-elektrik-harcamaniz-icin-size-para-odenirse-3188",
-    //   phrase: "2017'den 2018'e geçişteki tatil sezonunda Almanya, rüzgar ve güneş enerjisi kaynaklarını kullanarak çok fazla enerji ürettiği için, çeşitli ofisler ve üretim fabrikalarının fazladan elektrik tüketmesi amacıyla kendilerine megawatt-saat (MWh) başına 60 Amerikan Doları devlet desteği ödediğini biliyor muydun?",
-    // }
     let card;
     // if the card is matched, it gets replaced by a card with success symbol on it
     if (cardState.isMatched) {
-      card = successCard;
-      // if there is no match ReactCardFlip gets rendered with 2 children, front side and back side in this order
+      card = <SuccessCard />;
+      // if there is no match FlippableCard gets rendered with 2 children inside, front side and back side in this order
     } else {
       card = (
-        <ReactCardFlip isFlipped={cardState.isFlipped} flipDirection="vertical">
-          {/* Front side */}
-          <Card
-            className="memoryGameCardsContainer___card"
-            onClick={() => handleClick(cardState)}
-          >
-            <img
-              src={questionMark}
-              alt="Green question mark"
-              className="memoryGameCardsContainer___card___questionMark"
-            />
-          </Card>
-          {/* Back side */}
-          <Card className="memoryGameCardsContainer___card">
-            <img
-              src={cardState.img.src}
-              alt={cardState.description}
-              className="memoryGameCardsContainer___card___image"
-            />
-            <figcaption className="memoryGameCardsContainer___card___image___figcaption">
-              {cardState.description}
-            </figcaption>
-          </Card>
-        </ReactCardFlip>
+        <FlippableCard
+          cardState={cardState}
+          cardStates={cardStates}
+          setCardStates={setCardStates}
+          selectedCards={selectedCards}
+          setSelectedCards={setSelectedCards}
+        />
       );
     }
     return (
