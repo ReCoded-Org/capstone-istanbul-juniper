@@ -77,7 +77,7 @@
   "memoryGame": {
     "title": "لعبة الذاكرة",
     "facts": "حقائق",
-    "unlockedFacts": "حقائق غير مقفلة",
+    "scrollToFactsButtonText": "حقائق غير مقفلة",
     "header": "اختبر ذاكرتك لتكتشف الحقائق!",
     "howToPlayTitle": "كيف ألعب",
     "howToPlayDescription": "انقر فوق البطاقة لتكشف عن الصورة الموجودة خلفها ومطابقتها عن طريق النقر على بطاقة تحتوي على نفس الصورة.",

@@ -4,11 +4,13 @@ import { HashLink } from "react-router-hash-link";
 import { Button } from "antd";
 import "./index.css";
 
-const ScrollToFacts = ({ unlockedFacts }) => {
+// scrollToFactsButtonText is a translated string
+const ScrollToFacts = ({ scrollToFactsButtonText }) => {
   return (
-    <HashLink to="#memoryGameFactList" smooth={true}>
+    // HashLink is being used to redirect user to fact list, when button is clicked
+    <HashLink to="#memoryGameFactList" smooth>
       <Button className="scrollToFactsContainer__button" type="primary">
-        <p>{unlockedFacts}</p>
+        {scrollToFactsButtonText}
       </Button>
     </HashLink>
   );

@@ -3,6 +3,7 @@ import { QuestionCircleTwoTone } from "@ant-design/icons";
 import { Popover } from "antd";
 import "./index.css";
 
+// both parameters are translated strings
 const HowToPlayPopover = ({ howToPlayDescription, howToPlayTitle }) => {
   return (
     <Popover

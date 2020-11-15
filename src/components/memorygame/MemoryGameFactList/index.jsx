@@ -8,7 +8,8 @@ import { List, Card } from "antd";
  * "facts" is an array of objects
  * "title" is a string that is translated by i18n. It is used to describe what the list holds.
  * If the language is English "title" will be "Facts"
- * "emptyFactListMessage" is a string that is translated by i18n. It is displayed when fact list is empty
+ * "emptyFactListMessage" is a string that is translated by i18n.
+ * It is displayed when fact list is empty
  * If the language is English "emptyFactListMessage" will be ""Match cards to reveal facts!"
  */
 const MemoryGameFactList = ({ facts, title, emptyFactListMessage }) => {

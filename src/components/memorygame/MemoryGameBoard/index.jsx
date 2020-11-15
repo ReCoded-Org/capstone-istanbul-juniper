@@ -13,8 +13,9 @@ const NUM_REQUIRED_MATCHES = 2;
 // instead of squares this game uses cards.
 // Card flips on click to show what is behind.
 // matchedCards is an array states that holds successfully matched card states
-// setIsCompleted is a function that is being used to set isCompleted as,
-// boolean state when all possible matches made.
+// setMatchedCards is setter of matchedCards
+// setIsGameCompleted is a function that is being used to set isGameCompleted as,
+// boolean(true) state when all possible matches made.
 const MemoryGameBoard = ({
   setMatchedCards,
   matchedCards,
@@ -29,14 +30,21 @@ const MemoryGameBoard = ({
     }),
   ];
   // line 29, 30 and 31 are string translations for screen elements
-  const unlockedFacts = t("memoryGame.unlockedFacts");
+  const scrollToFactsButtonText = t("memoryGame.scrollToFactsButtonText");
   const howToPlayTitle = t("memoryGame.howToPlayTitle");
   const howToPlayDescription = t("memoryGame.howToPlayDescription");
 
   // cardStates is an array of states with multiple properties
   // state example :
-  // {cardKey:"",img:{src:"",imgKey:""},
-  // isFlipped:false,isMatched:false,description:"",link:"",phrase:""}
+  // {
+  //    cardKey:"",
+  //    img:{src:"",imgKey:""},
+  //    isFlipped:false,
+  //    isMatched:false,
+  //    description:"",
+  //    link:"",
+  //    phrase:""
+  // }
   const [cardStates, setCardStates] = useState(
     cardInitialStateGenerator(cardsDataArr, NUM_REQUIRED_MATCHES)
   );
@@ -56,11 +64,15 @@ const MemoryGameBoard = ({
     if (selectedCards.length !== NUM_REQUIRED_MATCHES) {
       return;
     }
-    const isMatched = selectedCards.every((card) => {
+    const isThereMatch = selectedCards.every((card) => {
       return areCardsMatching(card, ...selectedCards);
     });
-    if (isMatched) {
+    if (isThereMatch) {
+      // When isThereMatched condition is provided all cards are same.
+      // Because selectedCards gets resetted after every successful or unsuccessful match.
       selectedCards.forEach((matchedCard) => {
+        // isMatched property of each card state in selectedCard get changed into true
+        // this makes success card to appear instead of flippable card
         changeCardStatePropertyToOpposite(
           "isMatched",
           matchedCard,
@@ -73,6 +85,10 @@ const MemoryGameBoard = ({
       setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
     } else {
       selectedCards.forEach((unmatchedCard) => {
+        // before this step handleClick made isFlipped property of all selected cards true.
+        // since match failed now,
+        // isMatched property of each card state in selectedCard get changed into false
+        // This makes cards to flip back
         changeCardStatePropertyToOpposite(
           "isFlipped",
           unmatchedCard,
@@ -87,28 +103,28 @@ const MemoryGameBoard = ({
   // displays a modal when victory condition achieved
   useEffect(() => {
     const MAX_MATCHES = cardStates.length / NUM_REQUIRED_MATCHES;
-    if (matchedCards && matchedCards.length === MAX_MATCHES) {
+    if (matchedCards.length === MAX_MATCHES) {
       setIsGameCompleted(true);
       Modal.success({
         content: "You have completed the game!",
       });
     }
-  }, [matchedCards, cardStates.length, setIsGameCompleted]);
+  }, [matchedCards]);
 
   return (
     <div>
-      <Row align="middle" className="scrollToFactsContainer">
+      <Row align="middle">
         <Col span={5}>
-          <ScrollToFacts unlockedFacts={unlockedFacts} />
+          <ScrollToFacts scrollToFactsButtonText={scrollToFactsButtonText} />
         </Col>
-        <Col span={2} push={17} className="howToPlayMemoryGameContainer">
+        <Col span={2} push={17}>
           <HowToPlayPopover
             howToPlayTitle={howToPlayTitle}
             howToPlayDescription={howToPlayDescription}
           />
         </Col>
       </Row>
-      <Row className="memoryGameCardContainer">
+      <Row>
         <GameCards
           cardStates={cardStates}
           setCardStates={setCardStates}

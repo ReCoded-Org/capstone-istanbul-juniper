@@ -1,11 +1,11 @@
-.memoryGame__title {
+.memoryGameTitle {
   text-align: center;
   font-family: "Salsa", cursive;
   color: white;
   font-size: max(1.7rem, 5vw);
 }
 
-.memoryGame__description {
+.memoryGameDescription {
   text-align: center;
   color: white;
   font-family: sans-serif;

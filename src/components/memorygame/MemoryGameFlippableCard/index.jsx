@@ -5,7 +5,7 @@ import { Card } from "antd";
 import questionMark from "../../../images/memoryGameFrontImage.png";
 import "./index.css";
 
-// cardState example
+// targetState example
 // {
 //   cardKey: "alternateEnergy0",
 //   description: "Alternatif Enerji",
@@ -15,8 +15,14 @@ import "./index.css";
 //   link: "https://lorem.com",
 //   phrase: "Lorem ipsum"
 // }
+// FlippableCard is being used in a map function. So targetState refers to each iteration of map
+// Mapped array is cardStates. it holds states like example above(line 9-17)
+// selectedCards is an array of clicked card states(objects).
+// selectedCards array hold only "NUM_REQUIRED_MATCHES" amount of card states
+// example of selectedCards is same as example above(line 9-17)
+
 const FlippableCard = ({
-  cardState,
+  targetState,
   cardStates,
   setCardStates,
   selectedCards,
@@ -44,11 +50,11 @@ const FlippableCard = ({
   };
   return (
     // ReactCardFlip requires 2 children(front side and back side) and isFlipped value to work
-    <ReactCardFlip isFlipped={cardState.isFlipped}>
+    <ReactCardFlip isFlipped={targetState.isFlipped}>
       {/* Front side */}
       <Card
         className="memoryGameCardsContainer___card"
-        onClick={() => handleClick(cardState)}
+        onClick={() => handleClick(targetState)}
       >
         <img
           src={questionMark}
@@ -59,12 +65,12 @@ const FlippableCard = ({
       {/* Back side */}
       <Card className="memoryGameCardsContainer___card">
         <img
-          src={cardState.img.src}
-          alt={cardState.description}
+          src={targetState.img.src}
+          alt={targetState.description}
           className="memoryGameCardsContainer___card___image"
         />
         <figcaption className="memoryGameCardsContainer___card___figcaption">
-          {cardState.description}
+          {targetState.description}
         </figcaption>
       </Card>
     </ReactCardFlip>

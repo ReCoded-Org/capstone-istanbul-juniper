@@ -73,7 +73,7 @@
     "title": "Hafıza Oyunu",
     "facts": "Bilgiler",
     "header": "Hafızanı test ederek bilgileri açığa çıkar!",
-    "unlockedFacts": "Kazanılmış Bilgiler",
+    "scrollToFactsButtonText": "Kazanılmış Bilgiler",
     "howToPlayTitle": "Nasıl oynanır?",
     "howToPlayDescription": "Bir kartın üstüne tıklayarak kart resimini ortaya çıkar ve aynı resmi başka kartta bularak eşleştir.",
     "emptyFactListMessage": "Bilgileri görmek için kartları eşleştir!",
