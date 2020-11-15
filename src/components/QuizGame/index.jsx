@@ -42,8 +42,8 @@ const QuizGame = () => {
         setScore((prev) => prev + 1);
         const answerObject = {
           question: questions[currentQuestionNumber].question,
-          userChosenAnswer,
-          isCorrect,
+          userChosenAnswer:e.currentTarget.value,
+          isCorrect:checkCorrectAnswer === userChosenAnswer,
           correctAnswer: questions[currentQuestionNumber].correct_answer,
         };
         setUserAnswers((prev) => [...prev, answerObject]);
@@ -59,7 +59,7 @@ const QuizGame = () => {
       setCurrentQuestionNumber(nextQNum);
     }
   };
-  
+
   const startTheGameAgain =
     !isGameStart || userAnswers.length === TOTAL_QUESTIONS;
   const isGameReady = isGameStart && !isLoading;
