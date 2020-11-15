@@ -1,10 +1,13 @@
 import React from "react";
 import { QuestionCircleTwoTone } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 import { Popover } from "antd";
 import "./index.css";
 
-// both parameters are translated strings
-const HowToPlayPopover = ({ howToPlayDescription, howToPlayTitle }) => {
+const HowToPlayPopover = () => {
+  const [t] = useTranslation();
+  const howToPlayTitle = t("memoryGame.howToPlayTitle");
+  const howToPlayDescription = t("memoryGame.howToPlayDescription");
   return (
     <Popover
       content={howToPlayDescription}

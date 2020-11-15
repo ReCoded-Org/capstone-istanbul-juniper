@@ -10,9 +10,6 @@ import MemoryGameBoard from "../../components/memorygame/MemoryGameBoard";
 
 const MemoryGame = () => {
   const [t] = useTranslation();
-  // from line 13 to 17 all const are string translations
-  const factsTitle = t("memoryGame.facts");
-  const emptyFactListMessage = t("memoryGame.emptyFactListMessage");
   const gameTitle = t("memoryGame.title");
   const gameHeader = t("memoryGame.header");
   const [isGameCompleted, setIsGameCompleted] = useState(false);
@@ -39,11 +36,7 @@ const MemoryGame = () => {
       </Col>
       <Col xs={20}>
         <Confetti active={isGameCompleted} config={confettiConfig} />
-        <MemoryGameFactList
-          facts={matchedCards}
-          title={factsTitle}
-          emptyFactListMessage={emptyFactListMessage}
-        />
+        <MemoryGameFactList facts={matchedCards} />
       </Col>
     </Row>
   );

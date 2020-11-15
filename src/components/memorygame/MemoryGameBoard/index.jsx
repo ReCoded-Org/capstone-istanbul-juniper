@@ -22,18 +22,12 @@ const MemoryGameBoard = ({
   setIsGameCompleted,
 }) => {
   const [t] = useTranslation();
-
   // cardsDataArr example [{description:"...",link:"...",phrase:".."},...]
   const cardsDataArr = [
     ...t("memoryGame.cards", {
       returnObjects: true,
     }),
   ];
-  // line 29, 30 and 31 are string translations for screen elements
-  const scrollToFactsButtonText = t("memoryGame.scrollToFactsButtonText");
-  const howToPlayTitle = t("memoryGame.howToPlayTitle");
-  const howToPlayDescription = t("memoryGame.howToPlayDescription");
-
   // cardStates is an array of states with multiple properties
   // state example :
   // {
@@ -51,12 +45,10 @@ const MemoryGameBoard = ({
   // selectedCards is an array of clicked card states(objects).
   // selectedCards array hold only "NUM_REQUIRED_MATCHES" amount of card states
   const [selectedCards, setSelectedCards] = useState([]);
-
   // Checks if two cards have a matching image.
   const areCardsMatching = (card, firstCard) => {
     return card.img.imgKey === firstCard.img.imgKey;
   };
-
   // Triggered when user clicks on a card(selectedCards change)
   // checks selected cards to see if they are a match
   useEffect(() => {
@@ -115,13 +107,10 @@ const MemoryGameBoard = ({
     <div>
       <Row align="middle" className="howToPlayPopoverAndScrollToFactsRow">
         <Col span={5}>
-          <ScrollToFacts scrollToFactsButtonText={scrollToFactsButtonText} />
+          <ScrollToFacts />
         </Col>
         <Col span={2} push={17}>
-          <HowToPlayPopover
-            howToPlayTitle={howToPlayTitle}
-            howToPlayDescription={howToPlayDescription}
-          />
+          <HowToPlayPopover />
         </Col>
       </Row>
       <Row>
