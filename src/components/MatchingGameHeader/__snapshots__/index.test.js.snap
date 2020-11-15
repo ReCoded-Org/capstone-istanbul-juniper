@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MatchingGameCards renders correctly 1`] = `
+Array [
+  <h2
+    className="matchingGame__title"
+  >
+    games.matchingGame.title
+  </h2>,
+  <p
+    className="matchingGame__context"
+  >
+    games.matchingGame.subtitle
+  </p>,
+]
+`;

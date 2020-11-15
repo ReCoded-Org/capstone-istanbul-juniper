@@ -1,11 +1,11 @@
 {
   "navbar": {
-    "home": "",
-    "about": "",
-    "games": "",
-    "resources": "",
-    "contact": "",
-    "login": ""
+    "home": "Anasayfa",
+    "about": "Hakkında",
+    "games": "Oyunlar",
+    "resources": "Kaynaklar",
+    "contact": "İletişim",
+    "login": "Giriş yap"
   },
   "footer": {
     "trademark": "Marka",
@@ -13,13 +13,6 @@
     "policies": "Politikalar",
     "games": "Oyunlar",
     "about": "Hakkında"
-  },
-  "home": {
-    "resourcesSection": {
-      "pollution": "Çevre kirliliği",
-      "climateChange": "Mevsim değişimi",
-      "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
-    }
   },
   "login": {
     "login": "Oturum aç",
@@ -40,38 +33,220 @@
     "backToLogin": "Geri Giriş Yap"
   },
   "register": {
-  "fullName": "lütfen tam adınızı giriniz",
-  "validEmail": "lütfen geçerli eposta adresini giriniz",
-  "enterAge": "Lütfen yaşını gir",
-  "passwordCharacter": "Şifre en az 6 karakter uzunluğunda olmalı",
-  "enterPassword": "Şifrenizi giriniz Lütfen",
-  "emailFormat": "E-posta biçimi hatası, lütfen geçerli bir e-posta girin",
-  "terms": "Lütfen şartlar ve koşulları kabul edin",
-  "termsTitle": "şartlar ve koşulları",
-  "close": "Kapat",
-  "iAgree": "Kabul ediyorum",
-  "terms1": "1",
-  "terms2": "2",
-  "terms3": "3",
-  "terms4": "4",
-  "terms5": "5",
-  "terms6": "6",
-  "creat": "Yeni hesap oluştur",
-  "name": "Ad Soyad",
-  "age": "Yaş",
-  "password": "Parola",
-  "email": "Email",
-  "iAgreeTo": "Şartları ve koşulları",
-  "termsandCon":"kabul ediyorum",
-  "creatAccount":"Yeni hesap oluştur",
-  "alreadyAMember": "Bir üye misiniz? Şimdi giriş yap",
-  "login": "Giriş ya",
-  "orYouCan": "Ya da",
-  "withFacebook": "Facebook İle Bağlan",
-  "withGoogle": "Google İle Bağlan"
+    "fullName": "lütfen tam adınızı giriniz",
+    "validEmail": "lütfen geçerli eposta adresini giriniz",
+    "enterAge": "Lütfen yaşını gir",
+    "passwordCharacter": "Şifre en az 6 karakter uzunluğunda olmalı",
+    "enterPassword": "Şifrenizi giriniz Lütfen",
+    "emailFormat": "E-posta biçimi hatası, lütfen geçerli bir e-posta girin",
+    "terms": "Lütfen şartlar ve koşulları kabul edin",
+    "termsTitle": "şartlar ve koşulları",
+    "close": "Kapat",
+    "iAgree": "Kabul ediyorum",
+    "terms1": "1",
+    "terms2": "2",
+    "terms3": "3",
+    "terms4": "4",
+    "terms5": "5",
+    "terms6": "6",
+    "creat": "Yeni hesap oluştur",
+    "name": "Ad Soyad",
+    "age": "Yaş",
+    "password": "Parola",
+    "email": "Email",
+    "iAgreeTo": "Şartları ve koşulları",
+    "termsandCon": "kabul ediyorum",
+    "creatAccount": "Yeni hesap oluştur",
+    "alreadyAMember": "Bir üye misiniz? Şimdi giriş yap",
+    "login": "Giriş ya",
+    "orYouCan": "Ya da",
+    "withFacebook": "Facebook İle Bağlan",
+    "withGoogle": "Google İle Bağlan"
   },
   "loginRegister": {
-    "anEmailsent":" By Adresine bir e-posta mesajı gönderildi",
+    "anEmailsent": " By Adresine bir e-posta mesajı gönderildi",
     "anEmailsentcontain": "şifre sıfırlama talimatları içerir, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin.."
+  },
+  "home": {
+    "stayUpToDate": "Güncel kal!",
+    "spreadTheWord": "Öğrendiklerini paylaş!",
+    "twitterPages": [
+      {
+        "alt": "Doğa Derneği Twitter Hesabı",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FdogaDernegi.svg?alt=media&token=b3e8eef4-4149-4986-8b25-8fe83f9f1b78",
+        "href": "https://twitter.com/dogadernegi?lang=en"
+      },
+      {
+        "alt": "Green Peace Türkiye",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FgreenPeaceTr.svg?alt=media&token=b050a95a-8c37-4112-b3a2-0016b6603584",
+        "href": "https://twitter.com/greenpeace_med?lang=en"
+      },
+      {
+        "alt": "TEMA Vakfı Twitter Hesabı",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2Ftema.svg?alt=media&token=73c902be-a1b1-427a-9a2e-3e60aa5405ea",
+        "href": "https://twitter.com/temavakfi?lang=en"
+      },
+      {
+        "alt": "WWF Türkiye Twitter Hesabı",
+        "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FwwfTr.svg?alt=media&token=ae50b5a5-bd3f-442f-bde8-46de44b43a36",
+        "href": "https://twitter.com/wwf_turkiye?lang=en"
+      }
+    ],
+    "gamesCarousel": {
+      "title": "Oyunlar",
+      "subtitle": "En Popüler Oyunlar",
+      "gameCards": [
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        },
+        {
+          "name": "",
+          "img": "",
+          "description": ""
+        }
+      ]
+    }
+  },
+  "memoryGame": {
+    "title": "Hafıza Oyunu",
+    "facts": "Bilgiler",
+    "cards": [
+      {
+        "description": "Asit Yağmuru",
+        "link": "https://www.nkfu.com/asit-yagmuru-ile-ilgili-bilgiler/",
+        "phrase": "Asit yağmurlarının volkanik patlamalar, yanan kömür ve hatta çürüyen bitkiler sebebiyle bile oluşabileceğini biliyor muydun?"
+      },
+      {
+        "description": "Hava Kirliliği",
+        "link": "https://evrimagaci.org/hava-kirliligi-su-anda-bunu-okurken-bile-omrunuzu-kisaltiyor-ve-sizi-daha-hizli-olduruyor-4263",
+        "phrase": "Çin'deki hava kirliliğinin uzaydan gözüktüğünü biliyor muydun?"
+      },
+      {
+        "description": "Alternatif Enerji",
+        "link": "https://evrimagaci.org/yesil-enerji-devrimi-elektrik-harcamaniz-icin-size-para-odenirse-3188",
+        "phrase": "2017'den 2018'e geçişteki tatil sezonunda Almanya, rüzgar ve güneş enerjisi kaynaklarını kullanarak çok fazla enerji ürettiği için, çeşitli ofisler ve üretim fabrikalarının fazladan elektrik tüketmesi amacıyla kendilerine megawatt-saat (MWh) başına 60 Amerikan Doları devlet desteği ödediğini biliyor muydun?"
+      },
+      {
+        "description": "Kimyasal Atık",
+        "link": "http://ekolojist.net/kimyasal-atik-nedir/",
+        "phrase": "Kimyasal atıkların doğaya geri dönüşü olmayan zararlar verdiğini biliyor muydun?"
+      },
+      {
+        "description": "Ormansızlaşma",
+        "link": "https://www.wwf.org.tr/ne_yapiyoruz/iklim_degisikligi_ve_enerji/iklim_degisikligi/",
+        "phrase": "2004 yılındaki insan kaynaklı sera gazı emisyonlarının %17'sinin ormansızlaştırmadan kaynaklandığını biliyor muydun?"
+      },
+      {
+        "description": "Küresel Isınma",
+        "link": "https://evrimagaci.org/iklim-degisikligi-kuresel-isinma-ve-turkiye-icin-sonuclari-roportaji-cagri-mert-bakirci-453",
+        "phrase": "Küresel ısınmanın kasırgaları güçlendirip tahribatı artırdığını biliyor muydun?"
+      },
+      {
+        "description": "Sera Gazı Etkisi",
+        "link": "http://ekolojist.net/sera-gazi-nedir/",
+        "phrase": "Sera gazı etkisinin artmasının en önemli sebebinin sanayi devrimi olduğunu biliyor muydun?"
+      },
+      {
+        "description": "Etrafa Çöp Atmak",
+        "link": "https://evrimagaci.org/davranislarimizi-degistirmek-yere-neden-cop-atiyoruz-7671",
+        "phrase": "Her yıl 4.5 trilyon adet sigara izmaritinin doğaya atıldığını biliyor muydun?"
+      },
+      {
+        "description": "Eriyen Buzullar",
+        "link": "https://cevreonline.com/buzullarin-erimesi/",
+        "phrase": "2100 yılında dünyadaki su seviyesinin 2 metre yükseleceğini biliyor muydun?"
+      },
+      {
+        "description": "Ozon Deliği",
+        "link": "https://evrimagaci.org/ozon-tabakasi-iyilesiyor-kuresel-ruzgarlarin-hareketleri-hakkinda-iyi-haberler-var-8413",
+        "phrase": "Ozon deliğinin okyanuslardaki su akıntısını etkilediğini biliyor muydun?"
+      },
+      {
+        "description": "Geri Dönüşüm",
+        "link": "https://evrimagaci.org/geri-donusum-bilmecesi-malzemeler-kac-kez-geri-donusturulebilir-9424",
+        "phrase": "Alüminyumun sınırsız sayıda geri dönüşüme uğrayabileceğini biliyor muydun?"
+      },
+      {
+        "description": "Su Kirliliği",
+        "link": "https://www.denizticaretodasi.org.tr/tr/haberler/kuresel-su-kirliligi-ile-ilgili-29-endise-verici-gercek-hk-1592-1",
+        "phrase": "2025 yılında yaklaşık 3.5 milyar insanın, büyük ölçüde su kirliliğinden kaynaklı su kıtlığı yaşayacağını biliyor muydun?"
+      }
+    ]
+  },
+  "contact": {
+    "headerSection": {
+      "title": "Bizimle İletişime Geç",
+      "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
+    }
+  },
+  "games": {
+    "matchingGame": {
+      "title": "Eşleştirme Oyunu",
+      "subtitle": "Çevre kelime dağarcığımızı güçlendirelim! Kelimeleri doğru resimlere sürükleyerek eşleştirelim!",
+      "matchingGameCards": [
+        {
+          "name": "Hava kirliliği",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FairPollution.svg?alt=media&token=25927626-de6d-4496-b5fe-730854f19bbc"
+        },
+        {
+          "name": "Deniz ve Okyanuslardaki atıkları temizlemek",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FcleanUpSeasOceans.svg?alt=media&token=d74f439b-439d-42bc-8088-7e5b91265dfd"
+        },
+        {
+          "name": "Çöpleri toplamak",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FcollectGarbage.svg?alt=media&token=510a05c9-96c6-4168-9fe9-a60c79f81f89"
+        },
+        {
+          "name": "Tarım & Rüzgar Enerjisi",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FfarmingWindEnergy.svg?alt=media&token=7359a2b5-7585-45d3-9a9f-0bb4bf8cd9b7"
+        },
+        {
+          "name": "Orman Yangını",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FforestFire.svg?alt=media&token=f4d90f85-53d5-4917-8f78-3d8c50581dfa"
+        },
+        {
+          "name": "Küresel Isınma",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FglobalWarming.svg?alt=media&token=dbb15045-d255-435e-8596-e4994dbb8179"
+        },
+        {
+          "name": "Ağaç Dikmek",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FplantTrees.svg?alt=media&token=fedb0504-aed6-49a5-9afc-06c59ec29478"
+        },
+        {
+          "name": "Atıkları Geri Dönüştürmek",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FrecycleWaste.svg?alt=media&token=188f707a-0117-4700-848e-f73c40852f24"
+        },
+        {
+          "name": "Sürdürülebilir Ulaşım",
+          "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/matchingGameCards%2FsustainableTransportation.svg?alt=media&token=0df53583-9a96-4e49-8e60-42ad79416b7e"
+        }
+      ]
+    },
+    "puzzleGame": {
+      "title": "Görüntü Bulmacası",
+      "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
+    }
   }
 }

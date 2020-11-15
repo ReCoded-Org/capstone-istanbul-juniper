@@ -1,30 +1,19 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../auth/authContext";
-import ResourcesSection from "../../components/ResourcesSection";
-import { auth } from "../../firebaseConfig";
+import React from "react";
+import HomePageHeaderSection from "../../components/HomePageHeaderSection";
+import StayUpToDate from "../../components/StayUpTodate";
+import BottomCurve from "../../components/BottomCurve/index";
+import SpreadTheWordButton from "../../components/SpreadTheWordButton";
 import "./index.css";
+import GamesCarousel from "../../components/GamesCarousel";
 
 const Home = () => {
-  const { user } = useContext(AuthContext);
   return (
     <>
-      Welcome, {user.isLoggedin ? user.fullname : "GUEST"}, |
-      {user.isLoggedin ? (
-        <a
-          href="/#"
-          onClick={(e) => {
-            e.preventDefault();
-            auth.signOut();
-          }}
-        >
-          Logout{" "}
-        </a>
-      ) : (
-        <Link to="/login">Login</Link>
-      )}
-      <hr />
-      <ResourcesSection />
+      <HomePageHeaderSection />
+      <GamesCarousel />
+      <BottomCurve />
+      <SpreadTheWordButton />
+      <StayUpToDate />
     </>
   );
 };

@@ -3,21 +3,20 @@ import React, { useState } from "react";
 import { validateEmail } from "../../functions";
 import { useTranslation } from "react-i18next";
 
-
 const PasswordReset = (props) => {
-const [t] = useTranslation();
-const [passwordResetInfo, setPasswordRestInfo] = useState({ email: "" });
+  const [t] = useTranslation();
+  const [passwordResetInfo, setPasswordRestInfo] = useState({ email: "" });
 
-const handleChange = (key, value) => {
-  let newValues = Object.assign({}, passwordResetInfo);
-  newValues[key] = value;
-  setPasswordRestInfo(newValues);
+  const handleChange = (key, value) => {
+    let newValues = Object.assign({}, passwordResetInfo);
+    newValues[key] = value;
+    setPasswordRestInfo(newValues);
   };
-const [errors, setErrors] = useState({});
-const handleSubmit = (e) => {
-  e.preventDefault();
-  let { email } = passwordResetInfo;
-  let errors = {};
+  const [errors, setErrors] = useState({});
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let { email } = passwordResetInfo;
+    let errors = {};
     if (!validateEmail(email)) {
       errors["email"] = t("passReset.emailFormat");
     }
@@ -41,7 +40,9 @@ const handleSubmit = (e) => {
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
-        <div className="loginContainer__loginTitle">{t("passReset.passwordReset")}</div>
+        <div className="loginContainer__loginTitle">
+          {t("passReset.passwordReset")}
+        </div>
         {props.error !== "" ? (
           <Alert
             style={{ marginBottom: 10 }}
@@ -52,7 +53,9 @@ const handleSubmit = (e) => {
         ) : null}
         {props.message}
         <div className="loginContainer__loginDialog">
-          <div className="loginContainer__loginDialog__inputLabel">{t("passReset.email")}</div>
+          <div className="loginContainer__loginDialog__inputLabel">
+            {t("passReset.email")}
+          </div>
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -75,15 +78,18 @@ const handleSubmit = (e) => {
           <button
             type="submit"
             className="loginContainer__loginDialog__submitButton"
-          >{t("passReset.passwordReset")}
+          >
+            {t("passReset.passwordReset")}
           </button>
           <button
             onClick={() => {
               handleGoToLogin();
             }}
-            type="button"X
+            type="button"
+            X
             className="loginContainer__loginDialog__backToLoginButton"
-          >{t("passReset.backToLogin")}
+          >
+            {t("passReset.backToLogin")}
           </button>
         </div>
       </div>

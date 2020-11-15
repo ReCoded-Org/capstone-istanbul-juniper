@@ -36,7 +36,7 @@ const Register = (props) => {
       errors["age"] = t("register.age");
     }
     if (password.trim().length < 6) {
-      errors["password"] = t("register.passwordCharacter"); ;
+      errors["password"] = t("register.passwordCharacter");
     }
     if (password.trim() === "") {
       errors["password"] = t("register.enterPassword");
@@ -61,32 +61,38 @@ const Register = (props) => {
       props.onGoToLogin();
     }
   };
-  const handleFacebookAuth = () =>{ 
-    if (typeof(props.onFacebookAuth) === "function"){
+  const handleFacebookAuth = () => {
+    if (typeof props.onFacebookAuth === "function") {
       props.onFacebookAuth();
     }
-  }
-  const handleGoogleAuth = () =>{ 
-    if (typeof(props.onGoogleAuth) === "function"){
+  };
+  const handleGoogleAuth = () => {
+    if (typeof props.onGoogleAuth === "function") {
       props.onGoogleAuth();
     }
-  }
-  const handleOkTerms = ()=>{
-    handleChange("agree",true); setTermsOpen(false)
-  }
-  const handleCancelTerms = ()=>{
+  };
+  const handleOkTerms = () => {
+    handleChange("agree", true);
     setTermsOpen(false);
-  }
+  };
+  const handleCancelTerms = () => {
+    setTermsOpen(false);
+  };
   return (
     <form noValidate onSubmit={handleSubmit}>
-      <Modal title= {t("register.termsTitle")}
-      visible={termsOpen} 
-      onOk={handleOkTerms} 
-      onCancel={handleCancelTerms}
-      footer={[
-        <Button key="back" onClick={handleCancelTerms}>{t("register.close")}</Button>,
-        <Button key="submit" type="primary" onClick={handleOkTerms}>{t("register.iAgree")}</Button>,
-      ]}
+      <Modal
+        title={t("register.termsTitle")}
+        visible={termsOpen}
+        onOk={handleOkTerms}
+        onCancel={handleCancelTerms}
+        footer={[
+          <Button key="back" onClick={handleCancelTerms}>
+            {t("register.close")}
+          </Button>,
+          <Button key="submit" type="primary" onClick={handleOkTerms}>
+            {t("register.iAgree")}
+          </Button>,
+        ]}
       >
         <ul>
           <li>{t("register.terms1")}</li>
@@ -110,7 +116,7 @@ const Register = (props) => {
 
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
-          {t("register.name")}
+            {t("register.name")}
           </div>
 
           <div className="loginContainer__loginDialog__input">
@@ -131,7 +137,9 @@ const Register = (props) => {
               </div>
             ) : null}
           </div>
-          <div className="loginContainer__loginDialog__inputLabel">{t("register.enterAge")}</div>
+          <div className="loginContainer__loginDialog__inputLabel">
+            {t("register.enterAge")}
+          </div>
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -151,7 +159,9 @@ const Register = (props) => {
               </div>
             ) : null}
           </div>
-          <div className="loginContainer__loginDialog__inputLabel">{t("register.email")}</div>
+          <div className="loginContainer__loginDialog__inputLabel">
+            {t("register.email")}
+          </div>
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -171,7 +181,7 @@ const Register = (props) => {
             ) : null}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
-          {t("register.password")}
+            {t("register.password")}
           </div>
 
           <div className="loginContainer__loginDialog__input">
@@ -201,7 +211,16 @@ const Register = (props) => {
               }}
             >
               {" "}
-              {t("register.iAgreeTo")}<a href="/#" onClick={(e)=>{ e.preventDefault(); setTermsOpen(true);}}>{t("register.termsandCon")}</a>
+              {t("register.iAgreeTo")}
+              <a
+                href="/#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setTermsOpen(true);
+                }}
+              >
+                {t("register.termsandCon")}
+              </a>
             </Checkbox>
             {errors["agree"] ? (
               <div className="loginContainer__loginDialog__errorContainer">
@@ -230,11 +249,11 @@ const Register = (props) => {
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
-           {t("register.login")}{" "}
+            {t("register.login")}{" "}
           </button>
 
           <div className="loginContainer__loginDialog__loginOptionsTitle">
-          {t("register.orYouCan")}
+            {t("register.orYouCan")}
           </div>
           <button
             onClick={() => {
@@ -242,7 +261,9 @@ const Register = (props) => {
             }}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
-          > {t("register.withFacebook")}
+          >
+            {" "}
+            {t("register.withFacebook")}
           </button>
           <button
             onClick={() => {
@@ -250,7 +271,8 @@ const Register = (props) => {
             }}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
-          >{t("register.withGoogle")}
+          >
+            {t("register.withGoogle")}
           </button>
         </div>
       </div>

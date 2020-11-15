@@ -3,21 +3,23 @@ import React, { useState } from "react";
 import { validateEmail } from "../../functions";
 import { useTranslation } from "react-i18next";
 
-
 const Login = (props) => {
-const [t] = useTranslation();
-const [loginCredentials, setLoginCredentials] = useState({ email: "", password: "" });
-const handleChange = (key, value) => {
-  let newValues = Object.assign({}, loginCredentials);
-      newValues[key] = value;
-      setLoginCredentials(newValues);
+  const [t] = useTranslation();
+  const [loginCredentials, setLoginCredentials] = useState({
+    email: "",
+    password: "",
+  });
+  const handleChange = (key, value) => {
+    let newValues = Object.assign({}, loginCredentials);
+    newValues[key] = value;
+    setLoginCredentials(newValues);
   };
-const [errors, setErrors] = useState({});
-const handleSubmit = (e) => {
+  const [errors, setErrors] = useState({});
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-  let { email, password } = loginCredentials;
-  let errors = {};
+    let { email, password } = loginCredentials;
+    let errors = {};
     if (!validateEmail(email)) {
       errors["email"] = "Email format error";
     }
@@ -38,26 +40,26 @@ const handleSubmit = (e) => {
       props.onSubmit(loginCredentials);
     }
   };
-const handleFacebookAuth = () =>{ 
-    if (typeof(props.onFacebookAuth) === "function"){
+  const handleFacebookAuth = () => {
+    if (typeof props.onFacebookAuth === "function") {
       props.onFacebookAuth();
     }
-  }
-  const handleGoogleAuth = () =>{ 
-    if (typeof(props.onGoogleAuth) === "function"){
+  };
+  const handleGoogleAuth = () => {
+    if (typeof props.onGoogleAuth === "function") {
       props.onGoogleAuth();
     }
-  }
+  };
   const handleGoToRegister = () => {
     if (typeof props.onGoToRegister == "function") {
       props.onGoToRegister();
     }
   };
-  const handleGoToPasswordReset = ()=>{
+  const handleGoToPasswordReset = () => {
     if (typeof props.onGoToPasswordReset == "function") {
       props.onGoToPasswordReset();
     }
-  }
+  };
 
   return (
     <form noValidate onSubmit={handleSubmit}>
@@ -73,7 +75,9 @@ const handleFacebookAuth = () =>{
         ) : null}
         {props.message}
         <div className="loginContainer__loginDialog">
-          <div className="loginContainer__loginDialog__inputLabel">{t("login.email")}</div>
+          <div className="loginContainer__loginDialog__inputLabel">
+            {t("login.email")}
+          </div>
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
@@ -94,7 +98,7 @@ const handleFacebookAuth = () =>{
             ) : null}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
-          {t("login.password")}
+            {t("login.password")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
@@ -116,38 +120,54 @@ const handleFacebookAuth = () =>{
             ) : null}
           </div>
           <div className="loginContainer__loginDialog__forgotPasswordContainer">
-              <a href="/#" onClick={(e)=>{
+            <a
+              href="/#"
+              onClick={(e) => {
                 e.preventDefault();
                 handleGoToPasswordReset();
-              }}>{t("login.forgotPassword")}</a>
+              }}
+            >
+              {t("login.forgotPassword")}
+            </a>
           </div>
           <button
             type="submit"
-            className="loginContainer__loginDialog__submitButton">{t("login.login")}
+            className="loginContainer__loginDialog__submitButton"
+          >
+            {t("login.login")}
           </button>
-          <div className="loginContainer__loginDialog__registerLabel">{t("login.new")}
+          <div className="loginContainer__loginDialog__registerLabel">
+            {t("login.new")}
           </div>
           <button
             onClick={() => {
               handleGoToRegister();
             }}
             type="button"
-            className="loginContainer__loginDialog__registerButton">{t("login.creat")}
+            className="loginContainer__loginDialog__registerButton"
+          >
+            {t("login.creat")}
           </button>
-          <div className="loginContainer__loginDialog__loginOptionsTitle">{t("login.oryoucan")}</div>
+          <div className="loginContainer__loginDialog__loginOptionsTitle">
+            {t("login.oryoucan")}
+          </div>
           <button
             onClick={() => {
               handleFacebookAuth();
             }}
             type="button"
-            className="loginContainer__loginDialog__facebookLoginBtn">{t("login.withFacebook")}
+            className="loginContainer__loginDialog__facebookLoginBtn"
+          >
+            {t("login.withFacebook")}
           </button>
           <button
             onClick={() => {
               handleGoogleAuth();
             }}
             type="button"
-            className="loginContainer__loginDialog__googleLoginBtn">{t("login.withGoogle")}
+            className="loginContainer__loginDialog__googleLoginBtn"
+          >
+            {t("login.withGoogle")}
           </button>
         </div>
       </div>

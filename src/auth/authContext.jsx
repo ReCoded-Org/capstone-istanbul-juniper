@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import firestore, { auth } from '../firebaseConfig';
+import firestore, { auth } from "../firebaseConfig";
 
 export const AuthContext = React.createContext({
   user: {},
-  setUser: () => { },
+  setUser: () => {},
 });
 
 const AuthProvider = (props) => {
@@ -11,10 +11,9 @@ const AuthProvider = (props) => {
 
   useEffect(() => {
     auth.onAuthStateChanged((auth) => {
-      processAuth(auth,setUser);
+      processAuth(auth, setUser);
     });
-    return () => {
-    }
+    return () => {};
   }, []);
 
   return (
@@ -24,22 +23,20 @@ const AuthProvider = (props) => {
   );
 };
 
-export const processAuth = async (auth,setUser) => {
-  if (!auth){
+export const processAuth = async (auth, setUser) => {
+  if (!auth) {
     return setUser({});
   }
   let firestoreResult = await firestore
     .doc("users/" + auth.uid) // A unique user ID, assigned to the requesting user, we're calling/maticing this ID from the our server.
     .get();
-  if (typeof(firestoreResult.data()) === "undefined"){
+  if (typeof firestoreResult.data() === "undefined") {
     await firestore.collection("users").doc(auth.uid).set({
       uid: auth.uid,
       fullname: auth.displayName,
-      age: '0',
+      age: "0",
     });
-     firestoreResult = await firestore
-    .doc("users/" + auth.uid)
-    .get();
+    firestoreResult = await firestore.doc("users/" + auth.uid).get();
   }
   let user = {
     isLoggedin: true,
@@ -50,6 +47,6 @@ export const processAuth = async (auth,setUser) => {
   };
   await setUser(user);
   return;
-}
+};
 
 export default AuthProvider;

@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register Component matches the tree 1`] = `
+<form
+  noValidate={true}
+  onSubmit={[Function]}
+>
+  <div
+    className="loginContainer"
+  >
+    <div
+      className="loginContainer__loginTitle"
+    >
+      register.creat
+    </div>
+    <div
+      className="ant-alert ant-alert-error"
+      data-show={true}
+      role="alert"
+      style={
+        Object {
+          "marginBottom": 10,
+        }
+      }
+    >
+      <span
+        aria-label="close-circle"
+        className="anticon anticon-close-circle ant-alert-icon"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          className=""
+          data-icon="close-circle"
+          fill="currentColor"
+          focusable="false"
+          height="1em"
+          viewBox="64 64 896 896"
+          width="1em"
+        >
+          <path
+            d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z"
+          />
+        </svg>
+      </span>
+      <span
+        className="ant-alert-message"
+      />
+      <span
+        className="ant-alert-description"
+      />
+    </div>
+    <div
+      className="loginContainer__loginDialog"
+    >
+      <div
+        className="loginContainer__loginDialog__inputLabel"
+      >
+        register.name
+      </div>
+      <div
+        className="loginContainer__loginDialog__input"
+      >
+        <input
+          className="ant-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          type="text"
+          value=""
+        />
+         
+      </div>
+      <div
+        className="loginContainer__loginDialog__inputLabel"
+      >
+        register.enterAge
+      </div>
+      <div
+        className="loginContainer__loginDialog__input"
+      >
+        <input
+          className="ant-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          type="number"
+          value=""
+        />
+         
+      </div>
+      <div
+        className="loginContainer__loginDialog__inputLabel"
+      >
+        register.email
+      </div>
+      <div
+        className="loginContainer__loginDialog__input"
+      >
+        <input
+          className="ant-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="loginContainer__loginDialog__inputLabel"
+      >
+        register.password
+      </div>
+      <div
+        className="loginContainer__loginDialog__input"
+      >
+        <input
+          className="ant-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        className="loginContainer__loginDialog__input"
+      >
+        <label
+          className="ant-checkbox-wrapper"
+        >
+          <span
+            className="ant-checkbox"
+            style={Object {}}
+          >
+            <input
+              checked={false}
+              className="ant-checkbox-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="checkbox"
+            />
+            <span
+              className="ant-checkbox-inner"
+            />
+          </span>
+          <span>
+             
+            register.iAgreeTo
+            <a
+              href="/#"
+              onClick={[Function]}
+            >
+              register.termsandCon
+            </a>
+          </span>
+        </label>
+      </div>
+      <button
+        className="loginContainer__loginDialog__submitButton"
+        type="submit"
+      >
+         
+        register.creatAccount
+         
+      </button>
+      <div
+        className="loginContainer__loginDialog__registerLabel"
+      >
+         
+        register.alreadyAMember
+         
+      </div>
+      <button
+        className="loginContainer__loginDialog__registerButton"
+        onClick={[Function]}
+        type="button"
+      >
+        register.login
+         
+      </button>
+      <div
+        className="loginContainer__loginDialog__loginOptionsTitle"
+      >
+        register.orYouCan
+      </div>
+      <button
+        className="loginContainer__loginDialog__facebookLoginBtn"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        register.withFacebook
+      </button>
+      <button
+        className="loginContainer__loginDialog__googleLoginBtn"
+        onClick={[Function]}
+        type="button"
+      >
+        register.withGoogle
+      </button>
+    </div>
+  </div>
+</form>
+`;
