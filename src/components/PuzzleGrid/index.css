@@ -1,0 +1,45 @@
+.puzzleGrid {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectedTile {
+  border: 2px solid #f8ac4c;
+}
+
+.puzzleGrid__tile {
+  margin: 1.3px;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  max-width: 70%;
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  cursor: move;
+  transform: transition 1.1s;
+}
+
+.puzzleGrid__tile:hover {
+  transform: scale(1.1);
+}
+
+.puzzleGrid__puzzledImage {
+  /*the image needs to be much larger than the tile's div so we can split it into pieces*/
+  height: 600%;
+  width: 100%;
+  position: absolute;
+}
+
+.puzzleGrid__imageDisplayed {
+  height: 100%;
+  width: auto;
+}
