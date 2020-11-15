@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row } from "antd";
-// import puzzledImage from "./../../images/habitat.jpg";
 import shuffle from "./../memorygame/shuffle";
 import "./index.css";
 
@@ -13,7 +12,7 @@ const NUM_OF_TILES = 6;
 // a user can click on one tile to select and then click on another tile to swap their places
 // the user will swap the places of each tile to put it in its correct position
 // when all tiles are placed in their correct position the full image is displayed
-const PuzzleGrid = ({ puzzledImage }) => {
+const PuzzleGrid = ({ puzzleImage }) => {
   // currentPuzzleState holds the current order of the tiles and updates them when the user swaps tiles
   const [currentPuzzleState, setCurrentPuzzleState] = useState([]);
   // selectedTileId state shows if there is a tile selected and which one is selected if any
@@ -43,7 +42,7 @@ const PuzzleGrid = ({ puzzledImage }) => {
 
   useEffect(() => {
     tilesGenerator();
-  }, [puzzledImage]);
+  }, [puzzleImage]);
 
   useEffect(() => {
     checkSolution();
@@ -111,7 +110,7 @@ const PuzzleGrid = ({ puzzledImage }) => {
     gridBody = (
       <img
         className="puzzleGrid__imageDisplayed"
-        src={puzzledImage}
+        src={puzzleImage}
         alt="tile"
       />
     );
@@ -127,8 +126,8 @@ const PuzzleGrid = ({ puzzledImage }) => {
         >
           <img
             className="puzzleGrid__puzzledImage"
-            src={puzzledImage}
-            alt="a moveable tile"
+            src={puzzleImage}
+            alt="A moveable tile"
             style={{ top: `-${tile.top}%` }}
           />
         </Row>
