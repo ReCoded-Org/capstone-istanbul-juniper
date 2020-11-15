@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactUsHeaderSection snapshot test 1`] = `
+<div
+  className="contactUs__headerSection"
+>
+  <h2
+    className="contactUs__headerSection__title"
+  >
+    contact.headerSection.title
+  </h2>
+  <p
+    className="contactUs__headerSection__context"
+  >
+    contact.headerSection.subtitle
+  </p>
+</div>
+`;

@@ -1,0 +1,22 @@
+.quizQuestionWrapper {
+  max-width: 1100px;
+  background: #ebfeff;
+  border-radius: 10px;
+  border: 2px solid #0085a3;
+  padding: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.quizQuestionWrapper__numOfQuizQuestion {
+  font-size: 1rem;
+}
+
+.quizQuestionWrapper__userAnswer {
+  border: 3px solid #ffffff;
+  box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: rgb(80, 80, 80);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  margin: 5px;
+}
