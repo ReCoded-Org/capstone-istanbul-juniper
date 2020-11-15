@@ -3,6 +3,7 @@ import React from "react";
 import ReactCardFlip from "react-card-flip";
 import { Card } from "antd";
 import questionMark from "../../../images/memoryGameFrontImage.png";
+import "./index.css";
 
 // cardState example
 // {
@@ -52,7 +53,7 @@ const FlippableCard = ({
         <img
           src={questionMark}
           alt="Green question mark"
-          className="memoryGameCardsContainer___card___questionMark"
+          className="memoryGameCardsContainer___card___image"
         />
       </Card>
       {/* Back side */}
@@ -62,7 +63,7 @@ const FlippableCard = ({
           alt={cardState.description}
           className="memoryGameCardsContainer___card___image"
         />
-        <figcaption className="memoryGameCardsContainer___card___image___figcaption">
+        <figcaption className="memoryGameCardsContainer___card___figcaption">
           {cardState.description}
         </figcaption>
       </Card>

@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import MemoryGameFactList from "../MemoryGameFactList/index";
 import "./index.css";
 import confettiConfig from "../confettiConfig";
-import MemoryGameCards from "../MemoryGameCards";
+import MemoryGameBoard from "../MemoryGameBoard";
 
 const MemoryGame = () => {
   const [t] = useTranslation();
@@ -29,7 +29,7 @@ const MemoryGame = () => {
         <h1 className="memoryGame__title">{gameTitle}</h1>
         <h3 className="memoryGame__description">{gameHeader}</h3>
         <Row justify="center">
-          <MemoryGameCards
+          <MemoryGameBoard
             setMatchedCards={setMatchedCards}
             matchedCards={matchedCards}
             setIsGameCompleted={setIsGameCompleted}
