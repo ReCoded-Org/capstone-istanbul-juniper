@@ -4,14 +4,10 @@ import { List, Card } from "antd";
 import { useTranslation } from "react-i18next";
 
 /**
- * Upon matching cards, a fact related to matched cards appear on screen
+ * Upon matching cards, a fact related to matched cards appears on screen
  * This component creates the list that will hold all facts
  * "facts" is an array of state objects
  * To see state object example check src/components/memorygame/MemoryGameBoard/index.jsx
- * If the language is English "title" will be "Facts"
- * "emptyFactListMessage" is a string that is translated by i18n.
- * It is displayed when fact list is empty
- * If the language is English "emptyFactListMessage" will be ""Match cards to reveal facts!"
  */
 const MemoryGameFactList = ({ facts }) => {
   const [t] = useTranslation();
