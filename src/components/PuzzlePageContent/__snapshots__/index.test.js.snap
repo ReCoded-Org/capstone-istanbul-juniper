@@ -35,7 +35,7 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
           style={Object {}}
         >
           <img
-            alt="click to choose your puzzle"
+            alt="Click to choose your puzzle"
             className="gameContainer__listOfImages--img"
             src="habitat.jpg"
           />
@@ -46,7 +46,7 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
           style={Object {}}
         >
           <img
-            alt="click to choose your puzzle"
+            alt="Click to choose your puzzle"
             className="gameContainer__listOfImages--img"
             src="conservation.jpg"
           />
@@ -57,7 +57,7 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
           style={Object {}}
         >
           <img
-            alt="click to choose your puzzle"
+            alt="Click to choose your puzzle"
             className="gameContainer__listOfImages--img"
             src="holdingPlant.jpg"
           />
@@ -68,7 +68,7 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
           style={Object {}}
         >
           <img
-            alt="click to choose your puzzle"
+            alt="Click to choose your puzzle"
             className="gameContainer__listOfImages--img"
             src="planting.jpg"
           />

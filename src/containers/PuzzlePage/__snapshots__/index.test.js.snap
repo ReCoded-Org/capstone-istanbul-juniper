@@ -292,7 +292,7 @@ Array [
             style={Object {}}
           >
             <img
-              alt="click to choose your puzzle"
+              alt="Click to choose your puzzle"
               className="gameContainer__listOfImages--img"
               src="habitat.jpg"
             />
@@ -303,7 +303,7 @@ Array [
             style={Object {}}
           >
             <img
-              alt="click to choose your puzzle"
+              alt="Click to choose your puzzle"
               className="gameContainer__listOfImages--img"
               src="conservation.jpg"
             />
@@ -314,7 +314,7 @@ Array [
             style={Object {}}
           >
             <img
-              alt="click to choose your puzzle"
+              alt="Click to choose your puzzle"
               className="gameContainer__listOfImages--img"
               src="holdingPlant.jpg"
             />
@@ -325,7 +325,7 @@ Array [
             style={Object {}}
           >
             <img
-              alt="click to choose your puzzle"
+              alt="Click to choose your puzzle"
               className="gameContainer__listOfImages--img"
               src="planting.jpg"
             />
