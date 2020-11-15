@@ -12,7 +12,7 @@
 }
 
 .selectedTile {
-  border: 2px solid blue;
+  border: 2px solid #f8ac4c;
 }
 
 .puzzleGrid__tile {

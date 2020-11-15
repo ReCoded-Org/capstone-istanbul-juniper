@@ -2,15 +2,22 @@
   background-color: #b4d0c4;
   height: 100vh; /* use of vh is temporary until the game content is ready */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
-.puzzlePage__content-puzzleBox {
-  background-color: #3b8c79;
-  width: 40%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+.puzzlePage__content__title {
+  font-size: clamp(2.5rem, 3.5vw, 5rem);
+  font-family: "Salsa", cursive;
+  text-align: center;
+  color: black;
+  margin: 0 auto;
+}
+
+.puzzlePage__content__subtitle {
+  font-family: "Raleway";
+  font-size: clamp(1.1rem, 1.5vw, 2rem);
+  text-align: center;
+  color: black;
 }

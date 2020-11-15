@@ -3,7 +3,6 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "react-card-flip": "^1.0.11",
         "@ant-design/icons": "^4.2.2",
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
@@ -16,6 +15,7 @@
         "i18next-http-backend": "^1.0.21",
         "invariant": "^2.2.4",
         "react": "^16.14.0",
+        "react-card-flip": "^1.0.11",
         "react-dnd": "^11.1.3",
         "react-dnd-html5-backend": "^11.1.3",
         "react-dom": "^16.14.0",

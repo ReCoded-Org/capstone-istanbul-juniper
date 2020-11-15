@@ -262,12 +262,85 @@ Array [
     className="ant-layout-content puzzlePage__content"
   >
     <div
-      className="ant-card ant-card-bordered ant-card-small puzzlePage__content-puzzleBox"
+      className="puzzlePage__content__titles"
+    >
+      <h2
+        className="puzzlePage__content__title"
+      >
+        games.puzzleGame.title
+      </h2>
+      <p
+        className="puzzlePage__content__subtitle"
+      >
+        games.puzzleGame.subtitle
+      </p>
+    </div>
+    <div
+      className="ant-card ant-card-bordered ant-card-small gameContainer"
     >
       <div
         className="ant-card-body"
         style={Object {}}
-      />
+      >
+        <div
+          className="ant-row gameContainer__listOfImages"
+          style={Object {}}
+        >
+          <div
+            className="ant-col gameContainer__listOfImages--imgContainer"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <img
+              alt="Click to choose your puzzle"
+              className="gameContainer__listOfImages--img"
+              src="habitat.jpg"
+            />
+          </div>
+          <div
+            className="ant-col gameContainer__listOfImages--imgContainer"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <img
+              alt="Click to choose your puzzle"
+              className="gameContainer__listOfImages--img"
+              src="conservation.jpg"
+            />
+          </div>
+          <div
+            className="ant-col gameContainer__listOfImages--imgContainer"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <img
+              alt="Click to choose your puzzle"
+              className="gameContainer__listOfImages--img"
+              src="holdingPlant.jpg"
+            />
+          </div>
+          <div
+            className="ant-col gameContainer__listOfImages--imgContainer"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <img
+              alt="Click to choose your puzzle"
+              className="gameContainer__listOfImages--img"
+              src="planting.jpg"
+            />
+          </div>
+        </div>
+        <div
+          className="ant-row gameContainer__puzzleGrid"
+          style={Object {}}
+        >
+          <div
+            className="ant-col puzzleGrid"
+            style={Object {}}
+          />
+        </div>
+      </div>
     </div>
   </main>,
 ]

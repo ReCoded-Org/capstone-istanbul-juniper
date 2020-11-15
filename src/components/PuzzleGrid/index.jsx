@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row } from "antd";
-import puzzledImage from "./../../images/habitat.jpg";
 import shuffle from "./../memorygame/shuffle";
 import "./index.css";
 
@@ -13,7 +12,7 @@ const NUM_OF_TILES = 6;
 // a user can click on one tile to select and then click on another tile to swap their places
 // the user will swap the places of each tile to put it in its correct position
 // when all tiles are placed in their correct position the full image is displayed
-const PuzzleGrid = () => {
+const PuzzleGrid = ({ puzzleImage }) => {
   // currentPuzzleState holds the current order of the tiles and updates them when the user swaps tiles
   const [currentPuzzleState, setCurrentPuzzleState] = useState([]);
   // selectedTileId state shows if there is a tile selected and which one is selected if any
@@ -43,11 +42,26 @@ const PuzzleGrid = () => {
 
   useEffect(() => {
     tilesGenerator();
-  }, []);
+  }, [puzzleImage]);
 
-  useEffect(() => {
-    checkSolution();
-  }, [currentPuzzleState]);
+  const checkSolution = () => {
+    // tiles are saved in an array indexed from 0 to n (6) and displayed in that order
+    // first condition checks if tile's id is equal to its index in the array and returns false/true
+    // since initial acc value is true, second condition checks if prev value is true and keeps its value
+    const isCorrect = currentPuzzleState.reduce(
+      (acc, currTile, tileCurrIndex) => {
+        if (currTile.id !== tileCurrIndex || acc === false) {
+          return false;
+        } else {
+          return acc;
+        }
+      },
+      true
+    );
+    setIsSolved(isCorrect);
+  };
+
+  useEffect(checkSolution, [currentPuzzleState]);
 
   const handleClick = (clickedTileId) => {
     // if selectedTileId's value is not equal to null (meaning there is a tile seleted already)
@@ -89,29 +103,12 @@ const PuzzleGrid = () => {
     setSelectedTileId(null);
   };
 
-  const checkSolution = () => {
-    // tiles are saved in an array indexed from 0 to n (6) and displayed in that order
-    // first condition checks if tile's id is equal to its index in the array and returns false/true
-    // since initial acc value is true, second condition checks if prev value is true and keeps its value
-    const isCorrect = currentPuzzleState.reduce(
-      (acc, currTile, tileCurrIndex) => {
-        if (currTile.id !== tileCurrIndex || acc === false) {
-          return false;
-        } else {
-          return acc;
-        }
-      },
-      true
-    );
-    setIsSolved(isCorrect);
-  };
-
   let gridBody;
   if (isSolved) {
     gridBody = (
       <img
         className="puzzleGrid__imageDisplayed"
-        src={puzzledImage}
+        src={puzzleImage}
         alt="tile"
       />
     );
@@ -121,16 +118,14 @@ const PuzzleGrid = () => {
         <Row
           key={"tileNumber-" + tile.id}
           className={
-            tile.selected
-              ? "selectedTileId puzzleGrid__tile"
-              : "puzzleGrid__tile"
+            tile.selected ? "selectedTile puzzleGrid__tile" : "puzzleGrid__tile"
           }
           onClick={() => handleClick(tile.id)}
         >
           <img
             className="puzzleGrid__puzzledImage"
-            src={puzzledImage}
-            alt="tile from the image"
+            src={puzzleImage}
+            alt="A moveable tile"
             style={{ top: `-${tile.top}%` }}
           />
         </Row>
