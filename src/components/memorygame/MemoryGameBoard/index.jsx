@@ -113,7 +113,7 @@ const MemoryGameBoard = ({
 
   return (
     <div>
-      <Row align="middle">
+      <Row align="middle" className="howToPlayPopoverAndScrollToFactsRow">
         <Col span={5}>
           <ScrollToFacts scrollToFactsButtonText={scrollToFactsButtonText} />
         </Col>

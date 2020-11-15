@@ -24,9 +24,7 @@ const MemoryGameFactList = ({ facts, title, emptyFactListMessage }) => {
   //   phrase: "Lorem ipsum",
   // }
   const factListTitle = (
-    <h1 className="memoryGame__title memoryGameFactListContainer__title">
-      {title}
-    </h1>
+    <h1 className="memoryGameFactListContainer__title">{title}</h1>
   );
   let factListContent;
   // facts is an empty array by default, it gets filled when user makes successful match

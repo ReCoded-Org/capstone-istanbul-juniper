@@ -24,6 +24,10 @@
 
 .memoryGameFactListContainer__title {
   margin-top: 5%;
+  text-align: center;
+  font-family: "Salsa", cursive;
+  color: white;
+  font-size: max(1.7rem, 5vw);
 }
 
 .memoryGameFactListContainer__list__item a {
