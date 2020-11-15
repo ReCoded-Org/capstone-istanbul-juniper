@@ -1,26 +1,13 @@
 import React from "react";
-// check https://github.com/AaronCCWong/react-card-flip for 'react-card-flip' details
 import ReactCardFlip from "react-card-flip";
 import { Card } from "antd";
 import questionMark from "../../../images/memoryGameFrontImage.png";
 import "./index.css";
 
-// targetState example
-// {
-//   cardKey: "alternateEnergy0",
-//   description: "Alternatif Enerji",
-//   img: {src: "/static/media/alternateEnergy.88cef00e.svg", imgKey: "alternateEnergy"},
-//   isFlipped: false,
-//   isMatched: false,
-//   link: "https://lorem.com",
-//   phrase: "Lorem ipsum"
-// }
+// for cardStates example check src/components/memorygame/MemoryGameBoard/index.jsx
 // FlippableCard is being used in a map function. So targetState refers to each iteration of map
-// Mapped array is cardStates. it holds states like example above(line 9-17)
+// Mapped array is cardStates.
 // selectedCards is an array of clicked card states(objects).
-// selectedCards array hold only "NUM_REQUIRED_MATCHES" amount of card states
-// example of selectedCards is same as example above(line 9-17)
-
 const FlippableCard = ({
   targetState,
   cardStates,
@@ -34,22 +21,23 @@ const FlippableCard = ({
     const copyOfCardStates = [...cardStates];
     // current index is needed to keep the order of cards displayed
     // because goal is to make user remember the spots of previous cards
-    const currentIndex = cardStates.findIndex(
+    const clickedCardIndex = cardStates.findIndex(
       (state) => state.cardKey === clickedCardState.cardKey
     );
-    const targetCardState = copyOfCardStates[currentIndex];
+    const targetCardState = copyOfCardStates[clickedCardIndex];
     targetCardState.isFlipped = true;
     setCardStates(() => [...copyOfCardStates]);
     // prevents user to use same card multiple times
-    const isCardNotInSelectedCards = selectedCards.every(
-      (selectedCard) => selectedCard.cardKey !== clickedCardState.cardKey
+    const isCardInSelectedCards = selectedCards.every(
+      (selectedCard) => selectedCard.cardKey === clickedCardState.cardKey
     );
-    if (isCardNotInSelectedCards) {
+    if (!isCardInSelectedCards) {
       setSelectedCards((prevState) => [...prevState, clickedCardState]);
     }
   };
   return (
-    // ReactCardFlip requires 2 children(front side and back side) and isFlipped value to work
+    // ReactCardFlip requires 2 children(front side and back side)
+    // check https://github.com/AaronCCWong/react-card-flip for 'react-card-flip' details
     <ReactCardFlip isFlipped={targetState.isFlipped}>
       {/* Front side */}
       <Card
