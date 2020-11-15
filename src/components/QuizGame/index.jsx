@@ -31,6 +31,7 @@ const QuizGame = () => {
     setCurrentQuestionNumber(0);
     setIsLoading(false);
   };
+
   const checkAnswer = (e) => {
     if (isGameStart) {
       const userChosenAnswer = e.currentTarget.value;
@@ -49,6 +50,7 @@ const QuizGame = () => {
       }
     }
   };
+
   const nextQuestion = () => {
     const nextQNum = currentQuestionNumber + 1;
     if (nextQNum >= TOTAL_QUESTIONS) {
@@ -57,6 +59,7 @@ const QuizGame = () => {
       setCurrentQuestionNumber(nextQNum);
     }
   };
+  
   const startTheGameAgain =
     !isGameStart || userAnswers.length === TOTAL_QUESTIONS;
   const isGameReady = isGameStart && !isLoading;
