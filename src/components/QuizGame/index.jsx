@@ -75,8 +75,8 @@ const QuizGame = () => {
             Start
           </button>
         )}
-        {isGameStart && <p className="quizWrapper__score">Score: {score}</p>}
-        {isLoading && <p>Loading Questions...</p>}
+        {isGameStart && (<p className="quizWrapper__score">Score: {score}</p>)}
+        {isLoading &&( <p>Loading Questions...</p>)}
         {isGameReady && (
           <QuestionCard
             questionNum={currentQuestionNumber + 1}
