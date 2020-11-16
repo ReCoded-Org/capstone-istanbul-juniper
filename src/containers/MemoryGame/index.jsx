@@ -10,11 +10,11 @@ import MemoryGameBoard from "../../components/memorygame/MemoryGameBoard";
 const MemoryGame = () => {
   const [t] = useTranslation();
   const [isGameCompleted, setIsGameCompleted] = useState(false);
-  // matchedCards is being used to display environmental facts.
+  // finishedCards is being used to display environmental facts.
   // It is an array of object(states).Each object is a successfully matched card state.
-  // When a match is made only state of first card gets pushed inside matchedCards.
+  // When a match is made successfully only state of first card gets pushed inside finishedCards.
   // Because matched cards have same state. Otherwise same fact would be displayed twice.
-  const [matchedCards, setMatchedCards] = useState([]);
+  const [finishedCards, setFinishedCards] = useState([]);
 
   return (
     <Row justify="center" className="memoryGameContainer">
@@ -28,15 +28,15 @@ const MemoryGame = () => {
         </h3>
         <Row justify="center">
           <MemoryGameBoard
-            setMatchedCards={setMatchedCards}
-            matchedCards={matchedCards}
+            setFinishedCards={setFinishedCards}
+            finishedCards={finishedCards}
             setIsGameCompleted={setIsGameCompleted}
           />
         </Row>
       </Col>
       <Col xs={20}>
         <Confetti active={isGameCompleted} config={confettiConfig} />
-        <MemoryGameFactList facts={matchedCards} />
+        <MemoryGameFactList facts={finishedCards} />
       </Col>
     </Row>
   );
