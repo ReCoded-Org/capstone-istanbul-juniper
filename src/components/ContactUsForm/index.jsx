@@ -32,6 +32,7 @@ const ContactUsForm = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formValue }),
     }).then(() => {
+      setTimeout(() => setIsSubmitted(false),5000);
       setIsSubmitted(true);
       setFormValue({
         name: "",
@@ -47,11 +48,10 @@ const ContactUsForm = () => {
     <div className="contactUsFormContainer">
       <form onSubmit={handleSubmit}>
         <Col>
-          {isSubmitted ? (
-            <div className="contactUsForm__submissionMessage">
+            <div className="contactUsForm__submissionMessage"
+            style={(isSubmitted)? {visibility: "visible"} : {visibility:"hidden"}}>
               <strong>{t("contact.contactUsForm.submissionMessage")}</strong>
             </div>
-          ) : null}
           <Col>
             <label className="contactUsForm__label">
               {t("contact.contactUsForm.name")}
