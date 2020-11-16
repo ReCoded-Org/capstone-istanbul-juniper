@@ -48,7 +48,7 @@ const ContactUsForm = () => {
           <div
             className="contactUsForm__submissionMessage"
             style={
-              isSubmitted ? { visibility: "visible" } : { visibility: "hidden" }
+             {visibility:isSubmitted ? "visible" : "hidden"}
             }
           >
             <strong>{t("contact.contactUsForm.submissionMessage")}</strong>
