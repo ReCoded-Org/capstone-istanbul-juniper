@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Col, Row } from "antd";
 import { RiSendPlaneFill } from "react-icons/ri";
 import "./index.css";
+import {encodeFormData} from "./encodeFormData.jsx";
 
 const ContactUsForm = () => {
   const [t] = useTranslation();
@@ -15,15 +16,6 @@ const ContactUsForm = () => {
   // The change in isSubmitted state triggers submission message
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Converts object to proper form data(string)
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
-
   const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
 
   // application/x-www-form-urlencoded stands for POST data at HTTP.
@@ -35,7 +27,7 @@ const ContactUsForm = () => {
       method: "POST",
       "data-netlify": "true",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formValue }),
+      body: encodeFormData({ "form-name": "contact", ...formValue }),
     }).then(() => {
       setTimeout(() => setIsSubmitted(false), 5000);
       setIsSubmitted(true);
