@@ -11,18 +11,17 @@ import pollutionImg from "./../../images/pollutionResourceSetion.svg";
 const ResourcesSection = () => {
   const [t] = useTranslation();
   return (
-    // "site-card-wrapper" is a built in ant Designe className
-    <div className="site-card-wrapper">
+    <div className="resourceCardWrapper">
       <Router>
         <Row justify="center" gutter={[16, 16]}>
           <Col xxl={6} sm={24}>
             <Row justify="center">
-              <Col span={22} className="site-card-wrapper__cardName">
+              <Col span={22} className="resourceCardWrapper__cardName">
                 <Link to="/pollution">
                   {t("home.resourcesSection.pollution")}
                 </Link>
               </Col>
-              <Col span={22} className="site-card-wrapper__cardImage">
+              <Col span={22} className="resourceCardWrapper__cardImage">
                 <Link to="/pollution">
                   <img alt="pollution" src={pollutionImg} />
                 </Link>
@@ -31,12 +30,12 @@ const ResourcesSection = () => {
           </Col>
           <Col xxl={6} sm={24}>
             <Row justify="center">
-              <Col span={22} className="site-card-wrapper__cardName">
+              <Col span={22} className="resourceCardWrapper__cardName">
                 <Link to="/climatechange">
                   {t("home.resourcesSection.climateChange")}
                 </Link>
               </Col>
-              <Col span={22} className="site-card-wrapper__cardImage">
+              <Col span={22} className="resourceCardWrapper__cardImage">
                 <Link to="/climatechange">
                   <img alt="Climate Change" src={earthImg} />
                 </Link>
@@ -45,12 +44,12 @@ const ResourcesSection = () => {
           </Col>
           <Col xxl={6} sm={24}>
             <Row justify="center">
-              <Col span={22} className="site-card-wrapper__cardName">
+              <Col span={22} className="resourceCardWrapper__cardName">
                 <Link to="/recycle">
                   {t("home.resourcesSection.reduceReuseRecycle")}
                 </Link>
               </Col>
-              <Col span={22} className="site-card-wrapper__cardImage">
+              <Col span={22} className="resourceCardWrapper__cardImage">
                 <Link to="/recycle">
                   <img alt="Recycle" src={recycleImg} />
                 </Link>

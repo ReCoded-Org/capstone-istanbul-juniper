@@ -1,17 +1,17 @@
-.site-card-wrapper {
+.resourceCardWrapper {
   background-color: #b4d0c4;
   padding: 20px 0;
 }
 
-.site-card-wrapper__cardImage img {
+.resourceCardWrapper__cardImage img {
   width: 100%;
 }
 
-.site-card-wrapper__cardName a {
+.resourceCardWrapper__cardName a {
   color: black;
 }
 
-.site-card-wrapper__cardName {
+.resourceCardWrapper__cardName {
   margin-bottom: 10px;
   font-family: Salsa;
   font-weight: bold;

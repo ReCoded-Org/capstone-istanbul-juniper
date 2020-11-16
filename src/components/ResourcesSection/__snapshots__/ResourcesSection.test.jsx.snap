@@ -2,7 +2,7 @@
 
 exports[`ResourcesSection renders correctly 1`] = `
 <div
-  className="site-card-wrapper"
+  className="resourceCardWrapper"
 >
   <div
     className="ant-row ant-row-center"
@@ -31,7 +31,7 @@ exports[`ResourcesSection renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="ant-col ant-col-22 site-card-wrapper__cardName"
+          className="ant-col ant-col-22 resourceCardWrapper__cardName"
           style={Object {}}
         >
           <a
@@ -42,7 +42,7 @@ exports[`ResourcesSection renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="ant-col ant-col-22 site-card-wrapper__cardImage"
+          className="ant-col ant-col-22 resourceCardWrapper__cardImage"
           style={Object {}}
         >
           <a
@@ -73,7 +73,7 @@ exports[`ResourcesSection renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="ant-col ant-col-22 site-card-wrapper__cardName"
+          className="ant-col ant-col-22 resourceCardWrapper__cardName"
           style={Object {}}
         >
           <a
@@ -84,7 +84,7 @@ exports[`ResourcesSection renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="ant-col ant-col-22 site-card-wrapper__cardImage"
+          className="ant-col ant-col-22 resourceCardWrapper__cardImage"
           style={Object {}}
         >
           <a
@@ -115,7 +115,7 @@ exports[`ResourcesSection renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="ant-col ant-col-22 site-card-wrapper__cardName"
+          className="ant-col ant-col-22 resourceCardWrapper__cardName"
           style={Object {}}
         >
           <a
@@ -126,7 +126,7 @@ exports[`ResourcesSection renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="ant-col ant-col-22 site-card-wrapper__cardImage"
+          className="ant-col ant-col-22 resourceCardWrapper__cardImage"
           style={Object {}}
         >
           <a
