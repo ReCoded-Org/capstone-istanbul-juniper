@@ -24,7 +24,7 @@ const ResourcesSection = () => {
               </Col>
               <Col span={22} className="site-card-wrapper__cardImage">
                 <Link to="/pollution">
-                  <img alt="Poulution" src={pollutionImg} />
+                  <img alt="pollution" src={pollutionImg} />
                 </Link>
               </Col>
             </Row>
@@ -32,12 +32,12 @@ const ResourcesSection = () => {
           <Col xxl={6} sm={24}>
             <Row justify="center">
               <Col span={22} className="site-card-wrapper__cardName">
-                <Link to="/climateChange">
+                <Link to="/climatechange">
                   {t("home.resourcesSection.climateChange")}
                 </Link>
               </Col>
               <Col span={22} className="site-card-wrapper__cardImage">
-                <Link to="/climateChange">
+                <Link to="/climatechange">
                   <img alt="Climate Change" src={earthImg} />
                 </Link>
               </Col>
