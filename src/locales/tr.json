@@ -44,6 +44,11 @@
         "href": "https://twitter.com/wwf_turkiye?lang=en"
       }
     ],
+    "resourcesSection": {
+      "pollution": "Çevre kirliliği",
+      "climateChange": "Mevsim değişimi",
+      "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
+    },
     "gamesCarousel": {
       "title": "Oyunlar",
       "subtitle": "En Popüler Oyunlar",

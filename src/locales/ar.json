@@ -14,11 +14,6 @@
     "games": "الألعاب",
     "about": "حولنا"
   },
-  "resourceSection": {
-    "pollution": "الثلوث",
-    "climateChange": "التغير المناخي",
-    "reduceReuseRecycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
-  },
   "home": {
     "headerSection": {
       "mainText": "اكتشف ، استكشف ، تعلم",
@@ -49,6 +44,11 @@
         "href": "https://twitter.com/UNEP_Arabic/media"
       }
     ],
+    "resourcesSection": {
+      "pollution": "الثلوث",
+      "climateChange": "التغير المناخي",
+      "reduceReuseRecycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
+    },
     "gamesCarousel": {
       "title": "ألعاب",
       "subtitle": "الألعاب الأكثر شهرة",
