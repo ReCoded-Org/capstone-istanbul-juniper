@@ -55,7 +55,7 @@ const MemoryGameBoard = ({
   useEffect(() => {
     invariant(
       selectedCards.length <= NUM_REQUIRED_MATCHES,
-      "'SelectedCards.length' can't be more than 'NUM_REQUIRED_MATCHES'"
+      "SelectedCards.length can't be more than NUM_REQUIRED_MATCHES"
     );
     // prevents any action to be taken if there isn't enough clicked card
     if (selectedCards.length !== NUM_REQUIRED_MATCHES) {
