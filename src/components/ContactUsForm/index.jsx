@@ -13,7 +13,7 @@ const ContactUsForm = () => {
     message: "",
   });
 
-  // The change in isSubmitted state triggers submission message
+  // The change in isSubmitted state triggers post submission message
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
@@ -46,12 +46,12 @@ const ContactUsForm = () => {
       <form onSubmit={handleSubmit}>
         <Col>
           <div
-            className="contactUsForm__submissionMessage"
+            className="contactUsForm__postSubmissionMessage"
             style={
              {visibility:isSubmitted ? "visible" : "hidden"}
             }
           >
-            <strong>{t("contact.contactUsForm.submissionMessage")}</strong>
+            <strong>{t("contact.contactUsForm.postSubmissionMessage")}</strong>
           </div>
           <Col>
             <label className="contactUsForm__label">

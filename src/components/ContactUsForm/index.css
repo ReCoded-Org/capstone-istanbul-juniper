@@ -46,8 +46,8 @@
   width: clamp(6rem, 7rem, 8rem);
 }
 
-/* Form Submission message Styling */
-.contactUsForm__submissionMessage {
+/* Form post submission message styling */
+.contactUsForm__postSubmissionMessage {
   color: white;
   font-family: "Raleway";
   font-size: clamp(1.5rem, 30px, 3rem);

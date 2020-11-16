@@ -162,7 +162,7 @@
       "email": "Eposta adresin:",
       "message": "Bize neler sormak ve önermek istersin?",
       "send": "İlet",
-      "submissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
+      "postSubmissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
     }
   },
   "games": {

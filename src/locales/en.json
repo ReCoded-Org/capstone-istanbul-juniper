@@ -162,7 +162,7 @@
       "email": "Your email address:",
       "message": "What is your question or comment?",
       "send": "Send",
-      "submissionMessage": "Thanks for messaging us!"
+      "postSubmissionMessage": "Thanks for messaging us!"
     }
   },
   "games": {

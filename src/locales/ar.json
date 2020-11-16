@@ -162,7 +162,7 @@
       "email": ":عنوان بريدك الإلكتروني",
       "message": "ما هو سؤالك او تعليقك؟",
       "send": "إرسال",
-      "submissionMessage": "!شكرا على مراسلتنا"
+      "postSubmissionMessage": "!شكرا على مراسلتنا"
     }
   },
   "games": {
