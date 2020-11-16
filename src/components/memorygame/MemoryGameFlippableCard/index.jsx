@@ -28,7 +28,7 @@ const FlippableCard = ({
     targetCardState.isFlipped = true;
     setCardStates(() => [...copyOfCardStates]);
     // prevents user to use same card multiple times
-    const isCardInSelectedCards = selectedCards.every(
+    const isCardInSelectedCards = selectedCards.some(
       (selectedCard) => selectedCard.cardKey === clickedCardState.cardKey
     );
     if (!isCardInSelectedCards) {
