@@ -22,24 +22,24 @@ const ContactUsForm = () => {
   // body represents HTTP message and send data to server in a query string format.
   // encode is used for passing the string to the body
   // setTimeOut stands for showing submission message about a time after submit
-  const handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      "data-netlify": "true",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodeFormData({ "form-name": "contact", ...formValue }),
-    }).then(() => {
-      setTimeout(() => setIsSubmitted(false), 5000);
-      setIsSubmitted(true);
-      setFormValue({
-        name: "",
-        email: "",
-        message: "",
-      }).catch((error) => console.log(error));
+   const handleSubmit = (e) => {
+     fetch("/", {
+       method: "POST",
+       "data-netlify": "true",
+       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+       body: encodeFormData({ "form-name": "contact", ...formValue }),
+     }).then(() => {
+       setTimeout(() => setIsSubmitted(false), 5000);
+       setIsSubmitted(true);
+       setFormValue({
+         name: "",
+         email: "",
+       message: "",
+       }).catch((error) => alert(error));
 
-      e.preventDefault();
-    });
-  };
+       e.preventDefault();
+     });
+   };
 
   return (
     <div className="contactUsFormContainer">
@@ -47,9 +47,7 @@ const ContactUsForm = () => {
         <Col>
           <div
             className="contactUsForm__postSubmissionMessage"
-            style={
-             {visibility:isSubmitted ? "visible" : "hidden"}
-            }
+            style={{ visibility: isSubmitted ? "visible" : "hidden" }}
           >
             <strong>{t("contact.contactUsForm.postSubmissionMessage")}</strong>
           </div>
