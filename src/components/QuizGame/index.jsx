@@ -34,16 +34,16 @@ const QuizGame = () => {
 
   const checkAnswer = (e) => {
     if (isGameStart) {
-      const userChosenAnswer = e.currentTarget.value;
+      const solutionAnswer= e.currentTarget.value;
       const checkCorrectAnswer =
         questions[currentQuestionNumber].correct_answer;
-      const isCorrect = checkCorrectAnswer === userChosenAnswer;
+      const isCorrect = checkCorrectAnswer === solutionAnswer;
       if (isCorrect) {
         setScore((prev) => prev + 1);
         const answerObject = {
           question: questions[currentQuestionNumber].question,
-          userChosenAnswer: e.currentTarget.value,
-          isCorrect: checkCorrectAnswer === userChosenAnswer,
+          solutionAnswer: e.currentTarget.value,
+          isCorrect: checkCorrectAnswer === solutionAnswer,
           correctAnswer: questions[currentQuestionNumber].correct_answer,
         };
         setUserAnswers((prev) => [...prev, answerObject]);
