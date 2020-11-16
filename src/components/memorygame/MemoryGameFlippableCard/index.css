@@ -16,3 +16,7 @@
   font-family: "Salsa", cursive;
   font-size: clamp(1.4rem, 1vw, 300%);
 }
+
+.memoryGameCardsContainer___flippedCard {
+  cursor: not-allowed;
+}

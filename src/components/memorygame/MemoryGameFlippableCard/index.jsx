@@ -51,7 +51,11 @@ const FlippableCard = ({
         />
       </Card>
       {/* Back side */}
-      <Card className="memoryGameCardsContainer___card">
+      <Card
+        className={`memoryGameCardsContainer___card ${
+          targetState.isFlipped ? "memoryGameCardsContainer___flippedCard" : ""
+        }`}
+      >
         <img
           src={targetState.img.src}
           alt={targetState.description}
