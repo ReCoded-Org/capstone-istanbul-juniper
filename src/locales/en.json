@@ -7,6 +7,18 @@
     "contact": "Contact",
     "login": "Login"
   },
+  "footer": {
+    "trademark": "Trademark",
+    "contact": "Contact ",
+    "policies": "Policies",
+    "games": "Games",
+    "about": "About"
+  },
+  "resourceSection": {
+    "pollution": "Pollution",
+    "climateChange": "Climate Change",
+    "reduceReuseRecycle": "Reduce, Reuse, Recycle"
+  },
   "home": {
     "headerSection": {
       "mainText": "Discover, Explore, Learn",

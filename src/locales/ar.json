@@ -7,6 +7,18 @@
     "contact": "اتصل بنا",
     "login": "تسجيل الدخول"
   },
+  "footer": {
+    "trademark": "العلامة المسجلة",
+    "contact": "تواصل معنا/ اتصل بنا ",
+    "policies": "السياسات",
+    "games": "الألعاب",
+    "about": "حولنا"
+  },
+  "resourceSection": {
+    "pollution": "الثلوث",
+    "climateChange": "التغير المناخي",
+    "reduceReuseRecycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
+  },
   "home": {
     "headerSection": {
       "mainText": "اكتشف ، استكشف ، تعلم",
