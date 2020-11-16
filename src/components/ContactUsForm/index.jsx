@@ -21,7 +21,7 @@ const ContactUsForm = () => {
   // application/x-www-form-urlencoded stands for POST data at HTTP.
   // body represents HTTP message and send data to server in a query string format.
   // encode is used for passing the string to the body
-  // setTimeOut stands for showing submission message about a time after submit
+  // setTimeOut stands for showing post submission message about a time after submit
    const handleSubmit = (e) => {
      fetch("/", {
        method: "POST",
@@ -29,7 +29,7 @@ const ContactUsForm = () => {
        headers: { "Content-Type": "application/x-www-form-urlencoded" },
        body: encodeFormData({ "form-name": "contact", ...formValue }),
      }).then(() => {
-       setTimeout(() => setIsSubmitted(false), 5000);
+       setTimeout(() => setIsSubmitted(false), 2000);
        setIsSubmitted(true);
        setFormValue({
          name: "",
