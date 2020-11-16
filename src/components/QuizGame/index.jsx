@@ -34,7 +34,7 @@ const QuizGame = () => {
 
   const checkAnswer = (e) => {
     if (isGameStart) {
-      const solutionAnswer= e.currentTarget.value;
+      const solutionAnswer = e.currentTarget.value;
       const checkCorrectAnswer =
         questions[currentQuestionNumber].correct_answer;
       const isCorrect = checkCorrectAnswer === solutionAnswer;
