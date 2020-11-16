@@ -11,6 +11,7 @@ const ContactUsForm = () => {
     email: "",
     message: "",
   });
+
   // The change in isSubmitted state triggers submission message
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -22,8 +23,9 @@ const ContactUsForm = () => {
       )
       .join("&");
   };
-  
+
   const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
+
   // application/x-www-form-urlencoded stands for POST data at HTTP.
   // body represents HTTP message and send data to server in a query string format.
   // encode is used for passing the string to the body
@@ -35,7 +37,7 @@ const ContactUsForm = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formValue }),
     }).then(() => {
-      setTimeout(() => setIsSubmitted(false),5000);
+      setTimeout(() => setIsSubmitted(false), 5000);
       setIsSubmitted(true);
       setFormValue({
         name: "",
@@ -51,10 +53,14 @@ const ContactUsForm = () => {
     <div className="contactUsFormContainer">
       <form onSubmit={handleSubmit}>
         <Col>
-            <div className="contactUsForm__submissionMessage"
-            style={(isSubmitted)? {visibility: "visible"} : {visibility:"hidden"}}>
-              <strong>{t("contact.contactUsForm.submissionMessage")}</strong>
-            </div>
+          <div
+            className="contactUsForm__submissionMessage"
+            style={
+              isSubmitted ? { visibility: "visible" } : { visibility: "hidden" }
+            }
+          >
+            <strong>{t("contact.contactUsForm.submissionMessage")}</strong>
+          </div>
           <Col>
             <label className="contactUsForm__label">
               {t("contact.contactUsForm.name")}
