@@ -105,7 +105,6 @@ const ContactUsForm = () => {
         <Row>
           <div className="contactUsForm__submit">
             <button type="submit" className="contactUsForm__submitButton">
-              {" "}
               {t("contact.contactUsForm.send")}
               <RiSendPlaneFill />
             </button>
