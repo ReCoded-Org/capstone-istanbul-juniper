@@ -21,7 +21,6 @@ const GameCards = ({
           card = <SuccessCard />;
         } else {
           card = (
-            // a component that is holding 2 sides of a flippable card
             <FlippableCard
               targetState={cardState}
               cardStates={cardStates}
