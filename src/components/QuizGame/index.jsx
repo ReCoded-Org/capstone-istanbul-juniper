@@ -8,6 +8,7 @@ const DIFFICULTY = {
   MEDIUM: "medium",
   HARD: "hard",
 };
+
 const TOTAL_QUESTIONS = 10;
 
 const QuizGame = () => {
