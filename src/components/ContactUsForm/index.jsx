@@ -37,8 +37,7 @@ const ContactUsForm = () => {
         name: "",
         email: "",
         message: "",
-      })
-      .catch((error) => console.log(error));
+      }).catch((error) => console.log(error));
 
       e.preventDefault();
     });
