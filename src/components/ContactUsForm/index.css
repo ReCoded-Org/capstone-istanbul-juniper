@@ -1,16 +1,14 @@
 .contactUsFormContainer {
-  background: #add4c5;
+  background: #b4d0c4;
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  padding-bottom:1rem;
 }
 
 .contactUsForm__label {
   font-family: "Raleway";
   font-size: clamp(1rem, 24px, 3rem);
   color: white;
-  margin-top: 0.5rem;
   text-align: left;
   margin-bottom: 0.6rem;
 }
@@ -48,15 +46,13 @@
   width: clamp(6rem, 7rem, 8rem);
 }
 
-/* Form Submission Styling */
+/* Form Submission message Styling */
 .contactUsForm__submissionMessage {
   color: white;
   font-family: "Raleway";
   font-size: clamp(1.5rem, 30px, 3rem);
   text-align: center;
   box-sizing: border-box;
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
   background-color: #2a8c79;
   border-radius: 10px;
 }
