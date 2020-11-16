@@ -1,0 +1,39 @@
+.quizWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quizWrapper__score {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.quizWrapper__header {
+  font-family: "Fascinate" Inline;
+  background-image: linear-gradient(180deg, #fff, #87f1ff);
+  font-weight: 400;
+  background-size: 100%;
+  background-clip: text;
+  filter: drop-shadow(2px 2px #0085a3);
+  font-size: 70px;
+  text-align: center;
+  margin: 20px;
+}
+
+.quizWrapper__startGame,
+.quizWrapper__nextButton {
+  cursor: pointer;
+  background: linear-gradient(180deg, #ffffff, #ffcc91);
+  border: 2px solid #d38558;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 40px;
+  margin: 20px 0;
+  padding: 0 40px;
+}
+
+.quizWrapper__startGame {
+  max-width: 200px;
+}

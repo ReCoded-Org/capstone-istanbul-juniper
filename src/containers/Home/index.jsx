@@ -1,4 +1,5 @@
 import React from "react";
+import ResourcesSection from "../../components/ResourcesSection";
 import Navbar from "../../components/Navbar/index";
 import HomePageHeaderSection from "../../components/HomePageHeaderSection";
 import StayUpToDate from "../../components/StayUpTodate";
@@ -12,6 +13,7 @@ const Home = () => {
     <>
       <Navbar />
       <HomePageHeaderSection />
+      <ResourcesSection />
       <GamesCarousel />
       <BottomCurve />
       <SpreadTheWordButton />

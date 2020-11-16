@@ -7,6 +7,18 @@
     "contact": "İletişim",
     "login": "Giriş yap"
   },
+  "footer": {
+    "trademark": "Marka",
+    "contact": "İletişim ",
+    "policies": "Kullanıcı Sözleşmesi",
+    "games": "Oyunlar",
+    "about": "Hakkında"
+  },
+  "resourceSection": {
+    "pollution": "Çevre kirliliği",
+    "climate Change": "Mevsim değişimi",
+    "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
+  },
   "home": {
     "stayUpToDate": "Güncel kal!",
     "spreadTheWord": "Öğrendiklerini paylaş!",
@@ -32,6 +44,11 @@
         "href": "https://twitter.com/wwf_turkiye?lang=en"
       }
     ],
+    "resourcesSection": {
+      "pollution": "Çevre kirliliği",
+      "climateChange": "Mevsim değişimi",
+      "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
+    },
     "gamesCarousel": {
       "title": "Oyunlar",
       "subtitle": "En Popüler Oyunlar",
