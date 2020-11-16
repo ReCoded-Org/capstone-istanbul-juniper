@@ -1,4 +1,5 @@
 import React from "react";
+import ResourcesSection from "../../components/ResourcesSection";
 import HomePageHeaderSection from "../../components/HomePageHeaderSection";
 import StayUpToDate from "../../components/StayUpTodate";
 import BottomCurve from "../../components/BottomCurve/index";
@@ -10,6 +11,7 @@ const Home = () => {
   return (
     <>
       <HomePageHeaderSection />
+      <ResourcesSection />
       <GamesCarousel />
       <BottomCurve />
       <SpreadTheWordButton />
