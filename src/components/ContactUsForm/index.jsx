@@ -13,6 +13,7 @@ const ContactUsForm = () => {
   });
   // The change in isSubmitted state triggers submission message
   const [isSubmitted, setIsSubmitted] = useState(false);
+
   // Converts object to proper form data(string)
   const encode = (data) => {
     return Object.keys(data)
@@ -21,10 +22,12 @@ const ContactUsForm = () => {
       )
       .join("&");
   };
+  
   const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
   // application/x-www-form-urlencoded stands for POST data at HTTP.
   // body represents HTTP message and send data to server in a query string format.
   // encode is used for passing the string to the body
+  // setTimeOut stands for showing submission message about a time after submit
   const handleSubmit = (e) => {
     fetch("/", {
       method: "POST",
