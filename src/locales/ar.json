@@ -7,6 +7,13 @@
     "contact": "اتصل بنا",
     "login": "تسجيل الدخول"
   },
+  "footer": {
+    "trademark": "العلامة المسجلة",
+    "contact": "تواصل معنا/ اتصل بنا ",
+    "policies": "السياسات",
+    "games": "الألعاب",
+    "about": "حولنا"
+  },
   "home": {
     "headerSection": {
       "mainText": "اكتشف ، استكشف ، تعلم",
@@ -37,6 +44,11 @@
         "href": "https://twitter.com/UNEP_Arabic/media"
       }
     ],
+    "resourcesSection": {
+      "pollution": "الثلوث",
+      "climateChange": "التغير المناخي",
+      "reduceReuseRecycle": "قلل الاستخدام ، اعد الاستخدام ، اعد التدوير"
+    },
     "gamesCarousel": {
       "title": "ألعاب",
       "subtitle": "الألعاب الأكثر شهرة",
