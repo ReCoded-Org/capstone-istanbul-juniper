@@ -1,4 +1,4 @@
-.gameContainer {
+.gameContainer.ant-card {
   background-color: #3b8c79;
   width: 40%;
   height: 65%;
@@ -16,6 +16,8 @@
 .gameContainer__puzzleGrid {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .gameContainer__listOfImages--imgContainer {
@@ -24,13 +26,19 @@
   width: 20%;
 }
 
-.gameContainer__listOfImages-imgContainer img {
+.gameContainer__listOfImages--img {
   object-fit: contain;
   max-width: 100%;
   max-height: auto;
 }
 
-.gameContainer__listOfImages-imgContainer:hover {
+.gameContainer__listOfImages--imgContainer:hover {
   cursor: pointer;
   transform: scale(1.3);
+}
+
+@media (max-width: 425px) {
+  .gameContainer.ant-card {
+    width: 100%;
+  }
 }
