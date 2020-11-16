@@ -151,7 +151,7 @@
       "message": "What is your question or comment?",
       "send": "Send",
       "submissionMessage": "Thanks for messaging us!"
-  }
+    }
   },
   "games": {
     "matchingGame": {

@@ -1,65 +1,60 @@
-/*
- * ContactUsForm consists of validation and elements of contact form, imports Netlifyform for post data.
- * The base code that is used in both netlifyForm and index are implemented from https://github.com/jon-fm/react-ssg-netlify-forms-demo
- */
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import NetlifyForm from "../NetlifyForm";
 import { Col, Row } from "antd";
 import { RiSendPlaneFill } from "react-icons/ri";
 import "./index.css";
 
 const ContactUsForm = () => {
   const [t] = useTranslation();
-  const [submissionMessage, setSubmissionMessage] = useState("");
-  // processing state used in disabling button when inputs are empty, changing when they are not.
-  const [processing, setProcessing] = useState(false);
-  // beforeSubmit is for validations and disabling submit button
-  const beforeSubmit = async () => {
-    const MIN_USER_INPUT_LENGTH=1;
-    if (
-      contactFormValues.name.length > MIN_USER_INPUT_LENGTH &&
-      contactFormValues.email.length > MIN_USER_INPUT_LENGTH
-    ) {
-      setProcessing(true);
-      // Wait 2 seconds to simulate async delay
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      return true;
-    } else {
-      return false;
-    }
-  };
-  // TODO: get submission message to translate files.
-  // submisson message pops out when form is submitted
-  // afterSubmit is for submission message and enable submit button
-  const afterSubmit = () => {
-    setSubmissionMessage("Thanks for messaging us!");
-    setProcessing(false);
-  };
-  // handles value changes of contact form
-  const handleChange = (e) =>
-    setContactFormValues({
-      ...contactFormValues,
-      [e.target.name]: e.target.value,
-    });
-  const [contactFormValues, setContactFormValues] = useState({
+  const [formValue, setFormValue] = useState({
     name: "",
     email: "",
     message: "",
   });
+  // The change in isSubmitted state triggers submission message
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  // Converts object to proper form data(string)
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+  const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
+  // application/x-www-form-urlencoded stands for POST data at HTTP.
+  // body represents HTTP message and send data to server in a query string format.
+  // encode is used for passing the string to the body
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      "data-netlify": "true",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formValue }),
+    }).then(() => {
+      setIsSubmitted(true);
+      setFormValue({
+        name: "",
+        email: "",
+        message: "",
+      })
+      .catch((error) => console.log(error));
+
+      e.preventDefault();
+    });
+  };
+
   return (
-    <div className="contactUsForm">
-      <NetlifyForm
-        formName="contact"
-        contactFormValues={contactFormValues}
-        beforeSubmit={beforeSubmit}
-        afterSubmit={afterSubmit}
-        automaticHoneypot={true}
-      >
-        <span className="contactUsForm__result">{submissionMessage}</span>
+    <div className="contactUsFormContainer">
+      <form onSubmit={handleSubmit}>
         <Col>
+          {isSubmitted ? (
+            <div className="contactUsForm__submissionMessage">
+              <strong>{t("contact.contactUsForm.submissionMessage")}</strong>
+            </div>
+          ) : null}
           <Col>
-            <label for="name" className="contactUsForm__contentLabel">
+            <label className="contactUsForm__label">
               {t("contact.contactUsForm.name")}
             </label>
           </Col>
@@ -67,15 +62,16 @@ const ContactUsForm = () => {
             <input
               type="text"
               name="name"
-              value={contactFormValues.name}
+              value={formValue.name}
               onChange={handleChange}
-              className="contactUsForm__contentInput"
+              className="contactUsForm__input"
+              required
             />
           </Col>
         </Col>
         <Col>
           <Col>
-            <label for="email" className="contactUsForm__contentLabel">
+            <label className="contactUsForm__label">
               {t("contact.contactUsForm.email")}
             </label>
           </Col>
@@ -83,39 +79,39 @@ const ContactUsForm = () => {
             <input
               type="email"
               name="email"
-              value={contactFormValues.email}
+              value={formValue.email}
               onChange={handleChange}
-              className="contactUsForm__contentInput"
+              className="contactUsForm__input"
+              required
             />
           </Col>
         </Col>
         <Col>
           <Col>
-            <label for="message" className="contactUsForm__contentLabel">
+            <label className="contactUsForm__label">
               {t("contact.contactUsForm.message")}
             </label>
           </Col>
           <Col>
             <textarea
               name="message"
-              value={contactFormValues.message}
+              value={formValue.message}
               onChange={handleChange}
-              className="contactUsForm__contentTextarea"
+              className="contactUsForm__textarea"
+              required
             />
           </Col>
         </Col>
         <Row>
-          <div className="contactUsForm__contentSubmit">
-            <button
-              disabled={processing}
-              className="contactUsForm__contentSubmit__button"
-              type="submit"
-            >
-              {t("contact.contactUsForm.send")} <RiSendPlaneFill />
+          <div className="contactUsForm__submit">
+            <button type="submit" className="contactUsForm__submitButton">
+              {" "}
+              {t("contact.contactUsForm.send")}
+              <RiSendPlaneFill />
             </button>
           </div>
         </Row>
-      </NetlifyForm>
+      </form>
     </div>
   );
 };
