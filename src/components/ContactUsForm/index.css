@@ -6,33 +6,32 @@
   padding-bottom: 3rem;
 }
 
-.contactUsForm__label{
-font-family: "Raleway";
-font-size: clamp(1rem, 24px, 3rem);
-color: white;
-margin-top: 0.5rem;
-text-align: left;
-margin-bottom:0.6rem;
+.contactUsForm__label {
+  font-family: "Raleway";
+  font-size: clamp(1rem, 24px, 3rem);
+  color: white;
+  margin-top: 0.5rem;
+  text-align: left;
+  margin-bottom: 0.6rem;
 }
 
 .contactUsForm__input,
 .contactUsForm__textarea {
   font-family: "Raleway";
-font-size: clamp(1rem, 24px, 3rem);
-box-sizing: border-box;
-border: 2px solid #ccc;
-border-radius: 0.5rem;
-font-size: 16px;
-width: clamp(25rem, 17rem, 35rem); 
-margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 20px, 2.5rem);
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  width: clamp(25rem, 17rem, 35rem);
+  margin-bottom: 0.5rem;
 }
 
 .contactUsForm__textarea {
-  height: clamp(10rem, 7rem, 15rem); 
+  height: clamp(10rem, 7rem, 15rem);
 }
 
 .contactUsForm__submit {
- margin-top:0.5rem;
+  margin-top: 0.5rem;
 }
 
 .contactUsForm__submitButton {
@@ -47,4 +46,17 @@ margin-bottom: 0.5rem;
   cursor: pointer;
   color: white;
   width: clamp(6rem, 7rem, 8rem);
+}
+
+/* Form Submission Styling */
+.contactUsForm__submissionMessage {
+  color: white;
+  font-family: "Raleway";
+  font-size: clamp(1.5rem, 30px, 3rem);
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  background-color: #2a8c79;
+  border-radius: 10px;
 }
