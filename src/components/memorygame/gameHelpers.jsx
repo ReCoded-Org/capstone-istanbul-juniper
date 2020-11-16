@@ -1,9 +1,9 @@
 // manipulates isFlipped and isMatched property of card a state
-// property example : "isMatched"
+// cardStateKey example : "isMatched"
 // cardStates is an array of objects(states)
-// see src/memorygame/MemoryGameBoard/index.jsx to for cardStates example and use of this function
+// see MemoryGameBoard/index.jsx to for cardStates example and use of this function
 // targetCard is an element of cardStates array.
-// changeCardStatePropertyToOpposite is called when selectedCards state change.
+// invertCardStateForKey is called when selectedCards state change.
 export const invertCardStateForKey = (
   cardStateKey,
   targetCard,
@@ -27,8 +27,6 @@ export const invertCardStateForKey = (
       setCardStates(() => [...copyOfCardStates]);
     }, 750);
   } else {
-    throw new Error(
-      "Invalid property was passed to changeCardStatePropertyToOpposite"
-    );
+    throw new Error("Invalid property was passed to invertCardStateForKey");
   }
 };
