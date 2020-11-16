@@ -54,6 +54,7 @@ const QuizGame = () => {
   const nextQuestion = () => {
     const nextQNum = currentQuestionNumber + 1;
     if (nextQNum >= TOTAL_QUESTIONS) {
+      // the start button will appear again after the user finish ten questions
       setIsGameStart(true);
     } else {
       setCurrentQuestionNumber(nextQNum);
