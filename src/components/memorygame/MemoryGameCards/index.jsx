@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import { Col, Modal, Row } from "antd";
 import { useTranslation } from "react-i18next";
+import invariant from "invariant";
 import cardInitialStateGenerator from "../cardInitialStateGenerator";
 import changeCardStatePropertyToOpposite from "../changeCardStatePropertyToOpposite";
 import ScrollToFacts from "../MemoryGameScrollToFacts";
@@ -52,6 +53,10 @@ const MemoryGameBoard = ({
   // Triggered when user clicks on a card(selectedCards change)
   // checks selected cards to see if they are a match
   useEffect(() => {
+    invariant(
+      selectedCards.length <= NUM_REQUIRED_MATCHES,
+      "'SelectedCards.length' can't be more than 'NUM_REQUIRED_MATCHES'"
+    );
     // prevents any action to be taken if there isn't enough clicked card
     if (selectedCards.length !== NUM_REQUIRED_MATCHES) {
       return;
