@@ -61,7 +61,7 @@ const QuizGame = () => {
     }
   };
 
-  const startTheGameAgain =
+  const shouldStartGameAgain =
     !isGameStart || userAnswers.length === TOTAL_QUESTIONS;
   const isGameReady = isGameStart && !isLoading;
   const isUserOnLastQuestion =
@@ -73,7 +73,7 @@ const QuizGame = () => {
     <>
       <div className="quizWrapper">
         <h1 className="quizWrapper__header">Quiz Game</h1>
-        {startTheGameAgain && (
+        {shouldStartGameAgain && (
           <button className="quizWrapper__startGame" onClick={startQuiz}>
             Start
           </button>
