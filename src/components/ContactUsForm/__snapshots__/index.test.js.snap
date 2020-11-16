@@ -12,7 +12,7 @@ exports[`ContactUsForm snapshot test 1`] = `
       style={Object {}}
     >
       <div
-        className="contactUsForm__submissionMessage"
+        className="contactUsForm__postSubmissionMessage"
         style={
           Object {
             "visibility": "hidden",
@@ -20,7 +20,7 @@ exports[`ContactUsForm snapshot test 1`] = `
         }
       >
         <strong>
-          contact.contactUsForm.submissionMessage
+          contact.contactUsForm.postSubmissionMessage
         </strong>
       </div>
       <div
@@ -113,7 +113,6 @@ exports[`ContactUsForm snapshot test 1`] = `
           className="contactUsForm__submitButton"
           type="submit"
         >
-           
           contact.contactUsForm.send
           <svg
             fill="currentColor"
