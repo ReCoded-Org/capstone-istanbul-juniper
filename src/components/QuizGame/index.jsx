@@ -36,15 +36,14 @@ const QuizGame = () => {
   const checkAnswer = (e) => {
     if (isGameStart) {
       const userChosenAnswer = e.currentTarget.value;
-      const solutionAnswer =
-        questions[currentQuestionNumber].correct_answer;
+      const solutionAnswer = questions[currentQuestionNumber].correct_answer;
       const isCorrect = solutionAnswer === userChosenAnswer;
       if (isCorrect) {
         setScore((prev) => prev + 1);
         const answerObject = {
           question: questions[currentQuestionNumber].question,
           userChosenAnswer: e.currentTarget.value,
-          isCorrect: solutionAnswer=== userChosenAnswer,
+          isCorrect: solutionAnswer === userChosenAnswer,
           correctAnswer: questions[currentQuestionNumber].correct_answer,
         };
         setUserAnswers((prev) => [...prev, answerObject]);
