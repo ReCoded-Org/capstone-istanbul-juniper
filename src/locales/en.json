@@ -93,9 +93,9 @@
     }
   },
   "games": {
-    "quizgame":{
-      "title":"Quiz Game",
-      "screenshot":"https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/QuizGame%2Fscreenshot.png?alt=media&token=d2736b79-3595-483a-be77-1afce5ddd4a7"
+    "quizgame": {
+      "title": "Quiz Game",
+      "screenshot": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/QuizGame%2Fscreenshot.png?alt=media&token=d2736b79-3595-483a-be77-1afce5ddd4a7"
     },
     "matchingGame": {
       "title": "Matching Game",
