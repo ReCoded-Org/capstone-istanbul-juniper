@@ -1,33 +1,36 @@
 .progressSectionContainer {
-  background-color: #b4d0c4;
+    background-color: #b4d0c4;
 }
 
 .progressSectionContainer___row {
-  width: 84%;
-  margin-left: 8%;
+    width: 84%;
+    margin-left: 8%;
 }
 
 .progressSectionContainer___xp,
 .progressSectionContainer___row___header {
-  font-family: "Salsa", cursive;
-  color: white;
-  font-size: min(1.4rem, 5vw);
-}
-
-.progressSectionContainer___row___leftLevel {
-  text-align: right;
-  margin-right: 15px;
-}
-
-.progressSectionContainer___row___rightLevel {
-  margin-left: 15px;
+    text-align: center;
+    font-family: 'Salsa', cursive;
+    color: white;
+    font-size: min(1.4rem, 5vw);
 }
 
 .progressSectionContainer___row___header___questionMark {
-  font-size: 60px;
-  color: white;
+    font-size: 60px;
+    color: white;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
 }
 
-.progressSectionContainer___row___header___prevReward {
-  width: 60px;
+.progressSectionContainer___row___prevRewardDiv {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.progressSectionContainer___row___prevRewardDiv___reward {
+    width: 60px;
 }

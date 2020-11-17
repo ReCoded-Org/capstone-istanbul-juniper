@@ -3,31 +3,35 @@ import './index.css';
 import { useTranslation } from 'react-i18next';
 import { Progress, Row, Col } from 'antd';
 import { QuestionOutlined } from '@ant-design/icons';
-import trashBinReward from '../../../images/trash-bin.svg';
 
-const ProgressSection = () => {
+const ProgressSection = ({
+    // number
+    currentXP,
+    // svg file
+    prevRewardIcon,
+    // string
+    prevRewardDescription,
+    // number
+    currentLevel,
+}) => {
+    const nextLevel = currentLevel + 1;
     const [t] = useTranslation();
     return (
         <div className='progressSectionContainer'>
             <Row justify='center'>
                 <h3 className='progressSectionContainer___xp'>
-                    50/100 {t('gamesPage.experiencePoint')}
+                    {currentXP} / 100 {t('gamesPage.experiencePoint')}
                 </h3>
             </Row>
             <Row justify='center' className='progressSectionContainer___row'>
-                <Col span={6}>
-                    <h3
-                        className='
-                        progressSectionContainer___row___header 
-                        progressSectionContainer___row___leftLevel
-                        '
-                    >
-                        {t('gamesPage.level')} 5
+                <Col span={6} push={2}>
+                    <h3 className='progressSectionContainer___row___header'>
+                        {t('gamesPage.level')} {currentLevel}
                     </h3>
                 </Col>
                 <Col span={12}>
                     <Progress
-                        percent={50}
+                        percent={currentXP}
                         className='progressSectionContainer___row___progressBar'
                         strokeColor='#4BA747'
                         trailColor='white'
@@ -35,37 +39,43 @@ const ProgressSection = () => {
                         showInfo={false}
                     />
                 </Col>
-                <Col span={6}>
-                    <h3
-                        className='
-                        progressSectionContainer___row___header 
-                        progressSectionContainer___row___rightLevel
-                        '
-                    >
-                        {t('gamesPage.level')} 6
+                <Col span={6} pull={2}>
+                    <h3 className='progressSectionContainer___row___header'>
+                        {t('gamesPage.level')} {nextLevel}
                     </h3>
                 </Col>
             </Row>
             <Row className='progressSectionContainer___row'>
-                <Col span={3} push={6}>
+                <Col span={3} push={5}>
                     <h3 className='progressSectionContainer___row___header'>
                         {t('gamesPage.previous')}
                         <br />
                         {t('gamesPage.reward')}
                     </h3>
-                    <img
-                        src={trashBinReward}
-                        alt='trash'
-                        className='progressSectionContainer___row___header___prevReward'
-                    />
+                    <div className='progressSectionContainer___row___prevRewardDiv'>
+                        <img
+                            src={prevRewardIcon}
+                            alt={prevRewardDescription}
+                            className='progressSectionContainer___row___prevRewardDiv___reward'
+                        />
+                    </div>
+                    <h3 className='progressSectionContainer___row___header'>
+                        {prevRewardDescription}
+                    </h3>
                 </Col>
-                <Col span={3} push={14}>
+                <Col span={3} push={13}>
                     <h3 className='progressSectionContainer___row___header'>
                         {t('gamesPage.next')}
                         <br />
                         {t('gamesPage.reward')}
                     </h3>
-                    <QuestionOutlined className='progressSectionContainer___row___header___questionMark' />
+                    <div className='progressSectionContainer___row___header___questionMark'>
+                        <QuestionOutlined />
+                    </div>
+
+                    <h3 className='progressSectionContainer___row___header'>
+                        Unknown
+                    </h3>
                 </Col>
             </Row>
         </div>
