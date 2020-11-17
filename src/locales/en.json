@@ -205,5 +205,10 @@
       "title": "Image Puzzle",
       "subtitle": "Put the pieces in the correct order to see the full picture!"
     }
+  },
+  "gamesPage": {
+    "level": "Level",
+    "nextReward": "Next Reward",
+    "previousReward": "Previous Reward"
   }
 }

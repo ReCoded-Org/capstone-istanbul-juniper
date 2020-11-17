@@ -1,18 +1,18 @@
 .bottomCurveContainer {
-    background: #2a8c79;
+  background: #2a8c79;
 }
 
 .bottomCurveContainer__bottomCurve {
-    background: #b4d0c4;
-    border-radius: 50%;
-    height: 15vh;
+  background: #b4d0c4;
+  border-radius: 50%;
+  height: 15vh;
 }
 
 .bottomCurveContainer__bottomCurve__topHalf {
-    height: 50%;
-    background: #b4d0c4;
+  height: 50%;
+  background: #b4d0c4;
 }
 
 .bottomCurveContainer__bottomCurve__bottomHalf {
-    height: 50%;
+  height: 50%;
 }

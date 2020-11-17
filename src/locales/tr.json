@@ -205,5 +205,10 @@
       "title": "Görüntü Bulmacası",
       "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
     }
+  },
+  "gamesPage": {
+    "level": "Seviye",
+    "nextReward": "Sıradaki Ödül",
+    "previousReward": "Önceki Ödül"
   }
 }
