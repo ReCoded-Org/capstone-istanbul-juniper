@@ -99,6 +99,9 @@
       "postSubmissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
     }
   },
+  "gamesPage": {
+    "title": "Oyunlar"
+  },
   "games": {
     "matchingGame": {
       "title": "Eşleştirme Oyunu",

@@ -99,6 +99,9 @@
       "postSubmissionMessage": "!شكرا على مراسلتنا"
     }
   },
+  "gamesPage": {
+    "title": "ألعاب"
+  },
   "games": {
     "matchingGame": {
       "title": "لعبة التوصيل",

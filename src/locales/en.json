@@ -99,6 +99,9 @@
       "postSubmissionMessage": "Thanks for messaging us!"
     }
   },
+  "gamesPage": {
+    "title": "Games"
+  },
   "games": {
     "matchingGame": {
       "title": "Matching Game",
