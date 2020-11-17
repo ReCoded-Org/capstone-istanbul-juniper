@@ -1,21 +1,29 @@
 import React from "react"
 import {Row, Col} from "antd";
+import kid1Img from "./../../images/aboutPage/kid-1.png"
+import kid2Img from "./../../images/aboutPage/kid-2.png"
+import { useTranslation } from "react-i18next"
 import "./index.css";
 
 const AboutPage = () => {
+    const [t] = useTranslation();
+
     return (
         <div className="aboutUs">
             <Row className="aboutUs__upperContent">
-                <Col className="textCol">
-                    <Row className="textCol__aboutUs">
-                        <h2>About us</h2>
+                <Col className="aboutUs__textCol">
+                    <Row className="aboutUs__textCol--aboutText">
+                        <h2>{t("about.aboutUs")}</h2>
+                        <p>{t("about.aboutUsText")}</p>
                     </Row>
-                    <Row className="textCol__whyWeDoIt">
-                        <h2>Why we do it</h2>
+                    <Row className="aboutUs__textCol--whyWeDoIt">
+                        <h2>{t("about.whyWeDoIt")}</h2>
+                        <p>{t("about.whyWeDoItText")}</p>
                     </Row>
                 </Col>
-                <Col className="illustrationCol">
-                    {/* illustrations here */}
+                <Col className="aboutUs__illustrationsCol">
+                    <img className="aboutUs__illustrationsCol--kid1" src={kid1Img} alt="kid-illustration"/>
+                    <img className="aboutUs__illustrationsCol--kid2" src={kid2Img} alt="kid-illustration"/>
                 </Col>
             </Row>
             <Row className="team">
