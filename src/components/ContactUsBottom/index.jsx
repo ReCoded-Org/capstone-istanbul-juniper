@@ -7,28 +7,30 @@ import "antd/dist/antd.css";
 
 const ContactUsBottom = () => {
   return (
-    <div className="contacUsBottomContainer">
-      <div className="contacUsBottomContainer__bottomCurve">
-        <div className="contacUsBottomContainer__bottomCurve__topHalf">
-          <div className="contacUsBottomContainer__bottomCurve__topHalfImg">
+    <div className="contactUsBottomContainer">
+      <div className="contactUsBottomContainer__bottomCurve">
+        <div className="contactUsBottomContainer__bottomCurve__topHalf">
+          <div className="contactUsBottomContainer__bottomCurve__topHalfImages">
             <img
-              className="contacUsBottomContainer__bottomCurve__topHalfImg_imgMain"
+              className="contactUsBottomContainer__bottomCurve__topHalfImagesg_mainImg"
               alt="two children playing in the garden"
               src={contactUsBottomImgLeft}
             />
+
             <img
-              className="contacUsBottomContainer__bottomCurve__topHalfImg__imgSubOne"
+              className="contactUsBottomContainer__bottomCurve__topHalfImg__subImgOne"
               alt="girl playing in the garden"
               src={contactUsBottomImgRight_1}
             />
+
             <img
-              className="contacUsBottomContainer__bottomCurve__topHalfImg__imgSubTwo"
+              className="contactUsBottomContainer__bottomCurve__topHalfImg__subImgTwo"
               alt="boy playing in the garden"
               src={contactUsBottomImgRight_2}
             />
           </div>
         </div>
-        <div className="contacUsBottomContainer__bottomCurve__bottomHalf" />
+        <div className="contactUsBottomContainer__bottomCurve__bottomHalf" />
       </div>
     </div>
   );
