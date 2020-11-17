@@ -22,9 +22,11 @@ const MemoryGame = () => {
       {/* Check https://github.com/daniel-lundin/react-dom-confetti for 'react-dom-confetti' */}
       <Confetti active={isGameCompleted} config={confettiConfig} />
       <Col xs={22} md={20} xl={17}>
-        <h1 className="memoryGameContainer__title">{t("memoryGame.title")}</h1>
+        <h1 className="memoryGameContainer__title">
+          {t("games.memoryGame.title")}
+        </h1>
         <h3 className="memoryGameContainer__description">
-          {t("memoryGame.header")}
+          {t("games.memoryGame.header")}
         </h3>
         <Row justify="center">
           <MemoryGameBoard
