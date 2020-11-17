@@ -1,11 +1,12 @@
 .contactUsBottomContainer {
   background: #2a8c79;
+  margin:0 auto;
 }
 
 .contactUsBottomContainer__bottomCurve {
   background: #add4c5;
   border-radius: 50%;
-  height: 40vh;
+  height: 15vh;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalf {
@@ -17,26 +18,27 @@
 .contactUsBottomContainer__bottomCurve__topHalfImages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
   align-items: center;
   position:relative;
-  top:-50%;
+  width:fit-content;
+  top:-230%;
 }
 
 .contactUsBottomContainer__bottomCurve__bottomHalf {
   height: 50%;
 }
 
-.contactUsBottomContainer__bottomCurve__topHalfImages__mainImg {
-  width:10%;
+.contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
+  width:60%;
 }
 
-.contactUsBottomContainer__bottomCurve__topHalfImages__subImgOne {
-  width:10%
+.contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
+  width:25%
 }
 
-.contactUsBottomContainer__bottomCurve__topHalfImages__subImgTwo {
+.contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
   width:10%;
 }
 
@@ -44,12 +46,18 @@
 /* At the breakpoint happened we will see the two images only */
 @media screen and (max-width: 1000px) {
   .contactUsBottomContainer__bottomCurve__topHalfImages {
-  display: block;
+  top:-15%;
 }
-.contactUsBottomContainer__bottomCurve__topHalfImages__mainImg {
-  width:10%;
+
+.contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
+  width:50%;
 }
-.contactUsBottomContainer__bottomCurve__topHalfImg__subImgTwo {
+
+.contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne{
+  width:25%;
+}
+
+.contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
   display: none;
   }
 }
@@ -57,11 +65,15 @@
 /* At the breakpoint happened we will see the one image only */
 @media screen and (max-width: 480px) {
  .contactUsBottomContainer__bottomCurve__topHalfImages {
-  display: block;
-  position:relative;
-  top:-50%;
+align-content: center;
+top:30%;
 }
- .contactUsBottomContainer__bottomCurve__topHalfImages__subImgOne {
+
+.contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
+max-width:200%;
+}
+
+ .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
     display: none;
   }
 }
