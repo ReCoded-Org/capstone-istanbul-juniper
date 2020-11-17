@@ -3,18 +3,17 @@ import "./index.css";
 import { useTranslation } from "react-i18next";
 import { Progress, Row, Col } from "antd";
 import { QuestionOutlined } from "@ant-design/icons";
-import recycleIcon from "../../../images/recycle.svg";
 
 const ProgressSection = ({
   // XP stands for experience
   // number
-  currentXP = 50,
+  currentXP,
   // svg file
-  prevRewardIcon = recycleIcon,
+  prevRewardIcon,
   // string
-  prevRewardDescription = "Recycle",
+  prevRewardDescription,
   // number
-  currentLevel = 5,
+  currentLevel,
 }) => {
   const nextLevel = currentLevel + 1;
   const [t] = useTranslation();
