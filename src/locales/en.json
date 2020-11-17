@@ -90,6 +90,13 @@
     "headerSection": {
       "title": "Contact Us",
       "subtitle": "You can share from here your new game requests, questions, comments, suggestions with us."
+    },
+    "contactUsForm": {
+      "name": "Your name:",
+      "email": "Your email address:",
+      "message": "What is your question or comment?",
+      "send": "Send",
+      "postSubmissionMessage": "Thanks for messaging us!"
     }
   },
   "gamesPage": {
