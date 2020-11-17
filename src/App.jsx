@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer";
 import Home from "./containers/Home";
 import PuzzlePage from "./containers/PuzzlePage/index";
+import Navbar from "./components/Navbar";
 import MemoryGame from "./containers/MemoryGame";
 import GamesPage from "./containers/GamesPage";
-import Navbar from "./components/Navbar";
 import "antd/dist/antd.css";
 import "./App.css";
 

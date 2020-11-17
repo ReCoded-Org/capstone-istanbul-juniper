@@ -1,5 +1,5 @@
 import React from "react";
-import GamesPageImageGrid from "../../components/gamepage/GamesPageImageGrid";
+import GamesPageImageGrid from "../../components/gamespage/GamesPageImageGrid";
 import BottomCurve from "../../components/BottomCurve";
 
 const GamesPage = () => {
