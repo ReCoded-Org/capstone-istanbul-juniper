@@ -210,8 +210,9 @@
     "level": "Seviye",
     "next": "Sıradaki",
     "previous": "Önceki",
-    "reward": "Ödül",
-    "experiencePoint": "Tecrübe Puanı",
-    "unknown": "Bilinmiyor"
+    "reward": "ödül",
+    "experiencePoint": "Tecrübe puanı",
+    "unknown": "Bilinmiyor",
+    "badge": "rozeti"
   }
 }
