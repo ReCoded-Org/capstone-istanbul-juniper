@@ -1,6 +1,6 @@
 import React from "react";
-import contactUsBottomImgRight_1 from "../../images/child.png";
-import contactUsBottomImgRight_2 from "../../images/child_2.png";
+import contactUsBottomImgRight_0 from "../../images/child.png";
+import contactUsBottomImgRight_1 from "../../images/child_2.png";
 import contactUsBottomImgLeft from "../../images/family.png";
 import "./index.css";
 import "antd/dist/antd.css";
@@ -20,13 +20,13 @@ const ContactUsBottom = () => {
             <img
               className="contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne"
               alt="Girl playing in the garden"
-              src={contactUsBottomImgRight_1}
+              src={contactUsBottomImgRight_0}
             />
 
             <img
               className="contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo"
               alt="Boy playing in the garden"
-              src={contactUsBottomImgRight_2}
+              src={contactUsBottomImgRight_1}
             />
           </div>
         </div>
