@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Home from "./containers/Home";
 import PuzzlePage from "./containers/PuzzlePage/index";
 import Navbar from "./components/Navbar";
+import MemoryGame from "./containers/MemoryGame";
+import GamesPage from "./containers/GamesPage";
 import "antd/dist/antd.css";
 import "./App.css";
 import MemoryGame from "./containers/MemoryGame";
@@ -20,13 +22,13 @@ function App() {
         <Route path="/" component={Navbar} />
         <Route exact path="/" component={Home} />
         <Route path="/about" component={""} />
-        <Route path="/games" component={""} />
         <Route path="/resources" component={""} />
         <Route path="/contact" component={""} />
         <Route path="/login" component={""} />
         <Route path="/games/memorygame" component={MemoryGame} />
         <Route exact path="/games/puzzle" component={PuzzlePage} />
         <Route path="/games/quizgame" component={QuizGamePage} />
+        <Route exact path="/games" component={GamesPage} />
         <Route path="/" component={Footer} />
       </Router>
     </>
