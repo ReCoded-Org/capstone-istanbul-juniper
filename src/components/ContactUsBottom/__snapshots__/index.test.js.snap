@@ -14,17 +14,17 @@ exports[`ContactUsBottom snapshot test 1`] = `
         className="contactUsBottomContainer__bottomCurve__topHalfImages"
       >
         <img
-          alt="two children playing in the garden"
+          alt="Two children playing in the garden"
           className="contactUsBottomContainer__bottomCurve__topHalfImages--mainImg"
           src="family.png"
         />
         <img
-          alt="girl playing in the garden"
+          alt="Girl playing in the garden"
           className="contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne"
           src="child.png"
         />
         <img
-          alt="boy playing in the garden"
+          alt="Boy playing in the garden"
           className="contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo"
           src="child_2.png"
         />
