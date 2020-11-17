@@ -92,6 +92,9 @@
       "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
     }
   },
+  "gamesPage": {
+    "title": "Oyunlar"
+  },
   "games": {
     "matchingGame": {
       "title": "Eşleştirme Oyunu",
