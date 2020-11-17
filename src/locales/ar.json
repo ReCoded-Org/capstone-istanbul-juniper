@@ -90,6 +90,13 @@
     "headerSection": {
       "title": "اتصل بنا",
       "subtitle": ".يمكنك مشاركة طلباتك وأسئلتك وتعليقاتك واقتراحاتك هنا معنا"
+    },
+    "contactUsForm": {
+      "name": ":اسمك",
+      "email": ":عنوان بريدك الإلكتروني",
+      "message": "ما هو سؤالك او تعليقك؟",
+      "send": "إرسال",
+      "postSubmissionMessage": "!شكرا على مراسلتنا"
     }
   },
   "gamesPage": {
