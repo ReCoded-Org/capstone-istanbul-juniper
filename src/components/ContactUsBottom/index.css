@@ -42,7 +42,7 @@
 }
 
 /* Media query rules to override previous rules, as necessary */
-/* At the breakpoint happened we will see the two images only */
+/* At the breakpoint only  mainImg and subImgOne are shown */
 @media screen and (max-width: 1000px) {
   .contactUsBottomContainer__bottomCurve__topHalfImages {
     top: 0%;
@@ -62,7 +62,7 @@
   }
 }
 
-/* At the breakpoint happened we will see the one image only */
+/* At the breakpoint only main image is shown */
 @media screen and (max-width: 480px) {
   .contactUsBottomContainer__bottomCurve__topHalfImages {
     top: -28%;
