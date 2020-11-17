@@ -9,7 +9,6 @@ import MemoryGame from "./containers/MemoryGame";
 import GamesPage from "./containers/GamesPage";
 import "antd/dist/antd.css";
 import "./App.css";
-import MemoryGame from "./containers/MemoryGame";
 import QuizGamePage from "./containers/QuizGamePage";
 
 function App() {
