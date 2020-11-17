@@ -19,11 +19,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
   align-items: center;
   position:relative;
+  top:-10%;
   width:fit-content;
-  top:-230%;
 }
 
 .contactUsBottomContainer__bottomCurve__bottomHalf {
@@ -31,30 +30,31 @@
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
-  width:60%;
+  width:50%;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
-  width:25%
+  width:20%
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
-  width:10%;
+  width:8%;
 }
 
 /* Media query rules to override previous rules, as necessary */
 /* At the breakpoint happened we will see the two images only */
 @media screen and (max-width: 1000px) {
   .contactUsBottomContainer__bottomCurve__topHalfImages {
-  top:-15%;
+  top:0%;
+  justify-content: space-around;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
-  width:50%;
+  width:45%;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne{
-  width:25%;
+  width:20%;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
@@ -65,12 +65,11 @@
 /* At the breakpoint happened we will see the one image only */
 @media screen and (max-width: 480px) {
  .contactUsBottomContainer__bottomCurve__topHalfImages {
-align-content: center;
-top:30%;
+top:-28%;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
-max-width:200%;
+width:70%;
 }
 
  .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
