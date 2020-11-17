@@ -1,5 +1,4 @@
 {
 	"files.trimFinalNewlines": true,
-	"editor.renderFinalNewline": false,
-	"files.insertFinalNewline": true
+	"editor.renderFinalNewline": false
 }
