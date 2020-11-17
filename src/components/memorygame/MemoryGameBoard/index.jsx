@@ -18,14 +18,14 @@ const NUM_REQUIRED_MATCHES = 2;
 // setIsGameCompleted is a function that is being used to set isGameCompleted as,
 // boolean(true) state when all possible matches made.
 const MemoryGameBoard = ({
-  setMatchedCards,
-  matchedCards,
+  setFinishedCards,
+  finishedCards,
   setIsGameCompleted,
 }) => {
   const [t] = useTranslation();
   // cardsDataArr example [{description:"...",link:"...",phrase:".."},...]
   const cardsDataArr = [
-    ...t("memoryGame.cards", {
+    ...t("games.memoryGame.cards", {
       returnObjects: true,
     }),
   ];
@@ -79,7 +79,7 @@ const MemoryGameBoard = ({
       });
       // matchedCards hold successfuly matched card states and uses them to display facts
       // to prevent fact duplication only 1 matched card should be passed into matchedCards
-      setMatchedCards((prevState) => [...prevState, selectedCards[0]]);
+      setFinishedCards((prevState) => [...prevState, selectedCards[0]]);
     } else {
       selectedCards.forEach((unmatchedCard) => {
         // before this step handleClick made isFlipped property of all selected cards true.
@@ -95,18 +95,18 @@ const MemoryGameBoard = ({
       });
     }
     setSelectedCards([]);
-  }, [selectedCards]);
+  }, [selectedCards, setFinishedCards, cardStates]);
 
   // displays a modal when victory condition achieved
   useEffect(() => {
     const MAX_MATCHES = cardStates.length / NUM_REQUIRED_MATCHES;
-    if (matchedCards.length === MAX_MATCHES) {
+    if (finishedCards.length === MAX_MATCHES) {
       setIsGameCompleted(true);
       Modal.success({
         content: "You have completed the game!",
       });
     }
-  }, [matchedCards]);
+  }, [finishedCards, cardStates.length, setIsGameCompleted]);
 
   return (
     <div>
