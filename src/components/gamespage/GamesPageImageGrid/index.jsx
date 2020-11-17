@@ -4,11 +4,14 @@ import { useTranslation } from "react-i18next";
 import "./index.css";
 import { Link } from "react-router-dom";
 import zeldaImg from "../../../images/mockZeldaPoster.jpg";
-import gtaImg from "../../../images/mockGTAPoster.jpg";
+import grandTheftAutoImg from "../../../images/mockGTAPoster.jpg";
 import destinyImg from "../../../images/mockDestinyPoster.jpg";
 
 const MOCK_GAME_POSTER_DATA_ARR = [
-  { name: "Grand theft auto", img: { src: gtaImg, alt: "Grand theft auto" } },
+  {
+    name: "Grand Theft Auto  ",
+    img: { src: grandTheftAutoImg, alt: "Grand Theft Auto" },
+  },
   { name: "Zelda", img: { src: zeldaImg, alt: "Zelda" } },
   { name: "Destiny", img: { src: destinyImg, alt: "Destiny" } },
 ];
