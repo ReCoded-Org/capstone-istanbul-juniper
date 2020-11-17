@@ -203,8 +203,7 @@ const LoginRegisterPage = (props) => {
       );
       break;
     default:
-      component = <></>;
-      break;
+      throw new Error();
   }
 
   return (

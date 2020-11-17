@@ -20,11 +20,9 @@ const Register = (props) => {
     newValues[key] = value;
     setRegisterInformation(newValues);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     let { fullname, email, age, password, agree } = registerInformation;
-
     let errors = {};
     if (fullname.trim() === "") {
       errors["fullname"] = t("register.fullName");
@@ -51,25 +49,16 @@ const Register = (props) => {
     if (Object.keys(errors).length > 0) {
       return;
     }
-    if (typeof props.onSubmit == "function") {
-      props.onSubmit(registerInformation);
-    }
+    props.onSubmit(registerInformation);
   };
-
   const handleGoToLogin = () => {
-    if (typeof props.onGoToLogin == "function") {
-      props.onGoToLogin();
-    }
+    props.onGoToLogin();
   };
   const handleFacebookAuth = () => {
-    if (typeof props.onFacebookAuth === "function") {
-      props.onFacebookAuth();
-    }
+    props.onFacebookAuth();
   };
   const handleGoogleAuth = () => {
-    if (typeof props.onGoogleAuth === "function") {
-      props.onGoogleAuth();
-    }
+    props.onGoogleAuth();
   };
   const handleOkTerms = () => {
     handleChange("agree", true);
@@ -78,6 +67,7 @@ const Register = (props) => {
   const handleCancelTerms = () => {
     setTermsOpen(false);
   };
+
   return (
     <form noValidate onSubmit={handleSubmit}>
       <Modal
@@ -105,37 +95,34 @@ const Register = (props) => {
       </Modal>
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">{t("register.creat")}</div>
-        {props.error !== "" ? (
+        {props.error && (
           <Alert
             style={{ marginBottom: 10 }}
             type="error"
             showIcon
             message={props.error}
           ></Alert>
-        ) : null}
-
+        )}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.name")}
           </div>
-
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["fullname"]
-                  ? "loginContainer__loginDialog__input__hasError"
-                  : ""
+                errors["fullname"] &&
+                "loginContainer__loginDialog__input__hasError"
               }
               value={registerInformation.fullname}
               onChange={(e) => {
                 handleChange("fullname", e.target.value);
               }}
-            />{" "}
-            {errors["fullname"] ? (
+            />
+            {errors["fullname"] && (
               <div className="loginContainer__loginDialog__errorContainer">
                 {errors["fullname"]}
               </div>
-            ) : null}
+            )}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.enterAge")}
@@ -143,21 +130,19 @@ const Register = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["age"]
-                  ? "loginContainer__loginDialog__input__hasError"
-                  : ""
+                errors["age"] && "loginContainer__loginDialog__input__hasError"
               }
               type="number"
               value={registerInformation.age}
               onChange={(e) => {
                 handleChange("age", e.target.value);
               }}
-            />{" "}
-            {errors["age"] ? (
+            />
+            {errors["age"] && (
               <div className="loginContainer__loginDialog__errorContainer">
                 {errors["age"]}
               </div>
-            ) : null}
+            )}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.email")}
@@ -165,31 +150,28 @@ const Register = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["email"]
-                  ? "loginContainer__loginDialog__input__hasError"
-                  : ""
+                errors["email"] &&
+                "loginContainer__loginDialog__input__hasError"
               }
               value={registerInformation.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors["email"] ? (
+            {errors["email"] && (
               <div className="loginContainer__loginDialog__errorContainer">
                 {errors["email"]}
               </div>
-            ) : null}
+            )}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.password")}
           </div>
-
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["password"]
-                  ? "loginContainer__loginDialog__input__hasError"
-                  : ""
+                errors["password"] &&
+                "loginContainer__loginDialog__input__hasError"
               }
               type="password"
               value={registerInformation.password}
@@ -197,11 +179,11 @@ const Register = (props) => {
                 handleChange("password", e.target.value);
               }}
             />
-            {errors["password"] ? (
+            {errors["password"] && (
               <div className="loginContainer__loginDialog__errorContainer">
                 {errors["password"]}
               </div>
-            ) : null}
+            )}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Checkbox
@@ -210,7 +192,6 @@ const Register = (props) => {
                 handleChange("agree", e.target.checked);
               }}
             >
-              {" "}
               {t("register.iAgreeTo")}
               <a
                 href="/#"
@@ -222,26 +203,21 @@ const Register = (props) => {
                 {t("register.termsandCon")}
               </a>
             </Checkbox>
-            {errors["agree"] ? (
+            {errors["agree"] && (
               <div className="loginContainer__loginDialog__errorContainer">
                 {errors["agree"]}
               </div>
-            ) : null}
+            )}
           </div>
-
           <button
             type="submit"
             className="loginContainer__loginDialog__submitButton"
           >
-            {" "}
-            {t("register.creatAccount")}{" "}
+            {t("register.creatAccount")}
           </button>
-
           <div className="loginContainer__loginDialog__registerLabel">
-            {" "}
-            {t("register.alreadyAMember")}{" "}
+            {t("register.alreadyAMember")}
           </div>
-
           <button
             onClick={() => {
               handleGoToLogin();
@@ -249,9 +225,8 @@ const Register = (props) => {
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
-            {t("register.login")}{" "}
+            {t("register.login")}
           </button>
-
           <div className="loginContainer__loginDialog__loginOptionsTitle">
             {t("register.orYouCan")}
           </div>
@@ -262,7 +237,6 @@ const Register = (props) => {
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
-            {" "}
             {t("register.withFacebook")}
           </button>
           <button

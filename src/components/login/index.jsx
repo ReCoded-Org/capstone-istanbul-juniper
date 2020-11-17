@@ -17,7 +17,6 @@ const Login = (props) => {
   const [errors, setErrors] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
-
     let { email, password } = loginCredentials;
     let errors = {};
     if (!validateEmail(email)) {
@@ -36,43 +35,33 @@ const Login = (props) => {
     if (Object.keys(errors).length > 0) {
       return;
     }
-    if (typeof props.onSubmit == "function") {
-      props.onSubmit(loginCredentials);
-    }
+    props.onSubmit(loginCredentials);
   };
   const handleFacebookAuth = () => {
-    if (typeof props.onFacebookAuth === "function") {
-      props.onFacebookAuth();
-    }
+    props.onFacebookAuth();
   };
   const handleGoogleAuth = () => {
-    if (typeof props.onGoogleAuth === "function") {
-      props.onGoogleAuth();
-    }
+    props.onGoogleAuth();
   };
   const handleGoToRegister = () => {
-    if (typeof props.onGoToRegister == "function") {
-      props.onGoToRegister();
-    }
+    props.onGoToRegister();
   };
   const handleGoToPasswordReset = () => {
-    if (typeof props.onGoToPasswordReset == "function") {
-      props.onGoToPasswordReset();
-    }
+    props.onGoToPasswordReset();
   };
 
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">{t("login.login")}</div>
-        {props.error !== "" ? (
+        {props.error && (
           <Alert
             style={{ marginBottom: 10 }}
             type="error"
             showIcon
             message={props.error}
           ></Alert>
-        ) : null}
+        )}
         {props.message}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
@@ -81,9 +70,8 @@ const Login = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["email"]
-                  ? "loginContainer__loginDialog__input__hasError"
-                  : ""
+                errors["email"] &&
+                "loginContainer__loginDialog__input__hasError"
               }
               type="email"
               value={loginCredentials.email}
@@ -91,11 +79,11 @@ const Login = (props) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors["email"] ? (
+            {errors["email"] && (
               <div className="loginContainer__loginDialog__errorContainer">
                 {errors["email"]}
               </div>
-            ) : null}
+            )}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("login.password")}
@@ -103,9 +91,8 @@ const Login = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["password"]
-                  ? "loginContainer__loginDialog__input__hasError"
-                  : ""
+                errors["password"] &&
+                "loginContainer__loginDialog__input__hasError"
               }
               type="password"
               value={loginCredentials.password}
@@ -113,11 +100,11 @@ const Login = (props) => {
                 handleChange("password", e.target.value);
               }}
             />
-            {errors["password"] ? (
+            {errors["password"] && (
               <div className="loginContainer__loginDialog__errorContainer">
                 {errors["password"]}
               </div>
-            ) : null}
+            )}
           </div>
           <div className="loginContainer__loginDialog__forgotPasswordContainer">
             <a

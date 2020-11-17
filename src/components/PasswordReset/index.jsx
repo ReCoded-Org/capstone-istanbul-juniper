@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 const PasswordReset = (props) => {
   const [t] = useTranslation();
   const [passwordResetInfo, setPasswordRestInfo] = useState({ email: "" });
-
   const handleChange = (key, value) => {
     let newValues = Object.assign({}, passwordResetInfo);
     newValues[key] = value;
@@ -27,14 +26,10 @@ const PasswordReset = (props) => {
     if (Object.keys(errors).length > 0) {
       return;
     }
-    if (typeof props.onSubmit == "function") {
-      props.onSubmit(passwordResetInfo);
-    }
+    props.onSubmit(passwordResetInfo);
   };
   const handleGoToLogin = () => {
-    if (typeof props.onGoToLogin == "function") {
-      props.onGoToLogin();
-    }
+    props.onGoToLogin();
   };
 
   return (
@@ -43,14 +38,14 @@ const PasswordReset = (props) => {
         <div className="loginContainer__loginTitle">
           {t("passReset.passwordReset")}
         </div>
-        {props.error !== "" ? (
+        {props.error && (
           <Alert
             style={{ marginBottom: 10 }}
             type="error"
             showIcon
             message={props.error}
           ></Alert>
-        ) : null}
+        )}
         {props.message}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
@@ -59,9 +54,8 @@ const PasswordReset = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["email"]
-                  ? "loginContainer__loginDialog__input__hasError"
-                  : ""
+                errors["email"] &&
+                "loginContainer__loginDialog__input__hasError"
               }
               type="email"
               value={passwordResetInfo.email}
@@ -69,11 +63,11 @@ const PasswordReset = (props) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors["email"] ? (
+            {errors["email"] && (
               <div className="loginContainer__loginDialog__errorContainer">
                 {errors["email"]}
               </div>
-            ) : null}
+            )}
           </div>
           <button
             type="submit"
@@ -86,7 +80,6 @@ const PasswordReset = (props) => {
               handleGoToLogin();
             }}
             type="button"
-            X
             className="loginContainer__loginDialog__backToLoginButton"
           >
             {t("passReset.backToLogin")}

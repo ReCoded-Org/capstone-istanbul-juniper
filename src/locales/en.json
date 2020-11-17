@@ -28,7 +28,7 @@
   "passReset": {
     "emailFormat": "Email format Error",
     "fillField": "Please fill this field",
-    "passwordReset": "Password Reset",
+    "passwordReset": "Reset your password",
     "email": "Email",
     "backToLogin": "Back To Log in"
   },

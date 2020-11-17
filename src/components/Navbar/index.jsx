@@ -32,7 +32,7 @@ const Navbar = () => {
       </Menu.Item>
       <Menu.Item>
         {/*Welcome, {user.isLoggedin ? user.fullname : "GUEST"}, |*/}
-        {user.isLoggedin ? (
+        {user && user.isLoggedin ? (
           <a
             href="/#"
             onClick={(e) => {
@@ -144,7 +144,7 @@ const Navbar = () => {
             </Col>
             <Col>
               <li>
-                {user.isLoggedin ? (
+                {user && user.isLoggedin ? (
                   <a
                     href="/#"
                     onClick={(e) => {
@@ -152,7 +152,7 @@ const Navbar = () => {
                       auth.signOut();
                     }}
                   >
-                    Logout{" "}
+                    Logout
                   </a>
                 ) : (
                   <Link to="/login" className={isCurrentPath("/login")}>
