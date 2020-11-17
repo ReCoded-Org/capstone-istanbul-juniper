@@ -95,7 +95,7 @@ const MemoryGameBoard = ({
       });
     }
     setSelectedCards([]);
-  }, [selectedCards]);
+  }, [selectedCards, setFinishedCards, cardStates]);
 
   // displays a modal when victory condition achieved
   useEffect(() => {
@@ -106,7 +106,7 @@ const MemoryGameBoard = ({
         content: "You have completed the game!",
       });
     }
-  }, [finishedCards]);
+  }, [finishedCards, cardStates.length, setIsGameCompleted]);
 
   return (
     <div>
