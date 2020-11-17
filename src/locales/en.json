@@ -211,6 +211,7 @@
     "next": "Next",
     "previous": "Previous",
     "reward": "reward",
-    "experiencePoint": "Experience Point"
+    "experiencePoint": "Experience Point",
+    "unknown": "Unknown"
   }
 }

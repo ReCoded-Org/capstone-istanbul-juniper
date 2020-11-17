@@ -211,6 +211,7 @@
     "next": "Sıradaki",
     "previous": "Önceki",
     "reward": "Ödül",
-    "experiencePoint": "Tecrübe Puanı"
+    "experiencePoint": "Tecrübe Puanı",
+    "unknown": "Bilinmiyor"
   }
 }
