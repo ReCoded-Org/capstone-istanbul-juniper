@@ -21,4 +21,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-debug.log $ git rm --cached .vscode.settings.json rm .vscode.settings.json $ git commit -m Start ignoring .vscode.settings.json
+.vscode.settings.json
