@@ -1,6 +1,6 @@
 .contactUsBottomContainer {
   background: #2a8c79;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .contactUsBottomContainer__bottomCurve {
@@ -20,9 +20,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  position:relative;
-  top:-10%;
-  width:fit-content;
+  position: relative;
+  top: -10%;
+  width: fit-content;
 }
 
 .contactUsBottomContainer__bottomCurve__bottomHalf {
@@ -30,49 +30,49 @@
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
-  width:50%;
+  width: 50%;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
-  width:20%
+  width: 20%;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
-  width:8%;
+  width: 8%;
 }
 
 /* Media query rules to override previous rules, as necessary */
 /* At the breakpoint happened we will see the two images only */
 @media screen and (max-width: 1000px) {
   .contactUsBottomContainer__bottomCurve__topHalfImages {
-  top:0%;
-  justify-content: space-around;
-}
+    top: 0%;
+    justify-content: space-around;
+  }
 
-.contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
-  width:45%;
-}
+  .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
+    width: 45%;
+  }
 
-.contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne{
-  width:20%;
-}
+  .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
+    width: 20%;
+  }
 
-.contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
-  display: none;
+  .contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
+    display: none;
   }
 }
 
 /* At the breakpoint happened we will see the one image only */
 @media screen and (max-width: 480px) {
- .contactUsBottomContainer__bottomCurve__topHalfImages {
-top:-28%;
-}
+  .contactUsBottomContainer__bottomCurve__topHalfImages {
+    top: -28%;
+  }
 
-.contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
-width:70%;
-}
+  .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
+    width: 70%;
+  }
 
- .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
+  .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
     display: none;
   }
 }
