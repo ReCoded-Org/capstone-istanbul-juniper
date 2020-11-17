@@ -23,8 +23,8 @@ function App() {
         <Route path="/resources" component={""} />
         <Route path="/contact" component={""} />
         <Route path="/login" component={""} />
-        <Route exact path="/games/puzzle" component={PuzzlePage} />
         <Route path="/games/memorygame" component={MemoryGame} />
+        <Route exact path="/games/puzzle" component={PuzzlePage} />
         <Route exact path="/games" component={GamesPage} />
         <Route path="/" component={Footer} />
       </Router>
