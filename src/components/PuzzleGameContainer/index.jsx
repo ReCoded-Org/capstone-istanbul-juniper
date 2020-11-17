@@ -30,9 +30,9 @@ const PuzzleGameContainer = () => {
   return (
     <Card size="small" className="gameContainer">
       <Row className="gameContainer__listOfImages">
-        {PUZZLE_IMAGE_POOL.map((img) => {
+        {PUZZLE_IMAGE_POOL.map((img, imgIndex) => {
           return (
-            <Col
+            <Col key={"image-"+imgIndex}
               onClick={(e) => handleImageClick(e)}
               className="gameContainer__listOfImages--imgContainer"
             >
