@@ -116,7 +116,6 @@ const PuzzleGrid = ({ puzzleImage }) => {
     gridBody = currentPuzzleState.map((tile, tileIndex) => {
       return (
         <Row
-          key={"tile-" + tileIndex}
           key={"tileNumber-" + tile.id}
           className={
             tile.selected ? "selectedTile puzzleGrid__tile" : "puzzleGrid__tile"
