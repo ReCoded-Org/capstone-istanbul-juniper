@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer";
 import Home from "./containers/Home";
-import About from "./containers/AboutPage/index"
+import About from "./containers/AboutPage/index";
 import PuzzlePage from "./containers/PuzzlePage/index";
 import Navbar from "./components/Navbar";
 import MemoryGame from "./containers/MemoryGame";
