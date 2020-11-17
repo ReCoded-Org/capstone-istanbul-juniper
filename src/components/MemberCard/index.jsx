@@ -1,5 +1,6 @@
 import React,{Component} from "react"
-import {Card, Row, Col, Avatar} from "antd"
+import {Card, Row, Avatar} from "antd"
+import { Link } from "react-router-dom"
 import {LinkedinFilled, GithubFilled, TwitterCircleFilled} from "@ant-design/icons"
 import "./index.css";
 
@@ -8,7 +9,8 @@ class MemberCard extends Component {
         super(props);
         this.name = this.props.name;
         this.bio = this.props.bio;
-        this.socialMedia = this.props.socialMedia;
+        this.linkedin = this.props.linkedin;
+        this.github = this.props.github
         this.avatar = this.props.avatar
         this.state = {
             loading: true
@@ -22,7 +24,12 @@ class MemberCard extends Component {
                 <Row>{this.name}</Row>
                 <Row>{this.bio}</Row>
                 <Row>
-                    {this.socialMedia}
+                    <Link to={this.linkedin}>
+                        <LinkedinFilled />
+                    </Link>
+                    <Link to={this.github}>
+                        <GithubFilled />
+                    </Link>
                 </Row>
             </Card>
         )
