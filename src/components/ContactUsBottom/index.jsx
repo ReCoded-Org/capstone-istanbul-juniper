@@ -12,19 +12,19 @@ const ContactUsBottom = () => {
         <div className="contactUsBottomContainer__bottomCurve__topHalf">
           <div className="contactUsBottomContainer__bottomCurve__topHalfImages">
             <img
-              className="contactUsBottomContainer__bottomCurve__topHalfImagesg_mainImg"
+              className="contactUsBottomContainer__bottomCurve__topHalfImages--mainImg"
               alt="two children playing in the garden"
               src={contactUsBottomImgLeft}
             />
 
             <img
-              className="contactUsBottomContainer__bottomCurve__topHalfImg__subImgOne"
+              className="contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne"
               alt="girl playing in the garden"
               src={contactUsBottomImgRight_1}
             />
 
             <img
-              className="contactUsBottomContainer__bottomCurve__topHalfImg__subImgTwo"
+              className="contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo"
               alt="boy playing in the garden"
               src={contactUsBottomImgRight_2}
             />
