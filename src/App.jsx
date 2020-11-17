@@ -5,9 +5,9 @@ import Footer from "./components/Footer";
 import Home from "./containers/Home";
 import PuzzlePage from "./containers/PuzzlePage/index";
 import Navbar from "./components/Navbar";
-import MemoryGame from "./containers/MemoryGame";
 import "antd/dist/antd.css";
 import "./App.css";
+import MemoryGame from "./containers/MemoryGame";
 
 function App() {
   const { i18n } = useTranslation();
@@ -23,8 +23,8 @@ function App() {
         <Route path="/resources" component={""} />
         <Route path="/contact" component={""} />
         <Route path="/login" component={""} />
+        <Route path="/games/memorygame" component={MemoryGame} />
         <Route exact path="/games/puzzle" component={PuzzlePage} />
-        <Route path="/memorygame" component={MemoryGame} />
         <Route path="/" component={Footer} />
       </Router>
     </>
