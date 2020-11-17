@@ -1,3 +1,17 @@
 .memoryGameContainer {
   background: #b4d0c4;
 }
+
+.memoryGameContainer__title {
+  text-align: center;
+  font-family: "Salsa", cursive;
+  color: white;
+  font-size: max(1.7rem, 5vw);
+}
+
+.memoryGameContainer__description {
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  font-size: clamp(17px, 1.7rem, 6vw);
+}
