@@ -92,6 +92,9 @@
       "subtitle": "You can share from here your new game requests, questions, comments, suggestions with us."
     }
   },
+  "gamesPage": {
+    "title": "Games"
+  },
   "games": {
     "matchingGame": {
       "title": "Matching Game",
