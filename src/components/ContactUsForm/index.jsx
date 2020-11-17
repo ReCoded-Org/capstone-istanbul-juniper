@@ -3,7 +3,13 @@ import { useTranslation } from "react-i18next";
 import { Col, Row } from "antd";
 import { RiSendPlaneFill } from "react-icons/ri";
 import "./index.css";
-import { encodeFormData } from "./encodeFormData.jsx";
+
+// Converts object to proper form data(string)
+const encodeFormData = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 const ContactUsForm = () => {
   const [t] = useTranslation();
