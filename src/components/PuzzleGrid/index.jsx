@@ -113,7 +113,7 @@ const PuzzleGrid = ({ puzzleImage }) => {
       />
     );
   } else {
-    gridBody = currentPuzzleState.map((tile, tileIndex) => {
+    gridBody = currentPuzzleState.map((tile) => {
       return (
         <Row
           key={"tileNumber-" + tile.id}
