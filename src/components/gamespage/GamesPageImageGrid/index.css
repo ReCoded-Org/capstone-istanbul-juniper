@@ -41,6 +41,7 @@
 }
 
 .gamePageImageGrid__title {
+  padding-top: 4%;
   color: white;
   font-size: max(1.7rem, 5vw);
   font-family: "Salsa", cursive;
