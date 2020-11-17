@@ -1,84 +1,67 @@
-.contacUsBottom__bottomCurveImg {
-  z-index: 1;
-}
-.contacUsBottomContainer {
+.contactUsBottomContainer {
   background: #2a8c79;
 }
 
-.ccontacUsBottomContainer__bottomCurve {
+.contactUsBottomContainer__bottomCurve {
   background: #add4c5;
   border-radius: 50%;
-  height: 15vh;
+  height: 40vh;
 }
 
-.contacUsBottomContainer__bottomCurve__topHalf {
+.contactUsBottomContainer__bottomCurve__topHalf {
   height: 50%;
   background: #add4c5;
-  position: relative;
+  margin-bottom: 5%;
 }
 
-.contacUsBottomContainer__bottomCurve__topHalfImg {
-  position: absolute;
-  top: 300px;
+.contactUsBottomContainer__bottomCurve__topHalfImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  align-items: center;
+  position:relative;
+  top:-50%;
 }
 
-.contacUsBottomContainer__bottomCurve__bottomHalf {
+.contactUsBottomContainer__bottomCurve__bottomHalf {
   height: 50%;
 }
 
-.contacUsBottomContainer__bottomCurve__topHalfImg_imgMain {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 40em;
-  margin-top: -10%;
-  margin-left: -45%;
+.contactUsBottomContainer__bottomCurve__topHalfImages__mainImg {
+  width:10%;
 }
 
-.contacUsBottomContainer__bottomCurve__topHalfImg__imgSubOne {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 16em;
-  margin-top: -5%;
-  margin-left: 15%;
+.contactUsBottomContainer__bottomCurve__topHalfImages__subImgOne {
+  width:10%
 }
 
-.contacUsBottomContainer__bottomCurve__topHalfImg__imgSubTwo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 7em;
-  margin-top: -3%;
-  margin-left: 38%;
+.contactUsBottomContainer__bottomCurve__topHalfImages__subImgTwo {
+  width:10%;
 }
 
 /* Media query rules to override previous rules, as necessary */
 /* At the breakpoint happened we will see the two images only */
 @media screen and (max-width: 1000px) {
-  .contacUsBottomContainer__bottomCurve__topHalfImg_imgMain {
-    width: 30em;
-    margin-left: -40%;
-  }
-
-  .contacUsBottomContainer__bottomCurve__topHalfImg__imgSubOne {
-    width: 12em;
-    margin-left: 15%;
-  }
-
-  .contacUsBottomContainer__bottomCurve__topHalfImg__imgSubTwo {
-    display: none;
+  .contactUsBottomContainer__bottomCurve__topHalfImages {
+  display: block;
+}
+.contactUsBottomContainer__bottomCurve__topHalfImages__mainImg {
+  width:10%;
+}
+.contactUsBottomContainer__bottomCurve__topHalfImg__subImgTwo {
+  display: none;
   }
 }
 
 /* At the breakpoint happened we will see the one image only */
 @media screen and (max-width: 480px) {
-  .contacUsBottomContainer__bottomCurve__topHalfImg_imgMain {
-    width: 15em;
-    margin-left: -25%;
-    margin-top: 0;
-  }
-  .contacUsBottomContainer__bottomCurve__topHalfImg__imgSubOne {
+ .contactUsBottomContainer__bottomCurve__topHalfImages {
+  display: block;
+  position:relative;
+  top:-50%;
+}
+ .contactUsBottomContainer__bottomCurve__topHalfImages__subImgOne {
     display: none;
   }
 }
