@@ -1,33 +1,33 @@
 .progressSectionContainer {
-  background-color: #add4c5;
+    background-color: #b4d0c4;
 }
 
 .progressSectionContainer___row {
-  width: 84%;
-  margin-left: 8%;
+    width: 84%;
+    margin-left: 8%;
 }
 
 .progressSectionContainer___xp,
 .progressSectionContainer___row___header {
-  font-family: "Salsa", cursive;
-  color: white;
-  font-size: min(1.4rem, 5vw);
+    font-family: 'Salsa', cursive;
+    color: white;
+    font-size: min(1.4rem, 5vw);
 }
 
 .progressSectionContainer___row___leftLevel {
-  text-align: right;
-  margin-right: 15px;
+    text-align: right;
+    margin-right: 15px;
 }
 
 .progressSectionContainer___row___rightLevel {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
 .progressSectionContainer___row___header___questionMark {
-  font-size: 60px;
-  color: white;
+    font-size: 60px;
+    color: white;
 }
 
 .progressSectionContainer___row___header___prevReward {
-  width: 60px;
+    width: 60px;
 }
