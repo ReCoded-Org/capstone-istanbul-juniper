@@ -25,13 +25,13 @@
   width: 47%;
 }
 
-.aboutUs__illustrationsCol--kid1 {
+.aboutUs__illustrationsCol--kid0 {
   height: 30%;
   width: auto;
   margin-right: 13px;
 }
 
-.aboutUs__illustrationsCol--kid2 {
+.aboutUs__illustrationsCol--kid1 {
   height: 30%;
   width: auto;
   margin-left: 13px;
@@ -56,12 +56,12 @@
     width: 94%;
   }
 
-  .aboutUs__illustrationsCol--kid2 {
+  .aboutUs__illustrationsCol--kid1 {
     height: 150px;
     width: auto;
   }
 
-  .aboutUs__illustrationsCol--kid1 {
+  .aboutUs__illustrationsCol--kid0 {
     height: 150px;
     width: auto;
   }
