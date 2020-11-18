@@ -212,13 +212,12 @@
     }
   },
   "gamesPage": {
-    "level": "Level {{number}}",
-    "next": "Next",
-    "previous": "Previous",
-    "reward": "reward",
-    "experiencePoint": "Experience point",
+    "level": "Level {{currentLevel}}",
+    "nextReward": "Next reward",
+    "previousReward": "Previous reward",
+    "experiencePoint": "{{currentXP}}/100 Experience point",
     "unknown": "Unknown",
-    "badge": "badge",
+    "badgeDescription": "{{badgeName}} badge",
     "title": "Games"
   }
 }

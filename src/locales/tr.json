@@ -212,13 +212,12 @@
     }
   },
   "gamesPage": {
-    "level": "Seviye {{number}}",
-    "next": "Sıradaki",
-    "previous": "Önceki",
-    "reward": "ödül",
-    "experiencePoint": "Tecrübe puanı",
+    "level": "Seviye {{currentLevel}}",
+    "nextReward": "Sıradaki ödül",
+    "previousReward": "Önceki ödül",
+    "experiencePoint": "{{currentXP}}/100 Tecrübe puanı",
     "unknown": "Bilinmiyor",
-    "badge": "rozeti",
+    "badgeDescription": "{{badgeName}} rozeti",
     "title": "Oyunlar"
   }
 }

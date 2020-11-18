@@ -212,13 +212,12 @@
     }
   },
   "gamesPage": {
-    "level": "مستوى {{number}}",
-    "next": "التالى",
-    "previous": "السابق",
-    "experiencePoint": "نقطة خبرة",
-    "reward": "مكافأة",
+    "level": "المستوى {{currentLevel}}",
+    "nextReward": "المكافأة التالية",
+    "previousReward": "المكافأة السابقة",
+    "experiencePoint": "نقاط خبرة {currentXP}}/100",
     "unknown": "غير معروف",
-    "badge": "روزيت",
+    "badgeDescription": "وسام {{badgeName}}",
     "title": "ألعاب"
   }
 }

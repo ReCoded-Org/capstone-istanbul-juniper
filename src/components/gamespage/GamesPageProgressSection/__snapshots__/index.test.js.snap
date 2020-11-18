@@ -11,7 +11,6 @@ exports[`GamesPageProgressSection renders correctly 1`] = `
     <h3
       className="progressSectionContainer___xp"
     >
-       / 100 
       gamesPage.experiencePoint
     </h3>
   </div>
@@ -84,9 +83,7 @@ exports[`GamesPageProgressSection renders correctly 1`] = `
       <h3
         className="progressSectionContainer___row___header"
       >
-        gamesPage.previous
-        <br />
-        gamesPage.reward
+        gamesPage.previousReward
       </h3>
       <div
         className="progressSectionContainer___row___prevRewardDiv"
@@ -98,8 +95,7 @@ exports[`GamesPageProgressSection renders correctly 1`] = `
       <h3
         className="progressSectionContainer___row___header"
       >
-         
-        gamesPage.badge
+        gamesPage.badgeDescription
       </h3>
     </div>
     <div
@@ -109,9 +105,7 @@ exports[`GamesPageProgressSection renders correctly 1`] = `
       <h3
         className="progressSectionContainer___row___header"
       >
-        gamesPage.next
-        <br />
-        gamesPage.reward
+        gamesPage.nextReward
       </h3>
       <div
         className="progressSectionContainer___row___header___questionMark"

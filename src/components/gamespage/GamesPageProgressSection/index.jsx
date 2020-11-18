@@ -14,6 +14,8 @@ const ProgressSection = ({
   prevRewardDescription,
   // number
   currentLevel,
+  // string
+  badgeName,
 }) => {
   const nextLevel = currentLevel + 1;
   const [t] = useTranslation();
@@ -21,13 +23,15 @@ const ProgressSection = ({
     <div className="progressSectionContainer">
       <Row justify="center">
         <h3 className="progressSectionContainer___xp">
-          {currentXP} / 100 {t("gamesPage.experiencePoint")}
+          {/* example: 50/100 Experience Point */}
+          {t("gamesPage.experiencePoint", { currentXP })}
         </h3>
       </Row>
       <Row justify="center" className="progressSectionContainer___row">
         <Col xs={6} md={{ push: 1 }} lg={{ push: 2 }}>
           <h3 className="progressSectionContainer___row___header progressSectionContainer___row___curLevel">
-            {t("gamesPage.level", { number: currentLevel })}
+            {/* example: Level 5 */}
+            {t("gamesPage.level", { currentLevel })}
           </h3>
         </Col>
         <Col xs={12}>
@@ -49,9 +53,8 @@ const ProgressSection = ({
       <Row className="progressSectionContainer___row">
         <Col span={3} push={5}>
           <h3 className="progressSectionContainer___row___header">
-            {t("gamesPage.previous")}
-            <br />
-            {t("gamesPage.reward")}
+            {/* example: Previous reward */}
+            {t("gamesPage.previousReward")}
           </h3>
           <div className="progressSectionContainer___row___prevRewardDiv">
             <img
@@ -61,20 +64,21 @@ const ProgressSection = ({
             />
           </div>
           <h3 className="progressSectionContainer___row___header">
-            {prevRewardDescription} {t("gamesPage.badge")}
+            {/* Example: Recycle badge */}
+            {t("gamesPage.badgeDescription", { badgeName })}
           </h3>
         </Col>
         <Col span={3} push={13}>
           <h3 className="progressSectionContainer___row___header">
-            {t("gamesPage.next")}
-            <br />
-            {t("gamesPage.reward")}
+            {/* Example: Next reward */}
+            {t("gamesPage.nextReward")}
           </h3>
           <div className="progressSectionContainer___row___header___questionMark">
             <QuestionOutlined />
           </div>
 
           <h3 className="progressSectionContainer___row___header">
+            {/* Example: Unknown */}
             {t("gamesPage.unknown")}
           </h3>
         </Col>
