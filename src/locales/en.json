@@ -212,7 +212,7 @@
     }
   },
   "gamesPage": {
-    "level": "Level",
+    "level": "Level {{number}}",
     "next": "Next",
     "previous": "Previous",
     "reward": "reward",

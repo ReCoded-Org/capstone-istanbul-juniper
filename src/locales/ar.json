@@ -212,7 +212,7 @@
     }
   },
   "gamesPage": {
-    "level": "مستوى",
+    "level": "مستوى {{number}}",
     "next": "التالى",
     "previous": "السابق",
     "experiencePoint": "نقطة خبرة",

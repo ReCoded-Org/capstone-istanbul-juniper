@@ -27,7 +27,7 @@ const ProgressSection = ({
       <Row justify="center" className="progressSectionContainer___row">
         <Col xs={6} md={{ push: 1 }} lg={{ push: 2 }}>
           <h3 className="progressSectionContainer___row___header progressSectionContainer___row___curLevel">
-            {t("gamesPage.level")} {currentLevel}
+            {t("gamesPage.level", { number: currentLevel })}
           </h3>
         </Col>
         <Col xs={12}>
@@ -42,7 +42,7 @@ const ProgressSection = ({
         </Col>
         <Col xs={6} md={{ pull: 1 }} lg={{ pull: 2 }}>
           <h3 className="progressSectionContainer___row___header progressSectionContainer___row___nextLevel">
-            {t("gamesPage.level")} {nextLevel}
+            {t("gamesPage.level", { number: nextLevel })}
           </h3>
         </Col>
       </Row>
