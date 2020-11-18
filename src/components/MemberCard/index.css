@@ -49,3 +49,15 @@
     color: black;
     margin: 5px;
 }
+
+@media (max-width: 768.1px) and (min-width: 425px ) {
+    .memberCard {
+        width: 47%;
+    }
+}
+
+@media (max-width: 425.1px) {
+    .memberCard {
+        width: 100%;
+    }
+}
