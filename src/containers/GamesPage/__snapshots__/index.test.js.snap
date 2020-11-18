@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GamesPage Component matches the tree 1`] = `
+Array [
+  <div
+    className="bottomCurveContainer"
+  >
+    <div
+      className="bottomCurveContainer__bottomCurve"
+    >
+      <div
+        className="bottomCurveContainer__bottomCurve__topHalf"
+      />
+      <div
+        className="bottomCurveContainer__bottomCurve__bottomHalf"
+      />
+    </div>
+  </div>,
+  <div
+    className="gamePageImageGrid"
+  >
+    <h1
+      className="gamePageImageGrid__title"
+    >
+      gamesPage.title
+    </h1>
+    <div
+      className="ant-row ant-row-center"
+      style={Object {}}
+    >
+      <div
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-9"
+        style={
+          Object {
+            "backgroundImage": "url(mockGTAPoster.jpg)",
+          }
+        }
+      >
+        <a
+          className="gamePageImageGrid__col__redirect"
+          href="/"
+          onClick={[Function]}
+        >
+          <p
+            className="gamePageImageGrid__col__redirect__text"
+          >
+            Grand Theft Auto  
+          </p>
+        </a>
+      </div>
+      <div
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-9"
+        style={
+          Object {
+            "backgroundImage": "url(mockZeldaPoster.jpg)",
+          }
+        }
+      >
+        <a
+          className="gamePageImageGrid__col__redirect"
+          href="/"
+          onClick={[Function]}
+        >
+          <p
+            className="gamePageImageGrid__col__redirect__text"
+          >
+            Zelda
+          </p>
+        </a>
+      </div>
+      <div
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-9"
+        style={
+          Object {
+            "backgroundImage": "url(mockDestinyPoster.jpg)",
+          }
+        }
+      >
+        <a
+          className="gamePageImageGrid__col__redirect"
+          href="/"
+          onClick={[Function]}
+        >
+          <p
+            className="gamePageImageGrid__col__redirect__text"
+          >
+            Destiny
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>,
+]
+`;
