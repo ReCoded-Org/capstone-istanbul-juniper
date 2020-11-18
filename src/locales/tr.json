@@ -25,7 +25,7 @@
     "withFacebook": "Facebook İle Bağlan",
     "withGoogle": "Google İle Bağlan"
   },
-  "passReset": {
+  "passwordReset": {
     "emailFormat": "Email biçimi Hatası",
     "fillField": "Lütfen bu alanı doldurun",
     "passwordReset": "Şifreyi yenile",
@@ -92,6 +92,11 @@
         "href": "https://twitter.com/wwf_turkiye?lang=en"
       }
     ],
+    "resourcesSection": {
+      "pollution": "Çevre kirliliği",
+      "climateChange": "Mevsim değişimi",
+      "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
+    },
     "gamesCarousel": {
       "title": "Oyunlar",
       "subtitle": "En Popüler Oyunlar",
@@ -128,72 +133,6 @@
         }
       ]
     }
-  },
-  "memoryGame": {
-    "title": "Hafıza Oyunu",
-    "facts": "Bilgiler",
-    "cards": [
-      {
-        "description": "Asit Yağmuru",
-        "link": "https://www.nkfu.com/asit-yagmuru-ile-ilgili-bilgiler/",
-        "phrase": "Asit yağmurlarının volkanik patlamalar, yanan kömür ve hatta çürüyen bitkiler sebebiyle bile oluşabileceğini biliyor muydun?"
-      },
-      {
-        "description": "Hava Kirliliği",
-        "link": "https://evrimagaci.org/hava-kirliligi-su-anda-bunu-okurken-bile-omrunuzu-kisaltiyor-ve-sizi-daha-hizli-olduruyor-4263",
-        "phrase": "Çin'deki hava kirliliğinin uzaydan gözüktüğünü biliyor muydun?"
-      },
-      {
-        "description": "Alternatif Enerji",
-        "link": "https://evrimagaci.org/yesil-enerji-devrimi-elektrik-harcamaniz-icin-size-para-odenirse-3188",
-        "phrase": "2017'den 2018'e geçişteki tatil sezonunda Almanya, rüzgar ve güneş enerjisi kaynaklarını kullanarak çok fazla enerji ürettiği için, çeşitli ofisler ve üretim fabrikalarının fazladan elektrik tüketmesi amacıyla kendilerine megawatt-saat (MWh) başına 60 Amerikan Doları devlet desteği ödediğini biliyor muydun?"
-      },
-      {
-        "description": "Kimyasal Atık",
-        "link": "http://ekolojist.net/kimyasal-atik-nedir/",
-        "phrase": "Kimyasal atıkların doğaya geri dönüşü olmayan zararlar verdiğini biliyor muydun?"
-      },
-      {
-        "description": "Ormansızlaşma",
-        "link": "https://www.wwf.org.tr/ne_yapiyoruz/iklim_degisikligi_ve_enerji/iklim_degisikligi/",
-        "phrase": "2004 yılındaki insan kaynaklı sera gazı emisyonlarının %17'sinin ormansızlaştırmadan kaynaklandığını biliyor muydun?"
-      },
-      {
-        "description": "Küresel Isınma",
-        "link": "https://evrimagaci.org/iklim-degisikligi-kuresel-isinma-ve-turkiye-icin-sonuclari-roportaji-cagri-mert-bakirci-453",
-        "phrase": "Küresel ısınmanın kasırgaları güçlendirip tahribatı artırdığını biliyor muydun?"
-      },
-      {
-        "description": "Sera Gazı Etkisi",
-        "link": "http://ekolojist.net/sera-gazi-nedir/",
-        "phrase": "Sera gazı etkisinin artmasının en önemli sebebinin sanayi devrimi olduğunu biliyor muydun?"
-      },
-      {
-        "description": "Etrafa Çöp Atmak",
-        "link": "https://evrimagaci.org/davranislarimizi-degistirmek-yere-neden-cop-atiyoruz-7671",
-        "phrase": "Her yıl 4.5 trilyon adet sigara izmaritinin doğaya atıldığını biliyor muydun?"
-      },
-      {
-        "description": "Eriyen Buzullar",
-        "link": "https://cevreonline.com/buzullarin-erimesi/",
-        "phrase": "2100 yılında dünyadaki su seviyesinin 2 metre yükseleceğini biliyor muydun?"
-      },
-      {
-        "description": "Ozon Deliği",
-        "link": "https://evrimagaci.org/ozon-tabakasi-iyilesiyor-kuresel-ruzgarlarin-hareketleri-hakkinda-iyi-haberler-var-8413",
-        "phrase": "Ozon deliğinin okyanuslardaki su akıntısını etkilediğini biliyor muydun?"
-      },
-      {
-        "description": "Geri Dönüşüm",
-        "link": "https://evrimagaci.org/geri-donusum-bilmecesi-malzemeler-kac-kez-geri-donusturulebilir-9424",
-        "phrase": "Alüminyumun sınırsız sayıda geri dönüşüme uğrayabileceğini biliyor muydun?"
-      },
-      {
-        "description": "Su Kirliliği",
-        "link": "https://www.denizticaretodasi.org.tr/tr/haberler/kuresel-su-kirliligi-ile-ilgili-29-endise-verici-gercek-hk-1592-1",
-        "phrase": "2025 yılında yaklaşık 3.5 milyar insanın, büyük ölçüde su kirliliğinden kaynaklı su kıtlığı yaşayacağını biliyor muydun?"
-      }
-    ]
   },
   "contact": {
     "headerSection": {
@@ -244,9 +183,86 @@
         }
       ]
     },
+    "memoryGame": {
+      "title": "Hafıza Oyunu",
+      "facts": "Bilgiler",
+      "header": "Hafızanı test ederek bilgileri açığa çıkar!",
+      "scrollToFactsButtonText": "Kazanılmış Bilgiler",
+      "howToPlayTitle": "Nasıl oynanır?",
+      "howToPlayDescription": "Bir kartın üstüne tıklayarak kart resimini ortaya çıkar ve aynı resmi başka kartta bularak eşleştir.",
+      "emptyFactListMessage": "Bilgileri görmek için kartları eşleştir!",
+      "cards": [
+        {
+          "description": "Asit Yağmuru",
+          "link": "https://www.nkfu.com/asit-yagmuru-ile-ilgili-bilgiler/",
+          "phrase": "Asit yağmurlarının volkanik patlamalar, yanan kömür ve hatta çürüyen bitkiler sebebiyle bile oluşabileceğini biliyor muydun?"
+        },
+        {
+          "description": "Hava Kirliliği",
+          "link": "https://evrimagaci.org/hava-kirliligi-su-anda-bunu-okurken-bile-omrunuzu-kisaltiyor-ve-sizi-daha-hizli-olduruyor-4263",
+          "phrase": "Çin'deki hava kirliliğinin uzaydan gözüktüğünü biliyor muydun?"
+        },
+        {
+          "description": "Alternatif Enerji",
+          "link": "https://evrimagaci.org/yesil-enerji-devrimi-elektrik-harcamaniz-icin-size-para-odenirse-3188",
+          "phrase": "2017'den 2018'e geçişteki tatil sezonunda Almanya, rüzgar ve güneş enerjisi kaynaklarını kullanarak çok fazla enerji ürettiği için, çeşitli ofisler ve üretim fabrikalarının fazladan elektrik tüketmesi amacıyla kendilerine megawatt-saat (MWh) başına 60 Amerikan Doları devlet desteği ödediğini biliyor muydun?"
+        },
+        {
+          "description": "Kimyasal Atık",
+          "link": "http://ekolojist.net/kimyasal-atik-nedir/",
+          "phrase": "Kimyasal atıkların doğaya geri dönüşü olmayan zararlar verdiğini biliyor muydun?"
+        },
+        {
+          "description": "Ormansızlaşma",
+          "link": "https://www.wwf.org.tr/ne_yapiyoruz/iklim_degisikligi_ve_enerji/iklim_degisikligi/",
+          "phrase": "2004 yılındaki insan kaynaklı sera gazı emisyonlarının %17'sinin ormansızlaştırmadan kaynaklandığını biliyor muydun?"
+        },
+        {
+          "description": "Küresel Isınma",
+          "link": "https://evrimagaci.org/iklim-degisikligi-kuresel-isinma-ve-turkiye-icin-sonuclari-roportaji-cagri-mert-bakirci-453",
+          "phrase": "Küresel ısınmanın kasırgaları güçlendirip tahribatı artırdığını biliyor muydun?"
+        },
+        {
+          "description": "Sera Gazı Etkisi",
+          "link": "http://ekolojist.net/sera-gazi-nedir/",
+          "phrase": "Sera gazı etkisinin artmasının en önemli sebebinin sanayi devrimi olduğunu biliyor muydun?"
+        },
+        {
+          "description": "Çevreyi kirletmek",
+          "link": "https://evrimagaci.org/davranislarimizi-degistirmek-yere-neden-cop-atiyoruz-7671",
+          "phrase": "Her yıl 4.5 trilyon adet sigara izmaritinin doğaya atıldığını biliyor muydun?"
+        },
+        {
+          "description": "Eriyen Buzullar",
+          "link": "https://cevreonline.com/buzullarin-erimesi/",
+          "phrase": "2100 yılında dünyadaki su seviyesinin 2 metre yükseleceğini biliyor muydun?"
+        },
+        {
+          "description": "Ozon Deliği",
+          "link": "https://evrimagaci.org/ozon-tabakasi-iyilesiyor-kuresel-ruzgarlarin-hareketleri-hakkinda-iyi-haberler-var-8413",
+          "phrase": "Ozon deliğinin okyanuslardaki su akıntısını etkilediğini biliyor muydun?"
+        },
+        {
+          "description": "Geri Dönüşüm",
+          "link": "https://evrimagaci.org/geri-donusum-bilmecesi-malzemeler-kac-kez-geri-donusturulebilir-9424",
+          "phrase": "Alüminyumun sınırsız sayıda geri dönüşüme uğrayabileceğini biliyor muydun?"
+        },
+        {
+          "description": "Su Kirliliği",
+          "link": "https://www.denizticaretodasi.org.tr/tr/haberler/kuresel-su-kirliligi-ile-ilgili-29-endise-verici-gercek-hk-1592-1",
+          "phrase": "2025 yılında yaklaşık 3.5 milyar insanın, büyük ölçüde su kirliliğinden kaynaklı su kıtlığı yaşayacağını biliyor muydun?"
+        }
+      ]
+    },
     "puzzleGame": {
       "title": "Görüntü Bulmacası",
       "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
     }
+  },
+  "about": {
+    "aboutUsHeader": "Hakkımızda",
+    "aboutUsText": "Teknolojiyi insanların yararına kullanmakta ortak paydasını bulan çok uluslu bir gençlik grubuyuz. Orta Doğu ve Kuzey Afrika'daki çocukları eğitici oyunlar aracılığıyla çevre sorunları ve iklim değişikliği konusunda eğitmek için birlikte çalışan 5 genç geliştirici ve 1 baş mühendisten oluşan bir grup. Hedef kitlemiz MENA'da yaşayan 8-13 yaş arası çocuklar; bu nedenle, web sitemizi çocukların ve öğretmenlerinin / ebeveynlerinin web sitesinde kolayca gezinmelerine yardımcı olmak için üç ana dilde sunuyoruz.",
+    "whyWeDoItHeader": "Neden yapıyoruz",
+    "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, bir nesil aktivist yetiştirmek imkansız değildir."
   }
 }

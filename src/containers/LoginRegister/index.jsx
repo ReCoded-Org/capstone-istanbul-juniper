@@ -104,6 +104,7 @@ const LoginRegisterPage = (props) => {
         uid: registeredUser.user.uid,
         fullname: fullname,
         age: age,
+        userExperiencePoints: 0,
       });
       await auth.signInWithEmailAndPassword(email, password);
       setLoading(false);
