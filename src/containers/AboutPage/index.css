@@ -16,6 +16,17 @@
   width: 47%;
 }
 
+.aboutUs__textCol--whyWeDoItParagraph,
+.aboutUs__textCol--aboutParagraph{
+  text-align: justify;
+  margin-bottom: 6%; 
+}
+
+.aboutUs__textCol--whyWeDoItHeader,
+.aboutUs__textCol--aboutHeader {
+  font-family: "Salsa", cursive;
+}
+
 .aboutUs__illustrationsCol {
   margin-right: 3%;
   display: flex;
