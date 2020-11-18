@@ -12,14 +12,11 @@ class MemberCard extends Component {
         this.linkedin = this.props.linkedin;
         this.github = this.props.github
         this.avatar = this.props.avatar
-        this.state = {
-            loading: true
-        }
     }
 
     render() {
         return (
-            <Card className="memberCard" loading={this.state.loading}>
+            <Card className="memberCard" >
                 <Avatar src={this.avatar} shape="circle" alt={this.name}/>
                 <Row>{this.name}</Row>
                 <Row>{this.bio}</Row>

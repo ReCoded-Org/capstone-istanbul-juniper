@@ -1,21 +1,21 @@
 import React,{useState, useEffect} from "react";
-import db from "./../../firebaseConfig"
+import db from "./../../firebaseConfig";
+import someImg from "./../../images/yellow-spot.svg"
+import MemberCard from "./../MemberCard"
 import "./index.css"
 
-const FIREBASE_LINK = "";
+const FIREBASE_LINK = "https://firebasestorage.googleapis.com/v0/b/";
 const MEMBERS_NAMES = ["ammar", "ibrahim", "majd", "sule", "tarkan", "yaman"]
 
 const TeamCards = () => {
     const [dataState, setDataState] = useState([])
-    const [imageUrl, setImageUrl] = useState([]);
-    const [linkedinUrl, setLinkedinUrl] = useState([]);
-    const [githubUrl, setGithubUrl] = useState([]);
+    let avatars;
 
     const fetchData = async () => {
         const res = await db.collection("team").doc("teamInfo").get()
         const data = res.data()
         
-        setDataState(data)
+        setDataState(data.info)
     }
 
     useEffect(() => {
@@ -23,11 +23,17 @@ const TeamCards = () => {
     }, [])
 
     useEffect(()=>{
-        console.log("data", dataState.info)
+        console.log("data", dataState)
+        // avatars = dataState.map((member) => <MemberCard name={member.name} avatar={someImg} bio="" />)
+        avatars = dataState.map((member) => <img src={someImg} alt="" />)
+        console.log(avatars)
     }, [dataState])
 
     return(
         <>
+        <div>hiii</div>
+        <div>{dataState.map((member) => <MemberCard name={member.name} avatar={FIREBASE_LINK+member.avatar.slice(5)} bio="" />)}</div>
+        {/* <div>{dataState.map((member) => <img src={FIREBASE_LINK+member.avatar.slice(5)} alt={member.name+"'s picture"} />)}</div> */}
         </>
     )
 
