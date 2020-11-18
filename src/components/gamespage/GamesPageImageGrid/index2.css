@@ -1,0 +1,40 @@
+.gamePageImageGrid__col__link__card {
+    border-width: 2px;
+    transition: all, 0.5s;
+}
+
+.gamePageImageGrid__col__link__card:hover {
+    transform: scale(1.05);
+    transition: all, 0.5s;
+}
+
+.gamePageImageGrid__col__link {
+    width: 60%;
+    margin: auto;
+}
+
+.gamePageImageGrid__col__link__card__title {
+    text-align: center;
+    font-size: clamp(0.9rem, 2.7vw, 3rem);
+    font-family: 'Salsa';
+}
+.gamePageImageGrid {
+    background: #2a8c79;
+}
+
+.gamePageImageGrid__col {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.gamePageImageGrid__title {
+    padding-top: 4%;
+    color: white;
+    font-size: max(1.7rem, 5vw);
+    font-family: 'Salsa', cursive;
+    text-align: center;
+}
+
+.gamePageImageGrid__col__link__card__img {
+    width: 100%;
+}
