@@ -11,7 +11,7 @@ const ScrollToFacts = () => {
     // Check https://github.com/rafgraph/react-router-hash-link for 'react-router-hash-link'
     <HashLink to="#memoryGameFactList" smooth>
       <Button className="scrollToFactsButton" type="primary">
-        {t("games.memoryGame.scrollToFactsButtonText")}
+        {t("memoryGame.scrollToFactsButtonText")}
       </Button>
     </HashLink>
   );

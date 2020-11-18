@@ -8,8 +8,8 @@ const QuestionMarkIcon = () => {
   const [t] = useTranslation();
   return (
     <Popover
-      content={t("games.memoryGame.howToPlayDescription")}
-      title={t("games.memoryGame.howToPlayTitle")}
+      content={t("memoryGame.howToPlayDescription")}
+      title={t("memoryGame.howToPlayTitle")}
       placement="topRight"
     >
       <QuestionCircleTwoTone className="questionMarkIcon" />
