@@ -2,6 +2,7 @@ import React,{useState, useEffect} from "react";
 import db from "./../../firebaseConfig";
 import someImg from "./../../images/yellow-spot.svg"
 import MemberCard from "./../MemberCard"
+import {Row} from "antd"
 import "./index.css"
 
 const FIREBASE_LINK = "https://firebasestorage.googleapis.com/v0/b/";
@@ -30,11 +31,10 @@ const TeamCards = () => {
     }, [dataState])
 
     return(
-        <>
-        <div>hiii</div>
-        <div>{dataState.map((member) => <MemberCard name={member.name} avatar={FIREBASE_LINK+member.avatar.slice(5)} bio="" />)}</div>
+        <Row className="teamCards">
+            {dataState.map((member) => <MemberCard key={member.name+" card"} name={member.name} avatar={FIREBASE_LINK+member.avatar.slice(5)} bio="" />)}
         {/* <div>{dataState.map((member) => <img src={FIREBASE_LINK+member.avatar.slice(5)} alt={member.name+"'s picture"} />)}</div> */}
-        </>
+        </ Row>
     )
 
 }

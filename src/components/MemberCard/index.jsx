@@ -16,7 +16,7 @@ class MemberCard extends Component {
 
     render() {
         return (
-            <Card className="memberCard" >
+            <Card span={6} size="default" className="memberCard" bordered={false} >
                 <Avatar src={this.avatar} shape="circle" alt={this.name}/>
                 <Row>{this.name}</Row>
                 <Row>{this.bio}</Row>
