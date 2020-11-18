@@ -3,7 +3,7 @@ import contactUsBottomImgRight_0 from "../../images/child.png";
 import contactUsBottomImgRight_1 from "../../images/child_2.png";
 import contactUsBottomImgLeft from "../../images/family.png";
 import "./index.css";
-import "antd/dist/antd.css";
+
 
 const ContactUsBottom = () => {
   return (
