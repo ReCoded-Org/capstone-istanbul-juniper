@@ -1,24 +1,6 @@
 {
-  "navbar": {
-    "home": "Home",
-    "about": "About",
-    "games": "Games",
-    "resources": "Resources",
-    "contact": "Contact",
-    "login": "Login"
-  },
-  "footer": {
-    "tradeMark": " Trademark",
-    "contact": "Contact ",
-    "policies": "Policies",
-    "games": "Games",
-    "about": "About"
-  },
-  "home": {
-    "resourcesSection": {
-      "pollution": "Pollution",
-      "climateChange": "Climate Change",
-      "reduceReuseRecycle": "Reduce, Reuse, Recycle"
-    }
+  "ResourcesPage": {
+    "title": "Resources Centre",
+    "aboutPage": "Juniper's Resource Centre is an online library that hosts comprehensive, reliable, and up-to-date information on thematic areas related to Environmental. The website is open to the public, free-of-charge, and provides access to materials in one convenient location. This page will be updated regularly."
   }
 }

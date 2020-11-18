@@ -1,24 +1,6 @@
 {
-  "navbar": {
-    "home": "",
-    "about": "",
-    "games": "",
-    "resources": "",
-    "contact": "",
-    "login": ""
-  },
-  "footer": {
-    "trademark": "Marka",
-    "contact": "İletişim ",
-    "policies": "Politikalar",
-    "games": "Oyunlar",
-    "about": "Hakkında"
-  },
-  "home": {
-    "resourcesSection": {
-      "pollution": "Çevre kirliliği",
-      "climateChange": "Mevsim değişimi",
-      "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
-    }
+  "ResourcesPage": {
+    "title": "Resources Centre",
+    "aboutPage": "Juniper's Resource Centre is an online library that hosts comprehensive, reliable, and up-to-date information on thematic areas related to Environmental. The website is open to the public, free-of-charge, and provides access to materials in one convenient location. This page will be updated regularly."
   }
 }

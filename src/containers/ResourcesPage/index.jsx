@@ -1,51 +1,60 @@
-import React, { useContext, useState } from "react";
-
+import React, { useState } from "react";
 import Resource from "../../components/Resource";
-
 import "./index.css";
+import ourClimateChange from "../../images/ourClimateChange.png";
+import resourcesForEducation from "../../images/resourcesForEducation.png";
+import whoCausesClimate from "../../images/whoCausesClimate.png";
+import { useTranslation } from "react-i18next";
 
-
-// TODO: Store these resources on firebase, and fetch them from there
 const initResources = [
-
   {
     id: 1,
-    title: 'Testing 123 ',
-    body: 'Sed facilisis cursus leo, a placerat dolor gravida nec. Ut vitae orci mauris. Aenean porttitor lacus ac magna faucibus bibendum. Praesent vehicula ipsum ante, luctus posuere augue lacinia eu.',
-    pic: 'https://live.staticflickr.com/2912/13981352255_fc59cfdba2_b.jpg',
-    url: 'https://www.google.com',
+    title: "Our changing climate - UNICEF",
+    body:
+      "This book is a child friendly handbook meant to explain the concepts of climate change in an easily understandable manner and language. It aims to link behavioural choices to the changes observed in our climate",
+    pic: ourClimateChange,
+    url:
+      "gs://capstone-istanbul-juniper.appspot.com/ResourcesPage/Child friendly climate change handbook.pdf",
   },
   {
     id: 2,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-    body: 'Sed facilisis cursus leo, a placerat dolor gravida nec. Ut vitae orci mauris. Aenean porttitor lacus ac magna faucibus bibendum. Praesent vehicula ipsum ante, luctus posuere augue lacinia eu.',
-    pic: 'https://live.staticflickr.com/2912/13981352255_fc59cfdba2_b.jpg',
-    url: 'https://www.google.com',
+    title: "Resources for Education on Climate Change - UNESCO",
+    body:
+      "This publication focuses on the challenges, opportunities and good practices of climate change. It explores the interrelationship between climate change and lifestyles through a scientific, political, economic, social, ethical and cultural angle and identifies actions young people might take towards more sustainable lifestyles. It provides information, case studies and useful tips around topics relevant to young people and their everyday lives, such as food and drink, travel and transport, leisure and entertainment. The guide was produced for young people and people working with them such as educators, teachers, trainers and youth leaders around the world",
+    pic: resourcesForEducation,
+    url:
+      "gs://capstone-istanbul-juniper.appspot.com/ResourcesPage/Resources list_Climate Change.pdf",
   },
   {
     id: 3,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-    body: 'Sed facilisis cursus leo, a placerat dolor gravida nec. Ut vitae orci mauris. Aenean porttitor lacus ac magna faucibus bibendum. Praesent vehicula ipsum ante, luctus posuere augue lacinia eu.',
-    pic: 'https://live.staticflickr.com/2912/13981352255_fc59cfdba2_b.jpg',
-    url: 'https://www.google.com',
+    title: "Who Causes Climate changes - TROCAIRE. ",
+    body:
+      "Children explore who contribute to climate change by looking at activities related to climate change using climate change bingo sheet, creating clouds that list activates causing gas emissions and represent the world population by dividing themself.",
+    pic: whoCausesClimate,
+    url:
+      "gs://capstone-istanbul-juniper.appspot.com/ResourcesPage/creating-futures-lesson-4.pdf",
   },
-
 ];
 
 const ResourcesPage = () => {
+  const [t] = useTranslation();
 
-  const [resources, setResources] = useState(initResources);
+  const [resources] = useState(initResources);
   return (
     <div className="ResourcesPage">
       <div className="ResourcesPage__HeaderContainer">
-        <div className="ResourcesPage__HeaderContainer__Title">Resources</div>
-        <div className="ResourcesPage__HeaderContainer__SubTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-
+        <div className="ResourcesPage__HeaderContainer__Title">
+          {t("ResourcesPage.title")}
+        </div>
+        <div className="ResourcesPage__HeaderContainer__SubTitle">
+          {t("ResourcesPage.aboutPage")}
+        </div>
       </div>
       <div className="ResourcesPage__ResourcesContainer">
         {resources.map((resource) => {
-          return <Resource key={`resource_${resource.id}`} resource={resource} />
+          return (
+            <Resource key={`resource_${resource.id}`} resource={resource} />
+          );
         })}
       </div>
     </div>

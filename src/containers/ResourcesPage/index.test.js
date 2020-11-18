@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Home from ".";
+import ResourcesPage from ".";
 
-it("Home renders correctly", () => {
-  const tree = renderer.create(<Home />).toJSON();
+it("ResourcesPage renders correctly", () => {
+  const tree = renderer.create(<ResourcesPage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
