@@ -215,6 +215,38 @@
     "aboutUsHeader": "About us",
     "aboutUsText": "We are a group of multi-national youth who found their common ground in using tech for the benefit of people. Juniper, consists of a group of 5 junior developers and 1 lead engineer working together to educate children in MENA about environmental issues and climate change through educational games. Our target group is kids living in MENA that are 5-9 years old; thus, Juniper is delivered in three main languages to help kids and their teachers/parents to easily surf the website.",
     "whyWeDoItHeader": "Why we do it",
-    "whyWeDoItText": "We have a moral obligation to preserve nature and its features, because protecting the environment protects humanity from toxic substances and our quality of food. We believe that the new generation in MENA should be supported with the right tools to believe and act for the benefit of humanitarian and social issues, on the local and global scale. Given the right tools, it is not impossible to raise a generation of activists."
+    "whyWeDoItText": "We have a moral obligation to preserve nature and its features, because protecting the environment protects humanity from toxic substances and our quality of food. We believe that the new generation in MENA should be supported with the right tools to believe and act for the benefit of humanitarian and social issues, on the local and global scale. Given the right tools, it is not impossible to raise a generation of activists.",
+    "teamInfo": {
+      "ammar": {
+        "name": "Ammar Sammour",
+        "bio": "",
+        "role": "Lead Engineer"
+      },
+      "ibrahim": {
+        "name": "Ibrahim Aljarad",
+        "bio": "Hey, I'am Ibrahim from Syria, i studied coding at Flatiron school of coding and studied economics at Alfurat university. i participate with a front end web development boot camp with Re-coded organization and graduated from there. My other experiences other than coding, i worked with several channels and agencies as a satellite producer providing the technical support for the field producing teams.",
+        "role": "Junior Developer"
+      },
+      "majd": {
+        "name": "Majd Ajroudi",
+        "bio": "malskdjalskjdlaksjldajlsdjlasjd",
+        "role": "Junior Developer"
+      },
+      "sule": {
+        "name": "Sule Sinikoglu",
+        "bio": "A Web Developer who writes “good code” for creating positive impact on Global Challenges.",
+        "role": "Junior Developer"
+      },
+      "tarkan": {
+      "name": "Tarkan Mansuroglu",
+      "bio": "a “Re-Coded Front-End Web Development Bootcamp” trained and partially self-taught front-end web developer. He is also a passionate learner, PC enthusiast, gamer and fitness enthusiast. He loves solving real life problems to test and develop his skills. Follow him through social media!",
+      "role": "Junior Developer"
+      },
+      "yaman": {
+        "name": "Mohamad Yaman Sammani",
+        "bio": "Yaman is a junior Front-End web developer graduated from Re: Coded Bootcamp in November 2020. His passion is to designee programs that support easy access to services migrants in host countries.",
+        "role": "Junior Developer"
+      }
+    }
   }
 }
