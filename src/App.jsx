@@ -8,7 +8,7 @@ import PuzzlePage from "./containers/PuzzlePage/index";
 import Navbar from "./components/Navbar";
 import MemoryGame from "./containers/MemoryGame";
 import GamesPage from "./containers/GamesPage";
-import Contact from "./containers/Contact";
+import Contact from "./containers/ContactPage";
 import "antd/dist/antd.css";
 import "./App.css";
 
