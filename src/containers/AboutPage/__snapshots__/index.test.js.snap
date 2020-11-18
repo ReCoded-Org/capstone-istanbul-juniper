@@ -16,10 +16,14 @@ exports[`AboutPage Component matches the tree 1`] = `
         className="ant-row aboutUs__textCol--aboutText"
         style={Object {}}
       >
-        <h2>
-          about.aboutUs
+        <h2
+          className="aboutUs__textCol--aboutHeader"
+        >
+          about.aboutUsHeader
         </h2>
-        <p>
+        <p
+          className="aboutUs__textCol--aboutParagraph"
+        >
           about.aboutUsText
         </p>
       </div>
@@ -27,10 +31,14 @@ exports[`AboutPage Component matches the tree 1`] = `
         className="ant-row aboutUs__textCol--whyWeDoIt"
         style={Object {}}
       >
-        <h2>
-          about.whyWeDoIt
+        <h2
+          className="aboutUs__textCol--whyWeDoItHeader"
+        >
+          about.whyWeDoItHeader
         </h2>
-        <p>
+        <p
+          className="aboutUs__textCol--whyWeDoItParagraph"
+        >
           about.whyWeDoItText
         </p>
       </div>
@@ -41,12 +49,12 @@ exports[`AboutPage Component matches the tree 1`] = `
     >
       <img
         alt="kid-illustration"
-        className="aboutUs__illustrationsCol--kid1"
+        className="aboutUs__illustrationsCol--kid0"
         src="kid-1.png"
       />
       <img
         alt="kid-illustration"
-        className="aboutUs__illustrationsCol--kid2"
+        className="aboutUs__illustrationsCol--kid1"
         src="kid-2.png"
       />
     </div>
