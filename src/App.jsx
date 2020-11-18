@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import PuzzlePage from "./containers/PuzzlePage/index";
 import { useTranslation } from "react-i18next";
 import MemoryGame from "./containers/MemoryGame";
-import Navber from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import "./App.css";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
     <>
       <AuthProvider>
         <Router>
-          <Route path="/" component={Navber} />
+          <Route path="/" component={Navbar} />
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={LoginRegister} />
           <Route path="/about" component={""} />

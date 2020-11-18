@@ -26,8 +26,9 @@ export const processAuth = async (auth, setUser) => {
   if (!auth) {
     return setUser(null);
   }
+  // A unique user ID, assigned to the requesting user, we're calling/maticing this ID from our server.
   let firestoreResult = await firestore
-    .doc("users/" + auth.uid) // A unique user ID, assigned to the requesting user, we're calling/maticing this ID from our server.
+    .doc("users/" + auth.uid) 
     .get();
   if (!firestoreResult.data()) {
     await firestore.collection("users").doc(auth.uid).set({

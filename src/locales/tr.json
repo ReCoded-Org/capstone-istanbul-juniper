@@ -19,7 +19,7 @@
     "email": "Email",
     "password": "Parola",
     "forgotPassword": "Şifremi Unuttum?",
-    "new": "juniper yeni misiniz? Şimdi üye Ol",
+    "new": "Juniper'de yeni misiniz? Şimdi üye Ol",
     "creat": "Üye Ol",
     "oryoucan": "Ya da",
     "withFacebook": "Facebook İle Bağlan",
@@ -33,14 +33,14 @@
     "backToLogin": "Geri Giriş Yap"
   },
   "register": {
-    "fullName": "lütfen tam adınızı giriniz",
+    "fullName": "Lütfen tam adınızı giriniz",
     "validEmail": "lütfen geçerli eposta adresini giriniz",
     "enterAge": "Lütfen yaşını gir",
     "passwordCharacter": "Şifre en az 6 karakter uzunluğunda olmalı",
-    "enterPassword": "Şifrenizi giriniz Lütfen",
+    "enterPassword": "Lütfen şifrenizi giriniz",
     "emailFormat": "E-posta biçimi hatası, lütfen geçerli bir e-posta girin",
     "terms": "Lütfen şartlar ve koşulları kabul edin",
-    "termsTitle": "şartlar ve koşulları",
+    "termsTitle": "Şartlar ve koşulları",
     "close": "Kapat",
     "iAgree": "Kabul ediyorum",
     "terms1": "1",
@@ -58,14 +58,14 @@
     "termsandCon": "kabul ediyorum",
     "creatAccount": "Yeni hesap oluştur",
     "alreadyAMember": "Bir üye misiniz? Şimdi giriş yap",
-    "login": "Giriş ya",
+    "login": "GGiriş yap",
     "orYouCan": "Ya da",
-    "withFacebook": "Facebook İle Bağlan",
-    "withGoogle": "Google İle Bağlan"
+    "withFacebook": "Facebook ile Bağlan",
+    "withGoogle": "Google ile Bağlan"
   },
   "loginRegister": {
     "anEmailsent": " By Adresine bir e-posta mesajı gönderildi",
-    "anEmailsentcontain": "şifre sıfırlama talimatları içerir, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin.."
+    "anEmailsentcontain": "Şifre sıfırlama talimatları içerir, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."
   },
   "home": {
     "stayUpToDate": "Güncel kal!",

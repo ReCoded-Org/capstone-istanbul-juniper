@@ -31,7 +31,6 @@ const Navbar = () => {
         <Link to="/contact">{t("navbar.contact")}</Link>
       </Menu.Item>
       <Menu.Item>
-        {/*Welcome, {user.isLoggedin ? user.fullname : "GUEST"}, |*/}
         {user && user.isLoggedin ? (
           <a
             href="/#"
@@ -39,8 +38,7 @@ const Navbar = () => {
               e.preventDefault();
               auth.signOut();
             }}
-          >
-            Logout{" "}
+          >Logout
           </a>
         ) : (
           <Link to="/login">{t("navbar.login")}</Link>
