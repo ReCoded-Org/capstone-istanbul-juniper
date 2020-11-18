@@ -13,12 +13,20 @@ const AboutPage = () => {
       <Row className="aboutUs__upperContent">
         <Col className="aboutUs__textCol">
           <Row className="aboutUs__textCol--aboutText">
-            <h2 className="aboutUs__textCol--aboutHeader">{t("about.aboutUsHeader")}</h2>
-            <p className="aboutUs__textCol--aboutParagraph">{t("about.aboutUsText")}</p>
+            <h2 className="aboutUs__textCol--aboutHeader">
+              {t("about.aboutUsHeader")}
+            </h2>
+            <p className="aboutUs__textCol--aboutParagraph">
+              {t("about.aboutUsText")}
+            </p>
           </Row>
           <Row className="aboutUs__textCol--whyWeDoIt">
-            <h2 className="aboutUs__textCol--whyWeDoItHeader">{t("about.whyWeDoItHeader")}</h2>
-            <p className="aboutUs__textCol--whyWeDoItParagraph">{t("about.whyWeDoItText")}</p>
+            <h2 className="aboutUs__textCol--whyWeDoItHeader">
+              {t("about.whyWeDoItHeader")}
+            </h2>
+            <p className="aboutUs__textCol--whyWeDoItParagraph">
+              {t("about.whyWeDoItText")}
+            </p>
           </Row>
         </Col>
         <Col className="aboutUs__illustrationsCol">
