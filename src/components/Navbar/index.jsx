@@ -38,7 +38,8 @@ const Navbar = () => {
               e.preventDefault();
               auth.signOut();
             }}
-          >Logout
+          >
+            Logout
           </a>
         ) : (
           <Link to="/login">{t("navbar.login")}</Link>
