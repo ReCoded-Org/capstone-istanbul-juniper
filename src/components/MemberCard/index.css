@@ -14,8 +14,10 @@
     height:100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: stretch;
+    align-items: center;
 }
+
 
 
 .memberCard__name {
@@ -35,13 +37,11 @@
     display: flex;
     justify-content: center;
     color: white;
-    text-align: justify;
+    
 }
 
-
-.memberCard__avatar {
-    display: flex;
-    align-self: center;
+.memberCard__bio{
+    text-align: justify;
 }
 
 .memberCard__socialMedia--linkedin,

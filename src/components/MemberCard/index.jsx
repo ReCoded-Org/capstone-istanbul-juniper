@@ -18,19 +18,20 @@ class MemberCard extends Component {
         return (
             <Card span={6} size="default" className="memberCard" bordered={false} >
                 <div className="memberCard__header">
-                    <Avatar className="memberCard__avatar" size={64} src={this.avatar} shape="circle" alt={this.name}/>
+                    <Avatar className="memberCard__avatar" size={120} src={this.avatar} shape="circle" alt={this.name}/>
                     <Row className="memberCard__name">{this.name}</Row>
                     <Row className="memberCard__role">{this.role}</Row>
                 </div>
-                    <Row className="memberCard__bio">{this.bio}</Row>
-                    <Row className="memberCard__socialMedia">
-                        <a className="memberCard__socialMedia--linkedin" href={this.linkedin}>
-                            <LinkedinFilled />
-                        </a>
-                        <a className="memberCard__socialMedia--github" href={this.github}>
-                            <GithubFilled />
-                        </a>
-                    </Row>
+                
+                <Row className="memberCard__bio">{this.bio}</Row>
+                <Row className="memberCard__socialMedia">
+                    <a className="memberCard__socialMedia--linkedin" href={this.linkedin}>
+                        <LinkedinFilled />
+                    </a>
+                    <a className="memberCard__socialMedia--github" href={this.github}>
+                        <GithubFilled />
+                    </a>
+                </Row>
             </Card>
         )
     }
