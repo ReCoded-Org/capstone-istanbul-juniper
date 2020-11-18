@@ -1,0 +1,78 @@
+.contactUsBottomContainer {
+  background: #2a8c79;
+  margin: 0 auto;
+}
+
+.contactUsBottomContainer__bottomCurve {
+  background: #add4c5;
+  border-radius: 50%;
+  height: 15vh;
+}
+
+.contactUsBottomContainer__bottomCurve__topHalf {
+  height: 50%;
+  background: #add4c5;
+  margin-bottom: 5%;
+}
+
+.contactUsBottomContainer__bottomCurve__topHalfImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: -10%;
+  width: fit-content;
+}
+
+.contactUsBottomContainer__bottomCurve__bottomHalf {
+  height: 50%;
+}
+
+.contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
+  width: 50%;
+}
+
+.contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
+  width: 20%;
+}
+
+.contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
+  width: 8%;
+}
+
+/* Media query rules to override previous rules, as necessary */
+/* At the breakpoint only  mainImg and subImgOne are shown */
+@media screen and (max-width: 1000px) {
+  .contactUsBottomContainer__bottomCurve__topHalfImages {
+    top: 0%;
+    justify-content: space-around;
+  }
+
+  .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
+    width: 45%;
+  }
+
+  .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
+    width: 20%;
+  }
+
+  .contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
+    display: none;
+  }
+}
+
+/* At the breakpoint only main image is shown */
+@media screen and (max-width: 480px) {
+  .contactUsBottomContainer__bottomCurve__topHalfImages {
+    top: -28%;
+  }
+
+  .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
+    width: 70%;
+  }
+
+  .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
+    display: none;
+  }
+}
