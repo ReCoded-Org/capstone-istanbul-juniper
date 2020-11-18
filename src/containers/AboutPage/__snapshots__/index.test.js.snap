@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutPage Component matches the tree 1`] = `
+<div
+  className="aboutUs"
+>
+  <div
+    className="ant-row aboutUs__upperContent"
+    style={Object {}}
+  >
+    <div
+      className="ant-col aboutUs__textCol"
+      style={Object {}}
+    >
+      <div
+        className="ant-row aboutUs__textCol--aboutText"
+        style={Object {}}
+      >
+        <h2
+          className="aboutUs__textCol--aboutHeader"
+        >
+          about.aboutUsHeader
+        </h2>
+        <p
+          className="aboutUs__textCol--aboutParagraph"
+        >
+          about.aboutUsText
+        </p>
+      </div>
+      <div
+        className="ant-row aboutUs__textCol--whyWeDoIt"
+        style={Object {}}
+      >
+        <h2
+          className="aboutUs__textCol--whyWeDoItHeader"
+        >
+          about.whyWeDoItHeader
+        </h2>
+        <p
+          className="aboutUs__textCol--whyWeDoItParagraph"
+        >
+          about.whyWeDoItText
+        </p>
+      </div>
+    </div>
+    <div
+      className="ant-col aboutUs__illustrationsCol"
+      style={Object {}}
+    >
+      <img
+        alt="kid-illustration"
+        className="aboutUs__illustrationsCol--kid0"
+        src="kid-1.png"
+      />
+      <img
+        alt="kid-illustration"
+        className="aboutUs__illustrationsCol--kid1"
+        src="kid-2.png"
+      />
+    </div>
+  </div>
+  <div
+    className="ant-row team"
+    style={Object {}}
+  />
+</div>
+`;

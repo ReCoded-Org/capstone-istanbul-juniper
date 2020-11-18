@@ -90,17 +90,7 @@
     "headerSection": {
       "title": "Bizimle İletişime Geç",
       "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
-    },
-    "contactUsForm": {
-      "name": "Adın:",
-      "email": "Eposta adresin:",
-      "message": "Bize neler sormak ve önermek istersin?",
-      "send": "İlet",
-      "postSubmissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
     }
-  },
-  "gamesPage": {
-    "title": "Oyunlar"
   },
   "games": {
     "matchingGame": {
@@ -220,5 +210,11 @@
       "title": "Görüntü Bulmacası",
       "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
     }
+  },
+  "about": {
+    "aboutUsHeader": "Hakkımızda",
+    "aboutUsText": "Teknolojiyi insanların yararına kullanmakta ortak paydasını bulan çok uluslu bir gençlik grubuyuz. Orta Doğu ve Kuzey Afrika'daki çocukları eğitici oyunlar aracılığıyla çevre sorunları ve iklim değişikliği konusunda eğitmek için birlikte çalışan 5 genç geliştirici ve 1 baş mühendisten oluşan bir grup. Hedef kitlemiz MENA'da yaşayan 8-13 yaş arası çocuklar; bu nedenle, web sitemizi çocukların ve öğretmenlerinin / ebeveynlerinin web sitesinde kolayca gezinmelerine yardımcı olmak için üç ana dilde sunuyoruz.",
+    "whyWeDoItHeader": "Neden yapıyoruz",
+    "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, bir nesil aktivist yetiştirmek imkansız değildir."
   }
 }
