@@ -32,7 +32,7 @@ const MemoryGameFactList = ({ facts }) => {
   } else {
     factListContent = (
       <h5 className="memoryGameFactListContainer__noFacts">
-        {t("memoryGame.emptyFactListMessage")}
+        {t("games.memoryGame.emptyFactListMessage")}
       </h5>
     );
   }
@@ -40,7 +40,7 @@ const MemoryGameFactList = ({ facts }) => {
   return (
     <div className="memoryGameFactListContainer" id="memoryGameFactList">
       <h1 className="memoryGameFactListContainer__title">
-        {t("memoryGame.facts")}
+        {t("games.memoryGame.facts")}
       </h1>
       {factListContent}
     </div>
