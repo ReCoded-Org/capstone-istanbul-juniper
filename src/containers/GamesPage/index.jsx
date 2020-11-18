@@ -13,6 +13,7 @@ const GamesPage = () => {
   const reducer = (accObj, gameScreenshotDir) => {
     // example /static/media/memoryGame.84fe967a.svg
     const screenshotDirParts = gameScreenshotDir.split("/");
+    // example memoryGame.84fe967a.svg
     const lastScreenshotDirPart =
       screenshotDirParts[screenshotDirParts.length - 1];
     // example memoryGame
