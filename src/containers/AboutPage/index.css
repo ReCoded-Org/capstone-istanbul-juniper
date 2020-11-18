@@ -1,0 +1,79 @@
+.aboutUs {
+  background-color: #b4d0c4;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUs__upperContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.aboutUs__textCol {
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  width: 47%;
+}
+
+.aboutUs__textCol--whyWeDoItParagraph,
+.aboutUs__textCol--aboutParagraph {
+  text-align: justify;
+  margin-bottom: 6%;
+}
+
+.aboutUs__textCol--whyWeDoItHeader,
+.aboutUs__textCol--aboutHeader {
+  font-family: "Salsa", cursive;
+}
+
+.aboutUs__illustrationsCol {
+  margin-right: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 47%;
+}
+
+.aboutUs__illustrationsCol--kid0 {
+  height: 30%;
+  width: auto;
+  margin-right: 13px;
+}
+
+.aboutUs__illustrationsCol--kid1 {
+  height: 30%;
+  width: auto;
+  margin-left: 13px;
+}
+
+@media (max-width: 426px) {
+  .aboutUs__upperContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutUs__textCol {
+    margin-left: 3%;
+    margin-right: 3%;
+    flex-direction: column;
+    width: 94%;
+  }
+
+  .aboutUs__illustrationsCol {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+  }
+
+  .aboutUs__illustrationsCol--kid1 {
+    height: 150px;
+    width: auto;
+  }
+
+  .aboutUs__illustrationsCol--kid0 {
+    height: 150px;
+    width: auto;
+  }
+}
