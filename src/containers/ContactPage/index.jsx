@@ -5,7 +5,7 @@ import ContactUsHeaderSection from "../../components/ContactUsHeaderSection";
 import ContactUsForm from "../../components/ContactUsForm";
 import ContactUsBottom from "../../components/ContactUsBottom";
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <>
       <ContactUsHeaderSection />
@@ -17,4 +17,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;
