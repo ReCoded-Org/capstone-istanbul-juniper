@@ -7,7 +7,7 @@ import confettiConfig from "../../components/memorygame/confettiConfig";
 import MemoryGameFactList from "../../components/memorygame/MemoryGameFactList";
 import MemoryGameBoard from "../../components/memorygame/MemoryGameBoard";
 
-const MemoryGame = () => {
+const MemoryGamePage = () => {
   const [t] = useTranslation();
   const [isGameCompleted, setIsGameCompleted] = useState(false);
   // finishedCards is being used to display environmental facts.
@@ -44,4 +44,4 @@ const MemoryGame = () => {
   );
 };
 
-export default MemoryGame;
+export default MemoryGamePage;
