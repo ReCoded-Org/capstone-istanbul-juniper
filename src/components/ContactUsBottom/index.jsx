@@ -4,7 +4,6 @@ import contactUsBottomImgRight_1 from "../../images/child_2.png";
 import contactUsBottomImgLeft from "../../images/family.png";
 import "./index.css";
 
-
 const ContactUsBottom = () => {
   return (
     <div className="contactUsBottomContainer">
