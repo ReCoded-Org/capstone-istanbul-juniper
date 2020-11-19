@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GamesPageImageGrid renders correctly 1`] = `
+<div
+  className="gamePageImageGrid"
+>
+  <h1
+    className="gamePageImageGrid__title"
+  >
+    gamesPage.title
+  </h1>
+  <div
+    className="ant-row"
+    style={Object {}}
+  >
+    <div
+      className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+      style={Object {}}
+    >
+      <div
+        className="gamePageImageGrid__col__link"
+      >
+        <a
+          href="/games/testRoute"
+          onClick={[Function]}
+        >
+          <div
+            className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+          >
+            <div
+              className="ant-card-cover"
+            >
+              <img
+                alt="testTitle"
+                className="gamePageImageGrid__col__link__card__img"
+                src="testUrl"
+              />
+            </div>
+            <div
+              className="ant-card-body"
+              style={Object {}}
+            >
+              <div
+                className="ant-card-meta"
+              >
+                <div
+                  className="ant-card-meta-detail"
+                >
+                  <div
+                    className="ant-card-meta-title"
+                  >
+                    <h3
+                      className="gamePageImageGrid__col__link__card__title"
+                    >
+                      testTitle
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
