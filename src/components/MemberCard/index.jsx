@@ -4,33 +4,32 @@ import { LinkedinFilled, GithubFilled } from "@ant-design/icons";
 import "./index.css";
 
 const MemberCard = (props) => {
-
   return (
     <Card span={6} size="default" className="memberCard" bordered={false}>
-        <div className="memberCard__header">
-          <Avatar
-            className="memberCard__avatar"
-            size={120}
-            src={props.avatar}
-            shape="circle"
-            alt={props.name}
-          />
-          <Row className="memberCard__name">{props.name}</Row>
-          <Row className="memberCard__role">{props.role}</Row>
-        </div>
+      <div className="memberCard__header">
+        <Avatar
+          className="memberCard__avatar"
+          size={120}
+          src={props.avatar}
+          shape="circle"
+          alt={props.name}
+        />
+        <Row className="memberCard__name">{props.name}</Row>
+        <Row className="memberCard__role">{props.role}</Row>
+      </div>
 
-        <Row className="memberCard__bio">{props.bio}</Row>
-        <Row className="memberCard__socialMedia">
-          <a className="memberCard__socialMedia--linkedin" href={props.linkedin}>
-            <LinkedinFilled />
-          </a>
-          <a className="memberCard__socialMedia--github" href={props.github}>
-            <GithubFilled />
-          </a>
-        </Row>
-      </Card>
-  )
-}
+      <Row className="memberCard__bio">{props.bio}</Row>
+      <Row className="memberCard__socialMedia">
+        <a className="memberCard__socialMedia--linkedin" href={props.linkedin}>
+          <LinkedinFilled />
+        </a>
+        <a className="memberCard__socialMedia--github" href={props.github}>
+          <GithubFilled />
+        </a>
+      </Row>
+    </Card>
+  );
+};
 
 // class MemberCard extends Component {
 //   constructor(props) {
