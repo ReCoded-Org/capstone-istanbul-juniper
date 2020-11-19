@@ -3,13 +3,20 @@ import "../../../matchMedia";
 import renderer from "react-test-renderer";
 import { BrowserRouter } from "react-router-dom";
 import GamesPageImageGrid from ".";
-import { gameData } from "../../../containers/GamesPage";
+
+const MOCK_GAME_DATA = {
+  testGame: {
+    imgSrc: "testUrl",
+    route: "testRoute",
+    gameTitle: "testTitle",
+  },
+};
 
 it("GamesPageImageGrid renders correctly", () => {
   const tree = renderer
     .create(
       <BrowserRouter>
-        <GamesPageImageGrid gameData={gameData} />
+        <GamesPageImageGrid gameData={MOCK_GAME_DATA} />
       </BrowserRouter>
     )
     .toJSON();
