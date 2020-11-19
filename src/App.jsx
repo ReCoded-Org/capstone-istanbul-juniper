@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./containers/Home";
 import PuzzlePage from "./containers/PuzzlePage/index";
-import Navbar from "./components/Navbar";
 import MemoryGamePage from "./containers/MemoryGamePage";
 import GamesPage from "./containers/GamesPage";
 import ContactPage from "./containers/ContactPage";

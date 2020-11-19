@@ -218,6 +218,15 @@
       "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
     }
   },
+  "gamesPage": {
+    "level": "Seviye {{currentLevel}}",
+    "nextReward": "Sıradaki ödül",
+    "previousReward": "Önceki ödül",
+    "experiencePoint": "{{currentXP}}/100 Tecrübe puanı",
+    "unknownNextReward": "Bilinmiyor",
+    "badgeDescription": "{{badgeName}} rozeti",
+    "title": "Oyunlar"
+  },
   "about": {
     "aboutUsHeader": "Hakkımızda",
     "aboutUsText": "Teknolojiyi insanların yararına kullanmakta ortak paydasını bulan çok uluslu bir gençlik grubuyuz. Orta Doğu ve Kuzey Afrika'daki çocukları eğitici oyunlar aracılığıyla çevre sorunları ve iklim değişikliği konusunda eğitmek için birlikte çalışan 5 genç geliştirici ve 1 baş mühendisten oluşan bir grup. Hedef kitlemiz MENA'da yaşayan 8-13 yaş arası çocuklar; bu nedenle, web sitemizi çocukların ve öğretmenlerinin / ebeveynlerinin web sitesinde kolayca gezinmelerine yardımcı olmak için üç ana dilde sunuyoruz.",
