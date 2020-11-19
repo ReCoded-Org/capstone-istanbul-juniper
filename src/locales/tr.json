@@ -216,7 +216,7 @@
     "nextReward": "Sıradaki ödül",
     "previousReward": "Önceki ödül",
     "experiencePoint": "{{currentXP}}/100 Tecrübe puanı",
-    "unknown": "Bilinmiyor",
+    "unknownNextReward": "Bilinmiyor",
     "badgeDescription": "{{badgeName}} rozeti",
     "title": "Oyunlar"
   },

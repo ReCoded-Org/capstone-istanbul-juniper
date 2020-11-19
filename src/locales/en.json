@@ -216,7 +216,7 @@
     "nextReward": "Next reward",
     "previousReward": "Previous reward",
     "experiencePoint": "{{currentXP}}/100 Experience point",
-    "unknown": "Unknown",
+    "unknownNextReward": "Unknown",
     "badgeDescription": "{{badgeName}} badge",
     "title": "Games"
   },
