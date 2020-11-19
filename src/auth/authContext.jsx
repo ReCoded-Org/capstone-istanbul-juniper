@@ -32,7 +32,7 @@ export const processAuth = async (auth, setUser) => {
     await firestore.collection("users").doc(auth.uid).set({
       uid: auth.uid,
       fullname: auth.displayName,
-      age:null,
+      age: null,
       userExperiencePoints: 0,
     });
     firestoreResult = await firestore.doc("users/" + auth.uid).get();
