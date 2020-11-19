@@ -4,7 +4,7 @@ import { LinkedinFilled, GithubFilled } from "@ant-design/icons";
 import "./index.css";
 
 // Props passed to this function are details of team members
-// The following props are passed to the MemberCard component: 
+// The following props are passed to the MemberCard component:
 // name, role, bio, avatar (link to member's picture), linkedin (link to their linkedin profile)
 // and github (link to their github profile)
 const MemberCard = (props) => {
