@@ -62,6 +62,21 @@ exports[`AboutPage Component matches the tree 1`] = `
   <div
     className="ant-row team"
     style={Object {}}
-  />
+  >
+    <div
+      className="ourTeam"
+    >
+      <div
+        className="ant-row ourTeam__Header"
+        style={Object {}}
+      >
+        Our Team
+      </div>
+      <div
+        className="ant-row ourTeam__teamCards"
+        style={Object {}}
+      />
+    </div>
+  </div>
 </div>
 `;
