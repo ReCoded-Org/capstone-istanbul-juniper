@@ -22,6 +22,7 @@ const GamesPage = () => {
     accObj[screenshotName] = {
       route: gameRoute,
       imgSrc: gameScreenshotDir,
+      // example Memory game
       gameTitle: t(`games.${screenshotName}.title`),
     };
     return accObj;
