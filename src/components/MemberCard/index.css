@@ -1,61 +1,60 @@
 .memberCard {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    background-color: #3b8c79;
-    opacity: 0.85;
-    margin: 10px;
-    width: 30%;
-    border-radius: 3%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #3b8c79;
+  opacity: 0.85;
+  margin: 10px;
+  width: 30%;
+  border-radius: 3%;
 }
 
 .memberCard__header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .memberCard__name {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
 }
 
 .memberCard__role {
-    font-family: "Salsa", cursive;
-    font-size: 1.1em;
+  font-family: "Salsa", cursive;
+  font-size: 1.1em;
 }
 
 .memberCard__name,
 .memberCard__role,
 .memberCard__bio,
 .memberCard__socialMedia {
-    display: flex;
-    justify-content: center;
-    color: white;
-    
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 
-.memberCard__bio{
-    text-align: justify;
+.memberCard__bio {
+  text-align: justify;
 }
 
 .memberCard__socialMedia--linkedin,
 .memberCard__socialMedia--github {
-    color: black;
-    margin: 5px;
+  color: black;
+  margin: 5px;
 }
 
-@media (max-width: 768.1px) and (min-width: 425px ) {
-    .memberCard {
-        width: 47%;
-    }
+@media (max-width: 768.1px) and (min-width: 425px) {
+  .memberCard {
+    width: 47%;
+  }
 }
 
 @media (max-width: 425.1px) {
-    .memberCard {
-        width: 100%;
-    }
+  .memberCard {
+    width: 100%;
+  }
 }

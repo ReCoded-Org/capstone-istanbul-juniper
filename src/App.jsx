@@ -7,7 +7,7 @@ import Home from "./containers/Home";
 import PuzzlePage from "./containers/PuzzlePage/index";
 import MemoryGamePage from "./containers/MemoryGamePage";
 import GamesPage from "./containers/GamesPage";
-import About from "./containers/AboutPage"
+import About from "./containers/AboutPage";
 import ContactPage from "./containers/ContactPage";
 import "antd/dist/antd.css";
 import "./App.css";
