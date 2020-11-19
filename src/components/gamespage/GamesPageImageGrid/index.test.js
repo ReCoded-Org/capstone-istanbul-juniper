@@ -3,14 +3,7 @@ import "../../../matchMedia";
 import renderer from "react-test-renderer";
 import { BrowserRouter } from "react-router-dom";
 import GamesPageImageGrid from ".";
-
-const gameData = {
-  testGame: {
-    imgSrc: "testUrl",
-    route: "testRoute",
-    gameTitle: "testTitle",
-  },
-};
+import { gameData } from "../../../containers/GamesPage";
 
 it("GamesPageImageGrid renders correctly", () => {
   const tree = renderer
