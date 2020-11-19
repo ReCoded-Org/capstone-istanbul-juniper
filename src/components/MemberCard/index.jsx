@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import {Card, Row, Avatar} from "antd";
-import {LinkedinFilled, GithubFilled, TwitterCircleFilled} from "@ant-design/icons"
+import {LinkedinFilled, GithubFilled} from "@ant-design/icons"
 import "./index.css";
 
 class MemberCard extends Component {
