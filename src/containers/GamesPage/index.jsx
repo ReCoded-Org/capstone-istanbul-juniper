@@ -7,13 +7,14 @@ import puzzleGame from "../../images/gameScreenshots/puzzleGame.svg";
 import quizGame from "../../images/gameScreenshots/quizGame.svg";
 import matchingGame from "../../images/gameScreenshots/matchingGame.svg";
 
+const GAME_SCREENSHOTS = [memoryGame, puzzleGame, matchingGame, quizGame];
+
 const GamesPage = () => {
   const [t] = useTranslation();
   // agreed naming is as follows:
   // image file name: memoryGame
   // game title key in locales: memoryGame.title
   // game route: memorygame
-  const GAME_SCREENSHOTS = [memoryGame, puzzleGame, matchingGame, quizGame];
   const gamePostersObj = {};
   // gameScreenshotDir example: /static/media/memoryGame.84fe967a.svg
   for (const gameScreenshotDir of GAME_SCREENSHOTS) {
