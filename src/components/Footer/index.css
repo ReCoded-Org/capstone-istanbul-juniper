@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Moul&family=Roboto&display=swap");
+
+.footerContainer {
+  height: 495px;
+  padding-top: 390px;
+  background-color: #2a8c79;
+  color: white;
+  background-image: url(./../../images/footerBg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 14px;
+  position: relative;
+  font-family: Roboto;
+}
+
+.footerContainer a {
+  color: white;
+}
+
+.footerContainer__links__nav {
+  text-align: center;
+}
+
+.footerContainer__links {
+  margin-bottom: 20px;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.youtube {
+  color: white;
+}
+
+a.facebook {
+  color: white;
+}
+
+img.footerContainer__globe {
+  position: absolute;
+  top: 46px;
+  left: 51px;
+  transition: all 1s;
+  max-width: 260px;
+  min-width: 150px;
+}
+
+a.instagram {
+  color: white;
+}
+
+@media (max-width: 500px) {
+  img.footerContainer__globe {
+    top: 94px;
+    transform: scale(0.7);
+  }
+}

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PuzzleGrid Component matches the tree 1`] = `
+<div
+  className="ant-col puzzleGrid"
+  style={Object {}}
+/>
+`;

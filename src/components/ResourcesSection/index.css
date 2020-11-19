@@ -1,0 +1,20 @@
+.resourceCardWrapper {
+  background-color: #b4d0c4;
+  padding: 20px 0;
+}
+
+.resourceCardWrapper__cardImage img {
+  width: 100%;
+}
+
+.resourceCardWrapper__cardName a {
+  color: black;
+}
+
+.resourceCardWrapper__cardName {
+  margin-bottom: 10px;
+  font-family: Salsa;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
