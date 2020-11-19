@@ -90,6 +90,13 @@
     "headerSection": {
       "title": "Bizimle İletişime Geç",
       "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
+    },
+    "contactUsForm": {
+      "name": "Adın:",
+      "email": "Eposta adresin:",
+      "message": "Bize neler sormak ve önermek istersin?",
+      "send": "İlet",
+      "postSubmissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
     }
   },
   "games": {
@@ -210,6 +217,15 @@
       "title": "Görüntü Bulmacası",
       "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
     }
+  },
+  "gamesPage": {
+    "level": "Seviye {{currentLevel}}",
+    "nextReward": "Sıradaki ödül",
+    "previousReward": "Önceki ödül",
+    "experiencePoint": "{{currentXP}}/100 Tecrübe puanı",
+    "unknownNextReward": "Bilinmiyor",
+    "badgeDescription": "{{badgeName}} rozeti",
+    "title": "Oyunlar"
   },
   "about": {
     "aboutUsHeader": "Hakkımızda",
