@@ -16,7 +16,7 @@
 .gamePageImageGrid__col__link__card__title {
   text-align: center;
   font-size: clamp(0.9rem, 2.7vw, 3rem);
-  font-family: "Salsa";
+  font-family: "Salsa", cursive;
 }
 .gamePageImageGrid {
   background: #2a8c79;
