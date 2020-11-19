@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import ProgressSection from "../../components/gamespage/GamesPageProgressSection";
 import GamesPageImageGrid from "../../components/gamespage/GamesPageImageGrid";
 import BottomCurve from "../../components/BottomCurve";
 import memoryGame from "../../images/gameScreenshots/memoryGame.svg";
@@ -34,6 +35,7 @@ const GamesPage = () => {
   }
   return (
     <>
+      <ProgressSection />
       <BottomCurve />
       <GamesPageImageGrid gameData={gamePostersObj} />
     </>
