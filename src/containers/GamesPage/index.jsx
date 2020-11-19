@@ -9,6 +9,10 @@ import matchingGame from "../../images/gameScreenshots/matchingGame.svg";
 
 const GamesPage = () => {
   const [t] = useTranslation();
+  // agreed naming is as follows:
+  // image file name: memoryGame
+  // game title key in locales: memoryGame.title
+  // game route: memorygame
   const gameScreenshots = [memoryGame, puzzleGame, matchingGame, quizGame];
   const reducer = (accObj, gameScreenshotDir) => {
     // example /static/media/memoryGame.84fe967a.svg
