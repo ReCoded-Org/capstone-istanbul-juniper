@@ -225,27 +225,27 @@
       "ibrahim": {
         "name": "Ibrahim Aljarad",
         "bio": "Hey, ben Suriye'den İbrahim, Flatiron kodlama okulunda kodlama okudum ve Alfurat üniversitesinde ekonomi okudum.Re:coded organizasyonla bir ön uç web geliştirme temel eğitim programına katıldım ve oradan mezun oldum. Kodlama dışındaki diğer deneyimlerim, saha yapım ekiplerine teknik destek sağlayan uydu yapımcısı olarak çeşitli kanallar ve ajanslarla çalıştım.",
-        "role": "Junior Developer"
+        "role": "Web Arayüz Geliştirici"
       },
       "majd": {
         "name": "Majd Ajroudi",
         "bio": "Çok yönlü becerilere, çeşitli mühendislik alanlarında deneyime ve sosyal sorunları çözmek için teknolojiyi kullanma konusunda istekli bir genç geliştirici.",
-        "role": "Junior Developer"
+        "role": "Web Arayüz Geliştirici"
       },
       "sule": {
         "name": "Sule Sinikoglu",
         "bio": "A Web Developer who writes “good code” for creating positive impact on Global Challenges.",
-        "role": "Junior Developer"
+        "role": "Web Arayüz Geliştirici"
       },
       "tarkan": {
       "name": "Tarkan Mansuroglu",
       "bio": "Re:coded Ön Uç Web Geliştirme Eğitim Kampı eğitimli ve kısmen kendi kendine öğretilen bir ön uç web geliştiricisi. Aynı zamanda tutkulu bir öğrenci, bilgisayar meraklısı, oyun tutkunu ve spor tutkunu. Becerilerini test etmek ve geliştirmek için gerçek hayattaki sorunları çözmeyi seviyor. Onu sosyal medyadan takip edin!",
-      "role": "Junior Developer"
+      "role": "Web Arayüz Geliştirici"
       },
       "yaman": {
         "name": "Mohamad Yaman Sammani",
         "bio": "Yaman, Kasım 2020'de Re: Coded Bootcamp'tan mezun olan genç bir Front-End web geliştiricisidir. Tutkusu, ev sahibi ülkelerdeki hizmet göçmenlerine kolay erişimi destekleyen programlar tasarlamaktır.",
-        "role": "Junior Developer"
+        "role": "Web Arayüz Geliştirici"
       }
     }
   }
