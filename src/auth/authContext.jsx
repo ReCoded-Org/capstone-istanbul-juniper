@@ -32,9 +32,8 @@ export const processAuth = async (auth, setUser) => {
     await firestore.collection("users").doc(auth.uid).set({
       uid: auth.uid,
       fullname: auth.displayName,
-      age: null,
-      userExperiencePoints:0
-
+      age:null,
+      userExperiencePoints: 0,
     });
     firestoreResult = await firestore.doc("users/" + auth.uid).get();
   }
@@ -44,8 +43,7 @@ export const processAuth = async (auth, setUser) => {
     email: auth.email,
     fullname: firestoreResult.data().fullname ?? auth.displayName,
     age: firestoreResult.data().age ?? null,
-    userExperiencePoints:firestoreResult.data().userExperiencePoints ?? 0
-
+    userExperiencePoints: firestoreResult.data().userExperiencePoints ?? 0,
   };
   await setUser(user);
 };
