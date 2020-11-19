@@ -6,8 +6,9 @@ import { useTranslation } from "react-i18next";
 
 const Register = (props) => {
   const [t] = useTranslation();
+  const maxLenghtPassword = 8;
   const [registerInformation, setRegisterInformation] = useState({
-    fullname: "",
+    fullName: "",
     age: "",
     email: "",
     password: "",
@@ -22,10 +23,10 @@ const Register = (props) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    let { fullname, email, age, password, agree } = registerInformation;
+    let { fullName, email, age, password, agree } = registerInformation;
     let errors = {};
-    if (fullname.trim() === "") {
-      errors["fullname"] = t("register.fullName");
+    if (fullName.trim() === "") {
+      errors["fullName"] = t("register.fullName");
     }
     if (email.trim() === "") {
       errors["email"] = t("register.validEmail");
@@ -33,7 +34,7 @@ const Register = (props) => {
     if (age.trim() === "") {
       errors["age"] = t("register.age");
     }
-    if (password.trim().length < 6) {
+    if (password.trim().length < maxLenghtPassword) {
       errors["password"] = t("register.passwordCharacter");
     }
     if (password.trim() === "") {
@@ -43,7 +44,7 @@ const Register = (props) => {
       errors["email"] = t("register.emailFormat");
     }
     if (!agree) {
-      errors["agree"] = t("register.terms");
+      errors["agree"] = t("register.agreeOnTerms");
     }
     setErrors(errors);
     if (Object.keys(errors).length > 0) {
@@ -67,6 +68,9 @@ const Register = (props) => {
   const handleCancelTerms = () => {
     setTermsOpen(false);
   };
+  const termsAndConditionsTranslation = [
+    ...t("register.terms",{ returnObjects: true,})
+  ]
 
   return (
     <form noValidate onSubmit={handleSubmit}>
@@ -83,15 +87,7 @@ const Register = (props) => {
             {t("register.iAgree")}
           </Button>,
         ]}
-      >
-        <ul>
-          <li>{t("register.terms1")}</li>
-          <li>{t("register.terms2")} </li>
-          <li>{t("register.terms3")} </li>
-          <li>{t("register.terms4")} </li>
-          <li>{t("register.terms5")} </li>
-          <li>{t("register.terms6")} </li>
-        </ul>
+      >{t("register.agreeOnTerms",{ returnObjects: true,})}
       </Modal>
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">{t("register.creat")}</div>
@@ -200,7 +196,7 @@ const Register = (props) => {
                   setTermsOpen(true);
                 }}
               >
-                {t("register.termsandCon")}
+                <ul>{termsAndConditionsTranslation.map(termAndCondiction => <li>{termAndCondiction}</li>)}</ul>
               </a>
             </Checkbox>
             {errors["agree"] && (
