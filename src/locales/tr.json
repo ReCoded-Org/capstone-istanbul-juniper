@@ -93,8 +93,8 @@
     }
   },
   "games": {
-    "quizGame":{
-      "title":"sınav oyunu"
+    "quizGame": {
+      "title": "sınav oyunu"
     },
     "matchingGame": {
       "title": "Eşleştirme Oyunu",
@@ -214,7 +214,7 @@
       "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
     }
   },
-  "profilePage":{
-    "title":"tekrar hoşgeldin"
+  "profilePage": {
+    "title": "tekrar hoşgeldin"
   }
 }

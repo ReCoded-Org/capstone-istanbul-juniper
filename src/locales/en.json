@@ -93,8 +93,8 @@
     }
   },
   "games": {
-    "quizGame":{
-       "title":"Quiz Game"
+    "quizGame": {
+      "title": "Quiz Game"
     },
     "matchingGame": {
       "title": "Matching Game",
@@ -214,7 +214,7 @@
       ]
     }
   },
-  "profilePage":{
-    "title":"Welcome back"
+  "profilePage": {
+    "title": "Welcome back"
   }
 }
