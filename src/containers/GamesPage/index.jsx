@@ -13,21 +13,21 @@ const GamesPage = () => {
   // image file name: memoryGame
   // game title key in locales: memoryGame.title
   // game route: memorygame
-  const gameScreenshots = [memoryGame, puzzleGame, matchingGame, quizGame];
+  const GAME_SCREENSHOTS = [memoryGame, puzzleGame, matchingGame, quizGame];
   const gamePostersObj = {};
-  // gameScreenshotDir example /static/media/memoryGame.84fe967a.svg
-  for (const gameScreenshotDir of gameScreenshots) {
+  // gameScreenshotDir example: /static/media/memoryGame.84fe967a.svg
+  for (const gameScreenshotDir of GAME_SCREENSHOTS) {
     const screenshotDirParts = gameScreenshotDir.split("/");
-    // example memoryGame.84fe967a.svg
+    // example: memoryGame.84fe967a.svg
     const lastScreenshotDirPart =
       screenshotDirParts[screenshotDirParts.length - 1];
-    // example memoryGame
+    // example: memoryGame
     const screenshotName = lastScreenshotDirPart.split(".")[0];
     const gameRoute = screenshotName.toLowerCase();
     gamePostersObj[screenshotName] = {
       route: gameRoute,
       imgSrc: gameScreenshotDir,
-      // example Memory game
+      // example: Memory game
       gameTitle: t(`games.${screenshotName}.title`),
     };
   }
