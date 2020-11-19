@@ -222,8 +222,9 @@
     }
   },
   "profilePage": {
-    "title": "Welcome back"},
-    
+    "title": "Welcome back"
+  },
+
   "gamesPage": {
     "level": "Level {{currentLevel}}",
     "nextReward": "Next reward",
