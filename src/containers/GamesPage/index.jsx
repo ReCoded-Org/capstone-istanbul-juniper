@@ -14,8 +14,9 @@ const GamesPage = () => {
   // game title key in locales: memoryGame.title
   // game route: memorygame
   const gameScreenshots = [memoryGame, puzzleGame, matchingGame, quizGame];
-  const reducer = (accObj, gameScreenshotDir) => {
-    // example /static/media/memoryGame.84fe967a.svg
+  const gamePostersObj = {};
+  // gameScreenshotDir example /static/media/memoryGame.84fe967a.svg
+  for (const gameScreenshotDir of gameScreenshots) {
     const screenshotDirParts = gameScreenshotDir.split("/");
     // example memoryGame.84fe967a.svg
     const lastScreenshotDirPart =
@@ -23,15 +24,13 @@ const GamesPage = () => {
     // example memoryGame
     const screenshotName = lastScreenshotDirPart.split(".")[0];
     const gameRoute = screenshotName.toLowerCase();
-    accObj[screenshotName] = {
+    gamePostersObj[screenshotName] = {
       route: gameRoute,
       imgSrc: gameScreenshotDir,
       // example Memory game
       gameTitle: t(`games.${screenshotName}.title`),
     };
-    return accObj;
-  };
-  const gamePostersObj = gameScreenshots.reduce(reducer, {});
+  }
   return (
     <>
       <BottomCurve />
