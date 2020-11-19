@@ -7,6 +7,7 @@ import memoryGame from "../../images/gameScreenshots/memoryGame.svg";
 import puzzleGame from "../../images/gameScreenshots/puzzleGame.svg";
 import quizGame from "../../images/gameScreenshots/quizGame.svg";
 import matchingGame from "../../images/gameScreenshots/matchingGame.svg";
+import worldIcon from "../../images/world.svg";
 
 const GAME_SCREENSHOTS = [memoryGame, puzzleGame, matchingGame, quizGame];
 
@@ -33,9 +34,17 @@ const GamesPage = () => {
       gameTitle: t(`games.${screenshotName}.title`),
     };
   }
+
+  const PLACEHOLDER_PROGRESS_DATA = {
+    currentLevel: 3,
+    currentXP: 40,
+    prevRewardIcon: worldIcon,
+    prevRewardDescription: "World",
+    badgeName: "World",
+  };
   return (
     <>
-      <ProgressSection />
+      <ProgressSection progressData={PLACEHOLDER_PROGRESS_DATA} />
       <BottomCurve />
       <GamesPageImageGrid gameData={gamePostersObj} />
     </>
