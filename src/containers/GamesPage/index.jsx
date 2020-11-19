@@ -1,14 +1,19 @@
-import React from "react";
-import GamesPageImageGrid from "../../components/gamespage/GamesPageImageGrid";
-import BottomCurve from "../../components/BottomCurve";
+import React from 'react';
+import GamesPageImageGrid from '../../components/gamespage/GamesPageImageGrid';
+import BottomCurve from '../../components/BottomCurve';
 
 const GamesPage = () => {
-  return (
-    <>
-      <BottomCurve />
-      <GamesPageImageGrid />
-    </>
-  );
+    const gameData = {
+        imgSrc: 'testUrl',
+        route: 'testRoute',
+        gameTitle: 'testTitle',
+    };
+    return (
+        <>
+            <BottomCurve />
+            <GamesPageImageGrid gameData={gameData} />
+        </>
+    );
 };
 
 export default GamesPage;
