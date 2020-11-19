@@ -1,25 +1,22 @@
 .memberCard {
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
     background-color: #3b8c79;
-    opacity: 0.9;
+    opacity: 0.85;
     margin: 10px;
     width: 30%;
     border-radius: 3%;
 }
 
-/* antd class */
-.ant-card-body{
-    height:100%;
+.memberCard__header {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: center;
     align-items: center;
 }
-
-
 
 .memberCard__name {
     font-family: Arial, Helvetica, sans-serif;
