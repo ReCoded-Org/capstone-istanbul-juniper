@@ -4,7 +4,7 @@ import ProfilePage from "./../../components/ProfilePage/index";
 const ProfilePageContainer = () => {
   return (
     <>
-    <ProfilePage />
+      <ProfilePage />
     </>
   );
 };
