@@ -31,23 +31,17 @@ const ProfilePage = () => {
               src={profilePageImg}
               alt="avatar"
             ></img>
-            <div
-              className="textprofilePageUsersNameContainer"
-              >
+            <div className="textprofilePageUsersNameContainer">
               <p className="profilePage__usersName">
                 {users.find((user) => user.fullname)}
               </p>
             </div>
-            <div
-              className="profilePageUsersEmailContainer"
-            >
+            <div className="profilePageUsersEmailContainer">
               <p className="profilePage__usersEmail">
                 {users.find((user) => user.email)}
               </p>
             </div>
-            <div
-              className="profilePageUsersAgeContainer"
-            >
+            <div className="profilePageUsersAgeContainer">
               <p className="profilePage__usersAge">
                 {users.find((user) => user.age)}
               </p>
@@ -55,11 +49,7 @@ const ProfilePage = () => {
           </div>
         </Sider>
         <Content>
-          <Col
-            className="profilePageWelcomeUserContainer"
-            span={8}
-            offset={12}
-          >
+          <Col className="profilePageWelcomeUserContainer" span={8} offset={12}>
             <p className="profilePage__welcomeUser">{t("profilePage.title")}</p>
           </Col>
           <div className="profilePage__gamesCarousel__wrapper">
