@@ -1,7 +1,7 @@
 import { Alert, Input, Button } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateEmail } from "../../functions";
+import { validateEmail } from "../../components/registerpage/registerHelpers";
 
 const MIN_PASSWORD_LENGTH = 6;
 
