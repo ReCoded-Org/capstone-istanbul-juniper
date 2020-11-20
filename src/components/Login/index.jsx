@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { validateEmail } from "../../functions";
 
+const MIN_PASSWORD_LENGTH = 6;
+
 const Login = ({
   onSubmit,
   onFacebookAuth,
@@ -33,7 +35,7 @@ const Login = ({
     if (email.trim() === "") {
       newErrors.email = "Please fill this field";
     }
-    if (password.trim().length < 6) {
+    if (password.trim().length < MIN_PASSWORD_LENGTH) {
       newErrors.password = "Password must be at least 6 characters long";
     }
     if (password.trim() === "") {
