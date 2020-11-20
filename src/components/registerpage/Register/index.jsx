@@ -30,28 +30,28 @@ const Register = ({
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    let { fullName, email, age, password, isAgreed } = registerInformation;
-    let newErrors = {};
+    const { fullName, email, age, password, isAgreed } = registerInformation;
+    const newErrors = {};
     if (fullName.trim() === "") {
-      newErrors["fullName"] = t("register.fullName");
+      newErrors.fullName = t("register.fullName");
     }
     if (email.trim() === "") {
-      newErrors["email"] = t("register.validEmail");
+      newErrors.email = t("register.validEmail");
     }
     if (age.trim() === "") {
-      newErrors["age"] = t("register.age");
+      newErrors.age = t("register.age");
     }
     if (password.trim().length < MAX_PASSWORD_LENGTH) {
-      newErrors["password"] = t("register.passwordCharacter");
+      newErrors.password = t("register.passwordCharacter");
     }
     if (password.trim() === "") {
-      newErrors["password"] = t("register.enterPassword");
+      newErrors.password = t("register.enterPassword");
     }
     if (validateEmail(email).length === 0) {
-      newErrors["email"] = t("register.emailFormat");
+      newErrors.email = t("register.emailFormat");
     }
     if (!isAgreed) {
-      newErrors["isAgreed"] = t("register.agreeOnTerms");
+      newErrors.isAgreed = t("register.agreeOnTerms");
     }
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) {
@@ -97,7 +97,7 @@ const Register = ({
             type="error"
             showIcon
             message={error}
-          ></Alert>
+          />
         )}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
@@ -106,7 +106,7 @@ const Register = ({
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["fullname"] &&
+                errors.fullname &&
                 "loginContainer__loginDialog__input__hasError"
               }
               value={registerInformation.fullname}
@@ -114,9 +114,9 @@ const Register = ({
                 handleChange("fullname", e.target.value);
               }}
             />
-            {errors["fullname"] && (
+            {errors.fullname && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["fullname"]}
+                {errors.fullname}
               </div>
             )}
           </div>
@@ -126,7 +126,7 @@ const Register = ({
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["age"] && "loginContainer__loginDialog__input__hasError"
+                errors.age && "loginContainer__loginDialog__input__hasError"
               }
               type="number"
               value={registerInformation.age}
@@ -134,9 +134,9 @@ const Register = ({
                 handleChange("age", e.target.value);
               }}
             />
-            {errors["age"] && (
+            {errors.age && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["age"]}
+                {errors.age}
               </div>
             )}
           </div>
@@ -146,17 +146,16 @@ const Register = ({
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["email"] &&
-                "loginContainer__loginDialog__input__hasError"
+                errors.email && "loginContainer__loginDialog__input__hasError"
               }
               value={registerInformation.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors["email"] && (
+            {errors.email && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["email"]}
+                {errors.email}
               </div>
             )}
           </div>
@@ -166,7 +165,7 @@ const Register = ({
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["password"] &&
+                errors.password &&
                 "loginContainer__loginDialog__input__hasError"
               }
               type="password"
@@ -175,9 +174,9 @@ const Register = ({
                 handleChange("password", e.target.value);
               }}
             />
-            {errors["password"] && (
+            {errors.password && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["password"]}
+                {errors.password}
               </div>
             )}
           </div>
@@ -203,9 +202,9 @@ const Register = ({
                 </ul>
               </a>
             </Checkbox>
-            {errors["isAgreed"] && (
+            {errors.isAgreed && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["isAgreed"]}
+                {errors.isAgreed}
               </div>
             )}
           </div>
