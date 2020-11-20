@@ -29,7 +29,7 @@ const Login = ({
     e.preventDefault();
     const { email, password } = loginCredentials;
     const newErrors = {};
-    if (!validateEmail(email)) {
+    if (validateEmail(email).length === 0) {
       newErrors.email = "Email format error";
     }
     if (email.trim() === "") {

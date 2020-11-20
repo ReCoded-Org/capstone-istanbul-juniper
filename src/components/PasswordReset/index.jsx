@@ -16,7 +16,7 @@ const PasswordReset = ({ onSubmit, onGoToLogin, error, message }) => {
     e.preventDefault();
     const { email } = passwordResetInfo;
     const newErrors = {};
-    if (!validateEmail(email)) {
+    if (validateEmail(email).length === 0) {
       newErrors.email = t("passwordReset.emailFormat");
     }
     if (email.trim() === "") {
@@ -54,8 +54,7 @@ const PasswordReset = ({ onSubmit, onGoToLogin, error, message }) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["email"] &&
-                "loginContainer__loginDialog__input__hasError"
+                errors.email && "loginContainer__loginDialog__input__hasError"
               }
               type="email"
               value={passwordResetInfo.email}
@@ -63,9 +62,9 @@ const PasswordReset = ({ onSubmit, onGoToLogin, error, message }) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors["email"] && (
+            {errors.email && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["email"]}
+                {errors.email}
               </div>
             )}
           </div>
