@@ -2,7 +2,7 @@ import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateEmail } from "../../functions";
+import { validateEmail } from "../registerHelpers";
 
 const MAX_PASSWORD_LENGTH = 8;
 
@@ -47,7 +47,7 @@ const Register = ({
     if (password.trim() === "") {
       newErrors["password"] = t("register.enterPassword");
     }
-    if (!validateEmail(email)) {
+    if (validateEmail(email).length === 0) {
       newErrors["email"] = t("register.emailFormat");
     }
     if (!isAgreed) {
