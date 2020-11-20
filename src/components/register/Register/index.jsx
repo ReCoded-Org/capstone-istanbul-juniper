@@ -200,8 +200,8 @@ const Register = ({
                 }}
               >
                 <ul>
-                  {termsAndConditionsTranslation.map((termAndCondiction) => (
-                    <li key={termAndCondiction}>{termAndCondiction}</li>
+                  {termsAndConditionsTranslation.map((termAndCondition) => (
+                    <li key={termAndCondition}>{termAndCondition}</li>
                   ))}
                 </ul>
               </Button>
