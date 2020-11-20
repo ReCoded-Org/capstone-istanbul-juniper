@@ -12,7 +12,6 @@ const TeamCards = () => {
   const fetchData = async () => {
     const res = await db.collection("team").doc("teamInfo").get();
     const data = res.data();
-
     setDataState(data.info);
   };
 
