@@ -222,7 +222,7 @@
     }
   },
   "profilePage": {
-    "title": "tekrar hoşgeldin"
+    "title": "Hoşgeldin"
   },
   "gamesPage": {
     "level": "Seviye {{currentLevel}}",
