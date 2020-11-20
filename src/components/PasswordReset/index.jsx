@@ -2,8 +2,19 @@ import { Alert, Input } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { validateEmail } from "../../functions";
+import "./index.css";
 
-const PasswordReset = ({ onSubmit, onGoToLogin, error, message }) => {
+const PasswordReset = ({
+  // props are located in containers/LoginRegister/index.jsx
+  // function
+  onSubmit,
+  // function
+  onGoToLogin,
+  // string
+  error,
+  // string
+  message,
+}) => {
   const [t] = useTranslation();
   const [passwordResetInfo, setPasswordResetInfo] = useState({ email: "" });
   const handleChange = (key, value) => {
@@ -18,17 +29,11 @@ const PasswordReset = ({ onSubmit, onGoToLogin, error, message }) => {
     const newErrors = {};
     if (validateEmail(email).length === 0) {
       newErrors.email = t("passwordReset.emailFormat");
-    }
-    setErrors(newErrors);
-    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
     onSubmit(passwordResetInfo);
   };
-  const handleGoToLogin = () => {
-    onGoToLogin();
-  };
-
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
@@ -37,7 +42,7 @@ const PasswordReset = ({ onSubmit, onGoToLogin, error, message }) => {
         </div>
         {error && (
           <Alert
-            style={{ marginBottom: 10 }}
+            className="loginContainer__alert"
             type="error"
             showIcon
             message={error}
@@ -72,9 +77,7 @@ const PasswordReset = ({ onSubmit, onGoToLogin, error, message }) => {
             {t("passwordReset.passwordReset")}
           </button>
           <button
-            onClick={() => {
-              handleGoToLogin();
-            }}
+            onClick={onGoToLogin}
             type="button"
             className="loginContainer__loginDialog__backToLoginButton"
           >

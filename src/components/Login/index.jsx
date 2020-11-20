@@ -6,12 +6,20 @@ import { validateEmail } from "../../functions";
 const MIN_PASSWORD_LENGTH = 6;
 
 const Login = ({
+  // props are located in containers/LoginRegister/index.jsx
+  // function
   onSubmit,
-  onFacebookAuth,
-  onGoogleAuth,
-  onGoToRegister,
-  onGoToPasswordReset,
+  // function
+  handleFacebookAuth,
+  // function
+  handleGoogleAuth,
+  // function
+  handleRegister,
+  // function
+  handlePasswordReset,
+  // string
   error,
+  // string
   message,
 }) => {
   const [t] = useTranslation();
@@ -32,17 +40,14 @@ const Login = ({
     if (validateEmail(email).length === 0) {
       newErrors.email = "Email format error";
     }
-    if (email.trim() === "") {
-      newErrors.email = "Please fill this field";
-    }
     if (password.trim().length < MIN_PASSWORD_LENGTH) {
       newErrors.password = "Password must be at least 6 characters long";
     }
     if (password.trim() === "") {
       newErrors.password = "Please fill this field";
     }
-    setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
     onSubmit(loginCredentials);
@@ -54,7 +59,7 @@ const Login = ({
         <div className="loginContainer__loginTitle">{t("login.login")}</div>
         {error && (
           <Alert
-            style={{ marginBottom: 10 }}
+            className="loginContainer__alert"
             type="error"
             showIcon
             message={error}
@@ -108,7 +113,7 @@ const Login = ({
               type="link"
               onClick={(e) => {
                 e.preventDefault();
-                onGoToPasswordReset();
+                handlePasswordReset();
               }}
             >
               {t("login.forgotPassword")}
@@ -124,7 +129,7 @@ const Login = ({
             {t("login.new")}
           </div>
           <button
-            onClick={onGoToRegister}
+            onClick={handleRegister}
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
@@ -134,14 +139,14 @@ const Login = ({
             {t("login.oryoucan")}
           </div>
           <button
-            onClick={onFacebookAuth}
+            onClick={handleFacebookAuth}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
             {t("login.withFacebook")}
           </button>
           <button
-            onClick={onGoogleAuth}
+            onClick={handleGoogleAuth}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >
