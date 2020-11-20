@@ -24,7 +24,7 @@ const Register = ({
   const [errors, setErrors] = useState({});
   const [isTermsOpen, setIsTermsOpen] = useState(false);
   const handleChange = (key, value) => {
-    let newValues = Object.assign({}, registerInformation);
+    const newValues = { ...registerInformation };
     newValues[key] = value;
     setRegisterInformation(newValues);
   };
