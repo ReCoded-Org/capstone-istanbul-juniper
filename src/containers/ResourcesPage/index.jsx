@@ -27,7 +27,7 @@ const initResources = [
   },
   {
     id: 3,
-    title: "Who Causes Climate changes - TROCAIRE. ",
+    title: "Who Causes Climate changes - TROCAIRE",
     body:
       "Children explore who contribute to climate change by looking at activities related to climate change using climate change bingo sheet, creating clouds that list activates causing gas emissions and represent the world population by dividing themself.",
     pic: whoCausesClimate,

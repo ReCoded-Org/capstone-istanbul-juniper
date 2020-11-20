@@ -102,7 +102,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         className="resource__body__picContainer"
       >
         <img
-          alt="Who Causes Climate changes - TROCAIRE. "
+          alt="Who Causes Climate changes - TROCAIRE"
           className=""
           onClick={[Function]}
           src="whoCausesClimate.png"
@@ -114,7 +114,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         <div
           className="resource__body__content__title"
         >
-          Who Causes Climate changes - TROCAIRE. 
+          Who Causes Climate changes - TROCAIRE
         </div>
         <div
           className="resource__body__content__description"
