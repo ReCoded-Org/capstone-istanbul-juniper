@@ -197,7 +197,7 @@ const Register = ({
               >
                 <ul>
                   {termsAndConditionsTranslation.map((termAndCondiction) => (
-                    <li>{termAndCondiction}</li>
+                    <li key={termAndCondiction}>{termAndCondiction}</li>
                   ))}
                 </ul>
               </Button>

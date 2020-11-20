@@ -11,7 +11,7 @@ exports[`Register Component matches the tree 1`] = `
     <div
       className="loginContainer__loginTitle"
     >
-      register.creat
+      register.create
     </div>
     <div
       className="loginContainer__loginDialog"
@@ -112,12 +112,56 @@ exports[`Register Component matches the tree 1`] = `
           </span>
           <span>
             register.iAgreeTo
-            <a
-              href="/#"
+            <button
+              className="ant-btn ant-btn-link"
               onClick={[Function]}
+              type="button"
             >
-              register.termsandCon
-            </a>
+              <ul>
+                <li>
+                  r
+                </li>
+                <li>
+                  e
+                </li>
+                <li>
+                  g
+                </li>
+                <li>
+                  i
+                </li>
+                <li>
+                  s
+                </li>
+                <li>
+                  t
+                </li>
+                <li>
+                  e
+                </li>
+                <li>
+                  r
+                </li>
+                <li>
+                  .
+                </li>
+                <li>
+                  t
+                </li>
+                <li>
+                  e
+                </li>
+                <li>
+                  r
+                </li>
+                <li>
+                  m
+                </li>
+                <li>
+                  s
+                </li>
+              </ul>
+            </button>
           </span>
         </label>
       </div>
@@ -125,7 +169,7 @@ exports[`Register Component matches the tree 1`] = `
         className="loginContainer__loginDialog__submitButton"
         type="submit"
       >
-        register.creatAccount
+        register.createAccount
       </button>
       <div
         className="loginContainer__loginDialog__registerLabel"
@@ -134,7 +178,6 @@ exports[`Register Component matches the tree 1`] = `
       </div>
       <button
         className="loginContainer__loginDialog__registerButton"
-        onClick={[Function]}
         type="button"
       >
         register.login
@@ -146,14 +189,12 @@ exports[`Register Component matches the tree 1`] = `
       </div>
       <button
         className="loginContainer__loginDialog__facebookLoginBtn"
-        onClick={[Function]}
         type="button"
       >
         register.withFacebook
       </button>
       <button
         className="loginContainer__loginDialog__googleLoginBtn"
-        onClick={[Function]}
         type="button"
       >
         register.withGoogle
