@@ -35,7 +35,6 @@ const ProfilePage = () => {
               className="textprofilePage__usersNameContainer"
               >
               <p className="profilePage__usersName">
-                {" "}
                 {users.map((user) => user.fullname)}
               </p>
             </div>
@@ -43,7 +42,6 @@ const ProfilePage = () => {
               className="profilePage__usersEmailContainer"
             >
               <p className="profilePage__usersEmail">
-                {" "}
                 {users.map((user) => user.email)}
               </p>
             </div>
