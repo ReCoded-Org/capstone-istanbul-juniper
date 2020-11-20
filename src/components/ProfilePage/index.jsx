@@ -25,28 +25,28 @@ const ProfilePage = () => {
     <>
       <Layout className="profilePageContainer">
         <Sider className="profilePage__sider">
-          <div className="profilePage__imgContainer">
+          <div className="profilePageImgContainer">
             <img
               className="profilePage__img"
               src={profilePageImg}
               alt="avatar"
             ></img>
             <div
-              className="textprofilePage__usersNameContainer"
+              className="textprofilePageUsersNameContainer"
               >
               <p className="profilePage__usersName">
                 {users.map((user) => user.fullname)}
               </p>
             </div>
             <div
-              className="profilePage__usersEmailContainer"
+              className="profilePageUsersEmailContainer"
             >
               <p className="profilePage__usersEmail">
                 {users.map((user) => user.email)}
               </p>
             </div>
             <div
-              className="profilePage__usersAgeContainer"
+              className="profilePageUsersAgeContainer"
             >
               <p className="profilePage__usersAge">
                 {users.map((user) => user.age)}
@@ -56,7 +56,7 @@ const ProfilePage = () => {
         </Sider>
         <Content>
           <Col
-            className="profilePage__welcomeUserContainer"
+            className="profilePageWelcomeUserContainer"
             span={8}
             offset={12}
           >
