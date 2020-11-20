@@ -188,8 +188,8 @@ const Register = ({
               }}
             >
               {t("register.iAgreeTo")}
-              <a
-                href="#"
+              <Button
+                type="link"
                 onClick={(e) => {
                   e.preventDefault();
                   setIsTermsOpen(true);
@@ -200,7 +200,7 @@ const Register = ({
                     <li>{termAndCondiction}</li>
                   ))}
                 </ul>
-              </a>
+              </Button>
             </Checkbox>
             {errors.isAgreed && (
               <div className="loginContainer__loginDialog__errorContainer">
