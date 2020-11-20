@@ -11,8 +11,6 @@ const ContactPage = () => {
       <ContactUsHeaderSection />
       <ContactUsForm />
       <ContactUsBottom />
-      <SpreadTheWordButton />
-      <StayUpToDate />
     </>
   );
 };
