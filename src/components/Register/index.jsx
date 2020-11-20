@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { validateEmail } from "../../functions";
 
+const MAX_PASSWORD_LENGTH = 8;
+
 const Register = ({
   onSubmit,
   onGoToLogin,
@@ -12,7 +14,6 @@ const Register = ({
   error,
 }) => {
   const [t] = useTranslation();
-  const maxLenghtPassword = 8;
   const [registerInformation, setRegisterInformation] = useState({
     fullName: "",
     age: "",
@@ -40,7 +41,7 @@ const Register = ({
     if (age.trim() === "") {
       errors["age"] = t("register.age");
     }
-    if (password.trim().length < maxLenghtPassword) {
+    if (password.trim().length < MAX_PASSWORD_LENGTH) {
       errors["password"] = t("register.passwordCharacter");
     }
     if (password.trim() === "") {
