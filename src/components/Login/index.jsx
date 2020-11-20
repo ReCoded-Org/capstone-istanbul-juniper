@@ -1,4 +1,4 @@
-import { Alert, Input } from "antd";
+import { Alert, Input, Button } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { validateEmail } from "../../functions";
@@ -102,15 +102,15 @@ const Login = ({
             )}
           </div>
           <div className="loginContainer__loginDialog__forgotPasswordContainer">
-            <a
-              href="/#"
+            <Button
+              type="link"
               onClick={(e) => {
                 e.preventDefault();
                 onGoToPasswordReset();
               }}
             >
               {t("login.forgotPassword")}
-            </a>
+            </Button>
           </div>
           <button
             type="submit"
