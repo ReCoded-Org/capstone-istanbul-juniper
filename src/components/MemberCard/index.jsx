@@ -6,17 +6,18 @@ import "./index.css";
 // Props passed to this function are details of team members
 const MemberCard = ({
   // Member's name
-  name, 
+  name,
   // Member's role
-  role, 
+  role,
   // Member's bio
-  bio, 
+  bio,
   // link to the member's image
-  avatar, 
+  avatar,
   // link to the member's linkedin profile
-  linkedin, 
+  linkedin,
   // link to the member's github profile
-  github}) => {
+  github,
+}) => {
   return (
     <Card span={6} size="default" className="memberCard" bordered={false}>
       <div className="memberCard__header">
