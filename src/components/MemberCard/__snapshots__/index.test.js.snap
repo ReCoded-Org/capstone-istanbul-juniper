@@ -13,7 +13,7 @@ exports[`MemberCard renders correctly 1`] = `
       className="memberCard__header"
     >
       <span
-        className="ant-avatar ant-avatar-circle memberCard__avatar"
+        className="ant-avatar ant-avatar-circle memberCard__header__avatar"
         style={
           Object {
             "fontSize": 18,
@@ -33,11 +33,11 @@ exports[`MemberCard renders correctly 1`] = `
         />
       </span>
       <div
-        className="ant-row memberCard__name"
+        className="ant-row memberCard__header__name"
         style={Object {}}
       />
       <div
-        className="ant-row memberCard__role"
+        className="ant-row memberCard__header__role"
         style={Object {}}
       />
     </div>
