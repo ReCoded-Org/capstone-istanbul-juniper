@@ -90,7 +90,7 @@ const Register = ({
         {t("register.agreeOnTerms", { returnObjects: true })}
       </Modal>
       <div className="loginContainer">
-        <div className="loginContainer__loginTitle">{t("register.creat")}</div>
+        <div className="loginContainer__loginTitle">{t("register.create")}</div>
         {error && (
           <Alert
             style={{ marginBottom: 10 }}
@@ -213,7 +213,7 @@ const Register = ({
             type="submit"
             className="loginContainer__loginDialog__submitButton"
           >
-            {t("register.creatAccount")}
+            {t("register.createAccount")}
           </button>
           <div className="loginContainer__loginDialog__registerLabel">
             {t("register.alreadyAMember")}
