@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Resource renders correctly 1`] = `
+<h2>
+  Loading
+</h2>
+`;

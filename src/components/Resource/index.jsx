@@ -1,10 +1,10 @@
 import React from "react";
 import "./index.css";
-import { storage } from "../../firebaseConfig";
+import { firebaseStorage } from "../../firebaseConfig";
 
 const handleDownloadFileFromFirebaseStorage = async (resource) => {
   try {
-    let url = await storage.refFromURL(resource).getDownloadURL();
+    let url = await firebaseStorage.storage().refFromURL(resource).getDownloadURL();
     window.open(url);
   } catch (e) {
     console.error(e);
@@ -12,6 +12,10 @@ const handleDownloadFileFromFirebaseStorage = async (resource) => {
   }
 };
 const Resource = ({ resource }) => {
+  if (!resource) {
+    return (<h2>Loading</h2>)
+  }
+  else {
   return (
     <div className="resource__body">
       <div className="resource__body__picContainer">
@@ -42,5 +46,6 @@ const Resource = ({ resource }) => {
     </div>
   );
 };
+}
 
 export default Resource;
