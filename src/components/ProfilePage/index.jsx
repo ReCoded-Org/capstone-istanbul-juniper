@@ -35,21 +35,21 @@ const ProfilePage = () => {
               className="textprofilePageUsersNameContainer"
               >
               <p className="profilePage__usersName">
-                {users.map((user) => user.fullname)}
+                {users.find((user) => user.fullname)}
               </p>
             </div>
             <div
               className="profilePageUsersEmailContainer"
             >
               <p className="profilePage__usersEmail">
-                {users.map((user) => user.email)}
+                {users.find((user) => user.email)}
               </p>
             </div>
             <div
               className="profilePageUsersAgeContainer"
             >
               <p className="profilePage__usersAge">
-                {users.map((user) => user.age)}
+                {users.find((user) => user.age)}
               </p>
             </div>
           </div>
