@@ -2,9 +2,7 @@ import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateEmail } from "../registerHelpers";
-
-const MAX_PASSWORD_LENGTH = 8;
+import { newErrorsObj } from "../registerHelpers";
 
 const Register = ({
   // check container/LoginRegister/index.jsx to see functions
@@ -36,29 +34,8 @@ const Register = ({
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { fullName, email, age, password, isAgreed } = registerInformation;
-    const newErrors = {};
-    if (fullName.trim() === "") {
-      newErrors.fullName = t("register.fullName");
-    }
-    if (age.trim() === "") {
-      newErrors.age = t("register.age");
-    }
-    if (password.trim().length < MAX_PASSWORD_LENGTH) {
-      newErrors.password = t("register.passwordCharacter");
-    }
-    if (password.trim() === "") {
-      newErrors.password = t("register.enterPassword");
-    }
-    if (validateEmail(email).length === 0) {
-      newErrors.email = t("register.emailFormat");
-    }
-    if (!isAgreed) {
-      newErrors.isAgreed = t("register.agreeOnTerms");
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    if (Object.keys(newErrorsObj).length > 0) {
+      setErrors(newErrorsObj);
       return;
     }
     onSubmit(registerInformation);
