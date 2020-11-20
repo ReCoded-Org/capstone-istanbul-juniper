@@ -45,7 +45,6 @@ Array [
             >
               <svg
                 aria-hidden="true"
-                className=""
                 data-icon="menu"
                 fill="currentColor"
                 focusable="false"
@@ -221,7 +220,6 @@ Array [
           >
             <svg
               aria-hidden="true"
-              className=""
               data-icon="global"
               fill="currentColor"
               focusable="false"
