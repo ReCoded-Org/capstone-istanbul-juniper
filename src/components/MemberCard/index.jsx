@@ -4,30 +4,39 @@ import { LinkedinFilled, GithubFilled } from "@ant-design/icons";
 import "./index.css";
 
 // Props passed to this function are details of team members
-// The following props are passed to the MemberCard component:
-// name, role, bio, avatar (link to member's picture), linkedin (link to their linkedin profile)
-// and github (link to their github profile)
-const MemberCard = (props) => {
+const MemberCard = ({
+  // Member's name
+  name, 
+  // Member's role
+  role, 
+  // Member's bio
+  bio, 
+  // link to the member's image
+  avatar, 
+  // link to the member's linkedin profile
+  linkedin, 
+  // link to the member's github profile
+  github}) => {
   return (
     <Card span={6} size="default" className="memberCard" bordered={false}>
       <div className="memberCard__header">
         <Avatar
           className="memberCard__avatar"
           size={120}
-          src={props.avatar}
+          src={avatar}
           shape="circle"
-          alt={props.name}
+          alt={name}
         />
-        <Row className="memberCard__name">{props.name}</Row>
-        <Row className="memberCard__role">{props.role}</Row>
+        <Row className="memberCard__name">{name}</Row>
+        <Row className="memberCard__role">{role}</Row>
       </div>
 
-      <Row className="memberCard__bio">{props.bio}</Row>
+      <Row className="memberCard__bio">{bio}</Row>
       <Row className="memberCard__socialMedia">
-        <a className="memberCard__socialMedia--linkedin" href={props.linkedin}>
+        <a className="memberCard__socialMedia--linkedin" href={linkedin}>
           <LinkedinFilled />
         </a>
-        <a className="memberCard__socialMedia--github" href={props.github}>
+        <a className="memberCard__socialMedia--github" href={github}>
           <GithubFilled />
         </a>
       </Row>
