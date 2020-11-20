@@ -13,7 +13,7 @@ const ProfilePage = () => {
 
   const fetchUsers = async () => {
     const usersResult = await db.collection("users").get();
-    const usersData = usersResult.docs.map((b) => b.data());
+    const usersData = usersResult.docs.map((user) => user.data());
     setUsers(usersData);
   };
 
