@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GamesPageImageGrid Component renders correctly 1`] = `
+exports[`GamesPageImageGrid renders correctly 1`] = `
 <div
   className="gamePageImageGrid"
 >
@@ -10,68 +10,57 @@ exports[`GamesPageImageGrid Component renders correctly 1`] = `
     gamesPage.title
   </h1>
   <div
-    className="ant-row ant-row-center"
+    className="ant-row"
     style={Object {}}
   >
     <div
-      className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-9"
-      style={
-        Object {
-          "backgroundImage": "url(mockGTAPoster.jpg)",
-        }
-      }
+      className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+      style={Object {}}
     >
-      <a
-        className="gamePageImageGrid__col__redirect"
-        href="/"
-        onClick={[Function]}
+      <div
+        className="gamePageImageGrid__col__link"
       >
-        <p
-          className="gamePageImageGrid__col__redirect__text"
+        <a
+          href="/games/testRoute"
+          onClick={[Function]}
         >
-          Grand Theft Auto  
-        </p>
-      </a>
-    </div>
-    <div
-      className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-9"
-      style={
-        Object {
-          "backgroundImage": "url(mockZeldaPoster.jpg)",
-        }
-      }
-    >
-      <a
-        className="gamePageImageGrid__col__redirect"
-        href="/"
-        onClick={[Function]}
-      >
-        <p
-          className="gamePageImageGrid__col__redirect__text"
-        >
-          Zelda
-        </p>
-      </a>
-    </div>
-    <div
-      className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-9"
-      style={
-        Object {
-          "backgroundImage": "url(mockDestinyPoster.jpg)",
-        }
-      }
-    >
-      <a
-        className="gamePageImageGrid__col__redirect"
-        href="/"
-        onClick={[Function]}
-      >
-        <p
-          className="gamePageImageGrid__col__redirect__text"
-        >
-          Destiny
-        </p>
-      </a>
+          <div
+            className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+          >
+            <div
+              className="ant-card-cover"
+            >
+              <img
+                alt="testTitle"
+                className="gamePageImageGrid__col__link__card__img"
+                src="testUrl"
+              />
+            </div>
+            <div
+              className="ant-card-body"
+              style={Object {}}
+            >
+              <div
+                className="ant-card-meta"
+              >
+                <div
+                  className="ant-card-meta-detail"
+                >
+                  <div
+                    className="ant-card-meta-title"
+                  >
+                    <h3
+                      className="gamePageImageGrid__col__link__card__title"
+                    >
+                      testTitle
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
