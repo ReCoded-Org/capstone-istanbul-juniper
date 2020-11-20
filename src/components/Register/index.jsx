@@ -31,30 +31,30 @@ const Register = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     let { fullName, email, age, password, agree } = registerInformation;
-    let errors = {};
+    let newErrors = {};
     if (fullName.trim() === "") {
-      errors["fullName"] = t("register.fullName");
+      newErrors["fullName"] = t("register.fullName");
     }
     if (email.trim() === "") {
-      errors["email"] = t("register.validEmail");
+      newErrors["email"] = t("register.validEmail");
     }
     if (age.trim() === "") {
-      errors["age"] = t("register.age");
+      newErrors["age"] = t("register.age");
     }
     if (password.trim().length < MAX_PASSWORD_LENGTH) {
-      errors["password"] = t("register.passwordCharacter");
+      newErrors["password"] = t("register.passwordCharacter");
     }
     if (password.trim() === "") {
-      errors["password"] = t("register.enterPassword");
+      newErrors["password"] = t("register.enterPassword");
     }
     if (!validateEmail(email)) {
-      errors["email"] = t("register.emailFormat");
+      newErrors["email"] = t("register.emailFormat");
     }
     if (!agree) {
-      errors["agree"] = t("register.agreeOnTerms");
+      newErrors["agree"] = t("register.agreeOnTerms");
     }
-    setErrors(errors);
-    if (Object.keys(errors).length > 0) {
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) {
       return;
     }
     onSubmit(registerInformation);
