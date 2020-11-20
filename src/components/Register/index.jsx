@@ -189,7 +189,7 @@ const Register = ({
             >
               {t("register.iAgreeTo")}
               <a
-                href="/#"
+                href="#"
                 onClick={(e) => {
                   e.preventDefault();
                   setIsTermsOpen(true);
