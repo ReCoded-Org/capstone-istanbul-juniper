@@ -233,14 +233,19 @@
     "whyWeDoItHeader": "Why we do it",
     "whyWeDoItText": "We have a moral obligation to preserve nature and its features, because protecting the environment protects humanity from toxic substances and our quality of food. We believe that the new generation in MENA should be supported with the right tools to believe and act for the benefit of humanitarian and social issues, on the local and global scale. Given the right tools, it is not impossible to raise a generation of activists.",
     "teamInfo": {
+      "louis": {
+        "name": "Louis Li",
+        "bio": "Louis is the coding instructor in Re:Coded Turkey. With a lot of exciting stories and impressive experience he creates the butterfly effect.",
+        "role": "Project Engineer"
+      },
       "ammar": {
         "name": "Ammar Sammour",
-        "bio": "Ammar is the Coding Instructor at Front-end Web Development Bootcamp in Turkey provided by Re:coded! He spends his time coaching our fellows to become web development ninjas!",
+        "bio": "Ammar is the Coding Instructor at Front-end Web Development Bootcamp in Turkey provided by Re:Coded! He spends his time coaching our fellows to become web development ninjas!",
         "role": "Lead Engineer"
       },
       "ibrahim": {
         "name": "Ibrahim Aljarad",
-        "bio": "Hey, I'm Ibrahim from Syria, I studied coding at Flatiron school of coding and studied economics at Alfurat university. I participated in the frontend web development bootcamp by Re-coded organization and graduated from there. My other experiences include working with several channels and agencies as a satellite producer providing the technical support for the field producing teams.",
+        "bio": "Hey, I'm Ibrahim from Syria, I studied coding during the frontend web developement bootcamp provided by Re:Coded where Flatiron School's curriculum was taught, I also studied economics at Alfurat university. My other experiences include working with several channels and agencies as a satellite producer providing the technical support for the field producing teams.",
         "role": "Junior Developer"
       },
       "majd": {
@@ -250,12 +255,12 @@
       },
       "sule": {
         "name": "Sule Sinikoglu",
-        "bio": "A Web Developer who writes “good code” for creating positive impact on Global Challenges.",
+        "bio": "A Web Developer who writes `good code` for creating positive impact on Global Challenges.",
         "role": "Junior Developer"
       },
       "tarkan": {
         "name": "Tarkan Mansuroglu",
-        "bio": "A “Re-Coded Front-End Web Development Bootcamp” trained and partially self-taught front-end web developer. He is also a passionate learner, PC enthusiast, gamer and fitness enthusiast. He loves solving real life problems to test and develop his skills. Follow him through social media!",
+        "bio": "A `Re:Coded Front-End Web Development Bootcamp` trained and partially self-taught front-end web developer. He is also a passionate learner, PC enthusiast, gamer and fitness enthusiast. He loves solving real life problems to test and develop his skills. Follow him through social media!",
         "role": "Junior Developer"
       },
       "yaman": {

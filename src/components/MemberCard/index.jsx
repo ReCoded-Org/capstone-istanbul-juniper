@@ -21,14 +21,14 @@ const MemberCard = ({
     <Card span={6} size="default" className="memberCard" bordered={false}>
       <div className="memberCard__header">
         <Avatar
-          className="memberCard__avatar"
+          className="memberCard__header__avatar"
           size={120}
           src={avatar}
           shape="circle"
           alt={name}
         />
-        <Row className="memberCard__name">{name}</Row>
-        <Row className="memberCard__role">{role}</Row>
+        <Row className="memberCard__header__name">{name}</Row>
+        <Row className="memberCard__header__role">{role}</Row>
       </div>
 
       <Row className="memberCard__bio">{bio}</Row>

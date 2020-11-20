@@ -9,14 +9,11 @@ const TeamCards = () => {
   const [t] = useTranslation();
   const [dataState, setDataState] = useState([]);
 
-  const fetchData = async () => {
+  useEffect(async () => {
+    // Fetch team info data from firebase. 
     const res = await db.collection("team").doc("teamInfo").get();
     const data = res.data();
     setDataState(data.info);
-  };
-
-  useEffect(() => {
-    fetchData();
   }, []);
 
   return (
