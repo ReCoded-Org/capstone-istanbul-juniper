@@ -7,10 +7,16 @@ import { validateEmail } from "../registerHelpers";
 const MAX_PASSWORD_LENGTH = 8;
 
 const Register = ({
+  // check container/LoginRegister/index.jsx to see functions
+  // function
   onSubmit,
-  onGoToLogin,
-  onFacebookAuth,
-  onGoogleAuth,
+  // function
+  handleLogin,
+  // function
+  handleFacebookAuth,
+  // function
+  handleGoogleAuth,
+  // string
   error,
 }) => {
   const [t] = useTranslation();
@@ -35,9 +41,6 @@ const Register = ({
     if (fullName.trim() === "") {
       newErrors.fullName = t("register.fullName");
     }
-    if (email.trim() === "") {
-      newErrors.email = t("register.validEmail");
-    }
     if (age.trim() === "") {
       newErrors.age = t("register.age");
     }
@@ -53,8 +56,9 @@ const Register = ({
     if (!isAgreed) {
       newErrors.isAgreed = t("register.agreeOnTerms");
     }
-    setErrors(newErrors);
+
     if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
     onSubmit(registerInformation);
@@ -218,7 +222,7 @@ const Register = ({
             {t("register.alreadyAMember")}
           </div>
           <button
-            onClick={onGoToLogin}
+            onClick={handleLogin}
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
@@ -228,14 +232,14 @@ const Register = ({
             {t("register.orYouCan")}
           </div>
           <button
-            onClick={onFacebookAuth}
+            onClick={handleFacebookAuth}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
             {t("register.withFacebook")}
           </button>
           <button
-            onClick={onGoogleAuth}
+            onClick={handleGoogleAuth}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >
