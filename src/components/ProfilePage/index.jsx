@@ -33,8 +33,7 @@ const ProfilePage = () => {
             ></img>
             <div
               className="textprofilePage__usersNameContainer"
-              style={{ marginBottom: 10 }}
-            >
+              >
               <p className="profilePage__usersName">
                 {" "}
                 {users.map((user) => user.fullname)}
@@ -42,7 +41,6 @@ const ProfilePage = () => {
             </div>
             <div
               className="profilePage__usersEmailContainer"
-              style={{ marginBottom: 10 }}
             >
               <p className="profilePage__usersEmail">
                 {" "}
@@ -51,7 +49,6 @@ const ProfilePage = () => {
             </div>
             <div
               className="profilePage__usersAgeContainer"
-              style={{ marginBottom: 10 }}
             >
               <p className="profilePage__usersAge">
                 {users.map((user) => user.age)}
