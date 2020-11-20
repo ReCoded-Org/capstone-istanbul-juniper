@@ -19,7 +19,7 @@ const Register = ({
     age: "",
     email: "",
     password: "",
-    agree: false,
+    isAgreed: false,
   });
   const [errors, setErrors] = useState({});
   const [isTermsOpen, setIsTermsOpen] = useState(false);
@@ -30,7 +30,7 @@ const Register = ({
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    let { fullName, email, age, password, agree } = registerInformation;
+    let { fullName, email, age, password, isAgreed } = registerInformation;
     let newErrors = {};
     if (fullName.trim() === "") {
       newErrors["fullName"] = t("register.fullName");
@@ -50,8 +50,8 @@ const Register = ({
     if (!validateEmail(email)) {
       newErrors["email"] = t("register.emailFormat");
     }
-    if (!agree) {
-      newErrors["agree"] = t("register.agreeOnTerms");
+    if (!isAgreed) {
+      newErrors["isAgreed"] = t("register.agreeOnTerms");
     }
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) {
@@ -61,7 +61,7 @@ const Register = ({
   };
 
   const handleOkTerms = () => {
-    handleChange("agree", true);
+    handleChange("isAgreed", true);
     setIsTermsOpen(false);
   };
   const handleCancelTerms = () => {
@@ -185,7 +185,7 @@ const Register = ({
             <Checkbox
               checked={registerInformation.agree}
               onChange={(e) => {
-                handleChange("agree", e.target.checked);
+                handleChange("isAgreed", e.target.checked);
               }}
             >
               {t("register.iAgreeTo")}
@@ -203,9 +203,9 @@ const Register = ({
                 </ul>
               </a>
             </Checkbox>
-            {errors["agree"] && (
+            {errors["isAgreed"] && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["agree"]}
+                {errors["isAgreed"]}
               </div>
             )}
           </div>
