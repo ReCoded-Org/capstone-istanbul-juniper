@@ -1,35 +1,35 @@
 import { Alert, Input } from "antd";
 import React, { useState } from "react";
-import { validateEmail } from "../../functions";
 import { useTranslation } from "react-i18next";
+import { validateEmail } from "../../functions";
 
-const PasswordReset = (props) => {
+const PasswordReset = ({ onSubmit, onGoToLogin, error, message }) => {
   const [t] = useTranslation();
   const [passwordResetInfo, setPasswordResetInfo] = useState({ email: "" });
   const handleChange = (key, value) => {
-    let newValues = Object.assign({}, passwordResetInfo);
+    const newValues = { ...passwordResetInfo };
     newValues[key] = value;
     setPasswordResetInfo(newValues);
   };
   const [errors, setErrors] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
-    let { email } = passwordResetInfo;
-    let errors = {};
+    const { email } = passwordResetInfo;
+    const newErrors = {};
     if (!validateEmail(email)) {
-      errors["email"] = t("passwordReset.emailFormat");
+      newErrors.email = t("passwordReset.emailFormat");
     }
     if (email.trim() === "") {
-      errors["email"] = t("passwordReset.fillField");
+      newErrors.email = t("passwordReset.fillField");
     }
-    setErrors(errors);
-    if (Object.keys(errors).length > 0) {
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) {
       return;
     }
-    props.onSubmit(passwordResetInfo);
+    onSubmit(passwordResetInfo);
   };
   const handleGoToLogin = () => {
-    props.onGoToLogin();
+    onGoToLogin();
   };
 
   return (
@@ -38,15 +38,15 @@ const PasswordReset = (props) => {
         <div className="loginContainer__loginTitle">
           {t("passwordReset.passwordReset")}
         </div>
-        {props.error && (
+        {error && (
           <Alert
             style={{ marginBottom: 10 }}
             type="error"
             showIcon
-            message={props.error}
-          ></Alert>
+            message={error}
+          />
         )}
-        {props.message}
+        {message}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
             {t("passwordReset.email")}
