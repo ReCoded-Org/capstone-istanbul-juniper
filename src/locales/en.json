@@ -234,7 +234,11 @@
     "whyWeDoItText": "We have a moral obligation to preserve nature and its features, because protecting the environment protects humanity from toxic substances and our quality of food. We believe that the new generation in MENA should be supported with the right tools to believe and act for the benefit of humanitarian and social issues, on the local and global scale. Given the right tools, it is not impossible to raise a generation of activists."
   },
   "register": {
-    "terms": ["We may collect the following information: Name, Contact information and email address.","We are committed to ensuring that your information is secure.","Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website."],
+    "terms": [
+      "We may collect the following information: Name, Contact information and email address.",
+      "We are committed to ensuring that your information is secure.",
+      "Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website."
+    ],
     "fullName": "Please enter your full name",
     "validEmail": "Please enter a valid email",
     "enterAge": "Please enter your age",
@@ -260,4 +264,3 @@
     "withGoogle": "Log in with Google"
   }
 }
-

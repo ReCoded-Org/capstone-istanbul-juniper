@@ -1,10 +1,16 @@
 import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
 import React, { useState } from "react";
-import { validateEmail } from "../../functions";
 import { useTranslation } from "react-i18next";
+import { validateEmail } from "../../functions";
 
-const Register = (props) => {
+const Register = ({
+  onSubmit,
+  onGoToLogin,
+  onFacebookAuth,
+  onGoogleAuth,
+  error,
+}) => {
   const [t] = useTranslation();
   const maxLenghtPassword = 8;
   const [registerInformation, setRegisterInformation] = useState({
@@ -15,7 +21,7 @@ const Register = (props) => {
     agree: false,
   });
   const [errors, setErrors] = useState({});
-  const [termsOpen, setTermsOpen] = useState(false);
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
   const handleChange = (key, value) => {
     let newValues = Object.assign({}, registerInformation);
     newValues[key] = value;
@@ -50,33 +56,25 @@ const Register = (props) => {
     if (Object.keys(errors).length > 0) {
       return;
     }
-    props.onSubmit(registerInformation);
+    onSubmit(registerInformation);
   };
-  const handleGoToLogin = () => {
-    props.onGoToLogin();
-  };
-  const handleFacebookAuth = () => {
-    props.onFacebookAuth();
-  };
-  const handleGoogleAuth = () => {
-    props.onGoogleAuth();
-  };
+
   const handleOkTerms = () => {
     handleChange("agree", true);
-    setTermsOpen(false);
+    setIsTermsOpen(false);
   };
   const handleCancelTerms = () => {
-    setTermsOpen(false);
+    setIsTermsOpen(false);
   };
   const termsAndConditionsTranslation = [
-    ...t("register.terms",{ returnObjects: true,})
-  ]
+    ...t("register.terms", { returnObjects: true }),
+  ];
 
   return (
     <form noValidate onSubmit={handleSubmit}>
       <Modal
         title={t("register.termsTitle")}
-        visible={termsOpen}
+        visible={isTermsOpen}
         onOk={handleOkTerms}
         onCancel={handleCancelTerms}
         footer={[
@@ -87,16 +85,17 @@ const Register = (props) => {
             {t("register.iAgree")}
           </Button>,
         ]}
-      >{t("register.agreeOnTerms",{ returnObjects: true,})}
+      >
+        {t("register.agreeOnTerms", { returnObjects: true })}
       </Modal>
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">{t("register.creat")}</div>
-        {props.error && (
+        {error && (
           <Alert
             style={{ marginBottom: 10 }}
             type="error"
             showIcon
-            message={props.error}
+            message={error}
           ></Alert>
         )}
         <div className="loginContainer__loginDialog">
@@ -193,10 +192,14 @@ const Register = (props) => {
                 href="/#"
                 onClick={(e) => {
                   e.preventDefault();
-                  setTermsOpen(true);
+                  setIsTermsOpen(true);
                 }}
               >
-                <ul>{termsAndConditionsTranslation.map(termAndCondiction => <li>{termAndCondiction}</li>)}</ul>
+                <ul>
+                  {termsAndConditionsTranslation.map((termAndCondiction) => (
+                    <li>{termAndCondiction}</li>
+                  ))}
+                </ul>
               </a>
             </Checkbox>
             {errors["agree"] && (
@@ -215,9 +218,7 @@ const Register = (props) => {
             {t("register.alreadyAMember")}
           </div>
           <button
-            onClick={() => {
-              handleGoToLogin();
-            }}
+            onClick={onGoToLogin}
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
@@ -227,18 +228,14 @@ const Register = (props) => {
             {t("register.orYouCan")}
           </div>
           <button
-            onClick={() => {
-              handleFacebookAuth();
-            }}
+            onClick={onFacebookAuth}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
             {t("register.withFacebook")}
           </button>
           <button
-            onClick={() => {
-              handleGoogleAuth();
-            }}
+            onClick={onGoogleAuth}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >
