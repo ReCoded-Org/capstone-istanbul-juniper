@@ -19,9 +19,6 @@ const PasswordReset = ({ onSubmit, onGoToLogin, error, message }) => {
     if (validateEmail(email).length === 0) {
       newErrors.email = t("passwordReset.emailFormat");
     }
-    if (email.trim() === "") {
-      newErrors.email = t("passwordReset.fillField");
-    }
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) {
       return;
