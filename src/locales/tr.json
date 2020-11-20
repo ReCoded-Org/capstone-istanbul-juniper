@@ -232,5 +232,9 @@
     "aboutUsText": "Teknolojiyi insanların yararına kullanmakta ortak paydasını bulan çok uluslu bir gençlik grubuyuz. Orta Doğu ve Kuzey Afrika'daki çocukları eğitici oyunlar aracılığıyla çevre sorunları ve iklim değişikliği konusunda eğitmek için birlikte çalışan 5 genç geliştirici ve 1 baş mühendisten oluşan bir grup. Hedef kitlemiz MENA'da yaşayan 8-13 yaş arası çocuklar; bu nedenle, web sitemizi çocukların ve öğretmenlerinin / ebeveynlerinin web sitesinde kolayca gezinmelerine yardımcı olmak için üç ana dilde sunuyoruz.",
     "whyWeDoItHeader": "Neden yapıyoruz",
     "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, bir nesil aktivist yetiştirmek imkansız değildir."
+  },
+  "loginRegister": {
+    "anEmailsent": " By Adresine bir e-posta mesajı gönderildi",
+    "anEmailsentcontain": "Şifre sıfırlama talimatları içerir, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."
   }
 }

@@ -26,12 +26,12 @@ const LoginRegisterPage = (props) => {
       setError(e.message);
     }
   };
-  const passwordReset = async (email) => {
+  const resetPassword = async (email) => {
     setError("");
     setMessage(<></>);
     try {
       setLoading(true);
-      await auth.sendPasswordResetEmail(email);
+      await auth.sendResetPasswordEmail(email);
       setLoading(false);
       setMessage(
         <Alert
@@ -39,9 +39,9 @@ const LoginRegisterPage = (props) => {
           showIcon
           message={
             <div>
-              {t("loginRegister.anEmailsent")}
+              {t("loginRegister.anEmailSent")}
               <b>{email}</b>
-              {t("loginRegister.anEmailsentcontain")}
+              {t("loginRegister.anEmailSentContain")}
             </div>
           }
           type="success"
@@ -64,7 +64,6 @@ const LoginRegisterPage = (props) => {
         display: "popup",
       });
       let u = await auth.signInWithPopup(provider);
-      console.log("facebook user: ", u.user);
       setLoading(false);
       props.history.push("/");
     } catch (e) {
@@ -72,7 +71,7 @@ const LoginRegisterPage = (props) => {
       setError(e.message);
     }
   };
-  // Loogin with GOOGLE
+  // Login with GOOGLE
   const loginWithGoogle = async () => {
     setError("");
     setMessage(<></>);
@@ -81,7 +80,6 @@ const LoginRegisterPage = (props) => {
       let provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
       let u = await auth.signInWithPopup(provider);
-      console.log("google user: ", u.user);
       setLoading(false);
       props.history.push("/");
     } catch (e) {
@@ -90,8 +88,7 @@ const LoginRegisterPage = (props) => {
     }
   };
 
-  const register = async (fullname, email, age, password) => {
-    console.log(email, password);
+  const register = async (fullName, email, age, password) => {
     setError("");
     setMessage(<></>);
     try {
@@ -102,7 +99,7 @@ const LoginRegisterPage = (props) => {
       );
       await firestore.collection("users").doc(registeredUser.user.uid).set({
         uid: registeredUser.user.uid,
-        fullname: fullname,
+        fullName: fullName,
         age: age,
         userExperiencePoints: 0,
       });
@@ -112,7 +109,6 @@ const LoginRegisterPage = (props) => {
     } catch (e) {
       setLoading(false);
       setError(e.message);
-      console.log(e.message);
     }
   };
   const [active, setActive] = useState("login");
@@ -120,7 +116,6 @@ const LoginRegisterPage = (props) => {
   const [message, setMessage] = useState();
   const [loading, setLoading] = useState(false);
   const { user } = useContext(AuthContext);
-  console.log("User ", user);
   let component;
   switch (active) {
     case "login":
@@ -131,22 +126,22 @@ const LoginRegisterPage = (props) => {
           onSubmit={({ email, password }) => {
             login(email, password);
           }}
-          onGoToRegister={() => {
+          handleRegister={() => {
             setError("");
             setMessage(<></>);
             setActive("register");
           }}
-          onGoToPasswordReset={() => {
+          handleResetPassword={() => {
             setError("");
             setMessage(<></>);
             setActive("reset");
           }}
-          onFacebookAuth={() => {
+          handleFacebookAuth={() => {
             setError("");
             setMessage(<></>);
             loginWithFacebook();
           }}
-          onGoogleAuth={() => {
+          handleGoogleAuth={() => {
             setError("");
             setMessage(<></>);
             loginWithGoogle();
@@ -159,20 +154,20 @@ const LoginRegisterPage = (props) => {
         <Register
           error={error}
           message={message}
-          onSubmit={({ fullname, email, age, password }) => {
-            register(fullname, email, age, password);
+          onSubmit={({ fullName, email, age, password }) => {
+            register(fullName, email, age, password);
           }}
-          onGoToLogin={() => {
+          handleLogin={() => {
             setError("");
             setMessage(<></>);
             setActive("login");
           }}
-          onFacebookAuth={() => {
+          handleFacebookAuth={() => {
             setError("");
             setMessage(<></>);
             loginWithFacebook();
           }}
-          onGoogleAuth={() => {
+          handleGoogleAuth={() => {
             setError("");
             setMessage(<></>);
             loginWithGoogle();
@@ -188,14 +183,14 @@ const LoginRegisterPage = (props) => {
           onSubmit={({ email }) => {
             setError("");
             setMessage(<></>);
-            passwordReset(email);
+            resetPassword(email);
           }}
-          onGoToLogin={() => {
+          handleLogin={() => {
             setError("");
             setMessage(<></>);
             setActive("login");
           }}
-          onFacebookAuth={() => {
+          handleFacebookAuth={() => {
             setError("");
             setMessage(<></>);
             loginWithFacebook();
@@ -210,11 +205,11 @@ const LoginRegisterPage = (props) => {
   return (
     <>
       <Spin spinning={loading}>{component}</Spin>
-      <div className="LoginRegister__footerContainer">
+      <div className="loginRegister__footerContainer">
         <img
           alt="footerKids"
           src={kids}
-          className="LoginRegister__footerContainer__kidsImage"
+          className="loginRegister__footerContainer__kidsImage"
         />
       </div>
     </>

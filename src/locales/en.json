@@ -232,5 +232,9 @@
     "aboutUsText": "We are a group of multi-national youth who found their common ground in using tech for the benefit of people. Juniper, consists of a group of 5 junior developers and 1 lead engineer working together to educate children in MENA about environmental issues and climate change through educational games. Our target group is kids living in MENA that are 5-9 years old; thus, Juniper is delivered in three main languages to help kids and their teachers/parents to easily surf the website.",
     "whyWeDoItHeader": "Why we do it",
     "whyWeDoItText": "We have a moral obligation to preserve nature and its features, because protecting the environment protects humanity from toxic substances and our quality of food. We believe that the new generation in MENA should be supported with the right tools to believe and act for the benefit of humanitarian and social issues, on the local and global scale. Given the right tools, it is not impossible to raise a generation of activists."
+  },
+  "loginRegister": {
+    "anEmailsent": "An email message has been sent to ",
+    "anEmailsentcontain": "contain password reset instructions, please check your inbox and follow the steps indicated in that message."
   }
 }

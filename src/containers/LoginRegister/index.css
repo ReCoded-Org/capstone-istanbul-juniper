@@ -1,4 +1,4 @@
-.LoginRegister__footerContainer {
+.loginRegister__footerContainer {
   background-image: url(../../images/LoginCurve.svg);
   background-color: #b3d0c4;
   background-position: top center;
@@ -11,7 +11,7 @@
   z-index: -1;
 }
 
-img.LoginRegister__footerContainer__kidsImage {
+img.loginRegister__footerContainer__kidsImage {
   position: absolute;
   top: -75px;
   max-height: 250px;
