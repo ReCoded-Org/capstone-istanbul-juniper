@@ -29,7 +29,6 @@ exports[`ResourcesPage renders correctly 1`] = `
       >
         <img
           alt="Our changing climate - UNICEF"
-          className=""
           onClick={[Function]}
           src="ourClimateChange.png"
         />
@@ -66,7 +65,6 @@ exports[`ResourcesPage renders correctly 1`] = `
       >
         <img
           alt="Resources for Education on Climate Change - UNESCO"
-          className=""
           onClick={[Function]}
           src="resourcesForEducation.png"
         />
@@ -103,7 +101,6 @@ exports[`ResourcesPage renders correctly 1`] = `
       >
         <img
           alt="Who Causes Climate changes - TROCAIRE"
-          className=""
           onClick={[Function]}
           src="whoCausesClimate.png"
         />
