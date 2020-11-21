@@ -32,18 +32,14 @@ const ContactUsForm = () => {
   // encode is used for passing the string to the body
   // setTimeOut stands for showing post submission message about a time after submit
   const handleSubmit = (e) => {
+    setIsLoading(true);
     fetch("/", {
       method: "POST",
       "data-netlify": "true",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encodeFormData({ "form-name": "contact", ...formValue }),
     }).then(() => {
-      setTimeout(() => {
-        setIsLoading(false);
-        setIsSubmitted(false);
-      }, 2000);
-      setIsSubmitted(true);
-      setIsLoading(true);
+      setIsLoading(false);
       setFormValue({
         name: "",
         email: "",
