@@ -7,7 +7,6 @@ import Login from "../../components/userauth/Login";
 import Register from "../../components/userauth/Register";
 import ResetPassword from "../../components/userauth/ResetPassword";
 import firestore, { auth } from "../../firebaseConfig";
-// import { AuthContext } from '../../components/userauth/authContext';
 import "./index.css";
 import kids from "../../images/LoginKids.svg";
 
@@ -69,7 +68,6 @@ const LoginRegisterPage = ({ history }) => {
       provider.setCustomParameters({
         display: "popup",
       });
-      // const u = await auth.signInWithPopup(provider);
       setLoading(false);
       history.push("/");
     } catch (e) {
@@ -84,7 +82,6 @@ const LoginRegisterPage = ({ history }) => {
       setLoading(true);
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-      // const u = await auth.signInWithPopup(provider);
       setLoading(false);
       history.push("/");
     } catch (e) {
