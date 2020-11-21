@@ -10,7 +10,7 @@ const ResetPassword = ({
   handleLogin,
   // string
   error,
-  // string
+  // string. It is displayed when wrong data is used by user.
   message,
 }) => {
   const [t] = useTranslation();
