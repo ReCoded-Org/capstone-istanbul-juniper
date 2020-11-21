@@ -9,7 +9,7 @@ import { settings } from "./settings.jsx";
 const GamesCarousel = () => {
   const [t] = useTranslation();
   const gameCardsData = [
-    ...t("gameCards", {
+    ...t("home.gamesCarousel.gameCards", {
       returnObjects: true,
     }),
   ];
