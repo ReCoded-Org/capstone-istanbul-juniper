@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorMessage snapshot test 1`] = `null`;
+exports[`ErrorMessage snapshot test 1`] = `
+<div
+  className="loginContainer__loginDialog__errorContainer"
+>
+  test
+</div>
+`;
