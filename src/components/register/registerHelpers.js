@@ -32,3 +32,17 @@ export const newErrorsObj = (registerInformation) => {
 
   return errorObj;
 };
+
+export const createErrorWarning = (errorMessage) => {
+  return (
+    <div className="loginContainer__loginDialog__errorContainer">
+      {errorMessage}
+    </div>
+  );
+};
+
+export const hasError = (error) => {
+  if (error) {
+    return "loginContainer__loginDialog__input__hasError";
+  }
+};

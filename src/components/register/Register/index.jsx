@@ -2,7 +2,7 @@ import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { newErrorsObj } from "../registerHelpers";
+import { newErrorsObj, createErrorWarning, hasError } from "../registerHelpers";
 
 const Register = ({
   // check container/LoginRegister/index.jsx to see functions
@@ -86,80 +86,54 @@ const Register = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.fullName &&
-                "loginContainer__loginDialog__input__hasError"
-              }
+              className={hasError(errors.fullName)}
               value={registerInformation.fullName}
               onChange={(e) => {
                 handleChange("fullName", e.target.value);
               }}
             />
-            {errors.fullName && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.fullName}
-              </div>
-            )}
+            {createErrorWarning(errors.fullName)}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.enterAge")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.age && "loginContainer__loginDialog__input__hasError"
-              }
+              className={hasError(errors.age)}
               type="number"
               value={registerInformation.age}
               onChange={(e) => {
                 handleChange("age", e.target.value);
               }}
             />
-            {errors.age && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.age}
-              </div>
-            )}
+            {createErrorWarning(errors.age)}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.email")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.email && "loginContainer__loginDialog__input__hasError"
-              }
+              className={hasError(errors.email)}
               value={registerInformation.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors.email && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.email}
-              </div>
-            )}
+            {createErrorWarning(errors.email)}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.password")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.password &&
-                "loginContainer__loginDialog__input__hasError"
-              }
+              className={hasError(errors.password)}
               type="password"
               value={registerInformation.password}
               onChange={(e) => {
                 handleChange("password", e.target.value);
               }}
             />
-            {errors.password && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.password}
-              </div>
-            )}
+            {createErrorWarning(errors.password)}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Checkbox
@@ -183,11 +157,7 @@ const Register = ({
                 </ul>
               </Button>
             </Checkbox>
-            {errors.isAgreed && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.isAgreed}
-              </div>
-            )}
+            {createErrorWarning(errors.isAgreed)}
           </div>
           <button
             type="submit"
