@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   validateEmail,
-  hasError,
+  createErrorClass,
 } from "../../components/register/registerHelpers";
 import ErrorMessage from "../register/ErrorMessage";
 import "./index.css";
@@ -57,7 +57,7 @@ const PasswordReset = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={hasError(error.mail)}
+              className={createErrorClass(error.mail)}
               type="email"
               value={passwordResetInfo.email}
               onChange={(e) => {
