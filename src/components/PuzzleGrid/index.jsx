@@ -115,7 +115,7 @@ const PuzzleGrid = ({ puzzleImage }) => {
   } else {
     gridBody = currentPuzzleState.map((tile) => {
       return (
-        <Row
+        <Col
           key={"tileNumber-" + tile.id}
           className={
             tile.selected ? "selectedTile puzzleGrid__tile" : "puzzleGrid__tile"
@@ -128,7 +128,7 @@ const PuzzleGrid = ({ puzzleImage }) => {
             alt="A moveable tile"
             style={{ top: `-${tile.top}%` }}
           />
-        </Row>
+        </Col>
       );
     });
   }
