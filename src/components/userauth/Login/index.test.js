@@ -1,6 +1,6 @@
 import React from "react";
-import Login from "./index.jsx";
 import renderer from "react-test-renderer";
+import Login from ".";
 
 describe("Login Component", () => {
   it("matches the tree", () => {

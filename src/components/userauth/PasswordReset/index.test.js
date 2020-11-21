@@ -1,6 +1,6 @@
 import React from "react";
-import PasswordReset from "./index.jsx";
 import renderer from "react-test-renderer";
+import PasswordReset from "./index.jsx";
 
 describe("PasswordReset Component", () => {
   it("matches the tree", () => {
