@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import PasswordReset from ".";
+import ResetPassword from ".";
 
-describe("PasswordReset Component", () => {
+describe("ResetPassword Component", () => {
   it("matches the tree", () => {
-    const tree = renderer.create(<PasswordReset />).toJSON();
+    const tree = renderer.create(<ResetPassword />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
