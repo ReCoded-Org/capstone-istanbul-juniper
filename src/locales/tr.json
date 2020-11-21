@@ -64,7 +64,7 @@
     "withGoogle": "Google ile Bağlan"
   },
   "loginRegister": {
-    "anEmailSent": " By Adresine bir e-posta mesajı gönderildi",
+    "anEmailSent": "Adresine bir e-posta mesajı gönderildi",
     "anEmailSentContain": "Şifre sıfırlama talimatları içerir, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."
   },
   "home": {

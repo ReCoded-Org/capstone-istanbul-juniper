@@ -70,6 +70,9 @@ const Register = ({
   const handleCancelTerms = () => {
     setTermsOpen(false);
   };
+  const termsAndConditionsTranslation = [
+    ...t("register.terms", { returnObjects: true }),
+  ];
 
   return (
     <form noValidate onSubmit={handleSubmit}>
@@ -88,12 +91,9 @@ const Register = ({
         ]}
       >
         <ul>
-          <li>{t("register.terms1")}</li>
-          <li>{t("register.terms2")} </li>
-          <li>{t("register.terms3")} </li>
-          <li>{t("register.terms4")} </li>
-          <li>{t("register.terms5")} </li>
-          <li>{t("register.terms6")} </li>
+          {termsAndConditionsTranslation.map((termAndCondition) => (
+            <li>{termAndCondition}</li>
+          ))}
         </ul>
       </Modal>
       <div className="loginContainer">

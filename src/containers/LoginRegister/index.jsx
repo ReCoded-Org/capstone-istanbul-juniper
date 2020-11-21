@@ -77,7 +77,7 @@ const LoginRegisterPage = ({ history }) => {
       setError(e.message);
     }
   };
-  // Loogin with GOOGLE
+  // Login with GOOGLE
   const loginWithGoogle = async () => {
     resetErrorAndMessage();
     try {
@@ -93,7 +93,7 @@ const LoginRegisterPage = ({ history }) => {
     }
   };
 
-  const register = async (fullname, email, age, password) => {
+  const register = async (fullName, email, age, password) => {
     resetErrorAndMessage();
     try {
       setLoading(true);
@@ -103,7 +103,7 @@ const LoginRegisterPage = ({ history }) => {
       );
       await firestore.collection("users").doc(registeredUser.user.uid).set({
         uid: registeredUser.user.uid,
-        fullname: fullname,
+        fullName: fullName,
         age: age,
         userExperiencePoints: 0,
       });
