@@ -100,6 +100,9 @@
     }
   },
   "games": {
+    "quizGame": {
+      "title": "Quiz Game"
+    },
     "matchingGame": {
       "title": "Matching Game",
       "subtitle": "Let's power up our environment vocabulary! Drag words to the matching pictures.",
@@ -218,6 +221,10 @@
       ]
     }
   },
+  "profilePage": {
+    "title": "Welcome"
+  },
+
   "gamesPage": {
     "level": "Level {{currentLevel}}",
     "nextReward": "Next reward",

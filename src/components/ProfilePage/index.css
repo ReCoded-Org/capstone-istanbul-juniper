@@ -1,0 +1,67 @@
+.profilePageContainer {
+  background: #add4c5;
+  margin: 0 auto;
+  padding-top: 20%;
+}
+
+.profilePageWelcomeUserContainer {
+  background-image: linear-gradient(315deg, #dcbc80 0%, #fcad4a 74%);
+  margin-bottom: 10%;
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
+  font-family: "Salsa", cursive;
+  border-radius: 25px;
+}
+
+.profilePage__welcomeUser {
+  margin: 5px;
+  margin-left: 12px;
+}
+
+.profilePage__gamesCarousel__wrapper {
+  width: 100%;
+  padding-left: 40%;
+  padding-right: 4%;
+  display: flexbox;
+  flex-wrap: wrap;
+}
+
+.profilePage__sider {
+  background-color: #add4c5;
+  padding-left: 100px;
+  text-align: center;
+}
+
+.profilePage__img {
+  background-color: #f5f4f3;
+  position: relative;
+  width: 290px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 20%;
+  margin-bottom: 10px;
+}
+
+.profilePageImgContainer {
+  display: grid;
+  font-size: 20px;
+  font-family: "Salsa", cursive;
+  padding-left: 12px;
+}
+
+.textprofilePageUsersNameContainer .profilePageUsersAgeContainer {
+  background-image: linear-gradient(315deg, #dcbc80 0%, #fcad4a 74%);
+  margin-bottom: 10%;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  font-family: "Salsa", cursive;
+  border-radius: 25px;
+}
+
+.profilePage__usersName {
+  margin: 10px;
+  color: #0e0d0c;
+  background-image: linear-gradient(315deg, #dcbc80 0%, #fcad4a 74%);
+  margin-bottom: 10%;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  font-family: "Salsa", cursive;
+  border-radius: 25px;
+}
