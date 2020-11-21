@@ -100,6 +100,9 @@
     }
   },
   "games": {
+    "quizGame": {
+      "title": "Quiz Game"
+    },
     "matchingGame": {
       "title": "Matching Game",
       "subtitle": "Let's power up our environment vocabulary! Drag words to the matching pictures.",
@@ -218,6 +221,10 @@
       ]
     }
   },
+  "profilePage": {
+    "title": "Welcome"
+  },
+
   "gamesPage": {
     "level": "Level {{currentLevel}}",
     "nextReward": "Next reward",
@@ -262,5 +269,9 @@
     "orYouCan": "Or you can",
     "withFacebook": "Log in with Facebook",
     "withGoogle": "Log in with Google"
+  },
+  "resourcesPage": {
+    "title": "Resources Centre",
+    "aboutPage": "Juniper's Resource Centre is an online library that hosts comprehensive, reliable, and up-to-date information on thematic areas related to Environmental. The website is open to the public, free-of-charge, and provides access to materials in one convenient location. This page will be updated regularly."
   }
 }
