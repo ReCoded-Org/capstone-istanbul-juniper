@@ -25,7 +25,7 @@ const TeamCards = () => {
       <Row className="ourTeam__teamCards">
         {dataState.map((member) => (
           <MemberCard
-            key={member.name + " card"}
+            key={member.name + "Card"}
             name={t(`about.teamInfo.${member.name}.name`)}
             avatarUrl={member.avatar}
             bio={t(`about.teamInfo.${member.name}.bio`)}
