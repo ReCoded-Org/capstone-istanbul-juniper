@@ -1,6 +1,6 @@
 import React from "react";
-import ErrorMessage from "./index.jsx";
 import renderer from "react-test-renderer";
+import ErrorMessage from ".";
 
 it("ErrorMessage snapshot test", () => {
   const tree = renderer.create(<ErrorMessage />).toJSON();
