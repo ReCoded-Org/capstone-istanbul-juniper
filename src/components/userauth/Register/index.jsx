@@ -1,14 +1,14 @@
 import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
-import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateEmail, createErrorClass } from "../registerHelpers";
+import React, { useState } from "react";
+import { validateEmail, createErrorClass } from "../registerHelper";
 import ErrorMessage from "../ErrorMessage";
 
-const MAX_PASSWORD_LENGTH = 8;
+const MIN_PASSWORD_LENGTH = 6;
 
 const Register = ({
-  // check container/LoginRegister/index.jsx to see functions
+  // check containers/LoginRegister/index.jsx to see details of functions
   onSubmit,
   handleLogin,
   handleFacebookAuth,
@@ -25,54 +25,50 @@ const Register = ({
     isAgreed: false,
   });
   const [errors, setErrors] = useState({});
-  const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const [termsOpen, setTermsOpen] = useState(false);
   const handleChange = (key, value) => {
     const newValues = { ...registerInformation };
     newValues[key] = value;
     setRegisterInformation(newValues);
   };
-
-  const newErrorsObj = (registerInfo) => {
-    const { fullName, email, age, password, isAgreed } = registerInfo;
-    const errorObj = {};
-    if (fullName.trim() === "") {
-      errorObj.fullName = t("register.fullName");
-    }
-    if (age.trim() === "") {
-      errorObj.age = t("register.age");
-    }
-    if (password.trim().length < MAX_PASSWORD_LENGTH) {
-      errorObj.password = t("register.passwordCharacter");
-    }
-    if (password.trim() === "") {
-      errorObj.password = t("register.enterPassword");
-    }
-    if (validateEmail(email).length === 0) {
-      errorObj.email = t("register.emailFormat");
-    }
-    if (!isAgreed) {
-      errorObj.isAgreed = t("register.agreeOnTerms");
-    }
-
-    return errorObj;
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    const errorNameArr = Object.keys(newErrorsObj(registerInformation));
+    const { fullName, email, age, password, isAgreed } = registerInformation;
+    const newErrors = {};
+    if (fullName.trim() === "") {
+      newErrors.fullName = t("register.fullName");
+    }
+    if (email.trim() === "") {
+      newErrors.email = t("register.validEmail");
+    }
+    if (age.trim() === "") {
+      newErrors.age = t("register.age");
+    }
+    if (password.trim().length < MIN_PASSWORD_LENGTH) {
+      newErrors.password = t("register.passwordCharacter");
+    }
+    if (password.trim() === "") {
+      newErrors.password = t("register.enterPassword");
+    }
+    if (!validateEmail(email)) {
+      newErrors.email = t("register.emailFormat");
+    }
+    if (!isAgreed) {
+      newErrors.isAgreed = t("register.agreeOnterms");
+    }
+    setErrors(errors);
+    const errorNameArr = Object.keys(newErrors);
     if (errorNameArr.length > 0) {
-      setErrors(newErrorsObj);
       return;
     }
     onSubmit(registerInformation);
   };
-
   const handleOkTerms = () => {
     handleChange("isAgreed", true);
-    setIsTermsOpen(false);
+    setTermsOpen(false);
   };
   const handleCancelTerms = () => {
-    setIsTermsOpen(false);
+    setTermsOpen(false);
   };
   const termsAndConditionsTranslation = [
     ...t("register.terms", { returnObjects: true }),
@@ -82,7 +78,7 @@ const Register = ({
     <form noValidate onSubmit={handleSubmit}>
       <Modal
         title={t("register.termsTitle")}
-        visible={isTermsOpen}
+        visible={termsOpen}
         onOk={handleOkTerms}
         onCancel={handleCancelTerms}
         footer={[
@@ -94,17 +90,16 @@ const Register = ({
           </Button>,
         ]}
       >
-        {t("register.agreeOnTerms", { returnObjects: true })}
+        <ul>
+          {termsAndConditionsTranslation.map((termAndCondition) => (
+            <li key={termAndCondition}>{termAndCondition}</li>
+          ))}
+        </ul>
       </Modal>
       <div className="loginContainer">
-        <div className="loginContainer__loginTitle">{t("register.create")}</div>
+        <div className="loginContainer__loginTitle">{t("register.creat")}</div>
         {error && (
-          <Alert
-            style={{ marginBottom: 10 }}
-            type="error"
-            showIcon
-            message={error}
-          />
+          <Alert className="authAlert" type="error" showIcon message={error} />
         )}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
@@ -163,7 +158,7 @@ const Register = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Checkbox
-              checked={registerInformation.agree}
+              checked={registerInformation.isAgreed}
               onChange={(e) => {
                 handleChange("isAgreed", e.target.checked);
               }}
@@ -173,14 +168,10 @@ const Register = ({
                 type="link"
                 onClick={(e) => {
                   e.preventDefault();
-                  setIsTermsOpen(true);
+                  setTermsOpen(true);
                 }}
               >
-                <ul>
-                  {termsAndConditionsTranslation.map((termAndCondition) => (
-                    <li key={termAndCondition}>{termAndCondition}</li>
-                  ))}
-                </ul>
+                {t("register.termsAndConditions")}
               </Button>
             </Checkbox>
             <ErrorMessage message={errors.isAgreed} />
@@ -189,13 +180,16 @@ const Register = ({
             type="submit"
             className="loginContainer__loginDialog__submitButton"
           >
-            {t("register.createAccount")}
+            {t("register.creatAccount")}
           </button>
           <div className="loginContainer__loginDialog__registerLabel">
             {t("register.alreadyAMember")}
           </div>
           <button
-            onClick={handleLogin}
+            onClick={(e) => {
+              e.preventDefault();
+              handleLogin();
+            }}
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
@@ -205,14 +199,20 @@ const Register = ({
             {t("register.orYouCan")}
           </div>
           <button
-            onClick={handleFacebookAuth}
+            onClick={(e) => {
+              e.preventDefault();
+              handleFacebookAuth();
+            }}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
             {t("register.withFacebook")}
           </button>
           <button
-            onClick={handleGoogleAuth}
+            onClick={(e) => {
+              e.preventDefault();
+              handleGoogleAuth();
+            }}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >
