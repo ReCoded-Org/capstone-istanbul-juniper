@@ -17,7 +17,7 @@ const ProfilePage = () => {
   const ref = db.firestore().collection("users");
 
   const getUsers = () => {
-    ref.where("owner", "==", currentUserId).onSnapshot((querySnapshot) => {
+    ref.where("uid", "==", currentUserId).onSnapshot((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {
         items.push(doc.data());
