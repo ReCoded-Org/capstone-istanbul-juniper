@@ -59,4 +59,9 @@
 .profilePage__usersName {
   margin: 10px;
   color: #0e0d0c;
+  background-image: linear-gradient(315deg, #dcbc80 0%, #fcad4a 74%);
+  margin-bottom: 10%;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  font-family: "Salsa", cursive;
+  border-radius: 25px;
 }
