@@ -1,6 +1,6 @@
 import React from "react";
-import Register from "./index.jsx";
 import renderer from "react-test-renderer";
+import Register from ".";
 
 describe("Register Component", () => {
   it("matches the tree", () => {

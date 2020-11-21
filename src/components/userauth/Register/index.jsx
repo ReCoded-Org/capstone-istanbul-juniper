@@ -171,7 +171,7 @@ const Register = ({
                   setTermsOpen(true);
                 }}
               >
-                {t("register.termsandCon")}
+                {t("register.termsAndConditions")}
               </Button>
             </Checkbox>
             <ErrorMessage message={errors.isAgreed} />

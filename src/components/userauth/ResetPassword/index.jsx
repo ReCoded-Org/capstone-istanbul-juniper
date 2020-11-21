@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { validateEmail, createErrorClass } from "../registerHelper";
 import ErrorMessage from "../ErrorMessage";
 
-const PasswordReset = ({
+const ResetPassword = ({
   // // check containers/LoginRegister/index.jsx to see details of functions
   onSubmit,
   handleLogin,
@@ -88,4 +88,4 @@ const PasswordReset = ({
   );
 };
 
-export default PasswordReset;
+export default ResetPassword;

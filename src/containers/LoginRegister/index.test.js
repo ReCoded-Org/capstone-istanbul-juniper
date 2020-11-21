@@ -1,7 +1,7 @@
 import React from "react";
-import LoginRegisterPage from "./index.jsx";
 import renderer from "react-test-renderer";
 import { BrowserRouter } from "react-router-dom";
+import LoginRegisterPage from ".";
 
 describe("LoginRegisterPage Component", () => {
   it("matches the tree", () => {

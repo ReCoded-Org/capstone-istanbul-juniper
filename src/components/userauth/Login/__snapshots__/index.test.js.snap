@@ -55,12 +55,15 @@ exports[`Login Component matches the tree 1`] = `
       <div
         className="loginContainer__loginDialog__forgotPasswordContainer"
       >
-        <a
-          href="/#"
+        <button
+          className="ant-btn ant-btn-link"
           onClick={[Function]}
+          type="button"
         >
-          login.forgotPassword
-        </a>
+          <span>
+            login.forgotPassword
+          </span>
+        </button>
       </div>
       <button
         className="loginContainer__loginDialog__submitButton"
@@ -75,7 +78,6 @@ exports[`Login Component matches the tree 1`] = `
       </div>
       <button
         className="loginContainer__loginDialog__registerButton"
-        onClick={[Function]}
         type="button"
       >
         login.creat
@@ -87,14 +89,12 @@ exports[`Login Component matches the tree 1`] = `
       </div>
       <button
         className="loginContainer__loginDialog__facebookLoginBtn"
-        onClick={[Function]}
         type="button"
       >
         login.withFacebook
       </button>
       <button
         className="loginContainer__loginDialog__googleLoginBtn"
-        onClick={[Function]}
         type="button"
       >
         login.withGoogle
