@@ -17,9 +17,13 @@ const LoginRegisterPage = ({ history }) => {
   const [error, setError] = useState("");
   const [message, setMessage] = useState();
   const [loading, setLoading] = useState(false);
-  const login = async (email, password) => {
+
+  const resetErrorAndMessage = () => {
     setError("");
-    setMessage(<></>);
+    setMessage();
+  };
+  const login = async (email, password) => {
+    resetErrorAndMessage();
     try {
       setLoading(true);
       await auth.signInWithEmailAndPassword(email, password);
@@ -31,8 +35,7 @@ const LoginRegisterPage = ({ history }) => {
     }
   };
   const passwordReset = async (email) => {
-    setError("");
-    setMessage(<></>);
+    resetErrorAndMessage();
     try {
       setLoading(true);
       await auth.sendPasswordResetEmail(email);
@@ -59,8 +62,7 @@ const LoginRegisterPage = ({ history }) => {
   };
   // Login with FACEBOOK
   const loginWithFacebook = async () => {
-    setError("");
-    setMessage(<></>);
+    resetErrorAndMessage();
     try {
       setLoading(true);
       const provider = new firebase.auth.FacebookAuthProvider();
@@ -77,8 +79,7 @@ const LoginRegisterPage = ({ history }) => {
   };
   // Loogin with GOOGLE
   const loginWithGoogle = async () => {
-    setError("");
-    setMessage(<></>);
+    resetErrorAndMessage();
     try {
       setLoading(true);
       const provider = new firebase.auth.GoogleAuthProvider();
@@ -93,8 +94,7 @@ const LoginRegisterPage = ({ history }) => {
   };
 
   const register = async (fullname, email, age, password) => {
-    setError("");
-    setMessage(<></>);
+    resetErrorAndMessage();
     try {
       setLoading(true);
       const registeredUser = await auth.createUserWithEmailAndPassword(
@@ -125,23 +125,19 @@ const LoginRegisterPage = ({ history }) => {
             login(email, password);
           }}
           handleRegister={() => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             setActive("register");
           }}
           handlePasswordReset={() => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             setActive("reset");
           }}
           handleFacebookAuth={() => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             loginWithFacebook();
           }}
           handleGoogleAuth={() => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             loginWithGoogle();
           }}
         />
@@ -156,18 +152,15 @@ const LoginRegisterPage = ({ history }) => {
             register(fullname, email, age, password);
           }}
           handleLogin={() => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             setActive("login");
           }}
           onFacebookAuth={() => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             loginWithFacebook();
           }}
           onGoogleAuth={() => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             loginWithGoogle();
           }}
         />
@@ -179,18 +172,15 @@ const LoginRegisterPage = ({ history }) => {
           error={error}
           message={message}
           onSubmit={({ email }) => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             passwordReset(email);
           }}
           handleLogin={() => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             setActive("login");
           }}
           onFacebookAuth={() => {
-            setError("");
-            setMessage(<></>);
+            resetErrorAndMessage();
             loginWithFacebook();
           }}
         />
