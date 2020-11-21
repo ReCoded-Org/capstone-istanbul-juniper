@@ -5,7 +5,7 @@ import { Alert, Spin } from "antd";
 import firebase from "firebase";
 import Login from "../../components/userauth/Login";
 import Register from "../../components/userauth/Register";
-import PasswordReset from "../../components/userauth/PasswordReset";
+import ResetPassword from "../../components/userauth/PasswordReset";
 import firestore, { auth } from "../../firebaseConfig";
 // import { AuthContext } from '../../components/userauth/authContext';
 import "./index.css";
@@ -168,7 +168,7 @@ const LoginRegisterPage = ({ history }) => {
       break;
     case "reset":
       component = (
-        <PasswordReset
+        <ResetPassword
           error={error}
           message={message}
           onSubmit={({ email }) => {
