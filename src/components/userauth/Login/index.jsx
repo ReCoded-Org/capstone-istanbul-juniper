@@ -1,16 +1,13 @@
 import { Alert, Input, Button } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  validateEmail,
-  createErrorClass,
-} from "../../components/register/registerHelpers";
-import ErrorMessage from "../register/ErrorMessage";
+import { validateEmail, createErrorClass } from "../registerHelper";
+import ErrorMessage from "../ErrorMessage";
 
 const MIN_PASSWORD_LENGTH = 6;
 
 const Login = ({
-  // props are located in containers/LoginRegister/index.jsx
+  // check containers/LoginRegister/index.jsx to see details of functions
   onSubmit,
   handleFacebookAuth,
   handleGoogleAuth,
@@ -36,8 +33,11 @@ const Login = ({
     e.preventDefault();
     const { email, password } = loginCredentials;
     const newErrors = {};
-    if (validateEmail(email).length === 0) {
+    if (!validateEmail(email)) {
       newErrors.email = "Email format error";
+    }
+    if (email.trim() === "") {
+      newErrors.email = "Please fill this field";
     }
     if (password.trim().length < MIN_PASSWORD_LENGTH) {
       newErrors.password = "Password must be at least 6 characters long";
@@ -45,8 +45,9 @@ const Login = ({
     if (password.trim() === "") {
       newErrors.password = "Please fill this field";
     }
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    setErrors(newErrors);
+    const errorNameArr = Object.keys(newErrors);
+    if (errorNameArr.length > 0) {
       return;
     }
     onSubmit(loginCredentials);
@@ -57,12 +58,7 @@ const Login = ({
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">{t("login.login")}</div>
         {error && (
-          <Alert
-            className="loginContainer__alert"
-            type="error"
-            showIcon
-            message={error}
-          />
+          <Alert className="authAlert" type="error" showIcon message={error} />
         )}
         {message}
         <div className="loginContainer__loginDialog">
@@ -115,24 +111,33 @@ const Login = ({
             {t("login.new")}
           </div>
           <button
-            onClick={handleRegister}
+            onClick={(e) => {
+              e.preventDefault();
+              handleRegister();
+            }}
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
-            {t("login.create")}
+            {t("login.creat")}
           </button>
           <div className="loginContainer__loginDialog__loginOptionsTitle">
             {t("login.oryoucan")}
           </div>
           <button
-            onClick={handleFacebookAuth}
+            onClick={(e) => {
+              e.preventDefault();
+              handleFacebookAuth();
+            }}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
             {t("login.withFacebook")}
           </button>
           <button
-            onClick={handleGoogleAuth}
+            onClick={(e) => {
+              e.preventDefault();
+              handleGoogleAuth();
+            }}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >
