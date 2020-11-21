@@ -89,13 +89,13 @@
   "contact": {
     "headerSection": {
       "title": "Bizimle İletişime Geç",
-      "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
+      "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını buradan paylaşabilirsin."
     },
     "contactUsForm": {
       "name": "Adın:",
       "email": "Eposta adresin:",
       "message": "Bize neler sormak ve önermek istersin?",
-      "send": "İlet",
+      "send": "Gönder",
       "postSubmissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
     }
   },
