@@ -19,18 +19,18 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
     </p>
   </div>
   <div
-    className="ant-card ant-card-bordered ant-card-small gameContainer"
+    className="ant-card ant-card-small gameContainer"
   >
     <div
       className="ant-card-body"
       style={Object {}}
     >
       <div
-        className="ant-row gameContainer__listOfImages"
+        className="ant-col gameContainer__listOfImages"
         style={Object {}}
       >
         <div
-          className="ant-col gameContainer__listOfImages--imgContainer"
+          className="ant-row gameContainer__listOfImages--imgContainer"
           onClick={[Function]}
           style={Object {}}
         >
@@ -41,7 +41,7 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
           />
         </div>
         <div
-          className="ant-col gameContainer__listOfImages--imgContainer"
+          className="ant-row gameContainer__listOfImages--imgContainer"
           onClick={[Function]}
           style={Object {}}
         >
@@ -52,7 +52,7 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
           />
         </div>
         <div
-          className="ant-col gameContainer__listOfImages--imgContainer"
+          className="ant-row gameContainer__listOfImages--imgContainer"
           onClick={[Function]}
           style={Object {}}
         >
@@ -63,7 +63,7 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
           />
         </div>
         <div
-          className="ant-col gameContainer__listOfImages--imgContainer"
+          className="ant-row gameContainer__listOfImages--imgContainer"
           onClick={[Function]}
           style={Object {}}
         >
@@ -75,7 +75,7 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
         </div>
       </div>
       <div
-        className="ant-row gameContainer__puzzleGrid"
+        className="ant-col gameContainer__puzzleGrid"
         style={Object {}}
       >
         <div
