@@ -120,6 +120,7 @@ Array [
           >
             <svg
               aria-hidden="true"
+              className=""
               data-icon="question"
               fill="currentColor"
               focusable="false"
