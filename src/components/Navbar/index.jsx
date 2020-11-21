@@ -74,7 +74,6 @@ const Navbar = () => {
   };
 
   return (
-    <Router>
       <div className="navbar">
         <Row className="navbar__topHalf" justify="space-around" gutter={12}>
           <Col className="navbar__elements" flex={2}>
@@ -165,7 +164,6 @@ const Navbar = () => {
           <img className="navbar__logo" src={logoImg} alt="juniper-logo" />
         </Link>
       </div>
-    </Router>
   );
 };
 
