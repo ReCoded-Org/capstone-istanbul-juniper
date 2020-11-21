@@ -39,7 +39,7 @@ const LoginRegisterPage = ({ history }) => {
       setLoading(false);
       setMessage(
         <Alert
-          style={{ marginBottom: 10 }}
+          className="authAlert"
           showIcon
           message={
             <div>

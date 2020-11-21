@@ -110,3 +110,7 @@ button.loginContainer__loginDialog__facebookLoginBtn {
   padding: 5px;
   border: 0;
 }
+
+.authAlert {
+  margin-bottom: 10px;
+}

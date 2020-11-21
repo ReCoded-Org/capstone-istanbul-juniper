@@ -1,7 +1,10 @@
 import { Alert, Input, Button } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateEmail } from "../registerHelper";
+import { validateEmail, createErrorClass } from "../registerHelper";
+import ErrorMessage from "../ErrorMessage";
+
+const MIN_PASSWORD_LENGTH = 6;
 
 const Login = ({
   // check containers/LoginRegister/index.jsx to see details of functions
@@ -36,7 +39,7 @@ const Login = ({
     if (email.trim() === "") {
       newErrors.email = "Please fill this field";
     }
-    if (password.trim().length < 6) {
+    if (password.trim().length < MIN_PASSWORD_LENGTH) {
       newErrors.password = "Password must be at least 6 characters long";
     }
     if (password.trim() === "") {
@@ -55,12 +58,7 @@ const Login = ({
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">{t("login.login")}</div>
         {error && (
-          <Alert
-            style={{ marginBottom: 10 }}
-            type="error"
-            showIcon
-            message={error}
-          />
+          <Alert className="authAlert" type="error" showIcon message={error} />
         )}
         {message}
         <div className="loginContainer__loginDialog">
@@ -69,41 +67,28 @@ const Login = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.email && "loginContainer__loginDialog__input__hasError"
-              }
+              className={createErrorClass(errors.email)}
               type="email"
               value={loginCredentials.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors.email && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.email}
-              </div>
-            )}
+            <ErrorMessage message={errors.email} />
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("login.password")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.password &&
-                "loginContainer__loginDialog__input__hasError"
-              }
+              className={createErrorClass(errors.password)}
               type="password"
               value={loginCredentials.password}
               onChange={(e) => {
                 handleChange("password", e.target.value);
               }}
             />
-            {errors.password && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.password}
-              </div>
-            )}
+            <ErrorMessage message={errors.password} />
           </div>
           <div className="loginContainer__loginDialog__forgotPasswordContainer">
             <Button

@@ -2,7 +2,10 @@ import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
 import { useTranslation } from "react-i18next";
 import React, { useState } from "react";
-import { validateEmail } from "../registerHelper";
+import { validateEmail, createErrorClass } from "../registerHelper";
+import ErrorMessage from "../ErrorMessage";
+
+const MIN_PASSWORD_LENGTH = 6;
 
 const Register = ({
   // check containers/LoginRegister/index.jsx to see details of functions
@@ -19,7 +22,7 @@ const Register = ({
     age: "",
     email: "",
     password: "",
-    agree: false,
+    isAgreed: false,
   });
   const [errors, setErrors] = useState({});
   const [termsOpen, setTermsOpen] = useState(false);
@@ -30,7 +33,7 @@ const Register = ({
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { fullname, email, age, password, agree } = registerInformation;
+    const { fullname, email, age, password, isAgreed } = registerInformation;
     const newErrors = {};
     if (fullname.trim() === "") {
       newErrors.fullname = t("register.fullName");
@@ -41,7 +44,7 @@ const Register = ({
     if (age.trim() === "") {
       newErrors.age = t("register.age");
     }
-    if (password.trim().length < 6) {
+    if (password.trim().length < MIN_PASSWORD_LENGTH) {
       newErrors.password = t("register.passwordCharacter");
     }
     if (password.trim() === "") {
@@ -50,8 +53,8 @@ const Register = ({
     if (!validateEmail(email)) {
       newErrors.email = t("register.emailFormat");
     }
-    if (!agree) {
-      newErrors.agree = t("register.terms");
+    if (!isAgreed) {
+      newErrors.isAgreed = t("register.terms");
     }
     setErrors(errors);
     const errorNameArr = Object.keys(newErrors);
@@ -61,7 +64,7 @@ const Register = ({
     onSubmit(registerInformation);
   };
   const handleOkTerms = () => {
-    handleChange("agree", true);
+    handleChange("isAgreed", true);
     setTermsOpen(false);
   };
   const handleCancelTerms = () => {
@@ -96,12 +99,7 @@ const Register = ({
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">{t("register.creat")}</div>
         {error && (
-          <Alert
-            style={{ marginBottom: 10 }}
-            type="error"
-            showIcon
-            message={error}
-          />
+          <Alert className="authAlert" type="error" showIcon message={error} />
         )}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
@@ -109,86 +107,60 @@ const Register = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.fullname &&
-                "loginContainer__loginDialog__input__hasError"
-              }
+              className={createErrorClass(errors.fullname)}
               value={registerInformation.fullname}
               onChange={(e) => {
                 handleChange("fullname", e.target.value);
               }}
             />
-            {errors.fullname && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.fullname}
-              </div>
-            )}
+            <ErrorMessage message={errors.fullname} />
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.enterAge")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.age && "loginContainer__loginDialog__input__hasError"
-              }
+              className={createErrorClass(errors.age)}
               type="number"
               value={registerInformation.age}
               onChange={(e) => {
                 handleChange("age", e.target.value);
               }}
             />
-            {errors.age && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.age}
-              </div>
-            )}
+            <ErrorMessage message={errors.age} />
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.email")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.email && "loginContainer__loginDialog__input__hasError"
-              }
+              className={createErrorClass(errors.email)}
               value={registerInformation.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors.email && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.email}
-              </div>
-            )}
+            <ErrorMessage message={errors.email} />
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.password")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.password &&
-                "loginContainer__loginDialog__input__hasError"
-              }
+              className={createErrorClass(errors.password)}
               type="password"
               value={registerInformation.password}
               onChange={(e) => {
                 handleChange("password", e.target.value);
               }}
             />
-            {errors.password && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.password}
-              </div>
-            )}
+            <ErrorMessage message={errors.password} />
           </div>
           <div className="loginContainer__loginDialog__input">
             <Checkbox
-              checked={registerInformation.agree}
+              checked={registerInformation.isAgreed}
               onChange={(e) => {
-                handleChange("agree", e.target.checked);
+                handleChange("isAgreed", e.target.checked);
               }}
             >
               {t("register.iAgreeTo")}
@@ -202,11 +174,7 @@ const Register = ({
                 {t("register.termsandCon")}
               </Button>
             </Checkbox>
-            {errors.agree && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.agree}
-              </div>
-            )}
+            <ErrorMessage message={errors.isAgreed} />
           </div>
           <button
             type="submit"

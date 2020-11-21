@@ -1,7 +1,8 @@
 import { Alert, Input } from "antd";
 import { useTranslation } from "react-i18next";
 import React, { useState } from "react";
-import { validateEmail } from "../registerHelper";
+import { validateEmail, createErrorClass } from "../registerHelper";
+import ErrorMessage from "../ErrorMessage";
 
 const PasswordReset = ({
   // // check containers/LoginRegister/index.jsx to see details of functions
@@ -48,12 +49,7 @@ const PasswordReset = ({
           {t("passReset.passwordReset")}
         </div>
         {error && (
-          <Alert
-            style={{ marginBottom: 10 }}
-            type="error"
-            showIcon
-            message={error}
-          />
+          <Alert className="authAlert" type="error" showIcon message={error} />
         )}
         {message}
         <div className="loginContainer__loginDialog">
@@ -62,20 +58,14 @@ const PasswordReset = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.email && "loginContainer__loginDialog__input__hasError"
-              }
+              className={createErrorClass(errors.email)}
               type="email"
               value={passwordResetInfo.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors.email && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.email}
-              </div>
-            )}
+            <ErrorMessage message={errors.email} />
           </div>
           <button
             type="submit"
