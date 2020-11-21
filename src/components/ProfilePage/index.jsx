@@ -1,12 +1,12 @@
-import React, { useState, useEffect,useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import GamesCarousel from "../GamesCarousel";
 import { useTranslation } from "react-i18next";
 import "./index.css";
 import { Col, Layout } from "antd";
 import profilePageImg from "../../images/profilePage/profilePageImg.png";
 import db from "../../firebaseConfig";
-import { v4 as uuidv4 } from 'uuid';
-import { AuthContext } from '../../auth/authContext';
+import { v4 as uuidv4 } from "uuid";
+import { AuthContext } from "../../auth/authContext";
 
 const { Sider, Content } = Layout;
 const ProfilePage = () => {
@@ -14,21 +14,21 @@ const ProfilePage = () => {
   const { currentUser } = useContext(AuthContext);
   const currentUserId = currentUser ? currentUser.uid : null;
   const [users, setUsers] = useState([]);
-  const ref = db.firestore().collection('users');
-  
-const getUsers=()=>{
- ref.where('owner', '==', currentUserId).onSnapshot((querySnapshot)=>{
-  const items = [];
-  querySnapshot.forEach((doc) => {
-    items.push(doc.data());
-  });
-  setUsers(items);
-});}
+  const ref = db.firestore().collection("users");
 
-useEffect(() => {
+  const getUsers = () => {
+    ref.where("owner", "==", currentUserId).onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push(doc.data());
+      });
+      setUsers(items);
+    });
+  };
+
+  useEffect(() => {
     getUsers();
-  },[]);
-
+  }, []);
 
   return (
     <>
@@ -40,20 +40,15 @@ useEffect(() => {
               src={profilePageImg}
               alt="avatar"
             ></img>
-            {users.map((user) => 
-            <div className="textprofilePageUsersNameContainer" key={user.id}>
-              
-              <p className="profilePage__usersName">
-                 {user.fullname}
-              </p>
-              <p className="profilePage__usersName">
-                 {user.age}
-              </p>
-              <div>
-              <button onClick={() => deleteUser(user)}>X</button>
+            {users.map((user) => (
+              <div className="textprofilePageUsersNameContainer" key={user.id}>
+                <p className="profilePage__usersName">{user.fullname}</p>
+                <p className="profilePage__usersName">{user.age}</p>
+                <div>
+                  <button onClick={() => deleteUser(user)}>X</button>
+                </div>
               </div>
-            </div>
-            )}
+            ))}
           </div>
         </Sider>
         <Content>
