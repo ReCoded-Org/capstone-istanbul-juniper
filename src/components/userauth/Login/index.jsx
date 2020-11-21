@@ -121,7 +121,7 @@ const Login = ({
             {t("login.creat")}
           </button>
           <div className="loginContainer__loginDialog__loginOptionsTitle">
-            {t("login.oryoucan")}
+            {t("login.orYouCan")}
           </div>
           <button
             onClick={(e) => {
