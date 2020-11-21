@@ -7,7 +7,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import "./index.css";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import globe from "./../../images/earthNav.svg";
 
@@ -17,7 +17,6 @@ const Footer = () => {
   return (
     <div className="footerContainer">
       <footer>
-        <Router>
           <img alt="globe" src={globe} className="footerContainer__globe" />
           <Col>
             <Row
@@ -63,7 +62,6 @@ const Footer = () => {
               </Col>
             </Row>
           </Col>
-        </Router>
       </footer>
     </div>
   );
