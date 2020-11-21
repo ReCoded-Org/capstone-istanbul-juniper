@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Col, Row } from "antd";
 import "./index.css";
+import { SyncOutlined } from "@ant-design/icons";
 
 // Converts object to proper form data(string)
 const encodeFormData = (data) => {
@@ -21,6 +22,9 @@ const ContactUsForm = () => {
   // The change in isSubmitted state triggers post submission message
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  // The change in isLoading state triggers SyncOutlined icon spinning
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
 
   // application/x-www-form-urlencoded stands for POST data at HTTP.
@@ -36,6 +40,7 @@ const ContactUsForm = () => {
     }).then(() => {
       setTimeout(() => setIsSubmitted(false), 2000);
       setIsSubmitted(true);
+      setIsLoading(true);
       setFormValue({
         name: "",
         email: "",
@@ -109,6 +114,9 @@ const ContactUsForm = () => {
           <div className="contactUsForm__submit">
             <button type="submit" className="contactUsForm__submitButton">
               {t("contact.contactUsForm.send")}
+              <span className="contactUsForm__submitButtonSpinner">
+                <SyncOutlined spin={isLoading ? true : false} />
+              </span>
             </button>
           </div>
         </Row>
