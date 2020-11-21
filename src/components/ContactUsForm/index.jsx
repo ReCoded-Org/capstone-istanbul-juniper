@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Col, Row } from "antd";
-import { RiSendPlaneFill } from "react-icons/ri";
 import "./index.css";
 
 // Converts object to proper form data(string)
@@ -110,7 +109,6 @@ const ContactUsForm = () => {
           <div className="contactUsForm__submit">
             <button type="submit" className="contactUsForm__submitButton">
               {t("contact.contactUsForm.send")}
-              <RiSendPlaneFill />
             </button>
           </div>
         </Row>
