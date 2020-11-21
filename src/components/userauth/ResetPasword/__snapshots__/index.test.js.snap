@@ -11,7 +11,7 @@ exports[`PasswordReset Component matches the tree 1`] = `
     <div
       className="loginContainer__loginTitle"
     >
-      passReset.passwordReset
+      passwordReset.passwordReset
     </div>
     <div
       className="loginContainer__loginDialog"
@@ -19,7 +19,7 @@ exports[`PasswordReset Component matches the tree 1`] = `
       <div
         className="loginContainer__loginDialog__inputLabel"
       >
-        passReset.email
+        passwordReset.email
       </div>
       <div
         className="loginContainer__loginDialog__input"
@@ -38,14 +38,14 @@ exports[`PasswordReset Component matches the tree 1`] = `
         className="loginContainer__loginDialog__submitButton"
         type="submit"
       >
-        passReset.passwordReset
+        passwordReset.passwordReset
       </button>
       <button
         className="loginContainer__loginDialog__backToLoginButton"
         onClick={[Function]}
         type="button"
       >
-        passReset.backToLogin
+        passwordReset.backToLogin
       </button>
     </div>
   </div>
