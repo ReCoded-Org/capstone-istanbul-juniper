@@ -44,6 +44,8 @@
   cursor: pointer;
   color: white;
   width: clamp(6rem, 7rem, 8rem);
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Form post submission message styling */
