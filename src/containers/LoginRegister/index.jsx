@@ -25,17 +25,15 @@ const LoginRegisterPage = ({ history }) => {
     history.push("/");
   };
   const failedAction = (e) => {
-    setLoading(false);
+    setLoading(() => false);
     setError(e.message);
   };
-
   const login = async (email, password) => {
     resetErrorAndMessage();
     try {
-      setLoading(true);
-      setLoading(false);
+      setLoading(() => true);
       await auth.signInWithEmailAndPassword(email, password);
-
+      setLoading(() => false);
       addUserToHistory();
     } catch (e) {
       failedAction(e);
@@ -44,9 +42,9 @@ const LoginRegisterPage = ({ history }) => {
   const passwordReset = async (email) => {
     resetErrorAndMessage();
     try {
-      setLoading(true);
+      setLoading(() => true);
       await auth.sendPasswordResetEmail(email);
-      setLoading(false);
+      setLoading(() => false);
       setMessage(
         <Alert
           className="authAlert"
@@ -69,12 +67,12 @@ const LoginRegisterPage = ({ history }) => {
   const loginWithFacebook = async () => {
     resetErrorAndMessage();
     try {
-      setLoading(true);
+      setLoading(() => true);
       const provider = new firebase.auth.FacebookAuthProvider();
       provider.setCustomParameters({
         display: "popup",
       });
-      setLoading(false);
+      setLoading(() => false);
       addUserToHistory();
     } catch (e) {
       failedAction(e);
@@ -83,10 +81,10 @@ const LoginRegisterPage = ({ history }) => {
   const loginWithGoogle = async () => {
     resetErrorAndMessage();
     try {
-      setLoading(true);
+      setLoading(() => true);
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-      setLoading(false);
+      setLoading(() => false);
       addUserToHistory();
     } catch (e) {
       failedAction(e);
@@ -106,13 +104,12 @@ const LoginRegisterPage = ({ history }) => {
         age,
       });
       await auth.signInWithEmailAndPassword(email, password);
-      setLoading(false);
+      setLoading(() => false);
       addUserToHistory();
     } catch (e) {
       failedAction(e);
     }
   };
-
   const handleLogin = () => {
     resetErrorAndMessage();
     setActive("login");
