@@ -14,14 +14,12 @@ export default function HomePageHeaderSection() {
       <div className="homePageHeaderContainer">
         <Row justify="space-around" align="middle"></Row>
         <Row justify="space-around" align="middle">
-          <Col span={4} >
-            
+          <Col span={4}>
             <img
               alt="children playing in the garden"
               src={homePageHeaderImgRight}
-              className='homePageHeaderContainer__rightImg'
+              className="homePageHeaderContainer__rightImg"
             ></img>
-           
           </Col>
 
           <Col span={4} offset={6}>
@@ -35,16 +33,14 @@ export default function HomePageHeaderSection() {
               </p>
             </Row>
             <Row className="homePageHeaderContainer__button">
-              <Link to="/games" >
-              <button
-                className="homePageHeaderContainer__row"
-              >
-                {t("home.headerSection.headerButton")}
-              </button>
+              <Link to="/games">
+                <button className="homePageHeaderContainer__row">
+                  {t("home.headerSection.headerButton")}
+                </button>
               </Link>
             </Row>
           </Col>
-           <Col span={4}>
+          <Col span={4}>
             <img
               className="homePageHeaderContainer__img"
               alt="children playing in the garden"
