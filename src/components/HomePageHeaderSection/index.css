@@ -35,6 +35,7 @@
   cursor: pointer;
   min-height: 130%;
   outline: none;
+  color: black;
 }
 
 .homePageHeaderContainer__button {
