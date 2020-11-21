@@ -19,9 +19,6 @@ const ContactUsForm = () => {
     message: "",
   });
 
-  // The change in isSubmitted state triggers post submission message
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
   // The change in isLoading state triggers SyncOutlined icon spinning
   const [isLoading, setIsLoading] = useState(false);
 
@@ -54,12 +51,6 @@ const ContactUsForm = () => {
     <div className="contactUsFormContainer">
       <form onSubmit={handleSubmit}>
         <Col>
-          <div
-            className="contactUsForm__postSubmissionMessage"
-            style={{ visibility: isSubmitted ? "visible" : "hidden" }}
-          >
-            <strong>{t("contact.contactUsForm.postSubmissionMessage")}</strong>
-          </div>
           <Col>
             <label className="contactUsForm__label">
               {t("contact.contactUsForm.name")}
