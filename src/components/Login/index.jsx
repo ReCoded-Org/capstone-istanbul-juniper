@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import {
   validateEmail,
   hasError,
-  createErrorWarning,
 } from "../../components/register/registerHelpers";
+import ErrorMessage from "../ErrorMessage";
 
 const MIN_PASSWORD_LENGTH = 6;
 
@@ -78,7 +78,7 @@ const Login = ({
                 handleChange("email", e.target.value);
               }}
             />
-            {createErrorWarning(errors.email)}
+            <ErrorMessage message={errors.email} />
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("login.password")}
@@ -92,7 +92,7 @@ const Login = ({
                 handleChange("password", e.target.value);
               }}
             />
-            {createErrorWarning(errors.password)}
+            <ErrorMessage message={errors.password} />
           </div>
           <div className="loginContainer__loginDialog__forgotPasswordContainer">
             <Button
