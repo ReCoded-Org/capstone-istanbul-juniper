@@ -9,6 +9,7 @@ import db from "../../firebaseConfig";
 // here we hard codded the user id because the auth is not ready to work.
 const HARDCODED_USER = "4a3Fb5EJVcPEKisuetXtO2B9sWF3";
 const { Sider, Content } = Layout;
+
 const ProfilePage = () => {
   const { t } = useTranslation();
   const [user, setUser] = useState("");
