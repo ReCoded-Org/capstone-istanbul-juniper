@@ -47,14 +47,3 @@
   display: flex;
   justify-content: space-around;
 }
-
-/* Form post submission message styling */
-.contactUsForm__postSubmissionMessage {
-  color: white;
-  font-family: "Raleway";
-  font-size: clamp(1.5rem, 30px, 3rem);
-  text-align: center;
-  box-sizing: border-box;
-  background-color: #2a8c79;
-  border-radius: 10px;
-}
