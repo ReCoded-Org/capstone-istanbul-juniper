@@ -100,6 +100,9 @@
     }
   },
   "games": {
+    "quizGame": {
+      "title": "لعبة الاسئلة"
+    },
     "matchingGame": {
       "title": "لعبة التوصيل",
       "subtitle": ".اسحب الكلمات إلى الصور المتطابقة!دعنا نعزز مفردات بيئتنا",
@@ -218,6 +221,10 @@
       ]
     }
   },
+  "profilePage": {
+    "title": "أهلا بكم  "
+  },
+
   "gamesPage": {
     "level": "المستوى {{currentLevel}}",
     "nextReward": "المكافأة التالية",
