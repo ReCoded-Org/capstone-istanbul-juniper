@@ -13,7 +13,7 @@ const ProfilePage = () => {
   const { t } = useTranslation();
   const { currentUser } = useContext(AuthContext);
   const currentUserId = currentUser ? currentUser.uid : null;
-  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState([]);
   const ref = db.firestore().collection("users");
 
   const getUsers = () => {
@@ -22,7 +22,7 @@ const ProfilePage = () => {
       querySnapshot.forEach((doc) => {
         items.push(doc.data());
       });
-      setUsers(items);
+      setUser(items);
     });
   };
 
@@ -40,7 +40,7 @@ const ProfilePage = () => {
               src={profilePageImg}
               alt="avatar"
             ></img>
-            {users.map((user) => (
+            
               <div className="textprofilePageUsersNameContainer" key={user.id}>
                 <p className="profilePage__usersName">{user.fullname}</p>
                 <p className="profilePage__usersName">{user.age}</p>
@@ -48,7 +48,7 @@ const ProfilePage = () => {
                   <button onClick={() => deleteUser(user)}>X</button>
                 </div>
               </div>
-            ))}
+            
           </div>
         </Sider>
         <Content>
