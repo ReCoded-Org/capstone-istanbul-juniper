@@ -6,13 +6,9 @@ import { newErrorsObj, createErrorWarning, hasError } from "../registerHelpers";
 
 const Register = ({
   // check container/LoginRegister/index.jsx to see functions
-  // function
   onSubmit,
-  // function
   handleLogin,
-  // function
   handleFacebookAuth,
-  // function
   handleGoogleAuth,
   // string
   error,
