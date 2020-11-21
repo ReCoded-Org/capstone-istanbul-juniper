@@ -89,17 +89,20 @@
   "contact": {
     "headerSection": {
       "title": "Bizimle İletişime Geç",
-      "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını bizimle buradan paylaşabilirsin."
+      "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını buradan paylaşabilirsin."
     },
     "contactUsForm": {
       "name": "Adın:",
       "email": "Eposta adresin:",
       "message": "Bize neler sormak ve önermek istersin?",
-      "send": "İlet",
+      "send": "Gönder",
       "postSubmissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
     }
   },
   "games": {
+    "quizGame": {
+      "title": "Sınav Oyunu"
+    },
     "matchingGame": {
       "title": "Eşleştirme Oyunu",
       "subtitle": "Çevre kelime dağarcığımızı güçlendirelim! Kelimeleri doğru resimlere sürükleyerek eşleştirelim!",
@@ -218,6 +221,9 @@
       "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
     }
   },
+  "profilePage": {
+    "title": "Hoşgeldin"
+  },
   "gamesPage": {
     "level": "Seviye {{currentLevel}}",
     "nextReward": "Sıradaki ödül",
@@ -269,5 +275,9 @@
         "role": "Web Ön yüz Geliştirici"
       }
     }
+  },
+  "resourcesPage": {
+    "title": "Kütüphane",
+    "aboutPage": "Juniper Kütüphane, Çevre ile ilgili tematik alanlar hakkında kapsamlı, güvenilir ve güncel bilgileri barındıran çevrimiçi bir kütüphanedir. Web sitesi halka açıktır, ücretsizdir ve materyallere tek bir elverişli konumda erişim sağlar. Bu sayfa düzenli olarak güncellenecektir."
   }
 }
