@@ -1,7 +1,7 @@
 import { Alert, Input, Button } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateEmail, createErrorClass } from "../registerHelper";
+import { validateEmail, createErrorClassName } from "../registerHelper";
 import ErrorMessage from "../ErrorMessage";
 
 const MIN_PASSWORD_LENGTH = 6;
@@ -67,7 +67,7 @@ const Login = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={createErrorClass(errors.email)}
+              className={createErrorClassName(errors.email)}
               type="email"
               value={loginCredentials.email}
               onChange={(e) => {
@@ -81,7 +81,7 @@ const Login = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={createErrorClass(errors.password)}
+              className={createErrorClassName(errors.password)}
               type="password"
               value={loginCredentials.password}
               onChange={(e) => {
