@@ -7,3 +7,5 @@ exports[`ErrorMessage snapshot test 1`] = `
   test
 </div>
 `;
+
+exports[`ErrorMessage without message snapshot test  1`] = `null`;
