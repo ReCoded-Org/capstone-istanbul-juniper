@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   validateEmail,
-  hasError,
+  createErrorClass,
 } from "../../components/register/registerHelpers";
-import ErrorMessage from "../ErrorMessage";
+import ErrorMessage from "../register/ErrorMessage";
 
 const MIN_PASSWORD_LENGTH = 6;
 
@@ -71,7 +71,7 @@ const Login = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={hasError(errors.email)}
+              className={createErrorClass(errors.email)}
               type="email"
               value={loginCredentials.email}
               onChange={(e) => {
@@ -85,7 +85,7 @@ const Login = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={hasError(errors.password)}
+              className={createErrorClass(errors.password)}
               type="password"
               value={loginCredentials.password}
               onChange={(e) => {
