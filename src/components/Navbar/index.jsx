@@ -39,19 +39,19 @@ const Navbar = () => {
         className="navbar__languageContainer-btn"
         onClick={(e) => handleLanguageChange("en")}
       >
-        <p>English</p>
+        <p>EN</p>
       </Menu.Item>
       <Menu.Item
         className="navbar__languageContainer-btn"
         onClick={(e) => handleLanguageChange("tr")}
       >
-        <p>Türkçe</p>
+        <p>TR</p>
       </Menu.Item>
       <Menu.Item
         className="navbar__languageContainer-btn"
         onClick={(e) => handleLanguageChange("ar")}
       >
-        <p>العربية</p>
+        <p>AR</p>
       </Menu.Item>
     </Menu>
   );
@@ -142,7 +142,7 @@ const Navbar = () => {
                 overlay={languagesMenu}
                 className="navbar__languageContainer"
               >
-                <GlobalOutlined />
+                <GlobalOutlined className="navbar__element-lang"/>
               </Dropdown>
             </Col>
           </Col>
