@@ -20,6 +20,11 @@
     "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
   },
   "home": {
+    "headerSection": {
+      "mainText": "Keşfedin, Keşfedin, Öğrenin",
+      "secondaryText": "Çocukların bugün karşılaştığımız çevre sorunlarıyla ilgili eğlenceli ve eğitici materyaller bulmaları için bir kaynak.",
+      "headerButton": "Bilgi & Oyunlar"
+    },
     "stayUpToDate": "Güncel kal!",
     "spreadTheWord": "Öğrendiklerini paylaş!",
     "twitterPages": [
