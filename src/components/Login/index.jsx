@@ -1,7 +1,11 @@
 import { Alert, Input, Button } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateEmail } from "../../components/registerpage/registerHelpers";
+import {
+  validateEmail,
+  hasError,
+  createErrorWarning,
+} from "../../components/register/registerHelpers";
 
 const MIN_PASSWORD_LENGTH = 6;
 
@@ -67,41 +71,28 @@ const Login = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.email && "loginContainer__loginDialog__input__hasError"
-              }
+              className={hasError(errors.email)}
               type="email"
               value={loginCredentials.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors.email && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.email}
-              </div>
-            )}
+            {createErrorWarning(errors.email)}
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("login.password")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.password &&
-                "loginContainer__loginDialog__input__hasError"
-              }
+              className={hasError(errors.password)}
               type="password"
               value={loginCredentials.password}
               onChange={(e) => {
                 handleChange("password", e.target.value);
               }}
             />
-            {errors.password && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.password}
-              </div>
-            )}
+            {createErrorWarning(errors.password)}
           </div>
           <div className="loginContainer__loginDialog__forgotPasswordContainer">
             <Button
