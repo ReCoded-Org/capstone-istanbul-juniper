@@ -20,7 +20,7 @@ const LoginRegisterPage = ({ history }) => {
 
   const resetErrorAndMessage = () => {
     setError("");
-    setMessage();
+    setMessage(<></>);
   };
   const login = async (email, password) => {
     resetErrorAndMessage();
