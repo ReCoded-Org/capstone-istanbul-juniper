@@ -1,15 +1,16 @@
 import { Alert, Input } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateEmail } from "../../components/registerpage/registerHelpers";
+import {
+  validateEmail,
+  hasError,
+} from "../../components/register/registerHelpers";
 import "./index.css";
 
 const PasswordReset = ({
   // props are located in containers/LoginRegister/index.jsx
-  // function
-  onSubmit,
-  // function
-  onGoToLogin,
+  handleSubmit,
+  handleLogin,
   // string
   error,
   // string
