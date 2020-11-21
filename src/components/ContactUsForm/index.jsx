@@ -38,7 +38,10 @@ const ContactUsForm = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encodeFormData({ "form-name": "contact", ...formValue }),
     }).then(() => {
-      setTimeout(() => setIsSubmitted(false), 2000);
+      setTimeout(() => {
+        setIsLoading(false);
+        setIsSubmitted(false);
+      }, 2000);
       setIsSubmitted(true);
       setIsLoading(true);
       setFormValue({
