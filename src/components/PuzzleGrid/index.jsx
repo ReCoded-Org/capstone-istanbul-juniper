@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Row } from "antd";
+import { Col } from "antd";
 import shuffle from "./../memorygame/shuffle";
 import "./index.css";
 
