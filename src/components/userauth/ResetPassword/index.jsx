@@ -14,11 +14,11 @@ const ResetPassword = ({
   message,
 }) => {
   const [t] = useTranslation();
-  const [passwordResetInfo, setPasswordRestInfo] = useState({ email: "" });
+  const [passwordResetInfo, setPasswordResetInfo] = useState({ email: "" });
   const handleChange = (key, value) => {
     const newValues = { ...passwordResetInfo };
     newValues[key] = value;
-    setPasswordRestInfo(newValues);
+    setPasswordResetInfo(newValues);
   };
   const [errors, setErrors] = useState({});
   const handleSubmit = (e) => {
@@ -26,10 +26,10 @@ const ResetPassword = ({
     const { email } = passwordResetInfo;
     const newErrors = {};
     if (!validateEmail(email)) {
-      newErrors.email = t("passReset.emailFormat");
+      errors["email"] = t("passwordReset.emailFormat");
     }
     if (email.trim() === "") {
-      newErrors.email = t("passReset.fillField");
+      errors["email"] = t("passwordReset.fillField");
     }
     setErrors(newErrors);
     const errorNameArr = Object.keys(newErrors);
@@ -46,7 +46,7 @@ const ResetPassword = ({
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">
-          {t("passReset.passwordReset")}
+          {t("passwordReset.passwordReset")}
         </div>
         {error && (
           <Alert className="authAlert" type="error" showIcon message={error} />
@@ -54,7 +54,7 @@ const ResetPassword = ({
         {message}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
-            {t("passReset.email")}
+            {t("passwordReset.email")}
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
@@ -71,7 +71,7 @@ const ResetPassword = ({
             type="submit"
             className="loginContainer__loginDialog__submitButton"
           >
-            {t("passReset.passwordReset")}
+            {t("passwordReset.passwordReset")}
           </button>
           <button
             onClick={() => {
@@ -80,7 +80,7 @@ const ResetPassword = ({
             type="button"
             className="loginContainer__loginDialog__backToLoginButton"
           >
-            {t("passReset.backToLogin")}
+            {t("passwordReset.backToLogin")}
           </button>
         </div>
       </div>

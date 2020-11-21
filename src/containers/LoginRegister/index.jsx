@@ -46,9 +46,9 @@ const LoginRegisterPage = ({ history }) => {
           showIcon
           message={
             <div>
-              {t("loginRegister.anEmailsent")}
+              {t("loginRegister.anEmailSent")}
               <b>{email}</b>
-              {t("loginRegister.anEmailsentcontain")}
+              {t("loginRegister.anEmailSentContain")}
             </div>
           }
           type="success"
@@ -77,7 +77,7 @@ const LoginRegisterPage = ({ history }) => {
       setError(e.message);
     }
   };
-  // Loogin with GOOGLE
+  // Login with GOOGLE
   const loginWithGoogle = async () => {
     resetErrorAndMessage();
     try {
@@ -93,7 +93,7 @@ const LoginRegisterPage = ({ history }) => {
     }
   };
 
-  const register = async (fullname, email, age, password) => {
+  const register = async (fullName, email, age, password) => {
     resetErrorAndMessage();
     try {
       setLoading(true);
@@ -103,8 +103,9 @@ const LoginRegisterPage = ({ history }) => {
       );
       await firestore.collection("users").doc(registeredUser.user.uid).set({
         uid: registeredUser.user.uid,
-        fullname,
-        age,
+        fullName: fullName,
+        age: age,
+        userExperiencePoints: 0,
       });
       await auth.signInWithEmailAndPassword(email, password);
       setLoading(false);
@@ -148,8 +149,8 @@ const LoginRegisterPage = ({ history }) => {
         <Register
           error={error}
           message={message}
-          onSubmit={({ fullname, email, age, password }) => {
-            register(fullname, email, age, password);
+          onSubmit={({ fullName, email, age, password }) => {
+            register(fullName, email, age, password);
           }}
           handleLogin={() => {
             resetErrorAndMessage();
@@ -193,11 +194,11 @@ const LoginRegisterPage = ({ history }) => {
   return (
     <>
       <Spin spinning={loading}>{component}</Spin>
-      <div className="LoginRegister__footerContainer">
+      <div className="loginRegister__footerContainer">
         <img
           alt="footerKids"
           src={kids}
-          className="LoginRegister__footerContainer__kidsImage"
+          className="loginRegister__footerContainer__kidsImage"
         />
       </div>
     </>

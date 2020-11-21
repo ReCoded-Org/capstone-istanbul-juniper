@@ -25,7 +25,7 @@
     "withFacebook": "Log in with Facebook",
     "withGoogle": "Log in with Google"
   },
-  "passReset": {
+  "passwordReset": {
     "emailFormat": "Email format Error",
     "fillField": "Please fill this field",
     "passwordReset": "Reset your password",
@@ -64,8 +64,8 @@
     "withGoogle": "Log in with Google"
   },
   "loginRegister": {
-    "anEmailsent": "An email message has been sent to ",
-    "anEmailsentcontain": "contain password reset instructions, please check your inbox and follow the steps indicated in that message."
+    "anEmailSent": "An email message has been sent to ",
+    "anEmailSentContain": "contain password reset instructions, please check your inbox and follow the steps indicated in that message."
   },
   "home": {
     "headerSection": {
@@ -97,6 +97,11 @@
         "href": "https://twitter.com/WWF?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
       }
     ],
+    "resourcesSection": {
+      "pollution": "Pollution",
+      "climateChange": "Climate Change",
+      "reduceReuseRecycle": "Reduce, Reuse, Recycle"
+    },
     "gamesCarousel": {
       "title": "Games",
       "subtitle": "Popular Games",
@@ -133,72 +138,6 @@
         }
       ]
     }
-  },
-  "memoryGame": {
-    "title": "Memory Game",
-    "facts": "Facts",
-    "cards": [
-      {
-        "description": "Acid Rain",
-        "link": "https://kids.kiddle.co/Acid_rain",
-        "phrase": "Did you know that volcanoe eruptions can cause acid rain? "
-      },
-      {
-        "description": "Air Pollution",
-        "link": "https://kids.kiddle.co/Air_pollution",
-        "phrase": "Did you know that even 2000 years ago Romans were complaining about air pollution?"
-      },
-      {
-        "description": "Alternative Energy",
-        "link": "https://iswitch.com.sg/amazing-facts-about-renewable-energy/",
-        "phrase": "Did you know that a single wind turbine can power thousand homes?"
-      },
-      {
-        "description": "Chemical Waste",
-        "link": "https://www.theworldcounts.com/stories/hazardous_waste_facts",
-        "phrase": "Did you know that in 2020, 338 million tons of hazardous waste was produced?"
-      },
-      {
-        "description": "Deforestation",
-        "link": "https://www.theworldcounts.com/stories/deforestation-facts-for-kids",
-        "phrase": "Did you know that in 100 years, there will be no rainforrests?"
-      },
-      {
-        "description": "Global Warming",
-        "link": "https://www.theworldcounts.com/stories/climate-change-facts-for-kids",
-        "phrase": "Did you know that Earth is still in an Ice Age which started 2.5 million years ago?"
-      },
-      {
-        "description": "Greenhouse Effect",
-        "link": "https://www.theworldcounts.com/challenges/climate-change/global-warming/global-co2-emissions/story",
-        "phrase": "Did you know that from 1850 to 2019 2,400,000,000,000 tons of CO2 was emitted by human activity?"
-      },
-      {
-        "description": "Littering",
-        "link": "https://www.theworldcounts.com/challenges/planet-earth/waste/global-waste-problem/story",
-        "phrase": "Did you know that every year 2,120,000,000 tons of waste dumped on planet?"
-      },
-      {
-        "description": "Melting Ice Caps",
-        "link": "https://www.theworldcounts.com/challenges/climate-change/global-warming/the-melting-ice-caps/story",
-        "phrase": "Did you know that between 1961 and 2016 9,000,000,000,000 tons of Earth's glacier was lost?"
-      },
-      {
-        "description": "Ozone Hole",
-        "link": "https://www.theworldcounts.com/challenges/planet-earth/air/ozone-layer-depletion/story",
-        "phrase": "Did you know that ozone layer will not be fully recovered until around 2070?"
-      },
-      {
-        "description": "Recycle",
-        "link": "https://www.theworldcounts.com/stories/recycle-facts-for-kids",
-        "phrase": "Did you know that recycling 1 aluminum can saves enough energy to light a 100 watt light bulb for 20 hours and a TV for 2 hours?"
-      },
-      {
-        "description": "Water Pollution",
-        "link": "https://www.theworldcounts.com/stories/how-pollution-affects-the-environment",
-        "phrase": "Did you know that the Earth has garbage islands the size of continents floating in our oceans?"
-      }
-    ]
   },
   "contact": {
     "headerSection": {
@@ -252,6 +191,83 @@
     "puzzleGame": {
       "title": "Image Puzzle",
       "subtitle": "Put the pieces in the correct order to see the full picture!"
+    },
+    "memoryGame": {
+      "title": "Memory Game",
+      "facts": "Facts",
+      "scrollToFactsButtonText": "Unlocked Facts",
+      "header": "Test your memory to reveal facts!",
+      "howToPlayTitle": "How to play?",
+      "howToPlayDescription": "Click on a card to reveal image behind and match it by clicking on a card with same image.",
+      "emptyFactListMessage": "Match cards to reveal facts!",
+      "cards": [
+        {
+          "description": "Acid Rain",
+          "link": "https://kids.kiddle.co/Acid_rain",
+          "phrase": "Did you know that volcanoe eruptions can cause acid rain? "
+        },
+        {
+          "description": "Air Pollution",
+          "link": "https://kids.kiddle.co/Air_pollution",
+          "phrase": "Did you know that even 2000 years ago Romans were complaining about air pollution?"
+        },
+        {
+          "description": "Alternative Energy",
+          "link": "https://iswitch.com.sg/amazing-facts-about-renewable-energy/",
+          "phrase": "Did you know that a single wind turbine can power thousand homes?"
+        },
+        {
+          "description": "Chemical Waste",
+          "link": "https://www.theworldcounts.com/stories/hazardous_waste_facts",
+          "phrase": "Did you know that in 2020, 338 million tons of hazardous waste was produced?"
+        },
+        {
+          "description": "Deforestation",
+          "link": "https://www.theworldcounts.com/stories/deforestation-facts-for-kids",
+          "phrase": "Did you know that in 100 years, there will be no rainforrests?"
+        },
+        {
+          "description": "Global Warming",
+          "link": "https://www.theworldcounts.com/stories/climate-change-facts-for-kids",
+          "phrase": "Did you know that Earth is still in an Ice Age which started 2.5 million years ago?"
+        },
+        {
+          "description": "Greenhouse Effect",
+          "link": "https://www.theworldcounts.com/challenges/climate-change/global-warming/global-co2-emissions/story",
+          "phrase": "Did you know that from 1850 to 2019 2,400,000,000,000 tons of CO2 was emitted by human activity?"
+        },
+        {
+          "description": "Littering",
+          "link": "https://www.theworldcounts.com/challenges/planet-earth/waste/global-waste-problem/story",
+          "phrase": "Did you know that every year 2,120,000,000 tons of waste dumped on planet?"
+        },
+        {
+          "description": "Melting Ice Caps",
+          "link": "https://www.theworldcounts.com/challenges/climate-change/global-warming/the-melting-ice-caps/story",
+          "phrase": "Did you know that between 1961 and 2016 9,000,000,000,000 tons of Earth's glacier was lost?"
+        },
+        {
+          "description": "Ozone Hole",
+          "link": "https://www.theworldcounts.com/challenges/planet-earth/air/ozone-layer-depletion/story",
+          "phrase": "Did you know that ozone layer will not be fully recovered until around 2070?"
+        },
+        {
+          "description": "Recycle",
+          "link": "https://www.theworldcounts.com/stories/recycle-facts-for-kids",
+          "phrase": "Did you know that recycling 1 aluminum can saves enough energy to light a 100 watt light bulb for 20 hours and a TV for 2 hours?"
+        },
+        {
+          "description": "Water Pollution",
+          "link": "https://www.theworldcounts.com/stories/how-pollution-affects-the-environment",
+          "phrase": "Did you know that the Earth has garbage islands the size of continents floating in our oceans?"
+        }
+      ]
     }
+  },
+  "about": {
+    "aboutUsHeader": "About us",
+    "aboutUsText": "We are a group of multi-national youth who found their common ground in using tech for the benefit of people. Juniper, consists of a group of 5 junior developers and 1 lead engineer working together to educate children in MENA about environmental issues and climate change through educational games. Our target group is kids living in MENA that are 5-9 years old; thus, Juniper is delivered in three main languages to help kids and their teachers/parents to easily surf the website.",
+    "whyWeDoItHeader": "Why we do it",
+    "whyWeDoItText": "We have a moral obligation to preserve nature and its features, because protecting the environment protects humanity from toxic substances and our quality of food. We believe that the new generation in MENA should be supported with the right tools to believe and act for the benefit of humanitarian and social issues, on the local and global scale. Given the right tools, it is not impossible to raise a generation of activists."
   }
 }
