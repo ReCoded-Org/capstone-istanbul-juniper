@@ -2,11 +2,8 @@ import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  validateEmail,
-  createErrorWarning,
-  hasError,
-} from "../registerHelpers";
+import { validateEmail, hasError } from "../registerHelpers";
+import ErrorMessage from "../ErrorMessage";
 
 const Register = ({
   // check container/LoginRegister/index.jsx to see functions
@@ -119,7 +116,7 @@ const Register = ({
                 handleChange("fullName", e.target.value);
               }}
             />
-            {createErrorWarning(errors.fullName)}
+            <ErrorMessage message={errors.fullName} />
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.enterAge")}
@@ -133,7 +130,7 @@ const Register = ({
                 handleChange("age", e.target.value);
               }}
             />
-            {createErrorWarning(errors.age)}
+            <ErrorMessage message={errors.age} />
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.email")}
@@ -146,7 +143,7 @@ const Register = ({
                 handleChange("email", e.target.value);
               }}
             />
-            {createErrorWarning(errors.email)}
+            <ErrorMessage message={errors.email} />
           </div>
           <div className="loginContainer__loginDialog__inputLabel">
             {t("register.password")}
@@ -160,7 +157,7 @@ const Register = ({
                 handleChange("password", e.target.value);
               }}
             />
-            {createErrorWarning(errors.password)}
+            <ErrorMessage message={errors.password} />
           </div>
           <div className="loginContainer__loginDialog__input">
             <Checkbox
@@ -184,7 +181,7 @@ const Register = ({
                 </ul>
               </Button>
             </Checkbox>
-            {createErrorWarning(errors.isAgreed)}
+            <ErrorMessage message={errors.isAgreed} />
           </div>
           <button
             type="submit"
