@@ -56,10 +56,6 @@ const Navbar = () => {
     </Menu>
   );
 
-  useEffect(() => {
-    console.log(window.innerWidth);
-  }, []);
-
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
   };
