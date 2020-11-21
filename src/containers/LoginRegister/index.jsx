@@ -59,7 +59,6 @@ const LoginRegisterPage = ({ history }) => {
       setError(e.message);
     }
   };
-  // Login with FACEBOOK
   const loginWithFacebook = async () => {
     resetErrorAndMessage();
     try {
@@ -75,7 +74,6 @@ const LoginRegisterPage = ({ history }) => {
       setError(e.message);
     }
   };
-  // Login with GOOGLE
   const loginWithGoogle = async () => {
     resetErrorAndMessage();
     try {
