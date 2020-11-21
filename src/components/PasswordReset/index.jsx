@@ -10,7 +10,7 @@ import "./index.css";
 
 const PasswordReset = ({
   // props are located in containers/LoginRegister/index.jsx
-  handleSubmit,
+  onSubmit,
   handleLogin,
   // string
   error,
@@ -73,7 +73,7 @@ const PasswordReset = ({
             {t("passwordReset.passwordReset")}
           </button>
           <button
-            onClick={onGoToLogin}
+            onClick={handleLogin}
             type="button"
             className="loginContainer__loginDialog__backToLoginButton"
           >
