@@ -27,11 +27,11 @@ const TeamCards = () => {
           <MemberCard
             key={member.name + " card"}
             name={t(`about.teamInfo.${member.name}.name`)}
-            avatar={member.avatar}
+            avatarUrl={member.avatar}
             bio={t(`about.teamInfo.${member.name}.bio`)}
             role={t(`about.teamInfo.${member.name}.role`)}
-            linkedin={member.linkedin}
-            github={member.github}
+            linkedinUrl={member.linkedin}
+            githubUrl={member.github}
           />
         ))}
       </Row>

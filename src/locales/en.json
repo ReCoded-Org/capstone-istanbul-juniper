@@ -245,7 +245,7 @@
       },
       "ibrahim": {
         "name": "Ibrahim Aljarad",
-        "bio": "Hey, I'm Ibrahim from Syria, I studied coding during the frontend web developement bootcamp provided by Re:Coded where Flatiron School's curriculum was taught, I also studied economics at Alfurat university. My other experiences include working with several channels and agencies as a satellite producer providing the technical support for the field producing teams.",
+        "bio": "Hey, I'm Ibrahim from Syria, I studied coding during the frontend web development bootcamp provided by Re:Coded where Flatiron School's curriculum was taught, I also studied economics at Alfurat University. My other experiences include working with several channels and agencies as a satellite producer providing the technical support for the field producing teams.",
         "role": "Junior Developer"
       },
       "majd": {
@@ -255,17 +255,17 @@
       },
       "sule": {
         "name": "Sule Sinikoglu",
-        "bio": "A Web Developer who writes `good code` for creating positive impact on Global Challenges.",
+        "bio": "A web developer who writes \"good code\" for creating positive impact on Global Challenges.",
         "role": "Junior Developer"
       },
       "tarkan": {
         "name": "Tarkan Mansuroglu",
-        "bio": "A `Re:Coded Front-End Web Development Bootcamp` trained and partially self-taught front-end web developer. He is also a passionate learner, PC enthusiast, gamer and fitness enthusiast. He loves solving real life problems to test and develop his skills. Follow him through social media!",
+        "bio": "A \"Re:Coded Front-End Web Development Bootcamp\" trained and partially self-taught front-end web developer. He is also a passionate learner, PC enthusiast, gamer and fitness enthusiast. He loves solving real life problems to test and develop his skills. Follow him through social media!",
         "role": "Junior Developer"
       },
       "yaman": {
         "name": "Mohamad Yaman Sammani",
-        "bio": "Yaman is a junior Front-End web developer graduated from Re: Coded Bootcamp in November 2020. His passion is to designee programs that support easy access to services migrants in host countries.",
+        "bio": "Yaman is a junior Front-End web developer graduated from Re:Coded Bootcamp in November 2020. His passion is to design programs that support easy access to services for migrants in host countries.",
         "role": "Junior Developer"
       }
     }
