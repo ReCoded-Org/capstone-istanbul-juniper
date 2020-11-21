@@ -5476,7 +5476,7 @@ firebase@^7.24.0:
     "@firebase/storage" "0.3.43"
     "@firebase/util" "0.3.2"
 
-firebaseui@^4.7.0:
+firebaseui@^4.7.1:
   version "4.7.1"
   resolved "https://registry.yarnpkg.com/firebaseui/-/firebaseui-4.7.1.tgz#8e0303d9f733e16b0bfbfa24001ab8bd4bc98038"
   integrity sha512-wDdo3LLnh9sV1dDKyNgn4M7cKecILosvqvtQE1SUum/R+eXLdN1q1ZRKZ2Lp6ZyP0XDAHrotssS4vJNh4OdwuQ==

@@ -2,16 +2,18 @@ import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert, Spin } from "antd";
 import { withRouter } from "react-router-dom";
+import firebase from "firebase";
+import firebaseui from "firebaseui";
 import Login from "../../components/userauth/Login";
 import Register from "../../components/userauth/Register";
 import PasswordReset from "../../components/userauth/PasswordReset";
 import db from "../../firebaseConfig";
-// import firebase from 'firebase';
 import { AuthContext } from "../../components/userauth/auth";
 import "./index.css";
 import kids from "../../images/family.png";
 
 const LoginRegisterPage = ({ history }) => {
+  const ui = new firebaseui.auth.AuthUI(db.auth());
   const [active, setActive] = useState("login");
   const [error, setError] = useState("");
   const [message, setMessage] = useState();
@@ -25,7 +27,7 @@ const LoginRegisterPage = ({ history }) => {
     setMessage(<></>);
     try {
       setLoading(true);
-      await auth.signInWithEmailAndPassword(email, password);
+      await db.auth.signInWithEmailAndPassword(email, password);
       setLoading(false);
       history.push("/");
     } catch (e) {
