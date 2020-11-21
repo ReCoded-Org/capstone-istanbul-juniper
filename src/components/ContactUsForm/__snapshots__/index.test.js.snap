@@ -12,18 +12,6 @@ exports[`ContactUsForm snapshot test 1`] = `
       style={Object {}}
     >
       <div
-        className="contactUsForm__postSubmissionMessage"
-        style={
-          Object {
-            "visibility": "hidden",
-          }
-        }
-      >
-        <strong>
-          contact.contactUsForm.postSubmissionMessage
-        </strong>
-      </div>
-      <div
         className="ant-col"
         style={Object {}}
       >
