@@ -111,7 +111,10 @@ const Login = ({
             {t("login.new")}
           </div>
           <button
-            onClick={handleRegister}
+            onClick={(e) => {
+              e.preventDefault();
+              handleRegister();
+            }}
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
@@ -121,14 +124,20 @@ const Login = ({
             {t("login.oryoucan")}
           </div>
           <button
-            onClick={handleFacebookAuth}
+            onClick={(e) => {
+              e.preventDefault();
+              handleFacebookAuth();
+            }}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
             {t("login.withFacebook")}
           </button>
           <button
-            onClick={handleGoogleAuth}
+            onClick={(e) => {
+              e.preventDefault();
+              handleGoogleAuth();
+            }}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >

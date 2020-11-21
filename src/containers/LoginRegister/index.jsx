@@ -103,8 +103,8 @@ const LoginRegisterPage = ({ history }) => {
       );
       await firestore.collection("users").doc(registeredUser.user.uid).set({
         uid: registeredUser.user.uid,
-        fullName: fullName,
-        age: age,
+        fullName,
+        age,
         userExperiencePoints: 0,
       });
       await auth.signInWithEmailAndPassword(email, password);
@@ -156,11 +156,11 @@ const LoginRegisterPage = ({ history }) => {
             resetErrorAndMessage();
             setActive("login");
           }}
-          onFacebookAuth={() => {
+          handleFacebookAuth={() => {
             resetErrorAndMessage();
             loginWithFacebook();
           }}
-          onGoogleAuth={() => {
+          handleGoogleAuth={() => {
             resetErrorAndMessage();
             loginWithGoogle();
           }}
@@ -180,7 +180,7 @@ const LoginRegisterPage = ({ history }) => {
             resetErrorAndMessage();
             setActive("login");
           }}
-          onFacebookAuth={() => {
+          handleFacebookAuth={() => {
             resetErrorAndMessage();
             loginWithFacebook();
           }}

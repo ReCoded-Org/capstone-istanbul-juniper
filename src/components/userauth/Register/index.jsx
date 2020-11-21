@@ -92,7 +92,7 @@ const Register = ({
       >
         <ul>
           {termsAndConditionsTranslation.map((termAndCondition) => (
-            <li>{termAndCondition}</li>
+            <li key={termAndCondition}>{termAndCondition}</li>
           ))}
         </ul>
       </Modal>
@@ -186,7 +186,10 @@ const Register = ({
             {t("register.alreadyAMember")}
           </div>
           <button
-            onClick={handleLogin}
+            onClick={(e) => {
+              e.preventDefault();
+              handleLogin();
+            }}
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
@@ -196,14 +199,20 @@ const Register = ({
             {t("register.orYouCan")}
           </div>
           <button
-            onClick={handleFacebookAuth}
+            onClick={(e) => {
+              e.preventDefault();
+              handleFacebookAuth();
+            }}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
             {t("register.withFacebook")}
           </button>
           <button
-            onClick={handleGoogleAuth}
+            onClick={(e) => {
+              e.preventDefault();
+              handleGoogleAuth();
+            }}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >
