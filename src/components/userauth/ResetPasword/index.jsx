@@ -1,15 +1,11 @@
 import { Alert, Input } from "antd";
-import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  validateEmail,
-  createErrorClass,
-} from "../../components/register/registerHelpers";
-import ErrorMessage from "../register/ErrorMessage";
-import "./index.css";
+import React, { useState } from "react";
+import { validateEmail, createErrorClass } from "../registerHelper";
+import ErrorMessage from "../ErrorMessage";
 
-const PasswordReset = ({
-  // props are located in containers/LoginRegister/index.jsx
+const ResetPassword = ({
+  // // check containers/LoginRegister/index.jsx to see details of functions
   onSubmit,
   handleLogin,
   // string
@@ -29,13 +25,20 @@ const PasswordReset = ({
     e.preventDefault();
     const { email } = passwordResetInfo;
     const newErrors = {};
-    if (validateEmail(email).length === 0) {
-      newErrors.email = t("passwordReset.emailFormat");
-      setErrors(newErrors);
+    if (!validateEmail(email)) {
+      errors.email = t("passwordReset.emailFormat");
+    }
+    setErrors(newErrors);
+    const errorNameArr = Object.keys(newErrors);
+    if (errorNameArr.length > 0) {
       return;
     }
     onSubmit(passwordResetInfo);
   };
+  const handleGoToLogin = () => {
+    handleLogin();
+  };
+
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
@@ -43,12 +46,7 @@ const PasswordReset = ({
           {t("passwordReset.passwordReset")}
         </div>
         {error && (
-          <Alert
-            className="loginContainer__alert"
-            type="error"
-            showIcon
-            message={error}
-          />
+          <Alert className="authAlert" type="error" showIcon message={error} />
         )}
         {message}
         <div className="loginContainer__loginDialog">
@@ -57,7 +55,7 @@ const PasswordReset = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={createErrorClass(error.mail)}
+              className={createErrorClass(errors.email)}
               type="email"
               value={passwordResetInfo.email}
               onChange={(e) => {
@@ -73,7 +71,9 @@ const PasswordReset = ({
             {t("passwordReset.passwordReset")}
           </button>
           <button
-            onClick={handleLogin}
+            onClick={() => {
+              handleGoToLogin();
+            }}
             type="button"
             className="loginContainer__loginDialog__backToLoginButton"
           >
@@ -85,4 +85,4 @@ const PasswordReset = ({
   );
 };
 
-export default PasswordReset;
+export default ResetPassword;
