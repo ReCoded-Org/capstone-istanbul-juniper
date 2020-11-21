@@ -21,16 +21,24 @@ const LoginRegisterPage = ({ history }) => {
     setError("");
     setMessage(<></>);
   };
+  const addUserToHistory = () => {
+    history.push("/");
+  };
+  const failedAction = (e) => {
+    setLoading(false);
+    setError(e.message);
+  };
+
   const login = async (email, password) => {
     resetErrorAndMessage();
     try {
       setLoading(true);
+      setLoading(false);
       await auth.signInWithEmailAndPassword(email, password);
-      setLoading(false);
-      history.push("/");
+
+      addUserToHistory();
     } catch (e) {
-      setLoading(false);
-      setError(e.message);
+      failedAction(e);
     }
   };
   const passwordReset = async (email) => {
@@ -55,8 +63,7 @@ const LoginRegisterPage = ({ history }) => {
       );
       setActive("login");
     } catch (e) {
-      setLoading(false);
-      setError(e.message);
+      failedAction(e);
     }
   };
   const loginWithFacebook = async () => {
@@ -68,10 +75,9 @@ const LoginRegisterPage = ({ history }) => {
         display: "popup",
       });
       setLoading(false);
-      history.push("/");
+      addUserToHistory();
     } catch (e) {
-      setLoading(false);
-      setError(e.message);
+      failedAction(e);
     }
   };
   const loginWithGoogle = async () => {
@@ -81,10 +87,9 @@ const LoginRegisterPage = ({ history }) => {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
       setLoading(false);
-      history.push("/");
+      addUserToHistory();
     } catch (e) {
-      setLoading(false);
-      setError(e.message);
+      failedAction(e);
     }
   };
   const register = async (fullName, email, age, password) => {
@@ -102,10 +107,9 @@ const LoginRegisterPage = ({ history }) => {
       });
       await auth.signInWithEmailAndPassword(email, password);
       setLoading(false);
-      history.push("/");
+      addUserToHistory();
     } catch (e) {
-      setLoading(false);
-      setError(e.message);
+      failedAction(e);
     }
   };
 
