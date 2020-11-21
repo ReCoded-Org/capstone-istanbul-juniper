@@ -87,7 +87,6 @@ const LoginRegisterPage = ({ history }) => {
       setError(e.message);
     }
   };
-
   const register = async (fullName, email, age, password) => {
     resetErrorAndMessage();
     try {
@@ -100,7 +99,6 @@ const LoginRegisterPage = ({ history }) => {
         uid: registeredUser.user.uid,
         fullName,
         age,
-        userExperiencePoints: 0,
       });
       await auth.signInWithEmailAndPassword(email, password);
       setLoading(false);
