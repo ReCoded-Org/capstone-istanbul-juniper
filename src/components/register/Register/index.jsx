@@ -59,7 +59,8 @@ const Register = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (Object.keys(newErrorsObj).length > 0) {
+    const errorNameArr = Object.keys(newErrorsObj(registerInformation));
+    if (errorNameArr.length > 0) {
       setErrors(newErrorsObj);
       return;
     }
