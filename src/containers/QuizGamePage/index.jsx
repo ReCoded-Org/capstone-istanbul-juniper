@@ -4,7 +4,7 @@ import QuizGame from "../../components/QuizGame";
 const QuizGamePage = () => {
   return (
     <>
-      <QuizGame />
+      <QuizGame/>
     </>
   );
 };
