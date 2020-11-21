@@ -1,7 +1,7 @@
 import { Alert, Input } from "antd";
 import { useTranslation } from "react-i18next";
 import React, { useState } from "react";
-import { validateEmail, createErrorClass } from "../registerHelper";
+import { validateEmail, createErrorClassName } from "../registerHelper";
 import ErrorMessage from "../ErrorMessage";
 
 const ResetPassword = ({
@@ -55,7 +55,7 @@ const ResetPassword = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={createErrorClass(errors.email)}
+              className={createErrorClassName(errors.email)}
               type="email"
               value={passwordResetInfo.email}
               onChange={(e) => {
