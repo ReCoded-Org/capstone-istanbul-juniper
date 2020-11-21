@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 import { Dropdown, Menu, Col, Row } from "antd";
