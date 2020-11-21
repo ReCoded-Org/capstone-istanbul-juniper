@@ -64,8 +64,8 @@
     "withGoogle": "Log in with Google"
   },
   "loginRegister": {
-    "anEmailsent": "An email message has been sent to ",
-    "anEmailsentcontain": "contain password reset instructions, please check your inbox and follow the steps indicated in that message."
+    "anEmailSent": "An email message has been sent to ",
+    "anEmailSentContain": "contain password reset instructions, please check your inbox and follow the steps indicated in that message."
   },
   "home": {
     "headerSection": {
