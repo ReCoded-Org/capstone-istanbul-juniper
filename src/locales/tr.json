@@ -95,8 +95,7 @@
       "name": "Adın:",
       "email": "Eposta adresin:",
       "message": "Bize neler sormak ve önermek istersin?",
-      "send": "İlet",
-      "postSubmissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
+      "send": "İlet"
     }
   },
   "games": {
