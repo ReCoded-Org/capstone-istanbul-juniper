@@ -2,7 +2,7 @@ import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateEmail, hasError } from "../registerHelpers";
+import { validateEmail, createErrorClass } from "../registerHelpers";
 import ErrorMessage from "../ErrorMessage";
 
 const MAX_PASSWORD_LENGTH = 8;
@@ -112,7 +112,7 @@ const Register = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={hasError(errors.fullName)}
+              className={createErrorClass(errors.fullName)}
               value={registerInformation.fullName}
               onChange={(e) => {
                 handleChange("fullName", e.target.value);
@@ -125,7 +125,7 @@ const Register = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={hasError(errors.age)}
+              className={createErrorClass(errors.age)}
               type="number"
               value={registerInformation.age}
               onChange={(e) => {
@@ -139,7 +139,7 @@ const Register = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={hasError(errors.email)}
+              className={createErrorClass(errors.email)}
               value={registerInformation.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
@@ -152,7 +152,7 @@ const Register = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={hasError(errors.password)}
+              className={createErrorClass(errors.password)}
               type="password"
               value={registerInformation.password}
               onChange={(e) => {
