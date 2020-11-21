@@ -6,22 +6,6 @@ export const AuthContext = React.createContext({
   setUser: null,
 });
 
-const AuthProvider = (props) => {
-  const [user, setUser] = useState();
-
-  useEffect(() => {
-    auth.onAuthStateChanged((auth) => {
-      processAuth(auth, setUser);
-    });
-  }, []);
-
-  return (
-    <AuthContext.Provider value={{ user, setUser }}>
-      {props.children}
-    </AuthContext.Provider>
-  );
-};
-
 export const processAuth = async (auth, setUser) => {
   if (!auth) {
     return setUser(null);
@@ -36,7 +20,7 @@ export const processAuth = async (auth, setUser) => {
     });
     firestoreResult = await firestore.doc("users/" + auth.uid).get();
   }
-  let user = {
+  const user = {
     isLoggedin: true,
     uid: auth.uid,
     email: auth.email,
@@ -44,6 +28,22 @@ export const processAuth = async (auth, setUser) => {
     age: firestoreResult.data().age ?? null,
   };
   await setUser(user);
+};
+
+const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    auth.onAuthStateChanged((auth) => {
+      processAuth(auth, setUser);
+    });
+  }, []);
+
+  return (
+    <AuthContext.Provider value={{ user, setUser }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 export default AuthProvider;
