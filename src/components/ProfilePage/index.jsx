@@ -6,12 +6,13 @@ import { Col, Layout } from "antd";
 import profilePageImg from "../../images/profilePage/profilePageImg.png";
 import db from "../../firebaseConfig";
 
+// here we hard codded the user id because the auth is not ready to work.
+const HARDCODED_USER = "4a3Fb5EJVcPEKisuetXtO2B9sWF3";
 const { Sider, Content } = Layout;
 const ProfilePage = () => {
   const { t } = useTranslation();
   const [user, setUser] = useState("");
-  // here we hard codded the user id because the auth is not ready to work.
-  const ref = db.collection("users").doc("4a3Fb5EJVcPEKisuetXtO2B9sWF3");
+  const ref = db.collection("users").doc(HARDCODED_USER);
 
   const getUsers = () => {
     ref.onSnapshot((querySnapshot) => {
