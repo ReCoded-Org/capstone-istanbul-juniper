@@ -7,15 +7,10 @@ const MIN_PASSWORD_LENGTH = 6;
 
 const Login = ({
   // props are located in containers/LoginRegister/index.jsx
-  // function
   onSubmit,
-  // function
   handleFacebookAuth,
-  // function
   handleGoogleAuth,
-  // function
   handleRegister,
-  // function
   handlePasswordReset,
   // string
   error,
