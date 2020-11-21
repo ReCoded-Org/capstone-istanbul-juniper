@@ -54,7 +54,7 @@ const Register = ({
       newErrors.email = t("register.emailFormat");
     }
     if (!isAgreed) {
-      newErrors.isAgreed = t("register.terms");
+      newErrors.isAgreed = t("register.agreeOnterms");
     }
     setErrors(errors);
     const errorNameArr = Object.keys(newErrors);
