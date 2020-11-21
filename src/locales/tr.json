@@ -100,6 +100,9 @@
     }
   },
   "games": {
+    "quizGame": {
+      "title": "Sınav Oyunu"
+    },
     "matchingGame": {
       "title": "Eşleştirme Oyunu",
       "subtitle": "Çevre kelime dağarcığımızı güçlendirelim! Kelimeleri doğru resimlere sürükleyerek eşleştirelim!",
@@ -217,6 +220,9 @@
       "title": "Görüntü Bulmacası",
       "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
     }
+  },
+  "profilePage": {
+    "title": "Hoşgeldin"
   },
   "gamesPage": {
     "level": "Seviye {{currentLevel}}",
