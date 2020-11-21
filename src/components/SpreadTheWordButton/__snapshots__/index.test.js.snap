@@ -25,7 +25,6 @@ exports[`SpreadTheWordButton renders correctly 1`] = `
         >
           <svg
             aria-hidden="true"
-            className=""
             data-icon="twitter-circle"
             fill="currentColor"
             focusable="false"

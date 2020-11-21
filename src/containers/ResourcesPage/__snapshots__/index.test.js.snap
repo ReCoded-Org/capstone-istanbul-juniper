@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResourcesPage renders correctly 1`] = `
+<div
+  className="resourcesPage"
+>
+  <div
+    className="resourcesPage__headerContainer"
+  >
+    <div
+      className="resourcesPage__headerContainer__title"
+    >
+      resourcesPage.title
+    </div>
+    <div
+      className="resourcesPage__headerContainer__subTitle"
+    >
+      resourcesPage.aboutPage
+    </div>
+  </div>
+  <div
+    className="resourcesPage__resourcesContainer"
+  >
+    <div
+      className="resource__body"
+    >
+      <div
+        className="resource__body__picContainer"
+      >
+        <img
+          alt="Our changing climate - UNICEF"
+          onClick={[Function]}
+          src="ourClimateChange.png"
+        />
+      </div>
+      <div
+        className="resource__body__content"
+      >
+        <div
+          className="resource__body__content__title"
+        >
+          Our changing climate - UNICEF
+        </div>
+        <div
+          className="resource__body__content__description"
+        >
+          This book is a child friendly handbook meant to explain the concepts of climate change in an easily understandable manner and language. It aims to link behavioural choices to the changes observed in our climate
+        </div>
+        <div
+          className="resource__body__content__footer"
+        >
+          <button
+            onClick={[Function]}
+          >
+            Visit Resource
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="resource__body"
+    >
+      <div
+        className="resource__body__picContainer"
+      >
+        <img
+          alt="Resources for Education on Climate Change - UNESCO"
+          onClick={[Function]}
+          src="resourcesForEducation.png"
+        />
+      </div>
+      <div
+        className="resource__body__content"
+      >
+        <div
+          className="resource__body__content__title"
+        >
+          Resources for Education on Climate Change - UNESCO
+        </div>
+        <div
+          className="resource__body__content__description"
+        >
+          This publication focuses on the challenges, opportunities and good practices of climate change. It explores the interrelationship between climate change and lifestyles through a scientific, political, economic, social, ethical and cultural angle and identifies actions young people might take towards more sustainable lifestyles. It provides information, case studies and useful tips around topics relevant to young people and their everyday lives, such as food and drink, travel and transport, leisure and entertainment. The guide was produced for young people and people working with them such as educators, teachers, trainers and youth leaders around the world
+        </div>
+        <div
+          className="resource__body__content__footer"
+        >
+          <button
+            onClick={[Function]}
+          >
+            Visit Resource
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="resource__body"
+    >
+      <div
+        className="resource__body__picContainer"
+      >
+        <img
+          alt="Who Causes Climate changes - TROCAIRE"
+          onClick={[Function]}
+          src="whoCausesClimate.png"
+        />
+      </div>
+      <div
+        className="resource__body__content"
+      >
+        <div
+          className="resource__body__content__title"
+        >
+          Who Causes Climate changes - TROCAIRE
+        </div>
+        <div
+          className="resource__body__content__description"
+        >
+          Children explore who contribute to climate change by looking at activities related to climate change using climate change bingo sheet, creating clouds that list activates causing gas emissions and represent the world population by dividing themself.
+        </div>
+        <div
+          className="resource__body__content__footer"
+        >
+          <button
+            onClick={[Function]}
+          >
+            Visit Resource
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
