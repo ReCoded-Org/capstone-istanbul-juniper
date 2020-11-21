@@ -11,6 +11,7 @@ import ContactPage from "./containers/ContactPage";
 import "antd/dist/antd.css";
 import "./App.css";
 import QuizGamePage from "./containers/QuizGamePage";
+import ResourcePage from "./containers/ResourcesPage";
 
 function App() {
   const { i18n } = useTranslation();
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/games/puzzle" component={PuzzlePage} />
         <Route path="/games/quizgame" component={QuizGamePage} />
         <Route exact path="/games" component={GamesPage} />
+        <Route path="/resources" component={ResourcePage} />
         <Route path="/" component={Footer} />
       </Router>
     </>
