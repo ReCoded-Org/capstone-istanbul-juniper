@@ -1,35 +1,44 @@
 import { Alert, Input } from "antd";
-import React, { useState } from "react";
-import { validateEmail } from "../../functions";
 import { useTranslation } from "react-i18next";
+import React, { useState } from "react";
+import { validateEmail } from "../registerHelper";
 
-const PasswordReset = (props) => {
+const PasswordReset = ({
+  // // check containers/LoginRegister/index.jsx to see details of functions
+  onSubmit,
+  handleLogin,
+  // string
+  error,
+  // string
+  message,
+}) => {
   const [t] = useTranslation();
   const [passwordResetInfo, setPasswordRestInfo] = useState({ email: "" });
   const handleChange = (key, value) => {
-    let newValues = Object.assign({}, passwordResetInfo);
+    const newValues = { ...passwordResetInfo };
     newValues[key] = value;
     setPasswordRestInfo(newValues);
   };
   const [errors, setErrors] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
-    let { email } = passwordResetInfo;
-    let errors = {};
+    const { email } = passwordResetInfo;
+    const newErrors = {};
     if (!validateEmail(email)) {
-      errors["email"] = t("passReset.emailFormat");
+      newErrors.email = t("passReset.emailFormat");
     }
     if (email.trim() === "") {
-      errors["email"] = t("passReset.fillField");
+      newErrors.email = t("passReset.fillField");
     }
-    setErrors(errors);
-    if (Object.keys(errors).length > 0) {
+    setErrors(newErrors);
+    const errorNameArr = Object.keys(newErrors);
+    if (errorNameArr.length > 0) {
       return;
     }
-    props.onSubmit(passwordResetInfo);
+    onSubmit(passwordResetInfo);
   };
   const handleGoToLogin = () => {
-    props.onGoToLogin();
+    handleLogin();
   };
 
   return (
@@ -38,15 +47,15 @@ const PasswordReset = (props) => {
         <div className="loginContainer__loginTitle">
           {t("passReset.passwordReset")}
         </div>
-        {props.error && (
+        {error && (
           <Alert
             style={{ marginBottom: 10 }}
             type="error"
             showIcon
-            message={props.error}
-          ></Alert>
+            message={error}
+          />
         )}
-        {props.message}
+        {message}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
             {t("passReset.email")}
@@ -54,8 +63,7 @@ const PasswordReset = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["email"] &&
-                "loginContainer__loginDialog__input__hasError"
+                errors.email && "loginContainer__loginDialog__input__hasError"
               }
               type="email"
               value={passwordResetInfo.email}
@@ -63,9 +71,9 @@ const PasswordReset = (props) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors["email"] && (
+            {errors.email && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["email"]}
+                {errors.email}
               </div>
             )}
           </div>

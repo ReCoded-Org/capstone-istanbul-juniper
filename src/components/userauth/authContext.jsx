@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import firestore, { auth } from "../firebaseConfig";
+import firestore, { auth } from "../../firebaseConfig";
 
 export const AuthContext = React.createContext({
   user: null,
@@ -44,7 +44,6 @@ export const processAuth = async (auth, setUser) => {
     age: firestoreResult.data().age ?? null,
   };
   await setUser(user);
-  return;
 };
 
 export default AuthProvider;

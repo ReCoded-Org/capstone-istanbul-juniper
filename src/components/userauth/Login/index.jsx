@@ -1,68 +1,68 @@
-import { Alert, Input } from "antd";
+import { Alert, Input, Button } from "antd";
 import React, { useState } from "react";
-import { validateEmail } from "../../functions";
 import { useTranslation } from "react-i18next";
+import { validateEmail } from "../registerHelper";
 
-const Login = (props) => {
+const Login = ({
+  // check containers/LoginRegister/index.jsx to see details of functions
+  onSubmit,
+  handleFacebookAuth,
+  handleGoogleAuth,
+  handleRegister,
+  handlePasswordReset,
+  // string
+  error,
+  // string
+  message,
+}) => {
   const [t] = useTranslation();
   const [loginCredentials, setLoginCredentials] = useState({
     email: "",
     password: "",
   });
   const handleChange = (key, value) => {
-    let newValues = Object.assign({}, loginCredentials);
+    const newValues = { ...loginCredentials };
     newValues[key] = value;
     setLoginCredentials(newValues);
   };
   const [errors, setErrors] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
-    let { email, password } = loginCredentials;
-    let errors = {};
+    const { email, password } = loginCredentials;
+    const newErrors = {};
     if (!validateEmail(email)) {
-      errors["email"] = "Email format error";
+      newErrors.email = "Email format error";
     }
     if (email.trim() === "") {
-      errors["email"] = "Please fill this field";
+      newErrors.email = "Please fill this field";
     }
     if (password.trim().length < 6) {
-      errors["password"] = "Password must be at least 6 characters long";
+      newErrors.password = "Password must be at least 6 characters long";
     }
     if (password.trim() === "") {
-      errors["password"] = "Please fill this field";
+      newErrors.password = "Please fill this field";
     }
-    setErrors(errors);
-    if (Object.keys(errors).length > 0) {
+    setErrors(newErrors);
+    const errorNameArr = Object.keys(newErrors);
+    if (errorNameArr.length > 0) {
       return;
     }
-    props.onSubmit(loginCredentials);
-  };
-  const handleFacebookAuth = () => {
-    props.onFacebookAuth();
-  };
-  const handleGoogleAuth = () => {
-    props.onGoogleAuth();
-  };
-  const handleGoToRegister = () => {
-    props.onGoToRegister();
-  };
-  const handleGoToPasswordReset = () => {
-    props.onGoToPasswordReset();
+    onSubmit(loginCredentials);
   };
 
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">{t("login.login")}</div>
-        {props.error && (
+        {error && (
           <Alert
             style={{ marginBottom: 10 }}
             type="error"
             showIcon
-            message={props.error}
-          ></Alert>
+            message={error}
+          />
         )}
-        {props.message}
+        {message}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
             {t("login.email")}
@@ -70,8 +70,7 @@ const Login = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["email"] &&
-                "loginContainer__loginDialog__input__hasError"
+                errors.email && "loginContainer__loginDialog__input__hasError"
               }
               type="email"
               value={loginCredentials.email}
@@ -79,9 +78,9 @@ const Login = (props) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors["email"] && (
+            {errors.email && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["email"]}
+                {errors.email}
               </div>
             )}
           </div>
@@ -91,7 +90,7 @@ const Login = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["password"] &&
+                errors.password &&
                 "loginContainer__loginDialog__input__hasError"
               }
               type="password"
@@ -100,22 +99,22 @@ const Login = (props) => {
                 handleChange("password", e.target.value);
               }}
             />
-            {errors["password"] && (
+            {errors.password && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["password"]}
+                {errors.password}
               </div>
             )}
           </div>
           <div className="loginContainer__loginDialog__forgotPasswordContainer">
-            <a
-              href="/#"
+            <Button
+              type="link"
               onClick={(e) => {
                 e.preventDefault();
-                handleGoToPasswordReset();
+                handlePasswordReset();
               }}
             >
               {t("login.forgotPassword")}
-            </a>
+            </Button>
           </div>
           <button
             type="submit"
@@ -127,9 +126,7 @@ const Login = (props) => {
             {t("login.new")}
           </div>
           <button
-            onClick={() => {
-              handleGoToRegister();
-            }}
+            onClick={handleRegister}
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
@@ -139,18 +136,14 @@ const Login = (props) => {
             {t("login.oryoucan")}
           </div>
           <button
-            onClick={() => {
-              handleFacebookAuth();
-            }}
+            onClick={handleFacebookAuth}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
             {t("login.withFacebook")}
           </button>
           <button
-            onClick={() => {
-              handleGoogleAuth();
-            }}
+            onClick={handleGoogleAuth}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >

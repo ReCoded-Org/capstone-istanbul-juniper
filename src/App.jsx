@@ -2,7 +2,7 @@ import React from "react";
 import LoginRegister from "./containers/LoginRegister";
 import "antd/dist/antd.css";
 import "./i18n";
-import AuthProvider from "./auth/authContext";
+import AuthProvider from "./components/userauth/authContext";
 import Footer from "./components/Footer";
 import Home from "./containers/Home";
 import { BrowserRouter as Router, Route } from "react-router-dom";

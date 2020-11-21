@@ -1,10 +1,18 @@
 import { Alert, Button, Checkbox, Input } from "antd";
 import Modal from "antd/lib/modal/Modal";
-import React, { useState } from "react";
-import { validateEmail } from "../../functions";
 import { useTranslation } from "react-i18next";
+import React, { useState } from "react";
+import { validateEmail } from "../registerHelper";
 
-const Register = (props) => {
+const Register = ({
+  // check containers/LoginRegister/index.jsx to see details of functions
+  onSubmit,
+  handleLogin,
+  handleFacebookAuth,
+  handleGoogleAuth,
+  // string
+  error,
+}) => {
   const [t] = useTranslation();
   const [registerInformation, setRegisterInformation] = useState({
     fullname: "",
@@ -16,49 +24,41 @@ const Register = (props) => {
   const [errors, setErrors] = useState({});
   const [termsOpen, setTermsOpen] = useState(false);
   const handleChange = (key, value) => {
-    let newValues = Object.assign({}, registerInformation);
+    const newValues = { ...registerInformation };
     newValues[key] = value;
     setRegisterInformation(newValues);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    let { fullname, email, age, password, agree } = registerInformation;
-    let errors = {};
+    const { fullname, email, age, password, agree } = registerInformation;
+    const newErrors = {};
     if (fullname.trim() === "") {
-      errors["fullname"] = t("register.fullName");
+      newErrors.fullname = t("register.fullName");
     }
     if (email.trim() === "") {
-      errors["email"] = t("register.validEmail");
+      newErrors.email = t("register.validEmail");
     }
     if (age.trim() === "") {
-      errors["age"] = t("register.age");
+      newErrors.age = t("register.age");
     }
     if (password.trim().length < 6) {
-      errors["password"] = t("register.passwordCharacter");
+      newErrors.password = t("register.passwordCharacter");
     }
     if (password.trim() === "") {
-      errors["password"] = t("register.enterPassword");
+      newErrors.password = t("register.enterPassword");
     }
     if (!validateEmail(email)) {
-      errors["email"] = t("register.emailFormat");
+      newErrors.email = t("register.emailFormat");
     }
     if (!agree) {
-      errors["agree"] = t("register.terms");
+      newErrors.agree = t("register.terms");
     }
     setErrors(errors);
-    if (Object.keys(errors).length > 0) {
+    const errorNameArr = Object.keys(newErrors);
+    if (errorNameArr.length > 0) {
       return;
     }
-    props.onSubmit(registerInformation);
-  };
-  const handleGoToLogin = () => {
-    props.onGoToLogin();
-  };
-  const handleFacebookAuth = () => {
-    props.onFacebookAuth();
-  };
-  const handleGoogleAuth = () => {
-    props.onGoogleAuth();
+    onSubmit(registerInformation);
   };
   const handleOkTerms = () => {
     handleChange("agree", true);
@@ -95,13 +95,13 @@ const Register = (props) => {
       </Modal>
       <div className="loginContainer">
         <div className="loginContainer__loginTitle">{t("register.creat")}</div>
-        {props.error && (
+        {error && (
           <Alert
             style={{ marginBottom: 10 }}
             type="error"
             showIcon
-            message={props.error}
-          ></Alert>
+            message={error}
+          />
         )}
         <div className="loginContainer__loginDialog">
           <div className="loginContainer__loginDialog__inputLabel">
@@ -110,7 +110,7 @@ const Register = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["fullname"] &&
+                errors.fullname &&
                 "loginContainer__loginDialog__input__hasError"
               }
               value={registerInformation.fullname}
@@ -118,9 +118,9 @@ const Register = (props) => {
                 handleChange("fullname", e.target.value);
               }}
             />
-            {errors["fullname"] && (
+            {errors.fullname && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["fullname"]}
+                {errors.fullname}
               </div>
             )}
           </div>
@@ -130,7 +130,7 @@ const Register = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["age"] && "loginContainer__loginDialog__input__hasError"
+                errors.age && "loginContainer__loginDialog__input__hasError"
               }
               type="number"
               value={registerInformation.age}
@@ -138,9 +138,9 @@ const Register = (props) => {
                 handleChange("age", e.target.value);
               }}
             />
-            {errors["age"] && (
+            {errors.age && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["age"]}
+                {errors.age}
               </div>
             )}
           </div>
@@ -150,17 +150,16 @@ const Register = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["email"] &&
-                "loginContainer__loginDialog__input__hasError"
+                errors.email && "loginContainer__loginDialog__input__hasError"
               }
               value={registerInformation.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors["email"] && (
+            {errors.email && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["email"]}
+                {errors.email}
               </div>
             )}
           </div>
@@ -170,7 +169,7 @@ const Register = (props) => {
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors["password"] &&
+                errors.password &&
                 "loginContainer__loginDialog__input__hasError"
               }
               type="password"
@@ -179,9 +178,9 @@ const Register = (props) => {
                 handleChange("password", e.target.value);
               }}
             />
-            {errors["password"] && (
+            {errors.password && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["password"]}
+                {errors.password}
               </div>
             )}
           </div>
@@ -193,19 +192,19 @@ const Register = (props) => {
               }}
             >
               {t("register.iAgreeTo")}
-              <a
-                href="/#"
+              <Button
+                type="link"
                 onClick={(e) => {
                   e.preventDefault();
                   setTermsOpen(true);
                 }}
               >
                 {t("register.termsandCon")}
-              </a>
+              </Button>
             </Checkbox>
-            {errors["agree"] && (
+            {errors.agree && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors["agree"]}
+                {errors.agree}
               </div>
             )}
           </div>
@@ -219,9 +218,7 @@ const Register = (props) => {
             {t("register.alreadyAMember")}
           </div>
           <button
-            onClick={() => {
-              handleGoToLogin();
-            }}
+            onClick={handleLogin}
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
@@ -231,18 +228,14 @@ const Register = (props) => {
             {t("register.orYouCan")}
           </div>
           <button
-            onClick={() => {
-              handleFacebookAuth();
-            }}
+            onClick={handleFacebookAuth}
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
             {t("register.withFacebook")}
           </button>
           <button
-            onClick={() => {
-              handleGoogleAuth();
-            }}
+            onClick={handleGoogleAuth}
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >

@@ -6,7 +6,7 @@ import { MenuOutlined, GlobalOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import logoImg from "./../../images/logo.svg";
-import { AuthContext } from "../../auth/authContext";
+import { AuthContext } from "../userauth/authContext";
 import { auth } from "../../firebaseConfig";
 
 const Navbar = () => {

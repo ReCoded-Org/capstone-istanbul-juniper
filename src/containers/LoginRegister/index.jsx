@@ -1,18 +1,22 @@
 import React, { useContext, useState } from "react";
-import Login from "../../components/Login";
-import Register from "../../components/Register";
-import PasswordReset from "../../components/PasswordReset";
-import firestore, { auth } from "../../firebaseConfig";
-import firebase from "firebase";
-import { AuthContext } from "../../auth/authContext";
 import { withRouter } from "react-router-dom";
-import { Alert, Spin } from "antd";
-import "./index.css";
 import { useTranslation } from "react-i18next";
+import { Alert, Spin } from "antd";
+import firebase from "firebase";
+import Login from "../../components/userauth/Login";
+import Register from "../../components/userauth/Register";
+import PasswordReset from "../../components/userauth/PasswordReset";
+import firestore, { auth } from "../../firebaseConfig";
+// import { AuthContext } from '../../components/userauth/authContext';
+import "./index.css";
 import kids from "../../images/LoginKids.svg";
 
-const LoginRegisterPage = (props) => {
+const LoginRegisterPage = ({ history }) => {
   const [t] = useTranslation();
+  const [active, setActive] = useState("login");
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState();
+  const [loading, setLoading] = useState(false);
   const login = async (email, password) => {
     setError("");
     setMessage(<></>);
@@ -20,7 +24,7 @@ const LoginRegisterPage = (props) => {
       setLoading(true);
       await auth.signInWithEmailAndPassword(email, password);
       setLoading(false);
-      props.history.push("/");
+      history.push("/");
     } catch (e) {
       setLoading(false);
       setError(e.message);
@@ -45,7 +49,7 @@ const LoginRegisterPage = (props) => {
             </div>
           }
           type="success"
-        ></Alert>
+        />
       );
       setActive("login");
     } catch (e) {
@@ -59,14 +63,13 @@ const LoginRegisterPage = (props) => {
     setMessage(<></>);
     try {
       setLoading(true);
-      let provider = new firebase.auth.FacebookAuthProvider();
+      const provider = new firebase.auth.FacebookAuthProvider();
       provider.setCustomParameters({
         display: "popup",
       });
-      let u = await auth.signInWithPopup(provider);
-      console.log("facebook user: ", u.user);
+      // const u = await auth.signInWithPopup(provider);
       setLoading(false);
-      props.history.push("/");
+      history.push("/");
     } catch (e) {
       setLoading(false);
       setError(e.message);
@@ -78,12 +81,11 @@ const LoginRegisterPage = (props) => {
     setMessage(<></>);
     try {
       setLoading(true);
-      let provider = new firebase.auth.GoogleAuthProvider();
+      const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-      let u = await auth.signInWithPopup(provider);
-      console.log("google user: ", u.user);
+      // const u = await auth.signInWithPopup(provider);
       setLoading(false);
-      props.history.push("/");
+      history.push("/");
     } catch (e) {
       setLoading(false);
       setError(e.message);
@@ -91,35 +93,27 @@ const LoginRegisterPage = (props) => {
   };
 
   const register = async (fullname, email, age, password) => {
-    console.log(email, password);
     setError("");
     setMessage(<></>);
     try {
       setLoading(true);
-      let registeredUser = await auth.createUserWithEmailAndPassword(
+      const registeredUser = await auth.createUserWithEmailAndPassword(
         email,
         password
       );
       await firestore.collection("users").doc(registeredUser.user.uid).set({
         uid: registeredUser.user.uid,
-        fullname: fullname,
-        age: age,
+        fullname,
+        age,
       });
       await auth.signInWithEmailAndPassword(email, password);
       setLoading(false);
-      props.history.push("/");
+      history.push("/");
     } catch (e) {
       setLoading(false);
       setError(e.message);
-      console.log(e.message);
     }
   };
-  const [active, setActive] = useState("login");
-  const [error, setError] = useState("");
-  const [message, setMessage] = useState();
-  const [loading, setLoading] = useState(false);
-  const { user } = useContext(AuthContext);
-  console.log("User ", user);
   let component;
   switch (active) {
     case "login":
@@ -130,22 +124,22 @@ const LoginRegisterPage = (props) => {
           onSubmit={({ email, password }) => {
             login(email, password);
           }}
-          onGoToRegister={() => {
+          handleRegister={() => {
             setError("");
             setMessage(<></>);
             setActive("register");
           }}
-          onGoToPasswordReset={() => {
+          handlePasswordReset={() => {
             setError("");
             setMessage(<></>);
             setActive("reset");
           }}
-          onFacebookAuth={() => {
+          handleFacebookAuth={() => {
             setError("");
             setMessage(<></>);
             loginWithFacebook();
           }}
-          onGoogleAuth={() => {
+          handleGoogleAuth={() => {
             setError("");
             setMessage(<></>);
             loginWithGoogle();
@@ -161,7 +155,7 @@ const LoginRegisterPage = (props) => {
           onSubmit={({ fullname, email, age, password }) => {
             register(fullname, email, age, password);
           }}
-          onGoToLogin={() => {
+          handleLogin={() => {
             setError("");
             setMessage(<></>);
             setActive("login");
@@ -189,7 +183,7 @@ const LoginRegisterPage = (props) => {
             setMessage(<></>);
             passwordReset(email);
           }}
-          onGoToLogin={() => {
+          handleLogin={() => {
             setError("");
             setMessage(<></>);
             setActive("login");
