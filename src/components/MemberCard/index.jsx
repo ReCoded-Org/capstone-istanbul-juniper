@@ -4,14 +4,7 @@ import { LinkedinFilled, GithubFilled } from "@ant-design/icons";
 import "./index.css";
 
 // Props passed to this function are details of team members
-const MemberCard = ({
-  name,
-  role,
-  bio,
-  avatarUrl,
-  linkedinUrl,
-  githubUrl,
-}) => {
+const MemberCard = ({ name, role, bio, avatarUrl, linkedinUrl, githubUrl }) => {
   return (
     <Card span={6} size="default" className="memberCard" bordered={false}>
       <div className="memberCard__header">
