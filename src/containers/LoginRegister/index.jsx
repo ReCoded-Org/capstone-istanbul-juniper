@@ -108,6 +108,11 @@ const LoginRegisterPage = ({ history }) => {
       setError(e.message);
     }
   };
+
+  const handleLogin = () => {
+    resetErrorAndMessage();
+    setActive("login");
+  };
   let component;
   switch (active) {
     case "login":
@@ -126,14 +131,8 @@ const LoginRegisterPage = ({ history }) => {
             resetErrorAndMessage();
             setActive("reset");
           }}
-          handleFacebookAuth={() => {
-            resetErrorAndMessage();
-            loginWithFacebook();
-          }}
-          handleGoogleAuth={() => {
-            resetErrorAndMessage();
-            loginWithGoogle();
-          }}
+          handleFacebookAuth={loginWithFacebook}
+          handleGoogleAuth={loginWithGoogle}
         />
       );
       break;
@@ -145,18 +144,9 @@ const LoginRegisterPage = ({ history }) => {
           onSubmit={({ fullName, email, age, password }) => {
             register(fullName, email, age, password);
           }}
-          handleLogin={() => {
-            resetErrorAndMessage();
-            setActive("login");
-          }}
-          handleFacebookAuth={() => {
-            resetErrorAndMessage();
-            loginWithFacebook();
-          }}
-          handleGoogleAuth={() => {
-            resetErrorAndMessage();
-            loginWithGoogle();
-          }}
+          handleLogin={handleLogin}
+          handleFacebookAuth={loginWithFacebook}
+          handleGoogleAuth={loginWithGoogle}
         />
       );
       break;
@@ -169,14 +159,8 @@ const LoginRegisterPage = ({ history }) => {
             resetErrorAndMessage();
             passwordReset(email);
           }}
-          handleLogin={() => {
-            resetErrorAndMessage();
-            setActive("login");
-          }}
-          handleFacebookAuth={() => {
-            resetErrorAndMessage();
-            loginWithFacebook();
-          }}
+          handleLogin={handleLogin}
+          handleFacebookAuth={loginWithFacebook}
         />
       );
       break;
