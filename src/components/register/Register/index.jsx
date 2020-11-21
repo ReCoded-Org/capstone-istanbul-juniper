@@ -87,17 +87,17 @@ const Register = ({
           <div className="loginContainer__loginDialog__input">
             <Input
               className={
-                errors.fullname &&
+                errors.fullName &&
                 "loginContainer__loginDialog__input__hasError"
               }
-              value={registerInformation.fullname}
+              value={registerInformation.fullName}
               onChange={(e) => {
-                handleChange("fullname", e.target.value);
+                handleChange("fullName", e.target.value);
               }}
             />
-            {errors.fullname && (
+            {errors.fullName && (
               <div className="loginContainer__loginDialog__errorContainer">
-                {errors.fullname}
+                {errors.fullName}
               </div>
             )}
           </div>
