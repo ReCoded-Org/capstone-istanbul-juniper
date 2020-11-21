@@ -1,6 +1,6 @@
 import { Alert, Input } from "antd";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation, hasError, createErrorWarning } from "react-i18next";
 import {
   validateEmail,
   hasError,
@@ -56,20 +56,14 @@ const PasswordReset = ({
           </div>
           <div className="loginContainer__loginDialog__input">
             <Input
-              className={
-                errors.email && "loginContainer__loginDialog__input__hasError"
-              }
+              className={hasError(error.mail)}
               type="email"
               value={passwordResetInfo.email}
               onChange={(e) => {
                 handleChange("email", e.target.value);
               }}
             />
-            {errors.email && (
-              <div className="loginContainer__loginDialog__errorContainer">
-                {errors.email}
-              </div>
-            )}
+            {createErrorWarning(errors.email)}
           </div>
           <button
             type="submit"
