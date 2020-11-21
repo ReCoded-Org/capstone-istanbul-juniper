@@ -165,68 +165,204 @@ Array [
       gamesPage.title
     </h1>
     <div
-      className="ant-row ant-row-center"
+      className="ant-row"
       style={Object {}}
     >
       <div
-        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-9"
-        style={
-          Object {
-            "backgroundImage": "url(mockGTAPoster.jpg)",
-          }
-        }
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+        style={Object {}}
       >
-        <a
-          className="gamePageImageGrid__col__redirect"
-          href="/"
-          onClick={[Function]}
+        <div
+          className="gamePageImageGrid__col__link"
         >
-          <p
-            className="gamePageImageGrid__col__redirect__text"
+          <a
+            href="/games/memorygame"
+            onClick={[Function]}
           >
-            Grand Theft Auto  
-          </p>
-        </a>
+            <div
+              className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+            >
+              <div
+                className="ant-card-cover"
+              >
+                <img
+                  alt="games.memoryGame.title"
+                  className="gamePageImageGrid__col__link__card__img"
+                  src="memoryGame.svg"
+                />
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-meta"
+                >
+                  <div
+                    className="ant-card-meta-detail"
+                  >
+                    <div
+                      className="ant-card-meta-title"
+                    >
+                      <h3
+                        className="gamePageImageGrid__col__link__card__title"
+                      >
+                        games.memoryGame.title
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
       <div
-        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-9"
-        style={
-          Object {
-            "backgroundImage": "url(mockZeldaPoster.jpg)",
-          }
-        }
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+        style={Object {}}
       >
-        <a
-          className="gamePageImageGrid__col__redirect"
-          href="/"
-          onClick={[Function]}
+        <div
+          className="gamePageImageGrid__col__link"
         >
-          <p
-            className="gamePageImageGrid__col__redirect__text"
+          <a
+            href="/games/puzzlegame"
+            onClick={[Function]}
           >
-            Zelda
-          </p>
-        </a>
+            <div
+              className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+            >
+              <div
+                className="ant-card-cover"
+              >
+                <img
+                  alt="games.puzzleGame.title"
+                  className="gamePageImageGrid__col__link__card__img"
+                  src="puzzleGame.svg"
+                />
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-meta"
+                >
+                  <div
+                    className="ant-card-meta-detail"
+                  >
+                    <div
+                      className="ant-card-meta-title"
+                    >
+                      <h3
+                        className="gamePageImageGrid__col__link__card__title"
+                      >
+                        games.puzzleGame.title
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
       <div
-        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-9"
-        style={
-          Object {
-            "backgroundImage": "url(mockDestinyPoster.jpg)",
-          }
-        }
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+        style={Object {}}
       >
-        <a
-          className="gamePageImageGrid__col__redirect"
-          href="/"
-          onClick={[Function]}
+        <div
+          className="gamePageImageGrid__col__link"
         >
-          <p
-            className="gamePageImageGrid__col__redirect__text"
+          <a
+            href="/games/matchinggame"
+            onClick={[Function]}
           >
-            Destiny
-          </p>
-        </a>
+            <div
+              className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+            >
+              <div
+                className="ant-card-cover"
+              >
+                <img
+                  alt="games.matchingGame.title"
+                  className="gamePageImageGrid__col__link__card__img"
+                  src="matchingGame.svg"
+                />
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-meta"
+                >
+                  <div
+                    className="ant-card-meta-detail"
+                  >
+                    <div
+                      className="ant-card-meta-title"
+                    >
+                      <h3
+                        className="gamePageImageGrid__col__link__card__title"
+                      >
+                        games.matchingGame.title
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+        style={Object {}}
+      >
+        <div
+          className="gamePageImageGrid__col__link"
+        >
+          <a
+            href="/games/quizgame"
+            onClick={[Function]}
+          >
+            <div
+              className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+            >
+              <div
+                className="ant-card-cover"
+              >
+                <img
+                  alt="games.quizGame.title"
+                  className="gamePageImageGrid__col__link__card__img"
+                  src="quizGame.svg"
+                />
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-meta"
+                >
+                  <div
+                    className="ant-card-meta-detail"
+                  >
+                    <div
+                      className="ant-card-meta-title"
+                    >
+                      <h3
+                        className="gamePageImageGrid__col__link__card__title"
+                      >
+                        games.quizGame.title
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>,
