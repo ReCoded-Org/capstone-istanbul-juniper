@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { validateEmail, hasError } from "../registerHelpers";
 import ErrorMessage from "../ErrorMessage";
 
+const MAX_PASSWORD_LENGTH = 8;
+
 const Register = ({
   // check container/LoginRegister/index.jsx to see functions
   onSubmit,
@@ -31,7 +33,6 @@ const Register = ({
   };
 
   const newErrorsObj = (registerInfo) => {
-    const MAX_PASSWORD_LENGTH = 8;
     const { fullName, email, age, password, isAgreed } = registerInfo;
     const errorObj = {};
     if (fullName.trim() === "") {
