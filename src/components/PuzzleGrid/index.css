@@ -1,7 +1,7 @@
 .puzzleGrid {
   margin: 0;
   padding: 0;
-  height: 200px;
+  height: 60%;
   width: 100%;
   overflow: hidden;
   user-select: none;
@@ -40,6 +40,6 @@
 }
 
 .puzzleGrid__imageDisplayed {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 60%;
 }
