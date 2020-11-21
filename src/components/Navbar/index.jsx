@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./index.css";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { Dropdown, Menu, Col, Row } from "antd";
 import { MenuOutlined, GlobalOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
