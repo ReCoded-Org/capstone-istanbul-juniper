@@ -1,10 +1,11 @@
 import { Alert, Input } from "antd";
 import React, { useState } from "react";
-import { useTranslation, hasError, createErrorWarning } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import {
   validateEmail,
   hasError,
 } from "../../components/register/registerHelpers";
+import ErrorMessage from "../register/ErrorMessage";
 import "./index.css";
 
 const PasswordReset = ({
@@ -63,7 +64,7 @@ const PasswordReset = ({
                 handleChange("email", e.target.value);
               }}
             />
-            {createErrorWarning(errors.email)}
+            <ErrorMessage message={errors.email} />
           </div>
           <button
             type="submit"
