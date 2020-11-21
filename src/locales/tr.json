@@ -267,6 +267,10 @@
     "login": "Giriş yap",
     "orYouCan": "Ya da",
     "withFacebook": "Facebook ile Bağlan",
-    "withGoogle": "Google ile Bağlan"
+    "withGoogle": "Google ile Bağlan",
+    "loginRegister": {
+      "anEmailsent": " By Adresine bir e-posta mesajı gönderildi",
+      "anEmailsentcontain": "Şifre sıfırlama talimatları içerir, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."
+    }
   }
 }
