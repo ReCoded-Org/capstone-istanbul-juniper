@@ -63,12 +63,15 @@ Array [
             <div
               className="loginContainer__loginDialog__forgotPasswordContainer"
             >
-              <a
-                href="/#"
+              <button
+                className="ant-btn ant-btn-link"
                 onClick={[Function]}
+                type="button"
               >
-                login.forgotPassword
-              </a>
+                <span>
+                  login.forgotPassword
+                </span>
+              </button>
             </div>
             <button
               className="loginContainer__loginDialog__submitButton"

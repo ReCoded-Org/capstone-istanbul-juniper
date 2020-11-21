@@ -112,12 +112,15 @@ exports[`Register Component matches the tree 1`] = `
           </span>
           <span>
             register.iAgreeTo
-            <a
-              href="/#"
+            <button
+              className="ant-btn ant-btn-link"
               onClick={[Function]}
+              type="button"
             >
-              register.termsandCon
-            </a>
+              <span>
+                register.termsandCon
+              </span>
+            </button>
           </span>
         </label>
       </div>
@@ -134,7 +137,6 @@ exports[`Register Component matches the tree 1`] = `
       </div>
       <button
         className="loginContainer__loginDialog__registerButton"
-        onClick={[Function]}
         type="button"
       >
         register.login
@@ -146,14 +148,12 @@ exports[`Register Component matches the tree 1`] = `
       </div>
       <button
         className="loginContainer__loginDialog__facebookLoginBtn"
-        onClick={[Function]}
         type="button"
       >
         register.withFacebook
       </button>
       <button
         className="loginContainer__loginDialog__googleLoginBtn"
-        onClick={[Function]}
         type="button"
       >
         register.withGoogle
