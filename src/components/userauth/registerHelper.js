@@ -6,7 +6,7 @@ export function validateEmail(email) {
 
 export const createErrorClassName = (error) => {
   if (!error) {
-    return null;
+    return undefined;
   }
   return "loginContainer__loginDialog__input__hasError";
 };
