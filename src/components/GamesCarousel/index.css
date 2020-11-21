@@ -18,10 +18,11 @@
 }
 
 .gamesCarousel__wrapper {
-  width: 95%;
-  padding-left: 4%;
-  display: flexbox;
+  /* width: 95%;
+  padding-left: 4%; */
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* React-slick class for sliders */
@@ -41,11 +42,17 @@
 }
 
 /* React-slick class for slider's arrows */
-.slick-prev:before,
+/* .slick-prev:before,
 .slick-next:before {
   color: #61e3d8;
   font-size: clamp(1rem, 1.5rem, 3.5rem);
   cursor: pointer;
   top: 50%;
   transition: all 0.5s;
+} */
+
+.slick-track {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
