@@ -1,11 +1,11 @@
 import { Alert, Input } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  validateEmail,
-  createErrorClass,
-} from "../../components/register/registerHelpers";
-import ErrorMessage from "../register/ErrorMessage";
+// eslint-disable-next-line import/no-unresolved
+import { validateEmail, createErrorClass } from "../registerHelpers";
+// eslint-disable-next-line import/no-unresolved
+import ErrorMessage from "../ErrorMessage";
+// eslint-disable-next-line import/no-unresolved
 import "./index.css";
 
 const PasswordReset = ({

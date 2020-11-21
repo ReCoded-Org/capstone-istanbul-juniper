@@ -1,18 +1,25 @@
 import React, { useContext, useState } from "react";
-import Login from "../../components/Login";
-import Register from "../../components/Register";
-import PasswordReset from "../../components/PasswordReset";
-import firestore, { auth } from "../../firebaseConfig";
-import firebase from "firebase";
-import { AuthContext } from "../../auth/authContext";
-import { withRouter } from "react-router-dom";
-import { Alert, Spin } from "antd";
-import "./index.css";
 import { useTranslation } from "react-i18next";
-import kids from "../../images/LoginKids.svg";
+import { Alert, Spin } from "antd";
+import { withRouter } from "react-router-dom";
+import Login from "../../components/userauth/Login";
+import Register from "../../components/userauth/Register";
+import PasswordReset from "../../components/userauth/PasswordReset";
+import db from "../../firebaseConfig";
+// import firebase from 'firebase';
+import { AuthContext } from "../../components/userauth/auth";
+import "./index.css";
+import kids from "../../images/family.png";
 
-const LoginRegisterPage = (props) => {
+const LoginRegisterPage = ({ history }) => {
+  const [active, setActive] = useState("login");
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState();
+  const [loading, setLoading] = useState(false);
+
+  const { auth } = db;
   const [t] = useTranslation();
+
   const login = async (email, password) => {
     setError("");
     setMessage(<></>);
@@ -20,12 +27,13 @@ const LoginRegisterPage = (props) => {
       setLoading(true);
       await auth.signInWithEmailAndPassword(email, password);
       setLoading(false);
-      props.history.push("/");
+      history.push("/");
     } catch (e) {
       setLoading(false);
       setError(e.message);
     }
   };
+
   const resetPassword = async (email) => {
     setError("");
     setMessage(<></>);
@@ -45,7 +53,7 @@ const LoginRegisterPage = (props) => {
             </div>
           }
           type="success"
-        ></Alert>
+        />
       );
       setActive("login");
     } catch (e) {
@@ -59,13 +67,13 @@ const LoginRegisterPage = (props) => {
     setMessage(<></>);
     try {
       setLoading(true);
-      let provider = new firebase.auth.FacebookAuthProvider();
+      const provider = new db.auth.FacebookAuthProvider();
       provider.setCustomParameters({
         display: "popup",
       });
-      let u = await auth.signInWithPopup(provider);
+      // const u = await auth.signInWithPopup(provider);
       setLoading(false);
-      props.history.push("/");
+      history.push("/");
     } catch (e) {
       setLoading(false);
       setError(e.message);
@@ -77,11 +85,11 @@ const LoginRegisterPage = (props) => {
     setMessage(<></>);
     try {
       setLoading(true);
-      let provider = new firebase.auth.GoogleAuthProvider();
+      const provider = new db.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-      let u = await auth.signInWithPopup(provider);
+      // const u = await auth.signInWithPopup(provider);
       setLoading(false);
-      props.history.push("/");
+      history.push("/");
     } catch (e) {
       setLoading(false);
       setError(e.message);
@@ -93,30 +101,26 @@ const LoginRegisterPage = (props) => {
     setMessage(<></>);
     try {
       setLoading(true);
-      let registeredUser = await auth.createUserWithEmailAndPassword(
+      const registeredUser = await auth.createUserWithEmailAndPassword(
         email,
         password
       );
-      await firestore.collection("users").doc(registeredUser.user.uid).set({
+      await db.collection("users").doc(registeredUser.user.uid).set({
         uid: registeredUser.user.uid,
-        fullName: fullName,
-        age: age,
+        fullName,
+        age,
         userExperiencePoints: 0,
       });
       await auth.signInWithEmailAndPassword(email, password);
       setLoading(false);
-      props.history.push("/");
+      history.push("/");
     } catch (e) {
       setLoading(false);
       setError(e.message);
     }
   };
-  const [active, setActive] = useState("login");
-  const [error, setError] = useState("");
-  const [message, setMessage] = useState();
-  const [loading, setLoading] = useState(false);
-  const { user } = useContext(AuthContext);
   let component;
+  // const { user } = useContext(AuthContext);
   switch (active) {
     case "login":
       component = (
@@ -205,13 +209,13 @@ const LoginRegisterPage = (props) => {
   return (
     <>
       <Spin spinning={loading}>{component}</Spin>
-      <div className="loginRegister__footerContainer">
+      {/* <div className="loginRegister__footerContainer">
         <img
           alt="footerKids"
           src={kids}
           className="loginRegister__footerContainer__kidsImage"
         />
-      </div>
+      </div> */}
     </>
   );
 };

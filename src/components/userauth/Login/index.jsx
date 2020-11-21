@@ -1,11 +1,8 @@
 import { Alert, Input, Button } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  validateEmail,
-  createErrorClass,
-} from "../../components/register/registerHelpers";
-import ErrorMessage from "../register/ErrorMessage";
+import { validateEmail, createErrorClass } from "../registerHelpers";
+import ErrorMessage from "../ErrorMessage";
 
 const MIN_PASSWORD_LENGTH = 6;
 
