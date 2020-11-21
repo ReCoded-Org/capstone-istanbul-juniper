@@ -5,7 +5,6 @@ import "./index.css";
 import { Col, Layout } from "antd";
 import profilePageImg from "../../images/profilePage/profilePageImg.png";
 import db from "../../firebaseConfig";
-import { v4 as uuidv4 } from "uuid";
 import { AuthContext } from "../../auth/authContext";
 
 const { Sider, Content } = Layout;
@@ -13,11 +12,11 @@ const ProfilePage = () => {
   const { t } = useTranslation();
   const { currentUser } = useContext(AuthContext);
   const currentUserId = currentUser ? currentUser.uid : null;
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState("");
   const ref = db.firestore().collection("users");
 
   const getUsers = () => {
-    ref.where("uid", "==", currentUserId).onSnapshot((querySnapshot) => {
+    ref.onSnapshot((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {
         items.push(doc.data());
