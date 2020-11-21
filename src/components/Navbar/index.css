@@ -133,7 +133,7 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
   width: 100%;
 }
 
-li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageContainer-btn.ant-dropdown-menu-item-active:hover{
+li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageContainer-btn.ant-dropdown-menu-item-active:hover {
   background-color: white;
 }
 

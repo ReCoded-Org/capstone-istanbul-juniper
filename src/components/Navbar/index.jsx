@@ -57,8 +57,8 @@ const Navbar = () => {
   );
 
   useEffect(() => {
-  console.log(window.innerWidth)
-}, [])
+    console.log(window.innerWidth);
+  }, []);
 
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
@@ -143,7 +143,7 @@ const Navbar = () => {
                 overlay={languagesMenu}
                 className="navbar__languageContainer"
               >
-                <GlobalOutlined className="navbar__element-lang"/>
+                <GlobalOutlined className="navbar__element-lang" />
               </Dropdown>
             </Col>
           </Col>
