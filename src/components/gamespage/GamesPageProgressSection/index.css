@@ -36,12 +36,12 @@
   width: 60px;
 }
 
-.progressSectionContainer___row___curLevel {
+.progressSectionContainer___row___leftSideLevel {
   text-align: right;
   padding-right: 20px;
 }
 
-.progressSectionContainer___row___nextLevel {
+.progressSectionContainer___row___rightSideLevel {
   text-align: left;
   padding-left: 20px;
 }

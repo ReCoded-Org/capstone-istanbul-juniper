@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import { Progress, Row, Col } from "antd";
 import { QuestionOutlined } from "@ant-design/icons";
 
@@ -11,6 +12,20 @@ const ProgressSection = ({
 }) => {
   const nextLevel = progressData.currentLevel + 1;
   const [t] = useTranslation();
+  const currentLanguage = i18next.language;
+  const gridSpanObj = {
+    currLevelSpan: 7,
+    progressBarSpan: 10,
+    nextLevelSpan: 7,
+    previousRewardSpan: { span: 8, offset: 3 },
+    nextRewardSpan: { span: 8, offset: 2 },
+  };
+
+  if (currentLanguage === "ar") {
+    gridSpanObj.previousRewardSpan = { span: 8, pull: 4 };
+    gridSpanObj.nextRewardSpan = { span: 8, pull: 4 };
+  }
+
   return (
     <div className="progressSectionContainer">
       <Row justify="center">
@@ -22,15 +37,21 @@ const ProgressSection = ({
         </h3>
       </Row>
       <Row justify="center" className="progressSectionContainer___row">
-        <Col xs={7}>
-          <h3 className="progressSectionContainer___row___header progressSectionContainer___row___curLevel">
+        <Col xs={gridSpanObj.currLevelSpan}>
+          <h3
+            className={`progressSectionContainer___row___header ${
+              currentLanguage === "ar"
+                ? "progressSectionContainer___row___rightSideLevel"
+                : "progressSectionContainer___row___leftSideLevel"
+            }`}
+          >
             {/* example: Level 5 */}
             {t("gamesPage.level", {
               currentLevel: progressData.currentLevel,
             })}
           </h3>
         </Col>
-        <Col xs={10}>
+        <Col xs={gridSpanObj.progressBarSpan}>
           <Progress
             percent={progressData.currentXP}
             className="progressSectionContainer___row___progressBar"
@@ -40,14 +61,20 @@ const ProgressSection = ({
             showInfo={false}
           />
         </Col>
-        <Col xs={7}>
-          <h3 className="progressSectionContainer___row___header progressSectionContainer___row___nextLevel">
+        <Col xs={gridSpanObj.nextLevelSpan}>
+          <h3
+            className={`progressSectionContainer___row___header ${
+              currentLanguage === "ar"
+                ? "progressSectionContainer___row___leftSideLevel"
+                : "progressSectionContainer___row___rightSideLevel"
+            }`}
+          >
             {t("gamesPage.level", { currentLevel: nextLevel })}
           </h3>
         </Col>
       </Row>
       <Row className="progressSectionContainer___row">
-        <Col xs={8} offset={3}>
+        <Col xs={gridSpanObj.previousRewardSpan}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.previousReward")}
           </h3>
@@ -63,7 +90,7 @@ const ProgressSection = ({
             {t("gamesPage.badgeDescription")}
           </h3>
         </Col>
-        <Col xs={8} offset={2}>
+        <Col xs={gridSpanObj.nextRewardSpan}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.nextReward")}
           </h3>
