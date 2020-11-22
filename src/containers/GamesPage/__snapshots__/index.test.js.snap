@@ -367,3 +367,372 @@ Array [
   </div>,
 ]
 `;
+
+exports[`GamesPage container matches the tree 1`] = `
+Array [
+  <div
+    className="progressSectionContainer"
+  >
+    <div
+      className="ant-row ant-row-center"
+      style={Object {}}
+    >
+      <h3
+        className="progressSectionContainer___xp"
+      >
+        gamesPage.experiencePoint
+      </h3>
+    </div>
+    <div
+      className="ant-row ant-row-center progressSectionContainer___row"
+      style={Object {}}
+    >
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <h3
+          className="progressSectionContainer___row___header progressSectionContainer___row___leftSideLevel"
+        >
+          gamesPage.level
+        </h3>
+      </div>
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <div
+          className="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default progressSectionContainer___row___progressBar"
+        >
+          <div
+            className="ant-progress-outer"
+          >
+            <div
+              className="ant-progress-inner"
+              style={
+                Object {
+                  "backgroundColor": "white",
+                }
+              }
+            >
+              <div
+                className="ant-progress-bg"
+                style={
+                  Object {
+                    "background": "#4BA747",
+                    "borderRadius": "",
+                    "height": 20,
+                    "width": "40%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <h3
+          className="progressSectionContainer___row___header progressSectionContainer___row___rightSideLevel"
+        >
+          gamesPage.level
+        </h3>
+      </div>
+    </div>
+    <div
+      className="ant-row progressSectionContainer___row"
+      style={Object {}}
+    >
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <h3
+          className="progressSectionContainer___row___header"
+        >
+          gamesPage.previousReward
+        </h3>
+        <div
+          className="progressSectionContainer___row___prevRewardDiv"
+        >
+          <img
+            alt="gamesPage.badgeDescription"
+            className="progressSectionContainer___row___prevRewardDiv___reward"
+            src="world.svg"
+          />
+        </div>
+        <h3
+          className="progressSectionContainer___row___header"
+        >
+          gamesPage.badgeDescription
+        </h3>
+      </div>
+      <div
+        className="ant-col"
+        style={Object {}}
+      >
+        <h3
+          className="progressSectionContainer___row___header"
+        >
+          gamesPage.nextReward
+        </h3>
+        <div
+          className="progressSectionContainer___row___header___questionMark"
+        >
+          <span
+            aria-label="question"
+            className="anticon anticon-question"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="question"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M764 280.9c-14-30.6-33.9-58.1-59.3-81.6C653.1 151.4 584.6 125 512 125s-141.1 26.4-192.7 74.2c-25.4 23.6-45.3 51-59.3 81.7-14.6 32-22 65.9-22 100.9v27c0 6.2 5 11.2 11.2 11.2h54c6.2 0 11.2-5 11.2-11.2v-27c0-99.5 88.6-180.4 197.6-180.4s197.6 80.9 197.6 180.4c0 40.8-14.5 79.2-42 111.2-27.2 31.7-65.6 54.4-108.1 64-24.3 5.5-46.2 19.2-61.7 38.8a110.85 110.85 0 00-23.9 68.6v31.4c0 6.2 5 11.2 11.2 11.2h54c6.2 0 11.2-5 11.2-11.2v-31.4c0-15.7 10.9-29.5 26-32.9 58.4-13.2 111.4-44.7 149.3-88.7 19.1-22.3 34-47.1 44.3-74 10.7-27.9 16.1-57.2 16.1-87 0-35-7.4-69-22-100.9zM512 787c-30.9 0-56 25.1-56 56s25.1 56 56 56 56-25.1 56-56-25.1-56-56-56z"
+              />
+            </svg>
+          </span>
+        </div>
+        <h3
+          className="progressSectionContainer___row___header"
+        >
+          gamesPage.unknownNextReward
+        </h3>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="bottomCurveContainer"
+  >
+    <div
+      className="bottomCurveContainer__bottomCurve"
+    >
+      <div
+        className="bottomCurveContainer__bottomCurve__topHalf"
+      />
+      <div
+        className="bottomCurveContainer__bottomCurve__bottomHalf"
+      />
+    </div>
+  </div>,
+  <div
+    className="gamePageImageGrid"
+  >
+    <h1
+      className="gamePageImageGrid__title"
+    >
+      gamesPage.title
+    </h1>
+    <div
+      className="ant-row"
+      style={Object {}}
+    >
+      <div
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+        style={Object {}}
+      >
+        <div
+          className="gamePageImageGrid__col__link"
+        >
+          <a
+            href="/games/memorygame"
+            onClick={[Function]}
+          >
+            <div
+              className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+            >
+              <div
+                className="ant-card-cover"
+              >
+                <img
+                  alt="games.memoryGame.title"
+                  className="gamePageImageGrid__col__link__card__img"
+                  src="memoryGame.svg"
+                />
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-meta"
+                >
+                  <div
+                    className="ant-card-meta-detail"
+                  >
+                    <div
+                      className="ant-card-meta-title"
+                    >
+                      <h3
+                        className="gamePageImageGrid__col__link__card__title"
+                      >
+                        games.memoryGame.title
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+        style={Object {}}
+      >
+        <div
+          className="gamePageImageGrid__col__link"
+        >
+          <a
+            href="/games/puzzlegame"
+            onClick={[Function]}
+          >
+            <div
+              className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+            >
+              <div
+                className="ant-card-cover"
+              >
+                <img
+                  alt="games.puzzleGame.title"
+                  className="gamePageImageGrid__col__link__card__img"
+                  src="puzzleGame.svg"
+                />
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-meta"
+                >
+                  <div
+                    className="ant-card-meta-detail"
+                  >
+                    <div
+                      className="ant-card-meta-title"
+                    >
+                      <h3
+                        className="gamePageImageGrid__col__link__card__title"
+                      >
+                        games.puzzleGame.title
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+        style={Object {}}
+      >
+        <div
+          className="gamePageImageGrid__col__link"
+        >
+          <a
+            href="/games/matchinggame"
+            onClick={[Function]}
+          >
+            <div
+              className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+            >
+              <div
+                className="ant-card-cover"
+              >
+                <img
+                  alt="games.matchingGame.title"
+                  className="gamePageImageGrid__col__link__card__img"
+                  src="matchingGame.svg"
+                />
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-meta"
+                >
+                  <div
+                    className="ant-card-meta-detail"
+                  >
+                    <div
+                      className="ant-card-meta-title"
+                    >
+                      <h3
+                        className="gamePageImageGrid__col__link__card__title"
+                      >
+                        games.matchingGame.title
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+        style={Object {}}
+      >
+        <div
+          className="gamePageImageGrid__col__link"
+        >
+          <a
+            href="/games/quizgame"
+            onClick={[Function]}
+          >
+            <div
+              className="ant-card ant-card-bordered ant-card-hoverable gamePageImageGrid__col__link__card"
+            >
+              <div
+                className="ant-card-cover"
+              >
+                <img
+                  alt="games.quizGame.title"
+                  className="gamePageImageGrid__col__link__card__img"
+                  src="quizGame.svg"
+                />
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-meta"
+                >
+                  <div
+                    className="ant-card-meta-detail"
+                  >
+                    <div
+                      className="ant-card-meta-title"
+                    >
+                      <h3
+                        className="gamePageImageGrid__col__link__card__title"
+                      >
+                        games.quizGame.title
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
