@@ -10,23 +10,33 @@ import { Link } from "react-router-dom";
 
 export default function HomePageHeaderSection() {
   const { t } = useTranslation();
-  const currentLanguage= i18next.language;
+  const currentLanguage = i18next.language;
   return (
     <>
       <div className="homePageHeaderContainer">
         <Row justify="space-around" align="middle"></Row>
         <Row justify="space-around" align="middle">
           <Col span={4}>
-          <img
+            <img
               alt="children playing in the garden"
-              src={`${currentLanguage==='ar'? homePageHeaderImgLeft:homePageHeaderImgRight}`}
+              src={`${
+                currentLanguage === "ar"
+                  ? homePageHeaderImgLeft
+                  : homePageHeaderImgRight
+              }`}
               className="homePageHeaderContainer__rightImg"
             ></img>
           </Col>
 
           <Col span={4} offset={6}>
             <Row>
-            <h2 className={`${currentLanguage==="ar" ? "homePageHeaderContainer__arTitle":"homePageHeaderContainer__title"}`}>
+              <h2
+                className={`${
+                  currentLanguage === "ar"
+                    ? "homePageHeaderContainer__arTitle"
+                    : "homePageHeaderContainer__title"
+                }`}
+              >
                 {t("home.headerSection.mainText")}
               </h2>
               <br></br>
@@ -46,7 +56,11 @@ export default function HomePageHeaderSection() {
             <img
               className="homePageHeaderContainer__img"
               alt="children playing in the garden"
-              src={`${currentLanguage==='ar'? homePageHeaderImgRight:homePageHeaderImgLeft}`}
+              src={`${
+                currentLanguage === "ar"
+                  ? homePageHeaderImgRight
+                  : homePageHeaderImgLeft
+              }`}
             ></img>
           </Col>
         </Row>

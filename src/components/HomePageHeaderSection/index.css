@@ -59,12 +59,12 @@
   transition: all 0.5s;
 }
 
-.homePageHeaderContainer__arTitle{
+.homePageHeaderContainer__arTitle {
   text-align: center;
   display: inline-block;
   font-family: "salsa";
   font-size: clamp(0.5rem, 20px, 4vw);
-  display: none; 
+  display: none;
 }
 
 /* Media query rules to override previous rules, as necessary */
