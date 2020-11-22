@@ -1,10 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Login from "../../components/userauth/Login";
 import Register from "../../components/userauth/Register";
 import ResetPassword from "../../components/userauth/ResetPassword";
 import firestore, { auth } from "../../firebaseConfig";
 import firebase from "firebase";
-import { AuthContext } from "../../auth/authContext";
 import { withRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Alert, Spin } from "antd";
@@ -27,7 +26,7 @@ const LoginRegisterPage = ({ history }) => {
     resetErrorAndMessage();
     try {
       setLoading(true);
-      func();
+      await func();
       setLoading(() => false);
       history.push("/");
     } catch (e) {
@@ -57,18 +56,20 @@ const LoginRegisterPage = ({ history }) => {
   };
 
   const loginWithFacebook = async () => {
-    fetchAction(() => {
+    fetchAction(async () => {
       const provider = new firebase.auth.FacebookAuthProvider();
       provider.setCustomParameters({
         display: "popup",
       });
+      await auth.signInWithPopup(provider);
     });
   };
 
   const loginWithGoogle = async () => {
-    fetchAction(() => {
+    fetchAction(async () => {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
+      await auth.signInWithPopup(provider);
     });
   };
 
