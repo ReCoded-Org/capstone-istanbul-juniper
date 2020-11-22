@@ -239,6 +239,36 @@
     "whyWeDoItHeader": "Neden yapıyoruz",
     "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, bir nesil aktivist yetiştirmek imkansız değildir."
   },
+  "register": {
+    "terms": [
+      "İlgili bilgilerinizi saklayabiliriz: İsim, iletişim bilgileri ve e-posta adresi.",
+      "Bilgilerinizin güvende olacağını taahhüt ederiz.",
+      "Web sitemiz içeriğinde site dışı bağlantıları içerebilir. Ancak, sitemizden ayrılmak için bu bağlantıları takip ettikten sonra, diğer web sitesileri üzerinde herhangi bir kontrolümüz olmadığını lütfen gözardı etmeyiniz."
+    ],
+    "fullName": "Lütfen tam adınızı giriniz",
+    "validEmail": "lütfen geçerli eposta adresini giriniz",
+    "enterAge": "Lütfen yaşını gir",
+    "passwordCharacter": "Şifre en az 6 karakter uzunluğunda olmalı",
+    "enterPassword": "Lütfen şifrenizi giriniz",
+    "emailFormat": "E-posta biçimi hatası, lütfen geçerli bir e-posta girin",
+    "agreeOnterms": "Lütfen şartlar ve koşulları kabul edin",
+    "termsTitle": "Şartlar ve koşulları",
+    "close": "Kapat",
+    "iAgree": "Kabul ediyorum",
+    "create": "Yeni hesap oluştur",
+    "name": "Ad Soyad",
+    "age": "Yaş",
+    "password": "Parola",
+    "email": "Email",
+    "iAgreeTo": "Şartları ve koşulları",
+    "termsandCon": "kabul ediyorum",
+    "createAccount": "Yeni hesap oluştur",
+    "alreadyAMember": "Bir üye misiniz? Şimdi giriş yap",
+    "login": "Giriş yap",
+    "orYouCan": "Ya da",
+    "withFacebook": "Facebook ile Bağlan",
+    "withGoogle": "Google ile Bağlan"
+  },
   "resourcesPage": {
     "title": "Kütüphane",
     "aboutPage": "Juniper Kütüphane, Çevre ile ilgili tematik alanlar hakkında kapsamlı, güvenilir ve güncel bilgileri barındıran çevrimiçi bir kütüphanedir. Web sitesi halka açıktır, ücretsizdir ve materyallere tek bir elverişli konumda erişim sağlar. Bu sayfa düzenli olarak güncellenecektir."
