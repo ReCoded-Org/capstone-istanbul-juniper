@@ -229,9 +229,9 @@
     "level": "المستوى {{currentLevel}}",
     "nextReward": "المكافأة التالية",
     "previousReward": "المكافأة السابقة",
-    "experiencePoint": "نقاط خبرة {currentXP}}/100",
+    "experiencePoint": "نقاط خبرة {{currentXP}}/100",
     "unknownNextReward": "غير معروف",
-    "badgeDescription": "وسام {{badgeName}}",
+    "badgeDescription": "شارة العالم",
     "title": "ألعاب"
   },
   "about": {
