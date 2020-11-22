@@ -1,5 +1,6 @@
 .resourcesPage {
-  margin: 30px;
+  padding: 30px;
+  background-color: #b3d0c4;
 }
 
 .resourcesPage__headerContainer {
