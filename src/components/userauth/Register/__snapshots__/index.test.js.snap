@@ -140,26 +140,26 @@ exports[`Register Component matches the tree 1`] = `
         onClick={[Function]}
         type="button"
       >
-        register.login
+        login.login
       </button>
       <div
         className="loginContainer__loginDialog__loginOptionsTitle"
       >
-        register.orYouCan
+        login.orYouCan
       </div>
       <button
         className="loginContainer__loginDialog__facebookLoginBtn"
         onClick={[Function]}
         type="button"
       >
-        register.withFacebook
+        login.withFacebook
       </button>
       <button
         className="loginContainer__loginDialog__googleLoginBtn"
         onClick={[Function]}
         type="button"
       >
-        register.withGoogle
+        login.withGoogle
       </button>
     </div>
   </div>
