@@ -21,6 +21,7 @@ const LoginRegisterPage = ({ history }) => {
     setError("");
     setMessage(<></>);
   };
+
   const fetchAction = async (func) => {
     resetErrorAndMessage();
     try {
@@ -33,11 +34,13 @@ const LoginRegisterPage = ({ history }) => {
       setError(e.message);
     }
   };
+
   const login = async (email, password) => {
     fetchAction(async () => {
       await auth.signInWithEmailAndPassword(email, password);
     });
   };
+
   const passwordReset = async (email) => {
     fetchAction(async () => {
       await auth.sendPasswordResetEmail(email);
@@ -51,6 +54,7 @@ const LoginRegisterPage = ({ history }) => {
       );
     });
   };
+
   const loginWithFacebook = async () => {
     fetchAction(() => {
       const provider = new firebase.auth.FacebookAuthProvider();
@@ -59,12 +63,14 @@ const LoginRegisterPage = ({ history }) => {
       });
     });
   };
+
   const loginWithGoogle = async () => {
     fetchAction(() => {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
     });
   };
+
   const register = async (fullName, email, age, password) => {
     fetchAction(async () => {
       const registeredUser = await auth.createUserWithEmailAndPassword(
@@ -79,10 +85,12 @@ const LoginRegisterPage = ({ history }) => {
       await auth.signInWithEmailAndPassword(email, password);
     });
   };
+
   const handleLogin = () => {
     resetErrorAndMessage();
     setAuthAction("login");
   };
+
   let component;
   switch (authAction) {
     case "login":
@@ -137,6 +145,7 @@ const LoginRegisterPage = ({ history }) => {
     default:
       throw new Error();
   }
+
   return (
     <>
       <Spin spinning={loading}>{component}</Spin>
