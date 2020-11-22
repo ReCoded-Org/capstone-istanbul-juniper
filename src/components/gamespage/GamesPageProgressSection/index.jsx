@@ -22,7 +22,7 @@ const ProgressSection = ({
         </h3>
       </Row>
       <Row justify="center" className="progressSectionContainer___row">
-        <Col xs={6} md={{ push: 1 }} lg={{ push: 2 }}>
+        <Col xs={7}>
           <h3 className="progressSectionContainer___row___header progressSectionContainer___row___curLevel">
             {/* example: Level 5 */}
             {t("gamesPage.level", {
@@ -30,7 +30,7 @@ const ProgressSection = ({
             })}
           </h3>
         </Col>
-        <Col xs={12}>
+        <Col xs={10}>
           <Progress
             percent={progressData.currentXP}
             className="progressSectionContainer___row___progressBar"
@@ -40,14 +40,14 @@ const ProgressSection = ({
             showInfo={false}
           />
         </Col>
-        <Col xs={6} md={{ pull: 1 }} lg={{ pull: 2 }}>
+        <Col xs={7}>
           <h3 className="progressSectionContainer___row___header progressSectionContainer___row___nextLevel">
             {t("gamesPage.level", { currentLevel: nextLevel })}
           </h3>
         </Col>
       </Row>
       <Row className="progressSectionContainer___row">
-        <Col xs={{ span: 10 }} sm={{ span: 5, push: 5 }}>
+        <Col xs={8} offset={3}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.previousReward")}
           </h3>
@@ -63,7 +63,7 @@ const ProgressSection = ({
             {t("gamesPage.badgeDescription")}
           </h3>
         </Col>
-        <Col xs={{ span: 10, push: 5 }} sm={{ span: 6, push: 9 }}>
+        <Col xs={8} offset={3}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.nextReward")}
           </h3>
