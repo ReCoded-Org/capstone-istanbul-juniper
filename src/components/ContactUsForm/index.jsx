@@ -115,7 +115,7 @@ const ContactUsForm = () => {
             <button type="submit" className="contactUsForm__submitButton">
               {t("contact.contactUsForm.send")}
               <span>
-                <SyncOutlined spin={isLoading ? true : false} />
+                <SyncOutlined spin={isLoading} />
               </span>
             </button>
           </div>
