@@ -21,6 +21,7 @@ Array [
             login.login
           </div>
           
+          
           <div
             className="loginContainer__loginDialog"
           >
@@ -119,7 +120,7 @@ Array [
     className="loginRegister__footerContainer"
   >
     <img
-      alt="footerKids"
+      alt="kids having fun"
       className="loginRegister__footerContainer__kidsImage"
       src="LoginKids.svg"
     />

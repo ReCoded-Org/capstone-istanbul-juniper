@@ -5,15 +5,9 @@ import ResetPassword from "../../components/userauth/ResetPassword";
 import firestore, { auth } from "../../firebaseConfig";
 import firebase from "firebase";
 import { AuthContext } from "../../auth/authContext";
-import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Alert, Spin } from "antd";
-import firebase from "firebase";
-import Login from "../../components/userauth/Login";
-import Register from "../../components/userauth/Register";
-import ResetPassword from "../../components/userauth/ResetPassword";
-import firestore, { auth } from "../../firebaseConfig";
 import "./index.css";
 import kids from "../../images/LoginKids.svg";
 

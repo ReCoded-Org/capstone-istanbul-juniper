@@ -44,7 +44,6 @@ exports[`Navbar Component matches the tree 1`] = `
           >
             <svg
               aria-hidden="true"
-              className=""
               data-icon="menu"
               fill="currentColor"
               focusable="false"
@@ -220,7 +219,6 @@ exports[`Navbar Component matches the tree 1`] = `
         >
           <svg
             aria-hidden="true"
-            className=""
             data-icon="global"
             fill="currentColor"
             focusable="false"
