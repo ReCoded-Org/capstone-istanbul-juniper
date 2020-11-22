@@ -259,13 +259,12 @@
     "termsTitle": "Terms of Service",
     "close": "Close",
     "iAgree": "I Agree",
-    "create": "Create new account",
     "name": "Full Name",
     "age": "Age",
     "password": "Password",
     "email": "Email",
     "iAgreeTo": "I Agree to",
-    "termsandCon": "terms and conditions",
+    "termsAndConditions": "terms and conditions",
     "createAccount": "Create new account",
     "alreadyAMember": "Already a member? Log in now"
   },
@@ -280,7 +279,7 @@
     "forgotPassword": "Forget Password?",
     "new": "New at Juniper? Register now",
     "creat": "Creat New Account",
-    "oryoucan": "Or you can",
+    "orYouCan": "Or you can",
     "withFacebook": "Log in with Facebook",
     "withGoogle": "Log in with Google"
   },

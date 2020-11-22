@@ -12,6 +12,7 @@ import "antd/dist/antd.css";
 import "./App.css";
 import QuizGamePage from "./containers/QuizGamePage";
 import ResourcePage from "./containers/ResourcesPage";
+import LoginRegisterPage from "./containers/LoginRegister";
 
 function App() {
   const { i18n } = useTranslation();
@@ -25,7 +26,7 @@ function App() {
         <Route path="/about" component={""} />
         <Route path="/resources" component={""} />
         <Route path="/contact" component={ContactPage} />
-        <Route path="/login" component={""} />
+        <Route path="/login" component={LoginRegisterPage} />
         <Route path="/games/memorygame" component={MemoryGamePage} />
         <Route exact path="/games/puzzle" component={PuzzlePage} />
         <Route path="/games/quizgame" component={QuizGamePage} />

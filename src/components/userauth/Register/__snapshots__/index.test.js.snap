@@ -11,7 +11,7 @@ exports[`Register Component matches the tree 1`] = `
     <div
       className="loginContainer__loginTitle"
     >
-      register.creat
+      register.createAccount
     </div>
     <div
       className="loginContainer__loginDialog"
@@ -128,7 +128,7 @@ exports[`Register Component matches the tree 1`] = `
         className="loginContainer__loginDialog__submitButton"
         type="submit"
       >
-        register.creatAccount
+        register.createAccount
       </button>
       <div
         className="loginContainer__loginDialog__registerLabel"

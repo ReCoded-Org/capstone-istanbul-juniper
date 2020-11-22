@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 import { Dropdown, Menu, Col, Row } from "antd";
@@ -6,10 +6,12 @@ import { MenuOutlined, GlobalOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import logoImg from "./../../images/logo.svg";
+import { AuthContext } from "../../auth/authContext";
+import { auth } from "../../firebaseConfig";
 
 const Navbar = () => {
   const { t } = useTranslation();
-
+  const { user } = useContext(AuthContext);
   const navbarMenu = (
     <Menu>
       <Menu.Item>
@@ -28,7 +30,19 @@ const Navbar = () => {
         <Link to="/contact">{t("navbar.contact")}</Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/login">{t("navbar.login")}</Link>
+        {user && user.isLoggedin ? (
+          <a
+            href="/#"
+            onClick={(e) => {
+              e.preventDefault();
+              auth.signOut();
+            }}
+          >
+            Logout
+          </a>
+        ) : (
+          <Link to="/login">{t("navbar.login")}</Link>
+        )}
       </Menu.Item>
     </Menu>
   );
@@ -128,9 +142,21 @@ const Navbar = () => {
           </Col>
           <Col>
             <li>
-              <Link to="/login" className={isCurrentPath("/login")}>
-                {t("navbar.login")}
-              </Link>
+              {user && user.isLoggedin ? (
+                <a
+                  href="/#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    auth.signOut();
+                  }}
+                >
+                  Logout
+                </a>
+              ) : (
+                <Link to="/login" className={isCurrentPath("/login")}>
+                  {t("navbar.login")}
+                </Link>
+              )}
             </li>
           </Col>
           <Col>

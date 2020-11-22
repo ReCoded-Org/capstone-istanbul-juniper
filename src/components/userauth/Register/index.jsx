@@ -97,7 +97,9 @@ const Register = ({
         </ul>
       </Modal>
       <div className="loginContainer">
-        <div className="loginContainer__loginTitle">{t("register.creat")}</div>
+        <div className="loginContainer__loginTitle">
+          {t("register.createAccount")}
+        </div>
         {error && (
           <Alert className="authAlert" type="error" showIcon message={error} />
         )}
@@ -180,7 +182,7 @@ const Register = ({
             type="submit"
             className="loginContainer__loginDialog__submitButton"
           >
-            {t("register.creatAccount")}
+            {t("register.createAccount")}
           </button>
           <div className="loginContainer__loginDialog__registerLabel">
             {t("register.alreadyAMember")}
