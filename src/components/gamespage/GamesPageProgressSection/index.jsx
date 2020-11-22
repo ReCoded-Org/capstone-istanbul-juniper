@@ -5,12 +5,13 @@ import i18next from "i18next";
 import { Progress, Row, Col } from "antd";
 import { QuestionOutlined } from "@ant-design/icons";
 
-const GRID_SPAN_OBJ = {
-  currLevelSpan: 7,
-  progressBarSpan: 10,
-  nextLevelSpan: 7,
-  previousRewardSpan: { span: 8, offset: 3 },
-  nextRewardSpan: { span: 8, offset: 2 },
+// Antd Col spans. Arabic language requires different grid setup. This object makes conditional grid setting easier.
+const GRID_SPANS = {
+  currLevel: 7,
+  progressBar: 10,
+  nextLevel: 7,
+  previousReward: { span: 8, offset: 3 },
+  nextReward: { span: 8, offset: 2 },
 };
 
 const ProgressSection = ({
@@ -24,8 +25,8 @@ const ProgressSection = ({
 
   // Since changing language to arabic revert page layout, previously defined offsets cause misalignments
   if (currentLanguage === "ar") {
-    GRID_SPAN_OBJ.previousRewardSpan = { span: 8, pull: 4 };
-    GRID_SPAN_OBJ.nextRewardSpan = { span: 8, pull: 4 };
+    GRID_SPANS.previousReward = { span: 8, pull: 4 };
+    GRID_SPANS.nextReward = { span: 8, pull: 4 };
   }
 
   return (
@@ -39,7 +40,7 @@ const ProgressSection = ({
         </h3>
       </Row>
       <Row justify="center" className="progressSectionContainer___row">
-        <Col xs={GRID_SPAN_OBJ.currLevelSpan}>
+        <Col xs={GRID_SPANS.currLevelSpan}>
           <h3
             className={`progressSectionContainer___row___header ${
               // Arabic reverts positions of level texts. Adaptive class naming is required for appropriate alignment and padding.
@@ -54,7 +55,7 @@ const ProgressSection = ({
             })}
           </h3>
         </Col>
-        <Col xs={GRID_SPAN_OBJ.progressBarSpan}>
+        <Col xs={GRID_SPANS.progressBarSpan}>
           <Progress
             percent={progressData.currentXP}
             className="progressSectionContainer___row___progressBar"
@@ -64,7 +65,7 @@ const ProgressSection = ({
             showInfo={false}
           />
         </Col>
-        <Col xs={GRID_SPAN_OBJ.nextLevelSpan}>
+        <Col xs={GRID_SPANS.nextLevelSpan}>
           <h3
             className={`progressSectionContainer___row___header ${
               currentLanguage === "ar"
@@ -77,7 +78,7 @@ const ProgressSection = ({
         </Col>
       </Row>
       <Row className="progressSectionContainer___row">
-        <Col xs={GRID_SPAN_OBJ.previousRewardSpan}>
+        <Col xs={GRID_SPANS.previousRewardSpan}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.previousReward")}
           </h3>
@@ -93,7 +94,7 @@ const ProgressSection = ({
             {t("gamesPage.badgeDescription")}
           </h3>
         </Col>
-        <Col xs={GRID_SPAN_OBJ.nextRewardSpan}>
+        <Col xs={GRID_SPANS.nextRewardSpan}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.nextReward")}
           </h3>
