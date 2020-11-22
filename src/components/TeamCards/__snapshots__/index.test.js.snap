@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamCards renders correctly 1`] = `
+<div
+  className="ourTeam"
+>
+  <div
+    className="ant-row ourTeam__Header"
+    style={Object {}}
+  >
+    Our Team
+  </div>
+  <div
+    className="ant-row ourTeam__teamCards"
+    style={Object {}}
+  />
+</div>
+`;

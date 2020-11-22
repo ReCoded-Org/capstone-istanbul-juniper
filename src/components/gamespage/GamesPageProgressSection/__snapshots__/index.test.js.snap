@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GamesPageProgressSection Component renders correctly 1`] = `
+exports[`GamesPageProgressSection Component renders correctly. 1`] = `
 <div
   className="progressSectionContainer"
 >
@@ -19,17 +19,17 @@ exports[`GamesPageProgressSection Component renders correctly 1`] = `
     style={Object {}}
   >
     <div
-      className="ant-col ant-col-xs-6 ant-col-md-push-1 ant-col-lg-push-2"
+      className="ant-col"
       style={Object {}}
     >
       <h3
-        className="progressSectionContainer___row___header progressSectionContainer___row___curLevel"
+        className="progressSectionContainer___row___header progressSectionContainer___row___leftSideLevel"
       >
         gamesPage.level
       </h3>
     </div>
     <div
-      className="ant-col ant-col-xs-12"
+      className="ant-col"
       style={Object {}}
     >
       <div
@@ -62,11 +62,11 @@ exports[`GamesPageProgressSection Component renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="ant-col ant-col-xs-6 ant-col-md-pull-1 ant-col-lg-pull-2"
+      className="ant-col"
       style={Object {}}
     >
       <h3
-        className="progressSectionContainer___row___header progressSectionContainer___row___nextLevel"
+        className="progressSectionContainer___row___header progressSectionContainer___row___rightSideLevel"
       >
         gamesPage.level
       </h3>
@@ -77,7 +77,7 @@ exports[`GamesPageProgressSection Component renders correctly 1`] = `
     style={Object {}}
   >
     <div
-      className="ant-col ant-col-3 ant-col-push-5"
+      className="ant-col"
       style={Object {}}
     >
       <h3
@@ -89,7 +89,7 @@ exports[`GamesPageProgressSection Component renders correctly 1`] = `
         className="progressSectionContainer___row___prevRewardDiv"
       >
         <img
-          alt="test"
+          alt="gamesPage.badgeDescription"
           className="progressSectionContainer___row___prevRewardDiv___reward"
           src=""
         />
@@ -101,7 +101,7 @@ exports[`GamesPageProgressSection Component renders correctly 1`] = `
       </h3>
     </div>
     <div
-      className="ant-col ant-col-3 ant-col-push-13"
+      className="ant-col"
       style={Object {}}
     >
       <h3
@@ -135,7 +135,7 @@ exports[`GamesPageProgressSection Component renders correctly 1`] = `
       <h3
         className="progressSectionContainer___row___header"
       >
-        gamesPage.unknown
+        gamesPage.unknownNextReward
       </h3>
     </div>
   </div>
