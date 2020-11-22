@@ -193,10 +193,10 @@ const Register = ({
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
-            {t("register.login")}
+            {t("login.login")}
           </button>
           <div className="loginContainer__loginDialog__loginOptionsTitle">
-            {t("register.orYouCan")}
+            {t("login.orYouCan")}
           </div>
           <button
             onClick={(e) => {
@@ -206,7 +206,7 @@ const Register = ({
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
-            {t("register.withFacebook")}
+            {t("login.withFacebook")}
           </button>
           <button
             onClick={(e) => {
@@ -216,7 +216,7 @@ const Register = ({
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >
-            {t("register.withGoogle")}
+            {t("login.withGoogle")}
           </button>
         </div>
       </div>
