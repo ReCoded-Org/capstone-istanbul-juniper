@@ -3,14 +3,14 @@
 }
 
 .bottomCurveContainer__bottomCurve {
-  background: #add4c5;
+  background: #b4d0c4;
   border-radius: 50%;
   height: 15vh;
 }
 
 .bottomCurveContainer__bottomCurve__topHalf {
   height: 50%;
-  background: #add4c5;
+  background: #b4d0c4;
 }
 
 .bottomCurveContainer__bottomCurve__bottomHalf {
