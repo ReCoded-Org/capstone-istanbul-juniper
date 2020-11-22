@@ -14,13 +14,13 @@ const StayUpToDate = () => {
     }),
   ];
 
-  const twitterImages = twitterPagesData.map((page, index) => {
+  const twitterImages = twitterPagesData.map((page) => {
     return (
       <Col
         xs={24}
-        xl={12}
+        lg={12}
         className="stayUpToDate__twitterContent__col"
-        key={index}
+        key={page.href}
       >
         <TwitterImage alt={page.alt} href={page.href} src={page.src} />
       </Col>
@@ -32,9 +32,7 @@ const StayUpToDate = () => {
       <Title>
         <span className="stayUpToDate__title">{t("home.stayUpToDate")}</span>
       </Title>
-      <Row align="center" className="stayUpToDate__twitterContent">
-        {twitterImages}
-      </Row>
+      <Row className="stayUpToDate__twitterContent">{twitterImages}</Row>
     </div>
   );
 };

@@ -19,11 +19,11 @@ exports[`StayUpToDate renders correctly 1`] = `
     </span>
   </h1>
   <div
-    className="ant-row ant-row-center stayUpToDate__twitterContent"
+    className="ant-row stayUpToDate__twitterContent"
     style={Object {}}
   >
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -36,7 +36,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -49,7 +49,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -62,7 +62,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -75,7 +75,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -88,7 +88,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -101,7 +101,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -114,7 +114,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -127,7 +127,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -140,7 +140,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -153,7 +153,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -166,7 +166,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -179,7 +179,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -192,7 +192,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -205,7 +205,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -218,7 +218,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
@@ -231,7 +231,7 @@ exports[`StayUpToDate renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-xl-12"
+      className="ant-col stayUpToDate__twitterContent__col ant-col-xs-24 ant-col-lg-12"
       style={Object {}}
     >
       <a
