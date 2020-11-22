@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Col, Row } from "antd";
 import "./index.css";
 import { SyncOutlined } from "@ant-design/icons";
+import { message } from "antd";
 
 // Converts object to proper form data(string)
 const encodeFormData = (data) => {
@@ -49,6 +50,10 @@ const ContactUsForm = () => {
 
       e.preventDefault();
     });
+  };
+
+  const success = () => {
+    message.success("This is a success message");
   };
 
   return (
