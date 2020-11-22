@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Dropdown, Menu, Col, Row } from "antd";
 import { MenuOutlined, GlobalOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
@@ -39,19 +39,19 @@ const Navbar = () => {
         className="navbar__languageContainer-btn"
         onClick={(e) => handleLanguageChange("en")}
       >
-        <p>English</p>
+        <p>EN</p>
       </Menu.Item>
       <Menu.Item
         className="navbar__languageContainer-btn"
         onClick={(e) => handleLanguageChange("tr")}
       >
-        <p>Türkçe</p>
+        <p>TR</p>
       </Menu.Item>
       <Menu.Item
         className="navbar__languageContainer-btn"
         onClick={(e) => handleLanguageChange("ar")}
       >
-        <p>العربية</p>
+        <p>AR</p>
       </Menu.Item>
     </Menu>
   );
@@ -70,98 +70,96 @@ const Navbar = () => {
   };
 
   return (
-    <Router>
-      <div className="navbar">
-        <Row className="navbar__topHalf" justify="space-around" gutter={12}>
-          <Col className="navbar__elements" flex={2}>
-            {/*Dropdown replaces the navbar in small screens */}
-            <Col>
-              <Dropdown className="navbar__dropdown" overlay={navbarMenu}>
-                <button className="navbar__dropdown-btn">
-                  <MenuOutlined />
-                </button>
-              </Dropdown>
-            </Col>
-
-            <Col>
-              <li>
-                <Link to="/" className={isCurrentPath("/")}>
-                  {t("navbar.home")}
-                </Link>
-              </li>
-            </Col>
-            <Col>
-              <li>
-                <Link to="/about" className={isCurrentPath("/about")}>
-                  {t("navbar.about")}
-                </Link>
-              </li>
-            </Col>
-            <Col>
-              <li>
-                <Link to="/games" className={isCurrentPath("/games")}>
-                  {t("navbar.games")}
-                </Link>
-              </li>
-            </Col>
+    <div className="navbar">
+      <Row className="navbar__topHalf" justify="space-around" gutter={12}>
+        <Col className="navbar__elements" flex={2}>
+          {/*Dropdown replaces the navbar in small screens */}
+          <Col>
+            <Dropdown className="navbar__dropdown" overlay={navbarMenu}>
+              <button className="navbar__dropdown-btn">
+                <MenuOutlined />
+              </button>
+            </Dropdown>
           </Col>
 
-          <Col span={4} flex={2}>
-            <Link className="navbar__title" to="/">
-              Juniper
-            </Link>
+          <Col>
+            <li>
+              <Link to="/" className={isCurrentPath("/")}>
+                {t("navbar.home")}
+              </Link>
+            </li>
           </Col>
-
-          <Col className="navbar__elements" flex={2}>
-            <Col>
-              <li>
-                <Link to="/resources" className={isCurrentPath("/resources")}>
-                  {t("navbar.resources")}
-                </Link>
-              </li>
-            </Col>
-            <Col>
-              <li>
-                <Link to="/contact" className={isCurrentPath("/contact")}>
-                  {t("navbar.contact")}
-                </Link>
-              </li>
-            </Col>
-            <Col>
-              <li>
-                <Link to="/login" className={isCurrentPath("/login")}>
-                  {t("navbar.login")}
-                </Link>
-              </li>
-            </Col>
-            <Col>
-              <Dropdown
-                overlay={languagesMenu}
-                className="navbar__languageContainer"
-              >
-                <GlobalOutlined />
-              </Dropdown>
-            </Col>
+          <Col>
+            <li>
+              <Link to="/about" className={isCurrentPath("/about")}>
+                {t("navbar.about")}
+              </Link>
+            </li>
           </Col>
-        </Row>
+          <Col>
+            <li>
+              <Link to="/games" className={isCurrentPath("/games")}>
+                {t("navbar.games")}
+              </Link>
+            </li>
+          </Col>
+        </Col>
 
-        <Row className="navbar__bottomHalf">
-          <div className="navbar__helperDiv"></div>
-          <div></div>
-        </Row>
+        <Col span={4} flex={2}>
+          <Link className="navbar__title" to="/">
+            Juniper
+          </Link>
+        </Col>
 
-        <Link
-          className={
-            document.dir === "ltr"
-              ? "navbar__logo-ltrLink navbar__logo-link"
-              : "navbar__logo-rtlLink navbar__logo-link"
-          }
-          to={"/"}
-        >
-          <img className="navbar__logo" src={logoImg} alt="juniper-logo" />
-        </Link>
-      </div>
-    </Router>
+        <Col className="navbar__elements" flex={2}>
+          <Col>
+            <li>
+              <Link to="/resources" className={isCurrentPath("/resources")}>
+                {t("navbar.resources")}
+              </Link>
+            </li>
+          </Col>
+          <Col>
+            <li>
+              <Link to="/contact" className={isCurrentPath("/contact")}>
+                {t("navbar.contact")}
+              </Link>
+            </li>
+          </Col>
+          <Col>
+            <li>
+              <Link to="/login" className={isCurrentPath("/login")}>
+                {t("navbar.login")}
+              </Link>
+            </li>
+          </Col>
+          <Col>
+            <Dropdown
+              overlay={languagesMenu}
+              className="navbar__languageContainer"
+            >
+              <GlobalOutlined className="navbar__element-lang" />
+            </Dropdown>
+          </Col>
+        </Col>
+      </Row>
+
+      <Row className="navbar__bottomHalf">
+        <div className="navbar__helperDiv"></div>
+        <div></div>
+      </Row>
+
+      <Link
+        className={
+          document.dir === "ltr"
+            ? "navbar__logo-ltrLink navbar__logo-link"
+            : "navbar__logo-rtlLink navbar__logo-link"
+        }
+        to={"/"}
+      >
+        <img className="navbar__logo" src={logoImg} alt="juniper-logo" />
+      </Link>
+    </div>
   );
 };
 

@@ -130,6 +130,11 @@ ul.ant-dropdown-menu {
 
 li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageContainer-btn.ant-dropdown-menu-item-active {
   background-color: transparent;
+  width: 100%;
+}
+
+li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageContainer-btn.ant-dropdown-menu-item-active:hover {
+  background-color: white;
 }
 
 .navbar__dropdown-btn {
@@ -155,11 +160,6 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
   height: auto;
 }
 
-.navbar__languageContainer-btn:hover {
-  cursor: pointer;
-  background-color: #b4d0c4;
-}
-
 .navbar__languageContainer {
   display: flex;
   justify-content: space-around;
@@ -171,12 +171,12 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
 }
 
 @media (max-width: 768px) {
-  .navbar__Elements li a {
+  .navbar__elements li a {
     display: none;
   }
 }
 
-@media screen and (min-width: 768.1px) {
+@media (min-width: 768.1px) {
   .navbar__dropdown {
     display: none;
   }
@@ -191,4 +191,12 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
   .navbar__logo-ltrLink {
     left: 48.5%;
   }
+}
+
+.navbar__element-lang {
+  font-size: 21px;
+}
+
+.navbar__element-lang:hover {
+  cursor: pointer;
 }
