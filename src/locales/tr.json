@@ -242,7 +242,44 @@
     "aboutUsHeader": "Hakkımızda",
     "aboutUsText": "Teknolojiyi insanların yararına kullanmakta ortak paydasını bulan çok uluslu bir gençlik grubuyuz. Orta Doğu ve Kuzey Afrika'daki çocukları eğitici oyunlar aracılığıyla çevre sorunları ve iklim değişikliği konusunda eğitmek için birlikte çalışan 5 genç geliştirici ve 1 baş mühendisten oluşan bir grup. Hedef kitlemiz MENA'da yaşayan 8-13 yaş arası çocuklar; bu nedenle, web sitemizi çocukların ve öğretmenlerinin / ebeveynlerinin web sitesinde kolayca gezinmelerine yardımcı olmak için üç ana dilde sunuyoruz.",
     "whyWeDoItHeader": "Neden yapıyoruz",
-    "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, bir nesil aktivist yetiştirmek imkansız değildir."
+    "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, aktivist bir nesil yetiştirmek imkansız değildir.",
+    "teamInfo": {
+      "louis": {
+        "name": "Louis Li",
+        "bio": "Louis, Re:Coded Türkiye'de kodlama eğitmenidir. Pek çok heyecan verici hikaye ve etkileyici deneyimle kelebek etkisini yaratıyor.",
+        "role": "Proje Mühendisi"
+      },
+      "ammar": {
+        "name": "Ammar Sammour",
+        "bio": "Ammar, Re:Coded tarafından düzenlenen Türkiye'deki Front-end Web Geliştirme Eğitim programında kodlama eğitmenidir!",
+        "role": "Ekip Lideri"
+      },
+      "ibrahim": {
+        "name": "Ibrahim Aljarad",
+        "bio": "Selam, ben Suriye'den İbrahim, Flatiron kodlama okulunda kodlama okudum ve Alfurat Üniversitesi Ekonomi bölümünü tamamladım. Re:Coded organizasyonunun Web Ön yüz Geliştirme temel eğitim programına katıldım ve mezun oldum. Kodlama dışındaki diğer deneyimlerim: saha yapım ekiplerine teknik destek sağlayan uydu yapımcısı olarak çeşitli kanallar ve ajanslarla çalıştım.",
+        "role": "Web Ön yüz Geliştirici"
+      },
+      "majd": {
+        "name": "Majd Ajroudi",
+        "bio": "Çok yönlü becerilere, çeşitli mühendislik alanlarında deneyime ve sosyal sorunları çözmek için teknolojiyi kullanma konusunda istekli bir genç geliştirici.",
+        "role": "Web Ön yüz Geliştirici"
+      },
+      "sule": {
+        "name": "Sule Sinikoglu",
+        "bio": "Küresel Zorluklar üzerinde olumlu etki yaratmak için 'iyi kod' yazan bir Web Geliştiricisi.",
+        "role": "Web Ön yüz Geliştirici"
+      },
+      "tarkan": {
+        "name": "Tarkan Mansuroglu",
+        "bio": "Re:Coded web ön yüz Geliştirme eğitim programı mezunu ve kısmen kendi kendine öğrenen bir web arayüz geliştiricisi. Ayrıca tutkusu öğrenmek olan, bilgisayarlar konusunda meraklı, bilgisayar oyunlarına meraklı bir spor tutkunu. Becerilerini test etmeyi ve geliştirmek için gerçek hayata dair sorunları çözmeyi seviyor. Onu sosyal medyadan takip edin!",
+        "role": "Web Ön yüz Geliştirici"
+      },
+      "yaman": {
+        "name": "Mohamad Yaman Sammani",
+        "bio": "Yaman, Kasım 2020'de Re: Coded Bootcamp'tan mezun olan web ön yüz geliştiricisidir. Tutkusu, göçmenlere ev sahibi ülkelerdeki hizmetlere kolay erişimlerini sağlayan programlar tasarlamaktır.",
+        "role": "Web Ön yüz Geliştirici"
+      }
+    }
   },
   "loginRegister": {
     "anEmailSent": "{{email}} adresine bir e-posta mesajı gönderildi. Şifre sıfırlama talimatlarını görmek için, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."

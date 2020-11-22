@@ -1,0 +1,18 @@
+.ourTeam__teamCards {
+  background-color: #b4d0c4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.ourTeam__Header {
+  font-family: "Salsa", cursive;
+  display: flex;
+  align-self: center;
+  font-size: 2.3em;
+}
+
+.ourTeam {
+  display: flex;
+  flex-direction: column;
+}

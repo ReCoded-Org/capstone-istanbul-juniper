@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 import kid0Img from "./../../images/aboutPage/kid-1.png";
 import kid1Img from "./../../images/aboutPage/kid-2.png";
 import { useTranslation } from "react-i18next";
+import TeamCards from "./../../components/TeamCards";
 import "./index.css";
 
 const AboutPage = () => {
@@ -42,7 +43,9 @@ const AboutPage = () => {
           />
         </Col>
       </Row>
-      <Row className="team">{/* team members cards are rendered here */}</Row>
+      <Row className="team">
+        <TeamCards />
+      </Row>
     </div>
   );
 };
