@@ -34,13 +34,12 @@ const LoginRegisterPage = ({ history }) => {
     }
   };
   const login = async (email, password) => {
-    const action = async () => {
+    fetchAction(async () => {
       await auth.signInWithEmailAndPassword(email, password);
-    };
-    fetchAction(action);
+    });
   };
   const passwordReset = async (email) => {
-    const action = async () => {
+    fetchAction(async () => {
       await auth.sendPasswordResetEmail(email);
       setMessage(
         <Alert
@@ -56,27 +55,24 @@ const LoginRegisterPage = ({ history }) => {
           type="success"
         />
       );
-    };
-    fetchAction(action);
+    });
   };
   const loginWithFacebook = async () => {
-    const action = () => {
+    fetchAction(() => {
       const provider = new firebase.auth.FacebookAuthProvider();
       provider.setCustomParameters({
         display: "popup",
       });
-    };
-    fetchAction(action);
+    });
   };
   const loginWithGoogle = async () => {
-    const action = async () => {
+    fetchAction(() => {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-    };
-    fetchAction(action);
+    });
   };
   const register = async (fullName, email, age, password) => {
-    const action = async () => {
+    fetchAction(async () => {
       const registeredUser = await auth.createUserWithEmailAndPassword(
         email,
         password
@@ -87,8 +83,7 @@ const LoginRegisterPage = ({ history }) => {
         age,
       });
       await auth.signInWithEmailAndPassword(email, password);
-    };
-    fetchAction(action);
+    });
   };
   const handleLogin = () => {
     resetErrorAndMessage();
@@ -153,7 +148,7 @@ const LoginRegisterPage = ({ history }) => {
       <Spin spinning={loading}>{component}</Spin>
       <div className="loginRegister__footerContainer">
         <img
-          alt="footerKids"
+          alt="kids having fun"
           src={kids}
           className="loginRegister__footerContainer__kidsImage"
         />
