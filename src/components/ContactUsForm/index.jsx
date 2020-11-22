@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Col, Row } from "antd";
-import { RiSendPlaneFill } from "react-icons/ri";
 import "./index.css";
+import { SyncOutlined } from "@ant-design/icons";
+import { message } from "antd";
 
 // Converts object to proper form data(string)
 const encodeFormData = (data) => {
@@ -19,8 +20,8 @@ const ContactUsForm = () => {
     message: "",
   });
 
-  // The change in isSubmitted state triggers post submission message
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // The change in isLoading state triggers SyncOutlined icon spinning
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
 
@@ -29,34 +30,33 @@ const ContactUsForm = () => {
   // encode is used for passing the string to the body
   // setTimeOut stands for showing post submission message about a time after submit
   const handleSubmit = (e) => {
+    setIsLoading(true);
+    e.preventDefault();
     fetch("/", {
       method: "POST",
       "data-netlify": "true",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encodeFormData({ "form-name": "contact", ...formValue }),
-    }).then(() => {
-      setTimeout(() => setIsSubmitted(false), 2000);
-      setIsSubmitted(true);
-      setFormValue({
-        name: "",
-        email: "",
-        message: "",
-      }).catch((error) => alert(error));
-
-      e.preventDefault();
-    });
+    })
+      .then(() => {
+        setIsLoading(false);
+        message.success({
+          content: t("contact.contactUsForm.postSubmissionMessage"),
+          className: "contactUsForm__postSubmissionMessage",
+        });
+        setFormValue({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => message.error(error));
   };
 
   return (
     <div className="contactUsFormContainer">
       <form onSubmit={handleSubmit}>
         <Col>
-          <div
-            className="contactUsForm__postSubmissionMessage"
-            style={{ visibility: isSubmitted ? "visible" : "hidden" }}
-          >
-            <strong>{t("contact.contactUsForm.postSubmissionMessage")}</strong>
-          </div>
           <Col>
             <label className="contactUsForm__label">
               {t("contact.contactUsForm.name")}
@@ -110,7 +110,9 @@ const ContactUsForm = () => {
           <div className="contactUsForm__submit">
             <button type="submit" className="contactUsForm__submitButton">
               {t("contact.contactUsForm.send")}
-              <RiSendPlaneFill />
+              <span>
+                <SyncOutlined spin={isLoading} />
+              </span>
             </button>
           </div>
         </Row>

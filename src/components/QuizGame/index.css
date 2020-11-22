@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #b4d0c4;
+  padding-bottom: 30px;
+  font-size: 20px;
 }
 
 .quizWrapper__score {
@@ -25,15 +28,22 @@
 .quizWrapper__startGame,
 .quizWrapper__nextButton {
   cursor: pointer;
-  background: linear-gradient(180deg, #ffffff, #ffcc91);
+  background-color: #f8ac4c;
   border: 2px solid #d38558;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   height: 40px;
   margin: 20px 0;
   padding: 0 40px;
+  outline: none;
+  background: #b4d0c4;
 }
 
 .quizWrapper__startGame {
   max-width: 200px;
+  background-color: #f8ac4c;
+}
+
+.quizWrapper__nextButton {
+  background-color: #f8ac4c;
 }
