@@ -21,14 +21,6 @@ const LoginRegisterPage = ({ history }) => {
     setError("");
     setMessage(<></>);
   };
-  const addUserToHistory = () => {
-    history.push("/");
-  };
-  const failedAction = (e) => {
-    setLoading(() => false);
-    setError(e.message);
-  };
-
   const fetchAction = async (func) => {
     resetErrorAndMessage();
     try {
@@ -80,7 +72,6 @@ const LoginRegisterPage = ({ history }) => {
     const action = async () => {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-      addUserToHistory();
     };
     fetchAction(action);
   };
@@ -157,7 +148,6 @@ const LoginRegisterPage = ({ history }) => {
     default:
       throw new Error();
   }
-
   return (
     <>
       <Spin spinning={loading}>{component}</Spin>
