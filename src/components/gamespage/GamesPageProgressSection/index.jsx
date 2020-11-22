@@ -47,7 +47,7 @@ const ProgressSection = ({
         </Col>
       </Row>
       <Row className="progressSectionContainer___row">
-        <Col span={3} push={5}>
+        <Col xs={{ span: 10 }} sm={{ span: 5, push: 5 }}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.previousReward")}
           </h3>
@@ -63,7 +63,7 @@ const ProgressSection = ({
             {t("gamesPage.badgeDescription")}
           </h3>
         </Col>
-        <Col span={3} push={13}>
+        <Col xs={{ span: 10, push: 5 }} sm={{ span: 6, push: 9 }}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.nextReward")}
           </h3>
