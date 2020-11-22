@@ -263,13 +263,12 @@
     "termsTitle": "Şartlar ve koşulları",
     "close": "Kapat",
     "iAgree": "Kabul ediyorum",
-    "create": "Yeni hesap oluştur",
     "name": "Ad Soyad",
     "age": "Yaş",
     "password": "Parola",
     "email": "Email",
     "iAgreeTo": "Şartları ve koşulları",
-    "termsandCon": "kabul ediyorum",
+    "termsAndConditions": "kabul ediyorum",
     "createAccount": "Yeni hesap oluştur",
     "alreadyAMember": "Bir üye misiniz? Şimdi giriş yap"
   },
@@ -291,7 +290,7 @@
     "forgotPassword": "Şifremi Unuttum?",
     "new": "Juniper'de yeni misiniz? Şimdi üye Ol",
     "creat": "Üye Ol",
-    "oryoucan": "Ya da",
+    "orYouCan": "Ya da",
     "withFacebook": "Facebook İle Bağlan",
     "withGoogle": "Google İle Bağlan"
   }
