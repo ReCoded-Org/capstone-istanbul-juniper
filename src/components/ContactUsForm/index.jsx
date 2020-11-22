@@ -19,6 +19,9 @@ const ContactUsForm = () => {
     message: "",
   });
 
+  // The change in isSubmitted state triggers post submission message
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   // The change in isLoading state triggers SyncOutlined icon spinning
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,6 +40,7 @@ const ContactUsForm = () => {
       body: encodeFormData({ "form-name": "contact", ...formValue }),
     }).then(() => {
       setIsLoading(false);
+      setIsSubmitted(true);
       setFormValue({
         name: "",
         email: "",
