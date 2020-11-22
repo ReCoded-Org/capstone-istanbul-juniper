@@ -5,6 +5,7 @@ import homePageHeaderImgLeft from "../../images/child.png";
 import homePageHeaderImgRight from "../../images/family.png";
 import "./index.css";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function HomePageHeaderSection() {
   const { t } = useTranslation();
@@ -17,6 +18,7 @@ export default function HomePageHeaderSection() {
             <img
               alt="children playing in the garden"
               src={homePageHeaderImgRight}
+              className="homePageHeaderContainer__rightImg"
             ></img>
           </Col>
 
@@ -30,19 +32,14 @@ export default function HomePageHeaderSection() {
                 {t("home.headerSection.secondaryText")}
               </p>
             </Row>
-            <Row>
-              <button
-                align="top"
-                type="button"
-                className="homePageHeaderContainer__button"
-                shape="round"
-                size="large"
-              >
-                {t("home.headerSection.headerButton")}
-              </button>
+            <Row className="homePageHeaderContainer__button">
+              <Link to="/games">
+                <button className="homePageHeaderContainer__row">
+                  {t("home.headerSection.headerButton")}
+                </button>
+              </Link>
             </Row>
           </Col>
-
           <Col span={4}>
             <img
               className="homePageHeaderContainer__img"

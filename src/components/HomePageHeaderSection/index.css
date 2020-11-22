@@ -19,6 +19,23 @@
 .homePageHeaderContainer {
   padding-top: 150px;
   font-size: 2vw;
+  background: #b4d0c4;
+}
+
+.homePageHeaderContainer__row {
+  border: none;
+  background: #f8ac4c;
+  margin: auto;
+  width: 100%;
+  font-family: "Salsa", cursive;
+  font-weight: 550;
+  transition: all 0.5s;
+  padding: 5px;
+  font-size: clamp(0.5rem, 15px, 4vw);
+  cursor: pointer;
+  min-height: 130%;
+  outline: none;
+  color: black;
 }
 
 .homePageHeaderContainer__button {
@@ -56,5 +73,23 @@
   }
   .homePageHeaderContainer__button {
     display: block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .homePageHeaderContainer__rightImg {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .homePageHeaderContainer__rightImg {
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .homePageHeaderContainer__rightImg {
+    width: 330px;
   }
 }

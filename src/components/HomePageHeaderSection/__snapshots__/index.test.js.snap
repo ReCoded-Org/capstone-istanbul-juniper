@@ -18,6 +18,7 @@ exports[`HomePageHeaderSection snapshot test 1`] = `
     >
       <img
         alt="children playing in the garden"
+        className="homePageHeaderContainer__rightImg"
         src="family.png"
       />
     </div>
@@ -42,18 +43,19 @@ exports[`HomePageHeaderSection snapshot test 1`] = `
         </p>
       </div>
       <div
-        className="ant-row"
+        className="ant-row homePageHeaderContainer__button"
         style={Object {}}
       >
-        <button
-          align="top"
-          className="homePageHeaderContainer__button"
-          shape="round"
-          size="large"
-          type="button"
+        <a
+          href="/games"
+          onClick={[Function]}
         >
-          home.headerSection.headerButton
-        </button>
+          <button
+            className="homePageHeaderContainer__row"
+          >
+            home.headerSection.headerButton
+          </button>
+        </a>
       </div>
     </div>
     <div
