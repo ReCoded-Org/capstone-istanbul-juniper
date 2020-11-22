@@ -29,7 +29,7 @@ function App() {
         <Route path="/contact" component={ContactPage} />
         <Route path="/login" component={LoginRegisterPage} />
         <Route path="/games/memorygame" component={MemoryGamePage} />
-        <Route exact path="/games/puzzle" component={PuzzlePage} />
+        <Route exact path="/games/puzzlegame" component={PuzzlePage} />
         <Route path="/games/quizgame" component={QuizGamePage} />
         <Route exact path="/games" component={GamesPage} />
         <Route path="/resources" component={ResourcePage} />
