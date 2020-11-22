@@ -54,7 +54,7 @@ const ContactUsForm = () => {
           message: "",
         });
       })
-      .catch((error) => alert(error));
+      .catch((error) => message.error(error));
   };
 
   return (
