@@ -245,8 +245,7 @@
     "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, bir nesil aktivist yetiştirmek imkansız değildir."
   },
   "loginRegister": {
-    "anEmailSent": "Adresine bir e-posta mesajı gönderildi.",
-    "anEmailSentContain": "Şifre sıfırlama talimatları içerir, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."
+    "anEmailSent": "{{email}} adresine bir e-posta mesajı gönderildi. Şifre sıfırlama talimatlarını görmek için, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."
   },
   "register": {
     "terms": [
@@ -277,5 +276,23 @@
   "resourcesPage": {
     "title": "Kütüphane",
     "aboutPage": "Juniper Kütüphane, Çevre ile ilgili tematik alanlar hakkında kapsamlı, güvenilir ve güncel bilgileri barındıran çevrimiçi bir kütüphanedir. Web sitesi halka açıktır, ücretsizdir ve materyallere tek bir elverişli konumda erişim sağlar. Bu sayfa düzenli olarak güncellenecektir."
+  },
+  "passwordReset": {
+    "emailFormat": "Email biçimi Hatası",
+    "fillField": "Lütfen bu alanı doldurun",
+    "passwordReset": "Şifreyi yenile",
+    "email": "Email",
+    "backToLogin": "Geri Giriş Yap"
+  },
+  "login": {
+    "login": "Oturum aç",
+    "email": "Email",
+    "password": "Parola",
+    "forgotPassword": "Şifremi Unuttum?",
+    "new": "Juniper'de yeni misiniz? Şimdi üye Ol",
+    "creat": "Üye Ol",
+    "oryoucan": "Ya da",
+    "withFacebook": "Facebook İle Bağlan",
+    "withGoogle": "Google İle Bağlan"
   }
 }

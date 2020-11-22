@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useContext, useState } from "react";
 import Login from "../../components/userauth/Login";
 import Register from "../../components/userauth/Register";
@@ -5,119 +6,103 @@ import ResetPassword from "../../components/userauth/ResetPassword";
 import firestore, { auth } from "../../firebaseConfig";
 import firebase from "firebase";
 import { AuthContext } from "../../auth/authContext";
+=======
+import React, { useState } from "react";
+>>>>>>> 0f2993c9a6cf6dec2e7224dc2fc90bda88f968f0
 import { withRouter } from "react-router-dom";
-import { Alert, Spin } from "antd";
-import "./index.css";
 import { useTranslation } from "react-i18next";
+import { Alert, Spin } from "antd";
+import firebase from "firebase";
+import Login from "../../components/userauth/Login";
+import Register from "../../components/userauth/Register";
+import ResetPassword from "../../components/userauth/ResetPassword";
+import firestore, { auth } from "../../firebaseConfig";
+import "./index.css";
 import kids from "../../images/LoginKids.svg";
 
-const LoginRegisterPage = (props) => {
+const LoginRegisterPage = ({ history }) => {
   const [t] = useTranslation();
-  const login = async (email, password) => {
+  const [authAction, setAuthAction] = useState("login");
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const resetErrorAndMessage = () => {
     setError("");
     setMessage(<></>);
+  };
+
+  const fetchAction = async (func) => {
+    resetErrorAndMessage();
     try {
       setLoading(true);
-      await auth.signInWithEmailAndPassword(email, password);
-      setLoading(false);
-      props.history.push("/");
+      func();
+      setLoading(() => false);
+      history.push("/");
     } catch (e) {
-      setLoading(false);
+      setLoading(() => false);
       setError(e.message);
     }
   };
-  const resetPassword = async (email) => {
-    setError("");
-    setMessage(<></>);
-    try {
-      setLoading(true);
-      await auth.sendResetPasswordEmail(email);
-      setLoading(false);
+
+  const login = async (email, password) => {
+    fetchAction(async () => {
+      await auth.signInWithEmailAndPassword(email, password);
+    });
+  };
+
+  const passwordReset = async (email) => {
+    fetchAction(async () => {
+      await auth.sendPasswordResetEmail(email);
       setMessage(
         <Alert
-          style={{ marginBottom: 10 }}
+          className="authAlert"
           showIcon
-          message={
-            <div>
-              {t("loginRegister.anEmailSent")}
-              <b>{email}</b>
-              {t("loginRegister.anEmailSentContain")}
-            </div>
-          }
+          message={t("loginRegister.anEmailSent", { email })}
           type="success"
-        ></Alert>
+        />
       );
-      setActive("login");
-    } catch (e) {
-      setLoading(false);
-      setError(e.message);
-    }
+    });
   };
-  // Login with FACEBOOK
+
   const loginWithFacebook = async () => {
-    setError("");
-    setMessage(<></>);
-    try {
-      setLoading(true);
-      let provider = new firebase.auth.FacebookAuthProvider();
+    fetchAction(() => {
+      const provider = new firebase.auth.FacebookAuthProvider();
       provider.setCustomParameters({
         display: "popup",
       });
-      let u = await auth.signInWithPopup(provider);
-      setLoading(false);
-      props.history.push("/");
-    } catch (e) {
-      setLoading(false);
-      setError(e.message);
-    }
+    });
   };
-  // Login with GOOGLE
+
   const loginWithGoogle = async () => {
-    setError("");
-    setMessage(<></>);
-    try {
-      setLoading(true);
-      let provider = new firebase.auth.GoogleAuthProvider();
+    fetchAction(() => {
+      const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-      let u = await auth.signInWithPopup(provider);
-      setLoading(false);
-      props.history.push("/");
-    } catch (e) {
-      setLoading(false);
-      setError(e.message);
-    }
+    });
   };
 
   const register = async (fullName, email, age, password) => {
-    setError("");
-    setMessage(<></>);
-    try {
-      setLoading(true);
-      let registeredUser = await auth.createUserWithEmailAndPassword(
+    fetchAction(async () => {
+      const registeredUser = await auth.createUserWithEmailAndPassword(
         email,
         password
       );
       await firestore.collection("users").doc(registeredUser.user.uid).set({
         uid: registeredUser.user.uid,
-        fullName: fullName,
-        age: age,
-        userExperiencePoints: 0,
+        fullName,
+        age,
       });
       await auth.signInWithEmailAndPassword(email, password);
-      setLoading(false);
-      props.history.push("/");
-    } catch (e) {
-      setLoading(false);
-      setError(e.message);
-    }
+    });
   };
-  const [active, setActive] = useState("login");
-  const [error, setError] = useState("");
-  const [message, setMessage] = useState();
-  const [loading, setLoading] = useState(false);
-  const { user } = useContext(AuthContext);
+
+  const handleLogin = () => {
+    resetErrorAndMessage();
+    setAuthAction("login");
+  };
+
   let component;
-  switch (active) {
+  switch (authAction) {
     case "login":
       component = (
         <Login
@@ -127,25 +112,15 @@ const LoginRegisterPage = (props) => {
             login(email, password);
           }}
           handleRegister={() => {
-            setError("");
-            setMessage(<></>);
-            setActive("register");
+            resetErrorAndMessage();
+            setAuthAction("register");
           }}
-          handleResetPassword={() => {
-            setError("");
-            setMessage(<></>);
-            setActive("reset");
+          handlePasswordReset={() => {
+            resetErrorAndMessage();
+            setAuthAction("reset");
           }}
-          handleFacebookAuth={() => {
-            setError("");
-            setMessage(<></>);
-            loginWithFacebook();
-          }}
-          handleGoogleAuth={() => {
-            setError("");
-            setMessage(<></>);
-            loginWithGoogle();
-          }}
+          handleFacebookAuth={loginWithFacebook}
+          handleGoogleAuth={loginWithGoogle}
         />
       );
       break;
@@ -157,21 +132,9 @@ const LoginRegisterPage = (props) => {
           onSubmit={({ fullName, email, age, password }) => {
             register(fullName, email, age, password);
           }}
-          handleLogin={() => {
-            setError("");
-            setMessage(<></>);
-            setActive("login");
-          }}
-          handleFacebookAuth={() => {
-            setError("");
-            setMessage(<></>);
-            loginWithFacebook();
-          }}
-          handleGoogleAuth={() => {
-            setError("");
-            setMessage(<></>);
-            loginWithGoogle();
-          }}
+          handleLogin={handleLogin}
+          handleFacebookAuth={loginWithFacebook}
+          handleGoogleAuth={loginWithGoogle}
         />
       );
       break;
@@ -181,20 +144,11 @@ const LoginRegisterPage = (props) => {
           error={error}
           message={message}
           onSubmit={({ email }) => {
-            setError("");
-            setMessage(<></>);
-            resetPassword(email);
+            resetErrorAndMessage();
+            passwordReset(email);
           }}
-          handleLogin={() => {
-            setError("");
-            setMessage(<></>);
-            setActive("login");
-          }}
-          handleFacebookAuth={() => {
-            setError("");
-            setMessage(<></>);
-            loginWithFacebook();
-          }}
+          handleLogin={handleLogin}
+          handleFacebookAuth={loginWithFacebook}
         />
       );
       break;
@@ -207,7 +161,7 @@ const LoginRegisterPage = (props) => {
       <Spin spinning={loading}>{component}</Spin>
       <div className="loginRegister__footerContainer">
         <img
-          alt="footerKids"
+          alt="kids having fun"
           src={kids}
           className="loginRegister__footerContainer__kidsImage"
         />
