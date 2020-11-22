@@ -14,8 +14,8 @@ const GamesPageImageGrid = ({
     return (
       <Col
         key={gameObj.gameTitle}
-        xs={20}
-        md={{ span: 12 }}
+        xs={24}
+        md={8}
         className="gamePageImageGrid__col"
       >
         <div className="gamePageImageGrid__col__link">

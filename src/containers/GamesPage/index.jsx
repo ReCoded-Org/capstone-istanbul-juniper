@@ -3,13 +3,12 @@ import { useTranslation } from "react-i18next";
 import ProgressSection from "../../components/gamespage/GamesPageProgressSection";
 import GamesPageImageGrid from "../../components/gamespage/GamesPageImageGrid";
 import BottomCurve from "../../components/BottomCurve";
-import memoryGame from "../../images/gameScreenshots/memoryGame.svg";
-import puzzleGame from "../../images/gameScreenshots/puzzleGame.svg";
-import quizGame from "../../images/gameScreenshots/quizGame.svg";
-import matchingGame from "../../images/gameScreenshots/matchingGame.svg";
+import memoryGame from "../../images/gameImages/memoryGame.svg";
+import puzzleGame from "../../images/gameImages/puzzleGame.svg";
+import quizGame from "../../images/gameImages/quizGame.svg";
 import worldIcon from "../../images/world.svg";
 
-const GAME_SCREENSHOTS = [memoryGame, puzzleGame, matchingGame, quizGame];
+const GAME_SCREENSHOTS = [memoryGame, puzzleGame, quizGame];
 
 const GamesPage = () => {
   const [t] = useTranslation();
