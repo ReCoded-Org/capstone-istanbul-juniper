@@ -95,7 +95,8 @@
       "name": "Your name:",
       "email": "Your email address:",
       "message": "What is your question or comment?",
-      "send": "Send"
+      "send": "Send",
+      "postSubmissionMessage": "Thanks for messaging us!"
     }
   },
   "games": {
