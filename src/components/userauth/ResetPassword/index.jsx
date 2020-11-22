@@ -5,7 +5,7 @@ import { validateEmail, createErrorClassName } from "../registerHelper";
 import ErrorMessage from "../ErrorMessage";
 
 const ResetPassword = ({
-  // // check containers/LoginRegister/index.jsx to see details of functions
+  // check containers/LoginRegister/index.jsx to see details of functions
   onSubmit,
   handleLogin,
   // string
