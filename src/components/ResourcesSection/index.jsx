@@ -14,42 +14,48 @@ const ResourcesSection = () => {
     <div className="resourceCardWrapper">
       <Router>
         <Row justify="center" gutter={[16, 16]}>
-          <Col xxl={6} sm={24}>
+          <Col>
             <Row justify="center">
-              <Col span={22} className="resourceCardWrapper__cardName">
+              <Col className="resourceCardWrapper__cardName">
                 <Link to="/pollution">
                   {t("home.resourcesSection.pollution")}
                 </Link>
               </Col>
-              <Col span={22} className="resourceCardWrapper__cardImage">
+            </Row>
+            <Row justify="center">
+              <Col className="resourceCardWrapper__cardImage">
                 <Link to="/pollution">
                   <img alt="pollution" src={pollutionImg} />
                 </Link>
               </Col>
             </Row>
           </Col>
-          <Col xxl={6} sm={24}>
+          <Col>
             <Row justify="center">
-              <Col span={22} className="resourceCardWrapper__cardName">
+              <Col className="resourceCardWrapper__cardName">
                 <Link to="/climatechange">
                   {t("home.resourcesSection.climateChange")}
                 </Link>
               </Col>
-              <Col span={22} className="resourceCardWrapper__cardImage">
+            </Row>
+            <Row justify="center">
+              <Col className="resourceCardWrapper__cardImage">
                 <Link to="/climatechange">
                   <img alt="Climate Change" src={earthImg} />
                 </Link>
               </Col>
             </Row>
           </Col>
-          <Col xxl={6} sm={24}>
+          <Col>
             <Row justify="center">
-              <Col span={22} className="resourceCardWrapper__cardName">
+              <Col className="resourceCardWrapper__cardName">
                 <Link to="/recycle">
                   {t("home.resourcesSection.reduceReuseRecycle")}
                 </Link>
               </Col>
-              <Col span={22} className="resourceCardWrapper__cardImage">
+            </Row>
+            <Row justify="center">
+              <Col className="resourceCardWrapper__cardImage">
                 <Link to="/recycle">
                   <img alt="Recycle" src={recycleImg} />
                 </Link>
