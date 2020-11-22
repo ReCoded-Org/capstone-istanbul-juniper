@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useContext, useState } from "react";
 import Login from "../../components/userauth/Login";
 import Register from "../../components/userauth/Register";
@@ -6,9 +5,7 @@ import ResetPassword from "../../components/userauth/ResetPassword";
 import firestore, { auth } from "../../firebaseConfig";
 import firebase from "firebase";
 import { AuthContext } from "../../auth/authContext";
-=======
 import React, { useState } from "react";
->>>>>>> 0f2993c9a6cf6dec2e7224dc2fc90bda88f968f0
 import { withRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Alert, Spin } from "antd";
