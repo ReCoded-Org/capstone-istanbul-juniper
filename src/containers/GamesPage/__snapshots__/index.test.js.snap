@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GamesPage Component matches the tree. 1`] = `
+exports[`GamesPage Component matches the tree 1`] = `
 Array [
   <div
     className="progressSectionContainer"

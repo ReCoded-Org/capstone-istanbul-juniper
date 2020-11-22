@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import GamesPage from ".";
 
 describe("GamesPage Component", () => {
-  it("matches the tree.", () => {
+  it("matches the tree", () => {
     const tree = renderer
       .create(
         <BrowserRouter>
