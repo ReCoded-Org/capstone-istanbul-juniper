@@ -42,7 +42,7 @@ const ProgressSection = ({
         </Col>
         <Col xs={6} md={{ pull: 1 }} lg={{ pull: 2 }}>
           <h3 className="progressSectionContainer___row___header progressSectionContainer___row___nextLevel">
-            {t("gamesPage.level", { number: nextLevel })}
+            {t("gamesPage.level", { currentLevel: nextLevel })}
           </h3>
         </Col>
       </Row>
@@ -54,15 +54,13 @@ const ProgressSection = ({
           <div className="progressSectionContainer___row___prevRewardDiv">
             <img
               src={progressData.prevRewardIcon}
-              alt={progressData.prevRewardDescription}
+              alt={t("gamesPage.badgeDescription")}
               className="progressSectionContainer___row___prevRewardDiv___reward"
             />
           </div>
           <h3 className="progressSectionContainer___row___header">
             {/* Example: Recycle badge */}
-            {t("gamesPage.badgeDescription", {
-              badgeName: progressData.badgeName,
-            })}
+            {t("gamesPage.badgeDescription")}
           </h3>
         </Col>
         <Col span={3} push={13}>
@@ -75,7 +73,7 @@ const ProgressSection = ({
 
           <h3 className="progressSectionContainer___row___header">
             {/* Reward for next level is unknown. */}
-            {t("gamesPage.unknown")}
+            {t("gamesPage.unknownNextReward")}
           </h3>
         </Col>
       </Row>
