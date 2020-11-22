@@ -20,6 +20,11 @@
     "reduceReuseRecycle": "Azalt, tekrar kullan, geri dönüştür"
   },
   "home": {
+    "headerSection": {
+      "mainText": "Keşfedin, Keşfedin, Öğrenin",
+      "secondaryText": "Çocukların bugün karşılaştığımız çevre sorunlarıyla ilgili eğlenceli ve eğitici materyaller bulmaları için bir kaynak.",
+      "headerButton": "Bilgi & Oyunlar"
+    },
     "stayUpToDate": "Güncel kal!",
     "spreadTheWord": "Öğrendiklerini paylaş!",
     "twitterPages": [
@@ -275,6 +280,36 @@
         "role": "Web Ön yüz Geliştirici"
       }
     }
+  },
+  "register": {
+    "terms": [
+      "İlgili bilgilerinizi saklayabiliriz: İsim, iletişim bilgileri ve e-posta adresi.",
+      "Bilgilerinizin güvende olacağını taahhüt ederiz.",
+      "Web sitemiz içeriğinde site dışı bağlantıları içerebilir. Ancak, sitemizden ayrılmak için bu bağlantıları takip ettikten sonra, diğer web sitesileri üzerinde herhangi bir kontrolümüz olmadığını lütfen gözardı etmeyiniz."
+    ],
+    "fullName": "Lütfen tam adınızı giriniz",
+    "validEmail": "lütfen geçerli eposta adresini giriniz",
+    "enterAge": "Lütfen yaşını gir",
+    "passwordCharacter": "Şifre en az 6 karakter uzunluğunda olmalı",
+    "enterPassword": "Lütfen şifrenizi giriniz",
+    "emailFormat": "E-posta biçimi hatası, lütfen geçerli bir e-posta girin",
+    "agreeOnterms": "Lütfen şartlar ve koşulları kabul edin",
+    "termsTitle": "Şartlar ve koşulları",
+    "close": "Kapat",
+    "iAgree": "Kabul ediyorum",
+    "create": "Yeni hesap oluştur",
+    "name": "Ad Soyad",
+    "age": "Yaş",
+    "password": "Parola",
+    "email": "Email",
+    "iAgreeTo": "Şartları ve koşulları",
+    "termsandCon": "kabul ediyorum",
+    "createAccount": "Yeni hesap oluştur",
+    "alreadyAMember": "Bir üye misiniz? Şimdi giriş yap",
+    "login": "Giriş yap",
+    "orYouCan": "Ya da",
+    "withFacebook": "Facebook ile Bağlan",
+    "withGoogle": "Google ile Bağlan"
   },
   "resourcesPage": {
     "title": "Kütüphane",

@@ -18,7 +18,7 @@
     "headerSection": {
       "mainText": "Discover, Explore, Learn",
       "secondaryText": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
-      "headerButton": "Save the Earth"
+      "headerButton": "Knowledge & Games"
     },
     "stayUpToDate": "Stay up-to-date!",
     "spreadTheWord": "Spread the word!",
@@ -276,6 +276,36 @@
         "role": "Junior Developer"
       }
     }
+  },
+  "register": {
+    "terms": [
+      "We may collect the following information: Name, Contact information and email address.",
+      "We are committed to ensuring that your information is secure.",
+      "Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website."
+    ],
+    "fullName": "Please enter your full name",
+    "validEmail": "Please enter a valid email",
+    "enterAge": "Please enter your age",
+    "passwordCharacter": "Password must be at least 6 characters long",
+    "enterPassword": "Please enter your password",
+    "emailFormat": "Email format error, please enter a valid email",
+    "agreeOnTerms": "Please agree to the terms and conditions",
+    "termsTitle": "Terms of Service",
+    "close": "Close",
+    "iAgree": "I Agree",
+    "create": "Create new account",
+    "name": "Full Name",
+    "age": "Age",
+    "password": "Password",
+    "email": "Email",
+    "iAgreeTo": "I Agree to",
+    "termsandCon": "terms and conditions",
+    "createAccount": "Create new account",
+    "alreadyAMember": "Already a member? Log in now",
+    "login": "login",
+    "orYouCan": "Or you can",
+    "withFacebook": "Log in with Facebook",
+    "withGoogle": "Log in with Google"
   },
   "resourcesPage": {
     "title": "Resources Centre",
