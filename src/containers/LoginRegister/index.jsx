@@ -28,23 +28,28 @@ const LoginRegisterPage = ({ history }) => {
     setLoading(() => false);
     setError(e.message);
   };
-  const login = async (email, password) => {
+
+  const fetchAction = async (func) => {
     resetErrorAndMessage();
     try {
-      setLoading(() => true);
-      await auth.signInWithEmailAndPassword(email, password);
+      setLoading(true);
+      func();
       setLoading(() => false);
-      addUserToHistory();
+      history.push("/");
     } catch (e) {
-      failedAction(e);
+      setLoading(() => false);
+      setError(e.message);
     }
   };
+  const login = async (email, password) => {
+    const action = async () => {
+      await auth.signInWithEmailAndPassword(email, password);
+    };
+    fetchAction(action);
+  };
   const passwordReset = async (email) => {
-    resetErrorAndMessage();
-    try {
-      setLoading(() => true);
+    const action = async () => {
       await auth.sendPasswordResetEmail(email);
-      setLoading(() => false);
       setMessage(
         <Alert
           className="authAlert"
@@ -59,41 +64,28 @@ const LoginRegisterPage = ({ history }) => {
           type="success"
         />
       );
-      setActive("login");
-    } catch (e) {
-      failedAction(e);
-    }
+    };
+    fetchAction(action);
   };
   const loginWithFacebook = async () => {
-    resetErrorAndMessage();
-    try {
-      setLoading(() => true);
+    const action = () => {
       const provider = new firebase.auth.FacebookAuthProvider();
       provider.setCustomParameters({
         display: "popup",
       });
-      setLoading(() => false);
-      addUserToHistory();
-    } catch (e) {
-      failedAction(e);
-    }
+    };
+    fetchAction(action);
   };
   const loginWithGoogle = async () => {
-    resetErrorAndMessage();
-    try {
-      setLoading(() => true);
+    const action = async () => {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-      setLoading(() => false);
       addUserToHistory();
-    } catch (e) {
-      failedAction(e);
-    }
+    };
+    fetchAction(action);
   };
   const register = async (fullName, email, age, password) => {
-    resetErrorAndMessage();
-    try {
-      setLoading(true);
+    const action = async () => {
       const registeredUser = await auth.createUserWithEmailAndPassword(
         email,
         password
@@ -104,11 +96,8 @@ const LoginRegisterPage = ({ history }) => {
         age,
       });
       await auth.signInWithEmailAndPassword(email, password);
-      setLoading(() => false);
-      addUserToHistory();
-    } catch (e) {
-      failedAction(e);
-    }
+    };
+    fetchAction(action);
   };
   const handleLogin = () => {
     resetErrorAndMessage();
