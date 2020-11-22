@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GamesPage Component matches the tree 1`] = `
+exports[`GamesPage container matches the tree 1`] = `
 Array [
   <div
     className="progressSectionContainer"
@@ -20,17 +20,17 @@ Array [
       style={Object {}}
     >
       <div
-        className="ant-col ant-col-xs-6 ant-col-md-push-1 ant-col-lg-push-2"
+        className="ant-col"
         style={Object {}}
       >
         <h3
-          className="progressSectionContainer___row___header progressSectionContainer___row___curLevel"
+          className="progressSectionContainer___row___header progressSectionContainer___row___leftSideLevel"
         >
           gamesPage.level
         </h3>
       </div>
       <div
-        className="ant-col ant-col-xs-12"
+        className="ant-col"
         style={Object {}}
       >
         <div
@@ -63,11 +63,11 @@ Array [
         </div>
       </div>
       <div
-        className="ant-col ant-col-xs-6 ant-col-md-pull-1 ant-col-lg-pull-2"
+        className="ant-col"
         style={Object {}}
       >
         <h3
-          className="progressSectionContainer___row___header progressSectionContainer___row___nextLevel"
+          className="progressSectionContainer___row___header progressSectionContainer___row___rightSideLevel"
         >
           gamesPage.level
         </h3>
@@ -78,7 +78,7 @@ Array [
       style={Object {}}
     >
       <div
-        className="ant-col ant-col-3 ant-col-push-5"
+        className="ant-col"
         style={Object {}}
       >
         <h3
@@ -90,7 +90,7 @@ Array [
           className="progressSectionContainer___row___prevRewardDiv"
         >
           <img
-            alt="World"
+            alt="gamesPage.badgeDescription"
             className="progressSectionContainer___row___prevRewardDiv___reward"
             src="world.svg"
           />
@@ -102,7 +102,7 @@ Array [
         </h3>
       </div>
       <div
-        className="ant-col ant-col-3 ant-col-push-13"
+        className="ant-col"
         style={Object {}}
       >
         <h3
@@ -136,7 +136,7 @@ Array [
         <h3
           className="progressSectionContainer___row___header"
         >
-          gamesPage.unknown
+          gamesPage.unknownNextReward
         </h3>
       </div>
     </div>

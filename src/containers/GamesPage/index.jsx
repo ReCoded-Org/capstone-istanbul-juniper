@@ -39,8 +39,6 @@ const GamesPage = () => {
     currentLevel: 3,
     currentXP: 40,
     prevRewardIcon: worldIcon,
-    prevRewardDescription: "World",
-    badgeName: "World",
   };
   return (
     <>
