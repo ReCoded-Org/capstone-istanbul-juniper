@@ -240,6 +240,9 @@
     "whyWeDoItHeader": "Why we do it",
     "whyWeDoItText": "We have a moral obligation to preserve nature and its features, because protecting the environment protects humanity from toxic substances and our quality of food. We believe that the new generation in MENA should be supported with the right tools to believe and act for the benefit of humanitarian and social issues, on the local and global scale. Given the right tools, it is not impossible to raise a generation of activists."
   },
+  "loginRegister": {
+    "anEmailSent": "An email message has been sent to your {{email}}. Message contains password reset instructions, please check your inbox and follow the steps indicated in that message."
+  },
   "register": {
     "terms": [
       "We may collect the following information: Name, Contact information and email address.",
@@ -264,14 +267,28 @@
     "iAgreeTo": "I Agree to",
     "termsandCon": "terms and conditions",
     "createAccount": "Create new account",
-    "alreadyAMember": "Already a member? Log in now",
-    "login": "login",
-    "orYouCan": "Or you can",
-    "withFacebook": "Log in with Facebook",
-    "withGoogle": "Log in with Google"
+    "alreadyAMember": "Already a member? Log in now"
   },
   "resourcesPage": {
     "title": "Resources Centre",
     "aboutPage": "Juniper's Resource Centre is an online library that hosts comprehensive, reliable, and up-to-date information on thematic areas related to Environmental. The website is open to the public, free-of-charge, and provides access to materials in one convenient location. This page will be updated regularly."
+  },
+  "login": {
+    "login": "Log in",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forget Password?",
+    "new": "New at Juniper? Register now",
+    "creat": "Creat New Account",
+    "oryoucan": "Or you can",
+    "withFacebook": "Log in with Facebook",
+    "withGoogle": "Log in with Google"
+  },
+  "passwordReset": {
+    "emailFormat": "Email format Error",
+    "fillField": "Please fill this field",
+    "passwordReset": "Reset your password",
+    "email": "Email",
+    "backToLogin": "Back To Log in"
   }
 }
