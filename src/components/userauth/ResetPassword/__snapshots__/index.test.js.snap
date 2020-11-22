@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PasswordReset Component matches the tree 1`] = `
+exports[`ResetPassword Component matches the tree 1`] = `
 <form
   noValidate={true}
   onSubmit={[Function]}
