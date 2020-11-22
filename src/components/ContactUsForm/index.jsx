@@ -34,26 +34,27 @@ const ContactUsForm = () => {
   // setTimeOut stands for showing post submission message about a time after submit
   const handleSubmit = (e) => {
     setIsLoading(true);
+    e.preventDefault();
     fetch("/", {
       method: "POST",
       "data-netlify": "true",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encodeFormData({ "form-name": "contact", ...formValue }),
-    }).then(() => {
-      setIsLoading(false);
-      setIsSubmitted(true);
-      setFormValue({
-        name: "",
-        email: "",
-        message: "",
-      }).catch((error) => alert(error));
-
-      e.preventDefault();
-    });
-  };
-
-  const success = () => {
-    message.success("This is a success message");
+    })
+      .then(() => {
+        setIsLoading(false);
+        setIsSubmitted(true);
+        message.success({
+          content: t("contact.contactUsForm.postSubmissionMessage"),
+          className: "contactUsForm__postSubmissionMessage",
+        });
+        setFormValue({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => alert(error));
   };
 
   return (
