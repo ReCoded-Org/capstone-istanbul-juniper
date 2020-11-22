@@ -212,7 +212,7 @@ exports[`Navbar Component matches the tree 1`] = `
       >
         <span
           aria-label="global"
-          className="anticon anticon-global ant-dropdown-trigger navbar__languageContainer"
+          className="anticon anticon-global ant-dropdown-trigger navbar__element-lang navbar__languageContainer"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           role="img"
