@@ -240,8 +240,7 @@
     "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, bir nesil aktivist yetiştirmek imkansız değildir."
   },
   "loginRegister": {
-    "anEmailSent": "Adresine bir e-posta mesajı gönderildi.",
-    "anEmailSentContain": "Şifre sıfırlama talimatları içerir, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."
+    "anEmailSent": "{{email}} adresine bir e-posta mesajı gönderildi. Şifre sıfırlama talimatlarını görmek için, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."
   },
   "resourcesPage": {
     "title": "Kütüphane",

@@ -12,7 +12,7 @@ import kids from "../../images/LoginKids.svg";
 
 const LoginRegisterPage = ({ history }) => {
   const [t] = useTranslation();
-  const [active, setActive] = useState("login");
+  const [authAction, setAuthAction] = useState("login");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -45,13 +45,7 @@ const LoginRegisterPage = ({ history }) => {
         <Alert
           className="authAlert"
           showIcon
-          message={
-            <div>
-              {t("loginRegister.anEmailSent")}
-              <b>{email}</b>
-              {t("loginRegister.anEmailSentContain")}
-            </div>
-          }
+          message={t("loginRegister.anEmailSent", { email })}
           type="success"
         />
       );
@@ -87,10 +81,10 @@ const LoginRegisterPage = ({ history }) => {
   };
   const handleLogin = () => {
     resetErrorAndMessage();
-    setActive("login");
+    setAuthAction("login");
   };
   let component;
-  switch (active) {
+  switch (authAction) {
     case "login":
       component = (
         <Login
@@ -101,11 +95,11 @@ const LoginRegisterPage = ({ history }) => {
           }}
           handleRegister={() => {
             resetErrorAndMessage();
-            setActive("register");
+            setAuthAction("register");
           }}
           handlePasswordReset={() => {
             resetErrorAndMessage();
-            setActive("reset");
+            setAuthAction("reset");
           }}
           handleFacebookAuth={loginWithFacebook}
           handleGoogleAuth={loginWithGoogle}
