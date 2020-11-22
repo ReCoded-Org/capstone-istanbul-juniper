@@ -1,0 +1,112 @@
+.loginRegister__footerContainer {
+  background-image: url(../../images/LoginCurve.svg);
+  background-color: #b3d0c4;
+  background-position: top center;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+img.loginRegister__footerContainer__kidsImage {
+  position: absolute;
+  top: -75px;
+  max-height: 250px;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.loginContainer__loginTitle {
+  color: white;
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.loginContainer__loginDialog {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginContainer__loginDialog__inputLabel {
+  color: white;
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+.loginContainer__loginDialog__input {
+  margin-bottom: 15px;
+  width: 80%;
+}
+
+.loginContainer__loginDialog__registerLabel {
+  margin: 20px 0;
+  font-size: 28px;
+  text-align: center;
+  color: white;
+}
+
+.loginContainer__loginDialog__submitButton {
+  width: 80%;
+  margin-top: 15px;
+  color: white;
+  border: 0;
+  background-color: #f8ac4c;
+  padding: 5px;
+}
+
+button.loginContainer__loginDialog__registerButton {
+  width: 80%;
+  border: 0;
+  padding: 5px;
+  background-color: #2a8c79;
+  color: white;
+}
+
+button.loginContainer__loginDialog__backToLoginButton {
+  width: 80%;
+  border: 0;
+  padding: 5px;
+  background-color: #2a8c79;
+  color: white;
+  margin-top: 10px;
+}
+
+.loginContainer__loginDialog__errorContainer {
+  color: #c00;
+}
+
+.loginContainer__loginDialog__input__hasError {
+  border-color: #c00;
+}
+
+.loginContainer__loginDialog__loginOptionsTitle {
+  margin: 20px 0;
+  color: white;
+}
+
+button.loginContainer__loginDialog__facebookLoginBtn {
+  color: white;
+  background-color: #4267b2;
+  padding: 5px;
+  border: 0;
+  width: 80%;
+}
+
+.loginContainer__loginDialog__googleLoginBtn {
+  background-color: #db4437;
+  width: 80%;
+  margin-top: 10px;
+  color: white;
+  padding: 5px;
+  border: 0;
+}
