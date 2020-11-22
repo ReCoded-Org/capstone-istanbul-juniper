@@ -11,7 +11,7 @@ const MOCK_PROGRESS_DATA = {
 };
 
 describe("GamesPageProgressSection Component", () => {
-  it("renders correctly", () => {
+  it("renders correctly.", () => {
     const tree = renderer
       .create(<GamesPageProgressSection progressData={MOCK_PROGRESS_DATA} />)
       .toJSON();

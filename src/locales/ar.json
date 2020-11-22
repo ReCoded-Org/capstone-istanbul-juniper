@@ -229,9 +229,9 @@
     "level": "المستوى {{currentLevel}}",
     "nextReward": "المكافأة التالية",
     "previousReward": "المكافأة السابقة",
-    "experiencePoint": "نقاط خبرة {currentXP}}/100",
+    "experiencePoint": "نقاط خبرة {{currentXP}}/100",
     "unknownNextReward": "غير معروف",
-    "badgeDescription": "وسام {{badgeName}}",
+    "badgeDescription": "شارة العالم",
     "title": "ألعاب"
   },
   "about": {
@@ -296,13 +296,12 @@
     "termsTitle": "الشروط و الاحكام",
     "close": "إغلاق",
     "iAgree": "موافق",
-    "create": "انشاء حساب جديد",
     "name": "الأسم الكامل",
     "age": "العمر",
     "password": "كلمة المرور",
     "email": "البريد الالكتروني",
     "iAgreeTo": "اوافق على",
-    "termsandCon": "الشروط و الأحكام",
+    "termsAndConditions": "الشروط و الأحكام",
     "createAccount": "انشاء حساب جديد",
     "alreadyAMember": "لديك حساب ؟  تسجيل الدخول"
   },
@@ -324,7 +323,7 @@
     "forgotPassword": "هل نسيت كلمة المرور؟",
     "new": "هذه أول مرة لك في جونبير؟ إنشاء حساب جديد",
     "creat": "انشاء حساب جديد",
-    "oryoucan": "أو بإمكانك",
+    "orYouCan": "أو بإمكانك",
     "withFacebook": "تسجيل الدخول بإستحدام الفيسبوك",
     "withGoogle": "تسجيل الدخول بإستخدام غوغل"
   }
