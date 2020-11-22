@@ -14,7 +14,7 @@ exports[`GamesPageImageGrid renders correctly 1`] = `
     style={Object {}}
   >
     <div
-      className="ant-col gamePageImageGrid__col ant-col-xs-20 ant-col-md-12"
+      className="ant-col gamePageImageGrid__col ant-col-xs-24 ant-col-md-8"
       style={Object {}}
     >
       <div
