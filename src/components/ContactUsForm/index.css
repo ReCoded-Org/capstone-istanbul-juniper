@@ -47,3 +47,11 @@
   display: flex;
   justify-content: space-around;
 }
+
+.contactUsForm__postSubmissionMessage {
+  margin-top: 10vh;
+  font-family: "Raleway";
+  font-size: clamp(1rem, 20px, 2.5rem);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
