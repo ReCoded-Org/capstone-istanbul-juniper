@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import Login from "../../components/Login";
-import Register from "../../components/Register";
-import PasswordReset from "../../components/PasswordReset";
+import Login from "../../components/userauth/Login";
+import Register from "../../components/userauth/Register";
+import ResetPassword from "../../components/userauth/ResetPassword";
 import firestore, { auth } from "../../firebaseConfig";
 import firebase from "firebase";
 import { AuthContext } from "../../auth/authContext";
@@ -177,7 +177,7 @@ const LoginRegisterPage = (props) => {
       break;
     case "reset":
       component = (
-        <PasswordReset
+        <ResetPassword
           error={error}
           message={message}
           onSubmit={({ email }) => {
