@@ -19,7 +19,6 @@ const ProgressSection = ({
   // check containers/GamesPage/index.jsx to see an example
   progressData,
 }) => {
-  console.log(progressData);
   const nextLevel = progressData.currentLevel + 1;
   const [t] = useTranslation();
   const currentLanguage = i18next.language;
