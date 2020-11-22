@@ -63,7 +63,7 @@ const ProgressSection = ({
             {t("gamesPage.badgeDescription")}
           </h3>
         </Col>
-        <Col xs={8} offset={3}>
+        <Col xs={8} offset={2}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.nextReward")}
           </h3>
