@@ -28,11 +28,11 @@ const PuzzleGameContainer = () => {
   };
 
   return (
-    <Card size="small" className="gameContainer">
-      <Row className="gameContainer__listOfImages">
+    <Card size="small" className="gameContainer" bordered={false}>
+      <Col className="gameContainer__listOfImages">
         {PUZZLE_IMAGE_POOL.map((img, imgIndex) => {
           return (
-            <Col
+            <Row
               key={"image-" + imgIndex}
               onClick={(e) => handleImageClick(e)}
               className="gameContainer__listOfImages--imgContainer"
@@ -42,13 +42,13 @@ const PuzzleGameContainer = () => {
                 src={img}
                 alt="Click to choose your puzzle"
               />
-            </Col>
+            </Row>
           );
         })}
-      </Row>
-      <Row className="gameContainer__puzzleGrid">
+      </Col>
+      <Col className="gameContainer__puzzleGrid">
         <PuzzleGrid puzzleImage={currentImage} />
-      </Row>
+      </Col>
     </Card>
   );
 };
