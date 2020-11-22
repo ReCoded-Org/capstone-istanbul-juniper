@@ -59,7 +59,6 @@ exports[`MemberCard renders correctly 1`] = `
         >
           <svg
             aria-hidden="true"
-            className=""
             data-icon="linkedin"
             fill="currentColor"
             focusable="false"
@@ -83,7 +82,6 @@ exports[`MemberCard renders correctly 1`] = `
         >
           <svg
             aria-hidden="true"
-            className=""
             data-icon="github"
             fill="currentColor"
             focusable="false"
