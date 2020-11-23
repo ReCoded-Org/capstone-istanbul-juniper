@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Row } from "antd";
 import "./index.css";
 import "antd/dist/antd.css";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import recycleImg from "./../../images/recycleResourceSetion.svg";
 import earthImg from "./../../images/earthResourceSetion.svg";
@@ -12,19 +12,19 @@ const ResourcesSection = () => {
   const [t] = useTranslation();
   return (
     <div className="resourceCardWrapper">
-      <Router>
+
         <Row justify="center" gutter={[16, 16]}>
           <Col>
             <Row justify="center">
               <Col className="resourceCardWrapper__cardName">
-                <Link to="/pollution">
+                <Link to="/resources">
                   {t("home.resourcesSection.pollution")}
                 </Link>
               </Col>
             </Row>
             <Row justify="center">
               <Col className="resourceCardWrapper__cardImage">
-                <Link to="/pollution">
+                <Link to="/resources">
                   <img alt="pollution" src={pollutionImg} />
                 </Link>
               </Col>
@@ -33,14 +33,14 @@ const ResourcesSection = () => {
           <Col>
             <Row justify="center">
               <Col className="resourceCardWrapper__cardName">
-                <Link to="/climatechange">
+                <Link to="/resources">
                   {t("home.resourcesSection.climateChange")}
                 </Link>
               </Col>
             </Row>
             <Row justify="center">
               <Col className="resourceCardWrapper__cardImage">
-                <Link to="/climatechange">
+                <Link to="/resources">
                   <img alt="Climate Change" src={earthImg} />
                 </Link>
               </Col>
@@ -49,21 +49,20 @@ const ResourcesSection = () => {
           <Col>
             <Row justify="center">
               <Col className="resourceCardWrapper__cardName">
-                <Link to="/recycle">
+                <Link to="/resources">
                   {t("home.resourcesSection.reduceReuseRecycle")}
                 </Link>
               </Col>
             </Row>
             <Row justify="center">
               <Col className="resourceCardWrapper__cardImage">
-                <Link to="/recycle">
+                <Link to="/resources">
                   <img alt="Recycle" src={recycleImg} />
                 </Link>
               </Col>
             </Row>
           </Col>
         </Row>
-      </Router>
     </div>
   );
 };
