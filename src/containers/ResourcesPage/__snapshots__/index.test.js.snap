@@ -28,7 +28,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         className="resource__body__picContainer"
       >
         <img
-          alt="resourcesPage.title1"
+          alt="resourcesPage.resourceOneTitle"
           onClick={[Function]}
           src="ourClimateChange.png"
         />
@@ -39,12 +39,12 @@ exports[`ResourcesPage renders correctly 1`] = `
         <div
           className="resource__body__content__title"
         >
-          resourcesPage.title1
+          resourcesPage.resourceOneTitle
         </div>
         <div
           className="resource__body__content__description"
         >
-          resourcesPage.text1
+          resourcesPage.resourceOneText
         </div>
         <div
           className="resource__body__content__footer"
@@ -64,7 +64,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         className="resource__body__picContainer"
       >
         <img
-          alt="resourcesPage.title2"
+          alt="resourcesPage.resourceTwoTitle"
           onClick={[Function]}
           src="resourcesForEducation.png"
         />
@@ -75,12 +75,12 @@ exports[`ResourcesPage renders correctly 1`] = `
         <div
           className="resource__body__content__title"
         >
-          resourcesPage.title2
+          resourcesPage.resourceTwoTitle
         </div>
         <div
           className="resource__body__content__description"
         >
-          resourcesPage.text2
+          resourcesPage.resourceTwoText
         </div>
         <div
           className="resource__body__content__footer"
@@ -100,7 +100,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         className="resource__body__picContainer"
       >
         <img
-          alt="resourcesPage.title3"
+          alt="resourcesPage.resourceThreeTitle"
           onClick={[Function]}
           src="whoCausesClimate.png"
         />
@@ -111,12 +111,12 @@ exports[`ResourcesPage renders correctly 1`] = `
         <div
           className="resource__body__content__title"
         >
-          resourcesPage.title3
+          resourcesPage.resourceThreeTitle
         </div>
         <div
           className="resource__body__content__description"
         >
-          resourcesPage.text3
+          resourcesPage.resourceThreeText
         </div>
         <div
           className="resource__body__content__footer"
