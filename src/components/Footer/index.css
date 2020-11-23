@@ -8,7 +8,7 @@
   background-image: url(./../../images/footerBg.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 14px;
+  background-position: center 70px;
   position: relative;
   font-family: Roboto;
 }
@@ -44,6 +44,7 @@ a.facebook {
 }
 
 img.footerContainer__globe {
+  padding-top: 65px;
   position: absolute;
   top: 46px;
   left: 51px;
