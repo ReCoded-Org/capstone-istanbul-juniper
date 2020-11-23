@@ -119,6 +119,7 @@ exports[`GamesPageProgressSection Component renders correctly. 1`] = `
         >
           <svg
             aria-hidden="true"
+            className=""
             data-icon="question"
             fill="currentColor"
             focusable="false"
