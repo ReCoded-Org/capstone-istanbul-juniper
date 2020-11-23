@@ -59,7 +59,7 @@ exports[`HomePageHeaderSection snapshot test 1`] = `
       </div>
     </div>
     <div
-      className="ant-col ant-col-4"
+      className="ant-col ant-col-4 ant-col-offset-6"
       style={Object {}}
     >
       <img
