@@ -70,9 +70,9 @@ const Navbar = () => {
       </Menu.Item>
     </Menu>
   );
-  // conditional language change modal
+  // language change in memorygame requires page reload. This modal is create to warn user.
   const [modalVisibility, setModalVisibility] = useState(false);
-  // hold abbreviation of new language for conditional language change
+  // holds abbreviation of new language for conditional language change
   const [newLanguage, setNewLanguage] = useState();
   // gives current route
   const location = useLocation();

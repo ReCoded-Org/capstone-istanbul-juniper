@@ -326,5 +326,11 @@
     "passwordReset": "Reset your password",
     "email": "Email",
     "backToLogin": "Back To Log in"
+  },
+  "languageChangeModal": {
+    "title": "You are about to change language",
+    "warningText": "Changing language will cause page to reload. All game progress will be lost.",
+    "okText": "Ok",
+    "cancelText": "Cancel"
   }
 }
