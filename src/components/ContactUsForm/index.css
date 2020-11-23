@@ -27,7 +27,7 @@
 }
 
 .contactUsForm__textarea {
-  height: clamp(8.5rem, 9.5rem, 10rem);
+  height: clamp(8rem, 9rem, 10rem);
 }
 
 .contactUsForm__submit {
