@@ -71,7 +71,7 @@
 /* At the breakpoint only main image is shown */
 @media screen and (max-width: 480px) {
   .contactUsBottomContainer__bottomCurve__topHalfImages {
-    top: -34%;
+    top: 0%;
   }
 
   .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
