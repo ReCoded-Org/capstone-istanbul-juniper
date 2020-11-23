@@ -1,31 +1,33 @@
 .contactUsFormContainer {
-  background: #add4c5;
+  background: #b4d0c4;
   display: flex;
   justify-content: center;
   padding-bottom: 1rem;
+  flex-wrap: wrap;
+  padding: 0.5rem;
 }
 
 .contactUsForm__label {
   font-family: "Raleway";
-  font-size: clamp(1rem, 24px, 3rem);
+  font-size: clamp(1rem, 2vw, 2.5rem);
   color: white;
   text-align: left;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .contactUsForm__input,
 .contactUsForm__textarea {
   font-family: "Raleway";
-  font-size: clamp(1rem, 20px, 2.5rem);
+  font-size: clamp(1rem, 2vw, 2.5rem);
   box-sizing: border-box;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 0.5rem;
-  width: clamp(25rem, 17rem, 35rem);
+  width: 100%;
   margin-bottom: 0.5rem;
 }
 
 .contactUsForm__textarea {
-  height: clamp(10rem, 7rem, 15rem);
+  height: clamp(8rem, 9rem, 10rem);
 }
 
 .contactUsForm__submit {
