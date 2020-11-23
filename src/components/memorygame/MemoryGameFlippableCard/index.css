@@ -1,6 +1,6 @@
 .memoryGameCardsContainer___card {
   cursor: pointer;
-  height: clamp(20vh, 280px, 35vh);
+  height: 200px;
   width: 100%;
   border-radius: 20px;
   transition: all, 0.5s;
@@ -14,7 +14,7 @@
 .memoryGameCardsContainer___card___figcaption {
   text-align: center;
   font-family: "Salsa", cursive;
-  font-size: clamp(1.4rem, 1vw, 300%);
+  font-size: clamp(0.9rem, 1vw, 3vw);
 }
 
 .memoryGameCardsContainer___flippedCard {
