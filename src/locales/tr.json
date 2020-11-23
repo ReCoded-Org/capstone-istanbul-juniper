@@ -261,22 +261,22 @@
       },
       "majd": {
         "name": "Majd Ajroudi",
-        "bio": "Çok yönlü becerilere, çeşitli mühendislik alanlarında deneyime ve sosyal sorunları çözmeye motivasyonu olan bir genç geliştirici.",
+        "bio": "Çok yönlü becerilere, çeşitli mühendislik alanlarında deneyime ve sosyal sorunları için motivasyona sahip bir genç geliştirici.",
         "role": "Web Ön yüz Geliştirici"
       },
       "sule": {
         "name": "Sule Sinikoglu",
-        "bio": "Küresel <orluklar üzerinde olumlu etki yaratmak için 'iyi kod' yazan bir web geliştiricisi.",
+        "bio": "Küresel zorluklar üzerinde olumlu etki yaratmak için 'iyi kod' yazan bir web geliştiricisi.",
         "role": "Web Ön yüz Geliştirici"
       },
       "tarkan": {
         "name": "Tarkan Mansuroglu",
-        "bio": "Re:Coded web ön yüz Geliştirme eğitim programı mezunu ve kısmen kendi kendine öğrenen bir web ön yüz geliştiricisi. Ayrıca tutkusu öğrenmek olan, bilgisayarlara ve bilgisayar oyunlarına meraklı bir spor tutkunu. Becerilerini test etmeyi ve geliştirmek için gerçek hayata dair sorunları çözmeyi seviyor. Onu sosyal medyadan takip edin!",
+        "bio": "Re:Coded web ön yüz Geliştirme eğitim programı mezunu ve yazılımı kısmen kendi kendine öğrenmiş bir web ön yüz geliştiricisi. Ayrıca tutkusu öğrenmek olan, bilgisayarlara ve bilgisayar oyunlarına meraklı bir spor tutkunu. Becerilerini test etmek ve geliştirmek için gerçek hayata dair sorunları çözmeyi seviyor. Onu sosyal medyadan takip edin!",
         "role": "Web Ön yüz Geliştirici"
       },
       "yaman": {
         "name": "Mohamad Yaman Sammani",
-        "bio": "Yaman, Kasım 2020'de Re: Coded Bootcamp'tan mezun olan web ön yüz geliştiricisidir. Tutkusu, göçmenlere ev sahibi ülkelerdeki hizmetlere erişimi kolaylaştıran programlar tasarlamaktır.",
+        "bio": "Yaman, Kasım 2020'de Re: Coded Bootcamp'tan mezun olan web ön yüz geliştiricisidir. Tutkusu, göçmenlerin ev sahibi ülkelerdeki hizmetlere erişimi kolaylaştıran programlar tasarlamaktır.",
         "role": "Web Ön yüz Geliştirici"
       }
     }
@@ -311,14 +311,14 @@
   },
   "resourcesPage": {
     "title": "Kütüphane",
-    "aboutPage": "Çevresel konular hakkında kapsamlı, güvenilir ve güncel bilgileri barındıran çevrimiçi bir kütüphanedir. Web sitesi halka açıktır, ücretsizdir. Bu sayfa düzenli olarak güncellenecektir."
+    "aboutPage": "Çevresel konular hakkında kapsamlı, güvenilir ve güncel bilgileri barındıran herkese açık, ücretsiz,çevrimiçi ve düzenli olarak güncellenen bir kütüphanedir."
   },
   "passwordReset": {
     "emailFormat": "Email hatası.",
     "fillField": "Lütfen bu alanı doldurun.",
     "passwordReset": "Şifreyi yenile",
     "email": "Email",
-    "backToLogin": "Giriş Ekranı"
+    "backToLogin": "Giriş yap"
   },
   "login": {
     "login": "Oturum aç",
