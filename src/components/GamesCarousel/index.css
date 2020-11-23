@@ -1,6 +1,6 @@
 .gamesCarousel {
   background: #add4c5;
-  margin: 0 auto;
+  margin: auto;
   padding-top: 2%;
   padding-bottom: 2%;
 }
@@ -18,8 +18,8 @@
 }
 
 .gamesCarousel__wrapper {
-  /* width: 95%;
-  padding-left: 4%; */
+  width: 95%;
+  padding-left: 4%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -41,18 +41,27 @@
   cursor: pointer;
 }
 
-/* React-slick class for slider's arrows */
-/* .slick-prev:before,
-.slick-next:before {
-  color: #61e3d8;
-  font-size: clamp(1rem, 1.5rem, 3.5rem);
-  cursor: pointer;
-  top: 50%;
-  transition: all 0.5s;
-} */
-
+/* React-slick class wraps the slides */
 .slick-track {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* React-slick class for slider's arrows */
+.slick-prev:before,
+.slick-next:before {
+  color: #2a8c79;
+  font-size: clamp(1rem, 1.5rem, 3.5rem);
+  cursor: pointer;
+  top: 50%;
+  transition: all 0.5s;
+}
+
+/* Responsive settings of slider's arrorws for small screened devices */
+@media screen and (max-width: 480px) {
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: clamp(1rem, 1vw, 2rem);
+  }
 }
