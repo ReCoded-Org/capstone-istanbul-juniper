@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { validateEmail, createErrorClassName } from "../registerHelper";
 import ErrorMessage from "../ErrorMessage";
+import "./index.css";
 
 const MIN_PASSWORD_LENGTH = 6;
 
