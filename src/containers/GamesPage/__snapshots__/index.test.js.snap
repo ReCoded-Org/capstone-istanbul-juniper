@@ -20,7 +20,7 @@ Array [
       style={Object {}}
     >
       <div
-        className="ant-col"
+        className="ant-col ant-col-xs-7"
         style={Object {}}
       >
         <h3
@@ -30,7 +30,7 @@ Array [
         </h3>
       </div>
       <div
-        className="ant-col"
+        className="ant-col ant-col-xs-10"
         style={Object {}}
       >
         <div
@@ -63,7 +63,7 @@ Array [
         </div>
       </div>
       <div
-        className="ant-col"
+        className="ant-col ant-col-xs-7"
         style={Object {}}
       >
         <h3
@@ -78,7 +78,7 @@ Array [
       style={Object {}}
     >
       <div
-        className="ant-col"
+        className="ant-col ant-col-xs-8 ant-col-xs-offset-3"
         style={Object {}}
       >
         <h3
@@ -102,7 +102,7 @@ Array [
         </h3>
       </div>
       <div
-        className="ant-col"
+        className="ant-col ant-col-xs-8 ant-col-xs-offset-2"
         style={Object {}}
       >
         <h3
