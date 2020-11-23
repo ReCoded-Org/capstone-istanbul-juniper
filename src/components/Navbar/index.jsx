@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./index.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Dropdown, Menu, Col, Row } from "antd";
 import { MenuOutlined, GlobalOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,7 @@ import i18n from "i18next";
 import logoImg from "./../../images/logo.svg";
 import { AuthContext } from "../../auth/authContext";
 import { auth } from "../../firebaseConfig";
+import LanguageChangeModal from "../LanguageChangeModal";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -51,27 +52,37 @@ const Navbar = () => {
     <Menu>
       <Menu.Item
         className="navbar__languageContainer-btn"
-        onClick={(e) => handleLanguageChange("en")}
+        onClick={() => handleLanguageChange("en")}
       >
         <p>EN</p>
       </Menu.Item>
       <Menu.Item
         className="navbar__languageContainer-btn"
-        onClick={(e) => handleLanguageChange("tr")}
+        onClick={() => handleLanguageChange("tr")}
       >
         <p>TR</p>
       </Menu.Item>
       <Menu.Item
         className="navbar__languageContainer-btn"
-        onClick={(e) => handleLanguageChange("ar")}
+        onClick={() => handleLanguageChange("ar")}
       >
         <p>AR</p>
       </Menu.Item>
     </Menu>
   );
-
+  // conditional language change modal
+  const [modalVisibility, setModalVisibility] = useState(false);
+  // hold abbreviation of new language for conditional language change
+  const [newLanguage, setNewLanguage] = useState();
+  // gives current route
+  const location = useLocation();
   const handleLanguageChange = (lang) => {
-    i18n.changeLanguage(lang);
+    if (location.pathname === "/games/memorygame") {
+      setNewLanguage(lang);
+      setModalVisibility(true);
+    } else {
+      i18n.changeLanguage(lang);
+    }
   };
 
   const isCurrentPath = (path) => {
@@ -85,6 +96,11 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
+      <LanguageChangeModal
+        modalVisibility={modalVisibility}
+        setModalVisibility={setModalVisibility}
+        newLanguage={newLanguage}
+      />
       <Row className="navbar__topHalf" justify="space-around" gutter={12}>
         <Col className="navbar__elements" flex={2}>
           {/*Dropdown replaces the navbar in small screens */}
