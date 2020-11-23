@@ -21,7 +21,7 @@
   },
   "home": {
     "headerSection": {
-      "mainText": "Keşfedin, Keşfedin, Öğrenin",
+      "mainText": "Keşfedin, Araştırın, Öğrenin",
       "secondaryText": "Çocukların bugün karşılaştığımız çevre sorunlarıyla ilgili eğlenceli ve eğitici materyaller bulmaları için bir kaynak.",
       "headerButton": "Bilgi & Oyunlar"
     },
@@ -34,7 +34,7 @@
         "href": "https://twitter.com/dogadernegi?lang=en"
       },
       {
-        "alt": "Green Peace Türkiye",
+        "alt": "Green Peace Türkiye Twitter Hesabı",
         "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/turkishTweets%2FgreenPeaceTr.svg?alt=media&token=b050a95a-8c37-4112-b3a2-0016b6603584",
         "href": "https://twitter.com/greenpeace_med?lang=en"
       },
@@ -62,19 +62,19 @@
   "contact": {
     "headerSection": {
       "title": "Bizimle İletişime Geç",
-      "subtitle": "Yeni oyun isteklerini, sorularını, yorumlarını buradan paylaşabilirsin."
+      "subtitle": "Yeni oyun isteklerini, sorularını ve yorumlarını buradan paylaşabilirsin."
     },
     "contactUsForm": {
-      "name": "Adın:",
-      "email": "Eposta adresin:",
-      "message": "Bize neler sormak ve önermek istersin?",
+      "name": "Ad:",
+      "email": "Eposta:",
+      "message": "Mesaj",
       "send": "Gönder",
       "postSubmissionMessage": "Bizimle iletişime geçtiğin için teşekkürler!"
     }
   },
   "games": {
     "quizGame": {
-      "title": "Sınav Oyunu"
+      "title": "Quiz"
     },
     "matchingGame": {
       "title": "Eşleştirme Oyunu",
@@ -190,7 +190,7 @@
       ]
     },
     "puzzleGame": {
-      "title": "Görüntü Bulmacası",
+      "title": "Resim Bulmacası",
       "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
     }
   },
@@ -208,13 +208,13 @@
   },
   "about": {
     "aboutUsHeader": "Hakkımızda",
-    "aboutUsText": "Teknolojiyi insanların yararına kullanmakta ortak paydasını bulan çok uluslu bir gençlik grubuyuz. Orta Doğu ve Kuzey Afrika'daki çocukları eğitici oyunlar aracılığıyla çevre sorunları ve iklim değişikliği konusunda eğitmek için birlikte çalışan 5 genç geliştirici ve 1 baş mühendisten oluşan bir grup. Hedef kitlemiz MENA'da yaşayan 8-13 yaş arası çocuklar; bu nedenle, web sitemizi çocukların ve öğretmenlerinin / ebeveynlerinin web sitesinde kolayca gezinmelerine yardımcı olmak için üç ana dilde sunuyoruz.",
-    "whyWeDoItHeader": "Neden yapıyoruz",
-    "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, aktivist bir nesil yetiştirmek imkansız değildir.",
+    "aboutUsText": "Ortak paydası teknolojiyi insanların yararına kullanmak olan çok uluslu bir geliştirici grubuyuz. Bu projede, Orta Doğu ve Kuzey Afrika'daki çocukları oyunlar aracılığıyla çevre sorunları hakkında eğitmek için bir araya geldik.",
+    "whyWeDoItHeader": "Neden yapıyoruz?",
+    "whyWeDoItText": "İnsanların doğayı ve değerlerini korumak gibi ahlaki bir yükümlülüğü vardır. MENA'daki yeni neslin, yerel ve küresel ölçekteki insani ve sosyal konuların çözümüne fayda sağlamak amacıyla hareket etmesini kolaylaştıracak doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, aktivist bir neslin yetişeceğine inancımız tam.",
     "teamInfo": {
       "louis": {
         "name": "Louis Li",
-        "bio": "Louis, Re:Coded Türkiye'de kodlama eğitmenidir. Pek çok heyecan verici hikaye ve etkileyici deneyimle kelebek etkisini yaratıyor.",
+        "bio": "Louis, Re-Coded Türkiye'de yazılım eğitmenidir. Pek çok heyecan verici hikayeye sahip olan Louis, etrafındaki insanlara kelebek etkisini yaşatmaktadır.",
         "role": "Proje Mühendisi"
       },
       "ammar": {
@@ -224,79 +224,79 @@
       },
       "ibrahim": {
         "name": "Ibrahim Aljarad",
-        "bio": "Selam, ben Suriye'den İbrahim, Flatiron kodlama okulunda kodlama okudum ve Alfurat Üniversitesi Ekonomi bölümünü tamamladım. Re:Coded organizasyonunun Web Ön yüz Geliştirme temel eğitim programına katıldım ve mezun oldum. Kodlama dışındaki diğer deneyimlerim: saha yapım ekiplerine teknik destek sağlayan uydu yapımcısı olarak çeşitli kanallar ve ajanslarla çalıştım.",
+        "bio": "Ibrahim bir Flatiron, Re-Coded ve Alfurat Universitesi mezunu yazılımcıdır. Yazılım tecrübesinin yanında bir çok haber kanal ve ajansında mühendislik tecrübeside vardır.",
         "role": "Web Ön yüz Geliştirici"
       },
       "majd": {
         "name": "Majd Ajroudi",
-        "bio": "Çok yönlü becerilere, çeşitli mühendislik alanlarında deneyime ve sosyal sorunları çözmek için teknolojiyi kullanma konusunda istekli bir genç geliştirici.",
+        "bio": "Çok yönlü becerilere, çeşitli mühendislik alanlarında deneyime ve sosyal sorunları için motivasyona sahip bir genç geliştirici.",
         "role": "Web Ön yüz Geliştirici"
       },
       "sule": {
         "name": "Sule Sinikoglu",
-        "bio": "Küresel Zorluklar üzerinde olumlu etki yaratmak için 'iyi kod' yazan bir Web Geliştiricisi.",
+        "bio": "Küresel zorluklar üzerinde olumlu etki yaratmak için 'iyi kod' yazan bir web geliştiricisi.",
         "role": "Web Ön yüz Geliştirici"
       },
       "tarkan": {
         "name": "Tarkan Mansuroglu",
-        "bio": "Re:Coded web ön yüz Geliştirme eğitim programı mezunu ve kısmen kendi kendine öğrenen bir web arayüz geliştiricisi. Ayrıca tutkusu öğrenmek olan, bilgisayarlar konusunda meraklı, bilgisayar oyunlarına meraklı bir spor tutkunu. Becerilerini test etmeyi ve geliştirmek için gerçek hayata dair sorunları çözmeyi seviyor. Onu sosyal medyadan takip edin!",
+        "bio": "Re:Coded web ön yüz Geliştirme eğitim programı mezunu ve yazılımı kısmen kendi kendine öğrenmiş bir web ön yüz geliştiricisi. Ayrıca tutkusu öğrenmek olan, bilgisayarlara ve bilgisayar oyunlarına meraklı bir spor tutkunu. Becerilerini test etmek ve geliştirmek için gerçek hayata dair sorunları çözmeyi seviyor. Onu sosyal medyadan takip edin!",
         "role": "Web Ön yüz Geliştirici"
       },
       "yaman": {
         "name": "Mohamad Yaman Sammani",
-        "bio": "Yaman, Kasım 2020'de Re: Coded Bootcamp'tan mezun olan web ön yüz geliştiricisidir. Tutkusu, göçmenlere ev sahibi ülkelerdeki hizmetlere kolay erişimlerini sağlayan programlar tasarlamaktır.",
+        "bio": "Yaman, Kasım 2020'de Re: Coded Bootcamp'tan mezun olan web ön yüz geliştiricisidir. Tutkusu, göçmenlerin ev sahibi ülkelerdeki hizmetlere erişimi kolaylaştıran programlar tasarlamaktır.",
         "role": "Web Ön yüz Geliştirici"
       }
     }
   },
   "loginRegister": {
-    "anEmailSent": "{{email}} adresine bir e-posta mesajı gönderildi. Şifre sıfırlama talimatlarını görmek için, lütfen gelen kutunuzu kontrol edin ve bu mesajda belirtilen adımları izleyin."
+    "anEmailSent": "{{email}} adresine bir e-posta mesajı gönderildi. Şifre sıfırlama talimatlarını görmek için lütfen gelen kutunuzu kontrol edin ve mailde belirtilen adımları izleyin."
   },
   "register": {
     "terms": [
-      "İlgili bilgilerinizi saklayabiliriz: İsim, iletişim bilgileri ve e-posta adresi.",
+      "İsim, iletişim bilgileri ve e-posta adresi gibi bilgilerinizi saklayabiliriz.",
       "Bilgilerinizin güvende olacağını taahhüt ederiz.",
-      "Web sitemiz içeriğinde site dışı bağlantıları içerebilir. Ancak, sitemizden ayrılmak için bu bağlantıları takip ettikten sonra, diğer web sitesileri üzerinde herhangi bir kontrolümüz olmadığını lütfen gözardı etmeyiniz."
+      "Web sitemiz site dışı bağlantıları içerebilir. Ancak, sitemizden ayrılmak için bu bağlantıları takip ettikten sonra, diğer web sitesileri üzerinde herhangi bir kontrolümüz olmadığını lütfen gözardı etmeyiniz."
     ],
-    "fullName": "Lütfen tam adınızı giriniz",
-    "validEmail": "lütfen geçerli eposta adresini giriniz",
-    "enterAge": "Lütfen yaşını gir",
-    "passwordCharacter": "Şifre en az 6 karakter uzunluğunda olmalı",
-    "enterPassword": "Lütfen şifrenizi giriniz",
-    "emailFormat": "E-posta biçimi hatası, lütfen geçerli bir e-posta girin",
-    "agreeOnterms": "Lütfen şartlar ve koşulları kabul edin",
+    "fullName": "Lütfen tam adınızı giriniz.",
+    "validEmail": "lütfen geçerli eposta adresini giriniz.",
+    "enterAge": "Lütfen yaşınızı giriniz.",
+    "passwordCharacter": "Şifre en az 6 karakter uzunluğunda olmalı.",
+    "enterPassword": "Lütfen şifrenizi giriniz.",
+    "emailFormat": "E-posta biçimi hatası, lütfen geçerli bir e-posta girin.",
+    "agreeOnterms": "Lütfen şartlar ve koşulları kabul edin.",
     "termsTitle": "Şartlar ve koşulları",
     "close": "Kapat",
-    "iAgree": "Kabul ediyorum",
+    "iAgree": "Kabul ediyorum.",
     "name": "Ad Soyad",
     "age": "Yaş",
     "password": "Parola",
     "email": "Email",
     "iAgreeTo": "Şartları ve koşulları",
-    "termsAndConditions": "kabul ediyorum",
+    "termsAndConditions": "kabul ediyorum.",
     "createAccount": "Yeni hesap oluştur",
-    "alreadyAMember": "Bir üye misiniz? Şimdi giriş yap"
+    "alreadyAMember": "Bir üye misin? Şimdi giriş yap!"
   },
   "resourcesPage": {
     "title": "Kütüphane",
-    "aboutPage": "Juniper Kütüphane, Çevre ile ilgili tematik alanlar hakkında kapsamlı, güvenilir ve güncel bilgileri barındıran çevrimiçi bir kütüphanedir. Web sitesi halka açıktır, ücretsizdir ve materyallere tek bir elverişli konumda erişim sağlar. Bu sayfa düzenli olarak güncellenecektir."
+    "aboutPage": "Çevresel konular hakkında kapsamlı, güvenilir ve güncel bilgileri barındıran herkese açık, ücretsiz,çevrimiçi ve düzenli olarak güncellenen bir kütüphanedir."
   },
   "passwordReset": {
-    "emailFormat": "Email biçimi Hatası",
-    "fillField": "Lütfen bu alanı doldurun",
+    "emailFormat": "Email hatası.",
+    "fillField": "Lütfen bu alanı doldurun.",
     "passwordReset": "Şifreyi yenile",
     "email": "Email",
-    "backToLogin": "Geri Giriş Yap"
+    "backToLogin": "Giriş yap"
   },
   "login": {
     "login": "Oturum aç",
     "email": "Email",
     "password": "Parola",
-    "forgotPassword": "Şifremi Unuttum?",
-    "new": "Juniper'de yeni misiniz? Şimdi üye Ol",
-    "creat": "Üye Ol",
+    "forgotPassword": "Şifremi Unuttum",
+    "new": "Juniper'de yeni misin? Şimdi üye ol!",
+    "creat": "Üye ol",
     "orYouCan": "Ya da",
-    "withFacebook": "Facebook İle Bağlan",
-    "withGoogle": "Google İle Bağlan"
+    "withFacebook": "Facebook ile bağlan",
+    "withGoogle": "Google ile bağlan"
   }
 }
