@@ -19,7 +19,7 @@ exports[`GamesPageProgressSection Component renders correctly. 1`] = `
     style={Object {}}
   >
     <div
-      className="ant-col"
+      className="ant-col ant-col-xs-7"
       style={Object {}}
     >
       <h3
@@ -29,7 +29,7 @@ exports[`GamesPageProgressSection Component renders correctly. 1`] = `
       </h3>
     </div>
     <div
-      className="ant-col"
+      className="ant-col ant-col-xs-10"
       style={Object {}}
     >
       <div
@@ -62,7 +62,7 @@ exports[`GamesPageProgressSection Component renders correctly. 1`] = `
       </div>
     </div>
     <div
-      className="ant-col"
+      className="ant-col ant-col-xs-7"
       style={Object {}}
     >
       <h3
@@ -77,7 +77,7 @@ exports[`GamesPageProgressSection Component renders correctly. 1`] = `
     style={Object {}}
   >
     <div
-      className="ant-col"
+      className="ant-col ant-col-xs-8 ant-col-xs-offset-3"
       style={Object {}}
     >
       <h3
@@ -101,7 +101,7 @@ exports[`GamesPageProgressSection Component renders correctly. 1`] = `
       </h3>
     </div>
     <div
-      className="ant-col"
+      className="ant-col ant-col-xs-8 ant-col-xs-offset-2"
       style={Object {}}
     >
       <h3
