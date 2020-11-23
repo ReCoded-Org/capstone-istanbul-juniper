@@ -51,39 +51,7 @@
     },
     "gamesCarousel": {
       "title": "Games",
-      "subtitle": "Popular Games",
-      "gameCards": [
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        }
-      ]
+      "subtitle": "Popular Games"
     }
   },
   "contact": {
