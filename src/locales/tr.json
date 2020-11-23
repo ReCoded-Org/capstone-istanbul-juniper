@@ -56,39 +56,7 @@
     },
     "gamesCarousel": {
       "title": "Oyunlar",
-      "subtitle": "En Popüler Oyunlar",
-      "gameCards": [
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        },
-        {
-          "name": "",
-          "img": "",
-          "description": ""
-        }
-      ]
+      "subtitle": "En Popüler Oyunlar"
     }
   },
   "contact": {
