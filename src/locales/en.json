@@ -17,7 +17,7 @@
   "home": {
     "headerSection": {
       "mainText": "Discover, Explore, Learn",
-      "secondaryText": "A resource for kids to find fun and educational materials related to environment issues we are facing today.",
+      "secondaryText": "A resource for kids to find fun and educational materials related to environmental issues world is facing today.",
       "headerButton": "Knowledge & Games"
     },
     "stayUpToDate": "Stay up-to-date!",
@@ -29,12 +29,12 @@
         "href": "https://twitter.com/eadtweets?lang=en"
       },
       {
-        "alt": "Green Peace Account",
+        "alt": "Green Peace Twitter Account",
         "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FgreenPeaceEn.svg?alt=media&token=0d1dc09c-7256-45b4-b86e-78ebbc2ce335",
         "href": "https://twitter.com/Greenpeace?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
       },
       {
-        "alt": "UN Environmental Programme Twitter",
+        "alt": "UN Environmental Programme Twitter Account",
         "src": "https://firebasestorage.googleapis.com/v0/b/capstone-istanbul-juniper.appspot.com/o/englishTweets%2FunEn.svg?alt=media&token=8e17795d-656e-4629-919f-7d4567be2f00",
         "href": "https://twitter.com/UNEP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
       },
@@ -57,12 +57,12 @@
   "contact": {
     "headerSection": {
       "title": "Contact Us",
-      "subtitle": "You can share from here your new game requests, questions, comments, suggestions with us."
+      "subtitle": "Here you can share your game suggestions, questions, comments with us."
     },
     "contactUsForm": {
-      "name": "Your name:",
-      "email": "Your email address:",
-      "message": "What is your question or comment?",
+      "name": "Name:",
+      "email": "Email:",
+      "message": "Your message",
       "send": "Send",
       "postSubmissionMessage": "Thanks for messaging us!"
     }
@@ -129,7 +129,7 @@
         {
           "description": "Acid Rain",
           "link": "https://kids.kiddle.co/Acid_rain",
-          "phrase": "Did you know that volcanoe eruptions can cause acid rain? "
+          "phrase": "Did you know that volcanoe eruptions can cause acid rain?"
         },
         {
           "description": "Air Pollution",
@@ -204,23 +204,23 @@
   },
   "about": {
     "aboutUsHeader": "About us",
-    "aboutUsText": "We are a group of multi-national youth who found their common ground in using tech for the benefit of people. Juniper, consists of a group of 5 junior developers and 1 lead engineer working together to educate children in MENA about environmental issues and climate change through educational games. Our target group is kids living in MENA that are 5-9 years old; thus, Juniper is delivered in three main languages to help kids and their teachers/parents to easily surf the website.",
+    "aboutUsText": "We are a group of multi-national developers who found their common ground in using tech for the benefit of people. Juniper, consists of a group of 5 junior developers and 1 lead engineer working together to educate children in MENA about environmental issues and climate change through educational games. Our target group is kids living in MENA that are 5-9 years old; thus, Juniper is delivered in three main languages to help kids and their teachers/parents to easily surf the website.",
     "whyWeDoItHeader": "Why we do it",
-    "whyWeDoItText": "We have a moral obligation to preserve nature and its features, because protecting the environment protects humanity from toxic substances and our quality of food. We believe that the new generation in MENA should be supported with the right tools to believe and act for the benefit of humanitarian and social issues, on the local and global scale. Given the right tools, it is not impossible to raise a generation of activists.",
+    "whyWeDoItText": "We have a moral obligation to preserve nature and its features. We believe that the new generation in MENA should be supported with the right tools to believe and act for the benefit of humanitarian and social issues, on the local and global scale. Given the right tools, it is not impossible to raise a generation of activists.",
     "teamInfo": {
       "louis": {
         "name": "Louis Li",
-        "bio": "Louis is the coding instructor in Re:Coded Turkey. With a lot of exciting stories and impressive experience he creates the butterfly effect.",
+        "bio": "Louis is the coding instructor in Re:Coded Turkey. He has a lot of exciting stories to tell. He creates the butterfly effect for people around him.",
         "role": "Project Engineer"
       },
       "ammar": {
         "name": "Ammar Sammour",
-        "bio": "Ammar is the Coding Instructor at Front-end Web Development Bootcamp in Turkey provided by Re:Coded! He spends his time coaching our fellows to become web development ninjas!",
+        "bio": "Ammar is the Coding Instructor at Re:Coded Front-end Web Development Bootcamp in Turkey! He spends his time coaching our fellows to become web development ninjas!",
         "role": "Lead Engineer"
       },
       "ibrahim": {
         "name": "Ibrahim Aljarad",
-        "bio": "Hey, I'm Ibrahim from Syria, I studied coding during the frontend web development bootcamp provided by Re:Coded where Flatiron School's curriculum was taught, I also studied economics at Alfurat University. My other experiences include working with several channels and agencies as a satellite producer providing the technical support for the field producing teams.",
+        "bio": "Ibrahim studied coding at Flatiron School and economics at Alfurat University. He attended Re-Coded's front-end web development bootcamp. He had many experiences outside of coding too. He worked with several news channels and agencies as an engineer.",
         "role": "Junior Developer"
       },
       "majd": {
@@ -235,7 +235,7 @@
       },
       "tarkan": {
         "name": "Tarkan Mansuroglu",
-        "bio": "A \"Re:Coded Front-End Web Development Bootcamp\" trained and partially self-taught front-end web developer. He is also a passionate learner, PC enthusiast, gamer and fitness enthusiast. He loves solving real life problems to test and develop his skills. Follow him through social media!",
+        "bio": "A Re:Coded Front-End Web Development Bootcamp trained and partially self-taught front-end web developer. He is also a passionate learner, PC enthusiast, gamer and fitness enthusiast. He loves solving real life problems to test and develop his skills. Follow him through social media!",
         "role": "Junior Developer"
       },
       "yaman": {
@@ -246,7 +246,7 @@
     }
   },
   "loginRegister": {
-    "anEmailSent": "An email message has been sent to your {{email}}. Message contains password reset instructions, please check your inbox and follow the steps indicated in that message."
+    "anEmailSent": "An email message has been sent to your {{email}}. Email contains password reset instructions, please check your inbox and follow the steps described."
   },
   "register": {
     "terms": [
@@ -254,13 +254,13 @@
       "We are committed to ensuring that your information is secure.",
       "Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website."
     ],
-    "fullName": "Please enter your full name",
-    "validEmail": "Please enter a valid email",
-    "enterAge": "Please enter your age",
-    "passwordCharacter": "Password must be at least 6 characters long",
-    "enterPassword": "Please enter your password",
-    "emailFormat": "Email format error, please enter a valid email",
-    "agreeOnTerms": "Please agree to the terms and conditions",
+    "fullName": "Please enter your full name.",
+    "validEmail": "Please enter a valid email.",
+    "enterAge": "Please enter your age.",
+    "passwordCharacter": "Password must be at least 6 characters long.",
+    "enterPassword": "Please enter your password.",
+    "emailFormat": "Email format error, please enter a valid email.",
+    "agreeOnTerms": "Please agree to the terms and conditions.",
     "termsTitle": "Terms of Service",
     "close": "Close",
     "iAgree": "I Agree",
@@ -271,25 +271,25 @@
     "iAgreeTo": "I Agree to",
     "termsAndConditions": "terms and conditions",
     "createAccount": "Create new account",
-    "alreadyAMember": "Already a member? Log in now"
+    "alreadyAMember": "Already a member? Log in now!"
   },
   "resourcesPage": {
-    "title": "Resources Centre",
-    "aboutPage": "Juniper's Resource Centre is an online library that hosts comprehensive, reliable, and up-to-date information on thematic areas related to Environmental. The website is open to the public, free-of-charge, and provides access to materials in one convenient location. This page will be updated regularly."
+    "title": "Resources Center",
+    "aboutPage": "Juniper's Resource Centre is an online library that hosts comprehensive, reliable, and up-to-date information on environment. The website is open to the public, free-of-charge, and provides access to materials in one convenient bundle. This page will be updated regularly."
   },
   "login": {
     "login": "Log in",
     "email": "Email",
     "password": "Password",
-    "forgotPassword": "Forget Password?",
-    "new": "New at Juniper? Register now",
+    "forgotPassword": "Forgot Password?",
+    "new": "New at Juniper? Register now!",
     "creat": "Creat New Account",
     "orYouCan": "Or you can",
     "withFacebook": "Log in with Facebook",
     "withGoogle": "Log in with Google"
   },
   "passwordReset": {
-    "emailFormat": "Email format Error",
+    "emailFormat": "Email format error",
     "fillField": "Please fill this field",
     "passwordReset": "Reset your password",
     "email": "Email",
