@@ -5,8 +5,10 @@ import { useTranslation } from "react-i18next";
 
 // in games, page must be reloaded to change language. This modal is created to warn user about it
 const LanguageChangeModal = ({
+  // boolean
   modalVisibility,
   setModalVisibility,
+  // string. lowercase language abbreviation
   newLanguage,
 }) => {
   const { t } = useTranslation();
