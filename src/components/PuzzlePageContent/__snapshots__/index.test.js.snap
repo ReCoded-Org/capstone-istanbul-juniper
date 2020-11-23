@@ -31,7 +31,6 @@ exports[`PuzzleSpace Component matches the tree 1`] = `
     >
       <svg
         aria-hidden="true"
-        className=""
         data-icon="question-circle"
         fill="currentColor"
         focusable="false"
