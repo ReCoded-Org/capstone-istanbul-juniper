@@ -6,10 +6,15 @@ import resourcesForEducation from "../../images/resourcesForEducation.png";
 import whoCausesClimate from "../../images/whoCausesClimate.png";
 import { useTranslation } from "react-i18next";
 
+
+const ResourcesPage = () => {
+  const [t] = useTranslation();
+
+
 const initResources = [
   {
     id: 1,
-    title: "Our changing climate - UNICEF",
+    title: t('ResourcesPage.t1'),
     body:
       "This book is a child friendly handbook meant to explain the concepts of climate change in an easily understandable manner and language. It aims to link behavioural choices to the changes observed in our climate",
     pic: ourClimateChange,
@@ -35,10 +40,6 @@ const initResources = [
       "gs://capstone-istanbul-juniper.appspot.com/ResourcesPage/creating-futures-lesson-4.pdf",
   },
 ];
-
-const ResourcesPage = () => {
-  const [t] = useTranslation();
-
   const [resources] = useState(initResources);
   return (
     <div className="resourcesPage">
