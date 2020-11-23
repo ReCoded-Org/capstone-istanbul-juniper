@@ -56,7 +56,7 @@ a.instagram {
   color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   img.footerContainer__globe {
     margin-top: 80px;
     padding-top: 0;
