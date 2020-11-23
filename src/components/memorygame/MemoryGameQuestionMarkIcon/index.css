@@ -1,5 +1,5 @@
 .questionMarkIcon {
-  font-size: 2rem;
+  font-size: min(3.5rem, 10vw);
   float: right;
   margin: auto;
 }

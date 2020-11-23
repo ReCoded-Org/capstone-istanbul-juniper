@@ -59,6 +59,14 @@
   transition: all 0.5s;
 }
 
+.homePageHeaderContainer__arTitle {
+  text-align: center;
+  display: inline-block;
+  font-family: "salsa";
+  font-size: clamp(0.5rem, 20px, 4vw);
+  display: none;
+}
+
 /* Media query rules to override previous rules, as necessary */
 /* when the breakpoint happend we will see the one image only without the title and paragraph */
 @media screen and (min-width: 1000px) {
@@ -90,6 +98,27 @@
 
 @media screen and (max-width: 400px) {
   .homePageHeaderContainer__rightImg {
+    width: 330px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .homePageHeaderContainer__arTitle {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .homePageHeaderContainer__button {
+    display: block;
+    margin-bottom: 350px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .homePageHeaderContainer__rightImg {
+    display: block;
     width: 330px;
   }
 }
