@@ -11,23 +11,29 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import globe from "./../../images/earthNav.svg";
 
+const LIGHT_GREEN_BACKGROUND_PAGES = [
+  "/about",
+  "/resources",
+  "/games/memorygame",
+  "/games/puzzlegame",
+  "/games/quizgame",
+];
+
+const LIGHT_GREEN = "#b4d0c4";
+
+const DARK_GREEN = "#2a8c79";
+
 const Footer = () => {
   const curRoute = useLocation().pathname;
   const [t] = useTranslation();
-  const shouldUseLightGreenBackground =
-    curRoute === "/about" ||
-    curRoute === "/resources" ||
-    curRoute === "/games/memorygame" ||
-    curRoute === "/games/puzzlegame" ||
-    curRoute === "/games/quizgame";
 
   return (
     <div
       className="footerContainer"
       style={
-        shouldUseLightGreenBackground
-          ? { backgroundColor: "#b4d0c4" }
-          : { backgroundColor: "#2a8c79" }
+        LIGHT_GREEN_BACKGROUND_PAGES.includes(curRoute)
+          ? { backgroundColor: LIGHT_GREEN }
+          : { backgroundColor: DARK_GREEN }
       }
     >
       <footer>
