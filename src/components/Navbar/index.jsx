@@ -8,10 +8,7 @@ import logoImg from "./../../images/logo.svg";
 import { AuthContext } from "../../auth/authContext";
 import { auth } from "../../firebaseConfig";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faGlobeAfrica
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faGlobeAfrica } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -168,7 +165,10 @@ const Navbar = () => {
               overlay={languagesMenu}
               className="navbar__languageContainer"
             >
-              <FontAwesomeIcon icon={faGlobeAfrica} className="navbar__element-lang" />
+              <FontAwesomeIcon
+                icon={faGlobeAfrica}
+                className="navbar__element-lang"
+              />
             </Dropdown>
           </Col>
         </Col>
