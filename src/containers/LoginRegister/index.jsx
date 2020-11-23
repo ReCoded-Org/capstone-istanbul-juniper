@@ -147,9 +147,7 @@ const LoginRegisterPage = ({ history }) => {
       throw new Error();
   }
 
-  return (
-    <Spin spinning={loading}>{component}</Spin>
-  );
+  return <Spin spinning={loading}>{component}</Spin>;
 };
 
 export default withRouter(LoginRegisterPage);
