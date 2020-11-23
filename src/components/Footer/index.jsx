@@ -7,15 +7,34 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import "./index.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import globe from "./../../images/earthNav.svg";
 
+const LIGHT_GREEN_BACKGROUND_PAGES = [
+  "/about",
+  "/resources",
+  "/games/memorygame",
+  "/games/puzzlegame",
+  "/games/quizgame",
+];
+
+const LIGHT_GREEN = "#b4d0c4";
+const DARK_GREEN = "#2a8c79";
+
 const Footer = () => {
+  const curRoute = useLocation().pathname;
   const [t] = useTranslation();
 
   return (
-    <div className="footerContainer">
+    <div
+      className="footerContainer"
+      style={{
+        backgroundColor: LIGHT_GREEN_BACKGROUND_PAGES.includes(curRoute)
+          ? LIGHT_GREEN
+          : DARK_GREEN,
+      }}
+    >
       <footer>
         <img alt="globe" src={globe} className="footerContainer__globe" />
         <Col>
