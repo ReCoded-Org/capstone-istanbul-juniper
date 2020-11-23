@@ -70,7 +70,7 @@ const Navbar = () => {
       </Menu.Item>
     </Menu>
   );
-  // language change in memorygame requires page reload. This modal is create to warn user.
+  // language change in games requires page reload. This modal is create to warn user.
   const [modalVisibility, setModalVisibility] = useState(false);
   // holds abbreviation of new language for conditional language change
   const [newLanguage, setNewLanguage] = useState();
