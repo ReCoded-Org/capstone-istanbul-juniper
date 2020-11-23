@@ -8,6 +8,7 @@ import { invertCardStateForKey } from "../gameHelpers";
 import ScrollToFacts from "../MemoryGameScrollToFacts";
 import QuestionMarkIcon from "../MemoryGameQuestionMarkIcon";
 import GameCards from "../MemoryGameCards";
+import i18n from "i18next";
 
 const NUM_REQUIRED_MATCHES = 2;
 // game example: https://www.brightfocus.org/alzheimers/memory-games/match-pictures
@@ -22,6 +23,7 @@ const MemoryGameBoard = ({
   finishedCards,
   setIsGameCompleted,
 }) => {
+  const currLanguage = i18n.language;
   const [t] = useTranslation();
   // cardsDataArr example [{description:"...",link:"...",phrase:".."},...]
   const cardsDataArr = [
@@ -114,7 +116,14 @@ const MemoryGameBoard = ({
         <Col span={5}>
           <ScrollToFacts />
         </Col>
-        <Col span={2} push={17}>
+        <Col
+          // arabic language causes screen to be reverted. New layout required for arabic
+          xs={
+            currLanguage === "ar"
+              ? { span: 2, pull: 18 }
+              : { span: 2, push: 17 }
+          }
+        >
           <QuestionMarkIcon />
         </Col>
       </Row>
