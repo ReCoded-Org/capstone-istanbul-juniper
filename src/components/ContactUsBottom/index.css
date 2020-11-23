@@ -1,6 +1,6 @@
 .contactUsBottomContainer {
   background: #2a8c79;
-  margin: 0 auto;
+  padding-bottom: 15rem;
 }
 
 .contactUsBottomContainer__bottomCurve {
@@ -12,17 +12,18 @@
 .contactUsBottomContainer__bottomCurve__topHalf {
   height: 50%;
   background: #add4c5;
-  margin-bottom: 5%;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: relative;
-  top: -10%;
+  top: -25%;
   width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contactUsBottomContainer__bottomCurve__bottomHalf {
@@ -30,15 +31,15 @@
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
-  width: 50%;
+  width: 52%;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
-  width: 20%;
+  width: 23%;
 }
 
 .contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
-  width: 8%;
+  width: 9%;
 }
 
 /* Media query rules to override previous rules, as necessary */
@@ -60,16 +61,21 @@
   .contactUsBottomContainer__bottomCurve__topHalfImages--subImgTwo {
     display: none;
   }
+
+  .contactUsBottomContainer {
+    background: #2a8c79;
+    padding-bottom: 10rem;
+  }
 }
 
 /* At the breakpoint only main image is shown */
 @media screen and (max-width: 480px) {
   .contactUsBottomContainer__bottomCurve__topHalfImages {
-    top: -28%;
+    top: 0%;
   }
 
   .contactUsBottomContainer__bottomCurve__topHalfImages--mainImg {
-    width: 70%;
+    width: 80%;
   }
 
   .contactUsBottomContainer__bottomCurve__topHalfImages--subImgOne {
