@@ -117,6 +117,7 @@ const MemoryGameBoard = ({
           <ScrollToFacts />
         </Col>
         <Col
+          // arabic language causes screen to be reverted. New layout required for arabic
           xs={
             currLanguage === "ar"
               ? { span: 2, pull: 18 }
