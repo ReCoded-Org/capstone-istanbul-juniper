@@ -97,7 +97,9 @@ const Register = ({
         </ul>
       </Modal>
       <div className="loginContainer">
-        <div className="loginContainer__loginTitle">{t("register.creat")}</div>
+        <div className="loginContainer__loginTitle">
+          {t("register.createAccount")}
+        </div>
         {error && (
           <Alert className="authAlert" type="error" showIcon message={error} />
         )}
@@ -180,7 +182,7 @@ const Register = ({
             type="submit"
             className="loginContainer__loginDialog__submitButton"
           >
-            {t("register.creatAccount")}
+            {t("register.createAccount")}
           </button>
           <div className="loginContainer__loginDialog__registerLabel">
             {t("register.alreadyAMember")}
@@ -193,10 +195,10 @@ const Register = ({
             type="button"
             className="loginContainer__loginDialog__registerButton"
           >
-            {t("register.login")}
+            {t("login.login")}
           </button>
           <div className="loginContainer__loginDialog__loginOptionsTitle">
-            {t("register.orYouCan")}
+            {t("login.orYouCan")}
           </div>
           <button
             onClick={(e) => {
@@ -206,7 +208,7 @@ const Register = ({
             type="button"
             className="loginContainer__loginDialog__facebookLoginBtn"
           >
-            {t("register.withFacebook")}
+            {t("login.withFacebook")}
           </button>
           <button
             onClick={(e) => {
@@ -216,7 +218,7 @@ const Register = ({
             type="button"
             className="loginContainer__loginDialog__googleLoginBtn"
           >
-            {t("register.withGoogle")}
+            {t("login.withGoogle")}
           </button>
         </div>
       </div>
