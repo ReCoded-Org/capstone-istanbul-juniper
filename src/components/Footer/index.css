@@ -44,7 +44,7 @@ a.facebook {
 }
 
 img.footerContainer__globe {
-  padding-top: max(55px, 10vh);
+  margin-top: 120px;
   position: absolute;
   top: 46px;
   left: 51px;
