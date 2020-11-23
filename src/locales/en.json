@@ -306,12 +306,12 @@
     "alreadyAMember": "Already a member? Log in now"
   },
   "resourcesPage": {
-    "resourceOneTitle": "Our Climate Change",
-    "resourceOneText": "This book is a child friendly handbook meant to explain the concepts of climate change in an easily understandable manner and language. It aims to link behavioural choices to the changes observed in our climate.",
-    "resourceTwoTitle": "Resources for Education on Climate Change - UNESCO",
-    "resourceTwoText": "This publication focuses on the challenges, opportunities and good practices of climate change.",
-    "resourceThreeTitle": "Who Causes Climate changes - TROCAIRE",
-    "resourceThreeText": "Children explore who contribute to climate change by looking at activities related to climate change using climate change bingo sheet",
+    "resources.climateChangeHandbook.title": "Our Climate Change",
+    "resources.climateChangeHandbook.text": "This book is a child friendly handbook meant to explain the concepts of climate change in an easily understandable manner and language. It aims to link behavioural choices to the changes observed in our climate.",
+    "resources.educationOnClimateChangeHandbook.title": "Resources for Education on Climate Change - UNESCO",
+    "esources.educationOnClimateChangeHandbook.text": "This publication focuses on the challenges, opportunities and good practices of climate change.",
+    "resource.whoCausesClimateChangesHandbook.title": "Who Causes Climate changes - TROCAIRE",
+    "resource.whoCausesClimateChangesHandbook.text": "Children explore who contribute to climate change by looking at activities related to climate change using climate change bingo sheet",
     "title": "Resources Centre",
     "aboutPage": "Juniper's Resource Centre is an online library that hosts comprehensive, reliable, and up-to-date information on thematic areas related to Environmental. The website is open to the public, free-of-charge, and provides access to materials in one convenient location. This page will be updated regularly."
   },

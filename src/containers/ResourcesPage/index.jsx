@@ -11,24 +11,28 @@ const ResourcesPage = () => {
   const initResources = [
     {
       id: 1,
-      title: t("resourcesPage.resourceOneTitle"),
-      body: t("resourcesPage.resourceOneText"),
+      title: t("resourcesPage.resources.climateChangeHandbook.title"),
+      body: t("resourcesPage.resources.climateChangeHandbook.text"),
       pic: ourClimateChange,
       url:
         "gs://capstone-istanbul-juniper.appspot.com/ResourcesPage/Child friendly climate change handbook.pdf",
     },
     {
       id: 2,
-      title: t("resourcesPage.resourceTwoTitle"),
-      body: t("resourcesPage.resourceTwoText"),
+      title: t(
+        "resourcesPage.resources.educationOnClimateChangeHandbook.title"
+      ),
+      body: t("resourcesPage.rresources.educationOnClimateChangeHandbook.text"),
       pic: resourcesForEducation,
       url:
         "gs://capstone-istanbul-juniper.appspot.com/ResourcesPage/Resources list_Climate Change.pdf",
     },
     {
       id: 3,
-      title: t("resourcesPage.resourceThreeTitle"),
-      body: t("resourcesPage.resourceThreeText"),
+      title: t("resourcesPage.resource.whoCausesClimateChangesHandbook.title"),
+      body: t(
+        "resourcesPage.resource.whoCausesClimateChangesHandbook.titleext"
+      ),
       pic: whoCausesClimate,
       url:
         "gs://capstone-istanbul-juniper.appspot.com/ResourcesPage/creating-futures-lesson-4.pdf",
