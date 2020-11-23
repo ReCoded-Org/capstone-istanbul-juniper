@@ -1,10 +1,14 @@
 .gamesCarousel {
-  background: #add4c5;
-  margin: 0 auto;
+  background: #b4d0c4;
+  margin: auto;
   padding-top: 2%;
   padding-bottom: 2%;
 }
 
+div.gamesCarousel {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .gamesCarousel__title {
   font-size: clamp(2.5rem, 3.5vw, 5rem);
   font-family: "Salsa", cursive;
@@ -19,9 +23,16 @@
 
 .gamesCarousel__wrapper {
   width: 95%;
-  padding-left: 4%;
-  display: flexbox;
+  padding-left: 5%;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.gamesCarousel__wrapper__card {
+  background-color: white;
+  border-radius: 2.5rem;
+  border: 1rem solid #b4d0c4;
 }
 
 /* React-slick class for sliders */
@@ -32,20 +43,65 @@
 
 /* React-slick class for single slide */
 .slick-slide {
-  border-radius: 2rem;
-  background: rgb(124, 123, 123);
-  height: clamp(30vh, 200px, 20vh);
-  max-width: 25%;
-  border: 0.25rem solid #add4c5;
+  width: 20%;
+  border: 1rem solid #b4d0c4;
   cursor: pointer;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.slick-slide.gamesCarousel__wrapper__cardImage {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border: 1rem solid #b4d0c4;
+  cursor: pointer;
+}
+
+.gamesCarousel__wrapper__cardImage {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 2.5rem;
+  background-color: white;
+}
+
+.gamesCarousel__wrapper__cardTitle {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-family: "Salsa", cursive;
+  color: black;
+  top: 10%;
+  padding-bottom: 1rem;
+}
+
+/* React-slick class wraps the slides */
+.slick-track {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* React-slick class for slider's arrows */
 .slick-prev:before,
 .slick-next:before {
-  color: #61e3d8;
-  font-size: clamp(1rem, 1.5rem, 3.5rem);
+  color: #2a8c79;
+  font-size: clamp(1rem, 2rem, 3rem);
   cursor: pointer;
   top: 50%;
   transition: all 0.5s;
+}
+
+/* Responsive settings of slider's arrorws for small screened devices */
+@media screen and (max-width: 1000px) {
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: clamp(1rem, 1.5rem, 2rem);
+  }
+}
+
+/* Responsive settings of slider's arrorws for small screened devices */
+@media screen and (max-width: 480px) {
+  div.gamesCarousel__wrapper__card {
+    border: 0.25rem solid #b4d0c4;
+  }
 }
