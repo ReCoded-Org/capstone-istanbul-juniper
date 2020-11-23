@@ -8,7 +8,7 @@
   background-image: url(./../../images/footerBg.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 14px;
+  background-position: center 100px;
   position: relative;
   font-family: Roboto;
 }
@@ -44,6 +44,7 @@ a.facebook {
 }
 
 img.footerContainer__globe {
+  margin-top: 120px;
   position: absolute;
   top: 46px;
   left: 51px;
@@ -56,9 +57,10 @@ a.instagram {
   color: white;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   img.footerContainer__globe {
-    top: 94px;
-    transform: scale(0.7);
+    margin-top: 80px;
+    padding-top: 0;
+    transform: scale(0.6);
   }
 }
