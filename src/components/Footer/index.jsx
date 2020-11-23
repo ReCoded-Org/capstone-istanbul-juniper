@@ -20,7 +20,6 @@ const LIGHT_GREEN_BACKGROUND_PAGES = [
 ];
 
 const LIGHT_GREEN = "#b4d0c4";
-
 const DARK_GREEN = "#2a8c79";
 
 const Footer = () => {
@@ -30,11 +29,11 @@ const Footer = () => {
   return (
     <div
       className="footerContainer"
-      style={
-        LIGHT_GREEN_BACKGROUND_PAGES.includes(curRoute)
-          ? { backgroundColor: LIGHT_GREEN }
-          : { backgroundColor: DARK_GREEN }
-      }
+      style={{
+        backgroundColor: LIGHT_GREEN_BACKGROUND_PAGES.includes(curRoute)
+          ? LIGHT_GREEN
+          : DARK_GREEN,
+      }}
     >
       <footer>
         <img alt="globe" src={globe} className="footerContainer__globe" />
