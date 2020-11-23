@@ -330,5 +330,11 @@
     "orYouCan": "Ya da",
     "withFacebook": "Facebook İle Bağlan",
     "withGoogle": "Google İle Bağlan"
+  },
+  "languageChangeModal": {
+    "title": "Dil değiştiriliyor",
+    "warningText": "Dil değiştirmek sayfanın yenilenmesine ve oyunun yeniden başlamasına sebep olacaktır",
+    "okText": "Tamam",
+    "cancelText": "İptal"
   }
 }
