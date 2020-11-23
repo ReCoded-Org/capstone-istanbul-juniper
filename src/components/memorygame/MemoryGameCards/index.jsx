@@ -31,7 +31,7 @@ const GameCards = ({
           );
         }
         return (
-          <Col xs={8} lg={6} xl={3} key={cardState.cardKey}>
+          <Col xs={8} sm={6} lg={4} xxl={3} key={cardState.cardKey}>
             {card}
           </Col>
         );
