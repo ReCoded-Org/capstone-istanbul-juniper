@@ -40,7 +40,7 @@ const ProgressSection = ({
         </h3>
       </Row>
       <Row justify="center" className="progressSectionContainer___row">
-        <Col xs={GRID_SPANS.currLevelSpan}>
+        <Col xs={GRID_SPANS.currLevel}>
           <h3
             className={`progressSectionContainer___row___header ${
               // Arabic reverts positions of level texts. Adaptive class naming is required for appropriate alignment and padding.
@@ -55,7 +55,7 @@ const ProgressSection = ({
             })}
           </h3>
         </Col>
-        <Col xs={GRID_SPANS.progressBarSpan}>
+        <Col xs={GRID_SPANS.progressBar}>
           <Progress
             percent={progressData.currentXP}
             className="progressSectionContainer___row___progressBar"
@@ -65,7 +65,7 @@ const ProgressSection = ({
             showInfo={false}
           />
         </Col>
-        <Col xs={GRID_SPANS.nextLevelSpan}>
+        <Col xs={GRID_SPANS.nextLevel}>
           <h3
             className={`progressSectionContainer___row___header ${
               currentLanguage === "ar"
@@ -78,7 +78,7 @@ const ProgressSection = ({
         </Col>
       </Row>
       <Row className="progressSectionContainer___row">
-        <Col xs={GRID_SPANS.previousRewardSpan}>
+        <Col xs={GRID_SPANS.previousReward}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.previousReward")}
           </h3>
@@ -94,7 +94,7 @@ const ProgressSection = ({
             {t("gamesPage.badgeDescription")}
           </h3>
         </Col>
-        <Col xs={GRID_SPANS.nextRewardSpan}>
+        <Col xs={GRID_SPANS.nextReward}>
           <h3 className="progressSectionContainer___row___header">
             {t("gamesPage.nextReward")}
           </h3>
