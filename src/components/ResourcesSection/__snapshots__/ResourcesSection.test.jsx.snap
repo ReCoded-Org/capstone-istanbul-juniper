@@ -16,7 +16,7 @@ exports[`ResourcesSection renders correctly 1`] = `
     }
   >
     <div
-      className="ant-col ant-col-sm-24 ant-col-xxl-6"
+      className="ant-col"
       style={
         Object {
           "paddingBottom": 8,
@@ -31,7 +31,7 @@ exports[`ResourcesSection renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="ant-col ant-col-22 resourceCardWrapper__cardName"
+          className="ant-col resourceCardWrapper__cardName"
           style={Object {}}
         >
           <a
@@ -41,8 +41,13 @@ exports[`ResourcesSection renders correctly 1`] = `
             home.resourcesSection.pollution
           </a>
         </div>
+      </div>
+      <div
+        className="ant-row ant-row-center"
+        style={Object {}}
+      >
         <div
-          className="ant-col ant-col-22 resourceCardWrapper__cardImage"
+          className="ant-col resourceCardWrapper__cardImage"
           style={Object {}}
         >
           <a
@@ -58,7 +63,7 @@ exports[`ResourcesSection renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="ant-col ant-col-sm-24 ant-col-xxl-6"
+      className="ant-col"
       style={
         Object {
           "paddingBottom": 8,
@@ -73,7 +78,7 @@ exports[`ResourcesSection renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="ant-col ant-col-22 resourceCardWrapper__cardName"
+          className="ant-col resourceCardWrapper__cardName"
           style={Object {}}
         >
           <a
@@ -83,8 +88,13 @@ exports[`ResourcesSection renders correctly 1`] = `
             home.resourcesSection.climateChange
           </a>
         </div>
+      </div>
+      <div
+        className="ant-row ant-row-center"
+        style={Object {}}
+      >
         <div
-          className="ant-col ant-col-22 resourceCardWrapper__cardImage"
+          className="ant-col resourceCardWrapper__cardImage"
           style={Object {}}
         >
           <a
@@ -100,7 +110,7 @@ exports[`ResourcesSection renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="ant-col ant-col-sm-24 ant-col-xxl-6"
+      className="ant-col"
       style={
         Object {
           "paddingBottom": 8,
@@ -115,7 +125,7 @@ exports[`ResourcesSection renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="ant-col ant-col-22 resourceCardWrapper__cardName"
+          className="ant-col resourceCardWrapper__cardName"
           style={Object {}}
         >
           <a
@@ -125,8 +135,13 @@ exports[`ResourcesSection renders correctly 1`] = `
             home.resourcesSection.reduceReuseRecycle
           </a>
         </div>
+      </div>
+      <div
+        className="ant-row ant-row-center"
+        style={Object {}}
+      >
         <div
-          className="ant-col ant-col-22 resourceCardWrapper__cardImage"
+          className="ant-col resourceCardWrapper__cardImage"
           style={Object {}}
         >
           <a
