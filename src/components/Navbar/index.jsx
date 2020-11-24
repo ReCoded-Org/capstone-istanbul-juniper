@@ -2,12 +2,13 @@ import React, { useContext } from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 import { Dropdown, Menu, Col, Row } from "antd";
-import { MenuOutlined, GlobalOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import logoImg from "./../../images/logo.svg";
 import { AuthContext } from "../../auth/authContext";
 import { auth } from "../../firebaseConfig";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faGlobeAfrica } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -91,7 +92,7 @@ const Navbar = () => {
           <Col>
             <Dropdown className="navbar__dropdown" overlay={navbarMenu}>
               <button className="navbar__dropdown-btn">
-                <MenuOutlined />
+                <FontAwesomeIcon icon={faBars} />
               </button>
             </Dropdown>
           </Col>
@@ -164,7 +165,10 @@ const Navbar = () => {
               overlay={languagesMenu}
               className="navbar__languageContainer"
             >
-              <GlobalOutlined className="navbar__element-lang" />
+              <FontAwesomeIcon
+                icon={faGlobeAfrica}
+                className="navbar__element-lang"
+              />
             </Dropdown>
           </Col>
         </Col>

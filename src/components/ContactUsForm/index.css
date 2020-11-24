@@ -5,6 +5,7 @@
   padding-bottom: 1rem;
   flex-wrap: wrap;
   padding: 0.5rem;
+  padding-bottom: 50px;
 }
 
 .contactUsForm__label {
@@ -32,6 +33,7 @@
 
 .contactUsForm__submit {
   margin-top: 0.5rem;
+  width: 100%;
 }
 
 .contactUsForm__submitButton {
@@ -45,9 +47,13 @@
   font-size: clamp(0.75rem, 1.25rem, 1.5rem);
   cursor: pointer;
   color: white;
-  width: clamp(6rem, 7rem, 8rem);
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.contactUsForm__submitButton span {
+  margin: 0 5px;
 }
 
 .contactUsForm__postSubmissionMessage {

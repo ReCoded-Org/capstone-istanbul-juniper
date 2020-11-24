@@ -21,3 +21,19 @@
   text-align: center;
   color: black;
 }
+
+.questionMark {
+  font-size: min(3.5rem, 10vw);
+}
+
+.puzzlePage_content--questionMark {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .puzzlePage_content--questionMark {
+    width: 100%;
+  }
+}

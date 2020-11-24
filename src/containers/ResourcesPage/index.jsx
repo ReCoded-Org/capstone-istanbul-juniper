@@ -22,7 +22,7 @@ const ResourcesPage = () => {
       title: t(
         "resourcesPage.resources.educationOnClimateChangeHandbook.title"
       ),
-      body: t("resourcesPage.rresources.educationOnClimateChangeHandbook.text"),
+      body: t("resourcesPage.resources.educationOnClimateChangeHandbook.text"),
       pic: resourcesForEducation,
       url:
         "gs://capstone-istanbul-juniper.appspot.com/ResourcesPage/Resources list_Climate Change.pdf",
