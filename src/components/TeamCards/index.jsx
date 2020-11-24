@@ -21,7 +21,7 @@ const TeamCards = () => {
 
   return (
     <div className="ourTeam">
-      <Row className="ourTeam__Header">Our Team</Row>
+      <Row className="ourTeam__Header">{t("about.ourTeam")}</Row>
       <Row className="ourTeam__teamCards">
         {dataState.map((member) => (
           <MemberCard

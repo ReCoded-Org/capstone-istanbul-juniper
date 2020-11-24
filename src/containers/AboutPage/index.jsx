@@ -8,6 +8,10 @@ import "./index.css";
 
 const AboutPage = () => {
   const [t] = useTranslation();
+  // This in-line styling is added to fix the display of the illustrations in Arabic
+  const illustrationStyling = {
+    flexDirection: document.dir === "rtl" ? "row-reverse" : "row",
+  };
 
   return (
     <div className="aboutUs">
@@ -30,7 +34,7 @@ const AboutPage = () => {
             </p>
           </Row>
         </Col>
-        <Col className="aboutUs__illustrationsCol">
+        <Col className="aboutUs__illustrationsCol" style={illustrationStyling}>
           <img
             className="aboutUs__illustrationsCol--kid0"
             src={kid0Img}

@@ -10,10 +10,10 @@
 }
 
 .aboutUs__textCol {
-  margin-left: 3%;
+  margin: auto 2%;
   display: flex;
   flex-direction: column;
-  width: 47%;
+  width: 45%;
 }
 
 .aboutUs__textCol--whyWeDoItParagraph,
@@ -28,9 +28,8 @@
 }
 
 .aboutUs__illustrationsCol {
-  margin-right: 3%;
+  margin: 2%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 47%;
@@ -39,13 +38,13 @@
 .aboutUs__illustrationsCol--kid0 {
   height: 30%;
   width: auto;
-  margin-right: 13px;
+  margin: 0 13px;
 }
 
 .aboutUs__illustrationsCol--kid1 {
   height: 30%;
   width: auto;
-  margin-left: 13px;
+  margin: 0 13px;
 }
 
 @media (max-width: 426px) {

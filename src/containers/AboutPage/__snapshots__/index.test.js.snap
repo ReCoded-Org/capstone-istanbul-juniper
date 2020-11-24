@@ -45,7 +45,11 @@ exports[`AboutPage Component matches the tree 1`] = `
     </div>
     <div
       className="ant-col aboutUs__illustrationsCol"
-      style={Object {}}
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
     >
       <img
         alt="kid-illustration"
@@ -70,7 +74,7 @@ exports[`AboutPage Component matches the tree 1`] = `
         className="ant-row ourTeam__Header"
         style={Object {}}
       >
-        Our Team
+        about.ourTeam
       </div>
       <div
         className="ant-row ourTeam__teamCards"

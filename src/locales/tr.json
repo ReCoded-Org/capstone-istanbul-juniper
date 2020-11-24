@@ -208,9 +208,10 @@
   },
   "about": {
     "aboutUsHeader": "Hakkımızda",
-    "aboutUsText": "Ortak paydası teknolojiyi insanların yararına kullanmak olan çok uluslu bir geliştirici grubuyuz. Bu projede, Orta Doğu ve Kuzey Afrika'daki çocukları oyunlar aracılığıyla çevre sorunları hakkında eğitmek için bir araya geldik.",
-    "whyWeDoItHeader": "Neden yapıyoruz?",
-    "whyWeDoItText": "İnsanların doğayı ve değerlerini korumak gibi ahlaki bir yükümlülüğü vardır. MENA'daki yeni neslin, yerel ve küresel ölçekteki insani ve sosyal konuların çözümüne fayda sağlamak amacıyla hareket etmesini kolaylaştıracak doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, aktivist bir neslin yetişeceğine inancımız tam.",
+    "aboutUsText": "Teknolojiyi insanların yararına kullanmakta ortak paydasını bulan çok uluslu bir gençlik grubuyuz. Orta Doğu ve Kuzey Afrika'daki çocukları eğitici oyunlar aracılığıyla çevre sorunları ve iklim değişikliği konusunda eğitmek için birlikte çalışan 5 genç geliştirici ve 1 baş mühendisten oluşan bir grup. Hedef kitlemiz MENA'da yaşayan 8-13 yaş arası çocuklar; bu nedenle, web sitemizi çocukların ve öğretmenlerinin / ebeveynlerinin web sitesinde kolayca gezinmelerine yardımcı olmak için üç ana dilde sunuyoruz.",
+    "whyWeDoItHeader": "Neden yapıyoruz",
+    "whyWeDoItText": "İnsanların doğayı ve özelliklerini korumak gibi ahlaki bir yükümlülüğü vardır, çünkü çevreyi korumak insanlığı toksik maddelerden ve gıda kalitemizi korur. MENA'daki yeni neslin, yerel ve küresel ölçekte insani ve sosyal konulara inanmak ve fayda sağlamak için hareket etmek için doğru araçlarla desteklenmesi gerektiğine inanıyoruz. Doğru araçlar verildiğinde, aktivist bir nesil yetiştirmek imkansız değildir.",
+    "ourTeam": "Ekibimiz",
     "teamInfo": {
       "louis": {
         "name": "Louis Li",
