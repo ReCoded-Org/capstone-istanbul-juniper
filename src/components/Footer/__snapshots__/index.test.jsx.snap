@@ -3,6 +3,11 @@
 exports[`Footer renders correctly 1`] = `
 <div
   className="footerContainer"
+  style={
+    Object {
+      "backgroundColor": "#2a8c79",
+    }
+  }
 >
   <footer>
     <img
