@@ -8,7 +8,6 @@ import { withRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Alert, Spin } from "antd";
 import "./index.css";
-import kids from "../../images/LoginKids.svg";
 
 const LoginRegisterPage = ({ history }) => {
   const [t] = useTranslation();
@@ -148,18 +147,7 @@ const LoginRegisterPage = ({ history }) => {
       throw new Error();
   }
 
-  return (
-    <>
-      <Spin spinning={loading}>{component}</Spin>
-      <div className="loginRegister__footerContainer">
-        <img
-          alt="kids having fun"
-          src={kids}
-          className="loginRegister__footerContainer__kidsImage"
-        />
-      </div>
-    </>
-  );
+  return <Spin spinning={loading}>{component}</Spin>;
 };
 
 export default withRouter(LoginRegisterPage);

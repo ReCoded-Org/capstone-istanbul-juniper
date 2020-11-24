@@ -8,7 +8,7 @@ exports[`TeamCards renders correctly 1`] = `
     className="ant-row ourTeam__Header"
     style={Object {}}
   >
-    Our Team
+    about.ourTeam
   </div>
   <div
     className="ant-row ourTeam__teamCards"

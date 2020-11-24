@@ -38,6 +38,7 @@
   color: white;
   font-size: 2em;
   padding: 6px;
+  font-family: "Salsa";
 }
 
 .navbar .navbar__topHalf .ant-col-4 {
@@ -142,6 +143,10 @@ li.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child.navbar__languageCont
   height: 35%;
   background: transparent;
   border: none;
+}
+
+.navbar__elements li a {
+  font-family: "Salsa";
 }
 
 .navbar__elements {
