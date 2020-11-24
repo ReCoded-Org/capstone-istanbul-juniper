@@ -28,7 +28,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         className="resource__body__picContainer"
       >
         <img
-          alt="Our changing climate - UNICEF"
+          alt="resourcesPage.resources.climateChangeHandbook.title"
           onClick={[Function]}
           src="ourClimateChange.png"
         />
@@ -39,12 +39,12 @@ exports[`ResourcesPage renders correctly 1`] = `
         <div
           className="resource__body__content__title"
         >
-          Our changing climate - UNICEF
+          resourcesPage.resources.climateChangeHandbook.title
         </div>
         <div
           className="resource__body__content__description"
         >
-          This book is a child friendly handbook meant to explain the concepts of climate change in an easily understandable manner and language. It aims to link behavioural choices to the changes observed in our climate
+          resourcesPage.resources.climateChangeHandbook.text
         </div>
         <div
           className="resource__body__content__footer"
@@ -64,7 +64,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         className="resource__body__picContainer"
       >
         <img
-          alt="Resources for Education on Climate Change - UNESCO"
+          alt="resourcesPage.resources.educationOnClimateChangeHandbook.title"
           onClick={[Function]}
           src="resourcesForEducation.png"
         />
@@ -75,12 +75,12 @@ exports[`ResourcesPage renders correctly 1`] = `
         <div
           className="resource__body__content__title"
         >
-          Resources for Education on Climate Change - UNESCO
+          resourcesPage.resources.educationOnClimateChangeHandbook.title
         </div>
         <div
           className="resource__body__content__description"
         >
-          This publication focuses on the challenges, opportunities and good practices of climate change. It explores the interrelationship between climate change and lifestyles through a scientific, political, economic, social, ethical and cultural angle and identifies actions young people might take towards more sustainable lifestyles. It provides information, case studies and useful tips around topics relevant to young people and their everyday lives, such as food and drink, travel and transport, leisure and entertainment. The guide was produced for young people and people working with them such as educators, teachers, trainers and youth leaders around the world
+          resourcesPage.resources.educationOnClimateChangeHandbook.text
         </div>
         <div
           className="resource__body__content__footer"
@@ -100,7 +100,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         className="resource__body__picContainer"
       >
         <img
-          alt="Who Causes Climate changes - TROCAIRE"
+          alt="resourcesPage.resources.whoCausesClimateChangesHandbook.title"
           onClick={[Function]}
           src="whoCausesClimate.png"
         />
@@ -111,12 +111,12 @@ exports[`ResourcesPage renders correctly 1`] = `
         <div
           className="resource__body__content__title"
         >
-          Who Causes Climate changes - TROCAIRE
+          resourcesPage.resources.whoCausesClimateChangesHandbook.title
         </div>
         <div
           className="resource__body__content__description"
         >
-          Children explore who contribute to climate change by looking at activities related to climate change using climate change bingo sheet, creating clouds that list activates causing gas emissions and represent the world population by dividing themself.
+          resourcesPage.resources.whoCausesClimateChangesHandbook.text
         </div>
         <div
           className="resource__body__content__footer"

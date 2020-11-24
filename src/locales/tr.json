@@ -281,6 +281,20 @@
     "alreadyAMember": "Bir üye misin? Şimdi giriş yap!"
   },
   "resourcesPage": {
+    "resources": {
+      "climateChangeHandbook": {
+        "title": "İklim Değişikliğimiz - UNICEF",
+        "text": "Bu kitap, iklim değişikliği kavramlarını kolay anlaşılır dil ve biçimde  anlatmayı amaçlayan ve çocuklar için uygun bir el kitabıdır. Davranışsal tercihler ve iklimimizde gözlemlenen değişiklikler arasında bağlantı kurmayı amaçlamaktadır."
+      },
+      "educationOnClimateChangeHandbook": {
+        "title": "İklim Değişikliği Eğitimi için - UNESCO",
+        "text": "Bu yayın, iklim değişikliğinin sorunlarını, fırsatları ve iyi uygulamalarına odaklanmaktadır."
+      },
+      "whoCausesClimateChangesHandbook": {
+        "title": "İklim değişikliğine ne sebep olur? - TROCAIRE",
+        "text": "Çocuklar, iklim değişikliği tombala sayfasını kullanarak iklim değişikliğiyle ilgili etkinliklere bakarak, gaz emisyonlarına neden olan aktifleri listeleyen ve kendilerini bölerek dünya nüfusunu temsil eden bulutlar oluşturarak iklim değişikliğine kimin katkıda bulunduğunu keşfederler."
+      }
+    },
     "title": "Kütüphane",
     "aboutPage": "Çevresel konular hakkında kapsamlı, güvenilir ve güncel bilgileri barındıran herkese açık, ücretsiz,çevrimiçi ve düzenli olarak güncellenen bir kütüphanedir."
   },

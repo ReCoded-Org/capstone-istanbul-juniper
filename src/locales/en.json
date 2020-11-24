@@ -194,7 +194,6 @@
   "profilePage": {
     "title": "Welcome"
   },
-
   "gamesPage": {
     "level": "Level {{currentLevel}}",
     "nextReward": "Next reward",
@@ -277,8 +276,22 @@
     "alreadyAMember": "Already a member? Log in now!"
   },
   "resourcesPage": {
-    "title": "Resources Center",
-    "aboutPage": "Juniper's Resource Centre is an online library that hosts comprehensive, reliable, and up-to-date information on environment. The website is open to the public, free-of-charge, and provides access to materials in one convenient bundle. This page will be updated regularly."
+    "resources": {
+      "climateChangeHandbook": {
+        "title": "Our Climate Change",
+        "text": "This book is a child friendly handbook meant to explain the concepts of climate change in an easily understandable manner and language. It aims to link behavioural choices to the changes observed in our climate."
+      },
+      "educationOnClimateChangeHandbook": {
+        "title": "Resources for Education on Climate Change - UNESCO",
+        "text": "This publication focuses on the challenges, opportunities and good practices of climate change."
+      },
+      "whoCausesClimateChangesHandbook": {
+        "title": "Who Causes Climate Changes - TROCAIRE",
+        "text": "Children explore who contribute to climate change by looking at activities related to climate change using climate change bingo sheet"
+      }
+    },
+    "title": "Resources Centre",
+    "aboutPage": "Juniper's Resource Centre is an online library that hosts comprehensive, reliable, and up-to-date information on thematic areas related to Environmental. The website is open to the public, free-of-charge, and provides access to materials in one convenient location. This page will be updated regularly."
   },
   "login": {
     "login": "Log in",
