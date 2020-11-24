@@ -190,8 +190,10 @@
       ]
     },
     "puzzleGame": {
-      "title": "Resim Bulmacası",
-      "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!"
+      "title": "Görüntü Bulmacası",
+      "subtitle": "Tam resmi görmek için parçaları doğru sıraya koyun!",
+      "howToPlayTitle": "Nasıl oynanır?",
+      "howToPlayDescription": "Bir  kartı seçmek için üzerine tıklayın ve ardından yerlerini değiştirmek için diğer karta tıklayın. Resmin tamamını görmek için tüm kartları doğru sırayla yerleştirin."
     }
   },
   "profilePage": {

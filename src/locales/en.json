@@ -115,7 +115,9 @@
     },
     "puzzleGame": {
       "title": "Image Puzzle",
-      "subtitle": "Put the pieces in the correct order to see the full picture!"
+      "subtitle": "Put the pieces in the correct order to see the full picture!",
+      "howToPlayTitle": "How to play?",
+      "howToPlayDescription": "Click on one tile to select it then click on the other tile to swap their places. Place all cards in their correct order to see the full image."
     },
     "memoryGame": {
       "title": "Memory Game",
