@@ -1,22 +1,3 @@
-.loginRegister__footerContainer {
-  background-image: url(../../images/LoginCurve.svg);
-  background-color: #b3d0c4;
-  background-position: top center;
-  background-size: cover;
-  height: 600px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: -1;
-}
-
-img.loginRegister__footerContainer__kidsImage {
-  position: absolute;
-  top: -75px;
-  max-height: 250px;
-}
-
 .loginContainer {
   display: flex;
   flex-direction: column;
@@ -63,6 +44,7 @@ img.loginRegister__footerContainer__kidsImage {
   border: 0;
   background-color: #f8ac4c;
   padding: 5px;
+  border-radius: 10px;
 }
 
 button.loginContainer__loginDialog__registerButton {
@@ -71,6 +53,7 @@ button.loginContainer__loginDialog__registerButton {
   padding: 5px;
   background-color: #2a8c79;
   color: white;
+  border-radius: 10px;
 }
 
 button.loginContainer__loginDialog__backToLoginButton {
@@ -80,6 +63,7 @@ button.loginContainer__loginDialog__backToLoginButton {
   background-color: #2a8c79;
   color: white;
   margin-top: 10px;
+  border-radius: 10px;
 }
 
 .loginContainer__loginDialog__errorContainer {
@@ -101,6 +85,7 @@ button.loginContainer__loginDialog__facebookLoginBtn {
   padding: 5px;
   border: 0;
   width: 80%;
+  border-radius: 10px;
 }
 
 .loginContainer__loginDialog__googleLoginBtn {
@@ -110,4 +95,9 @@ button.loginContainer__loginDialog__facebookLoginBtn {
   color: white;
   padding: 5px;
   border: 0;
+  border-radius: 10px;
+}
+
+.loginContainer__loginDialog__input input {
+  border-radius: 10px;
 }
