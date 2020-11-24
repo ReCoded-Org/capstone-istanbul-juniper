@@ -47,6 +47,7 @@
   padding: 6px 10px;
   border-radius: 7px;
 }
+
 .resource__body__content__footer button:hover {
   cursor: pointer;
   background-color: #a00;

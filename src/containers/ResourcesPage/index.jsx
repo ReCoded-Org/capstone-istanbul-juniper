@@ -30,9 +30,7 @@ const ResourcesPage = () => {
     {
       id: 3,
       title: t("resourcesPage.resource.whoCausesClimateChangesHandbook.title"),
-      body: t(
-        "resourcesPage.resource.whoCausesClimateChangesHandbook.titleext"
-      ),
+      body: t("resourcesPage.resource.whoCausesClimateChangesHandbook.text"),
       pic: whoCausesClimate,
       url:
         "gs://capstone-istanbul-juniper.appspot.com/ResourcesPage/creating-futures-lesson-4.pdf",

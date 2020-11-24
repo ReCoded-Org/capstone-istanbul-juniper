@@ -116,7 +116,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         <div
           className="resource__body__content__description"
         >
-          resourcesPage.resource.whoCausesClimateChangesHandbook.titleext
+          resourcesPage.resource.whoCausesClimateChangesHandbook.text
         </div>
         <div
           className="resource__body__content__footer"
