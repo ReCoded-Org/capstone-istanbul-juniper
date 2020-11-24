@@ -100,7 +100,7 @@ exports[`ResourcesPage renders correctly 1`] = `
         className="resource__body__picContainer"
       >
         <img
-          alt="resourcesPage.resource.whoCausesClimateChangesHandbook.title"
+          alt="resourcesPage.resources.whoCausesClimateChangesHandbook.title"
           onClick={[Function]}
           src="whoCausesClimate.png"
         />
@@ -111,12 +111,12 @@ exports[`ResourcesPage renders correctly 1`] = `
         <div
           className="resource__body__content__title"
         >
-          resourcesPage.resource.whoCausesClimateChangesHandbook.title
+          resourcesPage.resources.whoCausesClimateChangesHandbook.title
         </div>
         <div
           className="resource__body__content__description"
         >
-          resourcesPage.resource.whoCausesClimateChangesHandbook.text
+          resourcesPage.resources.whoCausesClimateChangesHandbook.text
         </div>
         <div
           className="resource__body__content__footer"
