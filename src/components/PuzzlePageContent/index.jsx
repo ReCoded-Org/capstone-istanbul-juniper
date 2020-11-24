@@ -1,7 +1,9 @@
 import React from "react";
-import { Layout } from "antd";
+import { Layout, Popover, Row } from "antd";
 import { useTranslation } from "react-i18next";
 import PuzzleGameContainer from "./../PuzzleGameContainer";
+import { QuestionCircleTwoTone } from "@ant-design/icons";
+
 import "./index.css";
 
 const PuzzlePageContent = () => {
@@ -17,6 +19,17 @@ const PuzzlePageContent = () => {
           {t("games.puzzleGame.subtitle")}
         </p>
       </div>
+
+      <Row className="puzzlePage_content--questionMark">
+        <Popover
+          content={t("games.puzzleGame.howToPlayDescription")}
+          title={t("games.puzzleGame.howToPlayTitle")}
+          placement="topRight"
+        >
+          <QuestionCircleTwoTone className="questionMark" />
+        </Popover>
+      </Row>
+
       <PuzzleGameContainer />
     </Content>
   );
