@@ -194,7 +194,6 @@
   "profilePage": {
     "title": "Welcome"
   },
-
   "gamesPage": {
     "level": "Level {{currentLevel}}",
     "nextReward": "Next reward",
@@ -287,8 +286,8 @@
         "text": "This publication focuses on the challenges, opportunities and good practices of climate change."
       },
       "whoCausesClimateChangesHandbook": {
-        "title": "Who Causes Climate changes - TROCAIRE",
-        "test": "Children explore who contribute to climate change by looking at activities related to climate change using climate change bingo sheet"
+        "title": "Who Causes Climate Changes - TROCAIRE",
+        "text": "Children explore who contribute to climate change by looking at activities related to climate change using climate change bingo sheet"
       }
     },
     "title": "Resources Centre",
