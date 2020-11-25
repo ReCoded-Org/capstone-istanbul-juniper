@@ -35,7 +35,7 @@ exports[`ResourcesSection renders correctly 1`] = `
           style={Object {}}
         >
           <a
-            href="/pollution"
+            href="/resources"
             onClick={[Function]}
           >
             home.resourcesSection.pollution
@@ -51,7 +51,7 @@ exports[`ResourcesSection renders correctly 1`] = `
           style={Object {}}
         >
           <a
-            href="/pollution"
+            href="/resources"
             onClick={[Function]}
           >
             <img
@@ -82,7 +82,7 @@ exports[`ResourcesSection renders correctly 1`] = `
           style={Object {}}
         >
           <a
-            href="/climatechange"
+            href="/resources"
             onClick={[Function]}
           >
             home.resourcesSection.climateChange
@@ -98,7 +98,7 @@ exports[`ResourcesSection renders correctly 1`] = `
           style={Object {}}
         >
           <a
-            href="/climatechange"
+            href="/resources"
             onClick={[Function]}
           >
             <img
@@ -129,7 +129,7 @@ exports[`ResourcesSection renders correctly 1`] = `
           style={Object {}}
         >
           <a
-            href="/recycle"
+            href="/resources"
             onClick={[Function]}
           >
             home.resourcesSection.reduceReuseRecycle
@@ -145,7 +145,7 @@ exports[`ResourcesSection renders correctly 1`] = `
           style={Object {}}
         >
           <a
-            href="/recycle"
+            href="/resources"
             onClick={[Function]}
           >
             <img
