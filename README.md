@@ -7,7 +7,7 @@ Juniper created to teach youth from MENA region about environmental issues. It u
 - English, Arabic and Turkish language support
 - 3 games
   - Memory game
-  - Matching game
+  - Image puzzle 
   - Quiz
 - Quick access to twitter accounts of some prominent environmental organizations
 - Playful navbar
