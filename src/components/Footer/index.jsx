@@ -17,6 +17,7 @@ const LIGHT_GREEN_BACKGROUND_PAGES = [
   "/games/memorygame",
   "/games/puzzlegame",
   "/games/quizgame",
+  "/login",
 ];
 
 const LIGHT_GREEN = "#b4d0c4";
