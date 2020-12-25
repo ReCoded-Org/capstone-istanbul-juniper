@@ -7,10 +7,6 @@ exports[`HomePageHeaderSection snapshot test 1`] = `
   <div
     className="ant-row ant-row-space-around ant-row-middle"
     style={Object {}}
-  />
-  <div
-    className="ant-row ant-row-space-around ant-row-middle"
-    style={Object {}}
   >
     <div
       className="ant-col ant-col-4"
@@ -43,19 +39,24 @@ exports[`HomePageHeaderSection snapshot test 1`] = `
         </p>
       </div>
       <div
-        className="ant-row homePageHeaderContainer__button"
+        className="ant-row ant-row-center homePageHeaderContainer__button"
         style={Object {}}
       >
-        <a
-          href="/games"
-          onClick={[Function]}
+        <div
+          className="ant-col"
+          style={Object {}}
         >
-          <button
-            className="homePageHeaderContainer__row"
+          <a
+            href="/games"
+            onClick={[Function]}
           >
-            home.headerSection.headerButton
-          </button>
-        </a>
+            <button
+              className="homePageHeaderContainer__row"
+            >
+              home.headerSection.headerButton
+            </button>
+          </a>
+        </div>
       </div>
     </div>
     <div
